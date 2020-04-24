@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DnDClassLibrary\DnDClassLibrary.csproj">
+      <Project>{cae0eaeb-eb3b-472a-a365-36e7b07ca618}</Project>
+      <Name>DnDClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
