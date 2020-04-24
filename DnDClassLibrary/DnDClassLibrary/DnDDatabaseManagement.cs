@@ -33,14 +33,16 @@ namespace DnDClassLibrary
             {
                 JsonSerializer serializer = new JsonSerializer();
     Movies movie2 = (Movies)serializer.Deserialize(file, typeof(Movies));
-}
 
-string json = Json
+    string json = Json
             dynamic stuff = JObject.Parse("{ 'Name': 'Jon Smith', 'Address': { 'City': 'New York', 'State': 'NY' }, 'Age': 42 }");
 
-string name = stuff.Name;
-string address = stuff.Address.State;
-Console.WriteLine(name);
+    string name = stuff.Name;
+    string address = stuff.Address.State;
+    Console.WriteLine(name);
             Console.WriteLine(address);
     }
-}
+
+
+
+
