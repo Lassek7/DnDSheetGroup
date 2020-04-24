@@ -13,7 +13,7 @@ namespace DnDClassLibrary
         Movies movie = new Movies
         {
 
-            Name = "Bad Boys",
+            Name = "Bad Bad Boys",
 
             Year = 199
 
