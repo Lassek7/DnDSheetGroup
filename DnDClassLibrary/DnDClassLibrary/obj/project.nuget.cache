@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "oRPXBRBwI9LC5S2cazdDxIb3t98lAfXZmFz1WN9qkl8hrhpA7yuXSXOVtY1JpCgr4YFpUyq/NuA6pUXSHoG5dA==",
+  "dgSpecHash": "Eb5LDQ2Ab5Ny8vwKccoM6kgS/mlTH2L9dfl3QmhZF0N7xrpluwNa14yoLdJPggXYoQVqXN5f2E0B1sB51rm9UQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+  "projectFilePath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\lasse\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\lasse\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\rallo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\rallo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\rallo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }
