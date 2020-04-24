@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DnDClassLibrary",
+    "\\DnDClassLibrary\\DnDClassLibrary"
   ],
+  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
   "PreviewInSolutionExplorer": false
 }
