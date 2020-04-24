@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Eb5LDQ2Ab5Ny8vwKccoM6kgS/mlTH2L9dfl3QmhZF0N7xrpluwNa14yoLdJPggXYoQVqXN5f2E0B1sB51rm9UQ==",
+  "dgSpecHash": "XN6xn/b9jBtrwVFEuetzX6Lelrh2LRBzhSVeDueaLtb+i7LBP69AJ2oInfCX0PZ72fp4vgj2zGYf3HI0pPXxQg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+  "projectFilePath": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rallo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\rallo\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",

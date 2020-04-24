@@ -226,11 +226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
       "projectName": "DnDClassLibrary",
-      "projectPath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+      "projectPath": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
       "packagesPath": "C:\\Users\\rallo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
+      "outputPath": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\rallo\\AppData\\Roaming\\NuGet\\NuGet.Config",
