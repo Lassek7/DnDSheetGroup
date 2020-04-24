@@ -16,7 +16,7 @@ namespace DnDClassLibrary
             Name = "Bad Bad Boys",
 
             Year = 199
-
+            hej;
         };
 
         File.WriteAllText(@"C:\Users\rallo\source\repos\Dnddata\movie.json", JsonConvert.SerializeObject(movie));
