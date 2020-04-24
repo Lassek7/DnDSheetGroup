@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "gHt3ztVT8c2mCiss3NjkP6izPhiVO2kVcXgY191z/c7Usc4OejMEXF8Rjo2ZB0Z+jn4nFgsWMctXHqGXCrM2XQ==",
+=======
+  "dgSpecHash": "b55h5ZgcG2sIVwyE8NZjJJ6vgizrhWdS03naci5uFJVidAkBFTWmdjKrQ35TdRzxOtCnv3qzyARtGXrnOOUx1Q==",
+>>>>>>> master
   "success": true,
   "projectFilePath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj",
   "expectedPackageFiles": [],

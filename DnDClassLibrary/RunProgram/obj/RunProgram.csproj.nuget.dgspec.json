@@ -4,10 +4,17 @@
     "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj": {}
   },
   "projects": {
+<<<<<<< HEAD
     "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj": {
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj",
+=======
+    "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj",
+>>>>>>> master
         "projectName": "RunProgram",
         "projectPath": "C:\\Users\\rallo\\Documents\\Gitkraken\\DnDSheetGroup\\DnDClassLibrary\\RunProgram\\RunProgram.csproj",
         "packagesPath": "C:\\Users\\rallo\\.nuget\\packages\\",
