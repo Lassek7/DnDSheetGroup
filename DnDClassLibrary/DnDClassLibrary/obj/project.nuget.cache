@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "oRPXBRBwI9LC5S2cazdDxIb3t98lAfXZmFz1WN9qkl8hrhpA7yuXSXOVtY1JpCgr4YFpUyq/NuA6pUXSHoG5dA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lasse\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\lasse\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
