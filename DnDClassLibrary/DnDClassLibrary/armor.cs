@@ -6,6 +6,6 @@ namespace DnDClassLibrary
 {
     class armor
     {
-      
+        Console iosisgingo;
     }
 }
