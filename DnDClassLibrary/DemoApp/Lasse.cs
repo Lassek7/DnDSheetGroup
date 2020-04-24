@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoApp
 {
-    class Program
+    class Lasse
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
