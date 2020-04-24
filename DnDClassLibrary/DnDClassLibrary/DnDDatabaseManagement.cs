@@ -8,6 +8,8 @@ namespace DnDClassLibrary
 {
     class DnDDatabaseManagement
     {
+
+        Hello hello;
         Movies movie = new Movies
         {
 
