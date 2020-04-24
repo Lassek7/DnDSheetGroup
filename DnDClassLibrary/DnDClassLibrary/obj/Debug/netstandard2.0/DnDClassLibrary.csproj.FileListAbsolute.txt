@@ -3,3 +3,8 @@ C:\Users\rallo\Documents\Gitkraken\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary
 C:\Users\rallo\Documents\Gitkraken\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csprojAssemblyReference.cache
 C:\Users\rallo\Documents\Gitkraken\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfoInputs.cache
 C:\Users\rallo\Documents\Gitkraken\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.deps.json
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.dll
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csprojAssemblyReference.cache
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfoInputs.cache
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
