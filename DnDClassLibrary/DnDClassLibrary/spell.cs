@@ -6,6 +6,6 @@ namespace DnDClassLibrary
 {
     class spell
     {
-        Console.WriteLine(test);
+       
     }
 }
