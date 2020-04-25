@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoApp
 {
-    class Lasse
+    class TestTing
     {
     }
 }
