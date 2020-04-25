@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DemoApp
 {
-    class TestTing
+    class TestTing // Lavet til at teste kode.
     {
     }
 }

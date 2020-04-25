@@ -9,12 +9,9 @@ namespace DemoApp
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            //Ahmed
-            FunktionerTest test = new FunktionerTest();
-            test.Print();
-            Console.ReadKey();
-        }
+       // static void Main(string[] args)
+        //{
+           // kun til endelig program, ting der skal være i programmet. Hvis der skal testes kode, gør det i TestTing //
+        //}
     }
 }
