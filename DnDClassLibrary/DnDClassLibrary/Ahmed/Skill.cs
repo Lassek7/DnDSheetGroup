@@ -12,16 +12,15 @@ namespace DnDClassLibrary
         private int IntelligenceModifier;
         private int WisdomModifier;
         private int CharismaModifier;
-
-        //private string SkillName;
-        //private int Bonus;
         private int ProficiencyBonus;
+
+        private int Jack;
         //private bool JackOfAllTrades;
 
         private bool[] proficiency = new bool[18];
 
         public Skill(int StrengthModifier, int DexterityModifier, int ConstitutionModifier, int IntelligenceModifier,
-            int WisdomModifier, int CharismaModifier, int ProficiencyBonus, int[] proficiencyEnabled)
+            int WisdomModifier, int CharismaModifier, int ProficiencyBonus, int[] proficiencyEnabled, bool JackOfAllTrades)
         {
             this.StrengthModifier = StrengthModifier;
             this.DexterityModifier = DexterityModifier;
@@ -30,9 +29,20 @@ namespace DnDClassLibrary
             this.WisdomModifier = WisdomModifier;
             this.CharismaModifier = CharismaModifier;
             this.ProficiencyBonus = ProficiencyBonus;
+            //this.JackOfAllTrades = JackOfAllTrades;
 
-            foreach (int index in proficiencyEnabled)
-                proficiency[index] = true;
+         if (JackOfAllTrades == true)
+            {
+                foreach (int index in proficiencyEnabled)
+                    proficiency[index] = true;
+                Jack = ProficiencyBonus / 2;
+
+            } else if (JackOfAllTrades == false)
+            {
+                foreach (int index in proficiencyEnabled)
+                    proficiency[index] = true;
+                Jack = 0;
+            }
         }
 
         public override string ToString()
@@ -59,87 +69,88 @@ namespace DnDClassLibrary
 
         public int Acrobatics
         {
-            get { return DexterityModifier + (proficiency[0] ? ProficiencyBonus : 0); }
+            get { return DexterityModifier + (proficiency[0] ? ProficiencyBonus : Jack ) ; }
         }
         public int AnimalHandling
         {
-            get { return WisdomModifier + (proficiency[1] ? ProficiencyBonus : 0); }
+            get { return WisdomModifier + (proficiency[1] ? ProficiencyBonus : Jack) ; }
         }
         public int Arcana
         {
-            get { return IntelligenceModifier + (proficiency[2] ? ProficiencyBonus : 0); }
+            get { return IntelligenceModifier + (proficiency[2] ? ProficiencyBonus : Jack) ; }
         }
         public int Athletics
         {
-            get { return StrengthModifier + (proficiency[3] ? ProficiencyBonus : 0); }
+            get { return StrengthModifier + (proficiency[3] ? ProficiencyBonus : Jack) ; }
         }
         public int Deception
         {
-            get { return CharismaModifier + (proficiency[4] ? ProficiencyBonus : 0); }
+            get { return CharismaModifier + (proficiency[4] ? ProficiencyBonus : Jack) ; }
         }
         public int History
         {
-            get { return IntelligenceModifier + (proficiency[5] ? ProficiencyBonus : 0); }
+            get { return IntelligenceModifier + (proficiency[5] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Insight
         {
-            get { return WisdomModifier + (proficiency[6] ? ProficiencyBonus : 0); }
+            get { return WisdomModifier + (proficiency[6] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Intimidation
         {
-            get { return CharismaModifier + (proficiency[7] ? ProficiencyBonus : 0); }
+            get { return CharismaModifier + (proficiency[7] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Investigation
         {
-            get { return IntelligenceModifier + (proficiency[8] ? ProficiencyBonus : 0); }
+            get { return IntelligenceModifier + (proficiency[8] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Medicine
         {
-            get { return WisdomModifier + (proficiency[9] ? ProficiencyBonus : 0); }
+            get { return WisdomModifier + (proficiency[9] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Nature
         {
-            get { return IntelligenceModifier + (proficiency[10] ? ProficiencyBonus : 0); }
+            get { return IntelligenceModifier + (proficiency[10] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Perception
         {
-            get { return WisdomModifier + (proficiency[11] ? ProficiencyBonus : 0); }
+            get { return WisdomModifier + (proficiency[11] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Performance
         {
-            get { return CharismaModifier + (proficiency[12] ? ProficiencyBonus : 0); }
+            get { return CharismaModifier + (proficiency[12] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Persuasion
         {
-            get { return CharismaModifier + (proficiency[13] ? ProficiencyBonus : 0); }
+            get { return CharismaModifier + (proficiency[13] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Religion
         {
-            get { return IntelligenceModifier + (proficiency[14] ? ProficiencyBonus : 0); }
+            get { return IntelligenceModifier + (proficiency[14] ? ProficiencyBonus : Jack) ; }
         }
 
         public int SleightOfHand
         {
-            get { return DexterityModifier + (proficiency[15] ? ProficiencyBonus : 0); }
+            get { return DexterityModifier + (proficiency[15] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Stealth
         {
-            get { return DexterityModifier + (proficiency[16] ? ProficiencyBonus : 0); }
+            get { return DexterityModifier + (proficiency[16] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Survival
         {
-            get { return WisdomModifier + (proficiency[17] ? ProficiencyBonus : 0); }
+            get { return WisdomModifier + (proficiency[17] ? ProficiencyBonus : Jack) ; }
+ 
         }
     }
 }
