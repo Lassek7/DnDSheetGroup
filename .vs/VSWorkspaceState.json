@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\DnDClassLibrary",
+    "\\DnDClassLibrary\\DemoApp",
+    "\\DnDClassLibrary\\DnDClassLibrary",
+    "\\DnDClassLibrary\\RunProgram"
   ],
+  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary\\DnDDatabaseManagement.cs",
   "PreviewInSolutionExplorer": false
 }
