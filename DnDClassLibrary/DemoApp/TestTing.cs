@@ -9,6 +9,9 @@ namespace DemoApp
 {
     class TestTing // Lavet til at teste kode.
     {
-
+        static void Main(string[] args)
+        {
+           
+        }
     }
 }

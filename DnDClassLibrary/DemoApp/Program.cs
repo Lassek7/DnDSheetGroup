@@ -7,11 +7,11 @@ using DnDClassLibrary;
 
 namespace DemoApp
 {
-    class Program
+    class Program // kun til endelig program, ting der skal være i programmet. Hvis der skal testes kode, gør det i TestTing //
     {
        // static void Main(string[] args)
         //{
-           // kun til endelig program, ting der skal være i programmet. Hvis der skal testes kode, gør det i TestTing //
+           
         //}
     }
 }

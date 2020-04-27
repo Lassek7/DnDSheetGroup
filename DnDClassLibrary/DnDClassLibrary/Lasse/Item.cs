@@ -21,15 +21,6 @@ namespace DnDClassLibrary
             this.itemName = itemName;
         }
 
-        public Item(string itemName, string itemType, int amountHeld, int weightPerItem, string description)
-        {
-            this.itemName = itemName;
-            this.itemType = itemType;
-            this.amountHeld = amountHeld;
-            this.weightPerItem = weightPerItem;
-            this.description = description;
-        }
-
         public string ItemName
         {
             get { return itemName; }
