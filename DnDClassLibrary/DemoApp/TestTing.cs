@@ -22,7 +22,7 @@ namespace DemoApp
                 switch (test)
                 {
                     case 1:
-                        I1.AddToInv();
+                        I1.RunInventory();
                         break;
                     case 2:
                         I1.CheckInventory();
