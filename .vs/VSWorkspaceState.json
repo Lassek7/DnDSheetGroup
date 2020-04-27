@@ -4,9 +4,8 @@
     "\\DnDClassLibrary",
     "\\DnDClassLibrary\\DemoApp",
     "\\DnDClassLibrary\\DnDClassLibrary",
-    "\\DnDClassLibrary\\DnDClassLibrary\\Ahmed",
-    "\\DnDClassLibrary\\DnDClassLibrary\\Lasse"
+    "\\DnDClassLibrary\\RunProgram"
   ],
-  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
+  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary\\CharacterAttributes.cs",
   "PreviewInSolutionExplorer": false
 }
