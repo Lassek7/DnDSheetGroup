@@ -43,6 +43,8 @@ namespace CharacterAttributesModifiers
                 Write($"{Enum.GetNames(typeof(Fields))[i]} modifier: ");
                 WriteLine(c.Modifiers[i]);
             }
+
+    
      */
 }
 
