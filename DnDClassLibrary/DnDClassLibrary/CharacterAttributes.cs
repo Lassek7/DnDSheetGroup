@@ -28,12 +28,28 @@ namespace CharacterAttributesModifiers
             Attributes = new int[6];
         }
     }
+
+    /* Til at prøve det af i Main
+            CharacterAttributes c = new CharacterAttributes();
+
+            for(int i= 0; i <6; i++)
+            {
+                Write($"{Enum.GetNames(typeof(Fields))[i]}: ");
+                c.Attributes[i] = int.Parse(ReadLine());
+            }
+
+            for (int i = 0; i < 6; i++)
+            {
+                Write($"{Enum.GetNames(typeof(Fields))[i]} modifier: ");
+                WriteLine(c.Modifiers[i]);
+            }
+     */
 }
-    
 
 
-    
 
-       
+
+
+
 
 
