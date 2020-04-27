@@ -6,13 +6,13 @@ namespace DnDClassLibrary
 {
     public class Skill
     {
-        private int StrengthModifier;
-        private int DexterityModifier;
-        private int ConsitiutionModifier;
-        private int IntelligenceModifier;
-        private int WisdomModifier;
-        private int CharismaModifier;
-        private int ProficiencyBonus;
+        public int DexterityModifier;
+        public int StrengthModifier;
+        public int ConstitutionModifier;
+        public int IntelligenceModifier;
+        public int WisdomModifier;
+        public int CharismaModifier;
+        public int ProficiencyBonus;
 
         private int Jack;
         //private bool JackOfAllTrades;
@@ -24,7 +24,7 @@ namespace DnDClassLibrary
         {
             this.StrengthModifier = StrengthModifier;
             this.DexterityModifier = DexterityModifier;
-            this.ConsitiutionModifier = ConstitutionModifier;
+            this.ConstitutionModifier = ConstitutionModifier;
             this.IntelligenceModifier = IntelligenceModifier;
             this.WisdomModifier = WisdomModifier;
             this.CharismaModifier = CharismaModifier;

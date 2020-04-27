@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class Item
+    public class Item // find en måde at gøre den private
     {
         private string itemName;
         private string itemType;

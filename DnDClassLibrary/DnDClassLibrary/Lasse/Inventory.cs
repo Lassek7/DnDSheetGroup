@@ -4,21 +4,21 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-        public class Inventory
+    public class Inventory
     {
-        //int Strength;
-        //string ItemName;
-        //int CarryCapacity;
-        //string ItemDescription;
-        //int ItemAmount;
-        //bool Encumbered;
+        
+        int TotalWeight;
+        string Encumbered = "You are not encumbered";
 
-
-
-        List<Item> InventoryList = new List<Item>();
+        public static List<Item> InventoryList = new List<Item>(); // temp public/static
         UtilityMethods Utillity = new UtilityMethods();
 
-        public void AddToInv()
+        public void RunInventory()
+        {
+            AddToInv();
+        }
+
+        void AddToInv()
         {
             string invtype;
             invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon");
@@ -36,17 +36,19 @@ namespace DnDClassLibrary
                 default:
                     break;
             }
-            
+            ItemWeightCalc();
+            checkWeight();
+            EnucumberCheck();
 
         }
-        public void CheckInventory()
+        public void CheckInventory() // laves Private Senere
         {
             foreach (var Item in InventoryList)
             {
                 Console.WriteLine("test: {0}, {1}, {2}, {3}, {4}", Item.ItemName, Item.ItemType, Item.AmountHeld, Item.WeightPerItem, Item.Description);
             }
         }
-        public void RemoveItem()
+        public void RemoveItem() // laves Private Senere
         {
             Item B1 = new Item();
             B1.ItemName = Utillity.ReadTextInput("Please Enter item to be modified");
@@ -116,15 +118,41 @@ namespace DnDClassLibrary
 
             InventoryList.Add(weapon);
         }
-        //int CarryCapacityCalc()
-        //{
-        //    CarryCapacity = Strength * 15;
+        string EnucumberCheck()
+        {
+            int TempStrength = 5; // temporary
 
-        //    return CarryCapacity;
-        //}
-        //int ItemWeightCalc()
-        //{
 
-        //}
+            if (TotalWeight >= TempStrength * 5)
+            {
+                Encumbered = "you are heavily Encumbered";
+            }
+            else if (TotalWeight >= TempStrength * 2)
+            {
+                Encumbered = "you are lightly encumbered";
+            }
+            else
+            {
+                Encumbered = "you are not encumbered";
+            }
+
+            return Encumbered;
+        }
+
+        void checkWeight() // temporary checker
+        {
+            Console.WriteLine(TotalWeight);
+            Console.WriteLine(Encumbered);
+        }
+        int ItemWeightCalc()
+        {
+           TotalWeight = 0;
+           for (int i = 0; i < InventoryList.Count; i++)
+            {
+                Item Item = InventoryList[i];
+                TotalWeight += Item.WeightPerItem * Item.AmountHeld;
+            }
+            return TotalWeight;
+        }
     }
 }
