@@ -20,11 +20,11 @@ namespace DnDClassLibrary
 
         public void AddToInv()
         {
-            int invtype;
-            invtype = Utillity.ReadNumericInput("what would you like to add? 1 for item, 2 for armor, 3 for weapon");
+            string invtype;
+            invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon");
             switch (invtype)
             {
-                case 1:
+                case "Item":
                     Item item = new Item();
 
                     item.ItemName = Utillity.ReadTextInput("Please Enter item name");
@@ -35,7 +35,7 @@ namespace DnDClassLibrary
 
                     InventoryList.Add(item);
                     break;
-                case 2:
+                case "Armor":
                     Armor armor = new Armor();
 
                     armor.ItemName = Utillity.ReadTextInput("Please Enter item name");
@@ -44,12 +44,12 @@ namespace DnDClassLibrary
                     armor.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
                     armor.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
                     armor.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-                    //armor.ItemEquipped = Utillity.
+                    armor.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
 
                     InventoryList.Add(armor);
                   
                     break;
-                case 3:
+                case "Weapon":
                     Weapon weapon = new Weapon();
 
                     weapon.ItemName = Utillity.ReadTextInput("Please Enter item name");
@@ -57,11 +57,18 @@ namespace DnDClassLibrary
                     weapon.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
                     weapon.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
                     weapon.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-                    
+                    weapon.AttributeAssociation = Utillity.ReadTextInput("what attribute is it associated with?");
+                    weapon.AttackModifier = 2; // palceholder
+                    weapon.Range = Utillity.ReadTextInput("What is the range?");
+                    weapon.Damage = Utillity.ReadTextInput("How much damage does it deal?");
+                    weapon.DamageType = Utillity.ReadTextInput("What damage type does it have?");
+                    weapon.AttackBonus = 5; // placeholder
+                    weapon.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+                    weapon.Proficiency = Utillity.ReadBoolInput("Do you have Proficiency in this weapon?");
+                    weapon.ProficiencyModifier = 3; // Placeholder
                     
                     InventoryList.Add(weapon);
                     break;
-
                 default:
                     break;
             }

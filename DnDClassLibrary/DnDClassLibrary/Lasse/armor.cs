@@ -8,7 +8,7 @@ namespace DnDClassLibrary
     {
 
         private bool itemEquipped;
-        private int baseAC;
+       // private int baseAC;
         private int aCFromArmor;
 
         public bool ItemEquipped
@@ -17,12 +17,11 @@ namespace DnDClassLibrary
             set { itemEquipped = value; }
 
         }
-        public int BaseAC
+       /* public int BaseAC
         {
             get { return baseAC; }
             set { baseAC = value; }
-
-        }
+        }*/
         public int ACFromArmor
         {
             get { return aCFromArmor; }
