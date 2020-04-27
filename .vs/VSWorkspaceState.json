@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\DnDClassLibrary",
-    "\\DnDClassLibrary\\DemoApp",
-    "\\DnDClassLibrary\\DnDClassLibrary",
-    "\\DnDClassLibrary\\RunProgram"
+    "\\DnDClassLibrary\\DnDClassLibrary"
   ],
-  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary\\CharacterAttributes.cs",
+  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
   "PreviewInSolutionExplorer": false
 }
