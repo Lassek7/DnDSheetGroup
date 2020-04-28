@@ -6,9 +6,9 @@ namespace DnDClassLibrary
 {
     public class Inventory
     {
-        
+        int TempStrength = 5; // temporary
         int TotalWeight;
-        string Encumbered = "You are not encumbered";
+        string Encumbered = "You are not Encumbered";
 
         public static List<Item> InventoryList = new List<Item>(); // temp public/static
         UtilityMethods Utillity = new UtilityMethods();
@@ -37,8 +37,9 @@ namespace DnDClassLibrary
                     break;
             }
             ItemWeightCalc();
+            EncumberCheck();
             checkWeight();
-            EnucumberCheck();
+
 
         }
         public void CheckInventory() // laves Private Senere
@@ -72,64 +73,78 @@ namespace DnDClassLibrary
 
         void AddItemToList()
         {
-            Item item = new Item();
-
-            item.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            item.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            item.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            item.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            item.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-
-            InventoryList.Add(item);
+            Item NewItem = new Item();
+           
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            
+            bool ItemExist = ExistCheck(NewItem);
+            
+            if (ItemExist != true)
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                
+                InventoryList.Add(NewItem);
+            }            
         }
         void AddArmorToList()
         {
-            Armor armor = new Armor();
+            Armor NewItem = new Armor();
 
-            armor.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            armor.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            armor.ACFromArmor = Utillity.ReadNumericInput("what is the AC?");
-            armor.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            armor.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            armor.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-            armor.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            bool ItemExist = ExistCheck(NewItem);
 
-            InventoryList.Add(armor);
+            if (ItemExist != true)
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.ACFromArmor = Utillity.ReadNumericInput("what is the AC?");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                NewItem.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+
+                InventoryList.Add(NewItem);
+            }
 
         }
         void AddWeaponToList()
         {
-            Weapon weapon = new Weapon();
+            Weapon NewItem = new Weapon();
 
-            weapon.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            weapon.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            weapon.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            weapon.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            weapon.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-            weapon.AttributeAssociation = Utillity.ReadTextInput("what attribute is it associated with?");
-            weapon.AttackModifier = 2; // palceholder
-            weapon.Range = Utillity.ReadTextInput("What is the range?");
-            weapon.Damage = Utillity.ReadTextInput("How much damage does it deal?");
-            weapon.DamageType = Utillity.ReadTextInput("What damage type does it have?");
-            weapon.AttackBonus = 5; // placeholder
-            weapon.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
-            weapon.Proficiency = Utillity.ReadBoolInput("Do you have Proficiency in this weapon?");
-            weapon.ProficiencyModifier = 3; // Placeholder
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            bool ItemExist = ExistCheck(NewItem);
+            
+            if (ItemExist != true)
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                NewItem.AttributeAssociation = Utillity.ReadTextInput("what attribute is it associated with?");
+                NewItem.AttackModifier = 2; // palceholder
+                NewItem.Range = Utillity.ReadTextInput("What is the range?");
+                NewItem.Damage = Utillity.ReadTextInput("How much damage does it deal?");
+                NewItem.DamageType = Utillity.ReadTextInput("What damage type does it have?");
+                NewItem.AttackBonus = 5; // placeholder
+                NewItem.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+                NewItem.Proficiency = Utillity.ReadBoolInput("Do you have Proficiency in this weapon?");
+                NewItem.ProficiencyModifier = 3; // Placeholder
 
-            InventoryList.Add(weapon);
+                InventoryList.Add(NewItem);
+            }
         }
-        string EnucumberCheck()
+        string EncumberCheck()
         {
-            int TempStrength = 5; // temporary
-
-
+            
             if (TotalWeight >= TempStrength * 5)
             {
                 Encumbered = "you are heavily Encumbered";
             }
             else if (TotalWeight >= TempStrength * 2)
             {
-                Encumbered = "you are lightly encumbered";
+                Encumbered = "you are slightly encumbered";
             }
             else
             {
@@ -153,6 +168,25 @@ namespace DnDClassLibrary
                 TotalWeight += Item.WeightPerItem * Item.AmountHeld;
             }
             return TotalWeight;
+        }
+        bool ExistCheck(Item NewItem)
+        {
+            bool ItemExist = false;
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                Item OldItems = InventoryList[i];
+                if (OldItems.ItemName.Equals(NewItem.ItemName))
+                {
+                    ItemExist = true;
+                    OldItems.AmountHeld += Utillity.ReadNumericInput("Item already exists, how many would you like to add?");
+                    break;
+                }
+                else
+                {
+                    ItemExist = false;
+                }
+            }
+            return ItemExist;
         }
     }
 }
