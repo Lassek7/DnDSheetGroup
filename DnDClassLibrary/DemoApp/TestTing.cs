@@ -13,6 +13,7 @@ namespace DemoApp
         {
            int test = 0;
             Inventory I1 = new Inventory();
+            DnDDatabaseManagement I2 = new DnDDatabaseManagement();
             while (test != 4)
             {
                 Console.WriteLine("1: add item. 2: check items: 3 Remove item:");
@@ -23,6 +24,7 @@ namespace DemoApp
                 {
                     case 1:
                         I1.RunInventory();
+                        
                         break;
                     case 2:
                         I1.CheckInventory();
@@ -34,6 +36,7 @@ namespace DemoApp
                         break;
                 }
             }
+            I2.DatabaseList();
             Console.ReadKey();
         }
         
