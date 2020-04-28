@@ -18,12 +18,22 @@ namespace DnDClassLibrary
 
         public int ReadNumericInput(string aMessage)
         {
-            int returnvalue;
+            int returnValue;
 
             Console.WriteLine(aMessage);
-            returnvalue = Convert.ToInt32(Console.ReadLine());
+            returnValue = Convert.ToInt32(Console.ReadLine());
 
-            return returnvalue;
+            return returnValue;
+        }
+        public bool ReadBoolInput(string aMessage)
+        {
+            bool returnValue;
+
+            Console.WriteLine(aMessage);
+            returnValue = Convert.ToBoolean(Console.ReadLine());
+
+            return returnValue;
+
         }
     }
 }
