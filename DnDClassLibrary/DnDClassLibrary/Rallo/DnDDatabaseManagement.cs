@@ -1,47 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
+using System.Runtime.ExceptionServices;
 using System.Text;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace DnDClassLibrary
 {
-    class DnDDatabaseManagement
+    public class DnDDatabaseManagement
     {
-        //    Hello hello;
-        //    Movies movie = new Movies
-        //    {
+        public DnDDatabaseManagement()
+        {
+        }
+        public void DatabaseList()
+        {
 
-        //        Name = "Bad Bad Boys",
+            File.WriteAllText(@"C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(Inventory.InventoryList));
+            using (StreamWriter file = File.CreateText(@"C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json"))
+            {
+                for (int i = 0; i < Inventory.InventoryList.Count; i++)
+                {
+                    JsonSerializer jsonSerializer = new JsonSerializer();
+                    jsonSerializer.Serialize(file, Inventory.InventoryList[i]);
+                }
+            }
 
-        //        Year = 199
-        //        hej;
-        //    };
 
-        //    File.WriteAllText(@"C:\Users\rallo\source\repos\Dnddata\movie.json", JsonConvert.SerializeObject(movie));
-
-        //        // serialize JSON directly to a file
-        //        using (StreamWriter file = File.CreateText(@"C:\Users\rallo\source\repos\Dnddata\movie.json"))
-        //        {
-        //            JsonSerializer serializer = new JsonSerializer();
-        //    serializer.Serialize(file, movie);
-        //        }
-        //// read file into a string and deserialize JSON to a type
-        //Movies movie1 = JsonConvert.DeserializeObject<Movies>(File.ReadAllText(@"C:\Users\rallo\source\repos\Dnddata\movie.json"));
-
-        //        // deserialize JSON directly from a file
-        //        using (StreamReader file = File.OpenText(@"C:\Users\rallo\source\repos\Dnddata\movie.json"))
-        //        {
-        //            JsonSerializer serializer = new JsonSerializer();
-        //Movies movie2 = (Movies)serializer.Deserialize(file, typeof(Movies));
-
-        //string json = Json
-        //        dynamic stuff = JObject.Parse("{ 'Name': 'Jon Smith', 'Address': { 'City': 'New York', 'State': 'NY' }, 'Age': 42 }");
-
-        //string name = stuff.Name;
-        //string address = stuff.Address.State;
-        //Console.WriteLine(name);
-        //        Console.WriteLine(address);
+        }
     }
 }
 
