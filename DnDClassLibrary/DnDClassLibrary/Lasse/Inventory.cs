@@ -51,22 +51,36 @@ namespace DnDClassLibrary
         }
         public void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
         {
-            Item B1 = new Item();
-            B1.ItemName = Utillity.ReadTextInput("Please Enter item to be modified"); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+            Item NewItem = new Item();
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item to be modified"); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
             for (int i = 0; i < InventoryList.Count; i++)
             {
-                Item Item = InventoryList[i];
-                if (Item.ItemName.Equals(B1.ItemName))  // tjekker om den nye fil allerede eksistere i listen
+                Item OldItem = InventoryList[i];
+                if (OldItem.ItemName.Equals(NewItem.ItemName))  // tjekker om den nye fil allerede eksistere i listen
                 {
-                    InventoryList.Remove(Item); // fjerner filen fra listen.
-                    Console.WriteLine("true"); // slettes senere
-                    break;
+                    bool Remove = Utillity.ReadBoolInput("Do you want to remove(true) it or modify it(false)?");
+                    if(Remove == true)
+                    {
+                        Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                        InventoryList.Remove(OldItem); // fjerner filen fra listen.
+                       
+                    }
+                    else
+                    {
+                        OldItem.AmountHeld -= Utillity.ReadNumericInput("Item already exists, how many would you like to remove?");
+                        Console.WriteLine("You now have {0} of the item {1} left", OldItem.AmountHeld, OldItem.ItemName);
+                        if (OldItem.AmountHeld == 0)
+                        {
+
+                            InventoryList.Remove(OldItem); // fjerner filen fra listen.
+                            Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                        }
+                    }    
+                
                 }
-                else // slettes senere, bruges til test
-                {
-                    Console.WriteLine("False");
-                    Console.WriteLine("{0}", Item.ItemName); 
-                    break;
+                else if(i == InventoryList.Count-1)// slettes senere, bruges til test
+                { 
+                     Console.WriteLine("The item Does not exist");
                 }
             }
         }

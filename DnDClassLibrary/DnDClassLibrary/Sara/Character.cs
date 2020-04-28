@@ -59,7 +59,7 @@ namespace DnDClassLibrary.Sara
 
         private void InitiativeCalc()
         {
-            Initiative = DexterityModifier;
+        //    Initiative = DexterityModifier;
 
         }
 
