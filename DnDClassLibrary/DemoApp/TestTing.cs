@@ -24,7 +24,6 @@ namespace DemoApp
                 {
                     case 1:
                         I1.RunInventory();
-                        
                         break;
                     case 2:
                         I1.CheckInventory();

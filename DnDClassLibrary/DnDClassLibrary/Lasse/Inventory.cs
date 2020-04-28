@@ -17,7 +17,6 @@ namespace DnDClassLibrary
         {
             AddToInv();
         }
-
         void AddToInv()
         {
             string invtype;
@@ -40,8 +39,7 @@ namespace DnDClassLibrary
             EncumberCheck();
             checkWeight(); // slettes senere
 
-
-        }
+        }//Tilføjer et item til inventory listen
         public void CheckInventory() // Bruges bare til at checke om den har loaded filer
         {
             foreach (var Item in InventoryList)
@@ -58,33 +56,16 @@ namespace DnDClassLibrary
                 Item OldItem = InventoryList[i];
                 if (OldItem.ItemName.Equals(NewItem.ItemName))  // tjekker om den nye fil allerede eksistere i listen
                 {
-                    bool Remove = Utillity.ReadBoolInput("Do you want to remove(true) it or modify it(false)?");
-                    if(Remove == true)
-                    {
-                        Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
-                        InventoryList.Remove(OldItem); // fjerner filen fra listen.
-                       
-                    }
-                    else
-                    {
-                        OldItem.AmountHeld -= Utillity.ReadNumericInput("Item already exists, how many would you like to remove?");
-                        Console.WriteLine("You now have {0} of the item {1} left", OldItem.AmountHeld, OldItem.ItemName);
-                        if (OldItem.AmountHeld == 0)
-                        {
-
-                            InventoryList.Remove(OldItem); // fjerner filen fra listen.
-                            Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
-                        }
-                    }    
-                
+                    ModifyItem(OldItem);
+                    break;
                 }
                 else if(i == InventoryList.Count-1)// slettes senere, bruges til test
                 { 
-                     Console.WriteLine("The item Does not exist");
+                    Console.WriteLine("The item Does not exist");
+                    break;
                 }
             }
         }
-
         void AddItemToList() // tilføjer et "Item" til inventory
         {
             Item NewItem = new Item();
@@ -167,7 +148,6 @@ namespace DnDClassLibrary
 
             return Encumbered;
         }
-
         void checkWeight() // temporary checker // slettes senere
         {
             Console.WriteLine(TotalWeight);
@@ -201,6 +181,29 @@ namespace DnDClassLibrary
                 }
             }
             return ItemExist;
+        }
+        void ModifyItem(Item OldItem)// ændre mængden eller fjerner et item
+        {
+
+            bool Remove = Utillity.ReadBoolInput("Do you want to remove(true) it or modify it(false)?");
+            if (Remove == true)
+            {
+                Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                InventoryList.Remove(OldItem); // fjerner filen fra listen.
+
+            }
+            else
+            {
+                OldItem.AmountHeld -= Utillity.ReadNumericInput("How many would you like to remove?");
+                Console.WriteLine("You now have {0} of the item {1} left", OldItem.AmountHeld, OldItem.ItemName);
+                if (OldItem.AmountHeld == 0)
+                {
+
+                    InventoryList.Remove(OldItem); // fjerner filen fra listen.
+                    Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                }
+            }
+
         }
     }
 }
