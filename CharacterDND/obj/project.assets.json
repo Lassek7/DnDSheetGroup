@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\solma\\.nuget\\packages\\": {}
+    "C:\\Users\\lasse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\solma\\source\\repos\\CharacterDND\\CharacterDND\\CharacterDND.csproj",
+      "projectUniqueName": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\CharacterDND\\CharacterDND.csproj",
       "projectName": "CharacterDND",
-      "projectPath": "C:\\Users\\solma\\source\\repos\\CharacterDND\\CharacterDND\\CharacterDND.csproj",
-      "packagesPath": "C:\\Users\\solma\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\solma\\source\\repos\\CharacterDND\\CharacterDND\\obj\\",
+      "projectPath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\CharacterDND\\CharacterDND.csproj",
+      "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\CharacterDND\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\solma\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

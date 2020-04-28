@@ -12,7 +12,6 @@
     <Folder Include="Kristina\" />
     <Folder Include="Seb\" />
     <Folder Include="Rallo\" />
-    <Folder Include="Sara\" />
   </ItemGroup>
 
 </Project>

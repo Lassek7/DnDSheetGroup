@@ -6,7 +6,7 @@ namespace DnDClassLibrary.Lasse
 {
     class EquippedItems
     {
-        public class Equpiied
+        public class Equipped
         {
             //public int WeaponSlotOne;
             //public int WeaponSlotTwo;

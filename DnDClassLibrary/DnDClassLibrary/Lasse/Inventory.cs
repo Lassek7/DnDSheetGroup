@@ -21,8 +21,8 @@ namespace DnDClassLibrary
         void AddToInv()
         {
             string invtype;
-            invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon");
-            switch (invtype)
+            invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon"); // tager iøjeblikket kun mod: "Item" "Armor" og "Weapon" som input
+            switch (invtype) // tjekker hvilken type item der er tilføjet til inventory
             {
                 case "Item":
                     AddItemToList();
@@ -36,50 +36,50 @@ namespace DnDClassLibrary
                 default:
                     break;
             }
-            ItemWeightCalc();
+            ItemWeightCalc(); 
             EncumberCheck();
-            checkWeight();
+            checkWeight(); // slettes senere
 
 
         }
-        public void CheckInventory() // laves Private Senere
+        public void CheckInventory() // Bruges bare til at checke om den har loaded filer
         {
             foreach (var Item in InventoryList)
             {
                 Console.WriteLine("test: {0}, {1}, {2}, {3}, {4}", Item.ItemName, Item.ItemType, Item.AmountHeld, Item.WeightPerItem, Item.Description);
             }
         }
-        public void RemoveItem() // laves Private Senere
+        public void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
         {
             Item B1 = new Item();
-            B1.ItemName = Utillity.ReadTextInput("Please Enter item to be modified");
+            B1.ItemName = Utillity.ReadTextInput("Please Enter item to be modified"); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
             for (int i = 0; i < InventoryList.Count; i++)
             {
                 Item Item = InventoryList[i];
-                if (Item.ItemName.Equals(B1.ItemName))
+                if (Item.ItemName.Equals(B1.ItemName))  // tjekker om den nye fil allerede eksistere i listen
                 {
-                    InventoryList.Remove(Item);
-                    Console.WriteLine("true");
+                    InventoryList.Remove(Item); // fjerner filen fra listen.
+                    Console.WriteLine("true"); // slettes senere
                     break;
                 }
-                else
+                else // slettes senere, bruges til test
                 {
                     Console.WriteLine("False");
-                    Console.WriteLine("{0}", Item.ItemName);
+                    Console.WriteLine("{0}", Item.ItemName); 
                     break;
                 }
             }
         }
 
-        void AddItemToList()
+        void AddItemToList() // tilføjer et "Item" til inventory
         {
             Item NewItem = new Item();
            
             NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
             
-            bool ItemExist = ExistCheck(NewItem);
+            bool ItemExist = ExistCheck(NewItem); // hvis denne er true, vil mængden af et specifikt item blive større.
             
-            if (ItemExist != true)
+            if (ItemExist != true) // Hvis itemmet ikke allerede eksistere køres dette og der laves et nyt item.
             {
                 NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
                 NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
@@ -89,7 +89,7 @@ namespace DnDClassLibrary
                 InventoryList.Add(NewItem);
             }            
         }
-        void AddArmorToList()
+        void AddArmorToList() // virker ligesom Add Item to list
         {
             Armor NewItem = new Armor();
 
@@ -109,7 +109,7 @@ namespace DnDClassLibrary
             }
 
         }
-        void AddWeaponToList()
+        void AddWeaponToList() // fungere ligesom add item to list
         {
             Weapon NewItem = new Weapon();
 
@@ -135,7 +135,7 @@ namespace DnDClassLibrary
                 InventoryList.Add(NewItem);
             }
         }
-        string EncumberCheck()
+        string EncumberCheck() // tjekker om man har for meget vægt
         {
             
             if (TotalWeight >= TempStrength * 5)
@@ -154,12 +154,12 @@ namespace DnDClassLibrary
             return Encumbered;
         }
 
-        void checkWeight() // temporary checker
+        void checkWeight() // temporary checker // slettes senere
         {
             Console.WriteLine(TotalWeight);
             Console.WriteLine(Encumbered);
         }
-        int ItemWeightCalc()
+        int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
         {
            TotalWeight = 0;
            for (int i = 0; i < InventoryList.Count; i++)
@@ -169,13 +169,13 @@ namespace DnDClassLibrary
             }
             return TotalWeight;
         }
-        bool ExistCheck(Item NewItem)
+        bool ExistCheck(Item NewItem) // tjekker om itemmet existere, når et nyt skal tilføjes.
         {
             bool ItemExist = false;
             for (int i = 0; i < InventoryList.Count; i++)
             {
                 Item OldItems = InventoryList[i];
-                if (OldItems.ItemName.Equals(NewItem.ItemName))
+                if (OldItems.ItemName.Equals(NewItem.ItemName)) // hvis det eksistere, ændrer den bare hvor mange der er, ved at lægge ekstra oveni
                 {
                     ItemExist = true;
                     OldItems.AmountHeld += Utillity.ReadNumericInput("Item already exists, how many would you like to add?");

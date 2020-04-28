@@ -4,16 +4,16 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class UtilityMethods
+    class UtilityMethods // bruges til at forenkle brugen af WriteLine kombinered med Readline. 
     {
-        public string ReadTextInput(string aMessage)
+        public string ReadTextInput(string aMessage)  // indlæser en besked, skrevet i metodens brug
         {
             string returnValue;
 
-            Console.WriteLine(aMessage);
-            returnValue = Console.ReadLine();
+            Console.WriteLine(aMessage); // bruger beskeden der er indlæst og viser den til brugeren
+            returnValue = Console.ReadLine(); // giver brugerens input som værdi til returnValue
 
-            return returnValue;
+            return returnValue; // returnere værdien som brugeren har givet.
         }
 
         public int ReadNumericInput(string aMessage)
