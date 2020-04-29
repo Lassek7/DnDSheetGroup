@@ -15,7 +15,7 @@ namespace DemoApp
            
             DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
 
-            RunInv.DatabaseList();
+            RunInv.CharatorCreation();
             Console.ReadKey();
         }
         

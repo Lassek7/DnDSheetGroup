@@ -4,16 +4,19 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Inventory
+     class Inventory
     {
         int TempStrength = 5; // temporary
         int TotalWeight;
         string Encumbered = "You are not Encumbered";
 
-        public List<Item> InventoryList = new List<Item>(); // temp public/static
+        List<Item> InventoryList = new List<Item>(); // temp public/static
         UtilityMethods Utillity = new UtilityMethods();
 
-
+        public List<Item> inventoryList
+        {
+            get { return InventoryList; }
+        }
         public void RunInventory()
         {
             int test = 0;
