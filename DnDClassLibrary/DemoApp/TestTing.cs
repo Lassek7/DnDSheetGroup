@@ -14,8 +14,10 @@ namespace DemoApp
            
            
             DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
+            Inventory k = new Inventory();
+            k.Test();
 
-            RunInv.DatabaseList();
+            // RunInv.DatabaseList();
             Console.ReadKey();
         }
         

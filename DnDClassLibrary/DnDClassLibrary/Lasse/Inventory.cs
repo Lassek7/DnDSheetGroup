@@ -4,15 +4,19 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Inventory
+    class Inventory
     {
         int TempStrength = 5; // temporary
         int TotalWeight;
         string Encumbered = "You are not Encumbered";
 
-        public List<Item> InventoryList = new List<Item>(); // temp public/static
+        List<Item> InventoryList = new List<Item>();
         UtilityMethods Utillity = new UtilityMethods();
 
+        public List<Item> inventoryList
+        {
+            get { return InventoryList;  }
+        }
 
         public void RunInventory()
         {
@@ -26,7 +30,6 @@ namespace DnDClassLibrary
                 {
                     case 1:
                         AddToInv();
-
                         break;
                     case 2:
                         CheckInventory();
@@ -39,7 +42,7 @@ namespace DnDClassLibrary
                 }
             }
            
-        }
+        } // kører inventory
         void AddToInv()
         {
             string invtype;
@@ -63,7 +66,7 @@ namespace DnDClassLibrary
             checkWeight(); // slettes senere
 
         }//Tilføjer et item til inventory listen
-        public void CheckInventory() // Bruges bare til at checke om den har loaded filer
+        public void CheckInventory() // Bruges bare til at checke om den har loaded filer// slettes senere
         {
             foreach (var Item in InventoryList)
             {
@@ -71,9 +74,9 @@ namespace DnDClassLibrary
             }
         }
         public void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
-        {
-            Item NewItem = new Item();
-            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item to be modified"); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+        { 
+            Item NewItem = new Item(Utillity.ReadTextInput("Please Enter item to be modified")); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+           
             for (int i = 0; i < InventoryList.Count; i++)
             {
                 Item OldItem = InventoryList[i];
@@ -224,10 +227,26 @@ namespace DnDClassLibrary
 
                     InventoryList.Remove(OldItem); // fjerner filen fra listen.
                     Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                  
                 }
             }
 
         }
-        
+        public bool Test() // tester Equuipped items
+        {
+            EquippedItems hello = new EquippedItems(false);
+            hello.ShieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            hello.ShieldEquipped = false;
+            hello.ACCalc();
+            hello.test2();
+            hello.ShieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            Console.ReadKey();
+            return hello.ShieldEquipped;
+            
+        }
     }
 }

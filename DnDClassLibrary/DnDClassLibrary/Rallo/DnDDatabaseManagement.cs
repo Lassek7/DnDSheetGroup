@@ -19,19 +19,19 @@ namespace DnDClassLibrary
         {
             Inventory cat = new Inventory(); // andet navn
 
-
+           
             cat.RunInventory();
 
 
 
-            File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.InventoryList));
+            File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.inventoryList));
             using (StreamWriter file = File.CreateText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json"))
             {
-                for (int i = 0; i < cat.InventoryList.Count; i++)
+                for (int i = 0; i < cat.inventoryList.Count; i++)
                 {
 
                     JsonSerializer jsonSerializer = new JsonSerializer();
-                    jsonSerializer.Serialize(file, cat.InventoryList[i]);
+                    jsonSerializer.Serialize(file, cat.inventoryList[i]);
                 }
             }
 
