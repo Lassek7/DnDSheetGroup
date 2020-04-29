@@ -2,7 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\DnDClassLibrary",
-    "\\DnDClassLibrary\\DnDClassLibrary"
+    "\\DnDClassLibrary\\DemoApp",
+    "\\DnDClassLibrary\\DnDClassLibrary",
+    "\\DnDClassLibrary\\DnDClassLibrary\\Ahmed",
+    "\\DnDClassLibrary\\DnDClassLibrary\\Lasse"
   ],
   "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
   "PreviewInSolutionExplorer": false
