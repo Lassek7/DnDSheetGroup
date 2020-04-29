@@ -16,8 +16,6 @@ namespace DnDClassLibrary
         public int ProficiencyBonus;
 
         private int Jack;
-        //private bool JackOfAllTrades;
-
         private bool[] proficiency = new bool[18];
 
         public Skill(int StrengthModifier, int DexterityModifier, int ConstitutionModifier, int IntelligenceModifier,
@@ -30,7 +28,6 @@ namespace DnDClassLibrary
             this.WisdomModifier = WisdomModifier;
             this.CharismaModifier = CharismaModifier;
             this.ProficiencyBonus = ProficiencyBonus;
-            //this.JackOfAllTrades = JackOfAllTrades;
 
          if (JackOfAllTrades == true)
             {
@@ -45,6 +42,7 @@ namespace DnDClassLibrary
                 Jack = 0;
             }
         }
+        public Skill() { }
 
         public override string ToString()
         {
@@ -151,7 +149,6 @@ namespace DnDClassLibrary
         public int Survival
         {
             get { return WisdomModifier + (proficiency[17] ? ProficiencyBonus : Jack) ; }
- 
         }
     }
 }
