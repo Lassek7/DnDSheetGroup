@@ -1,4 +1,0 @@
-C:\Users\solma\source\repos\CharacterDND\CharacterDND\obj\Debug\netcoreapp3.1\CharacterDND.csprojAssemblyReference.cache
-C:\Users\solma\source\repos\CharacterDND\CharacterDND\obj\Debug\netcoreapp3.1\CharacterDND.csproj.CoreCompileInputs.cache
-C:\Users\solma\source\repos\CharacterDND\CharacterDND\obj\Debug\netcoreapp3.1\CharacterDND.AssemblyInfoInputs.cache
-C:\Users\solma\source\repos\CharacterDND\CharacterDND\obj\Debug\netcoreapp3.1\CharacterDND.AssemblyInfo.cs
