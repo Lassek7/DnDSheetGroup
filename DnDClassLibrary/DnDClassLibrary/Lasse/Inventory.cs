@@ -14,23 +14,31 @@ namespace DnDClassLibrary
         UtilityMethods Utillity = new UtilityMethods();
 
 
-        public Inventory(List<Item> hello)
-        {
-            hello = InventoryList;
-        }
-        public Inventory()
-        {
-
-        }
-        //public List<Item> inventoryList
-        //{
-        //    get { return InventoryList; }
-        //    private set { InventoryList = value; }
-        //}
-
         public void RunInventory()
         {
-            AddToInv();
+            int test = 0;
+            while (test != 4)
+            {
+                Console.WriteLine("1: add item. 2: check items: 3 Remove item:");
+                test = Convert.ToInt32(Console.ReadLine());
+
+                switch (test)
+                {
+                    case 1:
+                        AddToInv();
+
+                        break;
+                    case 2:
+                        CheckInventory();
+                        break;
+                    case 3:
+                        RemoveItem();
+                        break;
+                    default:
+                        break;
+                }
+            }
+           
         }
         void AddToInv()
         {

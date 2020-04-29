@@ -17,23 +17,21 @@ namespace DnDClassLibrary
 
         public void DatabaseList()
         {
-            //Inventory cat = new Inventory();
-            //List<Item> mylist = new List<Item>();
-            //List<Item> cat = new List<Item>(InventoryList);
-            //List<Item> cat = new List<Item>(inventoryList);
-          
+            Inventory cat = new Inventory(); // andet navn
+
+
+            cat.RunInventory();
 
 
 
-
-            File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.inventoryList));
+            File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.InventoryList));
             using (StreamWriter file = File.CreateText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json"))
             {
-                for (int i = 0; i < cat.inventoryList.Count; i++)
+                for (int i = 0; i < cat.InventoryList.Count; i++)
                 {
-                    
+
                     JsonSerializer jsonSerializer = new JsonSerializer();
-                    jsonSerializer.Serialize(file, cat.inventoryList[i]);
+                    jsonSerializer.Serialize(file, cat.InventoryList[i]);
                 }
             }
 

@@ -4,8 +4,9 @@ using System.Linq;
 
 namespace DnDClassLibrary
 {
-    class CharacterAttributes
+    public class CharacterAttributes
     {
+        public int hello = 3;
         public int[] Attributes { get; set; }
         public int[] Modifiers
         {
@@ -27,6 +28,7 @@ namespace DnDClassLibrary
         {
             Attributes = new int[6];
         }
+
     }
 
     /* Til at prøve det af i Main

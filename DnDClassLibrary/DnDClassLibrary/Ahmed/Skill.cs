@@ -6,7 +6,6 @@ namespace DnDClassLibrary
 {
     class Skill
     {
-
         public int DexterityModifier;
         public int StrengthModifier;
         public int ConstitutionModifier;

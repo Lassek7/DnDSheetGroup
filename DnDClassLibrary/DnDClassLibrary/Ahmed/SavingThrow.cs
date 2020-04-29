@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class SavingThrow : Skill
+    class SavingThrow : Skill
     {
         private bool[] proficiency = new bool[6];
 
