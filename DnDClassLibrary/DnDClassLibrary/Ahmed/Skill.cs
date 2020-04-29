@@ -4,8 +4,9 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Skill
+    class Skill
     {
+
         public int DexterityModifier;
         public int StrengthModifier;
         public int ConstitutionModifier;

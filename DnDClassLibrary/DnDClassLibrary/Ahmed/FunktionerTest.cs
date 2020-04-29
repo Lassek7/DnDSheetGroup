@@ -16,6 +16,7 @@ namespace DnDClassLibrary
 
             Console.WriteLine("Skill Result:\n\n" + PrintOut + "\n\n");
             Console.WriteLine("SavingThrow Result:\n\n" + PrintOut2);
+          
         }         
     }             
 }                

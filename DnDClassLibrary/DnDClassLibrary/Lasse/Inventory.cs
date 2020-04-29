@@ -10,8 +10,23 @@ namespace DnDClassLibrary
         int TotalWeight;
         string Encumbered = "You are not Encumbered";
 
-        public static List<Item> InventoryList = new List<Item>(); // temp public/static
+        public List<Item> InventoryList = new List<Item>(); // temp public/static
         UtilityMethods Utillity = new UtilityMethods();
+
+
+        public Inventory(List<Item> hello)
+        {
+            hello = InventoryList;
+        }
+        public Inventory()
+        {
+
+        }
+        //public List<Item> inventoryList
+        //{
+        //    get { return InventoryList; }
+        //    private set { InventoryList = value; }
+        //}
 
         public void RunInventory()
         {
@@ -205,5 +220,6 @@ namespace DnDClassLibrary
             }
 
         }
+        
     }
 }

@@ -2,7 +2,7 @@
 using System.Linq;
 
 
-namespace CharacterAttributesModifiers
+namespace DnDClassLibrary
 {
     class CharacterAttributes
     {
