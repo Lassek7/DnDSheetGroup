@@ -11,19 +11,19 @@ namespace DnDClassLibrary
             int WeaponSlotTwo;
             int WeaponSlotThree;
             int ArmorSlotChest;
-            bool ShieldEquipped;
+           public bool shieldEquipped;
             int AC;
             int ATKBonus;
 
         public EquippedItems(bool ShieldEquipped)
             {
-            this.ShieldEquipped = ShieldEquipped;
+            this.shieldEquipped = ShieldEquipped;
             }
 
 
             public int ACCalc()
             { 
-            if (ShieldEquipped == true)
+            if (shieldEquipped == true)
             {
                 AC = 2;
             }
@@ -39,7 +39,7 @@ namespace DnDClassLibrary
             { return ATKBonus; }
         public void test2()
         {
-            Console.WriteLine(ShieldEquipped);
+            Console.WriteLine(shieldEquipped);
             Console.WriteLine(AC);
         }
 
