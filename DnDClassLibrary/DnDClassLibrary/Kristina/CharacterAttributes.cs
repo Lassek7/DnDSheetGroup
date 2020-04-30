@@ -4,9 +4,8 @@ using System.Linq;
 
 namespace DnDClassLibrary
 {
-    public class CharacterAttributes
+   public class CharacterAttributes
     {
-
         public int[] Attributes { get; set; }
         public int[] Modifiers
         {
@@ -14,7 +13,12 @@ namespace DnDClassLibrary
             {
                 return Attributes.Select(attr => (attr - 10) / 2).ToArray();
             }
+            set
+            {
+                Modifiers = value;
+            }
         }
+
         public enum Fields
         {
             Strength,
@@ -26,8 +30,9 @@ namespace DnDClassLibrary
         }
         public CharacterAttributes()
         {
-            Attributes = new int[6];
+            Attributes =  new int[6];
         }
+
 
     }
 
