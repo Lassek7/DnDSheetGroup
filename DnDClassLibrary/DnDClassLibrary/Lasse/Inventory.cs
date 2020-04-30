@@ -66,14 +66,14 @@ namespace DnDClassLibrary
             checkWeight(); // slettes senere
 
         }//Tilføjer et item til inventory listen
-        public void CheckInventory() // Bruges bare til at checke om den har loaded filer// slettes senere
+        void CheckInventory() // Bruges bare til at checke om den har loaded filer// slettes senere
         {
             foreach (var Item in InventoryList)
             {
                 Console.WriteLine("test: {0}, {1}, {2}, {3}, {4}", Item.ItemName, Item.ItemType, Item.AmountHeld, Item.WeightPerItem, Item.Description);
             }
         }
-        public void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
+        void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
         { 
             Item NewItem = new Item(Utillity.ReadTextInput("Please Enter item to be modified")); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
            
@@ -235,17 +235,17 @@ namespace DnDClassLibrary
         public bool Test() // tester Equuipped items
         {
             EquippedItems hello = new EquippedItems(false);
-            hello.ShieldEquipped = true;
+            hello.shieldEquipped = true;
             hello.ACCalc();
             hello.test2();
-            hello.ShieldEquipped = false;
+            hello.shieldEquipped = false;
             hello.ACCalc();
             hello.test2();
-            hello.ShieldEquipped = true;
+            hello.shieldEquipped = true;
             hello.ACCalc();
             hello.test2();
             Console.ReadKey();
-            return hello.ShieldEquipped;
+            return hello.shieldEquipped;
             
         }
     }

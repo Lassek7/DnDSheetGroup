@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DnDClassLibrary", "DnDClass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "DemoApp\DemoApp.csproj", "{D786385A-E5EA-420E-B863-093B9A282765}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CharacterSheet", "CharacterSheet\CharacterSheet.csproj", "{2DE19DF1-C0F6-45A4-B85C-A077C0B494D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D786385A-E5EA-420E-B863-093B9A282765}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D786385A-E5EA-420E-B863-093B9A282765}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D786385A-E5EA-420E-B863-093B9A282765}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE19DF1-C0F6-45A4-B85C-A077C0B494D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE19DF1-C0F6-45A4-B85C-A077C0B494D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE19DF1-C0F6-45A4-B85C-A077C0B494D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE19DF1-C0F6-45A4-B85C-A077C0B494D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

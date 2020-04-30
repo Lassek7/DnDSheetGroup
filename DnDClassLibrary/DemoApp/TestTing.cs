@@ -11,7 +11,7 @@ namespace DemoApp
     {
         static void Main(string[] args)
         {
-           
+
            
             DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
 

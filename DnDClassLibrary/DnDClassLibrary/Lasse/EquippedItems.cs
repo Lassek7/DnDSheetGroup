@@ -8,10 +8,10 @@ namespace DnDClassLibrary
     {
 
             int WeaponSlotOne;
-            public int WeaponSlotTwo;
+            int WeaponSlotTwo;
             int WeaponSlotThree;
             int ArmorSlotChest;
-            public bool ShieldEquipped;
+            bool ShieldEquipped;
             int AC;
             int ATKBonus;
 

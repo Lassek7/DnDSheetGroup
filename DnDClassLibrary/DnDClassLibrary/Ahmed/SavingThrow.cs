@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class SavingThrow : Skill
+    class SavingThrow
     {
         private bool[] proficiency = new bool[6];
 
@@ -32,7 +32,7 @@ namespace DnDClassLibrary
 
         public int Strength
         {
-            get { return StrengthModifier + (proficiency[0] ? ProficiencyBonus : 0); }
+            get { return CharacterAttributes.Fields.Strength + (proficiency[0] ? ProficiencyBonus : 0); }
         }
         public int Dexterity
         {

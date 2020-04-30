@@ -9,7 +9,7 @@ namespace DnDClassLibrary
         Character NewCharacter = new Character();
         public void CharacterCreate()
         {
-            NewCharacter.
+          
         }
     }
 }
