@@ -4,19 +4,18 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class SavingThrow : Skill
+    public class SavingThrow : CharacterAttributes
     {
         private bool[] proficiency = new bool[6];
+        private int ProficiencyBonus;
 
-        public SavingThrow(int StrengthModifier, int DexterityModifier, int ConstitutionModifier, int IntelligenceModifier,
-            int WisdomModifier, int CharismaModifier, int ProficiencyBonus, int[] proficiencyEnabled, bool JackOfAllTrades) 
-        : base(StrengthModifier, DexterityModifier, ConstitutionModifier, IntelligenceModifier,
-            WisdomModifier, CharismaModifier, ProficiencyBonus, proficiencyEnabled, JackOfAllTrades)
+        public SavingThrow(int ProficiencyBonus, int[] proficiencyEnabled)
         {
+            this.ProficiencyBonus = ProficiencyBonus;
 
             foreach (int index in proficiencyEnabled)
                 proficiency[index] = true;
-        }
+        }        
 
         public override string ToString()
         {
@@ -32,27 +31,27 @@ namespace DnDClassLibrary
 
         public int Strength
         {
-            get { return StrengthModifier + (proficiency[0] ? ProficiencyBonus : 0); }
+            get { return Modifiers[0] + (proficiency[0] ? ProficiencyBonus : 0); }
         }
         public int Dexterity
         {
-            get { return DexterityModifier + (proficiency[1] ? ProficiencyBonus : 0); }
+            get { return Modifiers[1] + (proficiency[1] ? ProficiencyBonus : 0); }
         }
         public int Constitution
         {
-            get { return ConstitutionModifier + (proficiency[2] ? ProficiencyBonus : 0); }
+            get { return Modifiers[2] + (proficiency[2] ? ProficiencyBonus : 0); }
         }
         public int Intelligence
         {
-            get { return IntelligenceModifier + (proficiency[3] ? ProficiencyBonus : 0); }
+            get { return Modifiers[3] + (proficiency[3] ? ProficiencyBonus : 0); }
         }
         public int Wisdom
         {
-            get { return WisdomModifier + (proficiency[4] ? ProficiencyBonus : 0); }
+            get { return Modifiers[4] + (proficiency[4] ? ProficiencyBonus : 0); }
         }
         public int Charisma
         {
-            get { return CharismaModifier + (proficiency[5] ? ProficiencyBonus : 0); }
+            get { return Modifiers[5] + (proficiency[5] ? ProficiencyBonus : 0); }
         }
     }
 }

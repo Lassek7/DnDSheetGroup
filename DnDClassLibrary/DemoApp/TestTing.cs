@@ -11,36 +11,28 @@ namespace DemoApp
     {
         static void Main(string[] args)
         {
-           
-           
-            DnDDatabaseManagement I2 = new DnDDatabaseManagement();
-            int test = 0;
-            Inventory I1 = new Inventory();
-            while (test != 4)
-            {
-                Console.WriteLine("1: add item. 2: check items: 3 Remove item:");
-                test = Convert.ToInt32(Console.ReadLine());
 
-                
-                switch (test)
-                {
-                    case 1:
-                        I1.RunInventory();
-                        
-                        break;
-                    case 2:
-                        I1.CheckInventory();
-                        break;
-                    case 3:
-                        I1.RemoveItem();
-                        break;
-                    default:
-                        break;
-                }
+            CharacterAttributes c = new CharacterAttributes();
+
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]}: ");
+                c.Attributes[i] = int.Parse(Console.ReadLine());
+
             }
-            //I2.DatabaseList();
-            Console.ReadKey();
+
+            for (int i = 0; i < 6; i++)
+            {
+                Console.WriteLine($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]} modifier: ");
+                Console.WriteLine(c.Modifiers[i]);
+            }
+
+
+            //Ahmed start
+            FunktionerTest bom = new FunktionerTest();
+            bom.Print();
+            Console.ReadLine();
+            //Ahmed slut
         }
-        
     }
 }

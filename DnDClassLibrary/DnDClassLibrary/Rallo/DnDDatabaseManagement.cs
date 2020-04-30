@@ -26,16 +26,16 @@ namespace DnDClassLibrary
 
 
 
-            File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.inventoryList));
-            using (StreamWriter file = File.CreateText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json"))
-            {
-                for (int i = 0; i < cat.inventoryList.Count; i++)
-                {
+            //File.WriteAllText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json", JsonConvert.SerializeObject(cat.inventoryList));
+            //using (StreamWriter file = File.CreateText(@"C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\videogames.json"))
+            //{
+            //    for (int i = 0; i < cat.inventoryList.Count; i++)
+            //    {
                     
-                    JsonSerializer jsonSerializer = new JsonSerializer();
-                    jsonSerializer.Serialize(file, cat.inventoryList[i]);
-                }
-            }
+            //        JsonSerializer jsonSerializer = new JsonSerializer();
+            //        jsonSerializer.Serialize(file, cat.inventoryList[i]);
+            //    }
+            //}
 
 
         }
