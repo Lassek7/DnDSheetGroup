@@ -31,6 +31,7 @@ namespace DemoApp
                 Console.WriteLine(CharacterAttributes.Modifiers[i]);
             }
             //Kristina slut
+
             //Ahmed start
             FunktionerTest bom = new FunktionerTest();
             bom.Print();
