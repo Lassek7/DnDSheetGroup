@@ -2,24 +2,46 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DnDClassLibrary.Lasse
+namespace DnDClassLibrary
 {
-    class EquippedItems
+    class EquippedItems : Inventory
     {
-        public class Equipped
+
+            int WeaponSlotOne;
+            int WeaponSlotTwo;
+            int WeaponSlotThree;
+            int ArmorSlotChest;
+            bool ShieldEquipped;
+            int AC;
+            int ATKBonus;
+
+        public EquippedItems(bool ShieldEquipped)
+            {
+            this.ShieldEquipped = ShieldEquipped;
+            }
+
+
+            public int ACCalc()
+            { 
+            if (ShieldEquipped == true)
+            {
+                AC = 2;
+            }
+            else
+            {
+                AC = 0;
+            }
+
+            return AC; 
+            }
+
+           public  int AtkBonusCalc()
+            { return ATKBonus; }
+        public void test2()
         {
-            //public int WeaponSlotOne;
-            //public int WeaponSlotTwo;
-            //public int WeaponSlotThree;
-            //public int ArmorSlotChest;
-            //public bool ShieldEquipped;
-
-
-
-
-            //ACCalc()
-            //{
-
+            Console.WriteLine(ShieldEquipped);
+            Console.WriteLine(AC);
         }
+
     }
 }

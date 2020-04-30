@@ -56,6 +56,7 @@ namespace DnDClassLibrary
 
         }
 
+        // Get - Set
         public string SpellName
         {
             get { return spellName; }
@@ -91,31 +92,37 @@ namespace DnDClassLibrary
             get { return spellLevel; }
             set { spellLevel = value; }
         }
+
         public string SpellSchool
         {
             get { return spellSchool; }
             set { spellSchool = value; }
         }
+
         public string SpellDescription
         {
             get { return spellDescription; }
             set { spellDescription = value; }
         }
+
         public bool SpellPrepared
         {
             get { return spellPrepared; }
             set { spellPrepared = value; }
         }
+
         public int Resources
         {
             get { return resources; }
             set { resources = value; }
         }
+
         public int SpellDC
         {
             get { return spellDC; }
             set { spellDC = value; }
         }
+
         public int SpellBonus
         {
             get { return spellBonus; }

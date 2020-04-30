@@ -4,34 +4,45 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Inventory
+    class Inventory
     {
         int TempStrength = 5; // temporary
         int TotalWeight;
         string Encumbered = "You are not Encumbered";
 
-        public List<Item> InventoryList = new List<Item>(); // temp public/static
+        List<Item> InventoryList = new List<Item>();
         UtilityMethods Utillity = new UtilityMethods();
 
-
-        public Inventory(List<Item> hello)
+        public List<Item> inventoryList
         {
-            hello = InventoryList;
+            get { return InventoryList;  }
         }
-        public Inventory()
-        {
-
-        }
-        //public List<Item> inventoryList
-        //{
-        //    get { return InventoryList; }
-        //    private set { InventoryList = value; }
-        //}
 
         public void RunInventory()
         {
-            AddToInv();
-        }
+            int test = 0;
+            while (test != 4)
+            {
+                Console.WriteLine("1: add item. 2: check items: 3 Remove item:");
+                test = Convert.ToInt32(Console.ReadLine());
+
+                switch (test)
+                {
+                    case 1:
+                        AddToInv();
+                        break;
+                    case 2:
+                        CheckInventory();
+                        break;
+                    case 3:
+                        RemoveItem();
+                        break;
+                    default:
+                        break;
+                }
+            }
+           
+        } // kører inventory
         void AddToInv()
         {
             string invtype;
@@ -55,17 +66,17 @@ namespace DnDClassLibrary
             checkWeight(); // slettes senere
 
         }//Tilføjer et item til inventory listen
-        public void CheckInventory() // Bruges bare til at checke om den har loaded filer
+        void CheckInventory() // Bruges bare til at checke om den har loaded filer// slettes senere
         {
             foreach (var Item in InventoryList)
             {
                 Console.WriteLine("test: {0}, {1}, {2}, {3}, {4}", Item.ItemName, Item.ItemType, Item.AmountHeld, Item.WeightPerItem, Item.Description);
             }
         }
-        public void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
-        {
-            Item NewItem = new Item();
-            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item to be modified"); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+        void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
+        { 
+            Item NewItem = new Item(Utillity.ReadTextInput("Please Enter item to be modified")); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+           
             for (int i = 0; i < InventoryList.Count; i++)
             {
                 Item OldItem = InventoryList[i];
@@ -216,10 +227,26 @@ namespace DnDClassLibrary
 
                     InventoryList.Remove(OldItem); // fjerner filen fra listen.
                     Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                  
                 }
             }
 
         }
-        
+        public bool Test() // tester Equuipped items
+        {
+            EquippedItems hello = new EquippedItems(false);
+            hello.shieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            hello.shieldEquipped = false;
+            hello.ACCalc();
+            hello.test2();
+            hello.shieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            Console.ReadKey();
+            return hello.shieldEquipped;
+            
+        }
     }
 }
