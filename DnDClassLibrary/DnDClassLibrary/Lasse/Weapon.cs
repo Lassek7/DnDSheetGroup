@@ -16,7 +16,9 @@ namespace DnDClassLibrary
         private bool proficiency;
         private int proficiencyModifier;
 
-        public string AttributeAssociation
+
+        
+        public string AttributeAssociation // validering tilføjes senere
         {
             get { return attributeAssociation; }
             set { attributeAssociation = value; }

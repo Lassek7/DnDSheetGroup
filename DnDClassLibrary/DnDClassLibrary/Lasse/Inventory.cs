@@ -4,25 +4,50 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Inventory
+    class Inventory
     {
-        
+        int TempStrength = 5; // temporary
         int TotalWeight;
-        string Encumbered = "You are not encumbered";
+        string Encumbered = "You are not Encumbered";
 
-        public static List<Item> InventoryList = new List<Item>(); // temp public/static
+        List<Item> InventoryList = new List<Item>();
         UtilityMethods Utillity = new UtilityMethods();
+
+        public List<Item> inventoryList
+        {
+            get { return InventoryList;  }
+        }
 
         public void RunInventory()
         {
-            AddToInv();
-        }
+            int test = 0;
+            while (test != 4)
+            {
+                Console.WriteLine("1: add item. 2: check items: 3 Remove item:");
+                test = Convert.ToInt32(Console.ReadLine());
 
+                switch (test)
+                {
+                    case 1:
+                        AddToInv();
+                        break;
+                    case 2:
+                        CheckInventory();
+                        break;
+                    case 3:
+                        RemoveItem();
+                        break;
+                    default:
+                        break;
+                }
+            }
+           
+        } // kører inventory
         void AddToInv()
         {
             string invtype;
-            invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon");
-            switch (invtype)
+            invtype = Utillity.ReadTextInput("what would you like to add? 1 for Item, 2 for Armor, 3 for Weapon"); // tager iøjeblikket kun mod: "Item" "Armor" og "Weapon" som input
+            switch (invtype) // tjekker hvilken type item der er tilføjet til inventory
             {
                 case "Item":
                     AddItemToList();
@@ -36,100 +61,111 @@ namespace DnDClassLibrary
                 default:
                     break;
             }
-            ItemWeightCalc();
-            checkWeight();
-            EnucumberCheck();
+            ItemWeightCalc(); 
+            EncumberCheck();
+            checkWeight(); // slettes senere
 
-        }
-        public void CheckInventory() // laves Private Senere
+        }//Tilføjer et item til inventory listen
+        void CheckInventory() // Bruges bare til at checke om den har loaded filer// slettes senere
         {
             foreach (var Item in InventoryList)
             {
                 Console.WriteLine("test: {0}, {1}, {2}, {3}, {4}", Item.ItemName, Item.ItemType, Item.AmountHeld, Item.WeightPerItem, Item.Description);
             }
         }
-        public void RemoveItem() // laves Private Senere
-        {
-            Item B1 = new Item();
-            B1.ItemName = Utillity.ReadTextInput("Please Enter item to be modified");
+        void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
+        { 
+            Item NewItem = new Item(Utillity.ReadTextInput("Please Enter item to be modified")); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
+           
             for (int i = 0; i < InventoryList.Count; i++)
             {
-                Item Item = InventoryList[i];
-                if (Item.ItemName.Equals(B1.ItemName))
+                Item OldItem = InventoryList[i];
+                if (OldItem.ItemName.Equals(NewItem.ItemName))  // tjekker om den nye fil allerede eksistere i listen
                 {
-                    InventoryList.Remove(Item);
-                    Console.WriteLine("true");
+                    ModifyItem(OldItem);
                     break;
                 }
-                else
-                {
-                    Console.WriteLine("False");
-                    Console.WriteLine("{0}", Item.ItemName);
+                else if(i == InventoryList.Count-1)// slettes senere, bruges til test
+                { 
+                    Console.WriteLine("The item Does not exist");
                     break;
                 }
             }
         }
-
-        void AddItemToList()
+        void AddItemToList() // tilføjer et "Item" til inventory
         {
-            Item item = new Item();
-
-            item.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            item.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            item.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            item.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            item.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-
-            InventoryList.Add(item);
+            Item NewItem = new Item();
+           
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            
+            bool ItemExist = ExistCheck(NewItem); // hvis denne er true, vil mængden af et specifikt item blive større.
+            
+            if (ItemExist != true) // Hvis itemmet ikke allerede eksistere køres dette og der laves et nyt item.
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                
+                InventoryList.Add(NewItem);
+            }            
         }
-        void AddArmorToList()
+        void AddArmorToList() // virker ligesom Add Item to list
         {
-            Armor armor = new Armor();
+            Armor NewItem = new Armor();
 
-            armor.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            armor.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            armor.ACFromArmor = Utillity.ReadNumericInput("what is the AC?");
-            armor.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            armor.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            armor.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-            armor.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            bool ItemExist = ExistCheck(NewItem);
 
-            InventoryList.Add(armor);
+            if (ItemExist != true)
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.ACFromArmor = Utillity.ReadNumericInput("what is the AC?");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                NewItem.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+
+                InventoryList.Add(NewItem);
+            }
 
         }
-        void AddWeaponToList()
+        void AddWeaponToList() // fungere ligesom add item to list
         {
-            Weapon weapon = new Weapon();
+            Weapon NewItem = new Weapon();
 
-            weapon.ItemName = Utillity.ReadTextInput("Please Enter item name");
-            weapon.ItemType = Utillity.ReadTextInput("Please Enter item type");
-            weapon.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
-            weapon.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
-            weapon.Description = Utillity.ReadTextInput("Please enter the description of the Item");
-            weapon.AttributeAssociation = Utillity.ReadTextInput("what attribute is it associated with?");
-            weapon.AttackModifier = 2; // palceholder
-            weapon.Range = Utillity.ReadTextInput("What is the range?");
-            weapon.Damage = Utillity.ReadTextInput("How much damage does it deal?");
-            weapon.DamageType = Utillity.ReadTextInput("What damage type does it have?");
-            weapon.AttackBonus = 5; // placeholder
-            weapon.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
-            weapon.Proficiency = Utillity.ReadBoolInput("Do you have Proficiency in this weapon?");
-            weapon.ProficiencyModifier = 3; // Placeholder
+            NewItem.ItemName = Utillity.ReadTextInput("Please Enter item name");
+            bool ItemExist = ExistCheck(NewItem);
+            
+            if (ItemExist != true)
+            {
+                NewItem.ItemType = Utillity.ReadTextInput("Please Enter item type");
+                NewItem.AmountHeld = Utillity.ReadNumericInput("Please enter amount");
+                NewItem.WeightPerItem = Utillity.ReadNumericInput("Please enter weight per item");
+                NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
+                NewItem.AttributeAssociation = Utillity.ReadTextInput("what attribute is it associated with?");
+                NewItem.AttackModifier = 2; // palceholder
+                NewItem.Range = Utillity.ReadTextInput("What is the range?");
+                NewItem.Damage = Utillity.ReadTextInput("How much damage does it deal?");
+                NewItem.DamageType = Utillity.ReadTextInput("What damage type does it have?");
+                NewItem.AttackBonus = 5; // placeholder
+                NewItem.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
+                NewItem.Proficiency = Utillity.ReadBoolInput("Do you have Proficiency in this weapon?");
+                NewItem.ProficiencyModifier = 3; // Placeholder
 
-            InventoryList.Add(weapon);
+                InventoryList.Add(NewItem);
+            }
         }
-        string EnucumberCheck()
+        string EncumberCheck() // tjekker om man har for meget vægt
         {
-            int TempStrength = 5; // temporary
-
-
+            
             if (TotalWeight >= TempStrength * 5)
             {
                 Encumbered = "you are heavily Encumbered";
             }
             else if (TotalWeight >= TempStrength * 2)
             {
-                Encumbered = "you are lightly encumbered";
+                Encumbered = "you are slightly encumbered";
             }
             else
             {
@@ -138,13 +174,12 @@ namespace DnDClassLibrary
 
             return Encumbered;
         }
-
-        void checkWeight() // temporary checker
+        void checkWeight() // temporary checker // slettes senere
         {
             Console.WriteLine(TotalWeight);
             Console.WriteLine(Encumbered);
         }
-        int ItemWeightCalc()
+        int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
         {
            TotalWeight = 0;
            for (int i = 0; i < InventoryList.Count; i++)
@@ -153,6 +188,65 @@ namespace DnDClassLibrary
                 TotalWeight += Item.WeightPerItem * Item.AmountHeld;
             }
             return TotalWeight;
+        }
+        bool ExistCheck(Item NewItem) // tjekker om itemmet existere, når et nyt skal tilføjes.
+        {
+            bool ItemExist = false;
+            for (int i = 0; i < InventoryList.Count; i++)
+            {
+                Item OldItems = InventoryList[i];
+                if (OldItems.ItemName.Equals(NewItem.ItemName)) // hvis det eksistere, ændrer den bare hvor mange der er, ved at lægge ekstra oveni
+                {
+                    ItemExist = true;
+                    OldItems.AmountHeld += Utillity.ReadNumericInput("Item already exists, how many would you like to add?");
+                    break;
+                }
+                else
+                {
+                    ItemExist = false;
+                }
+            }
+            return ItemExist;
+        }
+        void ModifyItem(Item OldItem)// ændre mængden eller fjerner et item
+        {
+
+            bool Remove = Utillity.ReadBoolInput("Do you want to remove(true) it or modify it(false)?");
+            if (Remove == true)
+            {
+                Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                InventoryList.Remove(OldItem); // fjerner filen fra listen.
+
+            }
+            else
+            {
+                OldItem.AmountHeld -= Utillity.ReadNumericInput("How many would you like to remove?");
+                Console.WriteLine("You now have {0} of the item {1} left", OldItem.AmountHeld, OldItem.ItemName);
+                if (OldItem.AmountHeld == 0)
+                {
+
+                    InventoryList.Remove(OldItem); // fjerner filen fra listen.
+                    Console.WriteLine("The item {0} has been removed", OldItem.ItemName);
+                  
+                }
+            }
+
+        }
+        public bool Test() // tester Equuipped items
+        {
+            EquippedItems hello = new EquippedItems(false);
+            hello.shieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            hello.shieldEquipped = false;
+            hello.ACCalc();
+            hello.test2();
+            hello.shieldEquipped = true;
+            hello.ACCalc();
+            hello.test2();
+            Console.ReadKey();
+            return hello.shieldEquipped;
+            
         }
     }
 }

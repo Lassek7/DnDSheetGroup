@@ -16,7 +16,7 @@ namespace DnDClassLibrary
         {
         }
 
-        public Item(string itemName)
+        public Item(string itemName) // validering tilføjes senere
         {
             this.itemName = itemName;
         }

@@ -26,3 +26,7 @@ C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfoInputs.cache
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
+C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.pdb
+C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
+C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
+C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb
