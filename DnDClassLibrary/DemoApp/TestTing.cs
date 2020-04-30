@@ -12,11 +12,10 @@ namespace DemoApp
         static void Main(string[] args)
         {
 
-           
             //DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
-
             //RunInv.CharatorCreation();
             //Console.ReadKey();
+
 
             //Kristina start
             for (int i = 0; i < 6; i++)
@@ -31,6 +30,7 @@ namespace DemoApp
                 Console.WriteLine(CharacterAttributes.Modifiers[i]);
             }
             //Kristina slut
+
 
             //Ahmed start
             FunktionerTest bom = new FunktionerTest();
