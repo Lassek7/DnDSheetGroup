@@ -11,8 +11,6 @@ namespace DnDClassLibrary
         private int Jack;
         private bool[] proficiency = new bool[18];
 
-        CharacterAttributes cc = new CharacterAttributes();
-
         public Skill(int ProficiencyBonus, int[] proficiencyEnabled, bool JackOfAllTrades)
         {
             this.ProficiencyBonus = ProficiencyBonus;
@@ -44,6 +42,8 @@ namespace DnDClassLibrary
             sb.Append("Intimidation " + Intimidation + "\n");
             sb.Append("Investigation " + Investigation + "\n");
             sb.Append("Medicine " + Medicine + "\n");
+            sb.Append("Nature " + Nature + "\n");
+            sb.Append("Perception " + Perception + "\n");
             sb.Append("Performance " + Performance + "\n");
             sb.Append("Persuasion " + Persuasion + "\n");
             sb.Append("Religion " + Religion + "\n");
@@ -55,86 +55,86 @@ namespace DnDClassLibrary
 
         public int Acrobatics
         {
-            get { return cc.Modifiers[1] + (proficiency[0] ? ProficiencyBonus : Jack ) ; }
+            get { return CharacterAttributes.Modifiers[1] + (proficiency[0] ? ProficiencyBonus : Jack ) ; }
         }
         public int AnimalHandling
         {
-            get { return cc.Modifiers[4] + (proficiency[1] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[4] + (proficiency[1] ? ProficiencyBonus : Jack) ; }
         }
         public int Arcana
         {
-            get { return cc.Modifiers[3] + (proficiency[2] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[3] + (proficiency[2] ? ProficiencyBonus : Jack) ; }
         }
         public int Athletics
         {
-            get { return cc.Modifiers[0] + (proficiency[3] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[0] + (proficiency[3] ? ProficiencyBonus : Jack) ; }
         }
         public int Deception
         {
-            get { return cc.Modifiers[5] + (proficiency[4] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[5] + (proficiency[4] ? ProficiencyBonus : Jack) ; }
         }
         public int History
         {
-            get { return cc.Modifiers[3] + (proficiency[5] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[3] + (proficiency[5] ? ProficiencyBonus : Jack) ; }
         }
         public int Insight
         {
-            get { return cc.Modifiers[4] + (proficiency[6] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[4] + (proficiency[6] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Intimidation
         {
-            get { return cc.Modifiers[5] + (proficiency[7] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[5] + (proficiency[7] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Investigation
         {
-            get { return cc.Modifiers[3] + (proficiency[8] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[3] + (proficiency[8] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Medicine
         {
-            get { return cc.Modifiers[4] + (proficiency[9] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[4] + (proficiency[9] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Nature
         {
-            get { return cc.Modifiers[3] + (proficiency[10] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[3] + (proficiency[10] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Perception
         {
-            get { return cc.Modifiers[4] + (proficiency[11] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[4] + (proficiency[11] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Performance
         {
-            get { return cc.Modifiers[5] + (proficiency[12] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[5] + (proficiency[12] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Persuasion
         {
-            get { return cc.Modifiers[5] + (proficiency[13] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[5] + (proficiency[13] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Religion
         {
-            get { return cc.Modifiers[3] + (proficiency[14] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[3] + (proficiency[14] ? ProficiencyBonus : Jack) ; }
         }
 
         public int SleightOfHand
         {
-            get { return cc.Modifiers[1] + (proficiency[15] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[1] + (proficiency[15] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Stealth
         {
-            get { return cc.Modifiers[1] + (proficiency[16] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[1] + (proficiency[16] ? ProficiencyBonus : Jack) ; }
         }
 
         public int Survival
         {
-            get { return cc.Modifiers[4] + (proficiency[17] ? ProficiencyBonus : Jack) ; }
+            get { return CharacterAttributes.Modifiers[4] + (proficiency[17] ? ProficiencyBonus : Jack) ; }
         }
     }
 }

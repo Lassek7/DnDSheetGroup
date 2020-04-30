@@ -8,13 +8,10 @@ namespace DnDClassLibrary
     {
         public void Print()
         {
-            //Skill PrintOut = new Skill(2, new int[] {0, 0, 0, 0}, false);
-            SavingThrow PrintOut2 = new SavingThrow(2, new int [] { 0, 0});
+            Skill PrintOut = new Skill(2, new int[] {0, 17}, true);
+            SavingThrow PrintOut2 = new SavingThrow(2, new int [] {});
 
-            //bool equalSelf = PrintOut.Equals(PrintOut);
-            //equalSelf = Object.Equals(PrintOut, PrintOut);
-
-            //Console.WriteLine("Skill Result:\n\n" + PrintOut + "\n\n");
+            Console.WriteLine("Skill Result:\n\n" + PrintOut + "\n\n");
             Console.WriteLine("SavingThrow Result:\n\n" + PrintOut2);
           
         }         
