@@ -51,29 +51,27 @@ namespace CharacterSheet
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
-            bool OutOfReach = string.IsNullOrEmpty(LevelBox.Text); 
-            int level = 1;
-            if (OutOfReach != true)
-            {
-               level = Int32.Parse(LevelBox.Text);
-            }
-            else
-            {
-              
-            }
-            if (level >= 1 && level <= 20)
-            {
-                Character.level = Convert.ToInt32(level);
-                lvl = true;
-                
-            }
-            else
-            {
-                lvl = false;
-                MessageBox.Show("level must be between 1 and 20");
-            }
-            
+          bool OutOfReach = string.IsNullOrEmpty(LevelBox.Text);
+          int level = 1;
+          if (OutOfReach != true)
+          {
+              level = Int32.Parse(LevelBox.Text);
+          }
+          else
+          {
+          }
+          if (level >= 1 && level <= 20)
+          {
+              Character.level = Convert.ToInt32(level);
+              lvl = true;
+          }
+          else
+          {
+              lvl = false;
+              MessageBox.Show("level must be between 1 and 20");
+          }
         }
+
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
             Character.alignment = AlignmentBox.Text;

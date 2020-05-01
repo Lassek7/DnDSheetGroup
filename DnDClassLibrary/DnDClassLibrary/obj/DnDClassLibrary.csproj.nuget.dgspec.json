@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {}
+    "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {
+    "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
         "projectName": "DnDClassLibrary",
-        "projectPath": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
-        "packagesPath": "C:\\Users\\sebse\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
+        "projectPath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+        "packagesPath": "C:\\Users\\lasse\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lasse\\OneDrive\\Dokumenter\\P4\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sebse\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lasse\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -59,7 +59,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

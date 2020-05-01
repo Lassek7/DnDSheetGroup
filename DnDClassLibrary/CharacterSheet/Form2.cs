@@ -20,8 +20,8 @@ namespace CharacterSheet
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CreateCharacterForm f1 = new CreateCharacterForm();
-            f1.Show();
+            CreateCharacterForm RunCreateCharacter = new CreateCharacterForm();
+            RunCreateCharacter.Show();
         }
     }
 }

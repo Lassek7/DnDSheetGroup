@@ -278,7 +278,7 @@
             // 
             // LevelBox
             // 
-            this.LevelBox.Location = new System.Drawing.Point(104, 298);
+            this.LevelBox.Location = new System.Drawing.Point(104, 295);
             this.LevelBox.Name = "LevelBox";
             this.LevelBox.Size = new System.Drawing.Size(100, 20);
             this.LevelBox.TabIndex = 34;

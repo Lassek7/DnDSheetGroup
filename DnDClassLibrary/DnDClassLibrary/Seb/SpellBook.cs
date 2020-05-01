@@ -20,7 +20,7 @@ namespace DnDClassLibrary
             NewSpell.SpellName        = Utility.ReadTextInput("Enter Spell name");
             NewSpell.SpellLevel       = Utility.ReadNumericInput("Enter Spell level");
            
-            if (NewCharacter.Level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
+            if (NewCharacter.level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
             {
                 NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
                 NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
