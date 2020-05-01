@@ -4,10 +4,10 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class Character
+    public class Character
     {
         #region FIELD 
-        private string CharacterName;
+        string CharacterName;
         private string PlayerName;
         public string Race;
         public string Background;
@@ -44,7 +44,7 @@ namespace DnDClassLibrary
         }
             public string race
         {
-            get { return race; }
+            get { return Race; }
             set { Race = value; }
         }
             public string background
