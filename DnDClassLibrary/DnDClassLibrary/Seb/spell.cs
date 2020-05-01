@@ -11,7 +11,7 @@ namespace DnDClassLibrary
         private string duration;
         private string castTime;
         private int range;
-        private int spellLevel; // var string før, tænker at 0 = cantrip
+        private int spellLevel; // cantrip = 0
         private string spellSchool;
         private string spellDescription;
         private bool spellPrepared;
@@ -33,7 +33,7 @@ namespace DnDClassLibrary
             string duration,
             string castTime,
             int range,
-            string spellLevel,
+            int spellLevel,
             string spellSchool,
             string spellDescription,
             bool spellPrepared,
@@ -87,7 +87,7 @@ namespace DnDClassLibrary
             set { range = value; }
         }
 
-        public string SpellLevel
+        public int SpellLevel
         {
             get { return spellLevel; }
             set { spellLevel = value; }

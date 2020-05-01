@@ -18,11 +18,9 @@ namespace DnDClassLibrary
             Character NewCharacter = new Character();
 
             NewSpell.SpellName        = Utility.ReadTextInput("Enter Spell name");
-            NewSpell.SpellLevel       = Utility.ReadTextInput("Enter Spell level");
-            
-            int SpellLevelChecker = Convert.ToInt32(NewSpell.SpellLevel);
+            NewSpell.SpellLevel       = Utility.ReadNumericInput("Enter Spell level");
            
-            if (NewCharacter.Level >= SpellLevelChecker) //Check om character er i højt nok level for den intastede spell
+            if (NewCharacter.Level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
             {
                 NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
                 NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
