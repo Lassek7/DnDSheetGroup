@@ -232,21 +232,21 @@ namespace DnDClassLibrary
             }
 
         }
-        public bool Test() // tester Equuipped items
-        {
-            EquippedItems hello = new EquippedItems(false);
-            hello.shieldEquipped = true;
-            hello.ACCalc();
-            hello.test2();
-            hello.shieldEquipped = false;
-            hello.ACCalc();
-            hello.test2();
-            hello.shieldEquipped = true;
-            hello.ACCalc();
-            hello.test2();
-            Console.ReadKey();
-            return hello.shieldEquipped;
+        //public bool Test() // tester Equuipped items
+        //{
+        //    EquippedItems hello = new EquippedItems(false);
+        //    hello.shieldEquipped = true;
+        //    hello.ACCalc();
+        //    hello.test2();
+        //    hello.shieldEquipped = false;
+        //    hello.ACCalc();
+        //    hello.test2();
+        //    hello.shieldEquipped = true;
+        //    hello.ACCalc();
+        //    hello.test2();
+        //    Console.ReadKey();
+        //    return hello.shieldEquipped;
             
-        }
+        //}
     }
 }
