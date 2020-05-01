@@ -104,7 +104,7 @@
             // 
             // BackgroundBox
             // 
-            this.BackgroundBox.Location = new System.Drawing.Point(104, 245);
+            this.BackgroundBox.Location = new System.Drawing.Point(104, 230);
             this.BackgroundBox.Name = "BackgroundBox";
             this.BackgroundBox.Size = new System.Drawing.Size(100, 20);
             this.BackgroundBox.TabIndex = 8;
@@ -112,11 +112,12 @@
             // 
             // MaxHealthBox
             // 
-            this.MaxHealthBox.Location = new System.Drawing.Point(104, 278);
+            this.MaxHealthBox.Location = new System.Drawing.Point(104, 266);
             this.MaxHealthBox.Name = "MaxHealthBox";
             this.MaxHealthBox.Size = new System.Drawing.Size(100, 20);
             this.MaxHealthBox.TabIndex = 9;
             this.MaxHealthBox.TextChanged += new System.EventHandler(this.MaxHealthBox_TextChanged);
+            this.MaxHealthBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaxHealthBox_KeyPress);
             // 
             // PlayerNameBox
             // 
@@ -144,7 +145,7 @@
             // 
             // AlignmentBox
             // 
-            this.AlignmentBox.Location = new System.Drawing.Point(104, 209);
+            this.AlignmentBox.Location = new System.Drawing.Point(104, 193);
             this.AlignmentBox.Name = "AlignmentBox";
             this.AlignmentBox.Size = new System.Drawing.Size(100, 20);
             this.AlignmentBox.TabIndex = 18;
@@ -235,7 +236,7 @@
             // BackgroundLabel
             // 
             this.BackgroundLabel.AutoSize = true;
-            this.BackgroundLabel.Location = new System.Drawing.Point(11, 245);
+            this.BackgroundLabel.Location = new System.Drawing.Point(11, 230);
             this.BackgroundLabel.Name = "BackgroundLabel";
             this.BackgroundLabel.Size = new System.Drawing.Size(65, 13);
             this.BackgroundLabel.TabIndex = 28;
@@ -251,7 +252,7 @@
             // AlignmentLabel
             // 
             this.AlignmentLabel.AutoSize = true;
-            this.AlignmentLabel.Location = new System.Drawing.Point(13, 209);
+            this.AlignmentLabel.Location = new System.Drawing.Point(12, 193);
             this.AlignmentLabel.Name = "AlignmentLabel";
             this.AlignmentLabel.Size = new System.Drawing.Size(53, 13);
             this.AlignmentLabel.TabIndex = 30;
@@ -260,7 +261,7 @@
             // MaxHealthLabel
             // 
             this.MaxHealthLabel.AutoSize = true;
-            this.MaxHealthLabel.Location = new System.Drawing.Point(13, 278);
+            this.MaxHealthLabel.Location = new System.Drawing.Point(13, 266);
             this.MaxHealthLabel.Name = "MaxHealthLabel";
             this.MaxHealthLabel.Size = new System.Drawing.Size(58, 13);
             this.MaxHealthLabel.TabIndex = 31;
@@ -269,7 +270,7 @@
             // LevelLabel
             // 
             this.LevelLabel.AutoSize = true;
-            this.LevelLabel.Location = new System.Drawing.Point(12, 314);
+            this.LevelLabel.Location = new System.Drawing.Point(13, 298);
             this.LevelLabel.Name = "LevelLabel";
             this.LevelLabel.Size = new System.Drawing.Size(33, 13);
             this.LevelLabel.TabIndex = 33;
@@ -277,11 +278,12 @@
             // 
             // LevelBox
             // 
-            this.LevelBox.Location = new System.Drawing.Point(104, 314);
+            this.LevelBox.Location = new System.Drawing.Point(104, 298);
             this.LevelBox.Name = "LevelBox";
             this.LevelBox.Size = new System.Drawing.Size(100, 20);
             this.LevelBox.TabIndex = 34;
             this.LevelBox.TextChanged += new System.EventHandler(this.LevelBox_TextChanged);
+            this.LevelBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LevelBox_KeyPress);
             // 
             // CreateCharacterForm
             // 

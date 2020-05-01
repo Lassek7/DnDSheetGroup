@@ -14,7 +14,8 @@ namespace CharacterSheet
     public partial class CreateCharacterForm : Form
     {
         Character Character = new Character();
-        
+        bool lvl = false;
+        bool health = false;
         public CreateCharacterForm()
         {
             InitializeComponent();
@@ -50,7 +51,28 @@ namespace CharacterSheet
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
-            Character.level = Convert.ToInt32(LevelBox.Text);
+            bool OutOfReach = string.IsNullOrEmpty(LevelBox.Text); 
+            int level = 1;
+            if (OutOfReach != true)
+            {
+               level = Int32.Parse(LevelBox.Text);
+            }
+            else
+            {
+              
+            }
+            if (level >= 1 && level <= 20)
+            {
+                Character.level = Convert.ToInt32(level);
+                lvl = true;
+                
+            }
+            else
+            {
+                lvl = false;
+                MessageBox.Show("level must be between 1 and 20");
+            }
+            
         }
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
@@ -64,7 +86,27 @@ namespace CharacterSheet
 
         private void MaxHealthBox_TextChanged(object sender, EventArgs e)
         {
-         Character.maxHealth = Convert.ToInt32(MaxHealthBox.Text);
+            bool OutOfReach = string.IsNullOrEmpty(MaxHealthBox.Text);
+            int Health = 1;
+            if (OutOfReach != true)
+            {
+                Health = Int32.Parse(MaxHealthBox.Text);
+            }
+            else
+            {
+
+            }
+            if (Health >= 1)
+            {
+                health = true;
+                Character.maxHealth = Convert.ToInt32(Health);
+            }
+            else
+            {
+                MessageBox.Show("Your health must be more than 0");
+                health = false;
+            }
+            
         }
 
         private void IdealsRichBox_TextChanged(object sender, EventArgs e)
@@ -89,28 +131,33 @@ namespace CharacterSheet
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
 
-
-            MessageBox.Show(Convert.ToString(Character.level));
-            MessageBox.Show(Convert.ToString(Character.maxHealth));
+            if(health == true && lvl == true)
+            {
+                MessageBox.Show(Convert.ToString(Character.level), Convert.ToString(Character.maxHealth));
+            }
+            else
+            {
+                MessageBox.Show("please input health and lvl");
+            }
+            
         }
 
-        //        private void LevelBox_KeyPress(object sender, KeyPressEventArgs e)
-        //        {
-        //            //{
-        //            //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-        //            //        (e.KeyChar != '.'))
-        //            //    {
-        //            //        e.Handled = true;
-        //            //    }
-
-        //            //    // only allow one decimal point
-        //            //    if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-        //            //    {
-        //            //        e.Handled = true;
-        //            //    }
-        //            //}
-        //        }
+        private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
-       
+        private void LevelBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
+
+
+}
