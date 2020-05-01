@@ -11,7 +11,7 @@ namespace DnDClassLibrary
         private string PlayerName;
         public string Race;
         public string Background;
-        public int Level;
+        private int Level;
         public string CharacterClass;
         private string Ideals;
         private string Flaws;
@@ -52,12 +52,12 @@ namespace DnDClassLibrary
             get {return Background; }
             set { Background = value; }
         }
-            public int level
+        public int level
         {
             get { return Level; }
             set { Level = value; }
         }
-            public string CcharacterClass
+        public string characterClass
         {
             get { return CharacterClass; }
             set { CharacterClass = value; }
@@ -138,48 +138,48 @@ namespace DnDClassLibrary
 
 
 #endregion
-private void ProficiencyCalc()
-        {
-            if (Level < 1)
-            {
-                ProficiencyBonus = 0;
-            }
-            else if (Level < 5)
-            {
-                ProficiencyBonus = 2;
+//private void ProficiencyCalc()
+//        {
+//            if (Level < 1)
+//            {
+//                ProficiencyBonus = 1;
+//            }
+//            else if (Level < 5)
+//            {
+//                ProficiencyBonus = 2;
 
-            }
-            else if (Level < 9)
-            {
-                ProficiencyBonus = 3;
-            }
-            else if (Level < 13)
-            {
-                ProficiencyBonus = 4;
-            }
-            else if (Level < 17)
-            {
-                ProficiencyBonus = 5;
-            }
-            else
-            {
-                ProficiencyBonus = 6;
-            }
+//            }
+//            else if (Level < 9)
+//            {
+//                ProficiencyBonus = 3;
+//            }
+//            else if (Level < 13)
+//            {
+//                ProficiencyBonus = 4;
+//            }
+//            else if (Level < 17)
+//            {
+//                ProficiencyBonus = 5;
+//            }
+//            else
+//            {
+//                ProficiencyBonus = 6;
+//            }
 
-        }
+//        }
 
-        private void InitiativeCalc()
-        {
-        //    Initiative = DexterityModifier;
+//        private void InitiativeCalc()
+//        {
+//        //    Initiative = DexterityModifier;
 
-        }
-
-
-        private void EditSheet()
-        {
+//        }
 
 
-        }
-    }
+//        private void EditSheet()
+//        {
+
+
+//        }
+   }
 }
 

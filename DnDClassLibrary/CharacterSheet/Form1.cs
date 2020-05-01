@@ -14,6 +14,7 @@ namespace CharacterSheet
     public partial class CreateCharacterForm : Form
     {
         Character Character = new Character();
+        
         public CreateCharacterForm()
         {
             InitializeComponent();
@@ -27,70 +28,89 @@ namespace CharacterSheet
 
         private void CharacterNameBox_TextChanged(object sender, EventArgs e)
         {
+
             Character.characterName = CharacterNameBox.Text;
 
         }
 
         private void PlayerNameBox_TextChanged(object sender, EventArgs e)
         {
-            Character.playerName = CharacterNameBox.Text;
+            Character.playerName = PlayerNameBox.Text;
         }
 
         private void RaceBox_TextChanged(object sender, EventArgs e)
         {
-            Character.race = CharacterNameBox.Text;
+            Character.race = RaceBox.Text;
         }
 
         private void ClassBox_TextChanged(object sender, EventArgs e)
         {
-            Character.clas = CharacterNameBox.Text;
+            Character.characterClass = ClassBox.Text;
 
         }
-
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.level = Convert.ToInt32(LevelBox.Text);
         }
-
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.alignment = AlignmentBox.Text;
         }
 
         private void BackgroundBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.background = BackgroundBox.Text;
         }
 
         private void MaxHealthBox_TextChanged(object sender, EventArgs e)
         {
-
+         Character.maxHealth = Convert.ToInt32(MaxHealthBox.Text);
         }
 
         private void IdealsRichBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.ideals = IdealsRichBox.Text;
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.bonds = BondsRichBox.Text;
         }
 
         private void FlawsRichBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.flaws = FlawsRichBox.Text;
         }
 
         private void PersonalTraitsRichBox_TextChanged(object sender, EventArgs e)
         {
-
+            Character.traits = PersonalTraitsRichBox.Text;
         }
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
-           
-            MessageBox.Show(Character.characterName);
 
+
+            MessageBox.Show(Convert.ToString(Character.level));
+            MessageBox.Show(Convert.ToString(Character.maxHealth));
         }
+
+        //        private void LevelBox_KeyPress(object sender, KeyPressEventArgs e)
+        //        {
+        //            //{
+        //            //    if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        //            //        (e.KeyChar != '.'))
+        //            //    {
+        //            //        e.Handled = true;
+        //            //    }
+
+        //            //    // only allow one decimal point
+        //            //    if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+        //            //    {
+        //            //        e.Handled = true;
+        //            //    }
+        //            //}
+        //        }
+        }
+
+       
     }
-}
