@@ -1,7 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CharacterDND",
     "\\DnDClassLibrary",
     "\\DnDClassLibrary\\DemoApp",
     "\\DnDClassLibrary\\DnDClassLibrary",
@@ -9,6 +8,6 @@
     "\\DnDClassLibrary\\DnDClassLibrary\\Sara",
     "\\DnDClassLibrary\\DnDClassLibrary\\Seb"
   ],
-  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary\\Sara\\CharacterCreation.cs",
+  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
   "PreviewInSolutionExplorer": false
 }
