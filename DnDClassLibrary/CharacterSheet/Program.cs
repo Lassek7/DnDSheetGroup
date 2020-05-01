@@ -17,6 +17,7 @@ namespace CharacterSheet
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new CreateCharacterForm());
+            Application.Run(new Form2());
             
         }
     }

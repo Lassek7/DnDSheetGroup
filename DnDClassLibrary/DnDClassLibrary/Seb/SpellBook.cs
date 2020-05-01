@@ -14,21 +14,31 @@ namespace DnDClassLibrary
 
         void AddAvailableSpell() //adds a spell to the list of available spells
         {
-            Spell NewSpell = new Spell();
+            Spell     NewSpell     = new Spell();
+            Character NewCharacter = new Character();
 
             NewSpell.SpellName        = Utility.ReadTextInput("Enter Spell name");
-            NewSpell.Components       = Utility.ReadTextInput("Enter Required Components");
-            NewSpell.Duration         = Utility.ReadTextInput("Enter Spell duration");
-            NewSpell.CastTime         = Utility.ReadTextInput("Enter Cast time");
-            NewSpell.Range            = Utility.ReadNumericInput("Enter Spell Range");
-            NewSpell.SpellLevel       = Utility.ReadTextInput("Enter Spell level");
-            NewSpell.SpellSchool      = Utility.ReadTextInput("Enter Spell School");
-            NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
-            NewSpell.Resources        = Utility.ReadNumericInput("Enter required resources");
-            NewSpell.SpellDC          = Utility.ReadNumericInput("Enter Spell DC");
-            NewSpell.SpellBonus       = Utility.ReadNumericInput("Enter Spell bonus");
+            NewSpell.SpellLevel       = Utility.ReadNumericInput("Enter Spell level");
+           
+            if (NewCharacter.Level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
+            {
+                NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
+                NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
+                NewSpell.CastTime = Utility.ReadTextInput("Enter Cast time");
+                NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
+                NewSpell.SpellSchool = Utility.ReadTextInput("Enter Spell School");
+                NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
+                NewSpell.Resources = Utility.ReadNumericInput("Enter required resources");
+                NewSpell.SpellDC = Utility.ReadNumericInput("Enter Spell DC");
+                NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
 
-            AvailableSpellList.Add(NewSpell);
+                AvailableSpellList.Add(NewSpell);
+            }
+            else
+            {
+                Console.WriteLine("This spell is too high level for your character");
+            }
+       
         }
 
         void PrepareSpell() //Adds an available spell to the PreparedSpellList
