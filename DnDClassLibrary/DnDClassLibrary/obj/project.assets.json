@@ -221,19 +221,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\rallo\\.nuget\\packages\\": {}
+    "C:\\Users\\sebse\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+      "projectUniqueName": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
       "projectName": "DnDClassLibrary",
-      "projectPath": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
-      "packagesPath": "C:\\Users\\rallo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\rallo\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
+      "projectPath": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+      "packagesPath": "C:\\Users\\sebse\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sebse\\Source\\Repos\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\rallo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sebse\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -278,7 +278,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

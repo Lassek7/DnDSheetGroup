@@ -4,17 +4,22 @@ using System.Linq;
 
 namespace DnDClassLibrary
 {
-    public class CharacterAttributes
+   public class CharacterAttributes
     {
+        public static int[] Attributes { get; set; } = new int[6];
+        public static int[] Modifiers
 
-        public int[] Attributes { get; set; }
-        public int[] Modifiers
         {
             get
             {
                 return Attributes.Select(attr => (attr - 10) / 2).ToArray();
             }
+            set
+            {
+                Modifiers = value;
+            }
         }
+
         public enum Fields
         {
             Strength,
@@ -24,27 +29,22 @@ namespace DnDClassLibrary
             Wisdom,
             Charisma
         }
-        public CharacterAttributes()
-        {
-            Attributes = new int[6];
-        }
-
     }
 
     /* Til at prøve det af i Main
-            CharacterAttributes c = new CharacterAttributes();
-
-            for(int i= 0; i <6; i++)
+            //Kristina start
+            for (int i = 0; i < 6; i++)
             {
-                Write($"{Enum.GetNames(typeof(Fields))[i]}: ");
-                c.Attributes[i] = int.Parse(ReadLine());
+                Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]}: ");
+                CharacterAttributes.Attributes[i] = int.Parse(Console.ReadLine());
             }
 
             for (int i = 0; i < 6; i++)
             {
-                Write($"{Enum.GetNames(typeof(Fields))[i]} modifier: ");
-                WriteLine(c.Modifiers[i]);
+                Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]} modifier: ");
+                Console.WriteLine(CharacterAttributes.Modifiers[i]);
             }
+            //Kristina slut
      */
 }
 
