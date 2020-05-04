@@ -97,9 +97,17 @@ public void CharatorCreation()
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
 
-            DataColumn itemColumn = new DataColumn("Item");
+            DataColumn IN = new DataColumn("Item Name");
+            DataColumn IT = new DataColumn("Item Type");
+            DataColumn AH = new DataColumn("Amount Held");
+            DataColumn WPI = new DataColumn("Weight Per Item");
+            DataColumn D = new DataColumn("Description");
             table.Columns.Add(idColumn);
-            table.Columns.Add(itemColumn);
+            table.Columns.Add(IN);
+            table.Columns.Add(IT);
+            table.Columns.Add(AH);
+            table.Columns.Add(WPI);
+            table.Columns.Add(D);
             dataset.Tables.Add(table);
             if (!System.IO.File.Exists(createfile))
             {
@@ -117,7 +125,12 @@ public void CharatorCreation()
                             AmountHeld = Convert.ToString(inventory.inventoryList[i].AmountHeld);
                             WeightPerItem = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
                             Description = inventory.inventoryList[i].Description;
-                            newRow["Item"] = "ItemName: " + ItemName + ", Item Type: " + ItemType + ", Amount Held: " + AmountHeld + ", Weight Per Item: " + WeightPerItem + ", Description: " + Description + "ID:" +i;
+                            newRow["id"] = i;
+                            newRow["Item Name"] = ItemName;
+                            newRow["Item Type"] = ItemType;
+                            newRow["Amount Held"] = AmountHeld;
+                            newRow["Weight Per Item"] = WeightPerItem;
+                            newRow["Description"] = Description;
                             table.Rows.Add(newRow);
                             i++;
                         } while (i != inventory.inventoryList.Count);
@@ -131,20 +144,21 @@ public void CharatorCreation()
             }
             else
             {
-                string test = File.ReadAllText(createfile);
-                
-                dataset = JsonConvert.DeserializeObject<DataSet>(test);
-                
-                using(StreamReader sr = new StreamReader(createfile))
-                {
 
-                }
-                foreach(DataRow row in table.Rows)
-                {
+                //string test = File.ReadAllText(createfile);
+                
+                //dataset = JsonConvert.DeserializeObject<DataSet>(test);
+                
+                //using(StreamReader sr = new StreamReader(createfile))
+                //{
+
+                //}
+                //foreach(DataRow row in table.Rows)
+                //{
                     
                     
                    
-                }
+                //}
                 //
                 //foreach(DataRow row in table.Rows)
                 //{
