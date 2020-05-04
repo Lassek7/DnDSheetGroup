@@ -30,3 +30,11 @@ C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.deps.json
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.dll
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.pdb
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csprojAssemblyReference.cache
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfoInputs.cache
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
+C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb

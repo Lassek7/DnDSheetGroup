@@ -11,13 +11,31 @@ namespace DemoApp
     {
         static void Main(string[] args)
         {
+            //seb start
+            //FeatList MyFeatlist = new FeatList();
+            //MyFeatlist.ChooseFeat();
+            //MyFeatlist.ChooseFeat();
+            //MyFeatlist.ShowAvailableFeats();
+            //MyFeatlist.RemoveFeat();
+            //MyFeatlist.ShowAvailableFeats();
+            //Console.ReadKey();
 
-            DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
-            RunInv.CharatorCreation();
-            Console.ReadKey();
+            //SpellBook mySpellBook = new SpellBook();
+            //mySpellBook.AddAvailableSpell();
+            //mySpellBook.AddAvailableSpell();
+            //mySpellBook.ShowAvailableSpells();
+            //mySpellBook.PrepareSpell();
+            //mySpellBook.UnPrepareSpell();
+            //mySpellBook.ShowPreparedSpells();
+            //Console.ReadKey();
+            //seb slut
+
+            //DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
+            //RunInv.CharatorCreation();
+            //Console.ReadKey();
 
 
-            ////Kristina start
+            //Kristina start
             //for (int i = 0; i < 6; i++)
             //{
             //    Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]}: ");
@@ -29,13 +47,13 @@ namespace DemoApp
             //    Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]} modifier: ");
             //    Console.WriteLine(CharacterAttributes.Modifiers[i]);
             //}
-            ////Kristina slut
+            //Kristina slut
 
 
-            ////Ahmed start
+            //Ahmed start
             //FunktionerTest bom = new FunktionerTest();
             //bom.Print();
-            Console.ReadLine();
+            //Console.ReadLine();
             //Ahmed slut
         }
     }
