@@ -30,9 +30,9 @@ namespace DemoApp
             //Console.ReadKey();
             //seb slut
 
-            //DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
-            //RunInv.CharatorCreation();
-            //Console.ReadKey();
+            DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
+            RunInv.CharatorCreation();
+            Console.ReadKey();
 
 
             //Kristina start

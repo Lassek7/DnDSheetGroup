@@ -27,7 +27,6 @@ C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfoInputs.cache
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.pdb
-C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
 C:\Users\rallo\source\repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\bin\Debug\netstandard2.0\DnDClassLibrary.deps.json
@@ -38,3 +37,4 @@ C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\De
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb
+C:\Users\rallo\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
