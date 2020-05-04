@@ -11,10 +11,24 @@ namespace DemoApp
     {
         static void Main(string[] args)
         {
-            SpellBook mySpellBook = new SpellBook();
-            mySpellBook.AddAvailableSpell();
-            mySpellBook.ShowAvailableSpells();
-            Console.ReadKey();
+            //seb start
+            //FeatList MyFeatlist = new FeatList();
+            //MyFeatlist.ChooseFeat();
+            //MyFeatlist.ChooseFeat();
+            //MyFeatlist.ShowAvailableFeats();
+            //MyFeatlist.RemoveFeat();
+            //MyFeatlist.ShowAvailableFeats();
+            //Console.ReadKey();
+
+            //SpellBook mySpellBook = new SpellBook();
+            //mySpellBook.AddAvailableSpell();
+            //mySpellBook.AddAvailableSpell();
+            //mySpellBook.ShowAvailableSpells();
+            //mySpellBook.PrepareSpell();
+            //mySpellBook.UnPrepareSpell();
+            //mySpellBook.ShowPreparedSpells();
+            //Console.ReadKey();
+            //seb slut
 
             //DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
             //RunInv.CharatorCreation();

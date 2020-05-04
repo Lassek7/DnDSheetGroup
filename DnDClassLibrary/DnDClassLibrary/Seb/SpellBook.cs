@@ -18,27 +18,37 @@ namespace DnDClassLibrary
             Character NewCharacter = new Character(); //fix senere
 
             NewSpell.SpellName        = Utility.ReadTextInput("Enter Spell name");
-            NewSpell.SpellLevel       = Utility.ReadNumericInput("Enter Spell level");
-            NewCharacter.level = 20; // fjern efter testing
-            if (NewCharacter.level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
-            {
-                NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
-                NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
-                NewSpell.CastTime = Utility.ReadTextInput("Enter Cast time");
-                NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
-                NewSpell.SpellSchool = Utility.ReadTextInput("Enter Spell School");
-                NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
-                NewSpell.Resources = Utility.ReadNumericInput("Enter required resources");
-                NewSpell.SpellDC = Utility.ReadNumericInput("Enter Spell DC");
-                NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
 
-                AvailableSpellList.Add(NewSpell);
+            bool SpellExist = CheckSpellList(NewSpell);
+
+            if(SpellExist == true) //check om spell allerede er tilføjet
+            {
+                Console.WriteLine("You already have this spell available");
             }
             else
             {
-                Console.WriteLine("This spell is too high level for your character");
+                NewSpell.SpellLevel = Utility.ReadNumericInput("Enter Spell level");
+                NewCharacter.level = 20; //til testing, skal fjernes når den kan snakke sammen med Character
+
+                if (NewCharacter.level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
+                {
+                    NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
+                    NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
+                    NewSpell.CastTime = Utility.ReadTextInput("Enter Cast time");
+                    NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
+                    NewSpell.SpellSchool = Utility.ReadTextInput("Enter Spell School");
+                    NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
+                    NewSpell.Resources = Utility.ReadNumericInput("Enter required resources");
+                    NewSpell.SpellDC = Utility.ReadNumericInput("Enter Spell DC");
+                    NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
+
+                    AvailableSpellList.Add(NewSpell);
+                }
+                else
+                {
+                    Console.WriteLine("This spell is too high level for your character");
+                }
             }
-       
         }
 
         public void PrepareSpell() //Adds an available spell to the PreparedSpellList
@@ -64,34 +74,51 @@ namespace DnDClassLibrary
         public void UnPrepareSpell() 
         {
             string SpellToUnprepare = Utility.ReadTextInput("Enter Spell name of the spell you wish to no longer prepare");
-            PreparedSpellList.Remove(new Spell(SpellToUnprepare)); //burde fjerne den indtastede spell fra Prepared Spells listen, skal testes
-            Console.WriteLine("No longer preparing " + SpellToUnprepare);
+
+            for (int i = 0; i < PreparedSpellList.Count; i++)
+            {
+                Spell OldSpell = PreparedSpellList[i];
+
+                if (OldSpell.SpellName.Equals(SpellToUnprepare))
+                {
+                    PreparedSpellList.Remove(OldSpell); //burde fjerne den indtastede spell fra Prepared Spells listen, skal testes
+                    Console.WriteLine("No longer preparing " + SpellToUnprepare);
+                }
+                else
+                {
+                    Console.WriteLine("You were not preparing this spell");
+                }
+            }
         }
 
         public void ShowAvailableSpells() //burde printe available spells
         {
-            for (int i = 0; i < AvailableSpellList.Count; i++)
+            foreach (var Spell in AvailableSpellList)
             {
-                Spell NewSpell = AvailableSpellList[i];
-                Console.WriteLine(NewSpell.SpellName);
+                Console.WriteLine("Spell names:{0}", Spell.SpellName);
             }
         }
 
         public void ShowPreparedSpells() //burde printe prepared spells
         {
-            //for (int i = 0; i < PreparedSpellList.Count; i++)
-            //{
-            //    Spell NewSpell = PreparedSpellList[i];
-               
-            //}
             foreach (var Spell in PreparedSpellList)
             {
-                //Spell NewSpell = PreparedSpellList;
-                Console.WriteLine("Spell names:{0}{1}", Spell.SpellName, Spell.Components);
+                Console.WriteLine("Spell names:{0}", Spell.SpellName);
             }
         }
 
-
-
+        private bool CheckSpellList(Spell NewSpell)
+        {
+            bool SpellExist = false;
+            for (int i = 0; i < AvailableSpellList.Count; i++) //check om dette er den rigtige liste
+            {
+                Spell OldSpell = AvailableSpellList[i]; //same as above
+                if (OldSpell.SpellName.Equals(NewSpell.SpellName))
+                {
+                    SpellExist = true;
+                }
+            }
+            return SpellExist;
+        }
     }
 }
