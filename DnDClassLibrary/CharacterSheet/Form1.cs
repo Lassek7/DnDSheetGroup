@@ -46,19 +46,20 @@ namespace CharacterSheet
        
         private void PlayerNameBox_TextChanged(object sender, EventArgs e)
         {
-            PlayerNameDone = existcheck(myCharacter.playerName, PlayerNameBox.Text, CharacterNameDone);
-            myCharacter.playerName = NewValue(CharacterNameDone, PlayerNameBox.Text);
+            PlayerNameDone = existcheck(myCharacter.playerName, PlayerNameBox.Text, PlayerNameDone);
+            myCharacter.playerName = NewValue(PlayerNameDone, PlayerNameBox.Text);
         }
 
         private void RaceBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.race = RaceBox.Text;
+            RaceDone = existcheck(myCharacter.race, RaceBox.Text, RaceDone);
+            myCharacter.race = NewValue(RaceDone, RaceBox.Text);
         }
 
         private void ClassBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.characterClass = ClassBox.Text;
-
+            ClassDone = existcheck(myCharacter.characterClass, ClassBox.Text, ClassDone);
+            myCharacter.characterClass = NewValue(ClassDone, ClassBox.Text);
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
@@ -85,12 +86,14 @@ namespace CharacterSheet
 
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.alignment = AlignmentBox.Text;
+            AlignmentDone = existcheck(myCharacter.alignment, AlignmentBox.Text, AlignmentDone);
+            myCharacter.alignment = NewValue(AlignmentDone, AlignmentBox.Text);
         }
 
         private void BackgroundBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.background = BackgroundBox.Text;
+            BackgroundDone = existcheck(myCharacter.background, BackgroundBox.Text, BackgroundDone);
+            myCharacter.background = NewValue(BackgroundDone, BackgroundBox.Text);
         }
 
         private void MaxHealthBox_TextChanged(object sender, EventArgs e)
@@ -114,27 +117,34 @@ namespace CharacterSheet
 
         private void IdealsRichBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.ideals = IdealsRichBox.Text;
+            IdealsDone = existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
+            myCharacter.ideals = NewValue(IdealsDone, IdealsRichBox.Text);
+            //IdealsDone = true;
+            //myCharacter.ideals = IdealsRichBox.Text;
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.bonds = BondsRichBox.Text;
+            BondsDone = existcheck(myCharacter.bonds, BondsRichBox.Text, BondsDone);
+            myCharacter.bonds = NewValue(BondsDone, BondsRichBox.Text);
         }
 
         private void FlawsRichBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.flaws = FlawsRichBox.Text;
+            FlawsDone = existcheck(myCharacter.flaws, FlawsRichBox.Text, FlawsDone);
+            myCharacter.flaws = NewValue(FlawsDone, FlawsRichBox.Text);
         }
 
         private void PersonalTraitsRichBox_TextChanged(object sender, EventArgs e)
         {
-            myCharacter.traits = PersonalTraitsRichBox.Text;
+            PersonalTraitsDone = existcheck(myCharacter.traits, PersonalTraitsRichBox.Text, PersonalTraitsDone);
+            myCharacter.traits = NewValue(PersonalTraitsDone, PersonalTraitsRichBox.Text);
         }
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
 
-            if(HealthDone && LvlDone && CharacterNameDone == true)
+            if (HealthDone && LvlDone && CharacterNameDone && PlayerNameDone && RaceDone && ClassDone &&
+               AlignmentDone && BackgroundDone && IdealsDone && BondsDone && FlawsDone && PersonalTraitsDone == true)
             {
                 this.Hide();
                 Sheet RunCharacterSheet = new Sheet(myCharacter); // laver et nyt sheet baseret på Character Classen
@@ -144,7 +154,6 @@ namespace CharacterSheet
             {
                 MessageBox.Show("please input health and lvl");
             }
-           
         }
 
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -179,7 +188,7 @@ namespace CharacterSheet
         {
             if (exists == true)
             {
-                return CharacterNameBox.Text;
+                return UserInput;
             }
             return null;
         }

@@ -7,8 +7,8 @@ namespace DnDClassLibrary
     public class SpellBook
     {
 
-        public List<Spell> AvailableSpellList = new List<Spell>(); // indlæs alle tilgængelige spells fra database? gør måske static??
-        public List<Spell> PreparedSpellList = new List<Spell>(); //liste over prepared spells
+        List<Spell> AvailableSpellList = new List<Spell>(); // indlæs alle tilgængelige spells fra database? gør måske static??
+        List<Spell> PreparedSpellList = new List<Spell>(); //liste over prepared spells
         UtillityMethods Utility = new UtillityMethods();
 
 

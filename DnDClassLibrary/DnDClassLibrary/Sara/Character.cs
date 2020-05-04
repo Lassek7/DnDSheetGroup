@@ -18,7 +18,8 @@ namespace DnDClassLibrary
         string Bonds;
         string Traits;
         string Alignment;
-        int DeathSaves;
+        int SuccessfullDeathSaves;
+        int FailedDeathSaves;
         bool Inspiration;
         int Health;
         int TempHealth;
@@ -88,10 +89,15 @@ namespace DnDClassLibrary
             get { return Alignment; }
             set { Alignment = value; }
         }
-        public int deathSaves
+        public int successfullDeathSaves
         {
-            get { return DeathSaves; }
-            set { DeathSaves = value; }
+            get { return SuccessfullDeathSaves; }
+            set { SuccessfullDeathSaves = value; }
+        }
+        public int failedDeathSaves
+        {
+            get { return FailedDeathSaves; }
+            set { FailedDeathSaves = value; }
         }
         public bool inspiration
         {
@@ -130,43 +136,37 @@ namespace DnDClassLibrary
         }
 
         #endregion
-        private void ProficiencyCalc()
+        public int ProficiencyCalc(int myLevel)
         {
-            if (Level < 1)
+
+            if (myLevel < 1)
             {
-                ProficiencyBonus = 1;
+                return ProficiencyBonus = 1;
             }
-            else if (Level < 5)
+            else if (myLevel < 5)
             {
-                ProficiencyBonus = 2;
+                return ProficiencyBonus = 2;
 
             }
-            else if (Level < 9)
+            else if (myLevel < 9)
             {
-                ProficiencyBonus = 3;
+                return ProficiencyBonus = 3;
             }
-            else if (Level < 13)
+            else if (myLevel < 13)
             {
-                ProficiencyBonus = 4;
+                return ProficiencyBonus = 4;
             }
-            else if (Level < 17)
+            else if (myLevel < 17)
             {
-                ProficiencyBonus = 5;
+                return ProficiencyBonus = 5;
             }
             else
             {
-                ProficiencyBonus = 6;
+                return ProficiencyBonus = 6;
             }
 
         }
-
-        private void InitiativeCalc()
-        {
-            //    Initiative = DexterityModifier;
-
-        }
-
-
+           
         private void EditSheet()
         {
 
