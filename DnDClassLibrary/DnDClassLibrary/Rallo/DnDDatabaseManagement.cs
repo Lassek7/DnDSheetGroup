@@ -144,45 +144,30 @@ public void CharatorCreation()
             }
             else
             {
-
-                //string test = File.ReadAllText(createfile);
-                
-                //dataset = JsonConvert.DeserializeObject<DataSet>(test);
-                
-                //using(StreamReader sr = new StreamReader(createfile))
-                //{
-
-                //}
-                //foreach(DataRow row in table.Rows)
-                //{
-                    
-                    
-                   
-                //}
-                //
-                //foreach(DataRow row in table.Rows)
-                //{
-
-                 //  
-                //}
-            }
-
-                
-
-                for (int i = 0; i < inventory.inventoryList.Count; i++)
-                    {
-
-                        
-                    }
+                Inventory inv = new Inventory();
+                Item aItem = new Item();
+                string test = File.ReadAllText(createfile);
+                dataset = JsonConvert.DeserializeObject<DataSet>(test);
+                table = dataset.Tables["table1"];
+                foreach(DataRow row in table.Rows)
+                {
+                    aItem.ItemName = Convert.ToString(row["Item Name"]);
+                    aItem.ItemType = Convert.ToString(row["Item type"]);
+                    aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                    aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                    aItem.Description = Convert.ToString(row["Description"]);
+                    inv.inventoryList.Add(aItem);
+                    aItem = new Item();
+                }
                 
                 
             }
-
-        
-}
+  
+        }      
+    }
         #endregion
 
-    }
+}
 /*Code Referance
                         https://www.newtonsoft.com/json/help/html/SerializeDataSet.htm
                          https://www.newtonsoft.com/json/help/html/SerializeWithJsonSerializerToFile.htm
