@@ -35,61 +35,61 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.RaceLabel = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.ClassLabel = new System.Windows.Forms.Label();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.BackgroundLabel = new System.Windows.Forms.Label();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
+            this.AlignmentLabel = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.label23 = new System.Windows.Forms.Label();
+            this.ExperienceLabel = new System.Windows.Forms.Label();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
+            this.LevelLabel = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox8.SuspendLayout();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
-            this.groupBox11.SuspendLayout();
-            this.groupBox12.SuspendLayout();
-            this.groupBox13.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox16.SuspendLayout();
@@ -169,6 +169,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.groupBox3);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.groupBox2.Location = new System.Drawing.Point(349, 8);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(61, 73);
+            this.groupBox2.TabIndex = 12;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Charisma";
+            // 
+            // label3
+            // 
+            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label3.Location = new System.Drawing.Point(3, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(55, 29);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "0";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox3.Location = new System.Drawing.Point(3, 40);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(55, 30);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label4.Location = new System.Drawing.Point(3, 11);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(49, 11);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "0";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // groupBox4
             // 
             this.groupBox4.AutoSize = true;
@@ -213,147 +260,6 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "0";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox6.Controls.Add(this.label7);
-            this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.groupBox6.Location = new System.Drawing.Point(73, 8);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(61, 73);
-            this.groupBox6.TabIndex = 12;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Dexterity";
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label7.Location = new System.Drawing.Point(3, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(55, 29);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox7.Location = new System.Drawing.Point(3, 40);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(55, 30);
-            this.groupBox7.TabIndex = 11;
-            this.groupBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label8.Location = new System.Drawing.Point(3, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 11);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox8.Controls.Add(this.label9);
-            this.groupBox8.Controls.Add(this.groupBox9);
-            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.groupBox8.Location = new System.Drawing.Point(140, 8);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(61, 73);
-            this.groupBox8.TabIndex = 11;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Constitution";
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label9.Location = new System.Drawing.Point(3, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 29);
-            this.label9.TabIndex = 11;
-            this.label9.Text = "0";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.label10);
-            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox9.Location = new System.Drawing.Point(3, 40);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(55, 30);
-            this.groupBox9.TabIndex = 11;
-            this.groupBox9.TabStop = false;
-            // 
-            // label10
-            // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label10.Location = new System.Drawing.Point(3, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 11);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox10.Controls.Add(this.label11);
-            this.groupBox10.Controls.Add(this.groupBox11);
-            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.groupBox10.Location = new System.Drawing.Point(215, 8);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(61, 73);
-            this.groupBox10.TabIndex = 12;
-            this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "Intelligence";
-            // 
-            // label11
-            // 
-            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label11.Location = new System.Drawing.Point(3, 11);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(55, 29);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "0";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.label12);
-            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox11.Location = new System.Drawing.Point(3, 40);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(55, 30);
-            this.groupBox11.TabIndex = 11;
-            this.groupBox11.TabStop = false;
-            // 
-            // label12
-            // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label12.Location = new System.Drawing.Point(3, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(49, 11);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "0";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox12
             // 
@@ -402,56 +308,150 @@
             this.label14.Text = "0";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox2
+            // groupBox6
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.groupBox2.Location = new System.Drawing.Point(349, 8);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(61, 73);
-            this.groupBox2.TabIndex = 12;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Charisma";
+            this.groupBox6.Controls.Add(this.label7);
+            this.groupBox6.Controls.Add(this.groupBox7);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.groupBox6.Location = new System.Drawing.Point(73, 8);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(61, 73);
+            this.groupBox6.TabIndex = 12;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Dexterity";
             // 
-            // label3
+            // label7
             // 
-            this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label3.Location = new System.Drawing.Point(3, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 29);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label7.Location = new System.Drawing.Point(3, 11);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(55, 29);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "0";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox3
+            // groupBox7
             // 
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(3, 40);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(55, 30);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
+            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox7.Location = new System.Drawing.Point(3, 40);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(55, 30);
+            this.groupBox7.TabIndex = 11;
+            this.groupBox7.TabStop = false;
             // 
-            // label4
+            // label8
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label4.Location = new System.Drawing.Point(3, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 11);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label8.Location = new System.Drawing.Point(3, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 11);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "0";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox10.Controls.Add(this.label11);
+            this.groupBox10.Controls.Add(this.groupBox11);
+            this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.groupBox10.Location = new System.Drawing.Point(215, 8);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(61, 73);
+            this.groupBox10.TabIndex = 12;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Intelligence";
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label11.Location = new System.Drawing.Point(3, 11);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(55, 29);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "0";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.label12);
+            this.groupBox11.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox11.Location = new System.Drawing.Point(3, 40);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(55, 30);
+            this.groupBox11.TabIndex = 11;
+            this.groupBox11.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label12.Location = new System.Drawing.Point(3, 11);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(49, 11);
+            this.label12.TabIndex = 10;
+            this.label12.Text = "0";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox8.Controls.Add(this.label9);
+            this.groupBox8.Controls.Add(this.groupBox9);
+            this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.groupBox8.Location = new System.Drawing.Point(140, 8);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(61, 73);
+            this.groupBox8.TabIndex = 11;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Constitution";
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label9.Location = new System.Drawing.Point(3, 11);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 29);
+            this.label9.TabIndex = 11;
+            this.label9.Text = "0";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox9.Location = new System.Drawing.Point(3, 40);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(55, 30);
+            this.groupBox9.TabIndex = 11;
+            this.groupBox9.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label10.Location = new System.Drawing.Point(3, 11);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(49, 11);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "0";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.label15);
+            this.groupBox14.Controls.Add(this.CharacterNameLabel);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox14.Location = new System.Drawing.Point(103, 132);
             this.groupBox14.Name = "groupBox14";
@@ -461,20 +461,20 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Character Name";
             // 
-            // label15
+            // CharacterNameLabel
             // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label15.Location = new System.Drawing.Point(3, 13);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(152, 14);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "\"TEXT\"";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CharacterNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CharacterNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.CharacterNameLabel.Location = new System.Drawing.Point(3, 13);
+            this.CharacterNameLabel.Name = "CharacterNameLabel";
+            this.CharacterNameLabel.Size = new System.Drawing.Size(152, 14);
+            this.CharacterNameLabel.TabIndex = 0;
+            this.CharacterNameLabel.Text = "\"CharacterName\"";
+            this.CharacterNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.label16);
+            this.groupBox15.Controls.Add(this.RaceLabel);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox15.Location = new System.Drawing.Point(698, 11);
             this.groupBox15.Name = "groupBox15";
@@ -484,20 +484,21 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Race";
             // 
-            // label16
+            // RaceLabel
             // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label16.Location = new System.Drawing.Point(3, 13);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(110, 14);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "\"TEXT\"";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RaceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.RaceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.RaceLabel.Location = new System.Drawing.Point(3, 13);
+            this.RaceLabel.Name = "RaceLabel";
+            this.RaceLabel.Size = new System.Drawing.Size(110, 14);
+            this.RaceLabel.TabIndex = 0;
+            this.RaceLabel.Text = "\"Race\"";
+            this.RaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RaceLabel.Click += new System.EventHandler(this.RaceLabel_Click);
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.label17);
+            this.groupBox16.Controls.Add(this.ClassLabel);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox16.Location = new System.Drawing.Point(820, 11);
             this.groupBox16.Name = "groupBox16";
@@ -507,20 +508,20 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Class";
             // 
-            // label17
+            // ClassLabel
             // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label17.Location = new System.Drawing.Point(3, 13);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(110, 14);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "\"TEXT\"";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClassLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ClassLabel.Location = new System.Drawing.Point(3, 13);
+            this.ClassLabel.Name = "ClassLabel";
+            this.ClassLabel.Size = new System.Drawing.Size(110, 14);
+            this.ClassLabel.TabIndex = 0;
+            this.ClassLabel.Text = "\"Class\"";
+            this.ClassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.label19);
+            this.groupBox17.Controls.Add(this.BackgroundLabel);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox17.Location = new System.Drawing.Point(698, 48);
             this.groupBox17.Name = "groupBox17";
@@ -530,20 +531,20 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Background";
             // 
-            // label19
+            // BackgroundLabel
             // 
-            this.label19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label19.Location = new System.Drawing.Point(3, 13);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(110, 14);
-            this.label19.TabIndex = 0;
-            this.label19.Text = "\"TEXT\"";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackgroundLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BackgroundLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.BackgroundLabel.Location = new System.Drawing.Point(3, 13);
+            this.BackgroundLabel.Name = "BackgroundLabel";
+            this.BackgroundLabel.Size = new System.Drawing.Size(110, 14);
+            this.BackgroundLabel.TabIndex = 0;
+            this.BackgroundLabel.Text = "\"Background\"";
+            this.BackgroundLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.label22);
+            this.groupBox20.Controls.Add(this.AlignmentLabel);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox20.Location = new System.Drawing.Point(820, 48);
             this.groupBox20.Name = "groupBox20";
@@ -553,20 +554,20 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Alignment";
             // 
-            // label22
+            // AlignmentLabel
             // 
-            this.label22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label22.Location = new System.Drawing.Point(3, 13);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(110, 14);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "\"TEXT\"";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AlignmentLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AlignmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.AlignmentLabel.Location = new System.Drawing.Point(3, 13);
+            this.AlignmentLabel.Name = "AlignmentLabel";
+            this.AlignmentLabel.Size = new System.Drawing.Size(110, 14);
+            this.AlignmentLabel.TabIndex = 0;
+            this.AlignmentLabel.Text = "\"Alignment\"";
+            this.AlignmentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.label23);
+            this.groupBox21.Controls.Add(this.ExperienceLabel);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox21.Location = new System.Drawing.Point(698, 84);
             this.groupBox21.Name = "groupBox21";
@@ -576,20 +577,20 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Experience Points";
             // 
-            // label23
+            // ExperienceLabel
             // 
-            this.label23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label23.Location = new System.Drawing.Point(3, 13);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(110, 14);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "\"TEXT\"";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExperienceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExperienceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.ExperienceLabel.Location = new System.Drawing.Point(3, 13);
+            this.ExperienceLabel.Name = "ExperienceLabel";
+            this.ExperienceLabel.Size = new System.Drawing.Size(110, 14);
+            this.ExperienceLabel.TabIndex = 0;
+            this.ExperienceLabel.Text = "\"Experience Points\"";
+            this.ExperienceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.label20);
+            this.groupBox18.Controls.Add(this.LevelLabel);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
             this.groupBox18.Location = new System.Drawing.Point(820, 84);
             this.groupBox18.Name = "groupBox18";
@@ -599,16 +600,16 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Level";
             // 
-            // label20
+            // LevelLabel
             // 
-            this.label20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label20.Location = new System.Drawing.Point(3, 13);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(110, 14);
-            this.label20.TabIndex = 0;
-            this.label20.Text = "\"TEXT\"";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LevelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.LevelLabel.Location = new System.Drawing.Point(3, 13);
+            this.LevelLabel.Name = "LevelLabel";
+            this.LevelLabel.Size = new System.Drawing.Size(110, 14);
+            this.LevelLabel.TabIndex = 0;
+            this.LevelLabel.Text = "\"Level\"";
+            this.LevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label26
             // 
@@ -666,18 +667,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
-            this.groupBox12.ResumeLayout(false);
-            this.groupBox13.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
@@ -728,19 +729,19 @@
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label CharacterNameLabel;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label RaceLabel;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label ClassLabel;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label BackgroundLabel;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label AlignmentLabel;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label ExperienceLabel;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label LevelLabel;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox19;

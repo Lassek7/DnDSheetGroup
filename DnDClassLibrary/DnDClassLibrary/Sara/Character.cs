@@ -28,7 +28,6 @@ namespace DnDClassLibrary
         int MaxHealth;
 
         public Character()
-
         {
         }
 
@@ -57,12 +56,7 @@ namespace DnDClassLibrary
         public int level
         {
             get { return Level; }
-            set
-            {
-              
-                    Level = value;
-               
-            }
+            set { Level = value; }
         }
         public string characterClass
         {

@@ -13,9 +13,20 @@ namespace CharacterSheet
 {
     public partial class CreateCharacterForm : Form
     {
-        Character Character = new Character();
-        bool lvl = false;
-        bool health = false;
+        Character myCharacter = new Character();
+        bool CharacterNameDone = false;
+        bool LvlDone = false;
+        bool HealthDone = false;
+        bool PlayerNameDone = false;
+        bool RaceDone = false;
+        bool ClassDone = false;
+        bool AlignmentDone = false;
+        bool BackgroundDone = false;
+        bool IdealsDone = false;
+        bool BondsDone = false;
+        bool FlawsDone = false;
+        bool PersonalTraitsDone = false;
+
         public CreateCharacterForm()
         {
             InitializeComponent();
@@ -29,24 +40,24 @@ namespace CharacterSheet
 
         private void CharacterNameBox_TextChanged(object sender, EventArgs e)
         {
-
-            Character.characterName = CharacterNameBox.Text;
-
+            CharacterNameDone = existcheck(myCharacter.characterName, CharacterNameBox.Text, CharacterNameDone);
+            myCharacter.characterName = NewValue(CharacterNameDone, CharacterNameBox.Text);
         }
-
+       
         private void PlayerNameBox_TextChanged(object sender, EventArgs e)
         {
-            Character.playerName = PlayerNameBox.Text;
+            PlayerNameDone = existcheck(myCharacter.playerName, PlayerNameBox.Text, CharacterNameDone);
+            myCharacter.playerName = NewValue(CharacterNameDone, PlayerNameBox.Text);
         }
 
         private void RaceBox_TextChanged(object sender, EventArgs e)
         {
-            Character.race = RaceBox.Text;
+            myCharacter.race = RaceBox.Text;
         }
 
         private void ClassBox_TextChanged(object sender, EventArgs e)
         {
-            Character.characterClass = ClassBox.Text;
+            myCharacter.characterClass = ClassBox.Text;
 
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
@@ -62,82 +73,78 @@ namespace CharacterSheet
           }
           if (level >= 1 && level <= 20)
           {
-              Character.level = Convert.ToInt32(level);
-              lvl = true;
+              myCharacter.level = Convert.ToInt32(level);
+              LvlDone = true;
           }
           else
           {
-              lvl = false;
+              LvlDone = false;
               MessageBox.Show("level must be between 1 and 20");
           }
         }
 
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
-            Character.alignment = AlignmentBox.Text;
+            myCharacter.alignment = AlignmentBox.Text;
         }
 
         private void BackgroundBox_TextChanged(object sender, EventArgs e)
         {
-            Character.background = BackgroundBox.Text;
+            myCharacter.background = BackgroundBox.Text;
         }
 
         private void MaxHealthBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(MaxHealthBox.Text);
-            int Health = 1;
+            int Health = 0;
             if (OutOfReach != true)
             {
                 Health = Int32.Parse(MaxHealthBox.Text);
+                    if (Health >= 1)
+                    {
+                        HealthDone = true;
+                        myCharacter.maxHealth = Convert.ToInt32(Health);
+                    }
             }
             else
             {
-
+                HealthDone = false;
             }
-            if (Health >= 1)
-            {
-                health = true;
-                Character.maxHealth = Convert.ToInt32(Health);
-            }
-            else
-            {
-                MessageBox.Show("Your health must be more than 0");
-                health = false;
-            }
-            
         }
 
         private void IdealsRichBox_TextChanged(object sender, EventArgs e)
         {
-            Character.ideals = IdealsRichBox.Text;
+            myCharacter.ideals = IdealsRichBox.Text;
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
         {
-            Character.bonds = BondsRichBox.Text;
+            myCharacter.bonds = BondsRichBox.Text;
         }
 
         private void FlawsRichBox_TextChanged(object sender, EventArgs e)
         {
-            Character.flaws = FlawsRichBox.Text;
+            myCharacter.flaws = FlawsRichBox.Text;
         }
 
         private void PersonalTraitsRichBox_TextChanged(object sender, EventArgs e)
         {
-            Character.traits = PersonalTraitsRichBox.Text;
+            myCharacter.traits = PersonalTraitsRichBox.Text;
         }
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
 
-            if(health == true && lvl == true)
+            if(HealthDone && LvlDone && CharacterNameDone == true)
             {
-                MessageBox.Show(Convert.ToString(Character.level), Convert.ToString(Character.maxHealth));
+                this.Hide();
+                Sheet RunCharacterSheet = new Sheet(myCharacter); // laver et nyt sheet baseret på Character Classen
+                RunCharacterSheet.Show();
             }
             else
             {
                 MessageBox.Show("please input health and lvl");
             }
-            
+           
         }
 
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -154,6 +161,27 @@ namespace CharacterSheet
             {
                 e.Handled = true;
             }
+        }
+        bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
+        {
+            bool OutOfReach = string.IsNullOrEmpty(NewValue);
+            if (OutOfReach != true)
+            {
+                ExistStatus = true;
+            }
+            else
+            {
+                ExistStatus = false;
+            }
+            return ExistStatus;
+        }
+        string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
+        {
+            if (exists == true)
+            {
+                return CharacterNameBox.Text;
+            }
+            return null;
         }
     }
 
