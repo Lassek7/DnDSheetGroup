@@ -11,6 +11,10 @@ namespace DemoApp
     {
         static void Main(string[] args)
         {
+            SpellBook mySpellBook = new SpellBook();
+            mySpellBook.AddAvailableSpell();
+            mySpellBook.ShowAvailableSpells();
+            Console.ReadKey();
 
             //DnDDatabaseManagement RunInv = new DnDDatabaseManagement();
             //RunInv.CharatorCreation();
@@ -18,24 +22,24 @@ namespace DemoApp
 
 
             //Kristina start
-            for (int i = 0; i < 6; i++)
-            {
-                Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]}: ");
-                CharacterAttributes.Attributes[i] = int.Parse(Console.ReadLine());
-            }
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]}: ");
+            //    CharacterAttributes.Attributes[i] = int.Parse(Console.ReadLine());
+            //}
 
-            for (int i = 0; i < 6; i++)
-            {
-                Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]} modifier: ");
-                Console.WriteLine(CharacterAttributes.Modifiers[i]);
-            }
+            //for (int i = 0; i < 6; i++)
+            //{
+            //    Console.Write($"{Enum.GetNames(typeof(CharacterAttributes.Fields))[i]} modifier: ");
+            //    Console.WriteLine(CharacterAttributes.Modifiers[i]);
+            //}
             //Kristina slut
 
 
             //Ahmed start
-            FunktionerTest bom = new FunktionerTest();
-            bom.Print();
-            Console.ReadLine();
+            //FunktionerTest bom = new FunktionerTest();
+            //bom.Print();
+            //Console.ReadLine();
             //Ahmed slut
         }
     }

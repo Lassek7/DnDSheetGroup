@@ -4,22 +4,22 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class SpellBook
+    public class SpellBook
     {
 
         public List<Spell> AvailableSpellList = new List<Spell>(); // indlæs alle tilgængelige spells fra database? gør måske static??
         public List<Spell> PreparedSpellList = new List<Spell>(); //liste over prepared spells
-        UtilityMethods Utility = new UtilityMethods();
+        UtillityMethods Utility = new UtillityMethods();
 
 
-        void AddAvailableSpell() //adds a spell to the list of available spells
+        public void AddAvailableSpell() //adds a spell to the list of available spells
         {
             Spell     NewSpell     = new Spell();
-            Character NewCharacter = new Character();
+            Character NewCharacter = new Character(); //fix senere
 
             NewSpell.SpellName        = Utility.ReadTextInput("Enter Spell name");
             NewSpell.SpellLevel       = Utility.ReadNumericInput("Enter Spell level");
-           
+            NewCharacter.level = 20; // fjern efter testing
             if (NewCharacter.level >= NewSpell.SpellLevel) //Check om character er i højt nok level for den intastede spell
             {
                 NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
@@ -41,7 +41,7 @@ namespace DnDClassLibrary
        
         }
 
-        void PrepareSpell() //Adds an available spell to the PreparedSpellList
+        public void PrepareSpell() //Adds an available spell to the PreparedSpellList
         {
             Spell NewSpell = new Spell(Utility.ReadTextInput("Enter the name of the spell you want to prepare"));
 
@@ -61,14 +61,14 @@ namespace DnDClassLibrary
             }
         }
 
-        void UnPrepareSpell() 
+        public void UnPrepareSpell() 
         {
             string SpellToUnprepare = Utility.ReadTextInput("Enter Spell name of the spell you wish to no longer prepare");
             PreparedSpellList.Remove(new Spell(SpellToUnprepare)); //burde fjerne den indtastede spell fra Prepared Spells listen, skal testes
             Console.WriteLine("No longer preparing " + SpellToUnprepare);
         }
 
-        void ShowAvailableSpells() //burde printe available spells
+        public void ShowAvailableSpells() //burde printe available spells
         {
             for (int i = 0; i < AvailableSpellList.Count; i++)
             {
@@ -77,12 +77,17 @@ namespace DnDClassLibrary
             }
         }
 
-        void ShowPreparedSpells() //burde printe prepared spells
+        public void ShowPreparedSpells() //burde printe prepared spells
         {
-            for (int i = 0; i < PreparedSpellList.Count; i++)
+            //for (int i = 0; i < PreparedSpellList.Count; i++)
+            //{
+            //    Spell NewSpell = PreparedSpellList[i];
+               
+            //}
+            foreach (var Spell in PreparedSpellList)
             {
-                Spell NewSpell = PreparedSpellList[i];
-                Console.WriteLine(NewSpell.SpellName);
+                //Spell NewSpell = PreparedSpellList;
+                Console.WriteLine("Spell names:{0}{1}", Spell.SpellName, Spell.Components);
             }
         }
 

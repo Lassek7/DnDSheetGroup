@@ -11,7 +11,7 @@ namespace DnDClassLibrary
         string Encumbered = "You are not Encumbered";
 
         List<Item> InventoryList = new List<Item>();
-        UtilityMethods Utillity = new UtilityMethods();
+        UtillityMethods Utillity = new UtillityMethods();
 
         public List<Item> inventoryList
         {

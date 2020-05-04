@@ -7,7 +7,7 @@ namespace DnDClassLibrary
     class FeatList
     {
         public List<Feat> AvailableFeatList = new List<Feat>();
-        UtilityMethods Utility = new UtilityMethods();
+        UtillityMethods Utility = new UtillityMethods();
 
         void ChooseFeat() //adds a feat to the list of available feat
         {
