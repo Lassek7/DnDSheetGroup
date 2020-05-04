@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class UtilityMethods // bruges til at forenkle brugen af WriteLine kombinered med Readline. 
+    class UtillityMethods // bruges til at forenkle brugen af WriteLine kombinered med Readline. 
     {
         public string ReadTextInput(string aMessage)  // indlæser en besked, skrevet i metodens brug
         {
