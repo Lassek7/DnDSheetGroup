@@ -185,7 +185,7 @@ namespace CharacterSheet
             }
             if (Range >= 1 && Range <= 20)
             {
-                myCharacter.dexterity = Convert.ToInt32(Range);
+                myAttributes.Attributes[1] = Convert.ToInt32(Range);
                 DexDone = true;
             }
             else
@@ -208,7 +208,7 @@ namespace CharacterSheet
             }
             if (Range >= 1 && Range <= 20)
             {
-                myCharacter.constitution = Convert.ToInt32(Range);
+                myAttributes.Attributes[2] = Convert.ToInt32(Range);
                 ConDone = true;
             }
             else
@@ -231,7 +231,7 @@ namespace CharacterSheet
             }
             if (Range >= 1 && Range <= 20)
             {
-                myCharacter.intelligence = Convert.ToInt32(Range);
+                myAttributes.Attributes[3] = Convert.ToInt32(Range);
                 IntDone = true;
             }
             else
@@ -253,7 +253,7 @@ namespace CharacterSheet
             }
             if (Range >= 1 && Range <= 20)
             {
-                myCharacter.wisdom = Convert.ToInt32(Range);
+                myAttributes.Attributes[4] = Convert.ToInt32(Range);
                 WisDone = true;
             }
             else
@@ -276,7 +276,7 @@ namespace CharacterSheet
             }
             if (Range >= 1 && Range <= 20)
             {
-                myCharacter.charisma = Convert.ToInt32(Range);
+                myAttributes.Attributes[5] = Convert.ToInt32(Range);
                 ChaDone = true;
             }
             else
