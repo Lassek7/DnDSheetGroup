@@ -54,6 +54,18 @@
             this.MaxHealthLabel = new System.Windows.Forms.Label();
             this.LevelLabel = new System.Windows.Forms.Label();
             this.LevelBox = new System.Windows.Forms.TextBox();
+            this.StrengthInputBox = new System.Windows.Forms.TextBox();
+            this.DexterityInputBox = new System.Windows.Forms.TextBox();
+            this.IntelligenceInputBox = new System.Windows.Forms.TextBox();
+            this.ConstitutionInputBox = new System.Windows.Forms.TextBox();
+            this.CharismaInputBox = new System.Windows.Forms.TextBox();
+            this.WisdomInputBox = new System.Windows.Forms.TextBox();
+            this.StrengthLabel = new System.Windows.Forms.Label();
+            this.DexterityLabel = new System.Windows.Forms.Label();
+            this.ConstitutionLabel = new System.Windows.Forms.Label();
+            this.IntelligenceLabel = new System.Windows.Forms.Label();
+            this.CharismaLabel = new System.Windows.Forms.Label();
+            this.WisdomLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CharacterNameLabel
@@ -76,7 +88,7 @@
             // CreateDoneButton
             // 
             this.CreateDoneButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.CreateDoneButton.Location = new System.Drawing.Point(344, 342);
+            this.CreateDoneButton.Location = new System.Drawing.Point(523, 342);
             this.CreateDoneButton.Name = "CreateDoneButton";
             this.CreateDoneButton.Size = new System.Drawing.Size(95, 34);
             this.CreateDoneButton.TabIndex = 13;
@@ -171,8 +183,8 @@
             // 
             // IdealsRichBox
             // 
-            this.IdealsRichBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.IdealsRichBox.Location = new System.Drawing.Point(317, 177);
+            this.IdealsRichBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.IdealsRichBox.Location = new System.Drawing.Point(333, 180);
             this.IdealsRichBox.Name = "IdealsRichBox";
             this.IdealsRichBox.Size = new System.Drawing.Size(154, 63);
             this.IdealsRichBox.TabIndex = 9;
@@ -181,9 +193,8 @@
             // 
             // BondsRichBox
             // 
-            this.BondsRichBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.BondsRichBox.Location = new System.Drawing.Point(317, 99);
+            this.BondsRichBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.BondsRichBox.Location = new System.Drawing.Point(333, 102);
             this.BondsRichBox.Name = "BondsRichBox";
             this.BondsRichBox.Size = new System.Drawing.Size(154, 63);
             this.BondsRichBox.TabIndex = 10;
@@ -192,8 +203,8 @@
             // 
             // FlawsRichBox
             // 
-            this.FlawsRichBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.FlawsRichBox.Location = new System.Drawing.Point(317, 255);
+            this.FlawsRichBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FlawsRichBox.Location = new System.Drawing.Point(333, 258);
             this.FlawsRichBox.Name = "FlawsRichBox";
             this.FlawsRichBox.Size = new System.Drawing.Size(154, 63);
             this.FlawsRichBox.TabIndex = 11;
@@ -202,8 +213,8 @@
             // 
             // PersonalTraitsRichBox
             // 
-            this.PersonalTraitsRichBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.PersonalTraitsRichBox.Location = new System.Drawing.Point(317, 19);
+            this.PersonalTraitsRichBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.PersonalTraitsRichBox.Location = new System.Drawing.Point(333, 22);
             this.PersonalTraitsRichBox.Name = "PersonalTraitsRichBox";
             this.PersonalTraitsRichBox.Size = new System.Drawing.Size(154, 63);
             this.PersonalTraitsRichBox.TabIndex = 12;
@@ -290,11 +301,137 @@
             this.LevelBox.TextChanged += new System.EventHandler(this.LevelBox_TextChanged);
             this.LevelBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LevelBox_KeyPress);
             // 
+            // StrengthInputBox
+            // 
+            this.StrengthInputBox.Location = new System.Drawing.Point(533, 38);
+            this.StrengthInputBox.Name = "StrengthInputBox";
+            this.StrengthInputBox.Size = new System.Drawing.Size(77, 20);
+            this.StrengthInputBox.TabIndex = 34;
+            this.StrengthInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StrengthInputBox.TextChanged += new System.EventHandler(this.StrengthInputBox_TextChanged);
+            this.StrengthInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StrengthInputBox_KeyPress);
+            // 
+            // DexterityInputBox
+            // 
+            this.DexterityInputBox.Location = new System.Drawing.Point(532, 88);
+            this.DexterityInputBox.Name = "DexterityInputBox";
+            this.DexterityInputBox.Size = new System.Drawing.Size(77, 20);
+            this.DexterityInputBox.TabIndex = 35;
+            this.DexterityInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DexterityInputBox.TextChanged += new System.EventHandler(this.DexterityInputBox_TextChanged);
+            this.DexterityInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DexterityInputBox_KeyPress);
+            // 
+            // IntelligenceInputBox
+            // 
+            this.IntelligenceInputBox.Location = new System.Drawing.Point(533, 196);
+            this.IntelligenceInputBox.Name = "IntelligenceInputBox";
+            this.IntelligenceInputBox.Size = new System.Drawing.Size(77, 20);
+            this.IntelligenceInputBox.TabIndex = 37;
+            this.IntelligenceInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IntelligenceInputBox.TextChanged += new System.EventHandler(this.IntelligenceInputBox_TextChanged);
+            this.IntelligenceInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntelligenceInputBox_KeyPress);
+            // 
+            // ConstitutionInputBox
+            // 
+            this.ConstitutionInputBox.Location = new System.Drawing.Point(532, 141);
+            this.ConstitutionInputBox.Name = "ConstitutionInputBox";
+            this.ConstitutionInputBox.Size = new System.Drawing.Size(77, 20);
+            this.ConstitutionInputBox.TabIndex = 36;
+            this.ConstitutionInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ConstitutionInputBox.TextChanged += new System.EventHandler(this.ConstitutionInputBox_TextChanged);
+            this.ConstitutionInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConstitutionInputBox_KeyPress);
+            // 
+            // CharismaInputBox
+            // 
+            this.CharismaInputBox.Location = new System.Drawing.Point(533, 298);
+            this.CharismaInputBox.Name = "CharismaInputBox";
+            this.CharismaInputBox.Size = new System.Drawing.Size(77, 20);
+            this.CharismaInputBox.TabIndex = 39;
+            this.CharismaInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CharismaInputBox.TextChanged += new System.EventHandler(this.CharismaInputBox_TextChanged);
+            this.CharismaInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharismaInputBox_KeyPress);
+            // 
+            // WisdomInputBox
+            // 
+            this.WisdomInputBox.Location = new System.Drawing.Point(533, 246);
+            this.WisdomInputBox.Name = "WisdomInputBox";
+            this.WisdomInputBox.Size = new System.Drawing.Size(77, 20);
+            this.WisdomInputBox.TabIndex = 38;
+            this.WisdomInputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WisdomInputBox.TextChanged += new System.EventHandler(this.WisdomInputBox_TextChanged);
+            this.WisdomInputBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WisdomInputBox_KeyPress);
+            // 
+            // StrengthLabel
+            // 
+            this.StrengthLabel.AutoSize = true;
+            this.StrengthLabel.Location = new System.Drawing.Point(544, 22);
+            this.StrengthLabel.Name = "StrengthLabel";
+            this.StrengthLabel.Size = new System.Drawing.Size(47, 13);
+            this.StrengthLabel.TabIndex = 40;
+            this.StrengthLabel.Text = "Strength";
+            // 
+            // DexterityLabel
+            // 
+            this.DexterityLabel.AutoSize = true;
+            this.DexterityLabel.Location = new System.Drawing.Point(544, 72);
+            this.DexterityLabel.Name = "DexterityLabel";
+            this.DexterityLabel.Size = new System.Drawing.Size(48, 13);
+            this.DexterityLabel.TabIndex = 41;
+            this.DexterityLabel.Text = "Dexterity";
+            // 
+            // ConstitutionLabel
+            // 
+            this.ConstitutionLabel.AutoSize = true;
+            this.ConstitutionLabel.Location = new System.Drawing.Point(543, 125);
+            this.ConstitutionLabel.Name = "ConstitutionLabel";
+            this.ConstitutionLabel.Size = new System.Drawing.Size(62, 13);
+            this.ConstitutionLabel.TabIndex = 42;
+            this.ConstitutionLabel.Text = "Constitution";
+            // 
+            // IntelligenceLabel
+            // 
+            this.IntelligenceLabel.AutoSize = true;
+            this.IntelligenceLabel.Location = new System.Drawing.Point(544, 180);
+            this.IntelligenceLabel.Name = "IntelligenceLabel";
+            this.IntelligenceLabel.Size = new System.Drawing.Size(61, 13);
+            this.IntelligenceLabel.TabIndex = 43;
+            this.IntelligenceLabel.Text = "Intelligence";
+            // 
+            // CharismaLabel
+            // 
+            this.CharismaLabel.AutoSize = true;
+            this.CharismaLabel.Location = new System.Drawing.Point(549, 282);
+            this.CharismaLabel.Name = "CharismaLabel";
+            this.CharismaLabel.Size = new System.Drawing.Size(50, 13);
+            this.CharismaLabel.TabIndex = 44;
+            this.CharismaLabel.Text = "Charisma";
+            // 
+            // WisdomLabel
+            // 
+            this.WisdomLabel.AutoSize = true;
+            this.WisdomLabel.Location = new System.Drawing.Point(554, 230);
+            this.WisdomLabel.Name = "WisdomLabel";
+            this.WisdomLabel.Size = new System.Drawing.Size(45, 13);
+            this.WisdomLabel.TabIndex = 45;
+            this.WisdomLabel.Text = "Wisdom";
+            // 
             // CreateCharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 388);
+            this.ClientSize = new System.Drawing.Size(649, 388);
+            this.Controls.Add(this.WisdomLabel);
+            this.Controls.Add(this.CharismaLabel);
+            this.Controls.Add(this.IntelligenceLabel);
+            this.Controls.Add(this.ConstitutionLabel);
+            this.Controls.Add(this.DexterityLabel);
+            this.Controls.Add(this.StrengthLabel);
+            this.Controls.Add(this.CharismaInputBox);
+            this.Controls.Add(this.WisdomInputBox);
+            this.Controls.Add(this.IntelligenceInputBox);
+            this.Controls.Add(this.ConstitutionInputBox);
+            this.Controls.Add(this.DexterityInputBox);
+            this.Controls.Add(this.StrengthInputBox);
             this.Controls.Add(this.LevelBox);
             this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.MaxHealthLabel);
@@ -358,6 +495,18 @@
         private System.Windows.Forms.Label MaxHealthLabel;
         private System.Windows.Forms.Label LevelLabel;
         private System.Windows.Forms.TextBox LevelBox;
+        private System.Windows.Forms.TextBox StrengthInputBox;
+        private System.Windows.Forms.TextBox DexterityInputBox;
+        private System.Windows.Forms.TextBox IntelligenceInputBox;
+        private System.Windows.Forms.TextBox ConstitutionInputBox;
+        private System.Windows.Forms.TextBox CharismaInputBox;
+        private System.Windows.Forms.TextBox WisdomInputBox;
+        private System.Windows.Forms.Label StrengthLabel;
+        private System.Windows.Forms.Label DexterityLabel;
+        private System.Windows.Forms.Label ConstitutionLabel;
+        private System.Windows.Forms.Label IntelligenceLabel;
+        private System.Windows.Forms.Label CharismaLabel;
+        private System.Windows.Forms.Label WisdomLabel;
     }
 }
 

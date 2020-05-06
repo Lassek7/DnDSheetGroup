@@ -6,8 +6,8 @@ namespace DnDClassLibrary
 {
    public class CharacterAttributes
     {
-        public static int[] Attributes { get; set; } = new int[6];
-        public static int[] Modifiers
+        public int[] Attributes { get; set; } = new int[6];
+        public int[] Modifiers
 
         {
             get

@@ -27,6 +27,7 @@ namespace DnDClassLibrary
         int Initiative;
         int ProficiencyBonus;
         int MaxHealth;
+    
 
         public Character()
         {
@@ -135,6 +136,7 @@ namespace DnDClassLibrary
             set { MaxHealth = value; }
         }
 
+       
         #endregion
         public int ProficiencyCalc(int myLevel)
         {
