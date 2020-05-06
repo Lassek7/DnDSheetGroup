@@ -79,5 +79,10 @@ namespace CharacterSheet
             Skill mySkill = new Skill(myAttributes, myCharacter);
 
         }
+
+        private void SaveCharacterButton_Click(object sender, EventArgs e)
+        {
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
+        }
     }
 }

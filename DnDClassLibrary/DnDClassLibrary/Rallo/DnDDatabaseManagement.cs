@@ -13,9 +13,13 @@ namespace DnDClassLibrary
     public class DnDDatabaseManagement
     {
         private string PlayerName { get; set; }
-      
-        public DnDDatabaseManagement()
+        CharacterAttributes myAttributes = new CharacterAttributes();
+        Character myCharacter = new Character();
+        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac)
         {
+            myAttributes = atri;
+            myCharacter = Charac;
+        
         }
         
 public void CharatorCreation()
@@ -23,7 +27,6 @@ public void CharatorCreation()
             bool RunApp = false;
             do {
                 string answer;
-                
                 Console.WriteLine("Welcome To Dnd Charator Manager");
                 Console.WriteLine("Type your Player name:");
                 PlayerName = Console.ReadLine();

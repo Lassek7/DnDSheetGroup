@@ -159,6 +159,7 @@
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.JackOfAllTradesCheck = new System.Windows.Forms.CheckBox();
+            this.SaveCharacterButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -1564,10 +1565,21 @@
             this.JackOfAllTradesCheck.Text = "Jack of All \r\n   Trades";
             this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
             // 
+            // SaveCharacterButton
+            // 
+            this.SaveCharacterButton.Location = new System.Drawing.Point(8, 132);
+            this.SaveCharacterButton.Name = "SaveCharacterButton";
+            this.SaveCharacterButton.Size = new System.Drawing.Size(78, 28);
+            this.SaveCharacterButton.TabIndex = 69;
+            this.SaveCharacterButton.Text = "SaveCharacter";
+            this.SaveCharacterButton.UseVisualStyleBackColor = true;
+            this.SaveCharacterButton.Click += new System.EventHandler(this.SaveCharacterButton_Click);
+            // 
             // Sheet
             // 
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.SaveCharacterButton);
             this.Controls.Add(this.InspirationLabel);
             this.Controls.Add(this.PassivePerceptionLabel);
             this.Controls.Add(this.ProficencyBonusLabel);
@@ -1797,5 +1809,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label StrengthAttributeDisplay;
         private System.Windows.Forms.CheckBox JackOfAllTradesCheck;
+        private System.Windows.Forms.Button SaveCharacterButton;
     }
 }
