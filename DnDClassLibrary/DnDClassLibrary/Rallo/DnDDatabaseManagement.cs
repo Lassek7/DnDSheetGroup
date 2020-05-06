@@ -13,18 +13,20 @@ namespace DnDClassLibrary
     public class DnDDatabaseManagement
     {
         private string PlayerName { get; set; }
-
-        public DnDDatabaseManagement()
+        CharacterAttributes myAttributes = new CharacterAttributes();
+        Character myCharacter = new Character();
+        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac)
         {
-        }
+            myAttributes = atri;
+            myCharacter = Charac;
         
+        }
         
 public void CharatorCreation()
         {
             bool RunApp = false;
             do {
                 string answer;
-                
                 Console.WriteLine("Welcome To Dnd Charator Manager");
                 Console.WriteLine("Type your Player name:");
                 PlayerName = Console.ReadLine();
@@ -95,7 +97,7 @@ public void CharatorCreation()
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
 
-            switch (inventory.DataTypeInv)
+            switch (inventory.invtypeDatabase)
             {                                                                  // Linje 98 til 107 laver et dataset strukture 
                 case "ITEM":
                     DataColumn IN = new DataColumn("Item Name");
@@ -123,21 +125,21 @@ public void CharatorCreation()
                                 {
 
                                 // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
-                                    DataRow newRow = table.NewRow();
-                                    string ID = Convert.ToString(i);
-                                    newRow["id"] = i;
+                                DataRow newRow = table.NewRow();
+                                string ID = Convert.ToString(i);
+                                newRow["id"] = i;
                                     newRow["Item Name"] = inventory.inventoryList[i];
-                                    newRow["Item Type"] = inventory.inventoryList[i].ItemType;
-                                    newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
-                                    newRow["Weight Per Item"] = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
-                                    newRow["Description"] = inventory.inventoryList[i].Description;
-                                    table.Rows.Add(newRow);
-                                    i++;
-                                    } while (i != inventory.inventoryList.Count);
+                                newRow["Item Type"] = inventory.inventoryList[i].ItemType;
+                                newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
+                                newRow["Weight Per Item"] = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
+                                newRow["Description"] = inventory.inventoryList[i].Description;
+                                table.Rows.Add(newRow);
+                                i++;
+                                } while (i != inventory.inventoryList.Count);
 
-                                    dataset.AcceptChanges();
-                                    JsonSerializer serializer = new JsonSerializer();
-                                    serializer.Serialize(sw, dataset);
+                                dataset.AcceptChanges();
+                                JsonSerializer serializer = new JsonSerializer();
+                                serializer.Serialize(sw, dataset);
                             }
                         }
                     }
@@ -191,7 +193,7 @@ public void CharatorCreation()
                                     // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
                                     DataRow newRow = table.NewRow();
                                     string ID = Convert.ToString(i);
-                                    newRow["Armor id"] = i;
+                                    newRow["id"] = i;
                                     newRow["Item Type"] = inventory.inventoryList[i].ItemType;                                  // WIP
                                     newRow["AC From Armor"] = inventory.inventoryList[i].ItemType;
                                     newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
@@ -208,84 +210,8 @@ public void CharatorCreation()
                             }
                         }
                     }
-                    else
-                    {
-                        // WIP tilføre deserialize filen og få det tilført til inventory list
-                    }
                     break;
                 case "WEAPON":
-                    DataColumn WIT = new DataColumn("Item Type");
-                    DataColumn WAH = new DataColumn("Amount Held");
-                    DataColumn WWPI = new DataColumn("Weight Per Item");
-                    DataColumn WDES = new DataColumn("Description");
-                    DataColumn WAA = new DataColumn("Attribute Association");
-                    DataColumn WAM = new DataColumn("Attack Modifier");
-                    DataColumn WR = new DataColumn("Range");
-                    DataColumn WD = new DataColumn("Damage");
-                    DataColumn WDT = new DataColumn("Damage Type");
-                    DataColumn WAB = new DataColumn("Attack Bonus");
-                    DataColumn WIE = new DataColumn("Item Equipped");
-                    DataColumn WP = new DataColumn("Proficiency");
-                    DataColumn WPM = new DataColumn("Proficiency Modifier");
-
-                    table.Columns.Add(idColumn);
-                    table.Columns.Add(WIT);
-                    table.Columns.Add(WAH);
-                    table.Columns.Add(WWPI);
-                    table.Columns.Add(WDES);
-                    table.Columns.Add(WAA);
-                    table.Columns.Add(WAM);
-                    table.Columns.Add(WR);
-                    table.Columns.Add(WD);
-                    table.Columns.Add(WDT);
-                    table.Columns.Add(WAB);
-                    table.Columns.Add(WIE);
-                    table.Columns.Add(WP);
-                    table.Columns.Add(WPM);
-                    dataset.Tables.Add(table);
-                    if (!System.IO.File.Exists(createfile))
-                    {
-                        using (FileStream fileStream = new FileStream(createfile, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
-                        {
-                            using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
-                            {
-                                int i = 0;
-
-                                do
-                                {
-
-                                    // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
-                                    DataRow newRow = table.NewRow();
-                                    string ID = Convert.ToString(i);
-                                    newRow["Weapon id"] = i;
-                                    newRow["Item Type"] = inventory;                                  // WIP
-                                    newRow["Amount Held"] = inventory;
-                                    newRow["Weight Per Item"] = Convert.ToString(inventory);
-                                    newRow["Description"] = Convert.ToString(inventory);
-                                    newRow["Attribute Association"] = inventory;
-                                    newRow["Attack Modifier"] = Convert.ToString(inventory);
-                                    newRow["Range"] = inventory;
-                                    newRow["Damage"] = inventory;
-                                    newRow["Damage Type"] = inventory;
-                                    newRow["Attack Bonus"] = inventory;
-                                    newRow["Item Equipped"] = inventory;
-                                    newRow["Proficiency"] = inventory;
-                                    newRow["Proficiency Modifier"] = inventory;
-
-                                    table.Rows.Add(newRow);
-                                    i++;
-                                } while (i != inventory.inventoryList.Count);
-
-                                dataset.AcceptChanges();
-                                JsonSerializer serializer = new JsonSerializer();
-                                serializer.Serialize(sw, dataset);
-                            }
-                        }
-                    }
-                    else
-                    {
-                        // WIP tilføre deserialize filen og få det tilført til inventory list
-                    }
                     break;
                 default:
                     break;

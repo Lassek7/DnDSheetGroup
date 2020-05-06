@@ -21,7 +21,7 @@ namespace CharacterSheet
             myCharacter = charac;
             myAttributes = Attri;
             InitializeComponent();
- 
+
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -34,7 +34,7 @@ namespace CharacterSheet
             LoadAttributes();
 
             
-            Skill mySkill = new Skill(myAttributes, myCharacter);
+           
 
         }
 
@@ -72,11 +72,17 @@ namespace CharacterSheet
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
 
-            StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave);
+            
         }
         void LoadSkills()
         {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
 
+        }
+
+        private void SaveCharacterButton_Click(object sender, EventArgs e)
+        {
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
         }
     }
 }
