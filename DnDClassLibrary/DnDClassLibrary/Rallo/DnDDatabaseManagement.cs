@@ -125,7 +125,7 @@ public void CharatorCreation()
                                 DataRow newRow = table.NewRow();
                                 string ID = Convert.ToString(i);
                                 newRow["id"] = i;
-                                newRow["Item Name"] = inventory.inventoryList[i]
+                                    newRow["Item Name"] = inventory.inventoryList[i];
                                 newRow["Item Type"] = inventory.inventoryList[i].ItemType;
                                 newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
                                 newRow["Weight Per Item"] = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
@@ -161,7 +161,7 @@ public void CharatorCreation()
                 break;
                 case "ARMOR":
                     Armor aData = new Armor();
-                    aData.ACFromArmor = inventory.inventoryList.e
+                   
                     DataColumn AIT = new DataColumn("Item Type");
                     DataColumn AFA = new DataColumn("AC From Armor");
                     DataColumn AAH = new DataColumn("Amount Held");
