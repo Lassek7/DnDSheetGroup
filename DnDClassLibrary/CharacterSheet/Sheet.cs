@@ -72,7 +72,13 @@ namespace CharacterSheet
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
 
-            
+            if (StrengthSave.Checked == false)
+            {
+                mySavingthrow.proficiency[0] = true;
+            }
+            int kebab = Convert.ToInt32(StrengthSaveLabel.Text) + mySavingthrow.StrengthSave;
+            StrengthSaveLabel.Text = Convert.ToString(kebab);
+            mySavingthrow.proficiency[0] = true;
         }
         void LoadSkills()
         {
@@ -82,7 +88,16 @@ namespace CharacterSheet
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
+            //DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
+        }
+
+        private void StrengthSave_CheckedChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void StrengthSaveLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

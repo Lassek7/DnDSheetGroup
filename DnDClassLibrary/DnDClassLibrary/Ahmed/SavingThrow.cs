@@ -6,14 +6,12 @@ namespace DnDClassLibrary
 {
     public class SavingThrow
     {
-        private bool[] proficiency = new bool[6];
+        public bool[] proficiency = new bool[6];
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
 
-        public SavingThrow(int[] proficiencyEnabled)
+        public SavingThrow()
         {
-            foreach (int index in proficiencyEnabled)
-                proficiency[index] = true;
         }
         public SavingThrow(CharacterAttributes Attribu, Character Charac)
         {
