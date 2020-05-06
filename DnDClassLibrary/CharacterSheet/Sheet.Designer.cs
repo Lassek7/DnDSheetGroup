@@ -38,7 +38,7 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.DexterityAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.DexterityModifierLabel = new System.Windows.Forms.Label();
             this.AthleticsProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.SleightOfHandProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.AcrobaticsProficiencyToggle = new System.Windows.Forms.RadioButton();
@@ -56,23 +56,23 @@
             this.InvestigationProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.HistoryProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.ArcanaProficiencyToggle = new System.Windows.Forms.RadioButton();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
+            this.PersuasionLabel = new System.Windows.Forms.Label();
+            this.PerformanceLabel = new System.Windows.Forms.Label();
+            this.IntimidationLabel = new System.Windows.Forms.Label();
+            this.SurvivalLabel = new System.Windows.Forms.Label();
+            this.PerceptionLabel = new System.Windows.Forms.Label();
+            this.MedicineLabel = new System.Windows.Forms.Label();
+            this.ReligionLabel = new System.Windows.Forms.Label();
+            this.NatureLabel = new System.Windows.Forms.Label();
+            this.InvestigationLabel = new System.Windows.Forms.Label();
+            this.HistoryLabel = new System.Windows.Forms.Label();
+            this.SleightOfHandLabel = new System.Windows.Forms.Label();
+            this.DeceptionLabel = new System.Windows.Forms.Label();
+            this.AnimalHandlingLabel = new System.Windows.Forms.Label();
+            this.ArcanaLabel = new System.Windows.Forms.Label();
+            this.InsightLabel = new System.Windows.Forms.Label();
+            this.AcrobaticsLabel = new System.Windows.Forms.Label();
+            this.AthleticsLabel = new System.Windows.Forms.Label();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.CharismaSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.StrengthSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
@@ -81,31 +81,31 @@
             this.ConstitutionSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.DexteritySaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.StrengthSaveLabel = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.CharismaSaveLabel = new System.Windows.Forms.Label();
+            this.WisdomSaveLabel = new System.Windows.Forms.Label();
+            this.IntelligenceSaveLabel = new System.Windows.Forms.Label();
+            this.ConstitutionSaveLabel = new System.Windows.Forms.Label();
+            this.DexteritySaveLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.CharismaAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.CharismaModifierLabel = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.StrengthAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.StrengthModifierLabel = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.WisdomAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.WisdomModifierLabel = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.IntelligenceAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.IntelligenceModifierLabel = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.ConstitutionAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
+            this.ConstitutionModifierLabel = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -158,6 +158,7 @@
             this.ProficencyBonusLabel = new System.Windows.Forms.Label();
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
+            this.JackOfAllTradesCheck = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -250,6 +251,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.JackOfAllTradesCheck);
             this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.AthleticsProficiencyToggle);
             this.groupBox1.Controls.Add(this.SleightOfHandProficiencyToggle);
@@ -268,23 +270,23 @@
             this.groupBox1.Controls.Add(this.InvestigationProficiencyToggle);
             this.groupBox1.Controls.Add(this.HistoryProficiencyToggle);
             this.groupBox1.Controls.Add(this.ArcanaProficiencyToggle);
-            this.groupBox1.Controls.Add(this.label42);
-            this.groupBox1.Controls.Add(this.label41);
-            this.groupBox1.Controls.Add(this.label40);
-            this.groupBox1.Controls.Add(this.label39);
-            this.groupBox1.Controls.Add(this.label38);
-            this.groupBox1.Controls.Add(this.label37);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Controls.Add(this.label35);
-            this.groupBox1.Controls.Add(this.label34);
-            this.groupBox1.Controls.Add(this.label33);
-            this.groupBox1.Controls.Add(this.label32);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label29);
-            this.groupBox1.Controls.Add(this.label30);
-            this.groupBox1.Controls.Add(this.label31);
+            this.groupBox1.Controls.Add(this.PersuasionLabel);
+            this.groupBox1.Controls.Add(this.PerformanceLabel);
+            this.groupBox1.Controls.Add(this.IntimidationLabel);
+            this.groupBox1.Controls.Add(this.SurvivalLabel);
+            this.groupBox1.Controls.Add(this.PerceptionLabel);
+            this.groupBox1.Controls.Add(this.MedicineLabel);
+            this.groupBox1.Controls.Add(this.ReligionLabel);
+            this.groupBox1.Controls.Add(this.NatureLabel);
+            this.groupBox1.Controls.Add(this.InvestigationLabel);
+            this.groupBox1.Controls.Add(this.HistoryLabel);
+            this.groupBox1.Controls.Add(this.SleightOfHandLabel);
+            this.groupBox1.Controls.Add(this.DeceptionLabel);
+            this.groupBox1.Controls.Add(this.AnimalHandlingLabel);
+            this.groupBox1.Controls.Add(this.ArcanaLabel);
+            this.groupBox1.Controls.Add(this.InsightLabel);
+            this.groupBox1.Controls.Add(this.AcrobaticsLabel);
+            this.groupBox1.Controls.Add(this.AthleticsLabel);
             this.groupBox1.Controls.Add(this.groupBox19);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.groupBox4);
@@ -322,7 +324,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Controls.Add(this.DexterityModifierLabel);
             this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox7.Location = new System.Drawing.Point(3, 58);
             this.groupBox7.Name = "groupBox7";
@@ -330,15 +332,15 @@
             this.groupBox7.TabIndex = 11;
             this.groupBox7.TabStop = false;
             // 
-            // label8
+            // DexterityModifierLabel
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label8.Location = new System.Drawing.Point(3, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 11);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DexterityModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.DexterityModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.DexterityModifierLabel.Name = "DexterityModifierLabel";
+            this.DexterityModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.DexterityModifierLabel.TabIndex = 10;
+            this.DexterityModifierLabel.Text = "0";
+            this.DexterityModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AthleticsProficiencyToggle
             // 
@@ -510,175 +512,175 @@
             this.ArcanaProficiencyToggle.Text = "Arcana";
             this.ArcanaProficiencyToggle.UseVisualStyleBackColor = true;
             // 
-            // label42
+            // PersuasionLabel
             // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label42.Location = new System.Drawing.Point(960, 222);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(8, 7);
-            this.label42.TabIndex = 80;
-            this.label42.Text = "0";
+            this.PersuasionLabel.AutoSize = true;
+            this.PersuasionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.PersuasionLabel.Location = new System.Drawing.Point(960, 222);
+            this.PersuasionLabel.Name = "PersuasionLabel";
+            this.PersuasionLabel.Size = new System.Drawing.Size(8, 7);
+            this.PersuasionLabel.TabIndex = 80;
+            this.PersuasionLabel.Text = "0";
             // 
-            // label41
+            // PerformanceLabel
             // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label41.Location = new System.Drawing.Point(960, 206);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(8, 7);
-            this.label41.TabIndex = 78;
-            this.label41.Text = "0";
+            this.PerformanceLabel.AutoSize = true;
+            this.PerformanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.PerformanceLabel.Location = new System.Drawing.Point(960, 206);
+            this.PerformanceLabel.Name = "PerformanceLabel";
+            this.PerformanceLabel.Size = new System.Drawing.Size(8, 7);
+            this.PerformanceLabel.TabIndex = 78;
+            this.PerformanceLabel.Text = "0";
             // 
-            // label40
+            // IntimidationLabel
             // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label40.Location = new System.Drawing.Point(960, 189);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(8, 7);
-            this.label40.TabIndex = 76;
-            this.label40.Text = "0";
+            this.IntimidationLabel.AutoSize = true;
+            this.IntimidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.IntimidationLabel.Location = new System.Drawing.Point(960, 189);
+            this.IntimidationLabel.Name = "IntimidationLabel";
+            this.IntimidationLabel.Size = new System.Drawing.Size(8, 7);
+            this.IntimidationLabel.TabIndex = 76;
+            this.IntimidationLabel.Text = "0";
             // 
-            // label39
+            // SurvivalLabel
             // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label39.Location = new System.Drawing.Point(798, 239);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(8, 7);
-            this.label39.TabIndex = 74;
-            this.label39.Text = "0";
+            this.SurvivalLabel.AutoSize = true;
+            this.SurvivalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.SurvivalLabel.Location = new System.Drawing.Point(798, 239);
+            this.SurvivalLabel.Name = "SurvivalLabel";
+            this.SurvivalLabel.Size = new System.Drawing.Size(8, 7);
+            this.SurvivalLabel.TabIndex = 74;
+            this.SurvivalLabel.Text = "0";
             // 
-            // label38
+            // PerceptionLabel
             // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label38.Location = new System.Drawing.Point(798, 222);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(8, 7);
-            this.label38.TabIndex = 72;
-            this.label38.Text = "0";
+            this.PerceptionLabel.AutoSize = true;
+            this.PerceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.PerceptionLabel.Location = new System.Drawing.Point(798, 222);
+            this.PerceptionLabel.Name = "PerceptionLabel";
+            this.PerceptionLabel.Size = new System.Drawing.Size(8, 7);
+            this.PerceptionLabel.TabIndex = 72;
+            this.PerceptionLabel.Text = "0";
             // 
-            // label37
+            // MedicineLabel
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label37.Location = new System.Drawing.Point(798, 206);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(8, 7);
-            this.label37.TabIndex = 70;
-            this.label37.Text = "0";
+            this.MedicineLabel.AutoSize = true;
+            this.MedicineLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.MedicineLabel.Location = new System.Drawing.Point(798, 206);
+            this.MedicineLabel.Name = "MedicineLabel";
+            this.MedicineLabel.Size = new System.Drawing.Size(8, 7);
+            this.MedicineLabel.TabIndex = 70;
+            this.MedicineLabel.Text = "0";
             // 
-            // label36
+            // ReligionLabel
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label36.Location = new System.Drawing.Point(645, 239);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(8, 7);
-            this.label36.TabIndex = 68;
-            this.label36.Text = "0";
+            this.ReligionLabel.AutoSize = true;
+            this.ReligionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.ReligionLabel.Location = new System.Drawing.Point(645, 239);
+            this.ReligionLabel.Name = "ReligionLabel";
+            this.ReligionLabel.Size = new System.Drawing.Size(8, 7);
+            this.ReligionLabel.TabIndex = 68;
+            this.ReligionLabel.Text = "0";
             // 
-            // label35
+            // NatureLabel
             // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label35.Location = new System.Drawing.Point(645, 222);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(8, 7);
-            this.label35.TabIndex = 66;
-            this.label35.Text = "0";
+            this.NatureLabel.AutoSize = true;
+            this.NatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.NatureLabel.Location = new System.Drawing.Point(645, 222);
+            this.NatureLabel.Name = "NatureLabel";
+            this.NatureLabel.Size = new System.Drawing.Size(8, 7);
+            this.NatureLabel.TabIndex = 66;
+            this.NatureLabel.Text = "0";
             // 
-            // label34
+            // InvestigationLabel
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label34.Location = new System.Drawing.Point(645, 206);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(8, 7);
-            this.label34.TabIndex = 64;
-            this.label34.Text = "0";
+            this.InvestigationLabel.AutoSize = true;
+            this.InvestigationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.InvestigationLabel.Location = new System.Drawing.Point(645, 206);
+            this.InvestigationLabel.Name = "InvestigationLabel";
+            this.InvestigationLabel.Size = new System.Drawing.Size(8, 7);
+            this.InvestigationLabel.TabIndex = 64;
+            this.InvestigationLabel.Text = "0";
             // 
-            // label33
+            // HistoryLabel
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label33.Location = new System.Drawing.Point(645, 189);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(8, 7);
-            this.label33.TabIndex = 62;
-            this.label33.Text = "0";
+            this.HistoryLabel.AutoSize = true;
+            this.HistoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.HistoryLabel.Location = new System.Drawing.Point(645, 189);
+            this.HistoryLabel.Name = "HistoryLabel";
+            this.HistoryLabel.Size = new System.Drawing.Size(8, 7);
+            this.HistoryLabel.TabIndex = 62;
+            this.HistoryLabel.Text = "0";
             // 
-            // label32
+            // SleightOfHandLabel
             // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label32.Location = new System.Drawing.Point(334, 189);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(8, 7);
-            this.label32.TabIndex = 60;
-            this.label32.Text = "0";
+            this.SleightOfHandLabel.AutoSize = true;
+            this.SleightOfHandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.SleightOfHandLabel.Location = new System.Drawing.Point(334, 189);
+            this.SleightOfHandLabel.Name = "SleightOfHandLabel";
+            this.SleightOfHandLabel.Size = new System.Drawing.Size(8, 7);
+            this.SleightOfHandLabel.TabIndex = 60;
+            this.SleightOfHandLabel.Text = "0";
             // 
-            // label25
+            // DeceptionLabel
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label25.Location = new System.Drawing.Point(960, 172);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(8, 7);
-            this.label25.TabIndex = 58;
-            this.label25.Text = "0";
+            this.DeceptionLabel.AutoSize = true;
+            this.DeceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.DeceptionLabel.Location = new System.Drawing.Point(960, 172);
+            this.DeceptionLabel.Name = "DeceptionLabel";
+            this.DeceptionLabel.Size = new System.Drawing.Size(8, 7);
+            this.DeceptionLabel.TabIndex = 58;
+            this.DeceptionLabel.Text = "0";
             // 
-            // label27
+            // AnimalHandlingLabel
             // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label27.Location = new System.Drawing.Point(798, 172);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(8, 7);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "0";
+            this.AnimalHandlingLabel.AutoSize = true;
+            this.AnimalHandlingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.AnimalHandlingLabel.Location = new System.Drawing.Point(798, 172);
+            this.AnimalHandlingLabel.Name = "AnimalHandlingLabel";
+            this.AnimalHandlingLabel.Size = new System.Drawing.Size(8, 7);
+            this.AnimalHandlingLabel.TabIndex = 56;
+            this.AnimalHandlingLabel.Text = "0";
             // 
-            // label28
+            // ArcanaLabel
             // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label28.Location = new System.Drawing.Point(645, 172);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(8, 7);
-            this.label28.TabIndex = 54;
-            this.label28.Text = "0";
+            this.ArcanaLabel.AutoSize = true;
+            this.ArcanaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.ArcanaLabel.Location = new System.Drawing.Point(645, 172);
+            this.ArcanaLabel.Name = "ArcanaLabel";
+            this.ArcanaLabel.Size = new System.Drawing.Size(8, 7);
+            this.ArcanaLabel.TabIndex = 54;
+            this.ArcanaLabel.Text = "0";
             // 
-            // label29
+            // InsightLabel
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label29.Location = new System.Drawing.Point(798, 190);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(8, 7);
-            this.label29.TabIndex = 52;
-            this.label29.Text = "0";
+            this.InsightLabel.AutoSize = true;
+            this.InsightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.InsightLabel.Location = new System.Drawing.Point(798, 190);
+            this.InsightLabel.Name = "InsightLabel";
+            this.InsightLabel.Size = new System.Drawing.Size(8, 7);
+            this.InsightLabel.TabIndex = 52;
+            this.InsightLabel.Text = "0";
             // 
-            // label30
+            // AcrobaticsLabel
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label30.Location = new System.Drawing.Point(334, 172);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(8, 7);
-            this.label30.TabIndex = 50;
-            this.label30.Text = "0";
+            this.AcrobaticsLabel.AutoSize = true;
+            this.AcrobaticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.AcrobaticsLabel.Location = new System.Drawing.Point(334, 172);
+            this.AcrobaticsLabel.Name = "AcrobaticsLabel";
+            this.AcrobaticsLabel.Size = new System.Drawing.Size(8, 7);
+            this.AcrobaticsLabel.TabIndex = 50;
+            this.AcrobaticsLabel.Text = "0";
             // 
-            // label31
+            // AthleticsLabel
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label31.Location = new System.Drawing.Point(175, 174);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(8, 7);
-            this.label31.TabIndex = 48;
-            this.label31.Text = "0";
+            this.AthleticsLabel.AutoSize = true;
+            this.AthleticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.AthleticsLabel.Location = new System.Drawing.Point(175, 174);
+            this.AthleticsLabel.Name = "AthleticsLabel";
+            this.AthleticsLabel.Size = new System.Drawing.Size(8, 7);
+            this.AthleticsLabel.TabIndex = 48;
+            this.AthleticsLabel.Text = "0";
             // 
             // groupBox19
             // 
@@ -690,11 +692,11 @@
             this.groupBox19.Controls.Add(this.ConstitutionSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.DexteritySaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.StrengthSaveLabel);
-            this.groupBox19.Controls.Add(this.label24);
-            this.groupBox19.Controls.Add(this.label23);
-            this.groupBox19.Controls.Add(this.label22);
-            this.groupBox19.Controls.Add(this.label21);
-            this.groupBox19.Controls.Add(this.label20);
+            this.groupBox19.Controls.Add(this.CharismaSaveLabel);
+            this.groupBox19.Controls.Add(this.WisdomSaveLabel);
+            this.groupBox19.Controls.Add(this.IntelligenceSaveLabel);
+            this.groupBox19.Controls.Add(this.ConstitutionSaveLabel);
+            this.groupBox19.Controls.Add(this.DexteritySaveLabel);
             this.groupBox19.Location = new System.Drawing.Point(51, 119);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(920, 45);
@@ -771,55 +773,55 @@
             this.StrengthSaveLabel.TabIndex = 48;
             this.StrengthSaveLabel.Text = "0";
             // 
-            // label24
+            // CharismaSaveLabel
             // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label24.Location = new System.Drawing.Point(909, 21);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(8, 7);
-            this.label24.TabIndex = 46;
-            this.label24.Text = "0";
+            this.CharismaSaveLabel.AutoSize = true;
+            this.CharismaSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.CharismaSaveLabel.Location = new System.Drawing.Point(909, 21);
+            this.CharismaSaveLabel.Name = "CharismaSaveLabel";
+            this.CharismaSaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.CharismaSaveLabel.TabIndex = 46;
+            this.CharismaSaveLabel.Text = "0";
             // 
-            // label23
+            // WisdomSaveLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label23.Location = new System.Drawing.Point(747, 21);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(8, 7);
-            this.label23.TabIndex = 44;
-            this.label23.Text = "0";
+            this.WisdomSaveLabel.AutoSize = true;
+            this.WisdomSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.WisdomSaveLabel.Location = new System.Drawing.Point(747, 21);
+            this.WisdomSaveLabel.Name = "WisdomSaveLabel";
+            this.WisdomSaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.WisdomSaveLabel.TabIndex = 44;
+            this.WisdomSaveLabel.Text = "0";
             // 
-            // label22
+            // IntelligenceSaveLabel
             // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label22.Location = new System.Drawing.Point(594, 21);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(8, 7);
-            this.label22.TabIndex = 42;
-            this.label22.Text = "0";
+            this.IntelligenceSaveLabel.AutoSize = true;
+            this.IntelligenceSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.IntelligenceSaveLabel.Location = new System.Drawing.Point(594, 21);
+            this.IntelligenceSaveLabel.Name = "IntelligenceSaveLabel";
+            this.IntelligenceSaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.IntelligenceSaveLabel.TabIndex = 42;
+            this.IntelligenceSaveLabel.Text = "0";
             // 
-            // label21
+            // ConstitutionSaveLabel
             // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label21.Location = new System.Drawing.Point(440, 21);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(8, 7);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "0";
+            this.ConstitutionSaveLabel.AutoSize = true;
+            this.ConstitutionSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.ConstitutionSaveLabel.Location = new System.Drawing.Point(440, 21);
+            this.ConstitutionSaveLabel.Name = "ConstitutionSaveLabel";
+            this.ConstitutionSaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.ConstitutionSaveLabel.TabIndex = 40;
+            this.ConstitutionSaveLabel.Text = "0";
             // 
-            // label20
+            // DexteritySaveLabel
             // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label20.Location = new System.Drawing.Point(283, 21);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(8, 7);
-            this.label20.TabIndex = 38;
-            this.label20.Text = "0";
+            this.DexteritySaveLabel.AutoSize = true;
+            this.DexteritySaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.DexteritySaveLabel.Location = new System.Drawing.Point(283, 21);
+            this.DexteritySaveLabel.Name = "DexteritySaveLabel";
+            this.DexteritySaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.DexteritySaveLabel.TabIndex = 38;
+            this.DexteritySaveLabel.Text = "0";
             // 
             // groupBox2
             // 
@@ -847,7 +849,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.CharismaModifierLabel);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox3.Location = new System.Drawing.Point(3, 55);
             this.groupBox3.Name = "groupBox3";
@@ -855,16 +857,16 @@
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             // 
-            // label4
+            // CharismaModifierLabel
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label4.Location = new System.Drawing.Point(3, 11);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(123, 11);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "0";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CharismaModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CharismaModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.CharismaModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.CharismaModifierLabel.Name = "CharismaModifierLabel";
+            this.CharismaModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.CharismaModifierLabel.TabIndex = 10;
+            this.CharismaModifierLabel.Text = "0";
+            this.CharismaModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -893,7 +895,7 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.StrengthModifierLabel);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox5.Location = new System.Drawing.Point(3, 58);
             this.groupBox5.Name = "groupBox5";
@@ -901,16 +903,16 @@
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             // 
-            // label6
+            // StrengthModifierLabel
             // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label6.Location = new System.Drawing.Point(3, 11);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 11);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StrengthModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StrengthModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.StrengthModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.StrengthModifierLabel.Name = "StrengthModifierLabel";
+            this.StrengthModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.StrengthModifierLabel.TabIndex = 10;
+            this.StrengthModifierLabel.Text = "0";
+            this.StrengthModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox12
             // 
@@ -938,7 +940,7 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.label14);
+            this.groupBox13.Controls.Add(this.WisdomModifierLabel);
             this.groupBox13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox13.Location = new System.Drawing.Point(3, 58);
             this.groupBox13.Name = "groupBox13";
@@ -946,16 +948,16 @@
             this.groupBox13.TabIndex = 11;
             this.groupBox13.TabStop = false;
             // 
-            // label14
+            // WisdomModifierLabel
             // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label14.Location = new System.Drawing.Point(3, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(123, 11);
-            this.label14.TabIndex = 10;
-            this.label14.Text = "0";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.WisdomModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.WisdomModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.WisdomModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.WisdomModifierLabel.Name = "WisdomModifierLabel";
+            this.WisdomModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.WisdomModifierLabel.TabIndex = 10;
+            this.WisdomModifierLabel.Text = "0";
+            this.WisdomModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox10
             // 
@@ -983,7 +985,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.label12);
+            this.groupBox11.Controls.Add(this.IntelligenceModifierLabel);
             this.groupBox11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox11.Location = new System.Drawing.Point(3, 58);
             this.groupBox11.Name = "groupBox11";
@@ -991,16 +993,16 @@
             this.groupBox11.TabIndex = 11;
             this.groupBox11.TabStop = false;
             // 
-            // label12
+            // IntelligenceModifierLabel
             // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label12.Location = new System.Drawing.Point(3, 11);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(123, 11);
-            this.label12.TabIndex = 10;
-            this.label12.Text = "0";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IntelligenceModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.IntelligenceModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.IntelligenceModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.IntelligenceModifierLabel.Name = "IntelligenceModifierLabel";
+            this.IntelligenceModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.IntelligenceModifierLabel.TabIndex = 10;
+            this.IntelligenceModifierLabel.Text = "0";
+            this.IntelligenceModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox8
             // 
@@ -1028,7 +1030,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.label10);
+            this.groupBox9.Controls.Add(this.ConstitutionModifierLabel);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.groupBox9.Location = new System.Drawing.Point(3, 58);
             this.groupBox9.Name = "groupBox9";
@@ -1036,16 +1038,16 @@
             this.groupBox9.TabIndex = 11;
             this.groupBox9.TabStop = false;
             // 
-            // label10
+            // ConstitutionModifierLabel
             // 
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label10.Location = new System.Drawing.Point(3, 11);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 11);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "0";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ConstitutionModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ConstitutionModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.ConstitutionModifierLabel.Location = new System.Drawing.Point(3, 11);
+            this.ConstitutionModifierLabel.Name = "ConstitutionModifierLabel";
+            this.ConstitutionModifierLabel.Size = new System.Drawing.Size(123, 11);
+            this.ConstitutionModifierLabel.TabIndex = 10;
+            this.ConstitutionModifierLabel.Text = "0";
+            this.ConstitutionModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox14
             // 
@@ -1551,6 +1553,17 @@
             this.InspirationLabel.TabIndex = 68;
             this.InspirationLabel.Text = "Inspiration";
             // 
+            // JackOfAllTradesCheck
+            // 
+            this.JackOfAllTradesCheck.AutoSize = true;
+            this.JackOfAllTradesCheck.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(3, 172);
+            this.JackOfAllTradesCheck.Name = "JackOfAllTradesCheck";
+            this.JackOfAllTradesCheck.Size = new System.Drawing.Size(63, 44);
+            this.JackOfAllTradesCheck.TabIndex = 98;
+            this.JackOfAllTradesCheck.Text = "Jack of All \r\n   Trades";
+            this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
+            // 
             // Sheet
             // 
             this.AutoSize = true;
@@ -1663,26 +1676,26 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label CharismaAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label CharismaModifierLabel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label StrengthModifierLabel;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.Label WisdomAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label WisdomModifierLabel;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.Label DexterityAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label DexterityModifierLabel;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.Label IntelligenceAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label IntelligenceModifierLabel;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.Label ConstitutionAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label ConstitutionModifierLabel;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label CharacterNameLabel;
         private System.Windows.Forms.GroupBox groupBox15;
@@ -1734,29 +1747,29 @@
         private System.Windows.Forms.Label InspirationDisplay;
         private System.Windows.Forms.Label ProficiencyBonusDisplay;
         private System.Windows.Forms.Label PassivePerceptionDisplay;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label38;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label PersuasionLabel;
+        private System.Windows.Forms.Label PerformanceLabel;
+        private System.Windows.Forms.Label IntimidationLabel;
+        private System.Windows.Forms.Label SurvivalLabel;
+        private System.Windows.Forms.Label PerceptionLabel;
+        private System.Windows.Forms.Label MedicineLabel;
+        private System.Windows.Forms.Label ReligionLabel;
+        private System.Windows.Forms.Label NatureLabel;
+        private System.Windows.Forms.Label InvestigationLabel;
+        private System.Windows.Forms.Label HistoryLabel;
+        private System.Windows.Forms.Label SleightOfHandLabel;
+        private System.Windows.Forms.Label DeceptionLabel;
+        private System.Windows.Forms.Label AnimalHandlingLabel;
+        private System.Windows.Forms.Label ArcanaLabel;
+        private System.Windows.Forms.Label InsightLabel;
+        private System.Windows.Forms.Label AcrobaticsLabel;
+        private System.Windows.Forms.Label AthleticsLabel;
         private System.Windows.Forms.Label StrengthSaveLabel;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label CharismaSaveLabel;
+        private System.Windows.Forms.Label WisdomSaveLabel;
+        private System.Windows.Forms.Label IntelligenceSaveLabel;
+        private System.Windows.Forms.Label ConstitutionSaveLabel;
+        private System.Windows.Forms.Label DexteritySaveLabel;
         private System.Windows.Forms.RadioButton AthleticsProficiencyToggle;
         private System.Windows.Forms.RadioButton SleightOfHandProficiencyToggle;
         private System.Windows.Forms.RadioButton AcrobaticsProficiencyToggle;
@@ -1783,5 +1796,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label StrengthAttributeDisplay;
+        private System.Windows.Forms.CheckBox JackOfAllTradesCheck;
     }
 }
