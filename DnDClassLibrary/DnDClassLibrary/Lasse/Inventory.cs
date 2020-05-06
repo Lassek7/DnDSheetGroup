@@ -9,14 +9,16 @@ namespace DnDClassLibrary
         int TempStrength = 5; // temporary
         int TotalWeight;
         string Encumbered = "You are not Encumbered";
+        public string DataTypeInv;
 
         List<Item> InventoryList = new List<Item>();
         UtillityMethods Utillity = new UtillityMethods();
-
+        
         public List<Item> inventoryList
         {
             get { return InventoryList;  }
         }
+        
 
         public void RunInventory()
         {
@@ -108,6 +110,7 @@ namespace DnDClassLibrary
                 NewItem.Description = Utillity.ReadTextInput("Please enter the description of the Item");
                 
                 InventoryList.Add(NewItem);
+                DataTypeInv = "ITEM";
             }            
         }
         void AddArmorToList() // virker ligesom Add Item to list
@@ -127,6 +130,7 @@ namespace DnDClassLibrary
                 NewItem.ItemEquipped = Utillity.ReadBoolInput("do you want to equip it?");
 
                 InventoryList.Add(NewItem);
+                DataTypeInv = "ARMOR";
             }
 
         }
@@ -154,6 +158,7 @@ namespace DnDClassLibrary
                 NewItem.ProficiencyModifier = 3; // Placeholder
 
                 InventoryList.Add(NewItem);
+                DataTypeInv = "WEAPON";
             }
         }
         string EncumberCheck() // tjekker om man har for meget vægt
