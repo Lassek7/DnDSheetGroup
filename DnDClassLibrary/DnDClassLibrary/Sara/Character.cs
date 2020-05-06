@@ -27,6 +27,12 @@ namespace DnDClassLibrary
         int Initiative;
         int ProficiencyBonus;
         int MaxHealth;
+        int Strength;
+        int Dexterity;
+        int Constitution;
+        int Intelligence;
+        int Wisdom;
+        int Charisma;
 
         public Character()
         {
@@ -135,6 +141,37 @@ namespace DnDClassLibrary
             set { MaxHealth = value; }
         }
 
+        public int strength
+        {
+            get { return Strength; }
+            set { Strength = value; }
+        }
+        public int dexterity
+        {
+            get { return Dexterity; }
+            set { Dexterity = value; }
+        }
+        public int constitution
+        {
+            get { return Constitution; }
+            set { Constitution = value; }
+        }
+        public int intelligence
+        {
+            get { return Intelligence; }
+            set { Intelligence = value; }
+        }
+        public int wisdom
+        {
+            get { return Wisdom; }
+            set { Wisdom = value; }
+        }
+        public int charisma
+        {
+            get { return Charisma; }
+            set { Charisma = value; }
+        }
+        
         #endregion
         public int ProficiencyCalc(int myLevel)
         {

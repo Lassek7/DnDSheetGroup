@@ -13,23 +13,23 @@ namespace CharacterSheet
 {
     public partial class Sheet : Form
     {
-        Character myCharacter = new Character();        
-        public Sheet(Character charac) 
+        CharacterAttributes myAttributes = new CharacterAttributes();
+        Character myCharacter = new Character();
+        public Sheet(Character charac, CharacterAttributes Attri) 
         {
             myCharacter = charac;
+            myAttributes = Attri;
             InitializeComponent();
+ 
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
         {
-    
         }
         
         private void Sheet_Load_1(object sender, EventArgs e)
         {
             LoadCharacterInfo();
-           
-            
 
         }
 
@@ -41,7 +41,7 @@ namespace CharacterSheet
         void LoadCharacterInfo()
         {
             RaceLabel.Text = myCharacter.race;
-            LevelLabel.Text = Convert.ToString((myCharacter.level));
+            LevelLabel.Text = Convert.ToString(myCharacter.level);
             AlignmentLabel.Text = myCharacter.alignment;
             ClassLabel.Text = myCharacter.characterClass;
             BackgroundLabel.Text = myCharacter.background;
@@ -51,14 +51,19 @@ namespace CharacterSheet
             FlawsDisplay.Text = myCharacter.flaws;
             IdealsDisplay.Text = myCharacter.ideals;
             TraitsDisplay.Text = myCharacter.traits;
-            MaxHealthDisplay.Text = Convert.ToString((myCharacter.maxHealth));
+            MaxHealthDisplay.Text = Convert.ToString(myCharacter.maxHealth);
 
 
             ProficiencyBonusDisplay.Text = Convert.ToString(myCharacter.ProficiencyCalc(myCharacter.level));
         }
         void LoadAttributes()
         {
-
+            StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Modifiers[0]);
+            DexterityAttributeDisplay.Text = Convert.ToString(myCharacter.dexterity);
+            ConstitutionAttributeDisplay.Text = Convert.ToString(myCharacter.constitution);
+            IntelligenceAttributeDisplay.Text = Convert.ToString(myCharacter.intelligence);
+            WisdomAttributeDisplay.Text = Convert.ToString(myCharacter.wisdom);
+            CharismaAttributeDisplay.Text = Convert.ToString(myCharacter.charisma);
         }
         void LoadSkills()
         {
