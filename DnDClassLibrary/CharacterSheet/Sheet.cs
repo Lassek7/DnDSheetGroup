@@ -15,6 +15,7 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
+
         public Sheet(Character charac, CharacterAttributes Attri) 
         {
             myCharacter = charac;
@@ -30,6 +31,10 @@ namespace CharacterSheet
         private void Sheet_Load_1(object sender, EventArgs e)
         {
             LoadCharacterInfo();
+            LoadAttributes();
+
+            
+            Skill mySkill = new Skill(myAttributes, myCharacter);
 
         }
 
@@ -53,17 +58,21 @@ namespace CharacterSheet
             TraitsDisplay.Text = myCharacter.traits;
             MaxHealthDisplay.Text = Convert.ToString(myCharacter.maxHealth);
 
-
+          
             ProficiencyBonusDisplay.Text = Convert.ToString(myCharacter.ProficiencyCalc(myCharacter.level));
+            myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
         }
         void LoadAttributes()
         {
-            StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Modifiers[0]);
-            DexterityAttributeDisplay.Text = Convert.ToString(myCharacter.dexterity);
-            ConstitutionAttributeDisplay.Text = Convert.ToString(myCharacter.constitution);
-            IntelligenceAttributeDisplay.Text = Convert.ToString(myCharacter.intelligence);
-            WisdomAttributeDisplay.Text = Convert.ToString(myCharacter.wisdom);
-            CharismaAttributeDisplay.Text = Convert.ToString(myCharacter.charisma);
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
+            DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
+            ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
+            IntelligenceAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[3]);
+            WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
+            CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
+
+            StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave);
         }
         void LoadSkills()
         {

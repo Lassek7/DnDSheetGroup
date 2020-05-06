@@ -35,6 +35,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.DexterityAttributeDisplay = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.AthleticsProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.SleightOfHandProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.AcrobaticsProficiencyToggle = new System.Windows.Forms.RadioButton();
@@ -76,7 +80,7 @@
             this.WisdomSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.ConstitutionSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.DexteritySaveProficiencyToggle = new System.Windows.Forms.RadioButton();
-            this.label43 = new System.Windows.Forms.Label();
+            this.StrengthSaveLabel = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
@@ -86,11 +90,8 @@
             this.CharismaAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.DexterityAttributeDisplay = new System.Windows.Forms.Label();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.StrengthAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
@@ -135,9 +136,11 @@
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.MaxHealthDisplay = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.ArmorClassDisplay = new System.Windows.Forms.Label();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
@@ -155,16 +158,13 @@
             this.ProficencyBonusLabel = new System.Windows.Forms.Label();
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.StrengthAttributeDisplay = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -181,16 +181,16 @@
             this.groupBox21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox27.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox28.SuspendLayout();
             this.groupBox29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox30.SuspendLayout();
             this.groupBox31.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.groupBox33.SuspendLayout();
             this.groupBox34.SuspendLayout();
             this.groupBox35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -296,6 +296,49 @@
             this.groupBox1.Size = new System.Drawing.Size(1017, 257);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox6.Controls.Add(this.DexterityAttributeDisplay);
+            this.groupBox6.Controls.Add(this.groupBox7);
+            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.groupBox6.Location = new System.Drawing.Point(215, 27);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(135, 91);
+            this.groupBox6.TabIndex = 12;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Dexterity";
+            // 
+            // DexterityAttributeDisplay
+            // 
+            this.DexterityAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.DexterityAttributeDisplay.Location = new System.Drawing.Point(3, 8);
+            this.DexterityAttributeDisplay.Name = "DexterityAttributeDisplay";
+            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(129, 51);
+            this.DexterityAttributeDisplay.TabIndex = 11;
+            this.DexterityAttributeDisplay.Text = "0";
+            this.DexterityAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label8);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox7.Location = new System.Drawing.Point(3, 58);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(129, 30);
+            this.groupBox7.TabIndex = 11;
+            this.groupBox7.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
+            this.label8.Location = new System.Drawing.Point(3, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(123, 11);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "0";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AthleticsProficiencyToggle
             // 
@@ -646,7 +689,7 @@
             this.groupBox19.Controls.Add(this.WisdomSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.ConstitutionSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.DexteritySaveProficiencyToggle);
-            this.groupBox19.Controls.Add(this.label43);
+            this.groupBox19.Controls.Add(this.StrengthSaveLabel);
             this.groupBox19.Controls.Add(this.label24);
             this.groupBox19.Controls.Add(this.label23);
             this.groupBox19.Controls.Add(this.label22);
@@ -718,15 +761,15 @@
             this.DexteritySaveProficiencyToggle.Text = "Dexterity Save";
             this.DexteritySaveProficiencyToggle.UseVisualStyleBackColor = true;
             // 
-            // label43
+            // StrengthSaveLabel
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.label43.Location = new System.Drawing.Point(124, 21);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(8, 7);
-            this.label43.TabIndex = 48;
-            this.label43.Text = "0";
+            this.StrengthSaveLabel.AutoSize = true;
+            this.StrengthSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.StrengthSaveLabel.Location = new System.Drawing.Point(124, 21);
+            this.StrengthSaveLabel.Name = "StrengthSaveLabel";
+            this.StrengthSaveLabel.Size = new System.Drawing.Size(8, 7);
+            this.StrengthSaveLabel.TabIndex = 48;
+            this.StrengthSaveLabel.Text = "0";
             // 
             // label24
             // 
@@ -823,49 +866,6 @@
             this.label4.Text = "0";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // groupBox6
-            // 
-            this.groupBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox6.Controls.Add(this.DexterityAttributeDisplay);
-            this.groupBox6.Controls.Add(this.groupBox7);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
-            this.groupBox6.Location = new System.Drawing.Point(215, 27);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(135, 91);
-            this.groupBox6.TabIndex = 12;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Dexterity";
-            // 
-            // DexterityAttributeDisplay
-            // 
-            this.DexterityAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.DexterityAttributeDisplay.Location = new System.Drawing.Point(3, 8);
-            this.DexterityAttributeDisplay.Name = "DexterityAttributeDisplay";
-            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(129, 51);
-            this.DexterityAttributeDisplay.TabIndex = 11;
-            this.DexterityAttributeDisplay.Text = "0";
-            this.DexterityAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox7.Location = new System.Drawing.Point(3, 58);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(129, 30);
-            this.groupBox7.TabIndex = 11;
-            this.groupBox7.TabStop = false;
-            // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.25F);
-            this.label8.Location = new System.Drawing.Point(3, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(123, 11);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox4
             // 
             this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -879,6 +879,17 @@
             this.groupBox4.TabIndex = 11;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Strength";
+            // 
+            // StrengthAttributeDisplay
+            // 
+            this.StrengthAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StrengthAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.StrengthAttributeDisplay.Location = new System.Drawing.Point(3, 11);
+            this.StrengthAttributeDisplay.Name = "StrengthAttributeDisplay";
+            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(129, 47);
+            this.StrengthAttributeDisplay.TabIndex = 12;
+            this.StrengthAttributeDisplay.Text = "0";
+            this.StrengthAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox5
             // 
@@ -1337,6 +1348,14 @@
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "groupBox27";
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown1.Location = new System.Drawing.Point(57, 48);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(70, 16);
+            this.numericUpDown1.TabIndex = 0;
+            // 
             // groupBox28
             // 
             this.groupBox28.Controls.Add(this.MaxHealthDisplay);
@@ -1365,6 +1384,13 @@
             this.groupBox29.TabIndex = 57;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "groupBox29";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(27, 22);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(74, 20);
+            this.numericUpDown2.TabIndex = 0;
             // 
             // groupBox30
             // 
@@ -1525,32 +1551,6 @@
             this.InspirationLabel.TabIndex = 68;
             this.InspirationLabel.Text = "Inspiration";
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Location = new System.Drawing.Point(57, 48);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(70, 16);
-            this.numericUpDown1.TabIndex = 0;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(27, 22);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(74, 20);
-            this.numericUpDown2.TabIndex = 0;
-            // 
-            // StrengthAttributeDisplay
-            // 
-            this.StrengthAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.StrengthAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.StrengthAttributeDisplay.Location = new System.Drawing.Point(3, 11);
-            this.StrengthAttributeDisplay.Name = "StrengthAttributeDisplay";
-            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(129, 47);
-            this.StrengthAttributeDisplay.TabIndex = 12;
-            this.StrengthAttributeDisplay.Text = "0";
-            this.StrengthAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Sheet
             // 
             this.AutoSize = true;
@@ -1604,12 +1604,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
@@ -1626,9 +1626,11 @@
             this.groupBox21.ResumeLayout(false);
             this.groupBox18.ResumeLayout(false);
             this.groupBox27.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
             this.groupBox29.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox30.ResumeLayout(false);
             this.groupBox30.PerformLayout();
             this.groupBox31.ResumeLayout(false);
@@ -1641,8 +1643,6 @@
             this.groupBox34.PerformLayout();
             this.groupBox35.ResumeLayout(false);
             this.groupBox35.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1751,7 +1751,7 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label StrengthSaveLabel;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
