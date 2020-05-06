@@ -10,18 +10,13 @@ using System.Windows.Forms;
 
 namespace CharacterSheet
 {
-    public partial class Form2 : Form
+    public partial class AddToInventoryForm : Form
     {
-        public Form2()
+        public AddToInventoryForm()
         {
             InitializeComponent();
         }
-        
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            CreateCharacterForm RunCreateCharacter = new CreateCharacterForm();
-            RunCreateCharacter.Show();
-        }
+
+    
     }
 }

@@ -6,8 +6,8 @@ namespace DnDClassLibrary
 {
     public class Feat
     {
-        private string FeatName;
-        private string FeatDescription;
+        private string featName;
+        private string featDescription;
 
         public Feat()
         {
@@ -18,13 +18,13 @@ namespace DnDClassLibrary
             this.featName = featName;
         }
 
-        public string featName
+        public string FeatName
         {
             get { return featName; }
             set { featName = value; }
         }
 
-        public string featDescription
+        public string FeatDescription
         {
             get { return featDescription; }
             set { featDescription = value; }
