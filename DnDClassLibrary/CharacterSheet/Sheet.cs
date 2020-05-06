@@ -16,13 +16,12 @@ namespace CharacterSheet
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
 
-
         public Sheet(Character charac, CharacterAttributes Attri) 
         {
             myCharacter = charac;
             myAttributes = Attri;
             InitializeComponent();
- 
+
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -33,6 +32,9 @@ namespace CharacterSheet
         {
             LoadCharacterInfo();
             LoadAttributes();
+
+            
+           
 
         }
 
@@ -63,7 +65,6 @@ namespace CharacterSheet
         void LoadAttributes()
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
-
             StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
             DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
             ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
@@ -71,11 +72,12 @@ namespace CharacterSheet
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
 
-            StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave);
+            
         }
         void LoadSkills()
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
+
         }
     }
 }
