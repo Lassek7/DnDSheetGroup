@@ -16,6 +16,7 @@ namespace CharacterSheet
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
 
+
         public Sheet(Character charac, CharacterAttributes Attri) 
         {
             myCharacter = charac;
@@ -32,9 +33,6 @@ namespace CharacterSheet
         {
             LoadCharacterInfo();
             LoadAttributes();
-
-            
-            Skill mySkill = new Skill(myAttributes, myCharacter);
 
         }
 
@@ -65,6 +63,7 @@ namespace CharacterSheet
         void LoadAttributes()
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+
             StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
             DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
             ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
@@ -76,7 +75,7 @@ namespace CharacterSheet
         }
         void LoadSkills()
         {
-
+            Skill mySkill = new Skill(myAttributes, myCharacter);
         }
     }
 }
