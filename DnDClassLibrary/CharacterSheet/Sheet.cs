@@ -117,11 +117,12 @@ namespace CharacterSheet
                         break;
                     case 2:
                         Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
+                        InvList.Text += armor.ItemName + " " + armor.AmountHeld + " " + armor.WeightPerItem + " " + armor.Description + " " + armor.ItemType + " " + armor.ACFromArmor + Environment.NewLine;
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
+                        InvList.Text += weapon.ItemName + " " + weapon.AmountHeld + " " + weapon.WeightPerItem + " " + weapon.Description + " " + weapon.DamageType + " " + weapon.Damage + " " + weapon.Range + " " + weapon.ItemType + Environment.NewLine;
                         break;
                 }
             }
