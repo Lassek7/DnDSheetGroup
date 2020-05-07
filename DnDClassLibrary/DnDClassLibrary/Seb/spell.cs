@@ -14,7 +14,6 @@ namespace DnDClassLibrary
         private int spellLevel; // cantrip = 0
         private string spellSchool;
         private string spellDescription;
-        private bool spellPrepared;
         private int resources;
         private int spellDC;
         private int spellBonus;
@@ -36,7 +35,6 @@ namespace DnDClassLibrary
             int spellLevel,
             string spellSchool,
             string spellDescription,
-            bool spellPrepared,
             int resources,
             int spellDC,
             int spellBonus)
@@ -49,7 +47,6 @@ namespace DnDClassLibrary
             this.spellLevel = spellLevel;
             this.spellSchool = spellSchool;
             this.spellDescription = spellDescription;
-            this.spellPrepared = spellPrepared;
             this.resources = resources;
             this.spellDC = spellDC;
             this.spellBonus = spellBonus;
@@ -103,12 +100,6 @@ namespace DnDClassLibrary
         {
             get { return spellDescription; }
             set { spellDescription = value; }
-        }
-
-        public bool SpellPrepared
-        {
-            get { return spellPrepared; }
-            set { spellPrepared = value; }
         }
 
         public int Resources

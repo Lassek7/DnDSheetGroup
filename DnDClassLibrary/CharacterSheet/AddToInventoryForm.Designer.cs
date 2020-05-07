@@ -328,7 +328,7 @@
             this.ArmorAmountBox.Size = new System.Drawing.Size(71, 20);
             this.ArmorAmountBox.TabIndex = 1;
             this.ArmorAmountBox.TextChanged += new System.EventHandler(this.ArmorAmountBox_TextChanged);
-            this.ArmorAmountBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ArmorAmountBox_KeyDown);
+            this.ArmorAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorAmountBox_KeyPress);
             // 
             // groupBox3
             // 
