@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnDClassLibrary;
 
+
 namespace CharacterSheet
 {
     public partial class Sheet : Form
@@ -103,7 +104,8 @@ namespace CharacterSheet
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
+            myDataBase.RunInvList();
         }
 
         private void EditInventoryButton_Click(object sender, EventArgs e)

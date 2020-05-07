@@ -127,8 +127,7 @@ namespace CharacterSheet
         {
             IdealsDone = existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
             myCharacter.ideals = NewValue(IdealsDone, IdealsRichBox.Text);
-            //IdealsDone = true;
-            //myCharacter.ideals = IdealsRichBox.Text;
+
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
@@ -274,6 +273,7 @@ namespace CharacterSheet
             else
             {
             }
+
             if (Range >= 1 && Range <= 20)
             {
                 myAttributes.Attributes[5] = Convert.ToInt32(Range);
@@ -354,6 +354,7 @@ namespace CharacterSheet
             }
             return ExistStatus;
         }
+
         string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
         {
             if (exists == true)

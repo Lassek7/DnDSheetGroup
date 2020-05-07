@@ -8,6 +8,7 @@ using System.Text;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
+
 namespace DnDClassLibrary
 {
     public class DnDDatabaseManagement
@@ -15,12 +16,17 @@ namespace DnDClassLibrary
         private string PlayerName { get; set; }
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
-        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac)
+        List<Item> InventoryList = new List<Item>();
+        
+        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList)
         {
             myAttributes = atri;
             myCharacter = Charac;
+            InventoryList = MyList; 
 
         }
+        
+
 
         public void CharatorCreation()
         {
@@ -30,7 +36,7 @@ namespace DnDClassLibrary
                 string answer;
                 Console.WriteLine("Welcome To Dnd Charator Manager");
                 Console.WriteLine("Type your Player name:");
-                PlayerName = Console.ReadLine();
+                PlayerName = myCharacter.playerName;
                 Console.WriteLine("Your charator name is:" + PlayerName);
                 Console.WriteLine("Confirm charator name by typing Yes or No");
                 answer = Console.ReadLine();
@@ -79,144 +85,180 @@ namespace DnDClassLibrary
             }
             return path;
         }
-        public void DatabaseList() // 
+        // kombinere mappens placering og navnet på backup filen til en string ex.(C:\Users\rallo\Backup Character\PlayerName.json)
+        public string CreateFolder()
         {
-            Inventory inventory = new Inventory(); // andet navn
-            inventory.RunInventory(); // kører Inventory manager
-
-
             string foldername = UserFilePath();
             string pathString = System.IO.Path.Combine(foldername, "Backup Character");
-            string fileName = PlayerName + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
+            string fileName = myCharacter.playerName + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
 
             System.IO.Directory.CreateDirectory(pathString); // laver mappen Backup Character 
-            string createfile = System.IO.Path.Combine(pathString, fileName); // kombinere mappens placering og navnet på backup filen til en string ex.(C:\Users\rallo\Backup Character\PlayerName.json)
+            string createfile = System.IO.Path.Combine(pathString, fileName);
+            return createfile;
+        }
+        
+        public void RunInvList()
+        {
 
             DataSet dataset = new DataSet("dataSet");
             dataset.Namespace = "NetFrameWork";
             DataTable table = new DataTable();
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
+            foreach (var Item in InventoryList)
+            {
 
-            //switch (inventory.invtypeDatabase)
-            //{                                                                  // Linje 98 til 107 laver et dataset strukture 
-            //    case "ITEM":
-            //        DataColumn IN = new DataColumn("Item Name");
-            //        DataColumn IT = new DataColumn("Item Type");
-            //        DataColumn AH = new DataColumn("Amount Held");
-            //        DataColumn WPI = new DataColumn("Weight Per Item");
-            //        DataColumn D = new DataColumn("Description");
-            //        table.Columns.Add(idColumn);
-            //        table.Columns.Add(IN);
-            //        table.Columns.Add(IT);
-            //        table.Columns.Add(AH);
-            //        table.Columns.Add(WPI);
-            //        table.Columns.Add(D);
-            //        dataset.Tables.Add(table);
+                int ID = Item.ItemID;
+                switch (ID)
+                {
+                    case 1:
+                        DataColumn IN = new DataColumn("Item Name");
+                        DataColumn IT = new DataColumn("Item Type");
+                        DataColumn AH = new DataColumn("Amount Held");
+                        DataColumn WPI = new DataColumn("Weight Per Item");
+                        DataColumn D = new DataColumn("Description");
+                        table.Columns.Add(IN);
+                        table.Columns.Add(IT);
+                        table.Columns.Add(AH);
+                        table.Columns.Add(WPI);
+                        table.Columns.Add(D);
+                        dataset.Tables.Add(table);
 
-            //        if (!System.IO.File.Exists(createfile))
-            //        {
-            //            using (FileStream fileStream = new FileStream(createfile, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
-            //            {
-            //                using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
-            //                {
-            //                    int i = 0;
+                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        {
+                            using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
+                            {
 
-            //                    do
-            //                    {
+                                // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
+                                DataRow newRow = table.NewRow();
 
-            //                        // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
-            //                        DataRow newRow = table.NewRow();
-            //                        string ID = Convert.ToString(i);
-            //                        newRow["id"] = i;
-            //                        newRow["Item Name"] = inventory.inventoryList[i];
-            //                        newRow["Item Type"] = inventory.inventoryList[i].ItemType;
-            //                        newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
-            //                        newRow["Weight Per Item"] = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
-            //                        newRow["Description"] = inventory.inventoryList[i].Description;
-            //                        table.Rows.Add(newRow);
-            //                        i++;
-            //                    } while (i != inventory.inventoryList.Count);
+                                newRow[IN] = Item.ItemName;
+                                newRow[IT] = Item.ItemType;
+                                newRow[AH] = Item.AmountHeld;
+                                newRow[WPI] = Item.WeightPerItem;
+                                newRow[D] = Item.Description;
+                                table.Rows.Add(newRow);
 
-            //                    dataset.AcceptChanges();
-            //                    JsonSerializer serializer = new JsonSerializer();
-            //                    serializer.Serialize(sw, dataset);
-            //                }
-            //            }
-            //        }
-            //                    else
-            //                    {
-            //                        Inventory inv = new Inventory();
-            //                        Item aItem = new Item();
-            //                        string test = File.ReadAllText(createfile);
-            //                        dataset = JsonConvert.DeserializeObject<DataSet>(test);
-            //                        table = dataset.Tables["table1"];
-            //                        foreach (DataRow row in table.Rows)
-            //                        {
-            //                            aItem.ItemName = Convert.ToString(row["Item Name"]);
-            //                            aItem.ItemType = Convert.ToString(row["Item type"]);
-            //                            aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-            //                            aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-            //                            aItem.Description = Convert.ToString(row["Description"]);
-            //                            inv.inventoryList.Add(aItem);
-            //                            aItem = new Item();
-            //                        }
-            //                    }
-            //                    break;
-            //                case "ARMOR":
-            //                    Armor aData = new Armor();
+                                dataset.AcceptChanges();
+                                JsonSerializer serializer = new JsonSerializer();
+                                serializer.Serialize(sw, dataset);
+                                table = new DataTable();
+                            }
+                        }
+                        break;
+                    case 2:
+                         // typecast objectet item over til armor classen
+                        DataColumn AIT = new DataColumn("Item Type");
+                        DataColumn AFA = new DataColumn("AC From Armor");
+                        DataColumn AAH = new DataColumn("Amount Held");
+                        DataColumn AWPI = new DataColumn("Weight Per Item");
+                        DataColumn AD = new DataColumn("Description");
+                        DataColumn AIE = new DataColumn("Item Equipped");
+                        table.Columns.Add(AIT);
+                        table.Columns.Add(AFA);
+                        table.Columns.Add(AAH);
+                        table.Columns.Add(AWPI);
+                        table.Columns.Add(AD);
+                        table.Columns.Add(AIE);
+                        dataset.Tables.Add(table);
+                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        {
+                            using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
+                            {
+            
+                                    DataRow newRow = table.NewRow();
+                                    Armor armor = (Armor)Item;
 
-            //                    DataColumn AIT = new DataColumn("Item Type");
-            //                    DataColumn AFA = new DataColumn("AC From Armor");
-            //                    DataColumn AAH = new DataColumn("Amount Held");
-            //                    DataColumn AWPI = new DataColumn("Weight Per Item");
-            //                    DataColumn AD = new DataColumn("Description");
-            //                    DataColumn AIE = new DataColumn("Item Equipped");
-            //                    table.Columns.Add(idColumn);
-            //                    table.Columns.Add(AIT);
-            //                    table.Columns.Add(AFA);
-            //                    table.Columns.Add(AAH);
-            //                    table.Columns.Add(AWPI);
-            //                    table.Columns.Add(AD);
-            //                    table.Columns.Add(AIE);
-            //                    dataset.Tables.Add(table);
-            //                    if (!System.IO.File.Exists(createfile))
-            //                    {
-            //                        using (FileStream fileStream = new FileStream(createfile, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
-            //                        {
-            //                            using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
-            //                            {
-            //                                int i = 0;
+                                    newRow["Item Type"] = armor.ItemType;
+                                    newRow["AC From Armor"] = armor.ACFromArmor;
+                                    newRow["Amount Held"] = armor.AmountHeld;
+                                    newRow["Weight Per Item"] = armor.WeightPerItem;
+                                    newRow["Description"] = armor.Description;
+                                    newRow["Item Equipped"] = armor.ItemEquipped;
+                                    table.Rows.Add(newRow);
 
-            //                                do
-            //                                {
+                                dataset.AcceptChanges();
+                                JsonSerializer serializer = new JsonSerializer();
+                                serializer.Serialize(sw, dataset);
+                                table = new DataTable();
+                            }
+                        }
+                        //InvList += armor.ItemName + " " + armor.AmountHeld + " " + armor.WeightPerItem + " " + armor.Description + " " + armor.ItemType + " " + armor.ACFromArmor + Environment.NewLine;
+                        break;
 
-            //                                    // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
-            //                                    DataRow newRow = table.NewRow();
-            //                                    string ID = Convert.ToString(i);
-            //                                    newRow["id"] = i;
-            //                                    newRow["Item Type"] = inventory.inventoryList[i].ItemType;                                  // WIP
-            //                                    newRow["AC From Armor"] = inventory.inventoryList[i].ItemType;
-            //                                    newRow["Amount Held"] = Convert.ToString(inventory.inventoryList[i].AmountHeld);
-            //                                    newRow["Weight Per Item"] = Convert.ToString(inventory.inventoryList[i].WeightPerItem);
-            //                                    newRow["Description"] = inventory.inventoryList[i].Description;
-            //                                    newRow["Item Equipped"] = Convert.ToString(inventory.inventoryList[i]);
-            //                                    table.Rows.Add(newRow);
-            //                                    i++;
-            //                                } while (i != inventory.inventoryList.Count);
+                    case 3:
+                        DataColumn WIT = new DataColumn("Item Type");
+                        DataColumn WAH = new DataColumn("Amount Held");
+                        DataColumn WWPI = new DataColumn("Weight Per Item");
+                        DataColumn WD = new DataColumn("Description");
+                        DataColumn WAA = new DataColumn("Attribute Association");
+                        DataColumn WR = new DataColumn("Range");
+                        DataColumn WDAM = new DataColumn("Damage");
+                        DataColumn WDT = new DataColumn("Damage Type");
+                        DataColumn WIE = new DataColumn("Item Equipped");
+                        table.Columns.Add(WIT);
+                        table.Columns.Add(WAH);
+                        table.Columns.Add(WWPI);
+                        table.Columns.Add(WD);
+                        table.Columns.Add(WAA);
+                        table.Columns.Add(WR);
+                        table.Columns.Add(WDAM);
+                        table.Columns.Add(WDT);
+                        table.Columns.Add(WIE);
+                        
 
-            //                                dataset.AcceptChanges();
-            //                                JsonSerializer serializer = new JsonSerializer();
-            //                                serializer.Serialize(sw, dataset);
-            //                            }
-            //                        }
-            //                    }
-            //                    break;
-            //                case "WEAPON":
-            //                    break;
-            //                default:
-            //                    break;
-            //            }
+                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        {
+                            using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
+                            {
+                                Weapon weapon = (Weapon)Item;
+                                DataRow newRow = table.NewRow();
+
+                                newRow[WIT] = weapon.ItemType;
+                                newRow[WAH] = weapon.AmountHeld;
+                                newRow[WWPI] = weapon.WeightPerItem;
+                                newRow[WD] = weapon.Description;
+                                newRow[WAA] = weapon.AttributeAssociation;
+                                newRow[WR] = weapon.Range;
+                                newRow[WDAM] = weapon.Damage;
+                                newRow[WDT] = weapon.DamageType;
+                                newRow[WIE] = weapon.ItemEquipped;
+                                dataset.AcceptChanges();
+                                JsonSerializer serializer = new JsonSerializer();
+                                serializer.Serialize(sw, dataset);
+                                table = new DataTable();
+                            }
+                        }
+                        
+                        break;
+                }
+
+            }
+        }
+        public void DatabaseList() // 
+        {
+          
+                   // Setup for deserialize aka load filen til programmet igen
+                        //Inventory inv = new Inventory();
+                        //Item aItem = new Item();
+                        //string test = File.ReadAllText(CreateFolder());
+                        //dataset = JsonConvert.DeserializeObject<DataSet>(test);
+                        //table = dataset.Tables["table1"];
+                        //foreach (DataRow row in table.Rows)
+                        //{
+                        //    aItem.ItemName = Convert.ToString(row["Item Name"]);
+                        //    aItem.ItemType = Convert.ToString(row["Item type"]);
+                        //    aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                        //    aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                        //    aItem.Description = Convert.ToString(row["Description"]);
+                        //    inv.inventoryList.Add(aItem);
+                        //    aItem = new Item();
+                        
+                        //}
+               
+                       
+            
+            
         }
     }
 }
