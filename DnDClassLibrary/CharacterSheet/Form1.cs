@@ -127,8 +127,7 @@ namespace CharacterSheet
         {
             IdealsDone = existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
             myCharacter.ideals = NewValue(IdealsDone, IdealsRichBox.Text);
-            //IdealsDone = true;
-            //myCharacter.ideals = IdealsRichBox.Text;
+
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
@@ -274,6 +273,7 @@ namespace CharacterSheet
             else
             {
             }
+
             if (Range >= 1 && Range <= 20)
             {
                 myAttributes.Attributes[5] = Convert.ToInt32(Range);
@@ -304,66 +304,42 @@ namespace CharacterSheet
 
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void LevelBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
        
         private void StrengthInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void DexterityInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void ConstitutionInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void IntelligenceInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void WisdomInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void CharismaInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
         bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
         {
@@ -378,6 +354,7 @@ namespace CharacterSheet
             }
             return ExistStatus;
         }
+
         string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
         {
             if (exists == true)
@@ -385,6 +362,13 @@ namespace CharacterSheet
                 return UserInput;
             }
             return null;
+        }
+        void OnlyTakeNumbers(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 
