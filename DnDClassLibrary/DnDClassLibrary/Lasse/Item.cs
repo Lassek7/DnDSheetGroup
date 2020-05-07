@@ -6,6 +6,7 @@ namespace DnDClassLibrary
 {
     public class Item // find en måde at gøre den private
     {
+        int itemID;
         private string itemName;
         private string itemType;
         private int amountHeld;
@@ -20,7 +21,11 @@ namespace DnDClassLibrary
         {
             this.itemName = itemName;
         }
-
+        public int ItemID
+        {
+            get { return itemID; }
+            set { itemID = value; }
+        }
         public string ItemName
         {
             get { return itemName; }

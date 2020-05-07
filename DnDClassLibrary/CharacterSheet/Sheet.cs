@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
+        List<Item> InventoryList = new List<Item>();
+
+
 
         public Sheet(Character charac, CharacterAttributes Attri) 
         {
@@ -32,9 +36,6 @@ namespace CharacterSheet
         {
             LoadCharacterInfo();
             LoadAttributes();
-
-            
-           
 
         }
 
@@ -98,6 +99,132 @@ namespace CharacterSheet
         private void StrengthSaveLabel_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void EditInventoryButton_Click(object sender, EventArgs e)
+        {
+            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
+           // AddToInventoryForm addToInventory = new AddToInventoryForm();
+            addToInventory.Show();
+        }
+
+        private void InvList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void RunInvList()
+        {
+           InvList.Clear();
+
+            foreach (var Item in InventoryList)
+            {
+
+                int ID = Item.ItemID;
+                switch (ID)
+                {
+                    case 1:
+                        InvList.Text += Item.ItemName + " " + Item.AmountHeld + " " + Item.WeightPerItem + " " + Item.ItemType + " " + Item.Description + Environment.NewLine;
+                        break;
+                    case 2:
+                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
+                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
+                        break;
+
+                    case 3:
+                        Weapon weapon = (Weapon)Item;
+                        break;
+                }
+
+            }
+        }
+
+        private void UpdateInvButton_Click(object sender, EventArgs e)
+        {
+            RunInvList();
+        }
+
+        private void EditInventoryButton_Click(object sender, EventArgs e)
+        {
+            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
+           // AddToInventoryForm addToInventory = new AddToInventoryForm();
+            addToInventory.Show();
+        }
+
+        private void InvList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void RunInvList()
+        {
+           InvList.Clear();
+
+            foreach (var Item in InventoryList)
+            {
+
+                int ID = Item.ItemID;
+                switch (ID)
+                {
+                    case 1:
+                        InvList.Text += Item.ItemName + " " + Item.AmountHeld + " " + Item.WeightPerItem + " " + Item.ItemType + " " + Item.Description + Environment.NewLine;
+                        break;
+                    case 2:
+                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
+                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
+                        break;
+
+                    case 3:
+                        Weapon weapon = (Weapon)Item;
+                        break;
+                }
+
+            }
+        }
+
+        private void UpdateInvButton_Click(object sender, EventArgs e)
+        {
+            RunInvList();
+        }
+
+        private void EditInventoryButton_Click(object sender, EventArgs e)
+        {
+            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
+           // AddToInventoryForm addToInventory = new AddToInventoryForm();
+            addToInventory.Show();
+        }
+
+        private void InvList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        void RunInvList()
+        {
+           InvList.Clear();
+
+            foreach (var Item in InventoryList)
+            {
+
+                int ID = Item.ItemID;
+                switch (ID)
+                {
+                    case 1:
+                        InvList.Text += Item.ItemName + " " + Item.AmountHeld + " " + Item.WeightPerItem + " " + Item.ItemType + " " + Item.Description + Environment.NewLine;
+                        break;
+                    case 2:
+                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
+                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
+                        break;
+
+                    case 3:
+                        Weapon weapon = (Weapon)Item;
+                        break;
+                }
+
+            }
+        }
+
+        private void UpdateInvButton_Click(object sender, EventArgs e)
+        {
+            RunInvList();
         }
     }
 }

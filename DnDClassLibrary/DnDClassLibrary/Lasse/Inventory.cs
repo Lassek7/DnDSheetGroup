@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class Inventory
+    public class Inventory
     {
         int TempStrength = 5; // temporary
         int TotalWeight;

@@ -2,11 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\DnDClassLibrary",
+    "\\DnDClassLibrary\\CharacterSheet",
     "\\DnDClassLibrary\\DemoApp",
     "\\DnDClassLibrary\\DnDClassLibrary",
-    "\\DnDClassLibrary\\DnDClassLibrary\\Lasse",
-    "\\DnDClassLibrary\\packages"
+    "\\DnDClassLibrary\\DnDClassLibrary\\Ahmed",
+    "\\DnDClassLibrary\\DnDClassLibrary\\Sara",
+    "\\DnDClassLibrary\\DnDClassLibrary\\Seb"
   ],
-  "SelectedNode": "\\DnDClassLibrary\\DnDClassLibrary.sln",
+  "SelectedNode": "\\DnDClassLibrary\\CharacterSheet\\Sheet.resx",
   "PreviewInSolutionExplorer": false
 }
