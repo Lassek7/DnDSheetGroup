@@ -6,9 +6,9 @@ namespace DnDClassLibrary
 {
     public class Skill
     {
-        private int Jack;
         public bool[] proficiency = new bool[18];
-        private bool JackOfAllTrades;
+        //public bool JackOfAllTrades;
+        public int Jack;
 
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
@@ -21,14 +21,14 @@ namespace DnDClassLibrary
 
         public Skill()
         {
-         if (JackOfAllTrades == true)
-            {
-                Jack = myCharacter.proficiencyBonus / 2;
+         //if (JackOfAllTrades == true)
+         //   {
+         //       Jack = myCharacter.proficiencyBonus / 2;
 
-            } else if (JackOfAllTrades == false)
-            {
-                Jack = 0;
-            }
+         //   } else if (JackOfAllTrades == false)
+         //   {
+         //       Jack = 0;
+         //   }
         }
 
         public int Acrobatics

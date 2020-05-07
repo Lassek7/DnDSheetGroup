@@ -33,6 +33,7 @@ namespace CharacterSheet
         {
             LoadCharacterInfo();
             LoadAttributes();
+            LoadSkills();
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)    //slettes
@@ -86,6 +87,18 @@ namespace CharacterSheet
         void LoadSkills()
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
+
+            AthleticsLabel.Text = Convert.ToString(mySkill.Athletics);
+            AcrobaticsLabel.Text = Convert.ToString(mySkill.Acrobatics);
+            SleightOfHandLabel.Text = Convert.ToString(mySkill.SleightOfHand);
+            StealthLabel.Text = Convert.ToString(mySkill.Stealth);
+
+            JackOfAllTradesCheck.CheckStateChanged += JackOfAllTradesCheck_CheckedChanged;
+            AthleticsProficiencyToggle.CheckStateChanged += AthleticsProficiencyToggle_CheckedChanged;
+            AcrobaticsProficiencyToggle.CheckStateChanged += AcrobaticsProficiencyToggle_CheckedChanged;
+            SleightOfHandProficiencyToggle.CheckStateChanged += SleightOfHandProficiencyToggle_CheckedChanged;
+            StealthProficiencyToggle.CheckStateChanged += StealthProficiencyToggle_CheckedChanged;
+
         }
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
@@ -192,30 +205,56 @@ namespace CharacterSheet
         private void DexteritySaveLabel_Click(object sender, EventArgs e)
         {
         }
+        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            
+            if (JackOfAllTradesCheck.Checked == true)
+            {
+                mySkill.Jack = myCharacter.proficiencyBonus / 2;
+                AthleticsLabel.Text = Convert.ToString(mySkill.Athletics);
+                AcrobaticsLabel.Text = Convert.ToString(mySkill.Acrobatics);
+                SleightOfHandLabel.Text = Convert.ToString(mySkill.SleightOfHand);
+                StealthLabel.Text = Convert.ToString(mySkill.Stealth);
+            }
+            else
+            {
+                mySkill.Jack = 0;
+                AthleticsLabel.Text = Convert.ToString(mySkill.Athletics);
+                AcrobaticsLabel.Text = Convert.ToString(mySkill.Acrobatics);
+                SleightOfHandLabel.Text = Convert.ToString(mySkill.SleightOfHand);
+                StealthLabel.Text = Convert.ToString(mySkill.Stealth);
+            }
+ 
+        }
 
         private void AthleticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[3] = AthleticsProficiencyToggle.Checked;
+            AthleticsLabel.Text = CheckProficiencyToggle(mySkill.Athletics, AthleticsProficiencyToggle.Checked);
         }
 
         private void AcrobaticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[0] = AcrobaticsProficiencyToggle.Checked;
+            AcrobaticsLabel.Text = CheckProficiencyToggle(mySkill.Acrobatics, AthleticsProficiencyToggle.Checked);
         }
 
         private void SleightOfHandProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[15] = SleightOfHandProficiencyToggle.Checked;
+            SleightOfHandLabel.Text = CheckProficiencyToggle(mySkill.SleightOfHand, AthleticsProficiencyToggle.Checked);
         }
 
         private void StealthProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
+            StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, AthleticsProficiencyToggle.Checked);
         }
 
-        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

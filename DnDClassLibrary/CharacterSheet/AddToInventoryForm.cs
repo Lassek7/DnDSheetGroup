@@ -196,11 +196,6 @@ namespace CharacterSheet
             OnlyTakeNumbers(e);
         }
 
-        private void ArmorAmountBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            OnlyTakeNumbers(e);
-        }
-
         private void ArmorWeightBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);

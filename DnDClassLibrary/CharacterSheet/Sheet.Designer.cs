@@ -313,7 +313,7 @@
             // 
             this.JackOfAllTradesCheck.AutoSize = true;
             this.JackOfAllTradesCheck.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(0, 200);
+            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(5, 200);
             this.JackOfAllTradesCheck.Name = "JackOfAllTradesCheck";
             this.JackOfAllTradesCheck.Size = new System.Drawing.Size(80, 55);
             this.JackOfAllTradesCheck.TabIndex = 98;
