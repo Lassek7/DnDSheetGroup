@@ -66,12 +66,28 @@ namespace CharacterSheet
         void LoadAttributes()
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+
             StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
             DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
             ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
             IntelligenceAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[3]);
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
+
+            StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave);
+            DexteritySaveLabel.Text = Convert.ToString(mySavingthrow.DexteritySave);
+            ConstitutionSaveLabel.Text = Convert.ToString(mySavingthrow.ConstitutionSave);
+            IntelligenceSaveLabel.Text = Convert.ToString(mySavingthrow.IntelligenceSave);
+            WisdomSaveLabel.Text = Convert.ToString(mySavingthrow.WisdomSave);
+            CharismaSaveLabel.Text = Convert.ToString(mySavingthrow.CharismaSave);
+
+            StrengthSaveProficiencyToggle.CheckStateChanged += StrengthSaveProficiencyToggle_CheckedChanged;
+            DexteritySaveProficiencyToggle.CheckStateChanged += DexteritySaveProficiencyToggle_CheckedChanged;
+            ConstitutionSaveProficiencyToggle.CheckStateChanged += ConstitutionSaveProficiencyToggle_CheckedChanged;
+            IntelligenceSaveProficiencyToggle.CheckStateChanged += IntelligenceSaveProficiencyToggle_CheckedChanged;
+            WisdomSaveProficiencyToggle.CheckStateChanged += WisdomSaveProficiencyToggle_CheckedChanged;
+            CharismaSaveProficiencyToggle.CheckStateChanged += CharismaSaveProficiencyToggle_CheckedChanged;
+
 
 
         }
@@ -123,9 +139,73 @@ namespace CharacterSheet
             }
         }
 
+
+        private void StrengthSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[0] = StrengthSaveProficiencyToggle.Checked;
+            StrengthSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.StrengthSave, StrengthSaveProficiencyToggle.Checked);
+        }
+
+
+        private void DexteritySaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[1] = DexteritySaveProficiencyToggle.Checked;
+            DexteritySaveLabel.Text = CheckProficiencyToggle(mySavingthrow.DexteritySave, DexteritySaveProficiencyToggle.Checked);
+        }
+
+        private void ConstitutionSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[2] = ConstitutionSaveProficiencyToggle.Checked;
+            ConstitutionSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.ConstitutionSave, ConstitutionSaveProficiencyToggle.Checked);
+        }
+
+        private void IntelligenceSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[3] = IntelligenceSaveProficiencyToggle.Checked;
+            IntelligenceSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.IntelligenceSave, IntelligenceSaveProficiencyToggle.Checked);
+        }
+
+        private void WisdomSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[4] = WisdomSaveProficiencyToggle.Checked;
+            WisdomSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.WisdomSave, WisdomSaveProficiencyToggle.Checked);
+        }
+
+        private void CharismaSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
+            mySavingthrow.proficiency[5] = CharismaSaveProficiencyToggle.Checked;
+            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);
+        }
+        string CheckProficiencyToggle(int SavingthrowSave, bool ProficiencyToggle)
+        {
+            if (ProficiencyToggle == false)
+            {
+                return Convert.ToString(SavingthrowSave);
+            } 
+            else 
+            { 
+                return Convert.ToString(SavingthrowSave);
+            }
+        }
         private void UpdateInvButton_Click(object sender, EventArgs e)
         {
             RunInvList();
+        }
+
+        private void StrengthSaveLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DexteritySaveLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
