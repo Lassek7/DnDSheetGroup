@@ -319,6 +319,7 @@
             this.JackOfAllTradesCheck.TabIndex = 98;
             this.JackOfAllTradesCheck.Text = "Jack of All \r\n   Trades";
             this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
+            this.JackOfAllTradesCheck.CheckedChanged += new System.EventHandler(this.JackOfAllTradesCheck_CheckedChanged);
             // 
             // groupBox6
             // 
@@ -1603,6 +1604,7 @@
             this.AthleticsProficiencyToggle.TabIndex = 99;
             this.AthleticsProficiencyToggle.Text = "Athletics";
             this.AthleticsProficiencyToggle.UseVisualStyleBackColor = true;
+            this.AthleticsProficiencyToggle.CheckedChanged += new System.EventHandler(this.AthleticsProficiencyToggle_CheckedChanged);
             // 
             // AcrobaticsProficiencyToggle
             // 
@@ -1613,6 +1615,7 @@
             this.AcrobaticsProficiencyToggle.TabIndex = 101;
             this.AcrobaticsProficiencyToggle.Text = "Acrobatics";
             this.AcrobaticsProficiencyToggle.UseVisualStyleBackColor = true;
+            this.AcrobaticsProficiencyToggle.CheckedChanged += new System.EventHandler(this.AcrobaticsProficiencyToggle_CheckedChanged);
             // 
             // SleightOfHandProficiencyToggle
             // 
@@ -1623,6 +1626,7 @@
             this.SleightOfHandProficiencyToggle.TabIndex = 102;
             this.SleightOfHandProficiencyToggle.Text = "Sle. of Hand";
             this.SleightOfHandProficiencyToggle.UseVisualStyleBackColor = true;
+            this.SleightOfHandProficiencyToggle.CheckedChanged += new System.EventHandler(this.SleightOfHandProficiencyToggle_CheckedChanged);
             // 
             // StealthProficiencyToggle
             // 
@@ -1633,6 +1637,7 @@
             this.StealthProficiencyToggle.TabIndex = 103;
             this.StealthProficiencyToggle.Text = "Stealth";
             this.StealthProficiencyToggle.UseVisualStyleBackColor = true;
+            this.StealthProficiencyToggle.CheckedChanged += new System.EventHandler(this.StealthProficiencyToggle_CheckedChanged);
             // 
             // StealthLabel
             // 
