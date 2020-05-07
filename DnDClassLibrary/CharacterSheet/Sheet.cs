@@ -192,5 +192,30 @@ namespace CharacterSheet
         private void DexteritySaveLabel_Click(object sender, EventArgs e)
         {
         }
+
+        private void AthleticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AcrobaticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SleightOfHandProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StealthProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

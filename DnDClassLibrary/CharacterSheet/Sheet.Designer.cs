@@ -40,9 +40,6 @@
             this.DexterityAttributeDisplay = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DexterityModifierLabel = new System.Windows.Forms.Label();
-            this.AthleticsProficiencyToggle = new System.Windows.Forms.RadioButton();
-            this.SleightOfHandProficiencyToggle = new System.Windows.Forms.RadioButton();
-            this.AcrobaticsProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.PersuationProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.PerformanceProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.IntimidationProficiencyToggle = new System.Windows.Forms.RadioButton();
@@ -75,6 +72,11 @@
             this.AcrobaticsLabel = new System.Windows.Forms.Label();
             this.AthleticsLabel = new System.Windows.Forms.Label();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.CharismaSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.WisdomSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.IntelligenceSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.ConstitutionSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.DexteritySaveProficiencyToggle = new System.Windows.Forms.CheckBox();
             this.StrengthSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
             this.StrengthSaveLabel = new System.Windows.Forms.Label();
             this.CharismaSaveLabel = new System.Windows.Forms.Label();
@@ -158,11 +160,11 @@
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
-            this.DexteritySaveProficiencyToggle = new System.Windows.Forms.CheckBox();
-            this.ConstitutionSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
-            this.IntelligenceSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
-            this.WisdomSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
-            this.CharismaSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.AthleticsProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.AcrobaticsProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.SleightOfHandProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.StealthProficiencyToggle = new System.Windows.Forms.CheckBox();
+            this.StealthLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -257,11 +259,13 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox1.Controls.Add(this.JackOfAllTradesCheck);
-            this.groupBox1.Controls.Add(this.groupBox6);
-            this.groupBox1.Controls.Add(this.AthleticsProficiencyToggle);
+            this.groupBox1.Controls.Add(this.StealthLabel);
+            this.groupBox1.Controls.Add(this.StealthProficiencyToggle);
             this.groupBox1.Controls.Add(this.SleightOfHandProficiencyToggle);
             this.groupBox1.Controls.Add(this.AcrobaticsProficiencyToggle);
+            this.groupBox1.Controls.Add(this.AthleticsProficiencyToggle);
+            this.groupBox1.Controls.Add(this.JackOfAllTradesCheck);
+            this.groupBox1.Controls.Add(this.groupBox6);
             this.groupBox1.Controls.Add(this.PersuationProficiencyToggle);
             this.groupBox1.Controls.Add(this.PerformanceProficiencyToggle);
             this.groupBox1.Controls.Add(this.IntimidationProficiencyToggle);
@@ -309,12 +313,13 @@
             // 
             this.JackOfAllTradesCheck.AutoSize = true;
             this.JackOfAllTradesCheck.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(0, 193);
+            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(0, 200);
             this.JackOfAllTradesCheck.Name = "JackOfAllTradesCheck";
             this.JackOfAllTradesCheck.Size = new System.Drawing.Size(80, 55);
             this.JackOfAllTradesCheck.TabIndex = 98;
             this.JackOfAllTradesCheck.Text = "Jack of All \r\n   Trades";
             this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
+            this.JackOfAllTradesCheck.CheckedChanged += new System.EventHandler(this.JackOfAllTradesCheck_CheckedChanged);
             // 
             // groupBox6
             // 
@@ -358,36 +363,6 @@
             this.DexterityModifierLabel.TabIndex = 10;
             this.DexterityModifierLabel.Text = "0";
             this.DexterityModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // AthleticsProficiencyToggle
-            // 
-            this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(72, 167);
-            this.AthleticsProficiencyToggle.Name = "AthleticsProficiencyToggle";
-            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(79, 20);
-            this.AthleticsProficiencyToggle.TabIndex = 97;
-            this.AthleticsProficiencyToggle.TabStop = true;
-            this.AthleticsProficiencyToggle.Text = "Athletics";
-            this.AthleticsProficiencyToggle.UseVisualStyleBackColor = true;
-            // 
-            // SleightOfHandProficiencyToggle
-            // 
-            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(216, 184);
-            this.SleightOfHandProficiencyToggle.Name = "SleightOfHandProficiencyToggle";
-            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(112, 20);
-            this.SleightOfHandProficiencyToggle.TabIndex = 96;
-            this.SleightOfHandProficiencyToggle.TabStop = true;
-            this.SleightOfHandProficiencyToggle.Text = "Sleight of Hand";
-            this.SleightOfHandProficiencyToggle.UseVisualStyleBackColor = true;
-            // 
-            // AcrobaticsProficiencyToggle
-            // 
-            this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(216, 167);
-            this.AcrobaticsProficiencyToggle.Name = "AcrobaticsProficiencyToggle";
-            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(79, 20);
-            this.AcrobaticsProficiencyToggle.TabIndex = 95;
-            this.AcrobaticsProficiencyToggle.TabStop = true;
-            this.AcrobaticsProficiencyToggle.Text = "Acrobatics";
-            this.AcrobaticsProficiencyToggle.UseVisualStyleBackColor = true;
             // 
             // PersuationProficiencyToggle
             // 
@@ -719,6 +694,61 @@
             this.groupBox19.Size = new System.Drawing.Size(920, 45);
             this.groupBox19.TabIndex = 38;
             this.groupBox19.TabStop = false;
+            // 
+            // CharismaSaveProficiencyToggle
+            // 
+            this.CharismaSaveProficiencyToggle.AutoSize = true;
+            this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(794, 16);
+            this.CharismaSaveProficiencyToggle.Name = "CharismaSaveProficiencyToggle";
+            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
+            this.CharismaSaveProficiencyToggle.TabIndex = 60;
+            this.CharismaSaveProficiencyToggle.Text = "Cha. Save";
+            this.CharismaSaveProficiencyToggle.UseVisualStyleBackColor = true;
+            this.CharismaSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.CharismaSaveProficiencyToggle_CheckedChanged);
+            // 
+            // WisdomSaveProficiencyToggle
+            // 
+            this.WisdomSaveProficiencyToggle.AutoSize = true;
+            this.WisdomSaveProficiencyToggle.Location = new System.Drawing.Point(646, 16);
+            this.WisdomSaveProficiencyToggle.Name = "WisdomSaveProficiencyToggle";
+            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(93, 21);
+            this.WisdomSaveProficiencyToggle.TabIndex = 59;
+            this.WisdomSaveProficiencyToggle.Text = "Wis. Save";
+            this.WisdomSaveProficiencyToggle.UseVisualStyleBackColor = true;
+            this.WisdomSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.WisdomSaveProficiencyToggle_CheckedChanged);
+            // 
+            // IntelligenceSaveProficiencyToggle
+            // 
+            this.IntelligenceSaveProficiencyToggle.AutoSize = true;
+            this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(483, 16);
+            this.IntelligenceSaveProficiencyToggle.Name = "IntelligenceSaveProficiencyToggle";
+            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(85, 21);
+            this.IntelligenceSaveProficiencyToggle.TabIndex = 58;
+            this.IntelligenceSaveProficiencyToggle.Text = "Int. Save";
+            this.IntelligenceSaveProficiencyToggle.UseVisualStyleBackColor = true;
+            this.IntelligenceSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.IntelligenceSaveProficiencyToggle_CheckedChanged);
+            // 
+            // ConstitutionSaveProficiencyToggle
+            // 
+            this.ConstitutionSaveProficiencyToggle.AutoSize = true;
+            this.ConstitutionSaveProficiencyToggle.Location = new System.Drawing.Point(328, 16);
+            this.ConstitutionSaveProficiencyToggle.Name = "ConstitutionSaveProficiencyToggle";
+            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
+            this.ConstitutionSaveProficiencyToggle.TabIndex = 57;
+            this.ConstitutionSaveProficiencyToggle.Text = "Con. Save";
+            this.ConstitutionSaveProficiencyToggle.UseVisualStyleBackColor = true;
+            this.ConstitutionSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.ConstitutionSaveProficiencyToggle_CheckedChanged);
+            // 
+            // DexteritySaveProficiencyToggle
+            // 
+            this.DexteritySaveProficiencyToggle.AutoSize = true;
+            this.DexteritySaveProficiencyToggle.Location = new System.Drawing.Point(176, 16);
+            this.DexteritySaveProficiencyToggle.Name = "DexteritySaveProficiencyToggle";
+            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(94, 21);
+            this.DexteritySaveProficiencyToggle.TabIndex = 56;
+            this.DexteritySaveProficiencyToggle.Text = "Dex. Save";
+            this.DexteritySaveProficiencyToggle.UseVisualStyleBackColor = true;
+            this.DexteritySaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.DexteritySaveProficiencyToggle_CheckedChanged);
             // 
             // StrengthSaveProficiencyToggle
             // 
@@ -1565,60 +1595,59 @@
             this.SaveCharacterButton.UseVisualStyleBackColor = true;
             this.SaveCharacterButton.Click += new System.EventHandler(this.SaveCharacterButton_Click);
             // 
-            // DexteritySaveProficiencyToggle
+            // AthleticsProficiencyToggle
             // 
-            this.DexteritySaveProficiencyToggle.AutoSize = true;
-            this.DexteritySaveProficiencyToggle.Location = new System.Drawing.Point(176, 16);
-            this.DexteritySaveProficiencyToggle.Name = "DexteritySaveProficiencyToggle";
-            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(94, 21);
-            this.DexteritySaveProficiencyToggle.TabIndex = 56;
-            this.DexteritySaveProficiencyToggle.Text = "Dex. Save";
-            this.DexteritySaveProficiencyToggle.UseVisualStyleBackColor = true;
-            this.DexteritySaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.DexteritySaveProficiencyToggle_CheckedChanged);
+            this.AthleticsProficiencyToggle.AutoSize = true;
+            this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(72, 167);
+            this.AthleticsProficiencyToggle.Name = "AthleticsProficiencyToggle";
+            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(83, 21);
+            this.AthleticsProficiencyToggle.TabIndex = 99;
+            this.AthleticsProficiencyToggle.Text = "Athletics";
+            this.AthleticsProficiencyToggle.UseVisualStyleBackColor = true;
+            this.AthleticsProficiencyToggle.CheckedChanged += new System.EventHandler(this.AthleticsProficiencyToggle_CheckedChanged);
             // 
-            // ConstitutionSaveProficiencyToggle
+            // AcrobaticsProficiencyToggle
             // 
-            this.ConstitutionSaveProficiencyToggle.AutoSize = true;
-            this.ConstitutionSaveProficiencyToggle.Location = new System.Drawing.Point(328, 16);
-            this.ConstitutionSaveProficiencyToggle.Name = "ConstitutionSaveProficiencyToggle";
-            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
-            this.ConstitutionSaveProficiencyToggle.TabIndex = 57;
-            this.ConstitutionSaveProficiencyToggle.Text = "Con. Save";
-            this.ConstitutionSaveProficiencyToggle.UseVisualStyleBackColor = true;
-            this.ConstitutionSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.ConstitutionSaveProficiencyToggle_CheckedChanged);
+            this.AcrobaticsProficiencyToggle.AutoSize = true;
+            this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(227, 167);
+            this.AcrobaticsProficiencyToggle.Name = "AcrobaticsProficiencyToggle";
+            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(96, 21);
+            this.AcrobaticsProficiencyToggle.TabIndex = 101;
+            this.AcrobaticsProficiencyToggle.Text = "Acrobatics";
+            this.AcrobaticsProficiencyToggle.UseVisualStyleBackColor = true;
+            this.AcrobaticsProficiencyToggle.CheckedChanged += new System.EventHandler(this.AcrobaticsProficiencyToggle_CheckedChanged);
             // 
-            // IntelligenceSaveProficiencyToggle
+            // SleightOfHandProficiencyToggle
             // 
-            this.IntelligenceSaveProficiencyToggle.AutoSize = true;
-            this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(483, 16);
-            this.IntelligenceSaveProficiencyToggle.Name = "IntelligenceSaveProficiencyToggle";
-            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(85, 21);
-            this.IntelligenceSaveProficiencyToggle.TabIndex = 58;
-            this.IntelligenceSaveProficiencyToggle.Text = "Int. Save";
-            this.IntelligenceSaveProficiencyToggle.UseVisualStyleBackColor = true;
-            this.IntelligenceSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.IntelligenceSaveProficiencyToggle_CheckedChanged);
+            this.SleightOfHandProficiencyToggle.AutoSize = true;
+            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(227, 185);
+            this.SleightOfHandProficiencyToggle.Name = "SleightOfHandProficiencyToggle";
+            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(108, 21);
+            this.SleightOfHandProficiencyToggle.TabIndex = 102;
+            this.SleightOfHandProficiencyToggle.Text = "Sle. of Hand";
+            this.SleightOfHandProficiencyToggle.UseVisualStyleBackColor = true;
+            this.SleightOfHandProficiencyToggle.CheckedChanged += new System.EventHandler(this.SleightOfHandProficiencyToggle_CheckedChanged);
             // 
-            // WisdomSaveProficiencyToggle
+            // StealthProficiencyToggle
             // 
-            this.WisdomSaveProficiencyToggle.AutoSize = true;
-            this.WisdomSaveProficiencyToggle.Location = new System.Drawing.Point(646, 16);
-            this.WisdomSaveProficiencyToggle.Name = "WisdomSaveProficiencyToggle";
-            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(93, 21);
-            this.WisdomSaveProficiencyToggle.TabIndex = 59;
-            this.WisdomSaveProficiencyToggle.Text = "Wis. Save";
-            this.WisdomSaveProficiencyToggle.UseVisualStyleBackColor = true;
-            this.WisdomSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.WisdomSaveProficiencyToggle_CheckedChanged);
+            this.StealthProficiencyToggle.AutoSize = true;
+            this.StealthProficiencyToggle.Location = new System.Drawing.Point(227, 203);
+            this.StealthProficiencyToggle.Name = "StealthProficiencyToggle";
+            this.StealthProficiencyToggle.Size = new System.Drawing.Size(74, 21);
+            this.StealthProficiencyToggle.TabIndex = 103;
+            this.StealthProficiencyToggle.Text = "Stealth";
+            this.StealthProficiencyToggle.UseVisualStyleBackColor = true;
+            this.StealthProficiencyToggle.CheckedChanged += new System.EventHandler(this.StealthProficiencyToggle_CheckedChanged);
             // 
-            // CharismaSaveProficiencyToggle
+            // StealthLabel
             // 
-            this.CharismaSaveProficiencyToggle.AutoSize = true;
-            this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(794, 16);
-            this.CharismaSaveProficiencyToggle.Name = "CharismaSaveProficiencyToggle";
-            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
-            this.CharismaSaveProficiencyToggle.TabIndex = 60;
-            this.CharismaSaveProficiencyToggle.Text = "Cha. Save";
-            this.CharismaSaveProficiencyToggle.UseVisualStyleBackColor = true;
-            this.CharismaSaveProficiencyToggle.CheckedChanged += new System.EventHandler(this.CharismaSaveProficiencyToggle_CheckedChanged);
+            this.StealthLabel.AutoSize = true;
+            this.StealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 5.25F);
+            this.StealthLabel.Location = new System.Drawing.Point(334, 206);
+            this.StealthLabel.Name = "StealthLabel";
+            this.StealthLabel.Size = new System.Drawing.Size(10, 12);
+            this.StealthLabel.TabIndex = 104;
+            this.StealthLabel.Text = "0";
             // 
             // Sheet
             // 
@@ -1830,9 +1859,6 @@
         private System.Windows.Forms.Label IntelligenceSaveLabel;
         private System.Windows.Forms.Label ConstitutionSaveLabel;
         private System.Windows.Forms.Label DexteritySaveLabel;
-        private System.Windows.Forms.RadioButton AthleticsProficiencyToggle;
-        private System.Windows.Forms.RadioButton SleightOfHandProficiencyToggle;
-        private System.Windows.Forms.RadioButton AcrobaticsProficiencyToggle;
         private System.Windows.Forms.RadioButton PersuationProficiencyToggle;
         private System.Windows.Forms.RadioButton PerformanceProficiencyToggle;
         private System.Windows.Forms.RadioButton IntimidationProficiencyToggle;
@@ -1861,5 +1887,10 @@
         private System.Windows.Forms.CheckBox IntelligenceSaveProficiencyToggle;
         private System.Windows.Forms.CheckBox ConstitutionSaveProficiencyToggle;
         private System.Windows.Forms.CheckBox DexteritySaveProficiencyToggle;
+        private System.Windows.Forms.Label StealthLabel;
+        private System.Windows.Forms.CheckBox StealthProficiencyToggle;
+        private System.Windows.Forms.CheckBox SleightOfHandProficiencyToggle;
+        private System.Windows.Forms.CheckBox AcrobaticsProficiencyToggle;
+        private System.Windows.Forms.CheckBox AthleticsProficiencyToggle;
     }
 }

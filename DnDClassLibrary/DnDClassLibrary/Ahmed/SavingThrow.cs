@@ -17,19 +17,7 @@ namespace DnDClassLibrary
         {
             myAttributes = Attribu;
             myCharacter = Charac;
-
         }
-        //public override string ToString()
-        //{
-        //    StringBuilder sbb = new StringBuilder();
-        //    sbb.Append("Strength " + StrengthSave + "\n");
-        //    sbb.Append("Dexterity " + DexteritySave + "\n");
-        //    sbb.Append("Constitution " + ConstitutionSave + "\n");
-        //    sbb.Append("Intelligence " + IntelligenceSave + "\n");
-        //    sbb.Append("Wisdom " + WisdomSave + "\n");
-        //    sbb.Append("Charisma " + CharismaSave + "\n");
-        //    return sbb.ToString();
-        //}
 
         public int StrengthSave
         {
