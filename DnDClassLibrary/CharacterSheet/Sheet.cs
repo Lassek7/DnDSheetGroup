@@ -18,14 +18,11 @@ namespace CharacterSheet
         Character myCharacter = new Character();
         List<Item> InventoryList = new List<Item>();
 
-
-
         public Sheet(Character charac, CharacterAttributes Attri)
         {
             myCharacter = charac;
             myAttributes = Attri;
             InitializeComponent();
-
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -36,12 +33,10 @@ namespace CharacterSheet
         {
             LoadCharacterInfo();
             LoadAttributes();
-
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)    //slettes
         {
-
         }
 
         void LoadCharacterInfo()
@@ -58,7 +53,6 @@ namespace CharacterSheet
             IdealsDisplay.Text = myCharacter.ideals;
             TraitsDisplay.Text = myCharacter.traits;
             MaxHealthDisplay.Text = Convert.ToString(myCharacter.maxHealth);
-
 
             ProficiencyBonusDisplay.Text = Convert.ToString(myCharacter.ProficiencyCalc(myCharacter.level));
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
@@ -87,14 +81,11 @@ namespace CharacterSheet
             IntelligenceSaveProficiencyToggle.CheckStateChanged += IntelligenceSaveProficiencyToggle_CheckedChanged;
             WisdomSaveProficiencyToggle.CheckStateChanged += WisdomSaveProficiencyToggle_CheckedChanged;
             CharismaSaveProficiencyToggle.CheckStateChanged += CharismaSaveProficiencyToggle_CheckedChanged;
-
-
-
         }
+
         void LoadSkills()
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
-
         }
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
@@ -111,7 +102,6 @@ namespace CharacterSheet
 
         private void InvList_TextChanged(object sender, EventArgs e)
         {
-
         }
         void RunInvList()
         {
@@ -119,7 +109,6 @@ namespace CharacterSheet
 
             foreach (var Item in InventoryList)
             {
-
                 int ID = Item.ItemID;
                 switch (ID)
                 {
@@ -135,10 +124,8 @@ namespace CharacterSheet
                         Weapon weapon = (Weapon)Item;
                         break;
                 }
-
             }
         }
-
 
         private void StrengthSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
@@ -146,7 +133,6 @@ namespace CharacterSheet
             mySavingthrow.proficiency[0] = StrengthSaveProficiencyToggle.Checked;
             StrengthSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.StrengthSave, StrengthSaveProficiencyToggle.Checked);
         }
-
 
         private void DexteritySaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
@@ -200,12 +186,10 @@ namespace CharacterSheet
 
         private void StrengthSaveLabel_Click(object sender, EventArgs e)
         {
-
         }
 
         private void DexteritySaveLabel_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
