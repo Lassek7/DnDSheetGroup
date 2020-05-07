@@ -6,6 +6,10 @@ namespace DnDClassLibrary
 {
     public class Skill
     {
+        private int Jack;
+        public bool[] proficiency = new bool[18];
+        private bool JackOfAllTrades;
+
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
 
@@ -13,51 +17,19 @@ namespace DnDClassLibrary
         {
             myAttributes = Attribu;
             myCharacter = Charac;
-
         }
-        private int Jack;
-        private bool[] proficiency = new bool[18];
 
-        public Skill(int[] proficiencyEnabled, bool JackOfAllTrades)
+        public Skill()
         {
-
          if (JackOfAllTrades == true)
             {
-                foreach (int index in proficiencyEnabled)
-                    proficiency[index] = true;
                 Jack = myCharacter.proficiencyBonus / 2;
 
             } else if (JackOfAllTrades == false)
             {
-                foreach (int index in proficiencyEnabled)
-                    proficiency[index] = true;
                 Jack = 0;
             }
         }
-
-        //public override string ToString()
-        //{
-        //    StringBuilder sb = new StringBuilder();
-        //    sb.Append("Acrobatics " + Acrobatics + "\n");
-        //    sb.Append("AnimalHandling " + AnimalHandling + "\n");
-        //    sb.Append("Arcana " + Arcana + "\n");
-        //    sb.Append("Athletics " + Athletics + "\n");
-        //    sb.Append("Deception " + Deception + "\n");
-        //    sb.Append("History " + History + "\n");
-        //    sb.Append("Insight " + Insight + "\n");
-        //    sb.Append("Intimidation " + Intimidation + "\n");
-        //    sb.Append("Investigation " + Investigation + "\n");
-        //    sb.Append("Medicine " + Medicine + "\n");
-        //    sb.Append("Nature " + Nature + "\n");
-        //    sb.Append("Perception " + Perception + "\n");
-        //    sb.Append("Performance " + Performance + "\n");
-        //    sb.Append("Persuasion " + Persuasion + "\n");
-        //    sb.Append("Religion " + Religion + "\n");
-        //    sb.Append("Sleight of Hand " + SleightOfHand + "\n");
-        //    sb.Append("Stealth " + Stealth + "\n");
-        //    sb.Append("Survival " + Survival + "\n");
-        //    return sb.ToString();
-        //}
 
         public int Acrobatics
         {
