@@ -66,6 +66,7 @@ namespace CharacterSheet
             myWeapon.ItemID = 3;
             InventoryList.Add(myWeapon);
             this.Close();
+            this.Show();
         }
         #endregion
 
@@ -156,32 +157,75 @@ namespace CharacterSheet
 
         private void WeaponStrengthStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            myWeapon.AttributeAssociation = "Strength";
         }
 
         private void WeaponDexterityStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            myWeapon.AttributeAssociation = "Dexterity";
         }
 
         private void WeaponConstitutionStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            myWeapon.AttributeAssociation = "Constitution";
         }
 
         private void WeaponIntelligenceStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            myWeapon.AttributeAssociation = "Intelligence";
         }
 
         private void WeaponWisdomStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
-
+            myWeapon.AttributeAssociation = "Wisdom";
         }
 
         private void WeaponCharismaStatRadioButton_CheckedChanged(object sender, EventArgs e)
         {
+            myWeapon.AttributeAssociation = "Charisma";
+        }
 
+        private void ItemAmountBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+          
+        }
+
+        private void ItemweightBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ArmorAmountBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ArmorWeightBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ArmorACBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void WeaponAmountBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void WeaponWeightBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+        void OnlyTakeNumbers(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

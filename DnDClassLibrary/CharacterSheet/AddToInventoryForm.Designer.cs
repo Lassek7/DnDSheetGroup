@@ -55,7 +55,6 @@
             this.ArmorAmountBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.WeaponEquippedCheck = new System.Windows.Forms.CheckBox();
-            this.WeaponProficencyCheck = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -165,6 +164,7 @@
             this.ItemAmountBox.Size = new System.Drawing.Size(71, 20);
             this.ItemAmountBox.TabIndex = 3;
             this.ItemAmountBox.TextChanged += new System.EventHandler(this.ItemAmountBox_TextChanged);
+            this.ItemAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemAmountBox_KeyPress);
             // 
             // ItemTypeBox
             // 
@@ -181,6 +181,7 @@
             this.ItemweightBox.Size = new System.Drawing.Size(71, 20);
             this.ItemweightBox.TabIndex = 1;
             this.ItemweightBox.TextChanged += new System.EventHandler(this.ItemweightBox_TextChanged);
+            this.ItemweightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemweightBox_KeyPress);
             // 
             // ItemNameBox
             // 
@@ -271,7 +272,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(231, 17);
+            this.label7.Location = new System.Drawing.Point(231, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 11;
@@ -293,6 +294,7 @@
             this.ArmorACBox.Size = new System.Drawing.Size(71, 20);
             this.ArmorACBox.TabIndex = 5;
             this.ArmorACBox.TextChanged += new System.EventHandler(this.ArmorACBox_TextChanged);
+            this.ArmorACBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorACBox_KeyPress);
             // 
             // ArmorTypeBox
             // 
@@ -304,11 +306,12 @@
             // 
             // ArmorWeightBox
             // 
-            this.ArmorWeightBox.Location = new System.Drawing.Point(234, 33);
+            this.ArmorWeightBox.Location = new System.Drawing.Point(234, 30);
             this.ArmorWeightBox.Name = "ArmorWeightBox";
             this.ArmorWeightBox.Size = new System.Drawing.Size(71, 20);
             this.ArmorWeightBox.TabIndex = 3;
             this.ArmorWeightBox.TextChanged += new System.EventHandler(this.ArmorWeightBox_TextChanged);
+            this.ArmorWeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorWeightBox_KeyPress);
             // 
             // ArmorNameBox
             // 
@@ -325,11 +328,11 @@
             this.ArmorAmountBox.Size = new System.Drawing.Size(71, 20);
             this.ArmorAmountBox.TabIndex = 1;
             this.ArmorAmountBox.TextChanged += new System.EventHandler(this.ArmorAmountBox_TextChanged);
+            this.ArmorAmountBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ArmorAmountBox_KeyDown);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.WeaponEquippedCheck);
-            this.groupBox3.Controls.Add(this.WeaponProficencyCheck);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.label18);
@@ -363,24 +366,13 @@
             // WeaponEquippedCheck
             // 
             this.WeaponEquippedCheck.AutoSize = true;
-            this.WeaponEquippedCheck.Location = new System.Drawing.Point(234, 129);
+            this.WeaponEquippedCheck.Location = new System.Drawing.Point(228, 84);
             this.WeaponEquippedCheck.Name = "WeaponEquippedCheck";
-            this.WeaponEquippedCheck.Size = new System.Drawing.Size(94, 17);
+            this.WeaponEquippedCheck.Size = new System.Drawing.Size(82, 17);
             this.WeaponEquippedCheck.TabIndex = 32;
-            this.WeaponEquippedCheck.Text = "Item Equipped";
+            this.WeaponEquippedCheck.Text = "Equip Item?";
             this.WeaponEquippedCheck.UseVisualStyleBackColor = true;
             this.WeaponEquippedCheck.CheckedChanged += new System.EventHandler(this.WeaponEquippedCheck_CheckedChanged);
-            // 
-            // WeaponProficencyCheck
-            // 
-            this.WeaponProficencyCheck.AutoSize = true;
-            this.WeaponProficencyCheck.Location = new System.Drawing.Point(234, 84);
-            this.WeaponProficencyCheck.Name = "WeaponProficencyCheck";
-            this.WeaponProficencyCheck.Size = new System.Drawing.Size(76, 17);
-            this.WeaponProficencyCheck.TabIndex = 31;
-            this.WeaponProficencyCheck.Text = "Proficency";
-            this.WeaponProficencyCheck.UseVisualStyleBackColor = true;
-            this.WeaponProficencyCheck.CheckedChanged += new System.EventHandler(this.WeaponProficencyCheck_CheckedChanged);
             // 
             // label20
             // 
@@ -583,6 +575,7 @@
             this.WeaponAmountBox.Size = new System.Drawing.Size(71, 20);
             this.WeaponAmountBox.TabIndex = 5;
             this.WeaponAmountBox.TextChanged += new System.EventHandler(this.WeaponAmountBox_TextChanged);
+            this.WeaponAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponAmountBox_KeyPress);
             // 
             // WeaponWeightBox
             // 
@@ -591,6 +584,7 @@
             this.WeaponWeightBox.Size = new System.Drawing.Size(71, 20);
             this.WeaponWeightBox.TabIndex = 4;
             this.WeaponWeightBox.TextChanged += new System.EventHandler(this.WeaponWeightBox_TextChanged);
+            this.WeaponWeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponWeightBox_KeyPress);
             // 
             // WeaponTypeBox
             // 
@@ -679,7 +673,6 @@
         private System.Windows.Forms.TextBox WeaponTypeBox;
         private System.Windows.Forms.RadioButton WeaponCharismaStatRadioButton;
         private System.Windows.Forms.CheckBox WeaponEquippedCheck;
-        private System.Windows.Forms.CheckBox WeaponProficencyCheck;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label18;
