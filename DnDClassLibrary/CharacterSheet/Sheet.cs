@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnDClassLibrary;
 
+
 namespace CharacterSheet
 {
     public partial class Sheet : Form
@@ -83,7 +84,8 @@ namespace CharacterSheet
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
+            myDataBase.RunInvList();
         }
 
         private void EditInventoryButton_Click(object sender, EventArgs e)
@@ -112,11 +114,12 @@ namespace CharacterSheet
                         break;
                     case 2:
                         Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
+                        InvList.Text += armor.ItemName + " " + armor.AmountHeld + " " + armor.WeightPerItem + " " + armor.Description + " " + armor.ItemType + " " + armor.ACFromArmor + Environment.NewLine;
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
+                        InvList.Text += weapon.ItemName + " " + weapon.AmountHeld + " " + weapon.WeightPerItem + " " + weapon.Description + " " + weapon.DamageType + " " + weapon.Damage + " " + weapon.Range + " " + weapon.ItemType + Environment.NewLine;
                         break;
                 }
 
