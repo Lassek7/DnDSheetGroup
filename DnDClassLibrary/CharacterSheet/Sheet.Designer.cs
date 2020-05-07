@@ -76,7 +76,6 @@
             this.AthleticsLabel = new System.Windows.Forms.Label();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.CharismaSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
-            this.StrengthSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.IntelligenceSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.WisdomSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
             this.ConstitutionSaveProficiencyToggle = new System.Windows.Forms.RadioButton();
@@ -155,6 +154,7 @@
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.PassivePerceptionDisplay = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.UpdateInvButton = new System.Windows.Forms.Button();
             this.EditInventoryButton = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.InvList = new System.Windows.Forms.TextBox();
@@ -162,7 +162,7 @@
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
-            this.UpdateInvButton = new System.Windows.Forms.Button();
+            this.StrengthSaveProficiencyToggle = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -702,8 +702,8 @@
             // groupBox19
             // 
             this.groupBox19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox19.Controls.Add(this.CharismaSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.StrengthSaveProficiencyToggle);
+            this.groupBox19.Controls.Add(this.CharismaSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.IntelligenceSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.WisdomSaveProficiencyToggle);
             this.groupBox19.Controls.Add(this.ConstitutionSaveProficiencyToggle);
@@ -729,16 +729,6 @@
             this.CharismaSaveProficiencyToggle.TabStop = true;
             this.CharismaSaveProficiencyToggle.Text = "Charisma Save";
             this.CharismaSaveProficiencyToggle.UseVisualStyleBackColor = true;
-            // 
-            // StrengthSaveProficiencyToggle
-            // 
-            this.StrengthSaveProficiencyToggle.Location = new System.Drawing.Point(21, 15);
-            this.StrengthSaveProficiencyToggle.Name = "StrengthSaveProficiencyToggle";
-            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(93, 20);
-            this.StrengthSaveProficiencyToggle.TabIndex = 53;
-            this.StrengthSaveProficiencyToggle.TabStop = true;
-            this.StrengthSaveProficiencyToggle.Text = "Strength Save";
-            this.StrengthSaveProficiencyToggle.UseVisualStyleBackColor = true;
             // 
             // IntelligenceSaveProficiencyToggle
             // 
@@ -1536,6 +1526,16 @@
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "groupBox36";
             // 
+            // UpdateInvButton
+            // 
+            this.UpdateInvButton.Location = new System.Drawing.Point(143, 134);
+            this.UpdateInvButton.Name = "UpdateInvButton";
+            this.UpdateInvButton.Size = new System.Drawing.Size(77, 60);
+            this.UpdateInvButton.TabIndex = 71;
+            this.UpdateInvButton.Text = "Update";
+            this.UpdateInvButton.UseVisualStyleBackColor = true;
+            this.UpdateInvButton.Click += new System.EventHandler(this.UpdateInvButton_Click);
+            // 
             // EditInventoryButton
             // 
             this.EditInventoryButton.Location = new System.Drawing.Point(6, 128);
@@ -1602,15 +1602,15 @@
             this.SaveCharacterButton.UseVisualStyleBackColor = true;
             this.SaveCharacterButton.Click += new System.EventHandler(this.SaveCharacterButton_Click);
             // 
-            // UpdateInvButton
+            // StrengthSaveProficiencyToggle
             // 
-            this.UpdateInvButton.Location = new System.Drawing.Point(143, 134);
-            this.UpdateInvButton.Name = "UpdateInvButton";
-            this.UpdateInvButton.Size = new System.Drawing.Size(77, 60);
-            this.UpdateInvButton.TabIndex = 71;
-            this.UpdateInvButton.Text = "Update";
-            this.UpdateInvButton.UseVisualStyleBackColor = true;
-            this.UpdateInvButton.Click += new System.EventHandler(this.UpdateInvButton_Click);
+            this.StrengthSaveProficiencyToggle.AutoSize = true;
+            this.StrengthSaveProficiencyToggle.Location = new System.Drawing.Point(21, 17);
+            this.StrengthSaveProficiencyToggle.Name = "StrengthSaveProficiencyToggle";
+            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(94, 17);
+            this.StrengthSaveProficiencyToggle.TabIndex = 55;
+            this.StrengthSaveProficiencyToggle.Text = "Strength Save";
+            this.StrengthSaveProficiencyToggle.UseVisualStyleBackColor = true;
             // 
             // Sheet
             // 
@@ -1840,7 +1840,6 @@
         private System.Windows.Forms.RadioButton HistoryProficiencyToggle;
         private System.Windows.Forms.RadioButton ArcanaProficiencyToggle;
         private System.Windows.Forms.RadioButton CharismaSaveProficiencyToggle;
-        private System.Windows.Forms.RadioButton StrengthSaveProficiencyToggle;
         private System.Windows.Forms.RadioButton IntelligenceSaveProficiencyToggle;
         private System.Windows.Forms.RadioButton WisdomSaveProficiencyToggle;
         private System.Windows.Forms.RadioButton ConstitutionSaveProficiencyToggle;
@@ -1853,5 +1852,6 @@
         private System.Windows.Forms.Button EditInventoryButton;
         private System.Windows.Forms.TextBox InvList;
         private System.Windows.Forms.Button UpdateInvButton;
+        private System.Windows.Forms.CheckBox StrengthSaveProficiencyToggle;
     }
 }

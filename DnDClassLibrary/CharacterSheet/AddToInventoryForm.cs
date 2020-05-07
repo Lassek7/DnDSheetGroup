@@ -61,11 +61,11 @@ namespace CharacterSheet
         {
             myItem.ItemID = 1;
             InventoryList.Add(myItem);
-            //myArmor.ItemID = 2;
-            //InventoryList.Add(myArmor);
-            //myWeapon.ItemID = 3;
-            //InventoryList.Add(myWeapon);
-            //this.Close();
+            myArmor.ItemID = 2;
+            InventoryList.Add(myArmor);
+            myWeapon.ItemID = 3;
+            InventoryList.Add(myWeapon);
+            this.Close();
         }
         #endregion
 

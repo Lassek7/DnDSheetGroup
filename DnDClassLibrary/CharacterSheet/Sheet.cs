@@ -20,7 +20,7 @@ namespace CharacterSheet
 
 
 
-        public Sheet(Character charac, CharacterAttributes Attri) 
+        public Sheet(Character charac, CharacterAttributes Attri)
         {
             myCharacter = charac;
             myAttributes = Attri;
@@ -31,7 +31,7 @@ namespace CharacterSheet
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
         {
         }
-        
+
         private void Sheet_Load_1(object sender, EventArgs e)
         {
             LoadCharacterInfo();
@@ -43,7 +43,7 @@ namespace CharacterSheet
         {
 
         }
-      
+
         void LoadCharacterInfo()
         {
             RaceLabel.Text = myCharacter.race;
@@ -59,7 +59,7 @@ namespace CharacterSheet
             TraitsDisplay.Text = myCharacter.traits;
             MaxHealthDisplay.Text = Convert.ToString(myCharacter.maxHealth);
 
-          
+
             ProficiencyBonusDisplay.Text = Convert.ToString(myCharacter.ProficiencyCalc(myCharacter.level));
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
         }
@@ -73,13 +73,7 @@ namespace CharacterSheet
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
 
-            if (StrengthSave.Checked == false)
-            {
-                mySavingthrow.proficiency[0] = true;
-            }
-            int kebab = Convert.ToInt32(StrengthSaveLabel.Text) + mySavingthrow.StrengthSave;
-            StrengthSaveLabel.Text = Convert.ToString(kebab);
-            mySavingthrow.proficiency[0] = true;
+
         }
         void LoadSkills()
         {
@@ -89,22 +83,13 @@ namespace CharacterSheet
 
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            //DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
-        }
-
-        private void StrengthSave_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void StrengthSaveLabel_Click(object sender, EventArgs e)
-        {
-
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter);
         }
 
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
             AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
-           // AddToInventoryForm addToInventory = new AddToInventoryForm();
+            // AddToInventoryForm addToInventory = new AddToInventoryForm();
             addToInventory.Show();
         }
 
@@ -114,91 +99,7 @@ namespace CharacterSheet
         }
         void RunInvList()
         {
-           InvList.Clear();
-
-            foreach (var Item in InventoryList)
-            {
-
-                int ID = Item.ItemID;
-                switch (ID)
-                {
-                    case 1:
-                        InvList.Text += Item.ItemName + " " + Item.AmountHeld + " " + Item.WeightPerItem + " " + Item.ItemType + " " + Item.Description + Environment.NewLine;
-                        break;
-                    case 2:
-                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
-                        break;
-
-                    case 3:
-                        Weapon weapon = (Weapon)Item;
-                        break;
-                }
-
-            }
-        }
-
-        private void UpdateInvButton_Click(object sender, EventArgs e)
-        {
-            RunInvList();
-        }
-
-        private void EditInventoryButton_Click(object sender, EventArgs e)
-        {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
-           // AddToInventoryForm addToInventory = new AddToInventoryForm();
-            addToInventory.Show();
-        }
-
-        private void InvList_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        void RunInvList()
-        {
-           InvList.Clear();
-
-            foreach (var Item in InventoryList)
-            {
-
-                int ID = Item.ItemID;
-                switch (ID)
-                {
-                    case 1:
-                        InvList.Text += Item.ItemName + " " + Item.AmountHeld + " " + Item.WeightPerItem + " " + Item.ItemType + " " + Item.Description + Environment.NewLine;
-                        break;
-                    case 2:
-                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        InvList.Text += armor.ACFromArmor + Environment.NewLine;
-                        break;
-
-                    case 3:
-                        Weapon weapon = (Weapon)Item;
-                        break;
-                }
-
-            }
-        }
-
-        private void UpdateInvButton_Click(object sender, EventArgs e)
-        {
-            RunInvList();
-        }
-
-        private void EditInventoryButton_Click(object sender, EventArgs e)
-        {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
-           // AddToInventoryForm addToInventory = new AddToInventoryForm();
-            addToInventory.Show();
-        }
-
-        private void InvList_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        void RunInvList()
-        {
-           InvList.Clear();
+            InvList.Clear();
 
             foreach (var Item in InventoryList)
             {
