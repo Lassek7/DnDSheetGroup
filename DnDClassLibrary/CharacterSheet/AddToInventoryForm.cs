@@ -57,13 +57,23 @@ namespace CharacterSheet
 
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            myItem.ItemID = 1;
-            InventoryList.Add(myItem);
-            myArmor.ItemID = 2;
-            InventoryList.Add(myArmor);
-            myWeapon.ItemID = 3;
-            InventoryList.Add(myWeapon);
-            this.Close();
+            if(string.IsNullOrEmpty(myItem.ItemName) == false)
+            {
+                myItem.ItemID = 1;
+                InventoryList.Add(myItem);
+            }
+            if (string.IsNullOrEmpty(myArmor.ItemName) == false)
+            {
+                myArmor.ItemID = 2;
+                InventoryList.Add(myArmor);
+            }
+            if (string.IsNullOrEmpty(myWeapon.ItemName) == false)
+            {
+                myWeapon.ItemID = 3;
+                InventoryList.Add(myWeapon);
+            }
+            ClearTextBoxes(this.Controls);
+            //this.Close();
         }
         #endregion
 
@@ -248,6 +258,19 @@ namespace CharacterSheet
             }
             
         }
-
+        public void ClearTextBoxes(Control.ControlCollection EditInventory)
+        {
+            foreach (Control TextBox in EditInventory)
+            {
+                if (TextBox is TextBoxBase)
+                {
+                    TextBox.Text = String.Empty;
+                }
+                else
+                {
+                    ClearTextBoxes(TextBox.Controls);
+                }
+            }
+        }
     }
 }
