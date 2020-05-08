@@ -152,7 +152,7 @@ namespace CharacterSheet
             mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
             StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, AthleticsProficiencyToggle.Checked);
         }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void ArcanaProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[2] = ArcanaProficiencyToggle.Checked;
@@ -363,7 +363,7 @@ namespace CharacterSheet
             AcrobaticsProficiencyToggle.CheckStateChanged += AcrobaticsProficiencyToggle_CheckedChanged;
             SleightOfHandProficiencyToggle.CheckStateChanged += SleightOfHandProficiencyToggle_CheckedChanged;
             StealthProficiencyToggle.CheckStateChanged += StealthProficiencyToggle_CheckedChanged;
-            ArcanaProficiencyToggle.CheckStateChanged += checkBox1_CheckedChanged;
+            ArcanaProficiencyToggle.CheckStateChanged += ArcanaProficiencyToggle_CheckedChanged;
             HistoryProficiencyToggle.CheckStateChanged += HistoryProficiencyToggle_CheckedChanged;
             InvestigationProficiencyToggle.CheckStateChanged += InvestigationProficiencyToggle_CheckedChanged;
             NatureProficiencyToggle.CheckStateChanged += NatureProficiencyToggle_CheckedChanged;

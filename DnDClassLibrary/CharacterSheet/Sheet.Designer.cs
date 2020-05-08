@@ -1521,7 +1521,7 @@
             this.ArcanaProficiencyToggle.TabIndex = 105;
             this.ArcanaProficiencyToggle.Text = "Arcana";
             this.ArcanaProficiencyToggle.UseVisualStyleBackColor = true;
-            this.ArcanaProficiencyToggle.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.ArcanaProficiencyToggle.CheckedChanged += new System.EventHandler(this.ArcanaProficiencyToggle_CheckedChanged);
             // 
             // HistoryProficiencyToggle
             // 
