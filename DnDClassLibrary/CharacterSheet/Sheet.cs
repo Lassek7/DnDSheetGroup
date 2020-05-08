@@ -25,12 +25,8 @@ namespace CharacterSheet
             myAttributes = Attri;
             InitializeComponent();
         }
-        public Sheet(List<Item> InventoryList)
+        public Sheet(List<Item> LISTEN)
         {
-            myInventoryList = InventoryList;
-            
-            InitializeComponent();
-            RunInvList();
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -48,7 +44,7 @@ namespace CharacterSheet
         {
             DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
             myDataBase.SaveDataToFile();
-           
+
         }
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
@@ -68,7 +64,7 @@ namespace CharacterSheet
         private void UpdateInvButton_Click(object sender, EventArgs e)
         {
             RunInvList();
-            
+
         }
         #endregion
         #region SAVINGTHROWPROFICIENCYTOGGLES
@@ -111,14 +107,14 @@ namespace CharacterSheet
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[5] = CharismaSaveProficiencyToggle.Checked;
-            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);   
+            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);
         }
         #endregion
         #region CHECKCHANGED
         private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
-            
+
             AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
             AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
             SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
@@ -136,7 +132,7 @@ namespace CharacterSheet
             DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
             IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
             PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
-            PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);       //Stavefejl i ProficiencyToggle
+            PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
         }
         #endregion
         #region SKILLPROFICIENCYTOGGLE
@@ -167,7 +163,103 @@ namespace CharacterSheet
             mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
             StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, AthleticsProficiencyToggle.Checked);
         }
+        private void ArcanaProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[2] = ArcanaProficiencyToggle.Checked;
+            ArcanaLabel.Text = CheckProficiencyToggle(mySkill.Arcana, ArcanaProficiencyToggle.Checked);
+        }
 
+        private void HistoryProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[5] = HistoryProficiencyToggle.Checked;
+            HistoryLabel.Text = CheckProficiencyToggle(mySkill.History, HistoryProficiencyToggle.Checked);
+        }
+
+        private void NatureProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[10] = NatureProficiencyToggle.Checked;
+            NatureLabel.Text = CheckProficiencyToggle(mySkill.Nature, NatureProficiencyToggle.Checked);
+        }
+
+        private void InvestigationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[8] = InvestigationProficiencyToggle.Checked;
+            InvestigationLabel.Text = CheckProficiencyToggle(mySkill.Investigation, InvestigationProficiencyToggle.Checked);
+        }
+
+        private void ReligionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[14] = ReligionProficiencyToggle.Checked;
+            ReligionLabel.Text = CheckProficiencyToggle(mySkill.Religion, ReligionProficiencyToggle.Checked);
+        }
+
+        private void AnimalHandlingProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[1] = AnimalHandlingProficiencyToggle.Checked;
+            AnimalHandlingLabel.Text = CheckProficiencyToggle(mySkill.AnimalHandling, AnimalHandlingProficiencyToggle.Checked);
+        }
+
+        private void InsightProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[6] = InsightProficiencyToggle.Checked;
+            InsightLabel.Text = CheckProficiencyToggle(mySkill.Insight, InsightProficiencyToggle.Checked);
+        }
+
+        private void MedicineProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[9] = MedicineProficiencyToggle.Checked;
+            MedicineLabel.Text = CheckProficiencyToggle(mySkill.Medicine, MedicineProficiencyToggle.Checked);
+        }
+
+        private void PerceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[11] = PerceptionProficiencyToggle.Checked;
+            PerceptionLabel.Text = CheckProficiencyToggle(mySkill.Perception, PerceptionProficiencyToggle.Checked);
+        }
+
+        private void SurvivalProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[17] = SurvivalProficiencyToggle.Checked;
+            SurvivalLabel.Text = CheckProficiencyToggle(mySkill.Survival, SurvivalProficiencyToggle.Checked);
+        }
+
+        private void DeceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[4] = DeceptionProficiencyToggle.Checked;
+            DeceptionLabel.Text = CheckProficiencyToggle(mySkill.Deception, DeceptionProficiencyToggle.Checked);
+        }
+
+        private void IntimidationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[7] = IntimidationProficiencyToggle.Checked;
+            IntimidationLabel.Text = CheckProficiencyToggle(mySkill.Intimidation, IntimidationProficiencyToggle.Checked);
+        }
+
+        private void PerformanceProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[12] = PerformanceProficiencyToggle.Checked;
+            PerformanceLabel.Text = CheckProficiencyToggle(mySkill.Performance, PerformanceProficiencyToggle.Checked);
+        }
+
+        private void PersuasionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            mySkill.proficiency[13] = PersuasionProficiencyToggle.Checked;
+            PersuasionLabel.Text = CheckProficiencyToggle(mySkill.Persuasion, PersuasionProficiencyToggle.Checked);
+        }
         #endregion
         #region METHODS
         string CheckJackOfAllTradesToggle(int HalfBonus, bool ProficiencyToggle, bool JackToggle, int OldValue, string CurrentValue)
@@ -203,7 +295,7 @@ namespace CharacterSheet
             }
         }
 
-        void RunInvList()
+        public void RunInvList()
         {
             listBox1.Items.Clear();
             foreach (var Item in myInventoryList)
@@ -216,12 +308,12 @@ namespace CharacterSheet
                         break;
                     case 2:
                         Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        listBox1.Items.Add(armor.ItemID + " " + armor.ItemName);
+                        listBox1.Items.Add(Item);
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        listBox1.Items.Add(weapon.ItemID + " " + weapon.ItemName);
+                        listBox1.Items.Add(Item);
                         break;
                 }
             }
@@ -262,12 +354,40 @@ namespace CharacterSheet
             AcrobaticsLabel.Text = Convert.ToString(mySkill.Acrobatics);
             SleightOfHandLabel.Text = Convert.ToString(mySkill.SleightOfHand);
             StealthLabel.Text = Convert.ToString(mySkill.Stealth);
+            ArcanaLabel.Text = Convert.ToString(mySkill.Arcana);
+            HistoryLabel.Text = Convert.ToString(mySkill.History);
+            InvestigationLabel.Text = Convert.ToString(mySkill.Investigation);
+            NatureLabel.Text = Convert.ToString(mySkill.Nature);
+            ReligionLabel.Text = Convert.ToString(mySkill.Religion);
+            AnimalHandlingLabel.Text = Convert.ToString(mySkill.AnimalHandling);
+            InsightLabel.Text = Convert.ToString(mySkill.Insight);
+            MedicineLabel.Text = Convert.ToString(mySkill.Medicine);
+            PerceptionLabel.Text = Convert.ToString(mySkill.Perception);
+            SurvivalLabel.Text = Convert.ToString(mySkill.Survival);
+            DeceptionLabel.Text = Convert.ToString(mySkill.Deception);
+            IntimidationLabel.Text = Convert.ToString(mySkill.Intimidation);
+            PerformanceLabel.Text = Convert.ToString(mySkill.Performance);
+            PersuasionLabel.Text = Convert.ToString(mySkill.Persuasion);
 
             JackOfAllTradesCheck.CheckStateChanged += JackOfAllTradesCheck_CheckedChanged;
             AthleticsProficiencyToggle.CheckStateChanged += AthleticsProficiencyToggle_CheckedChanged;
             AcrobaticsProficiencyToggle.CheckStateChanged += AcrobaticsProficiencyToggle_CheckedChanged;
             SleightOfHandProficiencyToggle.CheckStateChanged += SleightOfHandProficiencyToggle_CheckedChanged;
             StealthProficiencyToggle.CheckStateChanged += StealthProficiencyToggle_CheckedChanged;
+            ArcanaProficiencyToggle.CheckStateChanged += ArcanaProficiencyToggle_CheckedChanged;
+            HistoryProficiencyToggle.CheckStateChanged += HistoryProficiencyToggle_CheckedChanged;
+            InvestigationProficiencyToggle.CheckStateChanged += InvestigationProficiencyToggle_CheckedChanged;
+            NatureProficiencyToggle.CheckStateChanged += NatureProficiencyToggle_CheckedChanged;
+            ReligionProficiencyToggle.CheckStateChanged += ReligionProficiencyToggle_CheckedChanged;
+            AnimalHandlingProficiencyToggle.CheckStateChanged += AnimalHandlingProficiencyToggle_CheckedChanged;
+            InsightProficiencyToggle.CheckStateChanged += InsightProficiencyToggle_CheckedChanged;
+            MedicineProficiencyToggle.CheckStateChanged += MedicineProficiencyToggle_CheckedChanged;
+            PerceptionProficiencyToggle.CheckStateChanged += PerceptionProficiencyToggle_CheckedChanged;
+            SurvivalProficiencyToggle.CheckStateChanged += SurvivalProficiencyToggle_CheckedChanged;
+            DeceptionProficiencyToggle.CheckStateChanged += DeceptionProficiencyToggle_CheckedChanged;
+            IntimidationProficiencyToggle.CheckStateChanged += IntimidationProficiencyToggle_CheckedChanged;
+            PerformanceProficiencyToggle.CheckStateChanged += PerformanceProficiencyToggle_CheckedChanged;
+            PersuasionProficiencyToggle.CheckStateChanged += PersuasionProficiencyToggle_CheckedChanged;
 
         }
 
@@ -292,5 +412,6 @@ namespace CharacterSheet
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
         }
         #endregion
+
     }
 }
