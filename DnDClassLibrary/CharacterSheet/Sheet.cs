@@ -17,7 +17,7 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
-        List<Item> InventoryList = new List<Item>();
+        List<Item> myInventoryList = new List<Item>();
 
         public Sheet(Character charac, CharacterAttributes Attri)
         {
@@ -25,8 +25,10 @@ namespace CharacterSheet
             myAttributes = Attri;
             InitializeComponent();
         }
-        public Sheet(List<Item> LISTEN)
+        public Sheet(List<Item> InventoryList)
         {
+            myInventoryList = InventoryList;
+            InitializeComponent();
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -42,17 +44,17 @@ namespace CharacterSheet
         #region CLICKEVENTS
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
             myDataBase.SaveDataToFile();
            
         }
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
+            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList);
             addToInventory.Show();
             if (listBox.SelectedIndex > 0 && listBox.SelectedIndex < listBox.Items.Count) // skal have sin egen knap
             {
-                InventoryList.RemoveAt(listBox.SelectedIndex);
+                myInventoryList.RemoveAt(listBox.SelectedIndex);
                 listBox.Items.RemoveAt(listBox.SelectedIndex);
             }
             else
@@ -298,7 +300,7 @@ namespace CharacterSheet
         public void RunInvList()
         {
             listBox.Items.Clear();
-            foreach (var Item in InventoryList)
+            foreach (var Item in myInventoryList)
             {
                 int ID = Item.ItemID;
                 switch (ID)
