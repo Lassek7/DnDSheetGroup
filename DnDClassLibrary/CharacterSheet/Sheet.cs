@@ -402,29 +402,5 @@ namespace CharacterSheet
         }
         #endregion
 
-
-        private void ArcanaLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NatureLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void InvestigationLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void HistoryLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void ReligionLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

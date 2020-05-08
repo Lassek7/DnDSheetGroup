@@ -492,7 +492,6 @@
             this.ReligionLabel.Size = new System.Drawing.Size(10, 12);
             this.ReligionLabel.TabIndex = 68;
             this.ReligionLabel.Text = "0";
-            this.ReligionLabel.Click += new System.EventHandler(this.ReligionLabel_Click);
             // 
             // NatureLabel
             // 
@@ -503,7 +502,6 @@
             this.NatureLabel.Size = new System.Drawing.Size(10, 12);
             this.NatureLabel.TabIndex = 66;
             this.NatureLabel.Text = "0";
-            this.NatureLabel.Click += new System.EventHandler(this.NatureLabel_Click);
             // 
             // InvestigationLabel
             // 
@@ -514,7 +512,6 @@
             this.InvestigationLabel.Size = new System.Drawing.Size(10, 12);
             this.InvestigationLabel.TabIndex = 64;
             this.InvestigationLabel.Text = "0";
-            this.InvestigationLabel.Click += new System.EventHandler(this.InvestigationLabel_Click);
             // 
             // HistoryLabel
             // 
@@ -525,7 +522,6 @@
             this.HistoryLabel.Size = new System.Drawing.Size(10, 12);
             this.HistoryLabel.TabIndex = 62;
             this.HistoryLabel.Text = "0";
-            this.HistoryLabel.Click += new System.EventHandler(this.HistoryLabel_Click);
             // 
             // SleightOfHandLabel
             // 
@@ -566,7 +562,6 @@
             this.ArcanaLabel.Size = new System.Drawing.Size(10, 12);
             this.ArcanaLabel.TabIndex = 54;
             this.ArcanaLabel.Text = "0";
-            this.ArcanaLabel.Click += new System.EventHandler(this.ArcanaLabel_Click);
             // 
             // InsightLabel
             // 
