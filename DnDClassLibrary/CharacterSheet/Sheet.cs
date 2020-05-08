@@ -415,5 +415,9 @@ namespace CharacterSheet
         }
         #endregion
 
+        private void groupBox279_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
