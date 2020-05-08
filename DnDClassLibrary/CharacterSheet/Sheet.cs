@@ -29,6 +29,7 @@ namespace CharacterSheet
         {
             myInventoryList = InventoryList;
             InitializeComponent();
+
         }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
@@ -45,6 +46,7 @@ namespace CharacterSheet
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
             DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
+            myDataBase.SaveCharacterToFile();
             myDataBase.SaveDataToFile();
            
         }
