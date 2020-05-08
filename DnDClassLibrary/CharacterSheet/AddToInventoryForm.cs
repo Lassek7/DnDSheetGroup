@@ -16,14 +16,13 @@ namespace CharacterSheet
         Item myItem = new Item();
         Armor myArmor = new Armor();
         Weapon myWeapon = new Weapon();
-        List<Item> InventoryList = new List<Item>();
+        List<Item> myInventoryList = new List<Item>();
 
         public AddToInventoryForm(List<Item> MyList)
         {
-            InventoryList = MyList;
-
+            myInventoryList = MyList;
             InitializeComponent();
-
+            RunInvList();
         }
         #region ADD ITEM
         private void ItemNameBox_TextChanged(object sender, EventArgs e)
@@ -55,8 +54,10 @@ namespace CharacterSheet
             myItem.Description = NewValue(OutOfReach, ItemDescriptionRichBox.Text);
         }
 
-      
+
         #endregion
+
+        #region ADDARMOR
 
         private void ArmorNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -98,7 +99,9 @@ namespace CharacterSheet
         {
 
         }
+        #endregion
 
+        #region ADDWEAPON
         private void WeaponNameBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponNameBox.Text);
@@ -147,11 +150,6 @@ namespace CharacterSheet
             myWeapon.ItemType = NewValue(OutOfReach, WeaponTypeBox.Text);
         }
 
-        private void WeaponProficencyCheck_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void WeaponEquippedCheck_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -186,7 +184,8 @@ namespace CharacterSheet
         {
             myWeapon.AttributeAssociation = "Charisma";
         }
-
+        #endregion
+        #region KEYPRESS
         private void ItemAmountBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
@@ -220,24 +219,39 @@ namespace CharacterSheet
         {
             OnlyTakeNumbers(e);
         }
+        #endregion
+        #region METHODS
         private void AddItemButton_Click(object sender, EventArgs e)
         {
+           
+            AddToInvListBox.Items.Clear();
             if (string.IsNullOrEmpty(myItem.ItemName) == false)
             {
-                myItem.ItemID = 1;
-                InventoryList.Add(myItem);
+                Item NewItem = new Item();
+                NewItem.ItemName = myItem.ItemName;
+                NewItem.ItemID = 1;
+                myInventoryList.Add(NewItem);
+
             }
             if (string.IsNullOrEmpty(myArmor.ItemName) == false)
             {
-                myArmor.ItemID = 2;
-                InventoryList.Add(myArmor);
+                Armor NewArmor = new Armor();
+                NewArmor.ItemName = myArmor.ItemName;
+                NewArmor.ItemID = 2;
+                myInventoryList.Add(NewArmor);
+
             }
             if (string.IsNullOrEmpty(myWeapon.ItemName) == false)
             {
-                myWeapon.ItemID = 3;
-                InventoryList.Add(myWeapon);
+                Weapon NewWeapon = new Weapon();
+                NewWeapon.ItemName = myWeapon.ItemName;
+                NewWeapon.ItemID = 3;
+                myInventoryList.Add(NewWeapon);
+
             }
             ClearTextBoxes(this.Controls);
+            RunInvList();
+            
         }
         void OnlyTakeNumbers(KeyPressEventArgs e)
         {
@@ -272,5 +286,32 @@ namespace CharacterSheet
                 }
             }
         }
+
+
+        public void RunInvList()
+        {
+           // AddToInvListBox.Items.Clear();
+            foreach (var Item in myInventoryList)
+            {
+                int ID = Item.ItemID;
+                switch (ID)
+                {
+                    case 1:
+                        AddToInvListBox.Items.Add(Item.ItemName);
+                        break;
+                    case 2:
+                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
+                        AddToInvListBox.Items.Add(armor.ItemName);
+                        break;
+
+                    case 3:
+                        Weapon weapon = (Weapon)Item;
+                        AddToInvListBox.Items.Add(weapon.ItemName);
+                        break;
+                }
+            }
+
+        }
+        #endregion
     }
 }

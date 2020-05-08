@@ -79,6 +79,7 @@
             this.WeaponWeightBox = new System.Windows.Forms.TextBox();
             this.WeaponTypeBox = new System.Windows.Forms.TextBox();
             this.AddItemButton = new System.Windows.Forms.Button();
+            this.AddToInvListBox = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -604,11 +605,20 @@
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
+            // AddToInvListBox
+            // 
+            this.AddToInvListBox.FormattingEnabled = true;
+            this.AddToInvListBox.Location = new System.Drawing.Point(588, 30);
+            this.AddToInvListBox.Name = "AddToInvListBox";
+            this.AddToInvListBox.Size = new System.Drawing.Size(200, 329);
+            this.AddToInvListBox.TabIndex = 3;
+            // 
             // AddToInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.AddToInvListBox);
             this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -678,5 +688,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button AddItemButton;
+        private System.Windows.Forms.ListBox AddToInvListBox;
     }
 }
