@@ -17,19 +17,19 @@ namespace DnDClassLibrary
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
         public List<Item> InventoryList = new List<Item>();
-        
+
         public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList)
         {
             myAttributes = atri;
             myCharacter = Charac;
-            InventoryList = MyList; 
+            InventoryList = MyList;
 
         }
         public DnDDatabaseManagement()
         {
 
         }
-        
+
 
 
         public void CharatorCreation()
@@ -50,7 +50,7 @@ namespace DnDClassLibrary
                     answer = Console.ReadLine();
                     if (answer.ToUpper() == "YES")
                     {
-                        
+
                         Console.WriteLine("Added Items to Backup File");
                         RunApp = true;
                     }
@@ -86,17 +86,106 @@ namespace DnDClassLibrary
             return path;
         }
         // kombinere mappens placering og navnet på backup filen til en string ex.(C:\Users\rallo\Backup Character\PlayerName.json)
-        public string CreateFolder()
+        public string CreateFolderAtt()
         {
             string foldername = UserFilePath();
             string pathString = System.IO.Path.Combine(foldername, "Backup Character");
-            string fileName = myCharacter.playerName + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
+            string fileName = myCharacter.characterName + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
 
             System.IO.Directory.CreateDirectory(pathString); // laver mappen Backup Character 
             string createfile = System.IO.Path.Combine(pathString, fileName);
             return createfile;
         }
-        
+        public string CreateFolderItem()
+        {
+            string foldername = UserFilePath();
+            string pathString = System.IO.Path.Combine(foldername, "Backup Character");
+            string fileName = myCharacter.characterName + "Inventory" + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
+
+            System.IO.Directory.CreateDirectory(pathString); // laver mappen Backup Character 
+            string createfile = System.IO.Path.Combine(pathString, fileName);
+            return createfile;
+        }
+        public void SaveCharacterToFile()
+        {
+            DataSet dataset = new DataSet("dataSet");
+            dataset.Namespace = "NetFrameWork";
+            DataTable table = new DataTable();
+            DataColumn idColumn = new DataColumn("id", typeof(int));
+            idColumn.AutoIncrement = true;
+            DataColumn CN = new DataColumn("Character Name");
+            DataColumn PN = new DataColumn("Player Name");
+            DataColumn Race = new DataColumn("Race");
+            DataColumn Class = new DataColumn("Class");
+            DataColumn AM = new DataColumn("Alignment");
+            DataColumn BG = new DataColumn("Background");
+            DataColumn MH = new DataColumn("MaxHealth");
+            DataColumn Level = new DataColumn("Level");
+            DataColumn PT = new DataColumn("Personal Traits");
+            DataColumn Bonds = new DataColumn("Bonds");
+            DataColumn Ideals = new DataColumn("Ideals");
+            DataColumn Flaws = new DataColumn("Flaws");
+            DataColumn STR = new DataColumn("Strength");
+            DataColumn DEX = new DataColumn("Dexterity");
+            DataColumn CON = new DataColumn("Consititution");
+            DataColumn INT = new DataColumn("Intelligence");
+            DataColumn WIS = new DataColumn("Wisdom");
+            DataColumn CHA = new DataColumn("Charisma");
+            table.Columns.Add(CN);
+            table.Columns.Add(PN);
+            table.Columns.Add(Race);
+            table.Columns.Add(Class);
+            table.Columns.Add(AM);
+            table.Columns.Add(BG);
+            table.Columns.Add(MH);
+            table.Columns.Add(Level);
+            table.Columns.Add(PT);
+            table.Columns.Add(Bonds);
+            table.Columns.Add(Ideals);
+            table.Columns.Add(Flaws);
+            table.Columns.Add(STR);
+            table.Columns.Add(DEX);
+            table.Columns.Add(CON);
+            table.Columns.Add(INT);
+            table.Columns.Add(WIS);
+            table.Columns.Add(CHA);
+            dataset.Tables.Add(table);
+            using (FileStream fileStream = new FileStream(CreateFolderAtt(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+            {
+                using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
+                {
+
+                    // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
+                    DataRow newRow = table.NewRow();
+
+                    newRow[CN] = myCharacter.characterName;
+                    newRow[PN] = myCharacter.playerName;
+                    newRow[Race] = myCharacter.race;
+                    newRow[Class] = myCharacter.characterClass;
+                    newRow[AM] = myCharacter.alignment;
+                    newRow[BG] = myCharacter.background;
+                    newRow[MH] = myCharacter.maxHealth;
+                    newRow[Level] = myCharacter.level;
+                    newRow[PT] = myCharacter.traits;
+                    newRow[Bonds] = myCharacter.bonds;
+                    newRow[Ideals] = myCharacter.ideals;
+                    newRow[Flaws] = myCharacter.flaws;
+                    newRow[STR] = myAttributes.Attributes[0];
+                    newRow[DEX] = myAttributes.Attributes[1];
+                    newRow[CON] = myAttributes.Attributes[2];
+                    newRow[INT] = myAttributes.Attributes[3];
+                    newRow[WIS] = myAttributes.Attributes[4];
+                    newRow[CHA] = myAttributes.Attributes[5];
+                    table.Rows.Add(newRow);
+
+                    dataset.AcceptChanges();
+                    JsonSerializer serializer = new JsonSerializer();
+                    
+                    serializer.Serialize(sw, dataset);
+                    table = new DataTable();
+                }
+            }
+        }
         public void SaveDataToFile()
         {
 
@@ -126,7 +215,7 @@ namespace DnDClassLibrary
                         table.Columns.Add(D);
                         dataset.Tables.Add(table);
 
-                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
@@ -168,23 +257,23 @@ namespace DnDClassLibrary
                         table.Columns.Add(AD);
                         table.Columns.Add(AIE);
                         dataset.Tables.Add(table);
-                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
-            
-                                    DataRow newRow = table.NewRow();
-                                    Armor armor = (Armor)Item;
-                                
-                                    newRow[AIID] = armor.ItemID;
-                                    newRow[AIN] = armor.ItemName;
-                                    newRow[AIT] = armor.ItemType;
-                                    newRow[AFA] = armor.ACFromArmor;
-                                    newRow[AAH] = armor.AmountHeld;
-                                    newRow[AWPI] = armor.WeightPerItem;
-                                    newRow[AD] = armor.Description;
-                                    newRow[AIE] = armor.ItemEquipped;
-                                    table.Rows.Add(newRow);
+
+                                DataRow newRow = table.NewRow();
+                                Armor armor = (Armor)Item;
+
+                                newRow[AIID] = armor.ItemID;
+                                newRow[AIN] = armor.ItemName;
+                                newRow[AIT] = armor.ItemType;
+                                newRow[AFA] = armor.ACFromArmor;
+                                newRow[AAH] = armor.AmountHeld;
+                                newRow[AWPI] = armor.WeightPerItem;
+                                newRow[AD] = armor.Description;
+                                newRow[AIE] = armor.ItemEquipped;
+                                table.Rows.Add(newRow);
 
                                 dataset.AcceptChanges();
                                 JsonSerializer serializer = new JsonSerializer();
@@ -192,7 +281,7 @@ namespace DnDClassLibrary
                                 table = new DataTable();
                             }
                         }
-                        //InvList += armor.ItemName + " " + armor.AmountHeld + " " + armor.WeightPerItem + " " + armor.Description + " " + armor.ItemType + " " + armor.ACFromArmor + Environment.NewLine;
+                        
                         break;
 
                     case 3:
@@ -220,7 +309,7 @@ namespace DnDClassLibrary
                         table.Columns.Add(WIE);
                         dataset.Tables.Add(table);
 
-                        using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
@@ -246,7 +335,7 @@ namespace DnDClassLibrary
                                 table = new DataTable();
                             }
                         }
-                        
+
                         break;
                 }
 
@@ -262,16 +351,17 @@ namespace DnDClassLibrary
             idColumn.AutoIncrement = true;
             string test2 = File.ReadAllText(JsonData);
             dataset = JsonConvert.DeserializeObject<DataSet>(test2);
-            
-            for(int i = 1; i <= dataset.Tables.Count; i++) {
+
+            for (int i = 1; i <= dataset.Tables.Count; i++)
+            {
                 table = dataset.Tables["table" + i];
                 foreach (DataRow row in table.Rows)
-            {
-                    
+                {
+
                     ItemID = Convert.ToInt32(row["Item ID"]);
                     switch (ItemID)
                     {
-                        
+
                         case 1:
                             Item test = new Item();
                             test.ItemID = Convert.ToInt32(row["Item ID"]);
@@ -315,7 +405,7 @@ namespace DnDClassLibrary
                     }
                 }
             }
-        return InventoryList;
+            return InventoryList;
             // Setup for deserialize aka load filen til programmet igen
             //Inventory inv = new Inventory();
             //Item aItem = new Item();
