@@ -50,10 +50,10 @@ namespace CharacterSheet
         {
             AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
             addToInventory.Show();
-            if (listBox1.SelectedIndex > 0 && listBox1.SelectedIndex < listBox1.Items.Count) // skal have sin egen knap
+            if (listBox.SelectedIndex > 0 && listBox.SelectedIndex < listBox.Items.Count) // skal have sin egen knap
             {
-                InventoryList.RemoveAt(listBox1.SelectedIndex);
-                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                InventoryList.RemoveAt(listBox.SelectedIndex);
+                listBox.Items.RemoveAt(listBox.SelectedIndex);
             }
             else
             {
@@ -297,23 +297,23 @@ namespace CharacterSheet
 
         public void RunInvList()
         {
-            listBox1.Items.Clear();
+            listBox.Items.Clear();
             foreach (var Item in InventoryList)
             {
                 int ID = Item.ItemID;
                 switch (ID)
                 {
                     case 1:
-                        listBox1.Items.Add(Item.ItemID + " " + Item.ItemName);
+                        listBox.Items.Add(Item.ItemID + " " + Item.ItemName);
                         break;
                     case 2:
                         Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        listBox1.Items.Add(Item);
+                        listBox.Items.Add(Item);
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        listBox1.Items.Add(Item);
+                        listBox.Items.Add(Item);
                         break;
                 }
             }
