@@ -25,6 +25,9 @@ namespace CharacterSheet
             myAttributes = Attri;
             InitializeComponent();
         }
+        public Sheet(List<Item> LISTEN)
+        {
+        }
 
         private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
         {
@@ -40,20 +43,28 @@ namespace CharacterSheet
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
             DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
-            // myDataBase.SaveDataToFile();
+            myDataBase.SaveDataToFile();
            
         }
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
             AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
             addToInventory.Show();
+            if (listBox1.SelectedIndex > 0 && listBox1.SelectedIndex < listBox1.Items.Count) // skal have sin egen knap
+            {
+                InventoryList.RemoveAt(listBox1.SelectedIndex);
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+            }
+            else
+            {
+
+            }
         }
 
         private void UpdateInvButton_Click(object sender, EventArgs e)
         {
             RunInvList();
-            InventoryList.RemoveAt(listBox1.SelectedIndex);
-            listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+       
         }
         #endregion
         #region SAVINGTHROWPROFICIENCYTOGGLES
@@ -284,7 +295,7 @@ namespace CharacterSheet
             }
         }
 
-        void RunInvList()
+        public void RunInvList()
         {
             listBox1.Items.Clear();
             foreach (var Item in InventoryList)
