@@ -16,13 +16,17 @@ namespace DnDClassLibrary
         private string PlayerName { get; set; }
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
-        List<Item> InventoryList = new List<Item>();
+        public List<Item> InventoryList = new List<Item>();
         
         public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList)
         {
             myAttributes = atri;
             myCharacter = Charac;
             InventoryList = MyList; 
+
+        }
+        public DnDDatabaseManagement()
+        {
 
         }
         
@@ -46,7 +50,7 @@ namespace DnDClassLibrary
                     answer = Console.ReadLine();
                     if (answer.ToUpper() == "YES")
                     {
-                        DatabaseList();
+                        
                         Console.WriteLine("Added Items to Backup File");
                         RunApp = true;
                     }
@@ -148,6 +152,7 @@ namespace DnDClassLibrary
                     case 2:
                         // typecast objectet item over til armor classen
                         DataColumn AIID = new DataColumn("Item ID");
+                        DataColumn AIN = new DataColumn("Item Name");
                         DataColumn AIT = new DataColumn("Item Type");
                         DataColumn AFA = new DataColumn("AC From Armor");
                         DataColumn AAH = new DataColumn("Amount Held");
@@ -155,6 +160,7 @@ namespace DnDClassLibrary
                         DataColumn AD = new DataColumn("Description");
                         DataColumn AIE = new DataColumn("Item Equipped");
                         table.Columns.Add(AIID);
+                        table.Columns.Add(AIN);
                         table.Columns.Add(AIT);
                         table.Columns.Add(AFA);
                         table.Columns.Add(AAH);
@@ -169,8 +175,9 @@ namespace DnDClassLibrary
             
                                     DataRow newRow = table.NewRow();
                                     Armor armor = (Armor)Item;
-
+                                
                                     newRow[AIID] = armor.ItemID;
+                                    newRow[AIN] = armor.ItemName;
                                     newRow[AIT] = armor.ItemType;
                                     newRow[AFA] = armor.ACFromArmor;
                                     newRow[AAH] = armor.AmountHeld;
@@ -190,6 +197,7 @@ namespace DnDClassLibrary
 
                     case 3:
                         DataColumn WIID = new DataColumn("Item ID");
+                        DataColumn WIN = new DataColumn("Item Name");
                         DataColumn WIT = new DataColumn("Item Type");
                         DataColumn WAH = new DataColumn("Amount Held");
                         DataColumn WWPI = new DataColumn("Weight Per Item");
@@ -200,6 +208,7 @@ namespace DnDClassLibrary
                         DataColumn WDT = new DataColumn("Damage Type");
                         DataColumn WIE = new DataColumn("Item Equipped");
                         table.Columns.Add(WIID);
+                        table.Columns.Add(WIN);
                         table.Columns.Add(WIT);
                         table.Columns.Add(WAH);
                         table.Columns.Add(WWPI);
@@ -209,7 +218,7 @@ namespace DnDClassLibrary
                         table.Columns.Add(WDAM);
                         table.Columns.Add(WDT);
                         table.Columns.Add(WIE);
-                        
+                        dataset.Tables.Add(table);
 
                         using (FileStream fileStream = new FileStream(CreateFolder(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
@@ -219,6 +228,7 @@ namespace DnDClassLibrary
                                 DataRow newRow = table.NewRow();
 
                                 newRow[WIID] = weapon.ItemID;
+                                newRow[WIN] = weapon.ItemName;
                                 newRow[WIT] = weapon.ItemType;
                                 newRow[WAH] = weapon.AmountHeld;
                                 newRow[WWPI] = weapon.WeightPerItem;
@@ -228,6 +238,8 @@ namespace DnDClassLibrary
                                 newRow[WDAM] = weapon.Damage;
                                 newRow[WDT] = weapon.DamageType;
                                 newRow[WIE] = weapon.ItemEquipped;
+                                table.Rows.Add(newRow);
+
                                 dataset.AcceptChanges();
                                 JsonSerializer serializer = new JsonSerializer();
                                 serializer.Serialize(sw, dataset);
@@ -240,7 +252,7 @@ namespace DnDClassLibrary
 
             }
         }
-        public void DatabaseList() // 
+        public List<Item> DatabaseList(string JsonData) // 
         {
             int ItemID;
             DataSet dataset = new DataSet("dataSet");
@@ -248,32 +260,62 @@ namespace DnDClassLibrary
             DataTable table = new DataTable();
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
-            string JsonData = File.ReadAllText(CreateFolder());
-            dataset = JsonConvert.DeserializeObject<DataSet>(JsonData);
-            table = dataset.Tables["table1"];
-            foreach(var Item in InventoryList)
-            {
+            string test2 = File.ReadAllText(JsonData);
+            dataset = JsonConvert.DeserializeObject<DataSet>(test2);
+            
+            for(int i = 1; i <= dataset.Tables.Count; i++) {
+                table = dataset.Tables["table" + i];
                 foreach (DataRow row in table.Rows)
-                {
+            {
+                    
                     ItemID = Convert.ToInt32(row["Item ID"]);
                     switch (ItemID)
                     {
+                        
                         case 1:
-                            Item.ItemName = Convert.ToString(row["Item Name"]);
-                            Item.ItemType = Convert.ToString(row["Item Type"]);
-                            Item.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-                            Item.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-                            Item.Description = Convert.ToString(row["Description"]);
-                            InventoryList.Add(Item);
+                            Item test = new Item();
+                            test.ItemID = Convert.ToInt32(row["Item ID"]);
+                            test.ItemName = Convert.ToString(row["Item Name"]);
+                            test.ItemType = Convert.ToString(row["Item Type"]);
+                            test.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            test.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            test.Description = Convert.ToString(row["Description"]);
+                            InventoryList.Add(test);
+                            test = new Item();
                             break;
                         case 2:
+                            Armor armor = new Armor();
+
+                            armor.ItemID = Convert.ToInt32(row["Item ID"]);
+                            armor.ItemName = Convert.ToString(row["Item Name"]);
+                            armor.ItemType = Convert.ToString(row["Item Type"]);
+                            armor.ACFromArmor = Convert.ToInt32(row["AC From Armor"]);
+                            armor.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            armor.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            armor.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+                            InventoryList.Add(armor);
+
                             break;
                         case 3:
+                            Weapon weapon = new Weapon();
+
+                            weapon.ItemID = Convert.ToInt32(row["Item ID"]);
+                            weapon.ItemName = Convert.ToString(row["Item Name"]);
+                            weapon.ItemType = Convert.ToString(row["Item Type"]);
+                            weapon.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            weapon.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            weapon.Description = Convert.ToString(row["Description"]);
+                            weapon.AttributeAssociation = Convert.ToString(row["Attribute Association"]);
+                            weapon.Range = Convert.ToString(row["Range"]);
+                            weapon.Damage = Convert.ToString(row["Damage"]);
+                            weapon.DamageType = Convert.ToString(row["Damage Type"]);
+                            weapon.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+                            InventoryList.Add(weapon);
                             break;
                     }
-
                 }
             }
+        return InventoryList;
             // Setup for deserialize aka load filen til programmet igen
             //Inventory inv = new Inventory();
             //Item aItem = new Item();
