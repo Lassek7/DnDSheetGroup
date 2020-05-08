@@ -55,26 +55,7 @@ namespace CharacterSheet
             myItem.Description = NewValue(OutOfReach, ItemDescriptionRichBox.Text);
         }
 
-        private void AddItemButton_Click(object sender, EventArgs e)
-        {
-            if(string.IsNullOrEmpty(myItem.ItemName) == false)
-            {
-                myItem.ItemID = 1;
-                InventoryList.Add(myItem);
-            }
-            if (string.IsNullOrEmpty(myArmor.ItemName) == false)
-            {
-                myArmor.ItemID = 2;
-                InventoryList.Add(myArmor);
-            }
-            if (string.IsNullOrEmpty(myWeapon.ItemName) == false)
-            {
-                myWeapon.ItemID = 3;
-                InventoryList.Add(myWeapon);
-            }
-            ClearTextBoxes(this.Controls);
-            //this.Close();
-        }
+      
         #endregion
 
         private void ArmorNameBox_TextChanged(object sender, EventArgs e)
@@ -238,6 +219,25 @@ namespace CharacterSheet
         private void WeaponWeightBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
+        }
+        private void AddItemButton_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(myItem.ItemName) == false)
+            {
+                myItem.ItemID = 1;
+                InventoryList.Add(myItem);
+            }
+            if (string.IsNullOrEmpty(myArmor.ItemName) == false)
+            {
+                myArmor.ItemID = 2;
+                InventoryList.Add(myArmor);
+            }
+            if (string.IsNullOrEmpty(myWeapon.ItemName) == false)
+            {
+                myWeapon.ItemID = 3;
+                InventoryList.Add(myWeapon);
+            }
+            ClearTextBoxes(this.Controls);
         }
         void OnlyTakeNumbers(KeyPressEventArgs e)
         {

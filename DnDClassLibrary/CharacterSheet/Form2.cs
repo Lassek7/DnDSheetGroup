@@ -33,7 +33,6 @@ namespace CharacterSheet
             string test = @"C:\Users\rallo\Backup Character\test4.json";
 
             InventoryList = ShitV2.DatabaseList(test);
-            //MessageBox.Show(ShitV2.InventoryList[0].ItemName);
             
             Sheet LoadCharacter = new Sheet(InventoryList);
             
