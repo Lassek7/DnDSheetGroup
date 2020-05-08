@@ -80,6 +80,9 @@
             this.WeaponTypeBox = new System.Windows.Forms.TextBox();
             this.AddItemButton = new System.Windows.Forms.Button();
             this.AddToInvListBox = new System.Windows.Forms.ListBox();
+            this.RemoveFromListButton = new System.Windows.Forms.Button();
+            this.DecreaseByOneButton = new System.Windows.Forms.Button();
+            this.IncreaseByOneButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -597,11 +600,11 @@
             // 
             // AddItemButton
             // 
-            this.AddItemButton.Location = new System.Drawing.Point(682, 383);
+            this.AddItemButton.Location = new System.Drawing.Point(588, 365);
             this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(93, 49);
+            this.AddItemButton.Size = new System.Drawing.Size(86, 40);
             this.AddItemButton.TabIndex = 2;
-            this.AddItemButton.Text = "Add to Item";
+            this.AddItemButton.Text = "Add Items to List";
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
@@ -613,11 +616,44 @@
             this.AddToInvListBox.Size = new System.Drawing.Size(200, 329);
             this.AddToInvListBox.TabIndex = 3;
             // 
+            // RemoveFromListButton
+            // 
+            this.RemoveFromListButton.Location = new System.Drawing.Point(693, 365);
+            this.RemoveFromListButton.Name = "RemoveFromListButton";
+            this.RemoveFromListButton.Size = new System.Drawing.Size(86, 40);
+            this.RemoveFromListButton.TabIndex = 4;
+            this.RemoveFromListButton.Text = "Remove selected Item";
+            this.RemoveFromListButton.UseVisualStyleBackColor = true;
+            this.RemoveFromListButton.Click += new System.EventHandler(this.RemoveFromListButton_Click);
+            // 
+            // DecreaseByOneButton
+            // 
+            this.DecreaseByOneButton.Location = new System.Drawing.Point(693, 411);
+            this.DecreaseByOneButton.Name = "DecreaseByOneButton";
+            this.DecreaseByOneButton.Size = new System.Drawing.Size(39, 28);
+            this.DecreaseByOneButton.TabIndex = 5;
+            this.DecreaseByOneButton.Text = "-1";
+            this.DecreaseByOneButton.UseVisualStyleBackColor = true;
+            this.DecreaseByOneButton.Click += new System.EventHandler(this.DecreaseByOneButton_Click);
+            // 
+            // IncreaseByOneButton
+            // 
+            this.IncreaseByOneButton.Location = new System.Drawing.Point(738, 411);
+            this.IncreaseByOneButton.Name = "IncreaseByOneButton";
+            this.IncreaseByOneButton.Size = new System.Drawing.Size(41, 28);
+            this.IncreaseByOneButton.TabIndex = 6;
+            this.IncreaseByOneButton.Text = "+1";
+            this.IncreaseByOneButton.UseVisualStyleBackColor = true;
+            this.IncreaseByOneButton.Click += new System.EventHandler(this.IncreaseByOneButton_Click);
+            // 
             // AddToInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.IncreaseByOneButton);
+            this.Controls.Add(this.DecreaseByOneButton);
+            this.Controls.Add(this.RemoveFromListButton);
             this.Controls.Add(this.AddToInvListBox);
             this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.groupBox3);
@@ -689,5 +725,8 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button AddItemButton;
         private System.Windows.Forms.ListBox AddToInvListBox;
+        private System.Windows.Forms.Button RemoveFromListButton;
+        private System.Windows.Forms.Button DecreaseByOneButton;
+        private System.Windows.Forms.Button IncreaseByOneButton;
     }
 }
