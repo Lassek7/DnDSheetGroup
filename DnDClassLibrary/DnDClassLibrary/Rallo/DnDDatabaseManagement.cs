@@ -66,11 +66,7 @@ namespace DnDClassLibrary
              3. tilfører attribute i json filen 
              4. laver en validering som overwritter den gamle fil
              5. tilføre en autosave knap evt 
-             
-            Spørgsmål til Shagen
-            1. Hvordan kalder man en child igennem en list fra parent
-             
-             
+        
              */
         }
         #region INVENTORYLIST
@@ -97,7 +93,7 @@ namespace DnDClassLibrary
             return createfile;
         }
         
-        public void RunInvList()
+        public void SaveDataToFile()
         {
 
             DataSet dataset = new DataSet("dataSet");
@@ -112,11 +108,13 @@ namespace DnDClassLibrary
                 switch (ID)
                 {
                     case 1:
+                        DataColumn IID = new DataColumn("Item ID");
                         DataColumn IN = new DataColumn("Item Name");
                         DataColumn IT = new DataColumn("Item Type");
                         DataColumn AH = new DataColumn("Amount Held");
                         DataColumn WPI = new DataColumn("Weight Per Item");
                         DataColumn D = new DataColumn("Description");
+                        table.Columns.Add(IID);
                         table.Columns.Add(IN);
                         table.Columns.Add(IT);
                         table.Columns.Add(AH);
@@ -132,6 +130,7 @@ namespace DnDClassLibrary
                                 // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
                                 DataRow newRow = table.NewRow();
 
+                                newRow[IID] = Item.ItemID;
                                 newRow[IN] = Item.ItemName;
                                 newRow[IT] = Item.ItemType;
                                 newRow[AH] = Item.AmountHeld;
@@ -147,13 +146,15 @@ namespace DnDClassLibrary
                         }
                         break;
                     case 2:
-                         // typecast objectet item over til armor classen
+                        // typecast objectet item over til armor classen
+                        DataColumn AIID = new DataColumn("Item ID");
                         DataColumn AIT = new DataColumn("Item Type");
                         DataColumn AFA = new DataColumn("AC From Armor");
                         DataColumn AAH = new DataColumn("Amount Held");
                         DataColumn AWPI = new DataColumn("Weight Per Item");
                         DataColumn AD = new DataColumn("Description");
                         DataColumn AIE = new DataColumn("Item Equipped");
+                        table.Columns.Add(AIID);
                         table.Columns.Add(AIT);
                         table.Columns.Add(AFA);
                         table.Columns.Add(AAH);
@@ -169,12 +170,13 @@ namespace DnDClassLibrary
                                     DataRow newRow = table.NewRow();
                                     Armor armor = (Armor)Item;
 
-                                    newRow["Item Type"] = armor.ItemType;
-                                    newRow["AC From Armor"] = armor.ACFromArmor;
-                                    newRow["Amount Held"] = armor.AmountHeld;
-                                    newRow["Weight Per Item"] = armor.WeightPerItem;
-                                    newRow["Description"] = armor.Description;
-                                    newRow["Item Equipped"] = armor.ItemEquipped;
+                                    newRow[AIID] = armor.ItemID;
+                                    newRow[AIT] = armor.ItemType;
+                                    newRow[AFA] = armor.ACFromArmor;
+                                    newRow[AAH] = armor.AmountHeld;
+                                    newRow[AWPI] = armor.WeightPerItem;
+                                    newRow[AD] = armor.Description;
+                                    newRow[AIE] = armor.ItemEquipped;
                                     table.Rows.Add(newRow);
 
                                 dataset.AcceptChanges();
@@ -187,6 +189,7 @@ namespace DnDClassLibrary
                         break;
 
                     case 3:
+                        DataColumn WIID = new DataColumn("Item ID");
                         DataColumn WIT = new DataColumn("Item Type");
                         DataColumn WAH = new DataColumn("Amount Held");
                         DataColumn WWPI = new DataColumn("Weight Per Item");
@@ -196,6 +199,7 @@ namespace DnDClassLibrary
                         DataColumn WDAM = new DataColumn("Damage");
                         DataColumn WDT = new DataColumn("Damage Type");
                         DataColumn WIE = new DataColumn("Item Equipped");
+                        table.Columns.Add(WIID);
                         table.Columns.Add(WIT);
                         table.Columns.Add(WAH);
                         table.Columns.Add(WWPI);
@@ -214,6 +218,7 @@ namespace DnDClassLibrary
                                 Weapon weapon = (Weapon)Item;
                                 DataRow newRow = table.NewRow();
 
+                                newRow[WIID] = weapon.ItemID;
                                 newRow[WIT] = weapon.ItemType;
                                 newRow[WAH] = weapon.AmountHeld;
                                 newRow[WWPI] = weapon.WeightPerItem;
@@ -237,28 +242,59 @@ namespace DnDClassLibrary
         }
         public void DatabaseList() // 
         {
-          
-                   // Setup for deserialize aka load filen til programmet igen
-                        //Inventory inv = new Inventory();
-                        //Item aItem = new Item();
-                        //string test = File.ReadAllText(CreateFolder());
-                        //dataset = JsonConvert.DeserializeObject<DataSet>(test);
-                        //table = dataset.Tables["table1"];
-                        //foreach (DataRow row in table.Rows)
-                        //{
-                        //    aItem.ItemName = Convert.ToString(row["Item Name"]);
-                        //    aItem.ItemType = Convert.ToString(row["Item type"]);
-                        //    aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-                        //    aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-                        //    aItem.Description = Convert.ToString(row["Description"]);
-                        //    inv.inventoryList.Add(aItem);
-                        //    aItem = new Item();
-                        
-                        //}
-               
-                       
-            
-            
+            int ItemID;
+            DataSet dataset = new DataSet("dataSet");
+            dataset.Namespace = "NetFrameWork";
+            DataTable table = new DataTable();
+            DataColumn idColumn = new DataColumn("id", typeof(int));
+            idColumn.AutoIncrement = true;
+            string JsonData = File.ReadAllText(CreateFolder());
+            dataset = JsonConvert.DeserializeObject<DataSet>(JsonData);
+            table = dataset.Tables["table1"];
+            foreach(var Item in InventoryList)
+            {
+                foreach (DataRow row in table.Rows)
+                {
+                    ItemID = Convert.ToInt32(row["Item ID"]);
+                    switch (ItemID)
+                    {
+                        case 1:
+                            Item.ItemName = Convert.ToString(row["Item Name"]);
+                            Item.ItemType = Convert.ToString(row["Item Type"]);
+                            Item.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            Item.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            Item.Description = Convert.ToString(row["Description"]);
+                            InventoryList.Add(Item);
+                            break;
+                        case 2:
+                            break;
+                        case 3:
+                            break;
+                    }
+
+                }
+            }
+            // Setup for deserialize aka load filen til programmet igen
+            //Inventory inv = new Inventory();
+            //Item aItem = new Item();
+            //string test = File.ReadAllText(CreateFolder());
+            //dataset = JsonConvert.DeserializeObject<DataSet>(test);
+            //table = dataset.Tables["table1"];
+            //foreach (DataRow row in table.Rows)
+            //{
+            //    aItem.ItemName = Convert.ToString(row["Item Name"]);
+            //    aItem.ItemType = Convert.ToString(row["Item type"]);
+            //    aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+            //    aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+            //    aItem.Description = Convert.ToString(row["Description"]);
+            //    inv.inventoryList.Add(aItem);
+            //    aItem = new Item();
+
+            //}
+
+
+
+
         }
     }
 }
