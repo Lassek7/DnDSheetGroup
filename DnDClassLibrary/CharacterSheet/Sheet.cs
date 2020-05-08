@@ -17,7 +17,7 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
-        List<Item> InventoryList = new List<Item>();
+        List<Item> myInventoryList = new List<Item>();
 
         public Sheet(Character charac, CharacterAttributes Attri)
         {
@@ -42,17 +42,17 @@ namespace CharacterSheet
         #region CLICKEVENTS
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
             myDataBase.SaveDataToFile();
            
         }
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
+            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList);
             addToInventory.Show();
             if (listBox1.SelectedIndex > 0 && listBox1.SelectedIndex < listBox1.Items.Count) // skal have sin egen knap
             {
-                InventoryList.RemoveAt(listBox1.SelectedIndex);
+                myInventoryList.RemoveAt(listBox1.SelectedIndex);
                 listBox1.Items.RemoveAt(listBox1.SelectedIndex);
             }
             else
@@ -298,7 +298,7 @@ namespace CharacterSheet
         public void RunInvList()
         {
             listBox1.Items.Clear();
-            foreach (var Item in InventoryList)
+            foreach (var Item in myInventoryList)
             {
                 int ID = Item.ItemID;
                 switch (ID)
