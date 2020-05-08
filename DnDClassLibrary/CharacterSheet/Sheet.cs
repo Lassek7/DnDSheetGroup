@@ -17,7 +17,7 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
-        List<Item> myInventoryList = new List<Item>();
+        List<Item> InventoryList = new List<Item>();
 
         public Sheet(Character charac, CharacterAttributes Attri)
         {
@@ -42,18 +42,18 @@ namespace CharacterSheet
         #region CLICKEVENTS
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, InventoryList);
             myDataBase.SaveDataToFile();
-
+           
         }
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList);
+            AddToInventoryForm addToInventory = new AddToInventoryForm(InventoryList);
             addToInventory.Show();
-            if (listBox1.SelectedIndex > 0 && listBox1.SelectedIndex < listBox1.Items.Count) // skal have sin egen knap
+            if (listBox.SelectedIndex > 0 && listBox.SelectedIndex < listBox.Items.Count) // skal have sin egen knap
             {
-                myInventoryList.RemoveAt(listBox1.SelectedIndex);
-                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
+                InventoryList.RemoveAt(listBox.SelectedIndex);
+                listBox.Items.RemoveAt(listBox.SelectedIndex);
             }
             else
             {
@@ -64,7 +64,7 @@ namespace CharacterSheet
         private void UpdateInvButton_Click(object sender, EventArgs e)
         {
             RunInvList();
-
+       
         }
         #endregion
         #region SAVINGTHROWPROFICIENCYTOGGLES
@@ -107,14 +107,14 @@ namespace CharacterSheet
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[5] = CharismaSaveProficiencyToggle.Checked;
-            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);
+            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);   
         }
         #endregion
         #region CHECKCHANGED
         private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
-
+            
             AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
             AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
             SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
@@ -297,23 +297,23 @@ namespace CharacterSheet
 
         public void RunInvList()
         {
-            listBox1.Items.Clear();
-            foreach (var Item in myInventoryList)
+            listBox.Items.Clear();
+            foreach (var Item in InventoryList)
             {
                 int ID = Item.ItemID;
                 switch (ID)
                 {
                     case 1:
-                        listBox1.Items.Add(Item.ItemID + " " + Item.ItemName);
+                        listBox.Items.Add(Item.ItemID + " " + Item.ItemName);
                         break;
                     case 2:
                         Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        listBox1.Items.Add(Item);
+                        listBox.Items.Add(Item);
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        listBox1.Items.Add(Item);
+                        listBox.Items.Add(Item);
                         break;
                 }
             }
