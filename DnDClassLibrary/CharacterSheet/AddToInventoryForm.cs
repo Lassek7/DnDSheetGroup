@@ -13,6 +13,7 @@ namespace CharacterSheet
 {
     public partial class AddToInventoryForm : Form
     {
+        String PreviewDetails = "{0,-10}{1,-20}{2,-20}{3,-20}";
         Item myItem = new Item();
         Armor myArmor = new Armor();
         Weapon myWeapon = new Weapon();
@@ -226,34 +227,51 @@ namespace CharacterSheet
             if (string.IsNullOrEmpty(myItem.ItemName) == false && myItem.AmountHeld > 0)  // laves til metoder
             {
                 Item NewItem = new Item();
+                NewItem.ItemID = 1;
                 NewItem.ItemName = myItem.ItemName;
                 NewItem.AmountHeld = myItem.AmountHeld;
+                NewItem.WeightPerItem = myItem.WeightPerItem;
+                NewItem.ItemType = myItem.ItemType;
                 NewItem.Description = myItem.Description;
-                NewItem.ItemID = 1;
                 myInventoryList.Add(NewItem);
 
             }
             if (string.IsNullOrEmpty(myArmor.ItemName) == false && myArmor.AmountHeld > 0)
             {
                 Armor NewArmor = new Armor();
+                NewArmor.ItemID = 2;
                 NewArmor.ItemName = myArmor.ItemName;
                 NewArmor.AmountHeld = myArmor.AmountHeld;
-                NewArmor.ItemID = 2;
+                NewArmor.WeightPerItem = myArmor.WeightPerItem;
+                NewArmor.ItemType = myArmor.ItemType;
+                NewArmor.ACFromArmor = myArmor.ACFromArmor;
+                NewArmor.Description = myArmor.Description;
+                NewArmor.ItemEquipped = myArmor.ItemEquipped;
+
                 myInventoryList.Add(NewArmor);
 
             }
             if (string.IsNullOrEmpty(myWeapon.ItemName) == false && myWeapon.AmountHeld > 0)
             {
                 Weapon NewWeapon = new Weapon();
+                NewWeapon.ItemID = 3;
                 NewWeapon.ItemName = myWeapon.ItemName;
                 NewWeapon.AmountHeld = myWeapon.AmountHeld;
-                NewWeapon.ItemID = 3;
+                NewWeapon.WeightPerItem = myWeapon.WeightPerItem;
+                NewWeapon.DamageType = myWeapon.DamageType;
+                NewWeapon.Damage = myWeapon.Damage;
+                NewWeapon.Range = myWeapon.Range;
+                NewWeapon.ItemType = myWeapon.ItemType;
+                NewWeapon.Description = myWeapon.Description;
+                NewWeapon.ItemEquipped = myWeapon.ItemEquipped;
+                NewWeapon.AttributeAssociation = myWeapon.AttributeAssociation;
                 myInventoryList.Add(NewWeapon);
 
             }
             ClearTextBoxes(this.Controls);
             RunInvList();
         }
+
         private void RemoveFromListButton_Click(object sender, EventArgs e)
         {
             if (AddToInvListBox.SelectedIndex >= 0 && AddToInvListBox.SelectedIndex <= AddToInvListBox.Items.Count) // skal have sin egen knap
@@ -267,6 +285,7 @@ namespace CharacterSheet
                 MessageBox.Show("Select an item from the list to remove");
             }
         }
+
         private void AddToInvListBox_DoubleClick(object sender, EventArgs e)
         {
             if (AddToInvListBox.SelectedItem != null)
@@ -275,6 +294,42 @@ namespace CharacterSheet
                 AddToInvListBox.SelectedItem = null;
             }
         }
+
+        private void IncreaseByOneButton_Click(object sender, EventArgs e)
+        {
+            if (AddToInvListBox.SelectedIndex >= 0)
+            {
+                myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld += 1;
+            }
+            else
+            {
+                MessageBox.Show("Select an item from the list to increase");
+            }
+            RunInvList();
+        }
+
+        private void DecreaseByOneButton_Click(object sender, EventArgs e)
+        {
+            if (AddToInvListBox.SelectedIndex >= 0)
+            {
+                if (myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld > 1)
+                {
+                    myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld -= 1;
+
+                }
+                else
+                {
+                    myInventoryList.RemoveAt(AddToInvListBox.SelectedIndex);
+                    AddToInvListBox.Items.RemoveAt(AddToInvListBox.SelectedIndex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Select an item from the list to decrease");
+            }
+            RunInvList();
+        }
+
         #endregion
         #region METHODS
 
@@ -312,7 +367,6 @@ namespace CharacterSheet
             }
         }
 
-
         public void RunInvList() // mangler en sorting function og tabs
         {
             AddToInvListBox.Items.Clear();
@@ -322,60 +376,21 @@ namespace CharacterSheet
                 switch (ID)
                 {
                     case 1:
-                        AddToInvListBox.Items.Add(Item.ItemName + " " + Item.AmountHeld);
+                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, Item.ItemName, Item.AmountHeld, Item.WeightPerItem, ""));
                         break;
                     case 2:
-                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        AddToInvListBox.Items.Add(armor.ItemName + " " + armor.AmountHeld);
+                        Armor armor = (Armor)Item; 
+                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, armor.ItemName, armor.AmountHeld, armor.WeightPerItem, armor.ACFromArmor));
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        AddToInvListBox.Items.Add(weapon.ItemName + " " + weapon.AmountHeld);
+                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, weapon.ItemName, weapon.AmountHeld, weapon.WeightPerItem, weapon.Damage));
                         break;
                 }
             }
 
         }
-        private void IncreaseByOneButton_Click(object sender, EventArgs e)
-        {
-            if (AddToInvListBox.SelectedIndex >= 0)
-            {
-                myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld += 1;
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to increase");
-            }
-            RunInvList();
-        }
-
-        private void DecreaseByOneButton_Click(object sender, EventArgs e)
-        {
-            if (AddToInvListBox.SelectedIndex >= 0)
-            {
-                if (myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld > 1)
-                {
-                    myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld -= 1;
-                    
-                }
-                else
-                {
-                    myInventoryList.RemoveAt(AddToInvListBox.SelectedIndex);
-                    AddToInvListBox.Items.RemoveAt(AddToInvListBox.SelectedIndex);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to decrease");
-            }
-            RunInvList();
-        }
-
-
-
         #endregion
-
-
     }
 }

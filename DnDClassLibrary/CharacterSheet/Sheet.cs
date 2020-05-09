@@ -18,30 +18,35 @@ namespace CharacterSheet
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
         List<Item> myInventoryList = new List<Item>();
+        String ItemDetails = "{0,-10}{1,-20}";
+        String WeaponDetails = "{0,-10}{1,-20}";
+        String ArmorDetails = "{0,-10}{1,-20}";
 
+        #region CONSTRUCTORS
         public Sheet(Character charac, CharacterAttributes Attri)
         {
             myCharacter = charac;
             myAttributes = Attri;
             InitializeComponent();
         }
+
         public Sheet(List<Item> InventoryList)
         {
             myInventoryList = InventoryList;
             InitializeComponent();
 
         }
+        #endregion
 
-        private void Sheet_Load(object sender, EventArgs e) //slettes måske????? idk what it is
-        {
-        }
-
+        #region SHEETLOAD
         private void Sheet_Load_1(object sender, EventArgs e)
         {
             LoadCharacterInfo();
             LoadAttributes();
             LoadSkills();
         }
+        #endregion
+
         #region CLICKEVENTS
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
@@ -50,27 +55,60 @@ namespace CharacterSheet
             myDataBase.SaveDataToFile();
            
         }
+
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
             AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList);
             addToInventory.Show();
-            if (listBox.SelectedIndex > 0 && listBox.SelectedIndex < listBox.Items.Count) // skal have sin egen knap
-            {
-                myInventoryList.RemoveAt(listBox.SelectedIndex);
-                listBox.Items.RemoveAt(listBox.SelectedIndex);
-            }
-            else
-            {
+        }
 
+        private void ShowListItemsButton_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            foreach (var Item in myInventoryList)
+            {
+                int ID = Item.ItemID;
+                if (ID == 1)
+                {
+                    listBox.Items.Add(Item.ItemID + " " + Item.ItemName);
+                }
             }
         }
 
-        private void UpdateInvButton_Click(object sender, EventArgs e)
+        private void ShowListArmorButton_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            foreach (var Item in myInventoryList)
+            {
+                int ID = Item.ItemID;
+                if (ID == 2)
+                {
+                    Armor armor = (Armor)Item; // typecast objectet item over til armor classen
+                    listBox.Items.Add(armor.ItemID + " " + armor.ItemName);
+                }
+            }
+        }
+
+        private void ShowListWeaponsButton_Click(object sender, EventArgs e)
+        {
+            listBox.Items.Clear();
+            foreach (var Item in myInventoryList)
+            {
+                int ID = Item.ItemID;
+                if (ID == 3)
+                {
+                    Weapon weapon = (Weapon)Item;
+                    listBox.Items.Add(weapon.ItemID + " " + weapon.ItemName);
+                }
+            }
+        }
+
+        private void UpdateInvButton_Click(object sender, EventArgs e) // ændres
         {
             RunInvList();
-       
         }
         #endregion
+
         #region SAVINGTHROWPROFICIENCYTOGGLES
         private void StrengthSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
@@ -114,6 +152,7 @@ namespace CharacterSheet
             CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);   
         }
         #endregion
+
         #region CHECKCHANGED
         private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
         {
@@ -138,7 +177,254 @@ namespace CharacterSheet
             PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
             PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
         }
+        private void EditSheetCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            if (EditSheetCheck.Checked == true)
+            {
+                EditSheetTrueWrite();
+            }
+            else
+            {
+                EditSheetFalseRead();
+                LoadAttributes();
+                LoadCharacterInfo();
+                LoadSkills();
+            }
+        }
         #endregion
+
+        #region TEXTCHANGED
+        private void TraitsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.traits = TraitsDisplay.Text;
+        }
+
+        private void BondsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.bonds = BondsDisplay.Text;
+
+        }
+
+        private void IdealsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.ideals = IdealsDisplay.Text;
+
+        }
+
+        private void FlawsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.flaws = FlawsDisplay.Text;
+        }
+
+        private void BackstoryBox_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.backstory = BackstoryBox.Text;
+        }
+
+        private void ExperienceDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(ExperienceDisplayTextBox.Text);
+            if (OutOfReach == false)
+            {
+                myCharacter.experience = ExperienceDisplayTextBox.Text;
+            }
+            else
+            {
+                ExperienceDisplayTextBox.Text = myCharacter.experience;
+                MessageBox.Show("Must have a value");
+            }
+        }
+
+        private void RaceDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.race = RaceDisplayTextBox.Text;
+        }
+
+        private void ClassDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.characterClass = ClassDisplayTextBox.Text;
+        }
+
+        private void BackgroundDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.background = BackgroundDisplayTextBox.Text;
+        }
+
+        private void AlignmentDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.alignment = AlignmentDisplayTextBox.Text;
+        }
+
+        private void LevelDisplayTextBox_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(LevelDisplayTextBox.Text);
+            if (OutOfReach == false && Convert.ToInt32(LevelDisplayTextBox.Text) <= 20 && Convert.ToInt32(LevelDisplayTextBox.Text) >= 1)
+            {
+                myCharacter.level = Convert.ToInt32(LevelDisplayTextBox.Text);
+            }
+            else
+            {
+                LevelDisplayTextBox.Text = Convert.ToString(myCharacter.level);
+                MessageBox.Show("Level must be within range 1 and 20");
+            }
+        }
+
+        private void CharismaAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(CharismaAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(CharismaAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[5] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
+                MessageBox.Show("Strength must be within range 0 and 20");
+            }
+        }
+
+        private void WisdomAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(WisdomAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(WisdomAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[4] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
+                MessageBox.Show("Wisdom must be within range 0 and 20");
+            }
+        }
+
+        private void IntelligenceAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(IntelligenceAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(IntelligenceAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[3] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                IntelligenceAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[3]);
+                MessageBox.Show("Intelligence must be within range 0 and 20");
+            }
+        }
+
+        private void ConstitutionAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(ConstitutionAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(ConstitutionAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[2] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
+                MessageBox.Show("Constitution must be within range 0 and 20");
+            }
+        }
+
+        private void DexterityAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(DexterityAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(DexterityAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[1] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
+                MessageBox.Show("Dexterity must be within range 0 and 20");
+            }
+        }
+
+        private void StrengthAttributeDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(StrengthAttributeDisplay.Text);
+            int Range = 0;
+            if (OutOfReach == false)
+            {
+                Range = Int32.Parse(StrengthAttributeDisplay.Text);
+            }
+            else
+            {
+            }
+            if (Range >= 0 && Range <= 20)
+            {
+                myAttributes.Attributes[0] = Convert.ToInt32(Range);
+            }
+            else
+            {
+                StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
+                MessageBox.Show("Strength must be within range 0 and 20");
+            }
+        }
+
+        private void SpeedDisplay_TextChanged(object sender, EventArgs e)
+        {
+            myCharacter.speed = Convert.ToInt32(SpeedDisplay.Text);
+        }
+
+        private void MaxHealthDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(MaxHealthDisplay.Text);
+            int Health = 0;
+            if (OutOfReach == false)
+            {
+                Health = Int32.Parse(MaxHealthDisplay.Text);
+                if (Health >= 1)
+                {
+                    myCharacter.maxHealth = Convert.ToInt32(Health);
+                }
+            }
+            else
+            {
+                MaxHealthDisplay.Text = "";
+            }
+        }
+        #endregion
+
         #region SKILLPROFICIENCYTOGGLE
         private void AthleticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
@@ -167,6 +453,7 @@ namespace CharacterSheet
             mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
             StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, AthleticsProficiencyToggle.Checked);
         }
+
         private void ArcanaProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
@@ -265,6 +552,59 @@ namespace CharacterSheet
             PersuasionLabel.Text = CheckProficiencyToggle(mySkill.Persuasion, PersuasionProficiencyToggle.Checked);
         }
         #endregion
+
+        #region KEYPRESSEVENTS
+        private void LevelDisplayTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void CharismaAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void WisdomAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void IntelligenceAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ConstitutionAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void DexterityAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void StrengthAttributeDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void SpeedDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void MaxHealthDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ExperienceDisplayTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+        #endregion
+
         #region METHODS
         string CheckJackOfAllTradesToggle(int HalfBonus, bool ProficiencyToggle, bool JackToggle, int OldValue, string CurrentValue)
         {
@@ -322,7 +662,7 @@ namespace CharacterSheet
                 }
             }
 
-        }
+        } // fjernes
 
         void LoadAttributes()
         {
@@ -334,6 +674,13 @@ namespace CharacterSheet
             IntelligenceAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[3]);
             WisdomAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[4]);
             CharismaAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[5]);
+
+            StrengthModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[0]);
+            DexterityModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[1]);
+            ConstitutionModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[2]);
+            IntelligenceModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[3]);
+            WisdomModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[4]);
+            CharismaModifierLabel.Text = Convert.ToString(myAttributes.Modifiers[5]);
 
             StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave);
             DexteritySaveLabel.Text = Convert.ToString(mySavingthrow.DexteritySave);
@@ -397,11 +744,12 @@ namespace CharacterSheet
 
         void LoadCharacterInfo()
         {
-            RaceLabel.Text = myCharacter.race;
-            LevelLabel.Text = Convert.ToString(myCharacter.level);
-            AlignmentLabel.Text = myCharacter.alignment;
-            ClassLabel.Text = myCharacter.characterClass;
-            BackgroundLabel.Text = myCharacter.background;
+            RaceDisplayTextBox.Text = myCharacter.race;
+            LevelDisplayTextBox.Text = Convert.ToString(myCharacter.level);
+            AlignmentDisplayTextBox.Text = myCharacter.alignment;
+            ClassDisplayTextBox.Text = myCharacter.characterClass;
+            BackgroundDisplayTextBox.Text = myCharacter.background;
+            ExperienceDisplayTextBox.Text = "0";
 
             CharacterNameLabel.Text = myCharacter.characterName;
             BondsDisplay.Text = myCharacter.bonds;
@@ -415,11 +763,67 @@ namespace CharacterSheet
             InitiativeDisplay.Text = Convert.ToString(myAttributes.Modifiers[1]);
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
         }
-        #endregion
 
-        private void groupBox279_Enter(object sender, EventArgs e)
+        void OnlyTakeNumbers(KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
+
+        void EditSheetTrueWrite()
+        {
+            RaceDisplayTextBox.Enabled = true;
+            ClassDisplayTextBox.Enabled = true;
+            BackgroundDisplayTextBox.Enabled = true;
+            AlignmentDisplayTextBox.Enabled = true;
+            ExperienceDisplayTextBox.Enabled = true;
+            LevelDisplayTextBox.Enabled = true;
+
+            StrengthAttributeDisplay.Enabled = true;
+            DexterityAttributeDisplay.Enabled = true;
+            ConstitutionAttributeDisplay.Enabled = true;
+            IntelligenceAttributeDisplay.Enabled = true;
+            WisdomAttributeDisplay.Enabled = true;
+            CharismaAttributeDisplay.Enabled = true;
+
+            MaxHealthDisplay.Enabled = true;
+            SpeedDisplay.Enabled = true;
+
+            IdealsDisplay.Enabled = true;
+            BondsDisplay.Enabled = true;
+            TraitsDisplay.Enabled = true;
+            FlawsDisplay.Enabled = true;
+            BackgroundDisplayTextBox.Enabled = true;
+        }
+
+        void EditSheetFalseRead()
+        {
+            RaceDisplayTextBox.Enabled = false;
+            ClassDisplayTextBox.Enabled = false;
+            BackgroundDisplayTextBox.Enabled = false;
+            AlignmentDisplayTextBox.Enabled = false;
+            ExperienceDisplayTextBox.Enabled = false;
+            LevelDisplayTextBox.Enabled = false;
+
+            StrengthAttributeDisplay.Enabled = false;
+            DexterityAttributeDisplay.Enabled = false;
+            ConstitutionAttributeDisplay.Enabled = false;
+            IntelligenceAttributeDisplay.Enabled = false;
+            WisdomAttributeDisplay.Enabled = false;
+            CharismaAttributeDisplay.Enabled = false;
+
+            MaxHealthDisplay.Enabled = false;
+            SpeedDisplay.Enabled = false;
+
+            IdealsDisplay.Enabled = false;
+            BondsDisplay.Enabled = false;
+            TraitsDisplay.Enabled = false;
+            FlawsDisplay.Enabled = false;
+            BackgroundDisplayTextBox.Enabled = false;
+        }
+
+        #endregion
     }
 }

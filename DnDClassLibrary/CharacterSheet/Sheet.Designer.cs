@@ -58,7 +58,7 @@
             this.AthleticsProficiencyToggle = new System.Windows.Forms.CheckBox();
             this.JackOfAllTradesCheck = new System.Windows.Forms.CheckBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.DexterityAttributeDisplay = new System.Windows.Forms.Label();
+            this.DexterityAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.DexterityModifierLabel = new System.Windows.Forms.Label();
             this.PersuasionLabel = new System.Windows.Forms.Label();
@@ -92,39 +92,39 @@
             this.ConstitutionSaveLabel = new System.Windows.Forms.Label();
             this.DexteritySaveLabel = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.CharismaAttributeDisplay = new System.Windows.Forms.Label();
+            this.CharismaAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.CharismaModifierLabel = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.StrengthAttributeDisplay = new System.Windows.Forms.Label();
+            this.StrengthAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.StrengthModifierLabel = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.WisdomAttributeDisplay = new System.Windows.Forms.Label();
+            this.WisdomAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.WisdomModifierLabel = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.IntelligenceAttributeDisplay = new System.Windows.Forms.Label();
+            this.IntelligenceAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.IntelligenceModifierLabel = new System.Windows.Forms.Label();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.ConstitutionAttributeDisplay = new System.Windows.Forms.Label();
+            this.ConstitutionAttributeDisplay = new System.Windows.Forms.TextBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.ConstitutionModifierLabel = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.CharacterNameLabel = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.RaceLabel = new System.Windows.Forms.Label();
+            this.RaceDisplayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.ClassLabel = new System.Windows.Forms.Label();
+            this.ClassDisplayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.BackgroundLabel = new System.Windows.Forms.Label();
+            this.BackgroundDisplayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.AlignmentLabel = new System.Windows.Forms.Label();
+            this.AlignmentDisplayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.ExperienceLabel = new System.Windows.Forms.Label();
+            this.ExperienceDisplayTextBox = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.LevelLabel = new System.Windows.Forms.Label();
+            this.LevelDisplayTextBox = new System.Windows.Forms.TextBox();
             this.BondsDisplay = new System.Windows.Forms.RichTextBox();
             this.TraitsDisplay = new System.Windows.Forms.RichTextBox();
             this.IdealsDisplay = new System.Windows.Forms.RichTextBox();
@@ -138,20 +138,30 @@
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.MaxHealthDisplay = new System.Windows.Forms.Label();
+            this.MaxHealthDisplay = new System.Windows.Forms.TextBox();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
             this.ArmorClassDisplay = new System.Windows.Forms.Label();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
             this.InitiativeDisplay = new System.Windows.Forms.Label();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.SpeedDisplay = new System.Windows.Forms.Label();
+            this.SpeedDisplay = new System.Windows.Forms.TextBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
             this.InspirationDisplay = new System.Windows.Forms.Label();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
@@ -162,213 +172,9 @@
             this.UpdateInvButton = new System.Windows.Forms.Button();
             this.EditInventoryButton = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
-            this.ProficencyBonusLabel = new System.Windows.Forms.Label();
-            this.PassivePerceptionLabel = new System.Windows.Forms.Label();
-            this.InspirationLabel = new System.Windows.Forms.Label();
-            this.SaveCharacterButton = new System.Windows.Forms.Button();
-            this.addToInventoryFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.groupBox45 = new System.Windows.Forms.GroupBox();
-            this.groupBox57 = new System.Windows.Forms.GroupBox();
-            this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.groupBox59 = new System.Windows.Forms.GroupBox();
-            this.groupBox60 = new System.Windows.Forms.GroupBox();
-            this.groupBox61 = new System.Windows.Forms.GroupBox();
-            this.groupBox62 = new System.Windows.Forms.GroupBox();
-            this.groupBox63 = new System.Windows.Forms.GroupBox();
-            this.groupBox64 = new System.Windows.Forms.GroupBox();
-            this.groupBox65 = new System.Windows.Forms.GroupBox();
-            this.groupBox66 = new System.Windows.Forms.GroupBox();
-            this.groupBox67 = new System.Windows.Forms.GroupBox();
-            this.groupBox68 = new System.Windows.Forms.GroupBox();
-            this.groupBox46 = new System.Windows.Forms.GroupBox();
-            this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.groupBox48 = new System.Windows.Forms.GroupBox();
-            this.groupBox49 = new System.Windows.Forms.GroupBox();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.groupBox93 = new System.Windows.Forms.GroupBox();
-            this.groupBox94 = new System.Windows.Forms.GroupBox();
-            this.groupBox95 = new System.Windows.Forms.GroupBox();
-            this.groupBox96 = new System.Windows.Forms.GroupBox();
-            this.groupBox97 = new System.Windows.Forms.GroupBox();
-            this.groupBox98 = new System.Windows.Forms.GroupBox();
-            this.groupBox99 = new System.Windows.Forms.GroupBox();
-            this.groupBox100 = new System.Windows.Forms.GroupBox();
-            this.groupBox101 = new System.Windows.Forms.GroupBox();
-            this.groupBox102 = new System.Windows.Forms.GroupBox();
-            this.groupBox103 = new System.Windows.Forms.GroupBox();
-            this.groupBox104 = new System.Windows.Forms.GroupBox();
-            this.groupBox105 = new System.Windows.Forms.GroupBox();
-            this.groupBox106 = new System.Windows.Forms.GroupBox();
-            this.groupBox107 = new System.Windows.Forms.GroupBox();
-            this.groupBox108 = new System.Windows.Forms.GroupBox();
-            this.groupBox109 = new System.Windows.Forms.GroupBox();
-            this.groupBox110 = new System.Windows.Forms.GroupBox();
-            this.groupBox111 = new System.Windows.Forms.GroupBox();
-            this.groupBox112 = new System.Windows.Forms.GroupBox();
-            this.groupBox113 = new System.Windows.Forms.GroupBox();
-            this.groupBox114 = new System.Windows.Forms.GroupBox();
-            this.groupBox115 = new System.Windows.Forms.GroupBox();
-            this.groupBox116 = new System.Windows.Forms.GroupBox();
-            this.groupBox52 = new System.Windows.Forms.GroupBox();
-            this.groupBox53 = new System.Windows.Forms.GroupBox();
-            this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.groupBox55 = new System.Windows.Forms.GroupBox();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.groupBox50 = new System.Windows.Forms.GroupBox();
-            this.groupBox39 = new System.Windows.Forms.GroupBox();
-            this.groupBox40 = new System.Windows.Forms.GroupBox();
-            this.groupBox41 = new System.Windows.Forms.GroupBox();
-            this.groupBox42 = new System.Windows.Forms.GroupBox();
-            this.groupBox43 = new System.Windows.Forms.GroupBox();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
-            this.groupBox69 = new System.Windows.Forms.GroupBox();
-            this.groupBox70 = new System.Windows.Forms.GroupBox();
-            this.groupBox71 = new System.Windows.Forms.GroupBox();
-            this.groupBox72 = new System.Windows.Forms.GroupBox();
-            this.groupBox73 = new System.Windows.Forms.GroupBox();
-            this.groupBox74 = new System.Windows.Forms.GroupBox();
-            this.groupBox75 = new System.Windows.Forms.GroupBox();
-            this.groupBox76 = new System.Windows.Forms.GroupBox();
-            this.groupBox77 = new System.Windows.Forms.GroupBox();
-            this.groupBox78 = new System.Windows.Forms.GroupBox();
-            this.groupBox79 = new System.Windows.Forms.GroupBox();
-            this.groupBox80 = new System.Windows.Forms.GroupBox();
-            this.groupBox81 = new System.Windows.Forms.GroupBox();
-            this.groupBox82 = new System.Windows.Forms.GroupBox();
-            this.groupBox83 = new System.Windows.Forms.GroupBox();
-            this.groupBox84 = new System.Windows.Forms.GroupBox();
-            this.groupBox85 = new System.Windows.Forms.GroupBox();
-            this.groupBox86 = new System.Windows.Forms.GroupBox();
-            this.groupBox87 = new System.Windows.Forms.GroupBox();
-            this.groupBox88 = new System.Windows.Forms.GroupBox();
-            this.groupBox89 = new System.Windows.Forms.GroupBox();
-            this.groupBox90 = new System.Windows.Forms.GroupBox();
-            this.groupBox91 = new System.Windows.Forms.GroupBox();
-            this.groupBox92 = new System.Windows.Forms.GroupBox();
-            this.groupBox117 = new System.Windows.Forms.GroupBox();
-            this.groupBox118 = new System.Windows.Forms.GroupBox();
-            this.groupBox119 = new System.Windows.Forms.GroupBox();
-            this.groupBox120 = new System.Windows.Forms.GroupBox();
-            this.groupBox121 = new System.Windows.Forms.GroupBox();
-            this.groupBox122 = new System.Windows.Forms.GroupBox();
-            this.groupBox123 = new System.Windows.Forms.GroupBox();
-            this.groupBox124 = new System.Windows.Forms.GroupBox();
-            this.groupBox125 = new System.Windows.Forms.GroupBox();
-            this.groupBox126 = new System.Windows.Forms.GroupBox();
-            this.groupBox127 = new System.Windows.Forms.GroupBox();
-            this.groupBox128 = new System.Windows.Forms.GroupBox();
-            this.groupBox129 = new System.Windows.Forms.GroupBox();
-            this.groupBox130 = new System.Windows.Forms.GroupBox();
-            this.groupBox131 = new System.Windows.Forms.GroupBox();
-            this.groupBox132 = new System.Windows.Forms.GroupBox();
-            this.groupBox133 = new System.Windows.Forms.GroupBox();
-            this.groupBox134 = new System.Windows.Forms.GroupBox();
-            this.groupBox135 = new System.Windows.Forms.GroupBox();
-            this.groupBox136 = new System.Windows.Forms.GroupBox();
-            this.groupBox137 = new System.Windows.Forms.GroupBox();
-            this.groupBox138 = new System.Windows.Forms.GroupBox();
-            this.groupBox139 = new System.Windows.Forms.GroupBox();
-            this.groupBox140 = new System.Windows.Forms.GroupBox();
-            this.groupBox141 = new System.Windows.Forms.GroupBox();
-            this.groupBox142 = new System.Windows.Forms.GroupBox();
-            this.groupBox143 = new System.Windows.Forms.GroupBox();
-            this.groupBox144 = new System.Windows.Forms.GroupBox();
-            this.groupBox145 = new System.Windows.Forms.GroupBox();
-            this.groupBox146 = new System.Windows.Forms.GroupBox();
-            this.groupBox147 = new System.Windows.Forms.GroupBox();
-            this.groupBox148 = new System.Windows.Forms.GroupBox();
-            this.groupBox149 = new System.Windows.Forms.GroupBox();
-            this.groupBox150 = new System.Windows.Forms.GroupBox();
-            this.groupBox151 = new System.Windows.Forms.GroupBox();
-            this.groupBox152 = new System.Windows.Forms.GroupBox();
-            this.groupBox153 = new System.Windows.Forms.GroupBox();
-            this.groupBox154 = new System.Windows.Forms.GroupBox();
-            this.groupBox155 = new System.Windows.Forms.GroupBox();
-            this.groupBox156 = new System.Windows.Forms.GroupBox();
-            this.groupBox157 = new System.Windows.Forms.GroupBox();
-            this.groupBox158 = new System.Windows.Forms.GroupBox();
-            this.groupBox159 = new System.Windows.Forms.GroupBox();
-            this.groupBox160 = new System.Windows.Forms.GroupBox();
-            this.groupBox161 = new System.Windows.Forms.GroupBox();
-            this.groupBox162 = new System.Windows.Forms.GroupBox();
-            this.groupBox163 = new System.Windows.Forms.GroupBox();
-            this.groupBox164 = new System.Windows.Forms.GroupBox();
-            this.groupBox165 = new System.Windows.Forms.GroupBox();
-            this.groupBox166 = new System.Windows.Forms.GroupBox();
-            this.groupBox167 = new System.Windows.Forms.GroupBox();
-            this.groupBox168 = new System.Windows.Forms.GroupBox();
-            this.groupBox169 = new System.Windows.Forms.GroupBox();
-            this.groupBox170 = new System.Windows.Forms.GroupBox();
-            this.groupBox171 = new System.Windows.Forms.GroupBox();
-            this.groupBox172 = new System.Windows.Forms.GroupBox();
-            this.groupBox173 = new System.Windows.Forms.GroupBox();
-            this.groupBox174 = new System.Windows.Forms.GroupBox();
-            this.groupBox175 = new System.Windows.Forms.GroupBox();
-            this.groupBox176 = new System.Windows.Forms.GroupBox();
-            this.groupBox177 = new System.Windows.Forms.GroupBox();
-            this.groupBox178 = new System.Windows.Forms.GroupBox();
-            this.groupBox179 = new System.Windows.Forms.GroupBox();
-            this.groupBox180 = new System.Windows.Forms.GroupBox();
-            this.groupBox181 = new System.Windows.Forms.GroupBox();
-            this.groupBox182 = new System.Windows.Forms.GroupBox();
-            this.groupBox231 = new System.Windows.Forms.GroupBox();
-            this.groupBox232 = new System.Windows.Forms.GroupBox();
-            this.groupBox233 = new System.Windows.Forms.GroupBox();
-            this.groupBox234 = new System.Windows.Forms.GroupBox();
-            this.groupBox235 = new System.Windows.Forms.GroupBox();
-            this.groupBox236 = new System.Windows.Forms.GroupBox();
-            this.groupBox237 = new System.Windows.Forms.GroupBox();
-            this.groupBox238 = new System.Windows.Forms.GroupBox();
-            this.groupBox239 = new System.Windows.Forms.GroupBox();
-            this.groupBox240 = new System.Windows.Forms.GroupBox();
-            this.groupBox241 = new System.Windows.Forms.GroupBox();
-            this.groupBox242 = new System.Windows.Forms.GroupBox();
-            this.groupBox243 = new System.Windows.Forms.GroupBox();
-            this.groupBox244 = new System.Windows.Forms.GroupBox();
-            this.groupBox245 = new System.Windows.Forms.GroupBox();
-            this.groupBox246 = new System.Windows.Forms.GroupBox();
-            this.groupBox247 = new System.Windows.Forms.GroupBox();
-            this.groupBox248 = new System.Windows.Forms.GroupBox();
-            this.groupBox249 = new System.Windows.Forms.GroupBox();
-            this.groupBox250 = new System.Windows.Forms.GroupBox();
-            this.groupBox251 = new System.Windows.Forms.GroupBox();
-            this.groupBox252 = new System.Windows.Forms.GroupBox();
-            this.groupBox253 = new System.Windows.Forms.GroupBox();
-            this.groupBox254 = new System.Windows.Forms.GroupBox();
-            this.groupBox255 = new System.Windows.Forms.GroupBox();
-            this.groupBox256 = new System.Windows.Forms.GroupBox();
-            this.groupBox257 = new System.Windows.Forms.GroupBox();
-            this.groupBox258 = new System.Windows.Forms.GroupBox();
-            this.groupBox259 = new System.Windows.Forms.GroupBox();
-            this.groupBox260 = new System.Windows.Forms.GroupBox();
-            this.groupBox261 = new System.Windows.Forms.GroupBox();
-            this.groupBox262 = new System.Windows.Forms.GroupBox();
-            this.groupBox263 = new System.Windows.Forms.GroupBox();
-            this.groupBox264 = new System.Windows.Forms.GroupBox();
-            this.groupBox265 = new System.Windows.Forms.GroupBox();
-            this.groupBox266 = new System.Windows.Forms.GroupBox();
-            this.groupBox267 = new System.Windows.Forms.GroupBox();
-            this.groupBox268 = new System.Windows.Forms.GroupBox();
-            this.groupBox269 = new System.Windows.Forms.GroupBox();
-            this.groupBox270 = new System.Windows.Forms.GroupBox();
-            this.groupBox271 = new System.Windows.Forms.GroupBox();
-            this.groupBox272 = new System.Windows.Forms.GroupBox();
-            this.groupBox273 = new System.Windows.Forms.GroupBox();
-            this.groupBox274 = new System.Windows.Forms.GroupBox();
-            this.groupBox275 = new System.Windows.Forms.GroupBox();
-            this.groupBox276 = new System.Windows.Forms.GroupBox();
-            this.groupBox277 = new System.Windows.Forms.GroupBox();
-            this.groupBox278 = new System.Windows.Forms.GroupBox();
+            this.ShowListWeaponsButton = new System.Windows.Forms.Button();
+            this.ShowListArmorButton = new System.Windows.Forms.Button();
+            this.ShowListItemsButton = new System.Windows.Forms.Button();
             this.groupBox279 = new System.Windows.Forms.GroupBox();
             this.groupBox280 = new System.Windows.Forms.GroupBox();
             this.groupBox281 = new System.Windows.Forms.GroupBox();
@@ -417,14 +223,204 @@
             this.groupBox324 = new System.Windows.Forms.GroupBox();
             this.groupBox325 = new System.Windows.Forms.GroupBox();
             this.groupBox326 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.groupBox231 = new System.Windows.Forms.GroupBox();
+            this.groupBox232 = new System.Windows.Forms.GroupBox();
+            this.groupBox233 = new System.Windows.Forms.GroupBox();
+            this.groupBox234 = new System.Windows.Forms.GroupBox();
+            this.groupBox235 = new System.Windows.Forms.GroupBox();
+            this.groupBox236 = new System.Windows.Forms.GroupBox();
+            this.groupBox237 = new System.Windows.Forms.GroupBox();
+            this.groupBox238 = new System.Windows.Forms.GroupBox();
+            this.groupBox239 = new System.Windows.Forms.GroupBox();
+            this.groupBox240 = new System.Windows.Forms.GroupBox();
+            this.groupBox241 = new System.Windows.Forms.GroupBox();
+            this.groupBox242 = new System.Windows.Forms.GroupBox();
+            this.groupBox243 = new System.Windows.Forms.GroupBox();
+            this.groupBox244 = new System.Windows.Forms.GroupBox();
+            this.groupBox245 = new System.Windows.Forms.GroupBox();
+            this.groupBox246 = new System.Windows.Forms.GroupBox();
+            this.groupBox247 = new System.Windows.Forms.GroupBox();
+            this.groupBox248 = new System.Windows.Forms.GroupBox();
+            this.groupBox249 = new System.Windows.Forms.GroupBox();
+            this.groupBox250 = new System.Windows.Forms.GroupBox();
+            this.groupBox251 = new System.Windows.Forms.GroupBox();
+            this.groupBox252 = new System.Windows.Forms.GroupBox();
+            this.groupBox253 = new System.Windows.Forms.GroupBox();
+            this.groupBox254 = new System.Windows.Forms.GroupBox();
+            this.groupBox255 = new System.Windows.Forms.GroupBox();
+            this.groupBox256 = new System.Windows.Forms.GroupBox();
+            this.groupBox257 = new System.Windows.Forms.GroupBox();
+            this.groupBox258 = new System.Windows.Forms.GroupBox();
+            this.groupBox259 = new System.Windows.Forms.GroupBox();
+            this.groupBox260 = new System.Windows.Forms.GroupBox();
+            this.groupBox261 = new System.Windows.Forms.GroupBox();
+            this.groupBox262 = new System.Windows.Forms.GroupBox();
+            this.groupBox263 = new System.Windows.Forms.GroupBox();
+            this.groupBox264 = new System.Windows.Forms.GroupBox();
+            this.groupBox265 = new System.Windows.Forms.GroupBox();
+            this.groupBox266 = new System.Windows.Forms.GroupBox();
+            this.groupBox267 = new System.Windows.Forms.GroupBox();
+            this.groupBox268 = new System.Windows.Forms.GroupBox();
+            this.groupBox269 = new System.Windows.Forms.GroupBox();
+            this.groupBox270 = new System.Windows.Forms.GroupBox();
+            this.groupBox271 = new System.Windows.Forms.GroupBox();
+            this.groupBox272 = new System.Windows.Forms.GroupBox();
+            this.groupBox273 = new System.Windows.Forms.GroupBox();
+            this.groupBox274 = new System.Windows.Forms.GroupBox();
+            this.groupBox275 = new System.Windows.Forms.GroupBox();
+            this.groupBox276 = new System.Windows.Forms.GroupBox();
+            this.groupBox277 = new System.Windows.Forms.GroupBox();
+            this.groupBox278 = new System.Windows.Forms.GroupBox();
+            this.groupBox135 = new System.Windows.Forms.GroupBox();
+            this.groupBox136 = new System.Windows.Forms.GroupBox();
+            this.groupBox137 = new System.Windows.Forms.GroupBox();
+            this.groupBox138 = new System.Windows.Forms.GroupBox();
+            this.groupBox139 = new System.Windows.Forms.GroupBox();
+            this.groupBox140 = new System.Windows.Forms.GroupBox();
+            this.groupBox141 = new System.Windows.Forms.GroupBox();
+            this.groupBox142 = new System.Windows.Forms.GroupBox();
+            this.groupBox143 = new System.Windows.Forms.GroupBox();
+            this.groupBox144 = new System.Windows.Forms.GroupBox();
+            this.groupBox145 = new System.Windows.Forms.GroupBox();
+            this.groupBox146 = new System.Windows.Forms.GroupBox();
+            this.groupBox147 = new System.Windows.Forms.GroupBox();
+            this.groupBox148 = new System.Windows.Forms.GroupBox();
+            this.groupBox149 = new System.Windows.Forms.GroupBox();
+            this.groupBox150 = new System.Windows.Forms.GroupBox();
+            this.groupBox151 = new System.Windows.Forms.GroupBox();
+            this.groupBox152 = new System.Windows.Forms.GroupBox();
+            this.groupBox153 = new System.Windows.Forms.GroupBox();
+            this.groupBox154 = new System.Windows.Forms.GroupBox();
+            this.groupBox155 = new System.Windows.Forms.GroupBox();
+            this.groupBox156 = new System.Windows.Forms.GroupBox();
+            this.groupBox157 = new System.Windows.Forms.GroupBox();
+            this.groupBox158 = new System.Windows.Forms.GroupBox();
+            this.groupBox159 = new System.Windows.Forms.GroupBox();
+            this.groupBox160 = new System.Windows.Forms.GroupBox();
+            this.groupBox161 = new System.Windows.Forms.GroupBox();
+            this.groupBox162 = new System.Windows.Forms.GroupBox();
+            this.groupBox163 = new System.Windows.Forms.GroupBox();
+            this.groupBox164 = new System.Windows.Forms.GroupBox();
+            this.groupBox165 = new System.Windows.Forms.GroupBox();
+            this.groupBox166 = new System.Windows.Forms.GroupBox();
+            this.groupBox167 = new System.Windows.Forms.GroupBox();
+            this.groupBox168 = new System.Windows.Forms.GroupBox();
+            this.groupBox169 = new System.Windows.Forms.GroupBox();
+            this.groupBox170 = new System.Windows.Forms.GroupBox();
+            this.groupBox171 = new System.Windows.Forms.GroupBox();
+            this.groupBox172 = new System.Windows.Forms.GroupBox();
+            this.groupBox173 = new System.Windows.Forms.GroupBox();
+            this.groupBox174 = new System.Windows.Forms.GroupBox();
+            this.groupBox175 = new System.Windows.Forms.GroupBox();
+            this.groupBox176 = new System.Windows.Forms.GroupBox();
+            this.groupBox177 = new System.Windows.Forms.GroupBox();
+            this.groupBox178 = new System.Windows.Forms.GroupBox();
+            this.groupBox179 = new System.Windows.Forms.GroupBox();
+            this.groupBox180 = new System.Windows.Forms.GroupBox();
+            this.groupBox181 = new System.Windows.Forms.GroupBox();
+            this.groupBox182 = new System.Windows.Forms.GroupBox();
+            this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.groupBox40 = new System.Windows.Forms.GroupBox();
+            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.groupBox69 = new System.Windows.Forms.GroupBox();
+            this.groupBox70 = new System.Windows.Forms.GroupBox();
+            this.groupBox71 = new System.Windows.Forms.GroupBox();
+            this.groupBox72 = new System.Windows.Forms.GroupBox();
+            this.groupBox73 = new System.Windows.Forms.GroupBox();
+            this.groupBox74 = new System.Windows.Forms.GroupBox();
+            this.groupBox75 = new System.Windows.Forms.GroupBox();
+            this.groupBox76 = new System.Windows.Forms.GroupBox();
+            this.groupBox77 = new System.Windows.Forms.GroupBox();
+            this.groupBox78 = new System.Windows.Forms.GroupBox();
+            this.groupBox79 = new System.Windows.Forms.GroupBox();
+            this.groupBox80 = new System.Windows.Forms.GroupBox();
+            this.groupBox81 = new System.Windows.Forms.GroupBox();
+            this.groupBox82 = new System.Windows.Forms.GroupBox();
+            this.groupBox83 = new System.Windows.Forms.GroupBox();
+            this.groupBox84 = new System.Windows.Forms.GroupBox();
+            this.groupBox85 = new System.Windows.Forms.GroupBox();
+            this.groupBox86 = new System.Windows.Forms.GroupBox();
+            this.groupBox87 = new System.Windows.Forms.GroupBox();
+            this.groupBox88 = new System.Windows.Forms.GroupBox();
+            this.groupBox89 = new System.Windows.Forms.GroupBox();
+            this.groupBox90 = new System.Windows.Forms.GroupBox();
+            this.groupBox91 = new System.Windows.Forms.GroupBox();
+            this.groupBox92 = new System.Windows.Forms.GroupBox();
+            this.groupBox117 = new System.Windows.Forms.GroupBox();
+            this.groupBox118 = new System.Windows.Forms.GroupBox();
+            this.groupBox119 = new System.Windows.Forms.GroupBox();
+            this.groupBox120 = new System.Windows.Forms.GroupBox();
+            this.groupBox121 = new System.Windows.Forms.GroupBox();
+            this.groupBox122 = new System.Windows.Forms.GroupBox();
+            this.groupBox123 = new System.Windows.Forms.GroupBox();
+            this.groupBox124 = new System.Windows.Forms.GroupBox();
+            this.groupBox125 = new System.Windows.Forms.GroupBox();
+            this.groupBox126 = new System.Windows.Forms.GroupBox();
+            this.groupBox127 = new System.Windows.Forms.GroupBox();
+            this.groupBox128 = new System.Windows.Forms.GroupBox();
+            this.groupBox129 = new System.Windows.Forms.GroupBox();
+            this.groupBox130 = new System.Windows.Forms.GroupBox();
+            this.groupBox131 = new System.Windows.Forms.GroupBox();
+            this.groupBox132 = new System.Windows.Forms.GroupBox();
+            this.groupBox133 = new System.Windows.Forms.GroupBox();
+            this.groupBox134 = new System.Windows.Forms.GroupBox();
+            this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.groupBox58 = new System.Windows.Forms.GroupBox();
+            this.groupBox59 = new System.Windows.Forms.GroupBox();
+            this.groupBox60 = new System.Windows.Forms.GroupBox();
+            this.groupBox61 = new System.Windows.Forms.GroupBox();
+            this.groupBox62 = new System.Windows.Forms.GroupBox();
+            this.groupBox63 = new System.Windows.Forms.GroupBox();
+            this.groupBox64 = new System.Windows.Forms.GroupBox();
+            this.groupBox65 = new System.Windows.Forms.GroupBox();
+            this.groupBox66 = new System.Windows.Forms.GroupBox();
+            this.groupBox67 = new System.Windows.Forms.GroupBox();
+            this.groupBox68 = new System.Windows.Forms.GroupBox();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.groupBox93 = new System.Windows.Forms.GroupBox();
+            this.groupBox94 = new System.Windows.Forms.GroupBox();
+            this.groupBox95 = new System.Windows.Forms.GroupBox();
+            this.groupBox96 = new System.Windows.Forms.GroupBox();
+            this.groupBox97 = new System.Windows.Forms.GroupBox();
+            this.groupBox98 = new System.Windows.Forms.GroupBox();
+            this.groupBox99 = new System.Windows.Forms.GroupBox();
+            this.groupBox100 = new System.Windows.Forms.GroupBox();
+            this.groupBox101 = new System.Windows.Forms.GroupBox();
+            this.groupBox102 = new System.Windows.Forms.GroupBox();
+            this.groupBox103 = new System.Windows.Forms.GroupBox();
+            this.groupBox104 = new System.Windows.Forms.GroupBox();
+            this.groupBox105 = new System.Windows.Forms.GroupBox();
+            this.groupBox106 = new System.Windows.Forms.GroupBox();
+            this.groupBox107 = new System.Windows.Forms.GroupBox();
+            this.groupBox108 = new System.Windows.Forms.GroupBox();
+            this.groupBox109 = new System.Windows.Forms.GroupBox();
+            this.groupBox110 = new System.Windows.Forms.GroupBox();
+            this.groupBox111 = new System.Windows.Forms.GroupBox();
+            this.groupBox112 = new System.Windows.Forms.GroupBox();
+            this.groupBox113 = new System.Windows.Forms.GroupBox();
+            this.groupBox114 = new System.Windows.Forms.GroupBox();
+            this.groupBox115 = new System.Windows.Forms.GroupBox();
+            this.groupBox116 = new System.Windows.Forms.GroupBox();
+            this.groupBox52 = new System.Windows.Forms.GroupBox();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.groupBox50 = new System.Windows.Forms.GroupBox();
+            this.ProficencyBonusLabel = new System.Windows.Forms.Label();
+            this.PassivePerceptionLabel = new System.Windows.Forms.Label();
+            this.InspirationLabel = new System.Windows.Forms.Label();
+            this.SaveCharacterButton = new System.Windows.Forms.Button();
+            this.EditSheetCheck = new System.Windows.Forms.CheckBox();
+            this.addToInventoryFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -453,6 +449,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox28.SuspendLayout();
             this.groupBox29.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox30.SuspendLayout();
             this.groupBox31.SuspendLayout();
             this.groupBox32.SuspendLayout();
@@ -460,136 +457,6 @@
             this.groupBox34.SuspendLayout();
             this.groupBox35.SuspendLayout();
             this.groupBox37.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            this.groupBox45.SuspendLayout();
-            this.groupBox57.SuspendLayout();
-            this.groupBox58.SuspendLayout();
-            this.groupBox60.SuspendLayout();
-            this.groupBox61.SuspendLayout();
-            this.groupBox62.SuspendLayout();
-            this.groupBox63.SuspendLayout();
-            this.groupBox65.SuspendLayout();
-            this.groupBox66.SuspendLayout();
-            this.groupBox46.SuspendLayout();
-            this.groupBox48.SuspendLayout();
-            this.groupBox49.SuspendLayout();
-            this.groupBox51.SuspendLayout();
-            this.groupBox93.SuspendLayout();
-            this.groupBox94.SuspendLayout();
-            this.groupBox95.SuspendLayout();
-            this.groupBox97.SuspendLayout();
-            this.groupBox98.SuspendLayout();
-            this.groupBox99.SuspendLayout();
-            this.groupBox100.SuspendLayout();
-            this.groupBox102.SuspendLayout();
-            this.groupBox103.SuspendLayout();
-            this.groupBox106.SuspendLayout();
-            this.groupBox108.SuspendLayout();
-            this.groupBox109.SuspendLayout();
-            this.groupBox110.SuspendLayout();
-            this.groupBox111.SuspendLayout();
-            this.groupBox113.SuspendLayout();
-            this.groupBox114.SuspendLayout();
-            this.groupBox52.SuspendLayout();
-            this.groupBox54.SuspendLayout();
-            this.groupBox55.SuspendLayout();
-            this.groupBox39.SuspendLayout();
-            this.groupBox40.SuspendLayout();
-            this.groupBox41.SuspendLayout();
-            this.groupBox43.SuspendLayout();
-            this.groupBox44.SuspendLayout();
-            this.groupBox69.SuspendLayout();
-            this.groupBox70.SuspendLayout();
-            this.groupBox72.SuspendLayout();
-            this.groupBox73.SuspendLayout();
-            this.groupBox76.SuspendLayout();
-            this.groupBox78.SuspendLayout();
-            this.groupBox79.SuspendLayout();
-            this.groupBox80.SuspendLayout();
-            this.groupBox81.SuspendLayout();
-            this.groupBox82.SuspendLayout();
-            this.groupBox83.SuspendLayout();
-            this.groupBox85.SuspendLayout();
-            this.groupBox86.SuspendLayout();
-            this.groupBox87.SuspendLayout();
-            this.groupBox88.SuspendLayout();
-            this.groupBox90.SuspendLayout();
-            this.groupBox91.SuspendLayout();
-            this.groupBox118.SuspendLayout();
-            this.groupBox120.SuspendLayout();
-            this.groupBox121.SuspendLayout();
-            this.groupBox122.SuspendLayout();
-            this.groupBox123.SuspendLayout();
-            this.groupBox125.SuspendLayout();
-            this.groupBox126.SuspendLayout();
-            this.groupBox129.SuspendLayout();
-            this.groupBox131.SuspendLayout();
-            this.groupBox132.SuspendLayout();
-            this.groupBox135.SuspendLayout();
-            this.groupBox136.SuspendLayout();
-            this.groupBox137.SuspendLayout();
-            this.groupBox139.SuspendLayout();
-            this.groupBox140.SuspendLayout();
-            this.groupBox141.SuspendLayout();
-            this.groupBox142.SuspendLayout();
-            this.groupBox144.SuspendLayout();
-            this.groupBox145.SuspendLayout();
-            this.groupBox148.SuspendLayout();
-            this.groupBox150.SuspendLayout();
-            this.groupBox151.SuspendLayout();
-            this.groupBox152.SuspendLayout();
-            this.groupBox153.SuspendLayout();
-            this.groupBox154.SuspendLayout();
-            this.groupBox155.SuspendLayout();
-            this.groupBox157.SuspendLayout();
-            this.groupBox158.SuspendLayout();
-            this.groupBox159.SuspendLayout();
-            this.groupBox160.SuspendLayout();
-            this.groupBox162.SuspendLayout();
-            this.groupBox163.SuspendLayout();
-            this.groupBox166.SuspendLayout();
-            this.groupBox168.SuspendLayout();
-            this.groupBox169.SuspendLayout();
-            this.groupBox170.SuspendLayout();
-            this.groupBox171.SuspendLayout();
-            this.groupBox173.SuspendLayout();
-            this.groupBox174.SuspendLayout();
-            this.groupBox177.SuspendLayout();
-            this.groupBox179.SuspendLayout();
-            this.groupBox180.SuspendLayout();
-            this.groupBox231.SuspendLayout();
-            this.groupBox232.SuspendLayout();
-            this.groupBox233.SuspendLayout();
-            this.groupBox235.SuspendLayout();
-            this.groupBox236.SuspendLayout();
-            this.groupBox237.SuspendLayout();
-            this.groupBox238.SuspendLayout();
-            this.groupBox240.SuspendLayout();
-            this.groupBox241.SuspendLayout();
-            this.groupBox244.SuspendLayout();
-            this.groupBox246.SuspendLayout();
-            this.groupBox247.SuspendLayout();
-            this.groupBox248.SuspendLayout();
-            this.groupBox249.SuspendLayout();
-            this.groupBox250.SuspendLayout();
-            this.groupBox251.SuspendLayout();
-            this.groupBox253.SuspendLayout();
-            this.groupBox254.SuspendLayout();
-            this.groupBox255.SuspendLayout();
-            this.groupBox256.SuspendLayout();
-            this.groupBox258.SuspendLayout();
-            this.groupBox259.SuspendLayout();
-            this.groupBox262.SuspendLayout();
-            this.groupBox264.SuspendLayout();
-            this.groupBox265.SuspendLayout();
-            this.groupBox266.SuspendLayout();
-            this.groupBox267.SuspendLayout();
-            this.groupBox269.SuspendLayout();
-            this.groupBox270.SuspendLayout();
-            this.groupBox273.SuspendLayout();
-            this.groupBox275.SuspendLayout();
-            this.groupBox276.SuspendLayout();
             this.groupBox279.SuspendLayout();
             this.groupBox280.SuspendLayout();
             this.groupBox281.SuspendLayout();
@@ -622,6 +489,135 @@
             this.groupBox321.SuspendLayout();
             this.groupBox323.SuspendLayout();
             this.groupBox324.SuspendLayout();
+            this.groupBox231.SuspendLayout();
+            this.groupBox232.SuspendLayout();
+            this.groupBox233.SuspendLayout();
+            this.groupBox235.SuspendLayout();
+            this.groupBox236.SuspendLayout();
+            this.groupBox237.SuspendLayout();
+            this.groupBox238.SuspendLayout();
+            this.groupBox240.SuspendLayout();
+            this.groupBox241.SuspendLayout();
+            this.groupBox244.SuspendLayout();
+            this.groupBox246.SuspendLayout();
+            this.groupBox247.SuspendLayout();
+            this.groupBox248.SuspendLayout();
+            this.groupBox249.SuspendLayout();
+            this.groupBox250.SuspendLayout();
+            this.groupBox251.SuspendLayout();
+            this.groupBox253.SuspendLayout();
+            this.groupBox254.SuspendLayout();
+            this.groupBox255.SuspendLayout();
+            this.groupBox256.SuspendLayout();
+            this.groupBox258.SuspendLayout();
+            this.groupBox259.SuspendLayout();
+            this.groupBox262.SuspendLayout();
+            this.groupBox264.SuspendLayout();
+            this.groupBox265.SuspendLayout();
+            this.groupBox266.SuspendLayout();
+            this.groupBox267.SuspendLayout();
+            this.groupBox269.SuspendLayout();
+            this.groupBox270.SuspendLayout();
+            this.groupBox273.SuspendLayout();
+            this.groupBox275.SuspendLayout();
+            this.groupBox276.SuspendLayout();
+            this.groupBox135.SuspendLayout();
+            this.groupBox136.SuspendLayout();
+            this.groupBox137.SuspendLayout();
+            this.groupBox139.SuspendLayout();
+            this.groupBox140.SuspendLayout();
+            this.groupBox141.SuspendLayout();
+            this.groupBox142.SuspendLayout();
+            this.groupBox144.SuspendLayout();
+            this.groupBox145.SuspendLayout();
+            this.groupBox148.SuspendLayout();
+            this.groupBox150.SuspendLayout();
+            this.groupBox151.SuspendLayout();
+            this.groupBox152.SuspendLayout();
+            this.groupBox153.SuspendLayout();
+            this.groupBox154.SuspendLayout();
+            this.groupBox155.SuspendLayout();
+            this.groupBox157.SuspendLayout();
+            this.groupBox158.SuspendLayout();
+            this.groupBox159.SuspendLayout();
+            this.groupBox160.SuspendLayout();
+            this.groupBox162.SuspendLayout();
+            this.groupBox163.SuspendLayout();
+            this.groupBox166.SuspendLayout();
+            this.groupBox168.SuspendLayout();
+            this.groupBox169.SuspendLayout();
+            this.groupBox170.SuspendLayout();
+            this.groupBox171.SuspendLayout();
+            this.groupBox173.SuspendLayout();
+            this.groupBox174.SuspendLayout();
+            this.groupBox177.SuspendLayout();
+            this.groupBox179.SuspendLayout();
+            this.groupBox180.SuspendLayout();
+            this.groupBox39.SuspendLayout();
+            this.groupBox40.SuspendLayout();
+            this.groupBox41.SuspendLayout();
+            this.groupBox43.SuspendLayout();
+            this.groupBox44.SuspendLayout();
+            this.groupBox69.SuspendLayout();
+            this.groupBox70.SuspendLayout();
+            this.groupBox72.SuspendLayout();
+            this.groupBox73.SuspendLayout();
+            this.groupBox76.SuspendLayout();
+            this.groupBox78.SuspendLayout();
+            this.groupBox79.SuspendLayout();
+            this.groupBox80.SuspendLayout();
+            this.groupBox81.SuspendLayout();
+            this.groupBox82.SuspendLayout();
+            this.groupBox83.SuspendLayout();
+            this.groupBox85.SuspendLayout();
+            this.groupBox86.SuspendLayout();
+            this.groupBox87.SuspendLayout();
+            this.groupBox88.SuspendLayout();
+            this.groupBox90.SuspendLayout();
+            this.groupBox91.SuspendLayout();
+            this.groupBox118.SuspendLayout();
+            this.groupBox120.SuspendLayout();
+            this.groupBox121.SuspendLayout();
+            this.groupBox122.SuspendLayout();
+            this.groupBox123.SuspendLayout();
+            this.groupBox125.SuspendLayout();
+            this.groupBox126.SuspendLayout();
+            this.groupBox129.SuspendLayout();
+            this.groupBox131.SuspendLayout();
+            this.groupBox132.SuspendLayout();
+            this.groupBox45.SuspendLayout();
+            this.groupBox57.SuspendLayout();
+            this.groupBox58.SuspendLayout();
+            this.groupBox60.SuspendLayout();
+            this.groupBox61.SuspendLayout();
+            this.groupBox62.SuspendLayout();
+            this.groupBox63.SuspendLayout();
+            this.groupBox65.SuspendLayout();
+            this.groupBox66.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.groupBox48.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox51.SuspendLayout();
+            this.groupBox93.SuspendLayout();
+            this.groupBox94.SuspendLayout();
+            this.groupBox95.SuspendLayout();
+            this.groupBox97.SuspendLayout();
+            this.groupBox98.SuspendLayout();
+            this.groupBox99.SuspendLayout();
+            this.groupBox100.SuspendLayout();
+            this.groupBox102.SuspendLayout();
+            this.groupBox103.SuspendLayout();
+            this.groupBox106.SuspendLayout();
+            this.groupBox108.SuspendLayout();
+            this.groupBox109.SuspendLayout();
+            this.groupBox110.SuspendLayout();
+            this.groupBox111.SuspendLayout();
+            this.groupBox113.SuspendLayout();
+            this.groupBox114.SuspendLayout();
+            this.groupBox52.SuspendLayout();
+            this.groupBox54.SuspendLayout();
+            this.groupBox55.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -737,7 +733,7 @@
             this.PersuasionProficiencyToggle.AutoSize = true;
             this.PersuasionProficiencyToggle.Location = new System.Drawing.Point(845, 224);
             this.PersuasionProficiencyToggle.Name = "PersuasionProficiencyToggle";
-            this.PersuasionProficiencyToggle.Size = new System.Drawing.Size(101, 21);
+            this.PersuasionProficiencyToggle.Size = new System.Drawing.Size(78, 17);
             this.PersuasionProficiencyToggle.TabIndex = 124;
             this.PersuasionProficiencyToggle.Text = "Persuasion";
             this.PersuasionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -748,7 +744,7 @@
             this.PerceptionProficiencyToggle.AutoSize = true;
             this.PerceptionProficiencyToggle.Location = new System.Drawing.Point(697, 220);
             this.PerceptionProficiencyToggle.Name = "PerceptionProficiencyToggle";
-            this.PerceptionProficiencyToggle.Size = new System.Drawing.Size(98, 21);
+            this.PerceptionProficiencyToggle.Size = new System.Drawing.Size(77, 17);
             this.PerceptionProficiencyToggle.TabIndex = 119;
             this.PerceptionProficiencyToggle.Text = "Perception";
             this.PerceptionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -759,7 +755,7 @@
             this.PerformanceProficiencyToggle.AutoSize = true;
             this.PerformanceProficiencyToggle.Location = new System.Drawing.Point(845, 205);
             this.PerformanceProficiencyToggle.Name = "PerformanceProficiencyToggle";
-            this.PerformanceProficiencyToggle.Size = new System.Drawing.Size(111, 21);
+            this.PerformanceProficiencyToggle.Size = new System.Drawing.Size(86, 17);
             this.PerformanceProficiencyToggle.TabIndex = 123;
             this.PerformanceProficiencyToggle.Text = "Performance";
             this.PerformanceProficiencyToggle.UseVisualStyleBackColor = true;
@@ -770,7 +766,7 @@
             this.DeceptionProficiencyToggle.AutoSize = true;
             this.DeceptionProficiencyToggle.Location = new System.Drawing.Point(845, 167);
             this.DeceptionProficiencyToggle.Name = "DeceptionProficiencyToggle";
-            this.DeceptionProficiencyToggle.Size = new System.Drawing.Size(94, 21);
+            this.DeceptionProficiencyToggle.Size = new System.Drawing.Size(75, 17);
             this.DeceptionProficiencyToggle.TabIndex = 121;
             this.DeceptionProficiencyToggle.Text = "Deception";
             this.DeceptionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -781,7 +777,7 @@
             this.ReligionProficiencyToggle.AutoSize = true;
             this.ReligionProficiencyToggle.Location = new System.Drawing.Point(534, 238);
             this.ReligionProficiencyToggle.Name = "ReligionProficiencyToggle";
-            this.ReligionProficiencyToggle.Size = new System.Drawing.Size(81, 21);
+            this.ReligionProficiencyToggle.Size = new System.Drawing.Size(64, 17);
             this.ReligionProficiencyToggle.TabIndex = 109;
             this.ReligionProficiencyToggle.Text = "Religion";
             this.ReligionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -792,7 +788,7 @@
             this.IntimidationProficiencyToggle.AutoSize = true;
             this.IntimidationProficiencyToggle.Location = new System.Drawing.Point(845, 186);
             this.IntimidationProficiencyToggle.Name = "IntimidationProficiencyToggle";
-            this.IntimidationProficiencyToggle.Size = new System.Drawing.Size(101, 21);
+            this.IntimidationProficiencyToggle.Size = new System.Drawing.Size(79, 17);
             this.IntimidationProficiencyToggle.TabIndex = 122;
             this.IntimidationProficiencyToggle.Text = "Intimidation";
             this.IntimidationProficiencyToggle.UseVisualStyleBackColor = true;
@@ -803,7 +799,7 @@
             this.MedicineProficiencyToggle.AutoSize = true;
             this.MedicineProficiencyToggle.Location = new System.Drawing.Point(697, 201);
             this.MedicineProficiencyToggle.Name = "MedicineProficiencyToggle";
-            this.MedicineProficiencyToggle.Size = new System.Drawing.Size(86, 21);
+            this.MedicineProficiencyToggle.Size = new System.Drawing.Size(69, 17);
             this.MedicineProficiencyToggle.TabIndex = 118;
             this.MedicineProficiencyToggle.Text = "Medicine";
             this.MedicineProficiencyToggle.UseVisualStyleBackColor = true;
@@ -814,7 +810,7 @@
             this.NatureProficiencyToggle.AutoSize = true;
             this.NatureProficiencyToggle.Location = new System.Drawing.Point(534, 220);
             this.NatureProficiencyToggle.Name = "NatureProficiencyToggle";
-            this.NatureProficiencyToggle.Size = new System.Drawing.Size(73, 21);
+            this.NatureProficiencyToggle.Size = new System.Drawing.Size(58, 17);
             this.NatureProficiencyToggle.TabIndex = 108;
             this.NatureProficiencyToggle.Text = "Nature";
             this.NatureProficiencyToggle.UseVisualStyleBackColor = true;
@@ -825,7 +821,7 @@
             this.InsightProficiencyToggle.AutoSize = true;
             this.InsightProficiencyToggle.Location = new System.Drawing.Point(697, 182);
             this.InsightProficiencyToggle.Name = "InsightProficiencyToggle";
-            this.InsightProficiencyToggle.Size = new System.Drawing.Size(71, 21);
+            this.InsightProficiencyToggle.Size = new System.Drawing.Size(57, 17);
             this.InsightProficiencyToggle.TabIndex = 117;
             this.InsightProficiencyToggle.Text = "Insight";
             this.InsightProficiencyToggle.UseVisualStyleBackColor = true;
@@ -836,7 +832,7 @@
             this.AnimalHandlingProficiencyToggle.AutoSize = true;
             this.AnimalHandlingProficiencyToggle.Location = new System.Drawing.Point(697, 163);
             this.AnimalHandlingProficiencyToggle.Name = "AnimalHandlingProficiencyToggle";
-            this.AnimalHandlingProficiencyToggle.Size = new System.Drawing.Size(72, 21);
+            this.AnimalHandlingProficiencyToggle.Size = new System.Drawing.Size(57, 17);
             this.AnimalHandlingProficiencyToggle.TabIndex = 116;
             this.AnimalHandlingProficiencyToggle.Text = "Animal";
             this.AnimalHandlingProficiencyToggle.UseVisualStyleBackColor = true;
@@ -847,7 +843,7 @@
             this.InvestigationProficiencyToggle.AutoSize = true;
             this.InvestigationProficiencyToggle.Location = new System.Drawing.Point(534, 201);
             this.InvestigationProficiencyToggle.Name = "InvestigationProficiencyToggle";
-            this.InvestigationProficiencyToggle.Size = new System.Drawing.Size(109, 21);
+            this.InvestigationProficiencyToggle.Size = new System.Drawing.Size(86, 17);
             this.InvestigationProficiencyToggle.TabIndex = 107;
             this.InvestigationProficiencyToggle.Text = "Investigation";
             this.InvestigationProficiencyToggle.UseVisualStyleBackColor = true;
@@ -858,7 +854,7 @@
             this.HistoryProficiencyToggle.AutoSize = true;
             this.HistoryProficiencyToggle.Location = new System.Drawing.Point(534, 182);
             this.HistoryProficiencyToggle.Name = "HistoryProficiencyToggle";
-            this.HistoryProficiencyToggle.Size = new System.Drawing.Size(74, 21);
+            this.HistoryProficiencyToggle.Size = new System.Drawing.Size(58, 17);
             this.HistoryProficiencyToggle.TabIndex = 106;
             this.HistoryProficiencyToggle.Text = "History";
             this.HistoryProficiencyToggle.UseVisualStyleBackColor = true;
@@ -869,7 +865,7 @@
             this.ArcanaProficiencyToggle.AutoSize = true;
             this.ArcanaProficiencyToggle.Location = new System.Drawing.Point(534, 163);
             this.ArcanaProficiencyToggle.Name = "ArcanaProficiencyToggle";
-            this.ArcanaProficiencyToggle.Size = new System.Drawing.Size(75, 21);
+            this.ArcanaProficiencyToggle.Size = new System.Drawing.Size(60, 17);
             this.ArcanaProficiencyToggle.TabIndex = 105;
             this.ArcanaProficiencyToggle.Text = "Arcana";
             this.ArcanaProficiencyToggle.UseVisualStyleBackColor = true;
@@ -881,7 +877,7 @@
             this.StealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.StealthLabel.Location = new System.Drawing.Point(334, 206);
             this.StealthLabel.Name = "StealthLabel";
-            this.StealthLabel.Size = new System.Drawing.Size(14, 15);
+            this.StealthLabel.Size = new System.Drawing.Size(13, 13);
             this.StealthLabel.TabIndex = 104;
             this.StealthLabel.Text = "0";
             // 
@@ -899,7 +895,7 @@
             this.StealthProficiencyToggle.AutoSize = true;
             this.StealthProficiencyToggle.Location = new System.Drawing.Point(227, 203);
             this.StealthProficiencyToggle.Name = "StealthProficiencyToggle";
-            this.StealthProficiencyToggle.Size = new System.Drawing.Size(74, 21);
+            this.StealthProficiencyToggle.Size = new System.Drawing.Size(59, 17);
             this.StealthProficiencyToggle.TabIndex = 103;
             this.StealthProficiencyToggle.Text = "Stealth";
             this.StealthProficiencyToggle.UseVisualStyleBackColor = true;
@@ -910,7 +906,7 @@
             this.SurvivalProficiencyToggle.AutoSize = true;
             this.SurvivalProficiencyToggle.Location = new System.Drawing.Point(697, 239);
             this.SurvivalProficiencyToggle.Name = "SurvivalProficiencyToggle";
-            this.SurvivalProficiencyToggle.Size = new System.Drawing.Size(80, 21);
+            this.SurvivalProficiencyToggle.Size = new System.Drawing.Size(64, 17);
             this.SurvivalProficiencyToggle.TabIndex = 120;
             this.SurvivalProficiencyToggle.Text = "Survival";
             this.SurvivalProficiencyToggle.UseVisualStyleBackColor = true;
@@ -921,7 +917,7 @@
             this.SleightOfHandProficiencyToggle.AutoSize = true;
             this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(227, 185);
             this.SleightOfHandProficiencyToggle.Name = "SleightOfHandProficiencyToggle";
-            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(108, 21);
+            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(85, 17);
             this.SleightOfHandProficiencyToggle.TabIndex = 102;
             this.SleightOfHandProficiencyToggle.Text = "Sle. of Hand";
             this.SleightOfHandProficiencyToggle.UseVisualStyleBackColor = true;
@@ -932,7 +928,7 @@
             this.AcrobaticsProficiencyToggle.AutoSize = true;
             this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(227, 167);
             this.AcrobaticsProficiencyToggle.Name = "AcrobaticsProficiencyToggle";
-            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(96, 21);
+            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(76, 17);
             this.AcrobaticsProficiencyToggle.TabIndex = 101;
             this.AcrobaticsProficiencyToggle.Text = "Acrobatics";
             this.AcrobaticsProficiencyToggle.UseVisualStyleBackColor = true;
@@ -943,7 +939,7 @@
             this.AthleticsProficiencyToggle.AutoSize = true;
             this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(72, 167);
             this.AthleticsProficiencyToggle.Name = "AthleticsProficiencyToggle";
-            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(83, 21);
+            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(66, 17);
             this.AthleticsProficiencyToggle.TabIndex = 99;
             this.AthleticsProficiencyToggle.Text = "Athletics";
             this.AthleticsProficiencyToggle.UseVisualStyleBackColor = true;
@@ -952,12 +948,11 @@
             // JackOfAllTradesCheck
             // 
             this.JackOfAllTradesCheck.AutoSize = true;
-            this.JackOfAllTradesCheck.CheckAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(5, 200);
+            this.JackOfAllTradesCheck.Location = new System.Drawing.Point(9, 233);
             this.JackOfAllTradesCheck.Name = "JackOfAllTradesCheck";
-            this.JackOfAllTradesCheck.Size = new System.Drawing.Size(80, 55);
+            this.JackOfAllTradesCheck.Size = new System.Drawing.Size(111, 17);
             this.JackOfAllTradesCheck.TabIndex = 98;
-            this.JackOfAllTradesCheck.Text = "Jack of All \r\n   Trades";
+            this.JackOfAllTradesCheck.Text = "Jack of All Trades";
             this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
             this.JackOfAllTradesCheck.CheckedChanged += new System.EventHandler(this.JackOfAllTradesCheck_CheckedChanged);
             // 
@@ -976,13 +971,18 @@
             // 
             // DexterityAttributeDisplay
             // 
+            this.DexterityAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.DexterityAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DexterityAttributeDisplay.Enabled = false;
             this.DexterityAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.DexterityAttributeDisplay.Location = new System.Drawing.Point(3, 13);
+            this.DexterityAttributeDisplay.Location = new System.Drawing.Point(17, 24);
             this.DexterityAttributeDisplay.Name = "DexterityAttributeDisplay";
-            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(129, 46);
-            this.DexterityAttributeDisplay.TabIndex = 11;
+            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.DexterityAttributeDisplay.TabIndex = 16;
             this.DexterityAttributeDisplay.Text = "0";
-            this.DexterityAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.DexterityAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DexterityAttributeDisplay.TextChanged += new System.EventHandler(this.DexterityAttributeDisplay_TextChanged);
+            this.DexterityAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DexterityAttributeDisplay_KeyPress);
             // 
             // groupBox7
             // 
@@ -998,7 +998,7 @@
             // 
             this.DexterityModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DexterityModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.DexterityModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.DexterityModifierLabel.Name = "DexterityModifierLabel";
             this.DexterityModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.DexterityModifierLabel.TabIndex = 10;
@@ -1011,7 +1011,7 @@
             this.PersuasionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.PersuasionLabel.Location = new System.Drawing.Point(956, 228);
             this.PersuasionLabel.Name = "PersuasionLabel";
-            this.PersuasionLabel.Size = new System.Drawing.Size(14, 15);
+            this.PersuasionLabel.Size = new System.Drawing.Size(13, 13);
             this.PersuasionLabel.TabIndex = 80;
             this.PersuasionLabel.Text = "0";
             // 
@@ -1021,7 +1021,7 @@
             this.PerformanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.PerformanceLabel.Location = new System.Drawing.Point(956, 209);
             this.PerformanceLabel.Name = "PerformanceLabel";
-            this.PerformanceLabel.Size = new System.Drawing.Size(14, 15);
+            this.PerformanceLabel.Size = new System.Drawing.Size(13, 13);
             this.PerformanceLabel.TabIndex = 78;
             this.PerformanceLabel.Text = "0";
             // 
@@ -1031,7 +1031,7 @@
             this.IntimidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.IntimidationLabel.Location = new System.Drawing.Point(956, 190);
             this.IntimidationLabel.Name = "IntimidationLabel";
-            this.IntimidationLabel.Size = new System.Drawing.Size(14, 15);
+            this.IntimidationLabel.Size = new System.Drawing.Size(13, 13);
             this.IntimidationLabel.TabIndex = 76;
             this.IntimidationLabel.Text = "0";
             // 
@@ -1041,7 +1041,7 @@
             this.SurvivalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.SurvivalLabel.Location = new System.Drawing.Point(798, 243);
             this.SurvivalLabel.Name = "SurvivalLabel";
-            this.SurvivalLabel.Size = new System.Drawing.Size(14, 15);
+            this.SurvivalLabel.Size = new System.Drawing.Size(13, 13);
             this.SurvivalLabel.TabIndex = 74;
             this.SurvivalLabel.Text = "0";
             // 
@@ -1051,7 +1051,7 @@
             this.PerceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.PerceptionLabel.Location = new System.Drawing.Point(798, 224);
             this.PerceptionLabel.Name = "PerceptionLabel";
-            this.PerceptionLabel.Size = new System.Drawing.Size(14, 15);
+            this.PerceptionLabel.Size = new System.Drawing.Size(13, 13);
             this.PerceptionLabel.TabIndex = 72;
             this.PerceptionLabel.Text = "0";
             // 
@@ -1061,7 +1061,7 @@
             this.MedicineLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.MedicineLabel.Location = new System.Drawing.Point(798, 205);
             this.MedicineLabel.Name = "MedicineLabel";
-            this.MedicineLabel.Size = new System.Drawing.Size(14, 15);
+            this.MedicineLabel.Size = new System.Drawing.Size(13, 13);
             this.MedicineLabel.TabIndex = 70;
             this.MedicineLabel.Text = "0";
             // 
@@ -1071,7 +1071,7 @@
             this.ReligionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.ReligionLabel.Location = new System.Drawing.Point(645, 242);
             this.ReligionLabel.Name = "ReligionLabel";
-            this.ReligionLabel.Size = new System.Drawing.Size(14, 15);
+            this.ReligionLabel.Size = new System.Drawing.Size(13, 13);
             this.ReligionLabel.TabIndex = 68;
             this.ReligionLabel.Text = "0";
             // 
@@ -1081,7 +1081,7 @@
             this.NatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.NatureLabel.Location = new System.Drawing.Point(645, 224);
             this.NatureLabel.Name = "NatureLabel";
-            this.NatureLabel.Size = new System.Drawing.Size(14, 15);
+            this.NatureLabel.Size = new System.Drawing.Size(13, 13);
             this.NatureLabel.TabIndex = 66;
             this.NatureLabel.Text = "0";
             // 
@@ -1091,7 +1091,7 @@
             this.InvestigationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.InvestigationLabel.Location = new System.Drawing.Point(645, 205);
             this.InvestigationLabel.Name = "InvestigationLabel";
-            this.InvestigationLabel.Size = new System.Drawing.Size(14, 15);
+            this.InvestigationLabel.Size = new System.Drawing.Size(13, 13);
             this.InvestigationLabel.TabIndex = 64;
             this.InvestigationLabel.Text = "0";
             // 
@@ -1101,7 +1101,7 @@
             this.HistoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.HistoryLabel.Location = new System.Drawing.Point(645, 186);
             this.HistoryLabel.Name = "HistoryLabel";
-            this.HistoryLabel.Size = new System.Drawing.Size(14, 15);
+            this.HistoryLabel.Size = new System.Drawing.Size(13, 13);
             this.HistoryLabel.TabIndex = 62;
             this.HistoryLabel.Text = "0";
             // 
@@ -1111,7 +1111,7 @@
             this.SleightOfHandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.SleightOfHandLabel.Location = new System.Drawing.Point(334, 189);
             this.SleightOfHandLabel.Name = "SleightOfHandLabel";
-            this.SleightOfHandLabel.Size = new System.Drawing.Size(14, 15);
+            this.SleightOfHandLabel.Size = new System.Drawing.Size(13, 13);
             this.SleightOfHandLabel.TabIndex = 60;
             this.SleightOfHandLabel.Text = "0";
             // 
@@ -1121,7 +1121,7 @@
             this.DeceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.DeceptionLabel.Location = new System.Drawing.Point(956, 171);
             this.DeceptionLabel.Name = "DeceptionLabel";
-            this.DeceptionLabel.Size = new System.Drawing.Size(14, 15);
+            this.DeceptionLabel.Size = new System.Drawing.Size(13, 13);
             this.DeceptionLabel.TabIndex = 58;
             this.DeceptionLabel.Text = "0";
             // 
@@ -1131,7 +1131,7 @@
             this.AnimalHandlingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.AnimalHandlingLabel.Location = new System.Drawing.Point(798, 167);
             this.AnimalHandlingLabel.Name = "AnimalHandlingLabel";
-            this.AnimalHandlingLabel.Size = new System.Drawing.Size(14, 15);
+            this.AnimalHandlingLabel.Size = new System.Drawing.Size(13, 13);
             this.AnimalHandlingLabel.TabIndex = 56;
             this.AnimalHandlingLabel.Text = "0";
             // 
@@ -1141,7 +1141,7 @@
             this.ArcanaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.ArcanaLabel.Location = new System.Drawing.Point(645, 167);
             this.ArcanaLabel.Name = "ArcanaLabel";
-            this.ArcanaLabel.Size = new System.Drawing.Size(14, 15);
+            this.ArcanaLabel.Size = new System.Drawing.Size(13, 13);
             this.ArcanaLabel.TabIndex = 54;
             this.ArcanaLabel.Text = "0";
             // 
@@ -1151,7 +1151,7 @@
             this.InsightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.InsightLabel.Location = new System.Drawing.Point(798, 186);
             this.InsightLabel.Name = "InsightLabel";
-            this.InsightLabel.Size = new System.Drawing.Size(14, 15);
+            this.InsightLabel.Size = new System.Drawing.Size(13, 13);
             this.InsightLabel.TabIndex = 52;
             this.InsightLabel.Text = "0";
             // 
@@ -1161,7 +1161,7 @@
             this.AcrobaticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.AcrobaticsLabel.Location = new System.Drawing.Point(334, 172);
             this.AcrobaticsLabel.Name = "AcrobaticsLabel";
-            this.AcrobaticsLabel.Size = new System.Drawing.Size(14, 15);
+            this.AcrobaticsLabel.Size = new System.Drawing.Size(13, 13);
             this.AcrobaticsLabel.TabIndex = 50;
             this.AcrobaticsLabel.Text = "0";
             // 
@@ -1171,7 +1171,7 @@
             this.AthleticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.AthleticsLabel.Location = new System.Drawing.Point(175, 174);
             this.AthleticsLabel.Name = "AthleticsLabel";
-            this.AthleticsLabel.Size = new System.Drawing.Size(14, 15);
+            this.AthleticsLabel.Size = new System.Drawing.Size(13, 13);
             this.AthleticsLabel.TabIndex = 48;
             this.AthleticsLabel.Text = "0";
             // 
@@ -1201,7 +1201,7 @@
             this.CharismaSaveProficiencyToggle.AutoSize = true;
             this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(788, 14);
             this.CharismaSaveProficiencyToggle.Name = "CharismaSaveProficiencyToggle";
-            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
+            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
             this.CharismaSaveProficiencyToggle.TabIndex = 60;
             this.CharismaSaveProficiencyToggle.Text = "Cha. Save";
             this.CharismaSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1212,7 +1212,7 @@
             this.WisdomSaveProficiencyToggle.AutoSize = true;
             this.WisdomSaveProficiencyToggle.Location = new System.Drawing.Point(640, 14);
             this.WisdomSaveProficiencyToggle.Name = "WisdomSaveProficiencyToggle";
-            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(93, 21);
+            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(75, 17);
             this.WisdomSaveProficiencyToggle.TabIndex = 59;
             this.WisdomSaveProficiencyToggle.Text = "Wis. Save";
             this.WisdomSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1223,7 +1223,7 @@
             this.IntelligenceSaveProficiencyToggle.AutoSize = true;
             this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(477, 14);
             this.IntelligenceSaveProficiencyToggle.Name = "IntelligenceSaveProficiencyToggle";
-            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(85, 21);
+            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(69, 17);
             this.IntelligenceSaveProficiencyToggle.TabIndex = 58;
             this.IntelligenceSaveProficiencyToggle.Text = "Int. Save";
             this.IntelligenceSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1234,7 +1234,7 @@
             this.ConstitutionSaveProficiencyToggle.AutoSize = true;
             this.ConstitutionSaveProficiencyToggle.Location = new System.Drawing.Point(322, 14);
             this.ConstitutionSaveProficiencyToggle.Name = "ConstitutionSaveProficiencyToggle";
-            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
+            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
             this.ConstitutionSaveProficiencyToggle.TabIndex = 57;
             this.ConstitutionSaveProficiencyToggle.Text = "Con. Save";
             this.ConstitutionSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1245,7 +1245,7 @@
             this.DexteritySaveProficiencyToggle.AutoSize = true;
             this.DexteritySaveProficiencyToggle.Location = new System.Drawing.Point(170, 14);
             this.DexteritySaveProficiencyToggle.Name = "DexteritySaveProficiencyToggle";
-            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(94, 21);
+            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
             this.DexteritySaveProficiencyToggle.TabIndex = 56;
             this.DexteritySaveProficiencyToggle.Text = "Dex. Save";
             this.DexteritySaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1256,7 +1256,7 @@
             this.StrengthSaveProficiencyToggle.AutoSize = true;
             this.StrengthSaveProficiencyToggle.Location = new System.Drawing.Point(15, 13);
             this.StrengthSaveProficiencyToggle.Name = "StrengthSaveProficiencyToggle";
-            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(88, 21);
+            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(70, 17);
             this.StrengthSaveProficiencyToggle.TabIndex = 55;
             this.StrengthSaveProficiencyToggle.Text = "Str. Save";
             this.StrengthSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1268,7 +1268,7 @@
             this.StrengthSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.StrengthSaveLabel.Location = new System.Drawing.Point(118, 17);
             this.StrengthSaveLabel.Name = "StrengthSaveLabel";
-            this.StrengthSaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.StrengthSaveLabel.Size = new System.Drawing.Size(13, 13);
             this.StrengthSaveLabel.TabIndex = 48;
             this.StrengthSaveLabel.Text = "0";
             // 
@@ -1278,7 +1278,7 @@
             this.CharismaSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.CharismaSaveLabel.Location = new System.Drawing.Point(899, 17);
             this.CharismaSaveLabel.Name = "CharismaSaveLabel";
-            this.CharismaSaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.CharismaSaveLabel.Size = new System.Drawing.Size(13, 13);
             this.CharismaSaveLabel.TabIndex = 46;
             this.CharismaSaveLabel.Text = "0";
             // 
@@ -1288,7 +1288,7 @@
             this.WisdomSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.WisdomSaveLabel.Location = new System.Drawing.Point(741, 19);
             this.WisdomSaveLabel.Name = "WisdomSaveLabel";
-            this.WisdomSaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.WisdomSaveLabel.Size = new System.Drawing.Size(13, 13);
             this.WisdomSaveLabel.TabIndex = 44;
             this.WisdomSaveLabel.Text = "0";
             // 
@@ -1298,7 +1298,7 @@
             this.IntelligenceSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.IntelligenceSaveLabel.Location = new System.Drawing.Point(588, 19);
             this.IntelligenceSaveLabel.Name = "IntelligenceSaveLabel";
-            this.IntelligenceSaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.IntelligenceSaveLabel.Size = new System.Drawing.Size(13, 13);
             this.IntelligenceSaveLabel.TabIndex = 42;
             this.IntelligenceSaveLabel.Text = "0";
             // 
@@ -1308,7 +1308,7 @@
             this.ConstitutionSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.ConstitutionSaveLabel.Location = new System.Drawing.Point(434, 19);
             this.ConstitutionSaveLabel.Name = "ConstitutionSaveLabel";
-            this.ConstitutionSaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.ConstitutionSaveLabel.Size = new System.Drawing.Size(13, 13);
             this.ConstitutionSaveLabel.TabIndex = 40;
             this.ConstitutionSaveLabel.Text = "0";
             // 
@@ -1318,7 +1318,7 @@
             this.DexteritySaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.DexteritySaveLabel.Location = new System.Drawing.Point(277, 19);
             this.DexteritySaveLabel.Name = "DexteritySaveLabel";
-            this.DexteritySaveLabel.Size = new System.Drawing.Size(14, 15);
+            this.DexteritySaveLabel.Size = new System.Drawing.Size(13, 13);
             this.DexteritySaveLabel.TabIndex = 38;
             this.DexteritySaveLabel.Text = "0";
             // 
@@ -1337,14 +1337,18 @@
             // 
             // CharismaAttributeDisplay
             // 
-            this.CharismaAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CharismaAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.CharismaAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CharismaAttributeDisplay.Enabled = false;
             this.CharismaAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.CharismaAttributeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.CharismaAttributeDisplay.Location = new System.Drawing.Point(18, 25);
             this.CharismaAttributeDisplay.Name = "CharismaAttributeDisplay";
-            this.CharismaAttributeDisplay.Size = new System.Drawing.Size(129, 35);
-            this.CharismaAttributeDisplay.TabIndex = 11;
+            this.CharismaAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.CharismaAttributeDisplay.TabIndex = 12;
             this.CharismaAttributeDisplay.Text = "0";
-            this.CharismaAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.CharismaAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CharismaAttributeDisplay.TextChanged += new System.EventHandler(this.CharismaAttributeDisplay_TextChanged);
+            this.CharismaAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharismaAttributeDisplay_KeyPress);
             // 
             // groupBox3
             // 
@@ -1360,9 +1364,9 @@
             // 
             this.CharismaModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CharismaModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.CharismaModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.CharismaModifierLabel.Name = "CharismaModifierLabel";
-            this.CharismaModifierLabel.Size = new System.Drawing.Size(123, 16);
+            this.CharismaModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.CharismaModifierLabel.TabIndex = 10;
             this.CharismaModifierLabel.Text = "0";
             this.CharismaModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1383,14 +1387,18 @@
             // 
             // StrengthAttributeDisplay
             // 
-            this.StrengthAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StrengthAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.StrengthAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.StrengthAttributeDisplay.Enabled = false;
             this.StrengthAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.StrengthAttributeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.StrengthAttributeDisplay.Location = new System.Drawing.Point(17, 23);
             this.StrengthAttributeDisplay.Name = "StrengthAttributeDisplay";
-            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(129, 35);
-            this.StrengthAttributeDisplay.TabIndex = 12;
+            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.StrengthAttributeDisplay.TabIndex = 15;
             this.StrengthAttributeDisplay.Text = "0";
-            this.StrengthAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.StrengthAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StrengthAttributeDisplay.TextChanged += new System.EventHandler(this.StrengthAttributeDisplay_TextChanged);
+            this.StrengthAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.StrengthAttributeDisplay_KeyPress);
             // 
             // groupBox5
             // 
@@ -1406,7 +1414,7 @@
             // 
             this.StrengthModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.StrengthModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.StrengthModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.StrengthModifierLabel.Name = "StrengthModifierLabel";
             this.StrengthModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.StrengthModifierLabel.TabIndex = 10;
@@ -1428,14 +1436,18 @@
             // 
             // WisdomAttributeDisplay
             // 
-            this.WisdomAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.WisdomAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.WisdomAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.WisdomAttributeDisplay.Enabled = false;
             this.WisdomAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.WisdomAttributeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.WisdomAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.WisdomAttributeDisplay.Name = "WisdomAttributeDisplay";
-            this.WisdomAttributeDisplay.Size = new System.Drawing.Size(129, 35);
-            this.WisdomAttributeDisplay.TabIndex = 11;
+            this.WisdomAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.WisdomAttributeDisplay.TabIndex = 13;
             this.WisdomAttributeDisplay.Text = "0";
-            this.WisdomAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.WisdomAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WisdomAttributeDisplay.TextChanged += new System.EventHandler(this.WisdomAttributeDisplay_TextChanged);
+            this.WisdomAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WisdomAttributeDisplay_KeyPress);
             // 
             // groupBox13
             // 
@@ -1451,9 +1463,9 @@
             // 
             this.WisdomModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WisdomModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.WisdomModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.WisdomModifierLabel.Name = "WisdomModifierLabel";
-            this.WisdomModifierLabel.Size = new System.Drawing.Size(123, 19);
+            this.WisdomModifierLabel.Size = new System.Drawing.Size(123, 22);
             this.WisdomModifierLabel.TabIndex = 10;
             this.WisdomModifierLabel.Text = "0";
             this.WisdomModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1473,14 +1485,18 @@
             // 
             // IntelligenceAttributeDisplay
             // 
-            this.IntelligenceAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.IntelligenceAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.IntelligenceAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.IntelligenceAttributeDisplay.Enabled = false;
             this.IntelligenceAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.IntelligenceAttributeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.IntelligenceAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.IntelligenceAttributeDisplay.Name = "IntelligenceAttributeDisplay";
-            this.IntelligenceAttributeDisplay.Size = new System.Drawing.Size(129, 35);
-            this.IntelligenceAttributeDisplay.TabIndex = 11;
+            this.IntelligenceAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.IntelligenceAttributeDisplay.TabIndex = 14;
             this.IntelligenceAttributeDisplay.Text = "0";
-            this.IntelligenceAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.IntelligenceAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IntelligenceAttributeDisplay.TextChanged += new System.EventHandler(this.IntelligenceAttributeDisplay_TextChanged);
+            this.IntelligenceAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IntelligenceAttributeDisplay_KeyPress);
             // 
             // groupBox11
             // 
@@ -1496,9 +1512,9 @@
             // 
             this.IntelligenceModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IntelligenceModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntelligenceModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.IntelligenceModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.IntelligenceModifierLabel.Name = "IntelligenceModifierLabel";
-            this.IntelligenceModifierLabel.Size = new System.Drawing.Size(123, 19);
+            this.IntelligenceModifierLabel.Size = new System.Drawing.Size(123, 22);
             this.IntelligenceModifierLabel.TabIndex = 10;
             this.IntelligenceModifierLabel.Text = "0";
             this.IntelligenceModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1518,14 +1534,18 @@
             // 
             // ConstitutionAttributeDisplay
             // 
-            this.ConstitutionAttributeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ConstitutionAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.ConstitutionAttributeDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ConstitutionAttributeDisplay.Enabled = false;
             this.ConstitutionAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.ConstitutionAttributeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.ConstitutionAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.ConstitutionAttributeDisplay.Name = "ConstitutionAttributeDisplay";
-            this.ConstitutionAttributeDisplay.Size = new System.Drawing.Size(129, 35);
-            this.ConstitutionAttributeDisplay.TabIndex = 11;
+            this.ConstitutionAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.ConstitutionAttributeDisplay.TabIndex = 15;
             this.ConstitutionAttributeDisplay.Text = "0";
-            this.ConstitutionAttributeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ConstitutionAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ConstitutionAttributeDisplay.TextChanged += new System.EventHandler(this.ConstitutionAttributeDisplay_TextChanged);
+            this.ConstitutionAttributeDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ConstitutionAttributeDisplay_KeyPress);
             // 
             // groupBox9
             // 
@@ -1541,9 +1561,9 @@
             // 
             this.ConstitutionModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConstitutionModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionModifierLabel.Location = new System.Drawing.Point(3, 17);
+            this.ConstitutionModifierLabel.Location = new System.Drawing.Point(3, 14);
             this.ConstitutionModifierLabel.Name = "ConstitutionModifierLabel";
-            this.ConstitutionModifierLabel.Size = new System.Drawing.Size(123, 19);
+            this.ConstitutionModifierLabel.Size = new System.Drawing.Size(123, 22);
             this.ConstitutionModifierLabel.TabIndex = 10;
             this.ConstitutionModifierLabel.Text = "0";
             this.ConstitutionModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1564,16 +1584,16 @@
             // 
             this.CharacterNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CharacterNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.CharacterNameLabel.Location = new System.Drawing.Point(3, 17);
+            this.CharacterNameLabel.Location = new System.Drawing.Point(3, 14);
             this.CharacterNameLabel.Name = "CharacterNameLabel";
-            this.CharacterNameLabel.Size = new System.Drawing.Size(259, 36);
+            this.CharacterNameLabel.Size = new System.Drawing.Size(259, 39);
             this.CharacterNameLabel.TabIndex = 0;
             this.CharacterNameLabel.Text = "\"CharacterName\"";
             this.CharacterNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.RaceLabel);
+            this.groupBox15.Controls.Add(this.RaceDisplayTextBox);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox15.Location = new System.Drawing.Point(1435, 16);
             this.groupBox15.Name = "groupBox15";
@@ -1583,20 +1603,22 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Race";
             // 
-            // RaceLabel
+            // RaceDisplayTextBox
             // 
-            this.RaceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.RaceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.RaceLabel.Location = new System.Drawing.Point(3, 17);
-            this.RaceLabel.Name = "RaceLabel";
-            this.RaceLabel.Size = new System.Drawing.Size(219, 55);
-            this.RaceLabel.TabIndex = 0;
-            this.RaceLabel.Text = "\"Race\"";
-            this.RaceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RaceDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.RaceDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RaceDisplayTextBox.Enabled = false;
+            this.RaceDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RaceDisplayTextBox.Location = new System.Drawing.Point(6, 36);
+            this.RaceDisplayTextBox.Name = "RaceDisplayTextBox";
+            this.RaceDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.RaceDisplayTextBox.TabIndex = 3;
+            this.RaceDisplayTextBox.Text = "\"Race\"";
+            this.RaceDisplayTextBox.TextChanged += new System.EventHandler(this.RaceDisplayTextBox_TextChanged);
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.ClassLabel);
+            this.groupBox16.Controls.Add(this.ClassDisplayTextBox);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox16.Location = new System.Drawing.Point(1692, 16);
             this.groupBox16.Name = "groupBox16";
@@ -1606,20 +1628,22 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Class";
             // 
-            // ClassLabel
+            // ClassDisplayTextBox
             // 
-            this.ClassLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ClassLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ClassLabel.Location = new System.Drawing.Point(3, 17);
-            this.ClassLabel.Name = "ClassLabel";
-            this.ClassLabel.Size = new System.Drawing.Size(194, 55);
-            this.ClassLabel.TabIndex = 0;
-            this.ClassLabel.Text = "\"Class\"";
-            this.ClassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ClassDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ClassDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClassDisplayTextBox.Enabled = false;
+            this.ClassDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ClassDisplayTextBox.Location = new System.Drawing.Point(6, 36);
+            this.ClassDisplayTextBox.Name = "ClassDisplayTextBox";
+            this.ClassDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.ClassDisplayTextBox.TabIndex = 0;
+            this.ClassDisplayTextBox.Text = "\"Class\"";
+            this.ClassDisplayTextBox.TextChanged += new System.EventHandler(this.ClassDisplayTextBox_TextChanged);
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.BackgroundLabel);
+            this.groupBox17.Controls.Add(this.BackgroundDisplayTextBox);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox17.Location = new System.Drawing.Point(1435, 103);
             this.groupBox17.Name = "groupBox17";
@@ -1629,20 +1653,22 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Background";
             // 
-            // BackgroundLabel
+            // BackgroundDisplayTextBox
             // 
-            this.BackgroundLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BackgroundLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.BackgroundLabel.Location = new System.Drawing.Point(3, 17);
-            this.BackgroundLabel.Name = "BackgroundLabel";
-            this.BackgroundLabel.Size = new System.Drawing.Size(219, 52);
-            this.BackgroundLabel.TabIndex = 0;
-            this.BackgroundLabel.Text = "\"Background\"";
-            this.BackgroundLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BackgroundDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.BackgroundDisplayTextBox.Enabled = false;
+            this.BackgroundDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackgroundDisplayTextBox.Location = new System.Drawing.Point(6, 35);
+            this.BackgroundDisplayTextBox.Name = "BackgroundDisplayTextBox";
+            this.BackgroundDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.BackgroundDisplayTextBox.TabIndex = 2;
+            this.BackgroundDisplayTextBox.Text = "\"Background\"";
+            this.BackgroundDisplayTextBox.TextChanged += new System.EventHandler(this.BackgroundDisplayTextBox_TextChanged);
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.AlignmentLabel);
+            this.groupBox20.Controls.Add(this.AlignmentDisplayTextBox);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox20.Location = new System.Drawing.Point(1692, 103);
             this.groupBox20.Name = "groupBox20";
@@ -1652,20 +1678,22 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Alignment";
             // 
-            // AlignmentLabel
+            // AlignmentDisplayTextBox
             // 
-            this.AlignmentLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AlignmentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AlignmentLabel.Location = new System.Drawing.Point(3, 17);
-            this.AlignmentLabel.Name = "AlignmentLabel";
-            this.AlignmentLabel.Size = new System.Drawing.Size(191, 52);
-            this.AlignmentLabel.TabIndex = 0;
-            this.AlignmentLabel.Text = "\"Alignment\"";
-            this.AlignmentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AlignmentDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AlignmentDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AlignmentDisplayTextBox.Enabled = false;
+            this.AlignmentDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AlignmentDisplayTextBox.Location = new System.Drawing.Point(6, 35);
+            this.AlignmentDisplayTextBox.Name = "AlignmentDisplayTextBox";
+            this.AlignmentDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.AlignmentDisplayTextBox.TabIndex = 1;
+            this.AlignmentDisplayTextBox.Text = "\"Alignment\"";
+            this.AlignmentDisplayTextBox.TextChanged += new System.EventHandler(this.AlignmentDisplayTextBox_TextChanged);
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.ExperienceLabel);
+            this.groupBox21.Controls.Add(this.ExperienceDisplayTextBox);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox21.Location = new System.Drawing.Point(1432, 194);
             this.groupBox21.Name = "groupBox21";
@@ -1675,20 +1703,23 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Experience Points";
             // 
-            // ExperienceLabel
+            // ExperienceDisplayTextBox
             // 
-            this.ExperienceLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExperienceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ExperienceLabel.Location = new System.Drawing.Point(3, 17);
-            this.ExperienceLabel.Name = "ExperienceLabel";
-            this.ExperienceLabel.Size = new System.Drawing.Size(219, 55);
-            this.ExperienceLabel.TabIndex = 0;
-            this.ExperienceLabel.Text = "\"Experience Points\"";
-            this.ExperienceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ExperienceDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.ExperienceDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ExperienceDisplayTextBox.Enabled = false;
+            this.ExperienceDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExperienceDisplayTextBox.Location = new System.Drawing.Point(9, 37);
+            this.ExperienceDisplayTextBox.Name = "ExperienceDisplayTextBox";
+            this.ExperienceDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.ExperienceDisplayTextBox.TabIndex = 3;
+            this.ExperienceDisplayTextBox.Text = "\"Experience Points\"";
+            this.ExperienceDisplayTextBox.TextChanged += new System.EventHandler(this.ExperienceDisplayTextBox_TextChanged);
+            this.ExperienceDisplayTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ExperienceDisplayTextBox_KeyPress);
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.LevelLabel);
+            this.groupBox18.Controls.Add(this.LevelDisplayTextBox);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox18.Location = new System.Drawing.Point(1689, 194);
             this.groupBox18.Name = "groupBox18";
@@ -1698,56 +1729,74 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Level";
             // 
-            // LevelLabel
+            // LevelDisplayTextBox
             // 
-            this.LevelLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LevelLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.LevelLabel.Location = new System.Drawing.Point(3, 17);
-            this.LevelLabel.Name = "LevelLabel";
-            this.LevelLabel.Size = new System.Drawing.Size(194, 55);
-            this.LevelLabel.TabIndex = 0;
-            this.LevelLabel.Text = "\"Level\"";
-            this.LevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LevelDisplayTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LevelDisplayTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LevelDisplayTextBox.Enabled = false;
+            this.LevelDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LevelDisplayTextBox.Location = new System.Drawing.Point(9, 37);
+            this.LevelDisplayTextBox.Name = "LevelDisplayTextBox";
+            this.LevelDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.LevelDisplayTextBox.TabIndex = 2;
+            this.LevelDisplayTextBox.Text = "\"Level\"";
+            this.LevelDisplayTextBox.TextChanged += new System.EventHandler(this.LevelDisplayTextBox_TextChanged);
+            this.LevelDisplayTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LevelDisplayTextBox_KeyPress);
             // 
             // BondsDisplay
             // 
+            this.BondsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.BondsDisplay.Enabled = false;
             this.BondsDisplay.Location = new System.Drawing.Point(1692, 308);
             this.BondsDisplay.Name = "BondsDisplay";
             this.BondsDisplay.Size = new System.Drawing.Size(200, 142);
             this.BondsDisplay.TabIndex = 40;
             this.BondsDisplay.Text = "";
+            this.BondsDisplay.TextChanged += new System.EventHandler(this.BondsDisplay_TextChanged);
             // 
             // TraitsDisplay
             // 
+            this.TraitsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.TraitsDisplay.Enabled = false;
             this.TraitsDisplay.Location = new System.Drawing.Point(1435, 308);
             this.TraitsDisplay.Name = "TraitsDisplay";
             this.TraitsDisplay.Size = new System.Drawing.Size(225, 142);
             this.TraitsDisplay.TabIndex = 41;
             this.TraitsDisplay.Text = "";
+            this.TraitsDisplay.TextChanged += new System.EventHandler(this.TraitsDisplay_TextChanged);
             // 
             // IdealsDisplay
             // 
+            this.IdealsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.IdealsDisplay.Enabled = false;
             this.IdealsDisplay.Location = new System.Drawing.Point(1435, 498);
             this.IdealsDisplay.Name = "IdealsDisplay";
             this.IdealsDisplay.Size = new System.Drawing.Size(225, 139);
             this.IdealsDisplay.TabIndex = 42;
             this.IdealsDisplay.Text = "";
+            this.IdealsDisplay.TextChanged += new System.EventHandler(this.IdealsDisplay_TextChanged);
             // 
             // FlawsDisplay
             // 
+            this.FlawsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.FlawsDisplay.Enabled = false;
             this.FlawsDisplay.Location = new System.Drawing.Point(1692, 498);
             this.FlawsDisplay.Name = "FlawsDisplay";
             this.FlawsDisplay.Size = new System.Drawing.Size(200, 139);
             this.FlawsDisplay.TabIndex = 43;
             this.FlawsDisplay.Text = "";
+            this.FlawsDisplay.TextChanged += new System.EventHandler(this.FlawsDisplay_TextChanged);
             // 
             // BackstoryBox
             // 
+            this.BackstoryBox.BackColor = System.Drawing.SystemColors.Control;
+            this.BackstoryBox.Enabled = false;
             this.BackstoryBox.Location = new System.Drawing.Point(1435, 673);
             this.BackstoryBox.Name = "BackstoryBox";
             this.BackstoryBox.Size = new System.Drawing.Size(457, 334);
             this.BackstoryBox.TabIndex = 44;
             this.BackstoryBox.Text = "";
+            this.BackstoryBox.TextChanged += new System.EventHandler(this.BackstoryBox_TextChanged);
             // 
             // label15
             // 
@@ -1755,7 +1804,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.label15.Location = new System.Drawing.Point(1531, 292);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(42, 16);
+            this.label15.Size = new System.Drawing.Size(31, 13);
             this.label15.TabIndex = 45;
             this.label15.Text = "Traits";
             // 
@@ -1765,7 +1814,7 @@
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.label16.Location = new System.Drawing.Point(1777, 292);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(47, 16);
+            this.label16.Size = new System.Drawing.Size(37, 13);
             this.label16.TabIndex = 46;
             this.label16.Text = "Bonds";
             // 
@@ -1775,7 +1824,7 @@
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.label17.Location = new System.Drawing.Point(1529, 482);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(45, 16);
+            this.label17.Size = new System.Drawing.Size(35, 13);
             this.label17.TabIndex = 47;
             this.label17.Text = "Ideals";
             // 
@@ -1785,7 +1834,7 @@
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.label18.Location = new System.Drawing.Point(1780, 482);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(43, 16);
+            this.label18.Size = new System.Drawing.Size(34, 13);
             this.label18.TabIndex = 48;
             this.label18.Text = "Flaws";
             // 
@@ -1795,7 +1844,7 @@
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.label19.Location = new System.Drawing.Point(1653, 657);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 16);
+            this.label19.Size = new System.Drawing.Size(52, 13);
             this.label19.TabIndex = 49;
             this.label19.Text = "Backstory";
             // 
@@ -1830,14 +1879,22 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Class Features";
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(6, 16);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(343, 147);
+            this.listBox1.TabIndex = 72;
+            // 
             // listBox
             // 
             this.listBox.BackColor = System.Drawing.SystemColors.Control;
             this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 15;
-            this.listBox.Location = new System.Drawing.Point(8, 53);
+            this.listBox.Location = new System.Drawing.Point(8, 40);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(166, 169);
+            this.listBox.Size = new System.Drawing.Size(166, 173);
             this.listBox.TabIndex = 1;
             // 
             // groupBox25
@@ -1868,6 +1925,80 @@
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Death Saving Throws";
             // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(239, 72);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 107;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Location = new System.Drawing.Point(197, 72);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(15, 14);
+            this.checkBox5.TabIndex = 106;
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Location = new System.Drawing.Point(151, 73);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(15, 14);
+            this.checkBox6.TabIndex = 105;
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.label4.Location = new System.Drawing.Point(70, 72);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.TabIndex = 104;
+            this.label4.Text = "Fail";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.label3.Location = new System.Drawing.Point(69, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 103;
+            this.label3.Text = "Succeed";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(239, 40);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 102;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(197, 40);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 101;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(151, 41);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 100;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // groupBox27
             // 
             this.groupBox27.Controls.Add(this.numericUpDown1);
@@ -1886,7 +2017,7 @@
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
             this.numericUpDown1.Location = new System.Drawing.Point(6, 31);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(156, 62);
+            this.numericUpDown1.Size = new System.Drawing.Size(156, 50);
             this.numericUpDown1.TabIndex = 0;
             this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -1903,14 +2034,18 @@
             // 
             // MaxHealthDisplay
             // 
-            this.MaxHealthDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MaxHealthDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.MaxHealthDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MaxHealthDisplay.Enabled = false;
             this.MaxHealthDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.MaxHealthDisplay.Location = new System.Drawing.Point(3, 17);
+            this.MaxHealthDisplay.Location = new System.Drawing.Point(29, 17);
             this.MaxHealthDisplay.Name = "MaxHealthDisplay";
-            this.MaxHealthDisplay.Size = new System.Drawing.Size(159, 34);
+            this.MaxHealthDisplay.Size = new System.Drawing.Size(100, 26);
             this.MaxHealthDisplay.TabIndex = 0;
             this.MaxHealthDisplay.Text = "0";
-            this.MaxHealthDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.MaxHealthDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.MaxHealthDisplay.TextChanged += new System.EventHandler(this.MaxHealthDisplay_TextChanged);
+            this.MaxHealthDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MaxHealthDisplay_KeyPress);
             // 
             // groupBox29
             // 
@@ -1922,6 +2057,18 @@
             this.groupBox29.TabIndex = 57;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "Temp HP";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.BackColor = System.Drawing.SystemColors.Control;
+            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
+            this.numericUpDown2.Location = new System.Drawing.Point(3, 14);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(159, 29);
+            this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox30
             // 
@@ -1938,9 +2085,9 @@
             // 
             this.ArmorClassDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ArmorClassDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.ArmorClassDisplay.Location = new System.Drawing.Point(3, 17);
+            this.ArmorClassDisplay.Location = new System.Drawing.Point(3, 14);
             this.ArmorClassDisplay.Name = "ArmorClassDisplay";
-            this.ArmorClassDisplay.Size = new System.Drawing.Size(99, 77);
+            this.ArmorClassDisplay.Size = new System.Drawing.Size(99, 80);
             this.ArmorClassDisplay.TabIndex = 0;
             this.ArmorClassDisplay.Text = "0";
             this.ArmorClassDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1960,9 +2107,9 @@
             // 
             this.InitiativeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InitiativeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.InitiativeDisplay.Location = new System.Drawing.Point(3, 17);
+            this.InitiativeDisplay.Location = new System.Drawing.Point(3, 14);
             this.InitiativeDisplay.Name = "InitiativeDisplay";
-            this.InitiativeDisplay.Size = new System.Drawing.Size(99, 77);
+            this.InitiativeDisplay.Size = new System.Drawing.Size(99, 80);
             this.InitiativeDisplay.TabIndex = 0;
             this.InitiativeDisplay.Text = "0";
             this.InitiativeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1980,14 +2127,18 @@
             // 
             // SpeedDisplay
             // 
-            this.SpeedDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.SpeedDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.SpeedDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SpeedDisplay.Enabled = false;
             this.SpeedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.SpeedDisplay.Location = new System.Drawing.Point(3, 17);
+            this.SpeedDisplay.Location = new System.Drawing.Point(4, 42);
             this.SpeedDisplay.Name = "SpeedDisplay";
-            this.SpeedDisplay.Size = new System.Drawing.Size(102, 77);
+            this.SpeedDisplay.Size = new System.Drawing.Size(100, 23);
             this.SpeedDisplay.TabIndex = 0;
-            this.SpeedDisplay.Text = "0";
-            this.SpeedDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SpeedDisplay.Text = "30";
+            this.SpeedDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.SpeedDisplay.TextChanged += new System.EventHandler(this.SpeedDisplay_TextChanged);
+            this.SpeedDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SpeedDisplay_KeyPress);
             // 
             // groupBox33
             // 
@@ -2002,9 +2153,9 @@
             // 
             this.InspirationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InspirationDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.InspirationDisplay.Location = new System.Drawing.Point(3, 18);
+            this.InspirationDisplay.Location = new System.Drawing.Point(3, 16);
             this.InspirationDisplay.Name = "InspirationDisplay";
-            this.InspirationDisplay.Size = new System.Drawing.Size(57, 35);
+            this.InspirationDisplay.Size = new System.Drawing.Size(57, 37);
             this.InspirationDisplay.TabIndex = 0;
             this.InspirationDisplay.Text = "0";
             this.InspirationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2022,9 +2173,9 @@
             // 
             this.ProficiencyBonusDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProficiencyBonusDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.ProficiencyBonusDisplay.Location = new System.Drawing.Point(3, 18);
+            this.ProficiencyBonusDisplay.Location = new System.Drawing.Point(3, 16);
             this.ProficiencyBonusDisplay.Name = "ProficiencyBonusDisplay";
-            this.ProficiencyBonusDisplay.Size = new System.Drawing.Size(58, 35);
+            this.ProficiencyBonusDisplay.Size = new System.Drawing.Size(58, 37);
             this.ProficiencyBonusDisplay.TabIndex = 0;
             this.ProficiencyBonusDisplay.Text = "0";
             this.ProficiencyBonusDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2042,9 +2193,9 @@
             // 
             this.PassivePerceptionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PassivePerceptionDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.PassivePerceptionDisplay.Location = new System.Drawing.Point(3, 18);
+            this.PassivePerceptionDisplay.Location = new System.Drawing.Point(3, 16);
             this.PassivePerceptionDisplay.Name = "PassivePerceptionDisplay";
-            this.PassivePerceptionDisplay.Size = new System.Drawing.Size(59, 36);
+            this.PassivePerceptionDisplay.Size = new System.Drawing.Size(59, 38);
             this.PassivePerceptionDisplay.TabIndex = 0;
             this.PassivePerceptionDisplay.Text = "0";
             this.PassivePerceptionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2083,9 +2234,9 @@
             // 
             // groupBox37
             // 
-            this.groupBox37.Controls.Add(this.button4);
-            this.groupBox37.Controls.Add(this.button3);
-            this.groupBox37.Controls.Add(this.button1);
+            this.groupBox37.Controls.Add(this.ShowListWeaponsButton);
+            this.groupBox37.Controls.Add(this.ShowListArmorButton);
+            this.groupBox37.Controls.Add(this.ShowListItemsButton);
             this.groupBox37.Controls.Add(this.groupBox279);
             this.groupBox37.Controls.Add(this.groupBox231);
             this.groupBox37.Controls.Add(this.groupBox135);
@@ -2102,2020 +2253,666 @@
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Inventory";
             // 
-            // ProficencyBonusLabel
-            // 
-            this.ProficencyBonusLabel.AutoSize = true;
-            this.ProficencyBonusLabel.Location = new System.Drawing.Point(206, 392);
-            this.ProficencyBonusLabel.Name = "ProficencyBonusLabel";
-            this.ProficencyBonusLabel.Size = new System.Drawing.Size(118, 17);
-            this.ProficencyBonusLabel.TabIndex = 66;
-            this.ProficencyBonusLabel.Text = "Proficency Bonus";
-            // 
-            // PassivePerceptionLabel
-            // 
-            this.PassivePerceptionLabel.AutoSize = true;
-            this.PassivePerceptionLabel.Location = new System.Drawing.Point(206, 462);
-            this.PassivePerceptionLabel.Name = "PassivePerceptionLabel";
-            this.PassivePerceptionLabel.Size = new System.Drawing.Size(129, 17);
-            this.PassivePerceptionLabel.TabIndex = 67;
-            this.PassivePerceptionLabel.Text = "Passive Perception";
-            // 
-            // InspirationLabel
-            // 
-            this.InspirationLabel.AutoSize = true;
-            this.InspirationLabel.Location = new System.Drawing.Point(206, 323);
-            this.InspirationLabel.Name = "InspirationLabel";
-            this.InspirationLabel.Size = new System.Drawing.Size(73, 17);
-            this.InspirationLabel.TabIndex = 68;
-            this.InspirationLabel.Text = "Inspiration";
-            // 
-            // SaveCharacterButton
-            // 
-            this.SaveCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.SaveCharacterButton.Location = new System.Drawing.Point(8, 132);
-            this.SaveCharacterButton.Name = "SaveCharacterButton";
-            this.SaveCharacterButton.Size = new System.Drawing.Size(78, 43);
-            this.SaveCharacterButton.TabIndex = 69;
-            this.SaveCharacterButton.Text = "Save Sheet";
-            this.SaveCharacterButton.UseVisualStyleBackColor = true;
-            this.SaveCharacterButton.Click += new System.EventHandler(this.SaveCharacterButton_Click);
-            // 
-            // addToInventoryFormBindingSource
-            // 
-            this.addToInventoryFormBindingSource.DataSource = typeof(CharacterSheet.AddToInventoryForm);
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.BackColor = System.Drawing.SystemColors.Control;
-            this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.numericUpDown2.Location = new System.Drawing.Point(3, 17);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(159, 35);
-            this.numericUpDown2.TabIndex = 1;
-            this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(6, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(343, 154);
-            this.listBox1.TabIndex = 72;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(151, 41);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(18, 17);
-            this.checkBox1.TabIndex = 100;
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(197, 40);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(18, 17);
-            this.checkBox2.TabIndex = 101;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(239, 40);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(18, 17);
-            this.checkBox3.TabIndex = 102;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label3.Location = new System.Drawing.Point(69, 41);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 16);
-            this.label3.TabIndex = 103;
-            this.label3.Text = "Succeed";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label4.Location = new System.Drawing.Point(70, 72);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 16);
-            this.label4.TabIndex = 104;
-            this.label4.Text = "Fail";
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(239, 72);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(18, 17);
-            this.checkBox4.TabIndex = 107;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(197, 72);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(18, 17);
-            this.checkBox5.TabIndex = 106;
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(151, 73);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(18, 17);
-            this.checkBox6.TabIndex = 105;
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // groupBox45
-            // 
-            this.groupBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox45.Controls.Add(this.label6);
-            this.groupBox45.Controls.Add(this.groupBox57);
-            this.groupBox45.Controls.Add(this.groupBox46);
-            this.groupBox45.Controls.Add(this.groupBox48);
-            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox45.Location = new System.Drawing.Point(180, 57);
-            this.groupBox45.Name = "groupBox45";
-            this.groupBox45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox45.Size = new System.Drawing.Size(58, 47);
-            this.groupBox45.TabIndex = 77;
-            this.groupBox45.TabStop = false;
-            this.groupBox45.Text = "SP";
-            // 
-            // groupBox57
-            // 
-            this.groupBox57.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox57.Controls.Add(this.groupBox58);
-            this.groupBox57.Controls.Add(this.groupBox60);
-            this.groupBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox57.Location = new System.Drawing.Point(0, 49);
-            this.groupBox57.Name = "groupBox57";
-            this.groupBox57.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox57.Size = new System.Drawing.Size(58, 44);
-            this.groupBox57.TabIndex = 77;
-            this.groupBox57.TabStop = false;
-            this.groupBox57.Text = "SP";
-            // 
-            // groupBox58
-            // 
-            this.groupBox58.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox58.Controls.Add(this.groupBox59);
-            this.groupBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox58.Location = new System.Drawing.Point(3, 48);
-            this.groupBox58.Name = "groupBox58";
-            this.groupBox58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox58.Size = new System.Drawing.Size(58, 58);
-            this.groupBox58.TabIndex = 75;
-            this.groupBox58.TabStop = false;
-            this.groupBox58.Text = "CP";
-            // 
-            // groupBox59
-            // 
-            this.groupBox59.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox59.Location = new System.Drawing.Point(0, 55);
-            this.groupBox59.Name = "groupBox59";
-            this.groupBox59.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox59.Size = new System.Drawing.Size(58, 58);
-            this.groupBox59.TabIndex = 74;
-            this.groupBox59.TabStop = false;
-            this.groupBox59.Text = "SP";
-            // 
-            // groupBox60
-            // 
-            this.groupBox60.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox60.Controls.Add(this.groupBox61);
-            this.groupBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox60.Location = new System.Drawing.Point(0, 48);
-            this.groupBox60.Name = "groupBox60";
-            this.groupBox60.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox60.Size = new System.Drawing.Size(58, 58);
-            this.groupBox60.TabIndex = 74;
-            this.groupBox60.TabStop = false;
-            this.groupBox60.Text = "SP";
-            // 
-            // groupBox61
-            // 
-            this.groupBox61.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox61.Controls.Add(this.groupBox62);
-            this.groupBox61.Controls.Add(this.groupBox68);
-            this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox61.Location = new System.Drawing.Point(0, 0);
-            this.groupBox61.Name = "groupBox61";
-            this.groupBox61.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox61.Size = new System.Drawing.Size(58, 58);
-            this.groupBox61.TabIndex = 75;
-            this.groupBox61.TabStop = false;
-            this.groupBox61.Text = "CP";
-            // 
-            // groupBox62
-            // 
-            this.groupBox62.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox62.Controls.Add(this.groupBox63);
-            this.groupBox62.Controls.Add(this.groupBox65);
-            this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox62.Location = new System.Drawing.Point(0, 1);
-            this.groupBox62.Name = "groupBox62";
-            this.groupBox62.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox62.Size = new System.Drawing.Size(58, 58);
-            this.groupBox62.TabIndex = 77;
-            this.groupBox62.TabStop = false;
-            this.groupBox62.Text = "CP";
-            // 
-            // groupBox63
-            // 
-            this.groupBox63.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox63.Controls.Add(this.groupBox64);
-            this.groupBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox63.Location = new System.Drawing.Point(3, 55);
-            this.groupBox63.Name = "groupBox63";
-            this.groupBox63.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox63.Size = new System.Drawing.Size(58, 58);
-            this.groupBox63.TabIndex = 75;
-            this.groupBox63.TabStop = false;
-            this.groupBox63.Text = "CP";
-            // 
-            // groupBox64
-            // 
-            this.groupBox64.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox64.Location = new System.Drawing.Point(0, 55);
-            this.groupBox64.Name = "groupBox64";
-            this.groupBox64.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox64.Size = new System.Drawing.Size(58, 58);
-            this.groupBox64.TabIndex = 74;
-            this.groupBox64.TabStop = false;
-            this.groupBox64.Text = "SP";
-            // 
-            // groupBox65
-            // 
-            this.groupBox65.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox65.Controls.Add(this.groupBox66);
-            this.groupBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox65.Location = new System.Drawing.Point(0, 55);
-            this.groupBox65.Name = "groupBox65";
-            this.groupBox65.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox65.Size = new System.Drawing.Size(58, 58);
-            this.groupBox65.TabIndex = 74;
-            this.groupBox65.TabStop = false;
-            this.groupBox65.Text = "SP";
-            // 
-            // groupBox66
-            // 
-            this.groupBox66.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox66.Controls.Add(this.groupBox67);
-            this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox66.Location = new System.Drawing.Point(0, 0);
-            this.groupBox66.Name = "groupBox66";
-            this.groupBox66.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox66.Size = new System.Drawing.Size(58, 58);
-            this.groupBox66.TabIndex = 75;
-            this.groupBox66.TabStop = false;
-            this.groupBox66.Text = "CP";
-            // 
-            // groupBox67
-            // 
-            this.groupBox67.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox67.Location = new System.Drawing.Point(0, 55);
-            this.groupBox67.Name = "groupBox67";
-            this.groupBox67.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox67.Size = new System.Drawing.Size(58, 58);
-            this.groupBox67.TabIndex = 74;
-            this.groupBox67.TabStop = false;
-            this.groupBox67.Text = "SP";
-            // 
-            // groupBox68
-            // 
-            this.groupBox68.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox68.Location = new System.Drawing.Point(0, 55);
-            this.groupBox68.Name = "groupBox68";
-            this.groupBox68.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox68.Size = new System.Drawing.Size(58, 58);
-            this.groupBox68.TabIndex = 74;
-            this.groupBox68.TabStop = false;
-            this.groupBox68.Text = "SP";
-            // 
-            // groupBox46
-            // 
-            this.groupBox46.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox46.Controls.Add(this.groupBox47);
-            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox46.Location = new System.Drawing.Point(3, 49);
-            this.groupBox46.Name = "groupBox46";
-            this.groupBox46.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox46.Size = new System.Drawing.Size(58, 58);
-            this.groupBox46.TabIndex = 75;
-            this.groupBox46.TabStop = false;
-            this.groupBox46.Text = "CP";
-            // 
-            // groupBox47
-            // 
-            this.groupBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox47.Location = new System.Drawing.Point(0, 55);
-            this.groupBox47.Name = "groupBox47";
-            this.groupBox47.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox47.Size = new System.Drawing.Size(58, 58);
-            this.groupBox47.TabIndex = 74;
-            this.groupBox47.TabStop = false;
-            this.groupBox47.Text = "SP";
-            // 
-            // groupBox48
-            // 
-            this.groupBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox48.Controls.Add(this.groupBox49);
-            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox48.Location = new System.Drawing.Point(0, 49);
-            this.groupBox48.Name = "groupBox48";
-            this.groupBox48.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox48.Size = new System.Drawing.Size(58, 58);
-            this.groupBox48.TabIndex = 74;
-            this.groupBox48.TabStop = false;
-            this.groupBox48.Text = "SP";
-            // 
-            // groupBox49
-            // 
-            this.groupBox49.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox49.Controls.Add(this.groupBox51);
-            this.groupBox49.Controls.Add(this.groupBox50);
-            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox49.Location = new System.Drawing.Point(0, 0);
-            this.groupBox49.Name = "groupBox49";
-            this.groupBox49.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox49.Size = new System.Drawing.Size(58, 58);
-            this.groupBox49.TabIndex = 75;
-            this.groupBox49.TabStop = false;
-            this.groupBox49.Text = "CP";
-            // 
-            // groupBox51
-            // 
-            this.groupBox51.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox51.Controls.Add(this.groupBox93);
-            this.groupBox51.Controls.Add(this.groupBox52);
-            this.groupBox51.Controls.Add(this.groupBox54);
-            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox51.Location = new System.Drawing.Point(0, 1);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox51.Size = new System.Drawing.Size(58, 58);
-            this.groupBox51.TabIndex = 77;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "CP";
-            // 
-            // groupBox93
-            // 
-            this.groupBox93.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox93.Controls.Add(this.groupBox94);
-            this.groupBox93.Controls.Add(this.groupBox106);
-            this.groupBox93.Controls.Add(this.groupBox108);
-            this.groupBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox93.Location = new System.Drawing.Point(3, 1);
-            this.groupBox93.Name = "groupBox93";
-            this.groupBox93.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox93.Size = new System.Drawing.Size(58, 44);
-            this.groupBox93.TabIndex = 78;
-            this.groupBox93.TabStop = false;
-            this.groupBox93.Text = "SP";
-            // 
-            // groupBox94
-            // 
-            this.groupBox94.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox94.Controls.Add(this.groupBox95);
-            this.groupBox94.Controls.Add(this.groupBox97);
-            this.groupBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox94.Location = new System.Drawing.Point(0, 48);
-            this.groupBox94.Name = "groupBox94";
-            this.groupBox94.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox94.Size = new System.Drawing.Size(58, 44);
-            this.groupBox94.TabIndex = 77;
-            this.groupBox94.TabStop = false;
-            this.groupBox94.Text = "SP";
-            // 
-            // groupBox95
-            // 
-            this.groupBox95.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox95.Controls.Add(this.groupBox96);
-            this.groupBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox95.Location = new System.Drawing.Point(3, 48);
-            this.groupBox95.Name = "groupBox95";
-            this.groupBox95.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox95.Size = new System.Drawing.Size(58, 58);
-            this.groupBox95.TabIndex = 75;
-            this.groupBox95.TabStop = false;
-            this.groupBox95.Text = "CP";
-            // 
-            // groupBox96
-            // 
-            this.groupBox96.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox96.Location = new System.Drawing.Point(0, 55);
-            this.groupBox96.Name = "groupBox96";
-            this.groupBox96.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox96.Size = new System.Drawing.Size(58, 58);
-            this.groupBox96.TabIndex = 74;
-            this.groupBox96.TabStop = false;
-            this.groupBox96.Text = "SP";
-            // 
-            // groupBox97
-            // 
-            this.groupBox97.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox97.Controls.Add(this.groupBox98);
-            this.groupBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox97.Location = new System.Drawing.Point(0, 48);
-            this.groupBox97.Name = "groupBox97";
-            this.groupBox97.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox97.Size = new System.Drawing.Size(58, 58);
-            this.groupBox97.TabIndex = 74;
-            this.groupBox97.TabStop = false;
-            this.groupBox97.Text = "SP";
-            // 
-            // groupBox98
-            // 
-            this.groupBox98.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox98.Controls.Add(this.groupBox99);
-            this.groupBox98.Controls.Add(this.groupBox105);
-            this.groupBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox98.Location = new System.Drawing.Point(0, 0);
-            this.groupBox98.Name = "groupBox98";
-            this.groupBox98.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox98.Size = new System.Drawing.Size(58, 58);
-            this.groupBox98.TabIndex = 75;
-            this.groupBox98.TabStop = false;
-            this.groupBox98.Text = "CP";
-            // 
-            // groupBox99
-            // 
-            this.groupBox99.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox99.Controls.Add(this.groupBox100);
-            this.groupBox99.Controls.Add(this.groupBox102);
-            this.groupBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox99.Location = new System.Drawing.Point(0, 1);
-            this.groupBox99.Name = "groupBox99";
-            this.groupBox99.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox99.Size = new System.Drawing.Size(58, 58);
-            this.groupBox99.TabIndex = 77;
-            this.groupBox99.TabStop = false;
-            this.groupBox99.Text = "CP";
-            // 
-            // groupBox100
-            // 
-            this.groupBox100.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox100.Controls.Add(this.groupBox101);
-            this.groupBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox100.Location = new System.Drawing.Point(3, 55);
-            this.groupBox100.Name = "groupBox100";
-            this.groupBox100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox100.Size = new System.Drawing.Size(58, 58);
-            this.groupBox100.TabIndex = 75;
-            this.groupBox100.TabStop = false;
-            this.groupBox100.Text = "CP";
-            // 
-            // groupBox101
-            // 
-            this.groupBox101.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox101.Location = new System.Drawing.Point(0, 55);
-            this.groupBox101.Name = "groupBox101";
-            this.groupBox101.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox101.Size = new System.Drawing.Size(58, 58);
-            this.groupBox101.TabIndex = 74;
-            this.groupBox101.TabStop = false;
-            this.groupBox101.Text = "SP";
-            // 
-            // groupBox102
-            // 
-            this.groupBox102.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox102.Controls.Add(this.groupBox103);
-            this.groupBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox102.Location = new System.Drawing.Point(0, 55);
-            this.groupBox102.Name = "groupBox102";
-            this.groupBox102.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox102.Size = new System.Drawing.Size(58, 58);
-            this.groupBox102.TabIndex = 74;
-            this.groupBox102.TabStop = false;
-            this.groupBox102.Text = "SP";
-            // 
-            // groupBox103
-            // 
-            this.groupBox103.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox103.Controls.Add(this.groupBox104);
-            this.groupBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox103.Location = new System.Drawing.Point(0, 0);
-            this.groupBox103.Name = "groupBox103";
-            this.groupBox103.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox103.Size = new System.Drawing.Size(58, 58);
-            this.groupBox103.TabIndex = 75;
-            this.groupBox103.TabStop = false;
-            this.groupBox103.Text = "CP";
-            // 
-            // groupBox104
-            // 
-            this.groupBox104.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox104.Location = new System.Drawing.Point(0, 55);
-            this.groupBox104.Name = "groupBox104";
-            this.groupBox104.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox104.Size = new System.Drawing.Size(58, 58);
-            this.groupBox104.TabIndex = 74;
-            this.groupBox104.TabStop = false;
-            this.groupBox104.Text = "SP";
-            // 
-            // groupBox105
-            // 
-            this.groupBox105.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox105.Location = new System.Drawing.Point(0, 55);
-            this.groupBox105.Name = "groupBox105";
-            this.groupBox105.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox105.Size = new System.Drawing.Size(58, 58);
-            this.groupBox105.TabIndex = 74;
-            this.groupBox105.TabStop = false;
-            this.groupBox105.Text = "SP";
-            // 
-            // groupBox106
-            // 
-            this.groupBox106.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox106.Controls.Add(this.groupBox107);
-            this.groupBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox106.Location = new System.Drawing.Point(3, 48);
-            this.groupBox106.Name = "groupBox106";
-            this.groupBox106.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox106.Size = new System.Drawing.Size(58, 58);
-            this.groupBox106.TabIndex = 75;
-            this.groupBox106.TabStop = false;
-            this.groupBox106.Text = "CP";
-            // 
-            // groupBox107
-            // 
-            this.groupBox107.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox107.Location = new System.Drawing.Point(0, 55);
-            this.groupBox107.Name = "groupBox107";
-            this.groupBox107.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox107.Size = new System.Drawing.Size(58, 58);
-            this.groupBox107.TabIndex = 74;
-            this.groupBox107.TabStop = false;
-            this.groupBox107.Text = "SP";
-            // 
-            // groupBox108
-            // 
-            this.groupBox108.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox108.Controls.Add(this.groupBox109);
-            this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox108.Location = new System.Drawing.Point(0, 48);
-            this.groupBox108.Name = "groupBox108";
-            this.groupBox108.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox108.Size = new System.Drawing.Size(58, 58);
-            this.groupBox108.TabIndex = 74;
-            this.groupBox108.TabStop = false;
-            this.groupBox108.Text = "SP";
-            // 
-            // groupBox109
-            // 
-            this.groupBox109.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox109.Controls.Add(this.groupBox110);
-            this.groupBox109.Controls.Add(this.groupBox116);
-            this.groupBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox109.Location = new System.Drawing.Point(0, 0);
-            this.groupBox109.Name = "groupBox109";
-            this.groupBox109.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox109.Size = new System.Drawing.Size(58, 58);
-            this.groupBox109.TabIndex = 75;
-            this.groupBox109.TabStop = false;
-            this.groupBox109.Text = "CP";
-            // 
-            // groupBox110
-            // 
-            this.groupBox110.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox110.Controls.Add(this.groupBox111);
-            this.groupBox110.Controls.Add(this.groupBox113);
-            this.groupBox110.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox110.Location = new System.Drawing.Point(0, 1);
-            this.groupBox110.Name = "groupBox110";
-            this.groupBox110.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox110.Size = new System.Drawing.Size(58, 58);
-            this.groupBox110.TabIndex = 77;
-            this.groupBox110.TabStop = false;
-            this.groupBox110.Text = "CP";
-            // 
-            // groupBox111
-            // 
-            this.groupBox111.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox111.Controls.Add(this.groupBox112);
-            this.groupBox111.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox111.Location = new System.Drawing.Point(3, 55);
-            this.groupBox111.Name = "groupBox111";
-            this.groupBox111.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox111.Size = new System.Drawing.Size(58, 58);
-            this.groupBox111.TabIndex = 75;
-            this.groupBox111.TabStop = false;
-            this.groupBox111.Text = "CP";
-            // 
-            // groupBox112
-            // 
-            this.groupBox112.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox112.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox112.Location = new System.Drawing.Point(0, 55);
-            this.groupBox112.Name = "groupBox112";
-            this.groupBox112.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox112.Size = new System.Drawing.Size(58, 58);
-            this.groupBox112.TabIndex = 74;
-            this.groupBox112.TabStop = false;
-            this.groupBox112.Text = "SP";
-            // 
-            // groupBox113
-            // 
-            this.groupBox113.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox113.Controls.Add(this.groupBox114);
-            this.groupBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox113.Location = new System.Drawing.Point(0, 55);
-            this.groupBox113.Name = "groupBox113";
-            this.groupBox113.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox113.Size = new System.Drawing.Size(58, 58);
-            this.groupBox113.TabIndex = 74;
-            this.groupBox113.TabStop = false;
-            this.groupBox113.Text = "SP";
-            // 
-            // groupBox114
-            // 
-            this.groupBox114.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox114.Controls.Add(this.groupBox115);
-            this.groupBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox114.Location = new System.Drawing.Point(0, 0);
-            this.groupBox114.Name = "groupBox114";
-            this.groupBox114.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox114.Size = new System.Drawing.Size(58, 58);
-            this.groupBox114.TabIndex = 75;
-            this.groupBox114.TabStop = false;
-            this.groupBox114.Text = "CP";
-            // 
-            // groupBox115
-            // 
-            this.groupBox115.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox115.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox115.Location = new System.Drawing.Point(0, 55);
-            this.groupBox115.Name = "groupBox115";
-            this.groupBox115.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox115.Size = new System.Drawing.Size(58, 58);
-            this.groupBox115.TabIndex = 74;
-            this.groupBox115.TabStop = false;
-            this.groupBox115.Text = "SP";
-            // 
-            // groupBox116
-            // 
-            this.groupBox116.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox116.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox116.Location = new System.Drawing.Point(0, 55);
-            this.groupBox116.Name = "groupBox116";
-            this.groupBox116.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox116.Size = new System.Drawing.Size(58, 58);
-            this.groupBox116.TabIndex = 74;
-            this.groupBox116.TabStop = false;
-            this.groupBox116.Text = "SP";
-            // 
-            // groupBox52
-            // 
-            this.groupBox52.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox52.Controls.Add(this.groupBox53);
-            this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox52.Location = new System.Drawing.Point(3, 55);
-            this.groupBox52.Name = "groupBox52";
-            this.groupBox52.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox52.Size = new System.Drawing.Size(58, 58);
-            this.groupBox52.TabIndex = 75;
-            this.groupBox52.TabStop = false;
-            this.groupBox52.Text = "CP";
-            // 
-            // groupBox53
-            // 
-            this.groupBox53.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox53.Location = new System.Drawing.Point(0, 55);
-            this.groupBox53.Name = "groupBox53";
-            this.groupBox53.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox53.Size = new System.Drawing.Size(58, 58);
-            this.groupBox53.TabIndex = 74;
-            this.groupBox53.TabStop = false;
-            this.groupBox53.Text = "SP";
-            // 
-            // groupBox54
-            // 
-            this.groupBox54.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox54.Controls.Add(this.groupBox55);
-            this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox54.Location = new System.Drawing.Point(0, 55);
-            this.groupBox54.Name = "groupBox54";
-            this.groupBox54.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox54.Size = new System.Drawing.Size(58, 58);
-            this.groupBox54.TabIndex = 74;
-            this.groupBox54.TabStop = false;
-            this.groupBox54.Text = "SP";
-            // 
-            // groupBox55
-            // 
-            this.groupBox55.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox55.Controls.Add(this.groupBox56);
-            this.groupBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox55.Location = new System.Drawing.Point(0, 0);
-            this.groupBox55.Name = "groupBox55";
-            this.groupBox55.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox55.Size = new System.Drawing.Size(58, 58);
-            this.groupBox55.TabIndex = 75;
-            this.groupBox55.TabStop = false;
-            this.groupBox55.Text = "CP";
-            // 
-            // groupBox56
-            // 
-            this.groupBox56.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox56.Location = new System.Drawing.Point(0, 55);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox56.Size = new System.Drawing.Size(58, 58);
-            this.groupBox56.TabIndex = 74;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "SP";
-            // 
-            // groupBox50
-            // 
-            this.groupBox50.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox50.Location = new System.Drawing.Point(0, 55);
-            this.groupBox50.Name = "groupBox50";
-            this.groupBox50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox50.Size = new System.Drawing.Size(58, 58);
-            this.groupBox50.TabIndex = 74;
-            this.groupBox50.TabStop = false;
-            this.groupBox50.Text = "SP";
-            // 
-            // groupBox39
-            // 
-            this.groupBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox39.Controls.Add(this.label5);
-            this.groupBox39.Controls.Add(this.groupBox40);
-            this.groupBox39.Controls.Add(this.groupBox76);
-            this.groupBox39.Controls.Add(this.groupBox78);
-            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox39.Location = new System.Drawing.Point(180, 17);
-            this.groupBox39.Name = "groupBox39";
-            this.groupBox39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox39.Size = new System.Drawing.Size(58, 43);
-            this.groupBox39.TabIndex = 78;
-            this.groupBox39.TabStop = false;
-            this.groupBox39.Text = "CP";
-            // 
-            // groupBox40
-            // 
-            this.groupBox40.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox40.Controls.Add(this.groupBox41);
-            this.groupBox40.Controls.Add(this.groupBox43);
-            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox40.Location = new System.Drawing.Point(0, 47);
-            this.groupBox40.Name = "groupBox40";
-            this.groupBox40.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox40.Size = new System.Drawing.Size(58, 44);
-            this.groupBox40.TabIndex = 77;
-            this.groupBox40.TabStop = false;
-            this.groupBox40.Text = "SP";
-            // 
-            // groupBox41
-            // 
-            this.groupBox41.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox41.Controls.Add(this.groupBox42);
-            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox41.Location = new System.Drawing.Point(3, 48);
-            this.groupBox41.Name = "groupBox41";
-            this.groupBox41.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox41.Size = new System.Drawing.Size(58, 58);
-            this.groupBox41.TabIndex = 75;
-            this.groupBox41.TabStop = false;
-            this.groupBox41.Text = "CP";
-            // 
-            // groupBox42
-            // 
-            this.groupBox42.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox42.Location = new System.Drawing.Point(0, 55);
-            this.groupBox42.Name = "groupBox42";
-            this.groupBox42.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox42.Size = new System.Drawing.Size(58, 58);
-            this.groupBox42.TabIndex = 74;
-            this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "SP";
-            // 
-            // groupBox43
-            // 
-            this.groupBox43.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox43.Controls.Add(this.groupBox44);
-            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox43.Location = new System.Drawing.Point(0, 48);
-            this.groupBox43.Name = "groupBox43";
-            this.groupBox43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox43.Size = new System.Drawing.Size(58, 58);
-            this.groupBox43.TabIndex = 74;
-            this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "SP";
-            // 
-            // groupBox44
-            // 
-            this.groupBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox44.Controls.Add(this.groupBox69);
-            this.groupBox44.Controls.Add(this.groupBox75);
-            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox44.Location = new System.Drawing.Point(0, 0);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox44.Size = new System.Drawing.Size(58, 58);
-            this.groupBox44.TabIndex = 75;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "CP";
-            // 
-            // groupBox69
-            // 
-            this.groupBox69.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox69.Controls.Add(this.groupBox70);
-            this.groupBox69.Controls.Add(this.groupBox72);
-            this.groupBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox69.Location = new System.Drawing.Point(0, 1);
-            this.groupBox69.Name = "groupBox69";
-            this.groupBox69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox69.Size = new System.Drawing.Size(58, 58);
-            this.groupBox69.TabIndex = 77;
-            this.groupBox69.TabStop = false;
-            this.groupBox69.Text = "CP";
-            // 
-            // groupBox70
-            // 
-            this.groupBox70.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox70.Controls.Add(this.groupBox71);
-            this.groupBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox70.Location = new System.Drawing.Point(3, 55);
-            this.groupBox70.Name = "groupBox70";
-            this.groupBox70.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox70.Size = new System.Drawing.Size(58, 58);
-            this.groupBox70.TabIndex = 75;
-            this.groupBox70.TabStop = false;
-            this.groupBox70.Text = "CP";
-            // 
-            // groupBox71
-            // 
-            this.groupBox71.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox71.Location = new System.Drawing.Point(0, 55);
-            this.groupBox71.Name = "groupBox71";
-            this.groupBox71.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox71.Size = new System.Drawing.Size(58, 58);
-            this.groupBox71.TabIndex = 74;
-            this.groupBox71.TabStop = false;
-            this.groupBox71.Text = "SP";
-            // 
-            // groupBox72
-            // 
-            this.groupBox72.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox72.Controls.Add(this.groupBox73);
-            this.groupBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox72.Location = new System.Drawing.Point(0, 55);
-            this.groupBox72.Name = "groupBox72";
-            this.groupBox72.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox72.Size = new System.Drawing.Size(58, 58);
-            this.groupBox72.TabIndex = 74;
-            this.groupBox72.TabStop = false;
-            this.groupBox72.Text = "SP";
-            // 
-            // groupBox73
-            // 
-            this.groupBox73.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox73.Controls.Add(this.groupBox74);
-            this.groupBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox73.Location = new System.Drawing.Point(0, 0);
-            this.groupBox73.Name = "groupBox73";
-            this.groupBox73.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox73.Size = new System.Drawing.Size(58, 58);
-            this.groupBox73.TabIndex = 75;
-            this.groupBox73.TabStop = false;
-            this.groupBox73.Text = "CP";
-            // 
-            // groupBox74
-            // 
-            this.groupBox74.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox74.Location = new System.Drawing.Point(0, 55);
-            this.groupBox74.Name = "groupBox74";
-            this.groupBox74.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox74.Size = new System.Drawing.Size(58, 58);
-            this.groupBox74.TabIndex = 74;
-            this.groupBox74.TabStop = false;
-            this.groupBox74.Text = "SP";
-            // 
-            // groupBox75
-            // 
-            this.groupBox75.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox75.Location = new System.Drawing.Point(0, 55);
-            this.groupBox75.Name = "groupBox75";
-            this.groupBox75.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox75.Size = new System.Drawing.Size(58, 58);
-            this.groupBox75.TabIndex = 74;
-            this.groupBox75.TabStop = false;
-            this.groupBox75.Text = "SP";
-            // 
-            // groupBox76
-            // 
-            this.groupBox76.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox76.Controls.Add(this.groupBox77);
-            this.groupBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox76.Location = new System.Drawing.Point(3, 47);
-            this.groupBox76.Name = "groupBox76";
-            this.groupBox76.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox76.Size = new System.Drawing.Size(58, 58);
-            this.groupBox76.TabIndex = 75;
-            this.groupBox76.TabStop = false;
-            this.groupBox76.Text = "CP";
-            // 
-            // groupBox77
-            // 
-            this.groupBox77.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox77.Location = new System.Drawing.Point(0, 55);
-            this.groupBox77.Name = "groupBox77";
-            this.groupBox77.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox77.Size = new System.Drawing.Size(58, 58);
-            this.groupBox77.TabIndex = 74;
-            this.groupBox77.TabStop = false;
-            this.groupBox77.Text = "SP";
-            // 
-            // groupBox78
-            // 
-            this.groupBox78.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox78.Controls.Add(this.groupBox79);
-            this.groupBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox78.Location = new System.Drawing.Point(0, 47);
-            this.groupBox78.Name = "groupBox78";
-            this.groupBox78.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox78.Size = new System.Drawing.Size(58, 58);
-            this.groupBox78.TabIndex = 74;
-            this.groupBox78.TabStop = false;
-            this.groupBox78.Text = "SP";
-            // 
-            // groupBox79
-            // 
-            this.groupBox79.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox79.Controls.Add(this.groupBox80);
-            this.groupBox79.Controls.Add(this.groupBox134);
-            this.groupBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox79.Location = new System.Drawing.Point(0, 0);
-            this.groupBox79.Name = "groupBox79";
-            this.groupBox79.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox79.Size = new System.Drawing.Size(58, 58);
-            this.groupBox79.TabIndex = 75;
-            this.groupBox79.TabStop = false;
-            this.groupBox79.Text = "CP";
-            // 
-            // groupBox80
-            // 
-            this.groupBox80.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox80.Controls.Add(this.groupBox81);
-            this.groupBox80.Controls.Add(this.groupBox129);
-            this.groupBox80.Controls.Add(this.groupBox131);
-            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox80.Location = new System.Drawing.Point(0, 1);
-            this.groupBox80.Name = "groupBox80";
-            this.groupBox80.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox80.Size = new System.Drawing.Size(58, 58);
-            this.groupBox80.TabIndex = 77;
-            this.groupBox80.TabStop = false;
-            this.groupBox80.Text = "CP";
-            // 
-            // groupBox81
-            // 
-            this.groupBox81.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox81.Controls.Add(this.groupBox82);
-            this.groupBox81.Controls.Add(this.groupBox118);
-            this.groupBox81.Controls.Add(this.groupBox120);
-            this.groupBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox81.Location = new System.Drawing.Point(3, 1);
-            this.groupBox81.Name = "groupBox81";
-            this.groupBox81.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox81.Size = new System.Drawing.Size(58, 44);
-            this.groupBox81.TabIndex = 78;
-            this.groupBox81.TabStop = false;
-            this.groupBox81.Text = "SP";
-            // 
-            // groupBox82
-            // 
-            this.groupBox82.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox82.Controls.Add(this.groupBox83);
-            this.groupBox82.Controls.Add(this.groupBox85);
-            this.groupBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox82.Location = new System.Drawing.Point(0, 48);
-            this.groupBox82.Name = "groupBox82";
-            this.groupBox82.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox82.Size = new System.Drawing.Size(58, 44);
-            this.groupBox82.TabIndex = 77;
-            this.groupBox82.TabStop = false;
-            this.groupBox82.Text = "SP";
-            // 
-            // groupBox83
-            // 
-            this.groupBox83.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox83.Controls.Add(this.groupBox84);
-            this.groupBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox83.Location = new System.Drawing.Point(3, 48);
-            this.groupBox83.Name = "groupBox83";
-            this.groupBox83.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox83.Size = new System.Drawing.Size(58, 58);
-            this.groupBox83.TabIndex = 75;
-            this.groupBox83.TabStop = false;
-            this.groupBox83.Text = "CP";
-            // 
-            // groupBox84
-            // 
-            this.groupBox84.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox84.Location = new System.Drawing.Point(0, 55);
-            this.groupBox84.Name = "groupBox84";
-            this.groupBox84.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox84.Size = new System.Drawing.Size(58, 58);
-            this.groupBox84.TabIndex = 74;
-            this.groupBox84.TabStop = false;
-            this.groupBox84.Text = "SP";
-            // 
-            // groupBox85
-            // 
-            this.groupBox85.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox85.Controls.Add(this.groupBox86);
-            this.groupBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox85.Location = new System.Drawing.Point(0, 48);
-            this.groupBox85.Name = "groupBox85";
-            this.groupBox85.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox85.Size = new System.Drawing.Size(58, 58);
-            this.groupBox85.TabIndex = 74;
-            this.groupBox85.TabStop = false;
-            this.groupBox85.Text = "SP";
-            // 
-            // groupBox86
-            // 
-            this.groupBox86.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox86.Controls.Add(this.groupBox87);
-            this.groupBox86.Controls.Add(this.groupBox117);
-            this.groupBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox86.Location = new System.Drawing.Point(0, 0);
-            this.groupBox86.Name = "groupBox86";
-            this.groupBox86.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox86.Size = new System.Drawing.Size(58, 58);
-            this.groupBox86.TabIndex = 75;
-            this.groupBox86.TabStop = false;
-            this.groupBox86.Text = "CP";
-            // 
-            // groupBox87
-            // 
-            this.groupBox87.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox87.Controls.Add(this.groupBox88);
-            this.groupBox87.Controls.Add(this.groupBox90);
-            this.groupBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox87.Location = new System.Drawing.Point(0, 1);
-            this.groupBox87.Name = "groupBox87";
-            this.groupBox87.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox87.Size = new System.Drawing.Size(58, 58);
-            this.groupBox87.TabIndex = 77;
-            this.groupBox87.TabStop = false;
-            this.groupBox87.Text = "CP";
-            // 
-            // groupBox88
-            // 
-            this.groupBox88.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox88.Controls.Add(this.groupBox89);
-            this.groupBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox88.Location = new System.Drawing.Point(3, 55);
-            this.groupBox88.Name = "groupBox88";
-            this.groupBox88.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox88.Size = new System.Drawing.Size(58, 58);
-            this.groupBox88.TabIndex = 75;
-            this.groupBox88.TabStop = false;
-            this.groupBox88.Text = "CP";
-            // 
-            // groupBox89
-            // 
-            this.groupBox89.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox89.Location = new System.Drawing.Point(0, 55);
-            this.groupBox89.Name = "groupBox89";
-            this.groupBox89.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox89.Size = new System.Drawing.Size(58, 58);
-            this.groupBox89.TabIndex = 74;
-            this.groupBox89.TabStop = false;
-            this.groupBox89.Text = "SP";
-            // 
-            // groupBox90
-            // 
-            this.groupBox90.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox90.Controls.Add(this.groupBox91);
-            this.groupBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox90.Location = new System.Drawing.Point(0, 55);
-            this.groupBox90.Name = "groupBox90";
-            this.groupBox90.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox90.Size = new System.Drawing.Size(58, 58);
-            this.groupBox90.TabIndex = 74;
-            this.groupBox90.TabStop = false;
-            this.groupBox90.Text = "SP";
-            // 
-            // groupBox91
-            // 
-            this.groupBox91.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox91.Controls.Add(this.groupBox92);
-            this.groupBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox91.Location = new System.Drawing.Point(0, 0);
-            this.groupBox91.Name = "groupBox91";
-            this.groupBox91.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox91.Size = new System.Drawing.Size(58, 58);
-            this.groupBox91.TabIndex = 75;
-            this.groupBox91.TabStop = false;
-            this.groupBox91.Text = "CP";
-            // 
-            // groupBox92
-            // 
-            this.groupBox92.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox92.Location = new System.Drawing.Point(0, 55);
-            this.groupBox92.Name = "groupBox92";
-            this.groupBox92.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox92.Size = new System.Drawing.Size(58, 58);
-            this.groupBox92.TabIndex = 74;
-            this.groupBox92.TabStop = false;
-            this.groupBox92.Text = "SP";
-            // 
-            // groupBox117
-            // 
-            this.groupBox117.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox117.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox117.Location = new System.Drawing.Point(0, 55);
-            this.groupBox117.Name = "groupBox117";
-            this.groupBox117.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox117.Size = new System.Drawing.Size(58, 58);
-            this.groupBox117.TabIndex = 74;
-            this.groupBox117.TabStop = false;
-            this.groupBox117.Text = "SP";
-            // 
-            // groupBox118
-            // 
-            this.groupBox118.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox118.Controls.Add(this.groupBox119);
-            this.groupBox118.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox118.Location = new System.Drawing.Point(3, 48);
-            this.groupBox118.Name = "groupBox118";
-            this.groupBox118.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox118.Size = new System.Drawing.Size(58, 58);
-            this.groupBox118.TabIndex = 75;
-            this.groupBox118.TabStop = false;
-            this.groupBox118.Text = "CP";
-            // 
-            // groupBox119
-            // 
-            this.groupBox119.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox119.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox119.Location = new System.Drawing.Point(0, 55);
-            this.groupBox119.Name = "groupBox119";
-            this.groupBox119.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox119.Size = new System.Drawing.Size(58, 58);
-            this.groupBox119.TabIndex = 74;
-            this.groupBox119.TabStop = false;
-            this.groupBox119.Text = "SP";
-            // 
-            // groupBox120
-            // 
-            this.groupBox120.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox120.Controls.Add(this.groupBox121);
-            this.groupBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox120.Location = new System.Drawing.Point(0, 48);
-            this.groupBox120.Name = "groupBox120";
-            this.groupBox120.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox120.Size = new System.Drawing.Size(58, 58);
-            this.groupBox120.TabIndex = 74;
-            this.groupBox120.TabStop = false;
-            this.groupBox120.Text = "SP";
-            // 
-            // groupBox121
-            // 
-            this.groupBox121.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox121.Controls.Add(this.groupBox122);
-            this.groupBox121.Controls.Add(this.groupBox128);
-            this.groupBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox121.Location = new System.Drawing.Point(0, 0);
-            this.groupBox121.Name = "groupBox121";
-            this.groupBox121.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox121.Size = new System.Drawing.Size(58, 58);
-            this.groupBox121.TabIndex = 75;
-            this.groupBox121.TabStop = false;
-            this.groupBox121.Text = "CP";
-            // 
-            // groupBox122
-            // 
-            this.groupBox122.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox122.Controls.Add(this.groupBox123);
-            this.groupBox122.Controls.Add(this.groupBox125);
-            this.groupBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox122.Location = new System.Drawing.Point(0, 1);
-            this.groupBox122.Name = "groupBox122";
-            this.groupBox122.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox122.Size = new System.Drawing.Size(58, 58);
-            this.groupBox122.TabIndex = 77;
-            this.groupBox122.TabStop = false;
-            this.groupBox122.Text = "CP";
-            // 
-            // groupBox123
-            // 
-            this.groupBox123.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox123.Controls.Add(this.groupBox124);
-            this.groupBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox123.Location = new System.Drawing.Point(3, 55);
-            this.groupBox123.Name = "groupBox123";
-            this.groupBox123.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox123.Size = new System.Drawing.Size(58, 58);
-            this.groupBox123.TabIndex = 75;
-            this.groupBox123.TabStop = false;
-            this.groupBox123.Text = "CP";
-            // 
-            // groupBox124
-            // 
-            this.groupBox124.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox124.Location = new System.Drawing.Point(0, 55);
-            this.groupBox124.Name = "groupBox124";
-            this.groupBox124.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox124.Size = new System.Drawing.Size(58, 58);
-            this.groupBox124.TabIndex = 74;
-            this.groupBox124.TabStop = false;
-            this.groupBox124.Text = "SP";
-            // 
-            // groupBox125
-            // 
-            this.groupBox125.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox125.Controls.Add(this.groupBox126);
-            this.groupBox125.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox125.Location = new System.Drawing.Point(0, 55);
-            this.groupBox125.Name = "groupBox125";
-            this.groupBox125.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox125.Size = new System.Drawing.Size(58, 58);
-            this.groupBox125.TabIndex = 74;
-            this.groupBox125.TabStop = false;
-            this.groupBox125.Text = "SP";
-            // 
-            // groupBox126
-            // 
-            this.groupBox126.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox126.Controls.Add(this.groupBox127);
-            this.groupBox126.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox126.Location = new System.Drawing.Point(0, 0);
-            this.groupBox126.Name = "groupBox126";
-            this.groupBox126.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox126.Size = new System.Drawing.Size(58, 58);
-            this.groupBox126.TabIndex = 75;
-            this.groupBox126.TabStop = false;
-            this.groupBox126.Text = "CP";
-            // 
-            // groupBox127
-            // 
-            this.groupBox127.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox127.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox127.Location = new System.Drawing.Point(0, 55);
-            this.groupBox127.Name = "groupBox127";
-            this.groupBox127.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox127.Size = new System.Drawing.Size(58, 58);
-            this.groupBox127.TabIndex = 74;
-            this.groupBox127.TabStop = false;
-            this.groupBox127.Text = "SP";
-            // 
-            // groupBox128
-            // 
-            this.groupBox128.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox128.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox128.Location = new System.Drawing.Point(0, 55);
-            this.groupBox128.Name = "groupBox128";
-            this.groupBox128.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox128.Size = new System.Drawing.Size(58, 58);
-            this.groupBox128.TabIndex = 74;
-            this.groupBox128.TabStop = false;
-            this.groupBox128.Text = "SP";
-            // 
-            // groupBox129
-            // 
-            this.groupBox129.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox129.Controls.Add(this.groupBox130);
-            this.groupBox129.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox129.Location = new System.Drawing.Point(3, 55);
-            this.groupBox129.Name = "groupBox129";
-            this.groupBox129.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox129.Size = new System.Drawing.Size(58, 58);
-            this.groupBox129.TabIndex = 75;
-            this.groupBox129.TabStop = false;
-            this.groupBox129.Text = "CP";
-            // 
-            // groupBox130
-            // 
-            this.groupBox130.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox130.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox130.Location = new System.Drawing.Point(0, 55);
-            this.groupBox130.Name = "groupBox130";
-            this.groupBox130.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox130.Size = new System.Drawing.Size(58, 58);
-            this.groupBox130.TabIndex = 74;
-            this.groupBox130.TabStop = false;
-            this.groupBox130.Text = "SP";
-            // 
-            // groupBox131
-            // 
-            this.groupBox131.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox131.Controls.Add(this.groupBox132);
-            this.groupBox131.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox131.Location = new System.Drawing.Point(0, 55);
-            this.groupBox131.Name = "groupBox131";
-            this.groupBox131.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox131.Size = new System.Drawing.Size(58, 58);
-            this.groupBox131.TabIndex = 74;
-            this.groupBox131.TabStop = false;
-            this.groupBox131.Text = "SP";
-            // 
-            // groupBox132
-            // 
-            this.groupBox132.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox132.Controls.Add(this.groupBox133);
-            this.groupBox132.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox132.Location = new System.Drawing.Point(0, 0);
-            this.groupBox132.Name = "groupBox132";
-            this.groupBox132.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox132.Size = new System.Drawing.Size(58, 58);
-            this.groupBox132.TabIndex = 75;
-            this.groupBox132.TabStop = false;
-            this.groupBox132.Text = "CP";
-            // 
-            // groupBox133
-            // 
-            this.groupBox133.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox133.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox133.Location = new System.Drawing.Point(0, 55);
-            this.groupBox133.Name = "groupBox133";
-            this.groupBox133.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox133.Size = new System.Drawing.Size(58, 58);
-            this.groupBox133.TabIndex = 74;
-            this.groupBox133.TabStop = false;
-            this.groupBox133.Text = "SP";
-            // 
-            // groupBox134
-            // 
-            this.groupBox134.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox134.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox134.Location = new System.Drawing.Point(0, 55);
-            this.groupBox134.Name = "groupBox134";
-            this.groupBox134.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox134.Size = new System.Drawing.Size(58, 58);
-            this.groupBox134.TabIndex = 74;
-            this.groupBox134.TabStop = false;
-            this.groupBox134.Text = "SP";
-            // 
-            // groupBox135
-            // 
-            this.groupBox135.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox135.Controls.Add(this.label7);
-            this.groupBox135.Controls.Add(this.groupBox136);
-            this.groupBox135.Controls.Add(this.groupBox148);
-            this.groupBox135.Controls.Add(this.groupBox150);
-            this.groupBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox135.Location = new System.Drawing.Point(180, 98);
-            this.groupBox135.Name = "groupBox135";
-            this.groupBox135.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox135.Size = new System.Drawing.Size(58, 44);
-            this.groupBox135.TabIndex = 79;
-            this.groupBox135.TabStop = false;
-            this.groupBox135.Text = "EP";
-            // 
-            // groupBox136
-            // 
-            this.groupBox136.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox136.Controls.Add(this.groupBox137);
-            this.groupBox136.Controls.Add(this.groupBox139);
-            this.groupBox136.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox136.Location = new System.Drawing.Point(0, 48);
-            this.groupBox136.Name = "groupBox136";
-            this.groupBox136.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox136.Size = new System.Drawing.Size(58, 44);
-            this.groupBox136.TabIndex = 77;
-            this.groupBox136.TabStop = false;
-            this.groupBox136.Text = "SP";
-            // 
-            // groupBox137
-            // 
-            this.groupBox137.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox137.Controls.Add(this.groupBox138);
-            this.groupBox137.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox137.Location = new System.Drawing.Point(3, 48);
-            this.groupBox137.Name = "groupBox137";
-            this.groupBox137.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox137.Size = new System.Drawing.Size(58, 58);
-            this.groupBox137.TabIndex = 75;
-            this.groupBox137.TabStop = false;
-            this.groupBox137.Text = "CP";
-            // 
-            // groupBox138
-            // 
-            this.groupBox138.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox138.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox138.Location = new System.Drawing.Point(0, 55);
-            this.groupBox138.Name = "groupBox138";
-            this.groupBox138.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox138.Size = new System.Drawing.Size(58, 58);
-            this.groupBox138.TabIndex = 74;
-            this.groupBox138.TabStop = false;
-            this.groupBox138.Text = "SP";
-            // 
-            // groupBox139
-            // 
-            this.groupBox139.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox139.Controls.Add(this.groupBox140);
-            this.groupBox139.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox139.Location = new System.Drawing.Point(0, 48);
-            this.groupBox139.Name = "groupBox139";
-            this.groupBox139.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox139.Size = new System.Drawing.Size(58, 58);
-            this.groupBox139.TabIndex = 74;
-            this.groupBox139.TabStop = false;
-            this.groupBox139.Text = "SP";
-            // 
-            // groupBox140
-            // 
-            this.groupBox140.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox140.Controls.Add(this.groupBox141);
-            this.groupBox140.Controls.Add(this.groupBox147);
-            this.groupBox140.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox140.Location = new System.Drawing.Point(0, 0);
-            this.groupBox140.Name = "groupBox140";
-            this.groupBox140.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox140.Size = new System.Drawing.Size(58, 58);
-            this.groupBox140.TabIndex = 75;
-            this.groupBox140.TabStop = false;
-            this.groupBox140.Text = "CP";
-            // 
-            // groupBox141
-            // 
-            this.groupBox141.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox141.Controls.Add(this.groupBox142);
-            this.groupBox141.Controls.Add(this.groupBox144);
-            this.groupBox141.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox141.Location = new System.Drawing.Point(0, 1);
-            this.groupBox141.Name = "groupBox141";
-            this.groupBox141.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox141.Size = new System.Drawing.Size(58, 58);
-            this.groupBox141.TabIndex = 77;
-            this.groupBox141.TabStop = false;
-            this.groupBox141.Text = "CP";
-            // 
-            // groupBox142
-            // 
-            this.groupBox142.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox142.Controls.Add(this.groupBox143);
-            this.groupBox142.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox142.Location = new System.Drawing.Point(3, 55);
-            this.groupBox142.Name = "groupBox142";
-            this.groupBox142.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox142.Size = new System.Drawing.Size(58, 58);
-            this.groupBox142.TabIndex = 75;
-            this.groupBox142.TabStop = false;
-            this.groupBox142.Text = "CP";
-            // 
-            // groupBox143
-            // 
-            this.groupBox143.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox143.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox143.Location = new System.Drawing.Point(0, 55);
-            this.groupBox143.Name = "groupBox143";
-            this.groupBox143.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox143.Size = new System.Drawing.Size(58, 58);
-            this.groupBox143.TabIndex = 74;
-            this.groupBox143.TabStop = false;
-            this.groupBox143.Text = "SP";
-            // 
-            // groupBox144
-            // 
-            this.groupBox144.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox144.Controls.Add(this.groupBox145);
-            this.groupBox144.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox144.Location = new System.Drawing.Point(0, 55);
-            this.groupBox144.Name = "groupBox144";
-            this.groupBox144.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox144.Size = new System.Drawing.Size(58, 58);
-            this.groupBox144.TabIndex = 74;
-            this.groupBox144.TabStop = false;
-            this.groupBox144.Text = "SP";
-            // 
-            // groupBox145
-            // 
-            this.groupBox145.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox145.Controls.Add(this.groupBox146);
-            this.groupBox145.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox145.Location = new System.Drawing.Point(0, 0);
-            this.groupBox145.Name = "groupBox145";
-            this.groupBox145.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox145.Size = new System.Drawing.Size(58, 58);
-            this.groupBox145.TabIndex = 75;
-            this.groupBox145.TabStop = false;
-            this.groupBox145.Text = "CP";
-            // 
-            // groupBox146
-            // 
-            this.groupBox146.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox146.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox146.Location = new System.Drawing.Point(0, 55);
-            this.groupBox146.Name = "groupBox146";
-            this.groupBox146.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox146.Size = new System.Drawing.Size(58, 58);
-            this.groupBox146.TabIndex = 74;
-            this.groupBox146.TabStop = false;
-            this.groupBox146.Text = "SP";
-            // 
-            // groupBox147
-            // 
-            this.groupBox147.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox147.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox147.Location = new System.Drawing.Point(0, 55);
-            this.groupBox147.Name = "groupBox147";
-            this.groupBox147.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox147.Size = new System.Drawing.Size(58, 58);
-            this.groupBox147.TabIndex = 74;
-            this.groupBox147.TabStop = false;
-            this.groupBox147.Text = "SP";
-            // 
-            // groupBox148
-            // 
-            this.groupBox148.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox148.Controls.Add(this.groupBox149);
-            this.groupBox148.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox148.Location = new System.Drawing.Point(3, 48);
-            this.groupBox148.Name = "groupBox148";
-            this.groupBox148.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox148.Size = new System.Drawing.Size(58, 58);
-            this.groupBox148.TabIndex = 75;
-            this.groupBox148.TabStop = false;
-            this.groupBox148.Text = "CP";
-            // 
-            // groupBox149
-            // 
-            this.groupBox149.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox149.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox149.Location = new System.Drawing.Point(0, 55);
-            this.groupBox149.Name = "groupBox149";
-            this.groupBox149.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox149.Size = new System.Drawing.Size(58, 58);
-            this.groupBox149.TabIndex = 74;
-            this.groupBox149.TabStop = false;
-            this.groupBox149.Text = "SP";
-            // 
-            // groupBox150
-            // 
-            this.groupBox150.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox150.Controls.Add(this.groupBox151);
-            this.groupBox150.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox150.Location = new System.Drawing.Point(0, 48);
-            this.groupBox150.Name = "groupBox150";
-            this.groupBox150.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox150.Size = new System.Drawing.Size(58, 58);
-            this.groupBox150.TabIndex = 74;
-            this.groupBox150.TabStop = false;
-            this.groupBox150.Text = "SP";
-            // 
-            // groupBox151
-            // 
-            this.groupBox151.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox151.Controls.Add(this.groupBox152);
-            this.groupBox151.Controls.Add(this.groupBox182);
-            this.groupBox151.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox151.Location = new System.Drawing.Point(0, 0);
-            this.groupBox151.Name = "groupBox151";
-            this.groupBox151.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox151.Size = new System.Drawing.Size(58, 58);
-            this.groupBox151.TabIndex = 75;
-            this.groupBox151.TabStop = false;
-            this.groupBox151.Text = "CP";
-            // 
-            // groupBox152
-            // 
-            this.groupBox152.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox152.Controls.Add(this.groupBox153);
-            this.groupBox152.Controls.Add(this.groupBox177);
-            this.groupBox152.Controls.Add(this.groupBox179);
-            this.groupBox152.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox152.Location = new System.Drawing.Point(0, 1);
-            this.groupBox152.Name = "groupBox152";
-            this.groupBox152.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox152.Size = new System.Drawing.Size(58, 58);
-            this.groupBox152.TabIndex = 77;
-            this.groupBox152.TabStop = false;
-            this.groupBox152.Text = "CP";
-            // 
-            // groupBox153
-            // 
-            this.groupBox153.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox153.Controls.Add(this.groupBox154);
-            this.groupBox153.Controls.Add(this.groupBox166);
-            this.groupBox153.Controls.Add(this.groupBox168);
-            this.groupBox153.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox153.Location = new System.Drawing.Point(3, 1);
-            this.groupBox153.Name = "groupBox153";
-            this.groupBox153.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox153.Size = new System.Drawing.Size(58, 44);
-            this.groupBox153.TabIndex = 78;
-            this.groupBox153.TabStop = false;
-            this.groupBox153.Text = "SP";
-            // 
-            // groupBox154
-            // 
-            this.groupBox154.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox154.Controls.Add(this.groupBox155);
-            this.groupBox154.Controls.Add(this.groupBox157);
-            this.groupBox154.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox154.Location = new System.Drawing.Point(0, 48);
-            this.groupBox154.Name = "groupBox154";
-            this.groupBox154.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox154.Size = new System.Drawing.Size(58, 44);
-            this.groupBox154.TabIndex = 77;
-            this.groupBox154.TabStop = false;
-            this.groupBox154.Text = "SP";
-            // 
-            // groupBox155
-            // 
-            this.groupBox155.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox155.Controls.Add(this.groupBox156);
-            this.groupBox155.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox155.Location = new System.Drawing.Point(3, 48);
-            this.groupBox155.Name = "groupBox155";
-            this.groupBox155.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox155.Size = new System.Drawing.Size(58, 58);
-            this.groupBox155.TabIndex = 75;
-            this.groupBox155.TabStop = false;
-            this.groupBox155.Text = "CP";
-            // 
-            // groupBox156
-            // 
-            this.groupBox156.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox156.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox156.Location = new System.Drawing.Point(0, 55);
-            this.groupBox156.Name = "groupBox156";
-            this.groupBox156.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox156.Size = new System.Drawing.Size(58, 58);
-            this.groupBox156.TabIndex = 74;
-            this.groupBox156.TabStop = false;
-            this.groupBox156.Text = "SP";
-            // 
-            // groupBox157
-            // 
-            this.groupBox157.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox157.Controls.Add(this.groupBox158);
-            this.groupBox157.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox157.Location = new System.Drawing.Point(0, 48);
-            this.groupBox157.Name = "groupBox157";
-            this.groupBox157.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox157.Size = new System.Drawing.Size(58, 58);
-            this.groupBox157.TabIndex = 74;
-            this.groupBox157.TabStop = false;
-            this.groupBox157.Text = "SP";
-            // 
-            // groupBox158
-            // 
-            this.groupBox158.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox158.Controls.Add(this.groupBox159);
-            this.groupBox158.Controls.Add(this.groupBox165);
-            this.groupBox158.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox158.Location = new System.Drawing.Point(0, 0);
-            this.groupBox158.Name = "groupBox158";
-            this.groupBox158.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox158.Size = new System.Drawing.Size(58, 58);
-            this.groupBox158.TabIndex = 75;
-            this.groupBox158.TabStop = false;
-            this.groupBox158.Text = "CP";
-            // 
-            // groupBox159
-            // 
-            this.groupBox159.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox159.Controls.Add(this.groupBox160);
-            this.groupBox159.Controls.Add(this.groupBox162);
-            this.groupBox159.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox159.Location = new System.Drawing.Point(0, 1);
-            this.groupBox159.Name = "groupBox159";
-            this.groupBox159.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox159.Size = new System.Drawing.Size(58, 58);
-            this.groupBox159.TabIndex = 77;
-            this.groupBox159.TabStop = false;
-            this.groupBox159.Text = "CP";
-            // 
-            // groupBox160
-            // 
-            this.groupBox160.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox160.Controls.Add(this.groupBox161);
-            this.groupBox160.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox160.Location = new System.Drawing.Point(3, 55);
-            this.groupBox160.Name = "groupBox160";
-            this.groupBox160.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox160.Size = new System.Drawing.Size(58, 58);
-            this.groupBox160.TabIndex = 75;
-            this.groupBox160.TabStop = false;
-            this.groupBox160.Text = "CP";
-            // 
-            // groupBox161
-            // 
-            this.groupBox161.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox161.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox161.Location = new System.Drawing.Point(0, 55);
-            this.groupBox161.Name = "groupBox161";
-            this.groupBox161.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox161.Size = new System.Drawing.Size(58, 58);
-            this.groupBox161.TabIndex = 74;
-            this.groupBox161.TabStop = false;
-            this.groupBox161.Text = "SP";
-            // 
-            // groupBox162
-            // 
-            this.groupBox162.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox162.Controls.Add(this.groupBox163);
-            this.groupBox162.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox162.Location = new System.Drawing.Point(0, 55);
-            this.groupBox162.Name = "groupBox162";
-            this.groupBox162.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox162.Size = new System.Drawing.Size(58, 58);
-            this.groupBox162.TabIndex = 74;
-            this.groupBox162.TabStop = false;
-            this.groupBox162.Text = "SP";
-            // 
-            // groupBox163
-            // 
-            this.groupBox163.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox163.Controls.Add(this.groupBox164);
-            this.groupBox163.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox163.Location = new System.Drawing.Point(0, 0);
-            this.groupBox163.Name = "groupBox163";
-            this.groupBox163.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox163.Size = new System.Drawing.Size(58, 58);
-            this.groupBox163.TabIndex = 75;
-            this.groupBox163.TabStop = false;
-            this.groupBox163.Text = "CP";
-            // 
-            // groupBox164
-            // 
-            this.groupBox164.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox164.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox164.Location = new System.Drawing.Point(0, 55);
-            this.groupBox164.Name = "groupBox164";
-            this.groupBox164.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox164.Size = new System.Drawing.Size(58, 58);
-            this.groupBox164.TabIndex = 74;
-            this.groupBox164.TabStop = false;
-            this.groupBox164.Text = "SP";
-            // 
-            // groupBox165
-            // 
-            this.groupBox165.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox165.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox165.Location = new System.Drawing.Point(0, 55);
-            this.groupBox165.Name = "groupBox165";
-            this.groupBox165.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox165.Size = new System.Drawing.Size(58, 58);
-            this.groupBox165.TabIndex = 74;
-            this.groupBox165.TabStop = false;
-            this.groupBox165.Text = "SP";
-            // 
-            // groupBox166
-            // 
-            this.groupBox166.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox166.Controls.Add(this.groupBox167);
-            this.groupBox166.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox166.Location = new System.Drawing.Point(3, 48);
-            this.groupBox166.Name = "groupBox166";
-            this.groupBox166.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox166.Size = new System.Drawing.Size(58, 58);
-            this.groupBox166.TabIndex = 75;
-            this.groupBox166.TabStop = false;
-            this.groupBox166.Text = "CP";
-            // 
-            // groupBox167
-            // 
-            this.groupBox167.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox167.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox167.Location = new System.Drawing.Point(0, 55);
-            this.groupBox167.Name = "groupBox167";
-            this.groupBox167.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox167.Size = new System.Drawing.Size(58, 58);
-            this.groupBox167.TabIndex = 74;
-            this.groupBox167.TabStop = false;
-            this.groupBox167.Text = "SP";
-            // 
-            // groupBox168
-            // 
-            this.groupBox168.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox168.Controls.Add(this.groupBox169);
-            this.groupBox168.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox168.Location = new System.Drawing.Point(0, 48);
-            this.groupBox168.Name = "groupBox168";
-            this.groupBox168.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox168.Size = new System.Drawing.Size(58, 58);
-            this.groupBox168.TabIndex = 74;
-            this.groupBox168.TabStop = false;
-            this.groupBox168.Text = "SP";
-            // 
-            // groupBox169
-            // 
-            this.groupBox169.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox169.Controls.Add(this.groupBox170);
-            this.groupBox169.Controls.Add(this.groupBox176);
-            this.groupBox169.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox169.Location = new System.Drawing.Point(0, 0);
-            this.groupBox169.Name = "groupBox169";
-            this.groupBox169.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox169.Size = new System.Drawing.Size(58, 58);
-            this.groupBox169.TabIndex = 75;
-            this.groupBox169.TabStop = false;
-            this.groupBox169.Text = "CP";
-            // 
-            // groupBox170
-            // 
-            this.groupBox170.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox170.Controls.Add(this.groupBox171);
-            this.groupBox170.Controls.Add(this.groupBox173);
-            this.groupBox170.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox170.Location = new System.Drawing.Point(0, 1);
-            this.groupBox170.Name = "groupBox170";
-            this.groupBox170.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox170.Size = new System.Drawing.Size(58, 58);
-            this.groupBox170.TabIndex = 77;
-            this.groupBox170.TabStop = false;
-            this.groupBox170.Text = "CP";
-            // 
-            // groupBox171
-            // 
-            this.groupBox171.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox171.Controls.Add(this.groupBox172);
-            this.groupBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox171.Location = new System.Drawing.Point(3, 55);
-            this.groupBox171.Name = "groupBox171";
-            this.groupBox171.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox171.Size = new System.Drawing.Size(58, 58);
-            this.groupBox171.TabIndex = 75;
-            this.groupBox171.TabStop = false;
-            this.groupBox171.Text = "CP";
-            // 
-            // groupBox172
-            // 
-            this.groupBox172.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox172.Location = new System.Drawing.Point(0, 55);
-            this.groupBox172.Name = "groupBox172";
-            this.groupBox172.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox172.Size = new System.Drawing.Size(58, 58);
-            this.groupBox172.TabIndex = 74;
-            this.groupBox172.TabStop = false;
-            this.groupBox172.Text = "SP";
-            // 
-            // groupBox173
-            // 
-            this.groupBox173.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox173.Controls.Add(this.groupBox174);
-            this.groupBox173.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox173.Location = new System.Drawing.Point(0, 55);
-            this.groupBox173.Name = "groupBox173";
-            this.groupBox173.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox173.Size = new System.Drawing.Size(58, 58);
-            this.groupBox173.TabIndex = 74;
-            this.groupBox173.TabStop = false;
-            this.groupBox173.Text = "SP";
-            // 
-            // groupBox174
-            // 
-            this.groupBox174.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox174.Controls.Add(this.groupBox175);
-            this.groupBox174.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox174.Location = new System.Drawing.Point(0, 0);
-            this.groupBox174.Name = "groupBox174";
-            this.groupBox174.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox174.Size = new System.Drawing.Size(58, 58);
-            this.groupBox174.TabIndex = 75;
-            this.groupBox174.TabStop = false;
-            this.groupBox174.Text = "CP";
-            // 
-            // groupBox175
-            // 
-            this.groupBox175.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox175.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox175.Location = new System.Drawing.Point(0, 55);
-            this.groupBox175.Name = "groupBox175";
-            this.groupBox175.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox175.Size = new System.Drawing.Size(58, 58);
-            this.groupBox175.TabIndex = 74;
-            this.groupBox175.TabStop = false;
-            this.groupBox175.Text = "SP";
-            // 
-            // groupBox176
-            // 
-            this.groupBox176.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox176.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox176.Location = new System.Drawing.Point(0, 55);
-            this.groupBox176.Name = "groupBox176";
-            this.groupBox176.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox176.Size = new System.Drawing.Size(58, 58);
-            this.groupBox176.TabIndex = 74;
-            this.groupBox176.TabStop = false;
-            this.groupBox176.Text = "SP";
-            // 
-            // groupBox177
-            // 
-            this.groupBox177.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox177.Controls.Add(this.groupBox178);
-            this.groupBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox177.Location = new System.Drawing.Point(3, 55);
-            this.groupBox177.Name = "groupBox177";
-            this.groupBox177.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox177.Size = new System.Drawing.Size(58, 58);
-            this.groupBox177.TabIndex = 75;
-            this.groupBox177.TabStop = false;
-            this.groupBox177.Text = "CP";
-            // 
-            // groupBox178
-            // 
-            this.groupBox178.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox178.Location = new System.Drawing.Point(0, 55);
-            this.groupBox178.Name = "groupBox178";
-            this.groupBox178.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox178.Size = new System.Drawing.Size(58, 58);
-            this.groupBox178.TabIndex = 74;
-            this.groupBox178.TabStop = false;
-            this.groupBox178.Text = "SP";
-            // 
-            // groupBox179
-            // 
-            this.groupBox179.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox179.Controls.Add(this.groupBox180);
-            this.groupBox179.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox179.Location = new System.Drawing.Point(0, 55);
-            this.groupBox179.Name = "groupBox179";
-            this.groupBox179.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox179.Size = new System.Drawing.Size(58, 58);
-            this.groupBox179.TabIndex = 74;
-            this.groupBox179.TabStop = false;
-            this.groupBox179.Text = "SP";
-            // 
-            // groupBox180
-            // 
-            this.groupBox180.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox180.Controls.Add(this.groupBox181);
-            this.groupBox180.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox180.Location = new System.Drawing.Point(0, 0);
-            this.groupBox180.Name = "groupBox180";
-            this.groupBox180.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox180.Size = new System.Drawing.Size(58, 58);
-            this.groupBox180.TabIndex = 75;
-            this.groupBox180.TabStop = false;
-            this.groupBox180.Text = "CP";
-            // 
-            // groupBox181
-            // 
-            this.groupBox181.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox181.Location = new System.Drawing.Point(0, 55);
-            this.groupBox181.Name = "groupBox181";
-            this.groupBox181.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox181.Size = new System.Drawing.Size(58, 58);
-            this.groupBox181.TabIndex = 74;
-            this.groupBox181.TabStop = false;
-            this.groupBox181.Text = "SP";
-            // 
-            // groupBox182
-            // 
-            this.groupBox182.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox182.Location = new System.Drawing.Point(0, 55);
-            this.groupBox182.Name = "groupBox182";
-            this.groupBox182.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox182.Size = new System.Drawing.Size(58, 58);
-            this.groupBox182.TabIndex = 74;
-            this.groupBox182.TabStop = false;
-            this.groupBox182.Text = "SP";
+            // ShowListWeaponsButton
+            // 
+            this.ShowListWeaponsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ShowListWeaponsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListWeaponsButton.Location = new System.Drawing.Point(118, 16);
+            this.ShowListWeaponsButton.Name = "ShowListWeaponsButton";
+            this.ShowListWeaponsButton.Size = new System.Drawing.Size(57, 27);
+            this.ShowListWeaponsButton.TabIndex = 83;
+            this.ShowListWeaponsButton.Text = "Weapon";
+            this.ShowListWeaponsButton.UseVisualStyleBackColor = false;
+            this.ShowListWeaponsButton.Click += new System.EventHandler(this.ShowListWeaponsButton_Click);
+            // 
+            // ShowListArmorButton
+            // 
+            this.ShowListArmorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListArmorButton.Location = new System.Drawing.Point(62, 16);
+            this.ShowListArmorButton.Name = "ShowListArmorButton";
+            this.ShowListArmorButton.Size = new System.Drawing.Size(59, 27);
+            this.ShowListArmorButton.TabIndex = 82;
+            this.ShowListArmorButton.Text = "Armor";
+            this.ShowListArmorButton.UseVisualStyleBackColor = true;
+            this.ShowListArmorButton.Click += new System.EventHandler(this.ShowListArmorButton_Click);
+            // 
+            // ShowListItemsButton
+            // 
+            this.ShowListItemsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListItemsButton.Location = new System.Drawing.Point(8, 16);
+            this.ShowListItemsButton.Name = "ShowListItemsButton";
+            this.ShowListItemsButton.Size = new System.Drawing.Size(57, 27);
+            this.ShowListItemsButton.TabIndex = 70;
+            this.ShowListItemsButton.Text = "Items";
+            this.ShowListItemsButton.UseVisualStyleBackColor = true;
+            this.ShowListItemsButton.Click += new System.EventHandler(this.ShowListItemsButton_Click);
+            // 
+            // groupBox279
+            // 
+            this.groupBox279.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox279.Controls.Add(this.groupBox280);
+            this.groupBox279.Controls.Add(this.groupBox292);
+            this.groupBox279.Controls.Add(this.groupBox294);
+            this.groupBox279.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox279.Location = new System.Drawing.Point(180, 182);
+            this.groupBox279.Name = "groupBox279";
+            this.groupBox279.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox279.Size = new System.Drawing.Size(58, 41);
+            this.groupBox279.TabIndex = 81;
+            this.groupBox279.TabStop = false;
+            this.groupBox279.Text = "PP";
+            // 
+            // groupBox280
+            // 
+            this.groupBox280.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox280.Controls.Add(this.groupBox281);
+            this.groupBox280.Controls.Add(this.groupBox283);
+            this.groupBox280.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox280.Location = new System.Drawing.Point(0, 46);
+            this.groupBox280.Name = "groupBox280";
+            this.groupBox280.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox280.Size = new System.Drawing.Size(58, 44);
+            this.groupBox280.TabIndex = 77;
+            this.groupBox280.TabStop = false;
+            this.groupBox280.Text = "SP";
+            // 
+            // groupBox281
+            // 
+            this.groupBox281.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox281.Controls.Add(this.groupBox282);
+            this.groupBox281.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox281.Location = new System.Drawing.Point(3, 48);
+            this.groupBox281.Name = "groupBox281";
+            this.groupBox281.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox281.Size = new System.Drawing.Size(58, 58);
+            this.groupBox281.TabIndex = 75;
+            this.groupBox281.TabStop = false;
+            this.groupBox281.Text = "CP";
+            // 
+            // groupBox282
+            // 
+            this.groupBox282.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox282.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox282.Location = new System.Drawing.Point(0, 55);
+            this.groupBox282.Name = "groupBox282";
+            this.groupBox282.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox282.Size = new System.Drawing.Size(58, 58);
+            this.groupBox282.TabIndex = 74;
+            this.groupBox282.TabStop = false;
+            this.groupBox282.Text = "SP";
+            // 
+            // groupBox283
+            // 
+            this.groupBox283.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox283.Controls.Add(this.groupBox284);
+            this.groupBox283.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox283.Location = new System.Drawing.Point(0, 48);
+            this.groupBox283.Name = "groupBox283";
+            this.groupBox283.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox283.Size = new System.Drawing.Size(58, 58);
+            this.groupBox283.TabIndex = 74;
+            this.groupBox283.TabStop = false;
+            this.groupBox283.Text = "SP";
+            // 
+            // groupBox284
+            // 
+            this.groupBox284.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox284.Controls.Add(this.groupBox285);
+            this.groupBox284.Controls.Add(this.groupBox291);
+            this.groupBox284.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox284.Location = new System.Drawing.Point(0, 0);
+            this.groupBox284.Name = "groupBox284";
+            this.groupBox284.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox284.Size = new System.Drawing.Size(58, 58);
+            this.groupBox284.TabIndex = 75;
+            this.groupBox284.TabStop = false;
+            this.groupBox284.Text = "CP";
+            // 
+            // groupBox285
+            // 
+            this.groupBox285.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox285.Controls.Add(this.groupBox286);
+            this.groupBox285.Controls.Add(this.groupBox288);
+            this.groupBox285.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox285.Location = new System.Drawing.Point(0, 1);
+            this.groupBox285.Name = "groupBox285";
+            this.groupBox285.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox285.Size = new System.Drawing.Size(58, 58);
+            this.groupBox285.TabIndex = 77;
+            this.groupBox285.TabStop = false;
+            this.groupBox285.Text = "CP";
+            // 
+            // groupBox286
+            // 
+            this.groupBox286.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox286.Controls.Add(this.groupBox287);
+            this.groupBox286.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox286.Location = new System.Drawing.Point(3, 55);
+            this.groupBox286.Name = "groupBox286";
+            this.groupBox286.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox286.Size = new System.Drawing.Size(58, 58);
+            this.groupBox286.TabIndex = 75;
+            this.groupBox286.TabStop = false;
+            this.groupBox286.Text = "CP";
+            // 
+            // groupBox287
+            // 
+            this.groupBox287.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox287.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox287.Location = new System.Drawing.Point(0, 55);
+            this.groupBox287.Name = "groupBox287";
+            this.groupBox287.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox287.Size = new System.Drawing.Size(58, 58);
+            this.groupBox287.TabIndex = 74;
+            this.groupBox287.TabStop = false;
+            this.groupBox287.Text = "SP";
+            // 
+            // groupBox288
+            // 
+            this.groupBox288.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox288.Controls.Add(this.groupBox289);
+            this.groupBox288.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox288.Location = new System.Drawing.Point(0, 55);
+            this.groupBox288.Name = "groupBox288";
+            this.groupBox288.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox288.Size = new System.Drawing.Size(58, 58);
+            this.groupBox288.TabIndex = 74;
+            this.groupBox288.TabStop = false;
+            this.groupBox288.Text = "SP";
+            // 
+            // groupBox289
+            // 
+            this.groupBox289.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox289.Controls.Add(this.groupBox290);
+            this.groupBox289.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox289.Location = new System.Drawing.Point(0, 0);
+            this.groupBox289.Name = "groupBox289";
+            this.groupBox289.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox289.Size = new System.Drawing.Size(58, 58);
+            this.groupBox289.TabIndex = 75;
+            this.groupBox289.TabStop = false;
+            this.groupBox289.Text = "CP";
+            // 
+            // groupBox290
+            // 
+            this.groupBox290.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox290.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox290.Location = new System.Drawing.Point(0, 55);
+            this.groupBox290.Name = "groupBox290";
+            this.groupBox290.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox290.Size = new System.Drawing.Size(58, 58);
+            this.groupBox290.TabIndex = 74;
+            this.groupBox290.TabStop = false;
+            this.groupBox290.Text = "SP";
+            // 
+            // groupBox291
+            // 
+            this.groupBox291.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox291.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox291.Location = new System.Drawing.Point(0, 55);
+            this.groupBox291.Name = "groupBox291";
+            this.groupBox291.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox291.Size = new System.Drawing.Size(58, 58);
+            this.groupBox291.TabIndex = 74;
+            this.groupBox291.TabStop = false;
+            this.groupBox291.Text = "SP";
+            // 
+            // groupBox292
+            // 
+            this.groupBox292.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox292.Controls.Add(this.groupBox293);
+            this.groupBox292.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox292.Location = new System.Drawing.Point(3, 46);
+            this.groupBox292.Name = "groupBox292";
+            this.groupBox292.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox292.Size = new System.Drawing.Size(58, 58);
+            this.groupBox292.TabIndex = 75;
+            this.groupBox292.TabStop = false;
+            this.groupBox292.Text = "CP";
+            // 
+            // groupBox293
+            // 
+            this.groupBox293.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox293.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox293.Location = new System.Drawing.Point(0, 55);
+            this.groupBox293.Name = "groupBox293";
+            this.groupBox293.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox293.Size = new System.Drawing.Size(58, 58);
+            this.groupBox293.TabIndex = 74;
+            this.groupBox293.TabStop = false;
+            this.groupBox293.Text = "SP";
+            // 
+            // groupBox294
+            // 
+            this.groupBox294.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox294.Controls.Add(this.groupBox295);
+            this.groupBox294.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox294.Location = new System.Drawing.Point(0, 46);
+            this.groupBox294.Name = "groupBox294";
+            this.groupBox294.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox294.Size = new System.Drawing.Size(58, 58);
+            this.groupBox294.TabIndex = 74;
+            this.groupBox294.TabStop = false;
+            this.groupBox294.Text = "SP";
+            // 
+            // groupBox295
+            // 
+            this.groupBox295.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox295.Controls.Add(this.groupBox296);
+            this.groupBox295.Controls.Add(this.groupBox326);
+            this.groupBox295.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox295.Location = new System.Drawing.Point(0, 0);
+            this.groupBox295.Name = "groupBox295";
+            this.groupBox295.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox295.Size = new System.Drawing.Size(58, 58);
+            this.groupBox295.TabIndex = 75;
+            this.groupBox295.TabStop = false;
+            this.groupBox295.Text = "CP";
+            // 
+            // groupBox296
+            // 
+            this.groupBox296.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox296.Controls.Add(this.groupBox297);
+            this.groupBox296.Controls.Add(this.groupBox321);
+            this.groupBox296.Controls.Add(this.groupBox323);
+            this.groupBox296.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox296.Location = new System.Drawing.Point(0, 1);
+            this.groupBox296.Name = "groupBox296";
+            this.groupBox296.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox296.Size = new System.Drawing.Size(58, 58);
+            this.groupBox296.TabIndex = 77;
+            this.groupBox296.TabStop = false;
+            this.groupBox296.Text = "CP";
+            // 
+            // groupBox297
+            // 
+            this.groupBox297.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox297.Controls.Add(this.groupBox298);
+            this.groupBox297.Controls.Add(this.groupBox310);
+            this.groupBox297.Controls.Add(this.groupBox312);
+            this.groupBox297.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox297.Location = new System.Drawing.Point(3, 1);
+            this.groupBox297.Name = "groupBox297";
+            this.groupBox297.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox297.Size = new System.Drawing.Size(58, 44);
+            this.groupBox297.TabIndex = 78;
+            this.groupBox297.TabStop = false;
+            this.groupBox297.Text = "SP";
+            // 
+            // groupBox298
+            // 
+            this.groupBox298.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox298.Controls.Add(this.groupBox299);
+            this.groupBox298.Controls.Add(this.groupBox301);
+            this.groupBox298.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox298.Location = new System.Drawing.Point(0, 48);
+            this.groupBox298.Name = "groupBox298";
+            this.groupBox298.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox298.Size = new System.Drawing.Size(58, 44);
+            this.groupBox298.TabIndex = 77;
+            this.groupBox298.TabStop = false;
+            this.groupBox298.Text = "SP";
+            // 
+            // groupBox299
+            // 
+            this.groupBox299.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox299.Controls.Add(this.groupBox300);
+            this.groupBox299.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox299.Location = new System.Drawing.Point(3, 48);
+            this.groupBox299.Name = "groupBox299";
+            this.groupBox299.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox299.Size = new System.Drawing.Size(58, 58);
+            this.groupBox299.TabIndex = 75;
+            this.groupBox299.TabStop = false;
+            this.groupBox299.Text = "CP";
+            // 
+            // groupBox300
+            // 
+            this.groupBox300.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox300.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox300.Location = new System.Drawing.Point(0, 55);
+            this.groupBox300.Name = "groupBox300";
+            this.groupBox300.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox300.Size = new System.Drawing.Size(58, 58);
+            this.groupBox300.TabIndex = 74;
+            this.groupBox300.TabStop = false;
+            this.groupBox300.Text = "SP";
+            // 
+            // groupBox301
+            // 
+            this.groupBox301.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox301.Controls.Add(this.groupBox302);
+            this.groupBox301.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox301.Location = new System.Drawing.Point(0, 48);
+            this.groupBox301.Name = "groupBox301";
+            this.groupBox301.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox301.Size = new System.Drawing.Size(58, 58);
+            this.groupBox301.TabIndex = 74;
+            this.groupBox301.TabStop = false;
+            this.groupBox301.Text = "SP";
+            // 
+            // groupBox302
+            // 
+            this.groupBox302.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox302.Controls.Add(this.groupBox303);
+            this.groupBox302.Controls.Add(this.groupBox309);
+            this.groupBox302.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox302.Location = new System.Drawing.Point(0, 0);
+            this.groupBox302.Name = "groupBox302";
+            this.groupBox302.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox302.Size = new System.Drawing.Size(58, 58);
+            this.groupBox302.TabIndex = 75;
+            this.groupBox302.TabStop = false;
+            this.groupBox302.Text = "CP";
+            // 
+            // groupBox303
+            // 
+            this.groupBox303.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox303.Controls.Add(this.groupBox304);
+            this.groupBox303.Controls.Add(this.groupBox306);
+            this.groupBox303.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox303.Location = new System.Drawing.Point(0, 1);
+            this.groupBox303.Name = "groupBox303";
+            this.groupBox303.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox303.Size = new System.Drawing.Size(58, 58);
+            this.groupBox303.TabIndex = 77;
+            this.groupBox303.TabStop = false;
+            this.groupBox303.Text = "CP";
+            // 
+            // groupBox304
+            // 
+            this.groupBox304.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox304.Controls.Add(this.groupBox305);
+            this.groupBox304.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox304.Location = new System.Drawing.Point(3, 55);
+            this.groupBox304.Name = "groupBox304";
+            this.groupBox304.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox304.Size = new System.Drawing.Size(58, 58);
+            this.groupBox304.TabIndex = 75;
+            this.groupBox304.TabStop = false;
+            this.groupBox304.Text = "CP";
+            // 
+            // groupBox305
+            // 
+            this.groupBox305.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox305.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox305.Location = new System.Drawing.Point(0, 55);
+            this.groupBox305.Name = "groupBox305";
+            this.groupBox305.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox305.Size = new System.Drawing.Size(58, 58);
+            this.groupBox305.TabIndex = 74;
+            this.groupBox305.TabStop = false;
+            this.groupBox305.Text = "SP";
+            // 
+            // groupBox306
+            // 
+            this.groupBox306.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox306.Controls.Add(this.groupBox307);
+            this.groupBox306.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox306.Location = new System.Drawing.Point(0, 55);
+            this.groupBox306.Name = "groupBox306";
+            this.groupBox306.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox306.Size = new System.Drawing.Size(58, 58);
+            this.groupBox306.TabIndex = 74;
+            this.groupBox306.TabStop = false;
+            this.groupBox306.Text = "SP";
+            // 
+            // groupBox307
+            // 
+            this.groupBox307.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox307.Controls.Add(this.groupBox308);
+            this.groupBox307.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox307.Location = new System.Drawing.Point(0, 0);
+            this.groupBox307.Name = "groupBox307";
+            this.groupBox307.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox307.Size = new System.Drawing.Size(58, 58);
+            this.groupBox307.TabIndex = 75;
+            this.groupBox307.TabStop = false;
+            this.groupBox307.Text = "CP";
+            // 
+            // groupBox308
+            // 
+            this.groupBox308.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox308.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox308.Location = new System.Drawing.Point(0, 55);
+            this.groupBox308.Name = "groupBox308";
+            this.groupBox308.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox308.Size = new System.Drawing.Size(58, 58);
+            this.groupBox308.TabIndex = 74;
+            this.groupBox308.TabStop = false;
+            this.groupBox308.Text = "SP";
+            // 
+            // groupBox309
+            // 
+            this.groupBox309.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox309.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox309.Location = new System.Drawing.Point(0, 55);
+            this.groupBox309.Name = "groupBox309";
+            this.groupBox309.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox309.Size = new System.Drawing.Size(58, 58);
+            this.groupBox309.TabIndex = 74;
+            this.groupBox309.TabStop = false;
+            this.groupBox309.Text = "SP";
+            // 
+            // groupBox310
+            // 
+            this.groupBox310.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox310.Controls.Add(this.groupBox311);
+            this.groupBox310.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox310.Location = new System.Drawing.Point(3, 48);
+            this.groupBox310.Name = "groupBox310";
+            this.groupBox310.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox310.Size = new System.Drawing.Size(58, 58);
+            this.groupBox310.TabIndex = 75;
+            this.groupBox310.TabStop = false;
+            this.groupBox310.Text = "CP";
+            // 
+            // groupBox311
+            // 
+            this.groupBox311.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox311.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox311.Location = new System.Drawing.Point(0, 55);
+            this.groupBox311.Name = "groupBox311";
+            this.groupBox311.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox311.Size = new System.Drawing.Size(58, 58);
+            this.groupBox311.TabIndex = 74;
+            this.groupBox311.TabStop = false;
+            this.groupBox311.Text = "SP";
+            // 
+            // groupBox312
+            // 
+            this.groupBox312.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox312.Controls.Add(this.groupBox313);
+            this.groupBox312.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox312.Location = new System.Drawing.Point(0, 48);
+            this.groupBox312.Name = "groupBox312";
+            this.groupBox312.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox312.Size = new System.Drawing.Size(58, 58);
+            this.groupBox312.TabIndex = 74;
+            this.groupBox312.TabStop = false;
+            this.groupBox312.Text = "SP";
+            // 
+            // groupBox313
+            // 
+            this.groupBox313.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox313.Controls.Add(this.groupBox314);
+            this.groupBox313.Controls.Add(this.groupBox320);
+            this.groupBox313.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox313.Location = new System.Drawing.Point(0, 0);
+            this.groupBox313.Name = "groupBox313";
+            this.groupBox313.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox313.Size = new System.Drawing.Size(58, 58);
+            this.groupBox313.TabIndex = 75;
+            this.groupBox313.TabStop = false;
+            this.groupBox313.Text = "CP";
+            // 
+            // groupBox314
+            // 
+            this.groupBox314.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox314.Controls.Add(this.groupBox315);
+            this.groupBox314.Controls.Add(this.groupBox317);
+            this.groupBox314.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox314.Location = new System.Drawing.Point(0, 1);
+            this.groupBox314.Name = "groupBox314";
+            this.groupBox314.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox314.Size = new System.Drawing.Size(58, 58);
+            this.groupBox314.TabIndex = 77;
+            this.groupBox314.TabStop = false;
+            this.groupBox314.Text = "CP";
+            // 
+            // groupBox315
+            // 
+            this.groupBox315.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox315.Controls.Add(this.groupBox316);
+            this.groupBox315.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox315.Location = new System.Drawing.Point(3, 55);
+            this.groupBox315.Name = "groupBox315";
+            this.groupBox315.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox315.Size = new System.Drawing.Size(58, 58);
+            this.groupBox315.TabIndex = 75;
+            this.groupBox315.TabStop = false;
+            this.groupBox315.Text = "CP";
+            // 
+            // groupBox316
+            // 
+            this.groupBox316.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox316.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox316.Location = new System.Drawing.Point(0, 55);
+            this.groupBox316.Name = "groupBox316";
+            this.groupBox316.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox316.Size = new System.Drawing.Size(58, 58);
+            this.groupBox316.TabIndex = 74;
+            this.groupBox316.TabStop = false;
+            this.groupBox316.Text = "SP";
+            // 
+            // groupBox317
+            // 
+            this.groupBox317.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox317.Controls.Add(this.groupBox318);
+            this.groupBox317.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox317.Location = new System.Drawing.Point(0, 55);
+            this.groupBox317.Name = "groupBox317";
+            this.groupBox317.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox317.Size = new System.Drawing.Size(58, 58);
+            this.groupBox317.TabIndex = 74;
+            this.groupBox317.TabStop = false;
+            this.groupBox317.Text = "SP";
+            // 
+            // groupBox318
+            // 
+            this.groupBox318.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox318.Controls.Add(this.groupBox319);
+            this.groupBox318.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox318.Location = new System.Drawing.Point(0, 0);
+            this.groupBox318.Name = "groupBox318";
+            this.groupBox318.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox318.Size = new System.Drawing.Size(58, 58);
+            this.groupBox318.TabIndex = 75;
+            this.groupBox318.TabStop = false;
+            this.groupBox318.Text = "CP";
+            // 
+            // groupBox319
+            // 
+            this.groupBox319.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox319.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox319.Location = new System.Drawing.Point(0, 55);
+            this.groupBox319.Name = "groupBox319";
+            this.groupBox319.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox319.Size = new System.Drawing.Size(58, 58);
+            this.groupBox319.TabIndex = 74;
+            this.groupBox319.TabStop = false;
+            this.groupBox319.Text = "SP";
+            // 
+            // groupBox320
+            // 
+            this.groupBox320.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox320.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox320.Location = new System.Drawing.Point(0, 55);
+            this.groupBox320.Name = "groupBox320";
+            this.groupBox320.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox320.Size = new System.Drawing.Size(58, 58);
+            this.groupBox320.TabIndex = 74;
+            this.groupBox320.TabStop = false;
+            this.groupBox320.Text = "SP";
+            // 
+            // groupBox321
+            // 
+            this.groupBox321.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox321.Controls.Add(this.groupBox322);
+            this.groupBox321.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox321.Location = new System.Drawing.Point(3, 55);
+            this.groupBox321.Name = "groupBox321";
+            this.groupBox321.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox321.Size = new System.Drawing.Size(58, 58);
+            this.groupBox321.TabIndex = 75;
+            this.groupBox321.TabStop = false;
+            this.groupBox321.Text = "CP";
+            // 
+            // groupBox322
+            // 
+            this.groupBox322.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox322.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox322.Location = new System.Drawing.Point(0, 55);
+            this.groupBox322.Name = "groupBox322";
+            this.groupBox322.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox322.Size = new System.Drawing.Size(58, 58);
+            this.groupBox322.TabIndex = 74;
+            this.groupBox322.TabStop = false;
+            this.groupBox322.Text = "SP";
+            // 
+            // groupBox323
+            // 
+            this.groupBox323.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox323.Controls.Add(this.groupBox324);
+            this.groupBox323.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox323.Location = new System.Drawing.Point(0, 55);
+            this.groupBox323.Name = "groupBox323";
+            this.groupBox323.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox323.Size = new System.Drawing.Size(58, 58);
+            this.groupBox323.TabIndex = 74;
+            this.groupBox323.TabStop = false;
+            this.groupBox323.Text = "SP";
+            // 
+            // groupBox324
+            // 
+            this.groupBox324.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox324.Controls.Add(this.groupBox325);
+            this.groupBox324.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox324.Location = new System.Drawing.Point(0, 0);
+            this.groupBox324.Name = "groupBox324";
+            this.groupBox324.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox324.Size = new System.Drawing.Size(58, 58);
+            this.groupBox324.TabIndex = 75;
+            this.groupBox324.TabStop = false;
+            this.groupBox324.Text = "CP";
+            // 
+            // groupBox325
+            // 
+            this.groupBox325.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox325.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox325.Location = new System.Drawing.Point(0, 55);
+            this.groupBox325.Name = "groupBox325";
+            this.groupBox325.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox325.Size = new System.Drawing.Size(58, 58);
+            this.groupBox325.TabIndex = 74;
+            this.groupBox325.TabStop = false;
+            this.groupBox325.Text = "SP";
+            // 
+            // groupBox326
+            // 
+            this.groupBox326.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox326.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox326.Location = new System.Drawing.Point(0, 55);
+            this.groupBox326.Name = "groupBox326";
+            this.groupBox326.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox326.Size = new System.Drawing.Size(58, 58);
+            this.groupBox326.TabIndex = 74;
+            this.groupBox326.TabStop = false;
+            this.groupBox326.Text = "SP";
             // 
             // groupBox231
             // 
             this.groupBox231.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox231.Controls.Add(this.label8);
             this.groupBox231.Controls.Add(this.groupBox232);
             this.groupBox231.Controls.Add(this.groupBox244);
             this.groupBox231.Controls.Add(this.groupBox246);
@@ -4736,721 +3533,1934 @@
             this.groupBox278.TabStop = false;
             this.groupBox278.Text = "SP";
             // 
-            // groupBox279
-            // 
-            this.groupBox279.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox279.Controls.Add(this.label9);
-            this.groupBox279.Controls.Add(this.groupBox280);
-            this.groupBox279.Controls.Add(this.groupBox292);
-            this.groupBox279.Controls.Add(this.groupBox294);
-            this.groupBox279.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox279.Location = new System.Drawing.Point(180, 182);
-            this.groupBox279.Name = "groupBox279";
-            this.groupBox279.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox279.Size = new System.Drawing.Size(58, 41);
-            this.groupBox279.TabIndex = 81;
-            this.groupBox279.TabStop = false;
-            this.groupBox279.Text = "PP";
-            this.groupBox279.Enter += new System.EventHandler(this.groupBox279_Enter);
-            // 
-            // groupBox280
-            // 
-            this.groupBox280.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox280.Controls.Add(this.groupBox281);
-            this.groupBox280.Controls.Add(this.groupBox283);
-            this.groupBox280.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox280.Location = new System.Drawing.Point(0, 46);
-            this.groupBox280.Name = "groupBox280";
-            this.groupBox280.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox280.Size = new System.Drawing.Size(58, 44);
-            this.groupBox280.TabIndex = 77;
-            this.groupBox280.TabStop = false;
-            this.groupBox280.Text = "SP";
-            // 
-            // groupBox281
-            // 
-            this.groupBox281.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox281.Controls.Add(this.groupBox282);
-            this.groupBox281.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox281.Location = new System.Drawing.Point(3, 48);
-            this.groupBox281.Name = "groupBox281";
-            this.groupBox281.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox281.Size = new System.Drawing.Size(58, 58);
-            this.groupBox281.TabIndex = 75;
-            this.groupBox281.TabStop = false;
-            this.groupBox281.Text = "CP";
-            // 
-            // groupBox282
-            // 
-            this.groupBox282.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox282.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox282.Location = new System.Drawing.Point(0, 55);
-            this.groupBox282.Name = "groupBox282";
-            this.groupBox282.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox282.Size = new System.Drawing.Size(58, 58);
-            this.groupBox282.TabIndex = 74;
-            this.groupBox282.TabStop = false;
-            this.groupBox282.Text = "SP";
-            // 
-            // groupBox283
-            // 
-            this.groupBox283.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox283.Controls.Add(this.groupBox284);
-            this.groupBox283.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox283.Location = new System.Drawing.Point(0, 48);
-            this.groupBox283.Name = "groupBox283";
-            this.groupBox283.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox283.Size = new System.Drawing.Size(58, 58);
-            this.groupBox283.TabIndex = 74;
-            this.groupBox283.TabStop = false;
-            this.groupBox283.Text = "SP";
-            // 
-            // groupBox284
-            // 
-            this.groupBox284.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox284.Controls.Add(this.groupBox285);
-            this.groupBox284.Controls.Add(this.groupBox291);
-            this.groupBox284.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox284.Location = new System.Drawing.Point(0, 0);
-            this.groupBox284.Name = "groupBox284";
-            this.groupBox284.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox284.Size = new System.Drawing.Size(58, 58);
-            this.groupBox284.TabIndex = 75;
-            this.groupBox284.TabStop = false;
-            this.groupBox284.Text = "CP";
-            // 
-            // groupBox285
-            // 
-            this.groupBox285.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox285.Controls.Add(this.groupBox286);
-            this.groupBox285.Controls.Add(this.groupBox288);
-            this.groupBox285.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox285.Location = new System.Drawing.Point(0, 1);
-            this.groupBox285.Name = "groupBox285";
-            this.groupBox285.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox285.Size = new System.Drawing.Size(58, 58);
-            this.groupBox285.TabIndex = 77;
-            this.groupBox285.TabStop = false;
-            this.groupBox285.Text = "CP";
-            // 
-            // groupBox286
-            // 
-            this.groupBox286.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox286.Controls.Add(this.groupBox287);
-            this.groupBox286.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox286.Location = new System.Drawing.Point(3, 55);
-            this.groupBox286.Name = "groupBox286";
-            this.groupBox286.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox286.Size = new System.Drawing.Size(58, 58);
-            this.groupBox286.TabIndex = 75;
-            this.groupBox286.TabStop = false;
-            this.groupBox286.Text = "CP";
-            // 
-            // groupBox287
-            // 
-            this.groupBox287.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox287.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox287.Location = new System.Drawing.Point(0, 55);
-            this.groupBox287.Name = "groupBox287";
-            this.groupBox287.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox287.Size = new System.Drawing.Size(58, 58);
-            this.groupBox287.TabIndex = 74;
-            this.groupBox287.TabStop = false;
-            this.groupBox287.Text = "SP";
-            // 
-            // groupBox288
-            // 
-            this.groupBox288.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox288.Controls.Add(this.groupBox289);
-            this.groupBox288.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox288.Location = new System.Drawing.Point(0, 55);
-            this.groupBox288.Name = "groupBox288";
-            this.groupBox288.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox288.Size = new System.Drawing.Size(58, 58);
-            this.groupBox288.TabIndex = 74;
-            this.groupBox288.TabStop = false;
-            this.groupBox288.Text = "SP";
-            // 
-            // groupBox289
-            // 
-            this.groupBox289.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox289.Controls.Add(this.groupBox290);
-            this.groupBox289.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox289.Location = new System.Drawing.Point(0, 0);
-            this.groupBox289.Name = "groupBox289";
-            this.groupBox289.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox289.Size = new System.Drawing.Size(58, 58);
-            this.groupBox289.TabIndex = 75;
-            this.groupBox289.TabStop = false;
-            this.groupBox289.Text = "CP";
-            // 
-            // groupBox290
-            // 
-            this.groupBox290.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox290.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox290.Location = new System.Drawing.Point(0, 55);
-            this.groupBox290.Name = "groupBox290";
-            this.groupBox290.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox290.Size = new System.Drawing.Size(58, 58);
-            this.groupBox290.TabIndex = 74;
-            this.groupBox290.TabStop = false;
-            this.groupBox290.Text = "SP";
-            // 
-            // groupBox291
-            // 
-            this.groupBox291.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox291.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox291.Location = new System.Drawing.Point(0, 55);
-            this.groupBox291.Name = "groupBox291";
-            this.groupBox291.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox291.Size = new System.Drawing.Size(58, 58);
-            this.groupBox291.TabIndex = 74;
-            this.groupBox291.TabStop = false;
-            this.groupBox291.Text = "SP";
-            // 
-            // groupBox292
-            // 
-            this.groupBox292.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox292.Controls.Add(this.groupBox293);
-            this.groupBox292.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox292.Location = new System.Drawing.Point(3, 46);
-            this.groupBox292.Name = "groupBox292";
-            this.groupBox292.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox292.Size = new System.Drawing.Size(58, 58);
-            this.groupBox292.TabIndex = 75;
-            this.groupBox292.TabStop = false;
-            this.groupBox292.Text = "CP";
-            // 
-            // groupBox293
-            // 
-            this.groupBox293.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox293.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox293.Location = new System.Drawing.Point(0, 55);
-            this.groupBox293.Name = "groupBox293";
-            this.groupBox293.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox293.Size = new System.Drawing.Size(58, 58);
-            this.groupBox293.TabIndex = 74;
-            this.groupBox293.TabStop = false;
-            this.groupBox293.Text = "SP";
-            // 
-            // groupBox294
-            // 
-            this.groupBox294.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox294.Controls.Add(this.groupBox295);
-            this.groupBox294.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox294.Location = new System.Drawing.Point(0, 46);
-            this.groupBox294.Name = "groupBox294";
-            this.groupBox294.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox294.Size = new System.Drawing.Size(58, 58);
-            this.groupBox294.TabIndex = 74;
-            this.groupBox294.TabStop = false;
-            this.groupBox294.Text = "SP";
-            // 
-            // groupBox295
-            // 
-            this.groupBox295.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox295.Controls.Add(this.groupBox296);
-            this.groupBox295.Controls.Add(this.groupBox326);
-            this.groupBox295.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox295.Location = new System.Drawing.Point(0, 0);
-            this.groupBox295.Name = "groupBox295";
-            this.groupBox295.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox295.Size = new System.Drawing.Size(58, 58);
-            this.groupBox295.TabIndex = 75;
-            this.groupBox295.TabStop = false;
-            this.groupBox295.Text = "CP";
-            // 
-            // groupBox296
-            // 
-            this.groupBox296.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox296.Controls.Add(this.groupBox297);
-            this.groupBox296.Controls.Add(this.groupBox321);
-            this.groupBox296.Controls.Add(this.groupBox323);
-            this.groupBox296.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox296.Location = new System.Drawing.Point(0, 1);
-            this.groupBox296.Name = "groupBox296";
-            this.groupBox296.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox296.Size = new System.Drawing.Size(58, 58);
-            this.groupBox296.TabIndex = 77;
-            this.groupBox296.TabStop = false;
-            this.groupBox296.Text = "CP";
-            // 
-            // groupBox297
-            // 
-            this.groupBox297.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox297.Controls.Add(this.groupBox298);
-            this.groupBox297.Controls.Add(this.groupBox310);
-            this.groupBox297.Controls.Add(this.groupBox312);
-            this.groupBox297.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox297.Location = new System.Drawing.Point(3, 1);
-            this.groupBox297.Name = "groupBox297";
-            this.groupBox297.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox297.Size = new System.Drawing.Size(58, 44);
-            this.groupBox297.TabIndex = 78;
-            this.groupBox297.TabStop = false;
-            this.groupBox297.Text = "SP";
-            // 
-            // groupBox298
-            // 
-            this.groupBox298.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox298.Controls.Add(this.groupBox299);
-            this.groupBox298.Controls.Add(this.groupBox301);
-            this.groupBox298.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox298.Location = new System.Drawing.Point(0, 48);
-            this.groupBox298.Name = "groupBox298";
-            this.groupBox298.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox298.Size = new System.Drawing.Size(58, 44);
-            this.groupBox298.TabIndex = 77;
-            this.groupBox298.TabStop = false;
-            this.groupBox298.Text = "SP";
-            // 
-            // groupBox299
-            // 
-            this.groupBox299.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox299.Controls.Add(this.groupBox300);
-            this.groupBox299.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox299.Location = new System.Drawing.Point(3, 48);
-            this.groupBox299.Name = "groupBox299";
-            this.groupBox299.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox299.Size = new System.Drawing.Size(58, 58);
-            this.groupBox299.TabIndex = 75;
-            this.groupBox299.TabStop = false;
-            this.groupBox299.Text = "CP";
-            // 
-            // groupBox300
-            // 
-            this.groupBox300.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox300.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox300.Location = new System.Drawing.Point(0, 55);
-            this.groupBox300.Name = "groupBox300";
-            this.groupBox300.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox300.Size = new System.Drawing.Size(58, 58);
-            this.groupBox300.TabIndex = 74;
-            this.groupBox300.TabStop = false;
-            this.groupBox300.Text = "SP";
-            // 
-            // groupBox301
-            // 
-            this.groupBox301.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox301.Controls.Add(this.groupBox302);
-            this.groupBox301.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox301.Location = new System.Drawing.Point(0, 48);
-            this.groupBox301.Name = "groupBox301";
-            this.groupBox301.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox301.Size = new System.Drawing.Size(58, 58);
-            this.groupBox301.TabIndex = 74;
-            this.groupBox301.TabStop = false;
-            this.groupBox301.Text = "SP";
-            // 
-            // groupBox302
-            // 
-            this.groupBox302.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox302.Controls.Add(this.groupBox303);
-            this.groupBox302.Controls.Add(this.groupBox309);
-            this.groupBox302.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox302.Location = new System.Drawing.Point(0, 0);
-            this.groupBox302.Name = "groupBox302";
-            this.groupBox302.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox302.Size = new System.Drawing.Size(58, 58);
-            this.groupBox302.TabIndex = 75;
-            this.groupBox302.TabStop = false;
-            this.groupBox302.Text = "CP";
-            // 
-            // groupBox303
-            // 
-            this.groupBox303.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox303.Controls.Add(this.groupBox304);
-            this.groupBox303.Controls.Add(this.groupBox306);
-            this.groupBox303.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox303.Location = new System.Drawing.Point(0, 1);
-            this.groupBox303.Name = "groupBox303";
-            this.groupBox303.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox303.Size = new System.Drawing.Size(58, 58);
-            this.groupBox303.TabIndex = 77;
-            this.groupBox303.TabStop = false;
-            this.groupBox303.Text = "CP";
-            // 
-            // groupBox304
-            // 
-            this.groupBox304.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox304.Controls.Add(this.groupBox305);
-            this.groupBox304.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox304.Location = new System.Drawing.Point(3, 55);
-            this.groupBox304.Name = "groupBox304";
-            this.groupBox304.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox304.Size = new System.Drawing.Size(58, 58);
-            this.groupBox304.TabIndex = 75;
-            this.groupBox304.TabStop = false;
-            this.groupBox304.Text = "CP";
-            // 
-            // groupBox305
-            // 
-            this.groupBox305.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox305.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox305.Location = new System.Drawing.Point(0, 55);
-            this.groupBox305.Name = "groupBox305";
-            this.groupBox305.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox305.Size = new System.Drawing.Size(58, 58);
-            this.groupBox305.TabIndex = 74;
-            this.groupBox305.TabStop = false;
-            this.groupBox305.Text = "SP";
-            // 
-            // groupBox306
-            // 
-            this.groupBox306.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox306.Controls.Add(this.groupBox307);
-            this.groupBox306.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox306.Location = new System.Drawing.Point(0, 55);
-            this.groupBox306.Name = "groupBox306";
-            this.groupBox306.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox306.Size = new System.Drawing.Size(58, 58);
-            this.groupBox306.TabIndex = 74;
-            this.groupBox306.TabStop = false;
-            this.groupBox306.Text = "SP";
-            // 
-            // groupBox307
-            // 
-            this.groupBox307.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox307.Controls.Add(this.groupBox308);
-            this.groupBox307.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox307.Location = new System.Drawing.Point(0, 0);
-            this.groupBox307.Name = "groupBox307";
-            this.groupBox307.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox307.Size = new System.Drawing.Size(58, 58);
-            this.groupBox307.TabIndex = 75;
-            this.groupBox307.TabStop = false;
-            this.groupBox307.Text = "CP";
-            // 
-            // groupBox308
-            // 
-            this.groupBox308.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox308.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox308.Location = new System.Drawing.Point(0, 55);
-            this.groupBox308.Name = "groupBox308";
-            this.groupBox308.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox308.Size = new System.Drawing.Size(58, 58);
-            this.groupBox308.TabIndex = 74;
-            this.groupBox308.TabStop = false;
-            this.groupBox308.Text = "SP";
-            // 
-            // groupBox309
-            // 
-            this.groupBox309.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox309.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox309.Location = new System.Drawing.Point(0, 55);
-            this.groupBox309.Name = "groupBox309";
-            this.groupBox309.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox309.Size = new System.Drawing.Size(58, 58);
-            this.groupBox309.TabIndex = 74;
-            this.groupBox309.TabStop = false;
-            this.groupBox309.Text = "SP";
-            // 
-            // groupBox310
-            // 
-            this.groupBox310.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox310.Controls.Add(this.groupBox311);
-            this.groupBox310.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox310.Location = new System.Drawing.Point(3, 48);
-            this.groupBox310.Name = "groupBox310";
-            this.groupBox310.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox310.Size = new System.Drawing.Size(58, 58);
-            this.groupBox310.TabIndex = 75;
-            this.groupBox310.TabStop = false;
-            this.groupBox310.Text = "CP";
-            // 
-            // groupBox311
-            // 
-            this.groupBox311.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox311.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox311.Location = new System.Drawing.Point(0, 55);
-            this.groupBox311.Name = "groupBox311";
-            this.groupBox311.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox311.Size = new System.Drawing.Size(58, 58);
-            this.groupBox311.TabIndex = 74;
-            this.groupBox311.TabStop = false;
-            this.groupBox311.Text = "SP";
-            // 
-            // groupBox312
-            // 
-            this.groupBox312.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox312.Controls.Add(this.groupBox313);
-            this.groupBox312.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox312.Location = new System.Drawing.Point(0, 48);
-            this.groupBox312.Name = "groupBox312";
-            this.groupBox312.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox312.Size = new System.Drawing.Size(58, 58);
-            this.groupBox312.TabIndex = 74;
-            this.groupBox312.TabStop = false;
-            this.groupBox312.Text = "SP";
-            // 
-            // groupBox313
-            // 
-            this.groupBox313.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox313.Controls.Add(this.groupBox314);
-            this.groupBox313.Controls.Add(this.groupBox320);
-            this.groupBox313.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox313.Location = new System.Drawing.Point(0, 0);
-            this.groupBox313.Name = "groupBox313";
-            this.groupBox313.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox313.Size = new System.Drawing.Size(58, 58);
-            this.groupBox313.TabIndex = 75;
-            this.groupBox313.TabStop = false;
-            this.groupBox313.Text = "CP";
-            // 
-            // groupBox314
-            // 
-            this.groupBox314.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox314.Controls.Add(this.groupBox315);
-            this.groupBox314.Controls.Add(this.groupBox317);
-            this.groupBox314.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox314.Location = new System.Drawing.Point(0, 1);
-            this.groupBox314.Name = "groupBox314";
-            this.groupBox314.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox314.Size = new System.Drawing.Size(58, 58);
-            this.groupBox314.TabIndex = 77;
-            this.groupBox314.TabStop = false;
-            this.groupBox314.Text = "CP";
-            // 
-            // groupBox315
-            // 
-            this.groupBox315.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox315.Controls.Add(this.groupBox316);
-            this.groupBox315.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox315.Location = new System.Drawing.Point(3, 55);
-            this.groupBox315.Name = "groupBox315";
-            this.groupBox315.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox315.Size = new System.Drawing.Size(58, 58);
-            this.groupBox315.TabIndex = 75;
-            this.groupBox315.TabStop = false;
-            this.groupBox315.Text = "CP";
-            // 
-            // groupBox316
-            // 
-            this.groupBox316.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox316.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox316.Location = new System.Drawing.Point(0, 55);
-            this.groupBox316.Name = "groupBox316";
-            this.groupBox316.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox316.Size = new System.Drawing.Size(58, 58);
-            this.groupBox316.TabIndex = 74;
-            this.groupBox316.TabStop = false;
-            this.groupBox316.Text = "SP";
-            // 
-            // groupBox317
-            // 
-            this.groupBox317.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox317.Controls.Add(this.groupBox318);
-            this.groupBox317.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox317.Location = new System.Drawing.Point(0, 55);
-            this.groupBox317.Name = "groupBox317";
-            this.groupBox317.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox317.Size = new System.Drawing.Size(58, 58);
-            this.groupBox317.TabIndex = 74;
-            this.groupBox317.TabStop = false;
-            this.groupBox317.Text = "SP";
-            // 
-            // groupBox318
-            // 
-            this.groupBox318.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox318.Controls.Add(this.groupBox319);
-            this.groupBox318.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox318.Location = new System.Drawing.Point(0, 0);
-            this.groupBox318.Name = "groupBox318";
-            this.groupBox318.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox318.Size = new System.Drawing.Size(58, 58);
-            this.groupBox318.TabIndex = 75;
-            this.groupBox318.TabStop = false;
-            this.groupBox318.Text = "CP";
-            // 
-            // groupBox319
-            // 
-            this.groupBox319.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox319.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox319.Location = new System.Drawing.Point(0, 55);
-            this.groupBox319.Name = "groupBox319";
-            this.groupBox319.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox319.Size = new System.Drawing.Size(58, 58);
-            this.groupBox319.TabIndex = 74;
-            this.groupBox319.TabStop = false;
-            this.groupBox319.Text = "SP";
-            // 
-            // groupBox320
-            // 
-            this.groupBox320.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox320.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox320.Location = new System.Drawing.Point(0, 55);
-            this.groupBox320.Name = "groupBox320";
-            this.groupBox320.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox320.Size = new System.Drawing.Size(58, 58);
-            this.groupBox320.TabIndex = 74;
-            this.groupBox320.TabStop = false;
-            this.groupBox320.Text = "SP";
-            // 
-            // groupBox321
-            // 
-            this.groupBox321.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox321.Controls.Add(this.groupBox322);
-            this.groupBox321.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox321.Location = new System.Drawing.Point(3, 55);
-            this.groupBox321.Name = "groupBox321";
-            this.groupBox321.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox321.Size = new System.Drawing.Size(58, 58);
-            this.groupBox321.TabIndex = 75;
-            this.groupBox321.TabStop = false;
-            this.groupBox321.Text = "CP";
-            // 
-            // groupBox322
-            // 
-            this.groupBox322.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox322.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox322.Location = new System.Drawing.Point(0, 55);
-            this.groupBox322.Name = "groupBox322";
-            this.groupBox322.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox322.Size = new System.Drawing.Size(58, 58);
-            this.groupBox322.TabIndex = 74;
-            this.groupBox322.TabStop = false;
-            this.groupBox322.Text = "SP";
-            // 
-            // groupBox323
-            // 
-            this.groupBox323.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox323.Controls.Add(this.groupBox324);
-            this.groupBox323.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox323.Location = new System.Drawing.Point(0, 55);
-            this.groupBox323.Name = "groupBox323";
-            this.groupBox323.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox323.Size = new System.Drawing.Size(58, 58);
-            this.groupBox323.TabIndex = 74;
-            this.groupBox323.TabStop = false;
-            this.groupBox323.Text = "SP";
-            // 
-            // groupBox324
-            // 
-            this.groupBox324.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox324.Controls.Add(this.groupBox325);
-            this.groupBox324.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox324.Location = new System.Drawing.Point(0, 0);
-            this.groupBox324.Name = "groupBox324";
-            this.groupBox324.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox324.Size = new System.Drawing.Size(58, 58);
-            this.groupBox324.TabIndex = 75;
-            this.groupBox324.TabStop = false;
-            this.groupBox324.Text = "CP";
-            // 
-            // groupBox325
-            // 
-            this.groupBox325.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox325.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox325.Location = new System.Drawing.Point(0, 55);
-            this.groupBox325.Name = "groupBox325";
-            this.groupBox325.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox325.Size = new System.Drawing.Size(58, 58);
-            this.groupBox325.TabIndex = 74;
-            this.groupBox325.TabStop = false;
-            this.groupBox325.Text = "SP";
-            // 
-            // groupBox326
-            // 
-            this.groupBox326.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox326.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox326.Location = new System.Drawing.Point(0, 55);
-            this.groupBox326.Name = "groupBox326";
-            this.groupBox326.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.groupBox326.Size = new System.Drawing.Size(58, 58);
-            this.groupBox326.TabIndex = 74;
-            this.groupBox326.TabStop = false;
-            this.groupBox326.Text = "SP";
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label5.Location = new System.Drawing.Point(3, 17);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 23);
-            this.label5.TabIndex = 78;
-            this.label5.Text = "0";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label6
-            // 
-            this.label6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label6.Location = new System.Drawing.Point(3, 17);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 27);
-            this.label6.TabIndex = 79;
-            this.label6.Text = "0";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label7
-            // 
-            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label7.Location = new System.Drawing.Point(3, 17);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 24);
-            this.label7.TabIndex = 79;
-            this.label7.Text = "0";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label8
-            // 
-            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label8.Location = new System.Drawing.Point(3, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 23);
-            this.label8.TabIndex = 79;
-            this.label8.Text = "0";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label9
-            // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.label9.Location = new System.Drawing.Point(3, 17);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 21);
-            this.label9.TabIndex = 79;
-            this.label9.Text = "0";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button1.Location = new System.Drawing.Point(6, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 27);
-            this.button1.TabIndex = 70;
-            this.button1.Text = "Save Sheet";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button3.Location = new System.Drawing.Point(63, 20);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 27);
-            this.button3.TabIndex = 82;
-            this.button3.Text = "Save Sheet";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button4.Location = new System.Drawing.Point(120, 20);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 27);
-            this.button4.TabIndex = 83;
-            this.button4.Text = "Save Sheet";
-            this.button4.UseVisualStyleBackColor = true;
+            // groupBox135
+            // 
+            this.groupBox135.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox135.Controls.Add(this.groupBox136);
+            this.groupBox135.Controls.Add(this.groupBox148);
+            this.groupBox135.Controls.Add(this.groupBox150);
+            this.groupBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox135.Location = new System.Drawing.Point(180, 98);
+            this.groupBox135.Name = "groupBox135";
+            this.groupBox135.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox135.Size = new System.Drawing.Size(58, 44);
+            this.groupBox135.TabIndex = 79;
+            this.groupBox135.TabStop = false;
+            this.groupBox135.Text = "EP";
+            // 
+            // groupBox136
+            // 
+            this.groupBox136.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox136.Controls.Add(this.groupBox137);
+            this.groupBox136.Controls.Add(this.groupBox139);
+            this.groupBox136.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox136.Location = new System.Drawing.Point(0, 48);
+            this.groupBox136.Name = "groupBox136";
+            this.groupBox136.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox136.Size = new System.Drawing.Size(58, 44);
+            this.groupBox136.TabIndex = 77;
+            this.groupBox136.TabStop = false;
+            this.groupBox136.Text = "SP";
+            // 
+            // groupBox137
+            // 
+            this.groupBox137.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox137.Controls.Add(this.groupBox138);
+            this.groupBox137.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox137.Location = new System.Drawing.Point(3, 48);
+            this.groupBox137.Name = "groupBox137";
+            this.groupBox137.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox137.Size = new System.Drawing.Size(58, 58);
+            this.groupBox137.TabIndex = 75;
+            this.groupBox137.TabStop = false;
+            this.groupBox137.Text = "CP";
+            // 
+            // groupBox138
+            // 
+            this.groupBox138.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox138.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox138.Location = new System.Drawing.Point(0, 55);
+            this.groupBox138.Name = "groupBox138";
+            this.groupBox138.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox138.Size = new System.Drawing.Size(58, 58);
+            this.groupBox138.TabIndex = 74;
+            this.groupBox138.TabStop = false;
+            this.groupBox138.Text = "SP";
+            // 
+            // groupBox139
+            // 
+            this.groupBox139.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox139.Controls.Add(this.groupBox140);
+            this.groupBox139.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox139.Location = new System.Drawing.Point(0, 48);
+            this.groupBox139.Name = "groupBox139";
+            this.groupBox139.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox139.Size = new System.Drawing.Size(58, 58);
+            this.groupBox139.TabIndex = 74;
+            this.groupBox139.TabStop = false;
+            this.groupBox139.Text = "SP";
+            // 
+            // groupBox140
+            // 
+            this.groupBox140.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox140.Controls.Add(this.groupBox141);
+            this.groupBox140.Controls.Add(this.groupBox147);
+            this.groupBox140.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox140.Location = new System.Drawing.Point(0, 0);
+            this.groupBox140.Name = "groupBox140";
+            this.groupBox140.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox140.Size = new System.Drawing.Size(58, 58);
+            this.groupBox140.TabIndex = 75;
+            this.groupBox140.TabStop = false;
+            this.groupBox140.Text = "CP";
+            // 
+            // groupBox141
+            // 
+            this.groupBox141.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox141.Controls.Add(this.groupBox142);
+            this.groupBox141.Controls.Add(this.groupBox144);
+            this.groupBox141.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox141.Location = new System.Drawing.Point(0, 1);
+            this.groupBox141.Name = "groupBox141";
+            this.groupBox141.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox141.Size = new System.Drawing.Size(58, 58);
+            this.groupBox141.TabIndex = 77;
+            this.groupBox141.TabStop = false;
+            this.groupBox141.Text = "CP";
+            // 
+            // groupBox142
+            // 
+            this.groupBox142.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox142.Controls.Add(this.groupBox143);
+            this.groupBox142.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox142.Location = new System.Drawing.Point(3, 55);
+            this.groupBox142.Name = "groupBox142";
+            this.groupBox142.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox142.Size = new System.Drawing.Size(58, 58);
+            this.groupBox142.TabIndex = 75;
+            this.groupBox142.TabStop = false;
+            this.groupBox142.Text = "CP";
+            // 
+            // groupBox143
+            // 
+            this.groupBox143.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox143.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox143.Location = new System.Drawing.Point(0, 55);
+            this.groupBox143.Name = "groupBox143";
+            this.groupBox143.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox143.Size = new System.Drawing.Size(58, 58);
+            this.groupBox143.TabIndex = 74;
+            this.groupBox143.TabStop = false;
+            this.groupBox143.Text = "SP";
+            // 
+            // groupBox144
+            // 
+            this.groupBox144.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox144.Controls.Add(this.groupBox145);
+            this.groupBox144.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox144.Location = new System.Drawing.Point(0, 55);
+            this.groupBox144.Name = "groupBox144";
+            this.groupBox144.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox144.Size = new System.Drawing.Size(58, 58);
+            this.groupBox144.TabIndex = 74;
+            this.groupBox144.TabStop = false;
+            this.groupBox144.Text = "SP";
+            // 
+            // groupBox145
+            // 
+            this.groupBox145.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox145.Controls.Add(this.groupBox146);
+            this.groupBox145.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox145.Location = new System.Drawing.Point(0, 0);
+            this.groupBox145.Name = "groupBox145";
+            this.groupBox145.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox145.Size = new System.Drawing.Size(58, 58);
+            this.groupBox145.TabIndex = 75;
+            this.groupBox145.TabStop = false;
+            this.groupBox145.Text = "CP";
+            // 
+            // groupBox146
+            // 
+            this.groupBox146.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox146.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox146.Location = new System.Drawing.Point(0, 55);
+            this.groupBox146.Name = "groupBox146";
+            this.groupBox146.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox146.Size = new System.Drawing.Size(58, 58);
+            this.groupBox146.TabIndex = 74;
+            this.groupBox146.TabStop = false;
+            this.groupBox146.Text = "SP";
+            // 
+            // groupBox147
+            // 
+            this.groupBox147.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox147.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox147.Location = new System.Drawing.Point(0, 55);
+            this.groupBox147.Name = "groupBox147";
+            this.groupBox147.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox147.Size = new System.Drawing.Size(58, 58);
+            this.groupBox147.TabIndex = 74;
+            this.groupBox147.TabStop = false;
+            this.groupBox147.Text = "SP";
+            // 
+            // groupBox148
+            // 
+            this.groupBox148.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox148.Controls.Add(this.groupBox149);
+            this.groupBox148.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox148.Location = new System.Drawing.Point(3, 48);
+            this.groupBox148.Name = "groupBox148";
+            this.groupBox148.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox148.Size = new System.Drawing.Size(58, 58);
+            this.groupBox148.TabIndex = 75;
+            this.groupBox148.TabStop = false;
+            this.groupBox148.Text = "CP";
+            // 
+            // groupBox149
+            // 
+            this.groupBox149.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox149.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox149.Location = new System.Drawing.Point(0, 55);
+            this.groupBox149.Name = "groupBox149";
+            this.groupBox149.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox149.Size = new System.Drawing.Size(58, 58);
+            this.groupBox149.TabIndex = 74;
+            this.groupBox149.TabStop = false;
+            this.groupBox149.Text = "SP";
+            // 
+            // groupBox150
+            // 
+            this.groupBox150.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox150.Controls.Add(this.groupBox151);
+            this.groupBox150.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox150.Location = new System.Drawing.Point(0, 48);
+            this.groupBox150.Name = "groupBox150";
+            this.groupBox150.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox150.Size = new System.Drawing.Size(58, 58);
+            this.groupBox150.TabIndex = 74;
+            this.groupBox150.TabStop = false;
+            this.groupBox150.Text = "SP";
+            // 
+            // groupBox151
+            // 
+            this.groupBox151.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox151.Controls.Add(this.groupBox152);
+            this.groupBox151.Controls.Add(this.groupBox182);
+            this.groupBox151.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox151.Location = new System.Drawing.Point(0, 0);
+            this.groupBox151.Name = "groupBox151";
+            this.groupBox151.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox151.Size = new System.Drawing.Size(58, 58);
+            this.groupBox151.TabIndex = 75;
+            this.groupBox151.TabStop = false;
+            this.groupBox151.Text = "CP";
+            // 
+            // groupBox152
+            // 
+            this.groupBox152.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox152.Controls.Add(this.groupBox153);
+            this.groupBox152.Controls.Add(this.groupBox177);
+            this.groupBox152.Controls.Add(this.groupBox179);
+            this.groupBox152.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox152.Location = new System.Drawing.Point(0, 1);
+            this.groupBox152.Name = "groupBox152";
+            this.groupBox152.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox152.Size = new System.Drawing.Size(58, 58);
+            this.groupBox152.TabIndex = 77;
+            this.groupBox152.TabStop = false;
+            this.groupBox152.Text = "CP";
+            // 
+            // groupBox153
+            // 
+            this.groupBox153.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox153.Controls.Add(this.groupBox154);
+            this.groupBox153.Controls.Add(this.groupBox166);
+            this.groupBox153.Controls.Add(this.groupBox168);
+            this.groupBox153.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox153.Location = new System.Drawing.Point(3, 1);
+            this.groupBox153.Name = "groupBox153";
+            this.groupBox153.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox153.Size = new System.Drawing.Size(58, 44);
+            this.groupBox153.TabIndex = 78;
+            this.groupBox153.TabStop = false;
+            this.groupBox153.Text = "SP";
+            // 
+            // groupBox154
+            // 
+            this.groupBox154.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox154.Controls.Add(this.groupBox155);
+            this.groupBox154.Controls.Add(this.groupBox157);
+            this.groupBox154.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox154.Location = new System.Drawing.Point(0, 48);
+            this.groupBox154.Name = "groupBox154";
+            this.groupBox154.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox154.Size = new System.Drawing.Size(58, 44);
+            this.groupBox154.TabIndex = 77;
+            this.groupBox154.TabStop = false;
+            this.groupBox154.Text = "SP";
+            // 
+            // groupBox155
+            // 
+            this.groupBox155.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox155.Controls.Add(this.groupBox156);
+            this.groupBox155.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox155.Location = new System.Drawing.Point(3, 48);
+            this.groupBox155.Name = "groupBox155";
+            this.groupBox155.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox155.Size = new System.Drawing.Size(58, 58);
+            this.groupBox155.TabIndex = 75;
+            this.groupBox155.TabStop = false;
+            this.groupBox155.Text = "CP";
+            // 
+            // groupBox156
+            // 
+            this.groupBox156.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox156.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox156.Location = new System.Drawing.Point(0, 55);
+            this.groupBox156.Name = "groupBox156";
+            this.groupBox156.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox156.Size = new System.Drawing.Size(58, 58);
+            this.groupBox156.TabIndex = 74;
+            this.groupBox156.TabStop = false;
+            this.groupBox156.Text = "SP";
+            // 
+            // groupBox157
+            // 
+            this.groupBox157.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox157.Controls.Add(this.groupBox158);
+            this.groupBox157.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox157.Location = new System.Drawing.Point(0, 48);
+            this.groupBox157.Name = "groupBox157";
+            this.groupBox157.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox157.Size = new System.Drawing.Size(58, 58);
+            this.groupBox157.TabIndex = 74;
+            this.groupBox157.TabStop = false;
+            this.groupBox157.Text = "SP";
+            // 
+            // groupBox158
+            // 
+            this.groupBox158.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox158.Controls.Add(this.groupBox159);
+            this.groupBox158.Controls.Add(this.groupBox165);
+            this.groupBox158.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox158.Location = new System.Drawing.Point(0, 0);
+            this.groupBox158.Name = "groupBox158";
+            this.groupBox158.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox158.Size = new System.Drawing.Size(58, 58);
+            this.groupBox158.TabIndex = 75;
+            this.groupBox158.TabStop = false;
+            this.groupBox158.Text = "CP";
+            // 
+            // groupBox159
+            // 
+            this.groupBox159.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox159.Controls.Add(this.groupBox160);
+            this.groupBox159.Controls.Add(this.groupBox162);
+            this.groupBox159.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox159.Location = new System.Drawing.Point(0, 1);
+            this.groupBox159.Name = "groupBox159";
+            this.groupBox159.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox159.Size = new System.Drawing.Size(58, 58);
+            this.groupBox159.TabIndex = 77;
+            this.groupBox159.TabStop = false;
+            this.groupBox159.Text = "CP";
+            // 
+            // groupBox160
+            // 
+            this.groupBox160.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox160.Controls.Add(this.groupBox161);
+            this.groupBox160.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox160.Location = new System.Drawing.Point(3, 55);
+            this.groupBox160.Name = "groupBox160";
+            this.groupBox160.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox160.Size = new System.Drawing.Size(58, 58);
+            this.groupBox160.TabIndex = 75;
+            this.groupBox160.TabStop = false;
+            this.groupBox160.Text = "CP";
+            // 
+            // groupBox161
+            // 
+            this.groupBox161.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox161.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox161.Location = new System.Drawing.Point(0, 55);
+            this.groupBox161.Name = "groupBox161";
+            this.groupBox161.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox161.Size = new System.Drawing.Size(58, 58);
+            this.groupBox161.TabIndex = 74;
+            this.groupBox161.TabStop = false;
+            this.groupBox161.Text = "SP";
+            // 
+            // groupBox162
+            // 
+            this.groupBox162.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox162.Controls.Add(this.groupBox163);
+            this.groupBox162.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox162.Location = new System.Drawing.Point(0, 55);
+            this.groupBox162.Name = "groupBox162";
+            this.groupBox162.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox162.Size = new System.Drawing.Size(58, 58);
+            this.groupBox162.TabIndex = 74;
+            this.groupBox162.TabStop = false;
+            this.groupBox162.Text = "SP";
+            // 
+            // groupBox163
+            // 
+            this.groupBox163.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox163.Controls.Add(this.groupBox164);
+            this.groupBox163.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox163.Location = new System.Drawing.Point(0, 0);
+            this.groupBox163.Name = "groupBox163";
+            this.groupBox163.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox163.Size = new System.Drawing.Size(58, 58);
+            this.groupBox163.TabIndex = 75;
+            this.groupBox163.TabStop = false;
+            this.groupBox163.Text = "CP";
+            // 
+            // groupBox164
+            // 
+            this.groupBox164.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox164.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox164.Location = new System.Drawing.Point(0, 55);
+            this.groupBox164.Name = "groupBox164";
+            this.groupBox164.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox164.Size = new System.Drawing.Size(58, 58);
+            this.groupBox164.TabIndex = 74;
+            this.groupBox164.TabStop = false;
+            this.groupBox164.Text = "SP";
+            // 
+            // groupBox165
+            // 
+            this.groupBox165.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox165.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox165.Location = new System.Drawing.Point(0, 55);
+            this.groupBox165.Name = "groupBox165";
+            this.groupBox165.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox165.Size = new System.Drawing.Size(58, 58);
+            this.groupBox165.TabIndex = 74;
+            this.groupBox165.TabStop = false;
+            this.groupBox165.Text = "SP";
+            // 
+            // groupBox166
+            // 
+            this.groupBox166.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox166.Controls.Add(this.groupBox167);
+            this.groupBox166.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox166.Location = new System.Drawing.Point(3, 48);
+            this.groupBox166.Name = "groupBox166";
+            this.groupBox166.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox166.Size = new System.Drawing.Size(58, 58);
+            this.groupBox166.TabIndex = 75;
+            this.groupBox166.TabStop = false;
+            this.groupBox166.Text = "CP";
+            // 
+            // groupBox167
+            // 
+            this.groupBox167.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox167.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox167.Location = new System.Drawing.Point(0, 55);
+            this.groupBox167.Name = "groupBox167";
+            this.groupBox167.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox167.Size = new System.Drawing.Size(58, 58);
+            this.groupBox167.TabIndex = 74;
+            this.groupBox167.TabStop = false;
+            this.groupBox167.Text = "SP";
+            // 
+            // groupBox168
+            // 
+            this.groupBox168.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox168.Controls.Add(this.groupBox169);
+            this.groupBox168.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox168.Location = new System.Drawing.Point(0, 48);
+            this.groupBox168.Name = "groupBox168";
+            this.groupBox168.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox168.Size = new System.Drawing.Size(58, 58);
+            this.groupBox168.TabIndex = 74;
+            this.groupBox168.TabStop = false;
+            this.groupBox168.Text = "SP";
+            // 
+            // groupBox169
+            // 
+            this.groupBox169.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox169.Controls.Add(this.groupBox170);
+            this.groupBox169.Controls.Add(this.groupBox176);
+            this.groupBox169.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox169.Location = new System.Drawing.Point(0, 0);
+            this.groupBox169.Name = "groupBox169";
+            this.groupBox169.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox169.Size = new System.Drawing.Size(58, 58);
+            this.groupBox169.TabIndex = 75;
+            this.groupBox169.TabStop = false;
+            this.groupBox169.Text = "CP";
+            // 
+            // groupBox170
+            // 
+            this.groupBox170.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox170.Controls.Add(this.groupBox171);
+            this.groupBox170.Controls.Add(this.groupBox173);
+            this.groupBox170.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox170.Location = new System.Drawing.Point(0, 1);
+            this.groupBox170.Name = "groupBox170";
+            this.groupBox170.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox170.Size = new System.Drawing.Size(58, 58);
+            this.groupBox170.TabIndex = 77;
+            this.groupBox170.TabStop = false;
+            this.groupBox170.Text = "CP";
+            // 
+            // groupBox171
+            // 
+            this.groupBox171.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox171.Controls.Add(this.groupBox172);
+            this.groupBox171.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox171.Location = new System.Drawing.Point(3, 55);
+            this.groupBox171.Name = "groupBox171";
+            this.groupBox171.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox171.Size = new System.Drawing.Size(58, 58);
+            this.groupBox171.TabIndex = 75;
+            this.groupBox171.TabStop = false;
+            this.groupBox171.Text = "CP";
+            // 
+            // groupBox172
+            // 
+            this.groupBox172.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox172.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox172.Location = new System.Drawing.Point(0, 55);
+            this.groupBox172.Name = "groupBox172";
+            this.groupBox172.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox172.Size = new System.Drawing.Size(58, 58);
+            this.groupBox172.TabIndex = 74;
+            this.groupBox172.TabStop = false;
+            this.groupBox172.Text = "SP";
+            // 
+            // groupBox173
+            // 
+            this.groupBox173.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox173.Controls.Add(this.groupBox174);
+            this.groupBox173.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox173.Location = new System.Drawing.Point(0, 55);
+            this.groupBox173.Name = "groupBox173";
+            this.groupBox173.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox173.Size = new System.Drawing.Size(58, 58);
+            this.groupBox173.TabIndex = 74;
+            this.groupBox173.TabStop = false;
+            this.groupBox173.Text = "SP";
+            // 
+            // groupBox174
+            // 
+            this.groupBox174.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox174.Controls.Add(this.groupBox175);
+            this.groupBox174.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox174.Location = new System.Drawing.Point(0, 0);
+            this.groupBox174.Name = "groupBox174";
+            this.groupBox174.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox174.Size = new System.Drawing.Size(58, 58);
+            this.groupBox174.TabIndex = 75;
+            this.groupBox174.TabStop = false;
+            this.groupBox174.Text = "CP";
+            // 
+            // groupBox175
+            // 
+            this.groupBox175.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox175.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox175.Location = new System.Drawing.Point(0, 55);
+            this.groupBox175.Name = "groupBox175";
+            this.groupBox175.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox175.Size = new System.Drawing.Size(58, 58);
+            this.groupBox175.TabIndex = 74;
+            this.groupBox175.TabStop = false;
+            this.groupBox175.Text = "SP";
+            // 
+            // groupBox176
+            // 
+            this.groupBox176.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox176.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox176.Location = new System.Drawing.Point(0, 55);
+            this.groupBox176.Name = "groupBox176";
+            this.groupBox176.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox176.Size = new System.Drawing.Size(58, 58);
+            this.groupBox176.TabIndex = 74;
+            this.groupBox176.TabStop = false;
+            this.groupBox176.Text = "SP";
+            // 
+            // groupBox177
+            // 
+            this.groupBox177.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox177.Controls.Add(this.groupBox178);
+            this.groupBox177.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox177.Location = new System.Drawing.Point(3, 55);
+            this.groupBox177.Name = "groupBox177";
+            this.groupBox177.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox177.Size = new System.Drawing.Size(58, 58);
+            this.groupBox177.TabIndex = 75;
+            this.groupBox177.TabStop = false;
+            this.groupBox177.Text = "CP";
+            // 
+            // groupBox178
+            // 
+            this.groupBox178.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox178.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox178.Location = new System.Drawing.Point(0, 55);
+            this.groupBox178.Name = "groupBox178";
+            this.groupBox178.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox178.Size = new System.Drawing.Size(58, 58);
+            this.groupBox178.TabIndex = 74;
+            this.groupBox178.TabStop = false;
+            this.groupBox178.Text = "SP";
+            // 
+            // groupBox179
+            // 
+            this.groupBox179.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox179.Controls.Add(this.groupBox180);
+            this.groupBox179.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox179.Location = new System.Drawing.Point(0, 55);
+            this.groupBox179.Name = "groupBox179";
+            this.groupBox179.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox179.Size = new System.Drawing.Size(58, 58);
+            this.groupBox179.TabIndex = 74;
+            this.groupBox179.TabStop = false;
+            this.groupBox179.Text = "SP";
+            // 
+            // groupBox180
+            // 
+            this.groupBox180.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox180.Controls.Add(this.groupBox181);
+            this.groupBox180.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox180.Location = new System.Drawing.Point(0, 0);
+            this.groupBox180.Name = "groupBox180";
+            this.groupBox180.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox180.Size = new System.Drawing.Size(58, 58);
+            this.groupBox180.TabIndex = 75;
+            this.groupBox180.TabStop = false;
+            this.groupBox180.Text = "CP";
+            // 
+            // groupBox181
+            // 
+            this.groupBox181.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox181.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox181.Location = new System.Drawing.Point(0, 55);
+            this.groupBox181.Name = "groupBox181";
+            this.groupBox181.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox181.Size = new System.Drawing.Size(58, 58);
+            this.groupBox181.TabIndex = 74;
+            this.groupBox181.TabStop = false;
+            this.groupBox181.Text = "SP";
+            // 
+            // groupBox182
+            // 
+            this.groupBox182.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox182.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox182.Location = new System.Drawing.Point(0, 55);
+            this.groupBox182.Name = "groupBox182";
+            this.groupBox182.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox182.Size = new System.Drawing.Size(58, 58);
+            this.groupBox182.TabIndex = 74;
+            this.groupBox182.TabStop = false;
+            this.groupBox182.Text = "SP";
+            // 
+            // groupBox39
+            // 
+            this.groupBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox39.Controls.Add(this.groupBox40);
+            this.groupBox39.Controls.Add(this.groupBox76);
+            this.groupBox39.Controls.Add(this.groupBox78);
+            this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox39.Location = new System.Drawing.Point(180, 17);
+            this.groupBox39.Name = "groupBox39";
+            this.groupBox39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox39.Size = new System.Drawing.Size(58, 43);
+            this.groupBox39.TabIndex = 78;
+            this.groupBox39.TabStop = false;
+            this.groupBox39.Text = "CP";
+            // 
+            // groupBox40
+            // 
+            this.groupBox40.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox40.Controls.Add(this.groupBox41);
+            this.groupBox40.Controls.Add(this.groupBox43);
+            this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox40.Location = new System.Drawing.Point(0, 47);
+            this.groupBox40.Name = "groupBox40";
+            this.groupBox40.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox40.Size = new System.Drawing.Size(58, 44);
+            this.groupBox40.TabIndex = 77;
+            this.groupBox40.TabStop = false;
+            this.groupBox40.Text = "SP";
+            // 
+            // groupBox41
+            // 
+            this.groupBox41.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox41.Controls.Add(this.groupBox42);
+            this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox41.Location = new System.Drawing.Point(3, 48);
+            this.groupBox41.Name = "groupBox41";
+            this.groupBox41.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox41.Size = new System.Drawing.Size(58, 58);
+            this.groupBox41.TabIndex = 75;
+            this.groupBox41.TabStop = false;
+            this.groupBox41.Text = "CP";
+            // 
+            // groupBox42
+            // 
+            this.groupBox42.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox42.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox42.Location = new System.Drawing.Point(0, 55);
+            this.groupBox42.Name = "groupBox42";
+            this.groupBox42.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox42.Size = new System.Drawing.Size(58, 58);
+            this.groupBox42.TabIndex = 74;
+            this.groupBox42.TabStop = false;
+            this.groupBox42.Text = "SP";
+            // 
+            // groupBox43
+            // 
+            this.groupBox43.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox43.Controls.Add(this.groupBox44);
+            this.groupBox43.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox43.Location = new System.Drawing.Point(0, 48);
+            this.groupBox43.Name = "groupBox43";
+            this.groupBox43.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox43.Size = new System.Drawing.Size(58, 58);
+            this.groupBox43.TabIndex = 74;
+            this.groupBox43.TabStop = false;
+            this.groupBox43.Text = "SP";
+            // 
+            // groupBox44
+            // 
+            this.groupBox44.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox44.Controls.Add(this.groupBox69);
+            this.groupBox44.Controls.Add(this.groupBox75);
+            this.groupBox44.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox44.Location = new System.Drawing.Point(0, 0);
+            this.groupBox44.Name = "groupBox44";
+            this.groupBox44.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox44.Size = new System.Drawing.Size(58, 58);
+            this.groupBox44.TabIndex = 75;
+            this.groupBox44.TabStop = false;
+            this.groupBox44.Text = "CP";
+            // 
+            // groupBox69
+            // 
+            this.groupBox69.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox69.Controls.Add(this.groupBox70);
+            this.groupBox69.Controls.Add(this.groupBox72);
+            this.groupBox69.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox69.Location = new System.Drawing.Point(0, 1);
+            this.groupBox69.Name = "groupBox69";
+            this.groupBox69.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox69.Size = new System.Drawing.Size(58, 58);
+            this.groupBox69.TabIndex = 77;
+            this.groupBox69.TabStop = false;
+            this.groupBox69.Text = "CP";
+            // 
+            // groupBox70
+            // 
+            this.groupBox70.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox70.Controls.Add(this.groupBox71);
+            this.groupBox70.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox70.Location = new System.Drawing.Point(3, 55);
+            this.groupBox70.Name = "groupBox70";
+            this.groupBox70.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox70.Size = new System.Drawing.Size(58, 58);
+            this.groupBox70.TabIndex = 75;
+            this.groupBox70.TabStop = false;
+            this.groupBox70.Text = "CP";
+            // 
+            // groupBox71
+            // 
+            this.groupBox71.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox71.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox71.Location = new System.Drawing.Point(0, 55);
+            this.groupBox71.Name = "groupBox71";
+            this.groupBox71.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox71.Size = new System.Drawing.Size(58, 58);
+            this.groupBox71.TabIndex = 74;
+            this.groupBox71.TabStop = false;
+            this.groupBox71.Text = "SP";
+            // 
+            // groupBox72
+            // 
+            this.groupBox72.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox72.Controls.Add(this.groupBox73);
+            this.groupBox72.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox72.Location = new System.Drawing.Point(0, 55);
+            this.groupBox72.Name = "groupBox72";
+            this.groupBox72.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox72.Size = new System.Drawing.Size(58, 58);
+            this.groupBox72.TabIndex = 74;
+            this.groupBox72.TabStop = false;
+            this.groupBox72.Text = "SP";
+            // 
+            // groupBox73
+            // 
+            this.groupBox73.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox73.Controls.Add(this.groupBox74);
+            this.groupBox73.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox73.Location = new System.Drawing.Point(0, 0);
+            this.groupBox73.Name = "groupBox73";
+            this.groupBox73.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox73.Size = new System.Drawing.Size(58, 58);
+            this.groupBox73.TabIndex = 75;
+            this.groupBox73.TabStop = false;
+            this.groupBox73.Text = "CP";
+            // 
+            // groupBox74
+            // 
+            this.groupBox74.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox74.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox74.Location = new System.Drawing.Point(0, 55);
+            this.groupBox74.Name = "groupBox74";
+            this.groupBox74.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox74.Size = new System.Drawing.Size(58, 58);
+            this.groupBox74.TabIndex = 74;
+            this.groupBox74.TabStop = false;
+            this.groupBox74.Text = "SP";
+            // 
+            // groupBox75
+            // 
+            this.groupBox75.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox75.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox75.Location = new System.Drawing.Point(0, 55);
+            this.groupBox75.Name = "groupBox75";
+            this.groupBox75.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox75.Size = new System.Drawing.Size(58, 58);
+            this.groupBox75.TabIndex = 74;
+            this.groupBox75.TabStop = false;
+            this.groupBox75.Text = "SP";
+            // 
+            // groupBox76
+            // 
+            this.groupBox76.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox76.Controls.Add(this.groupBox77);
+            this.groupBox76.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox76.Location = new System.Drawing.Point(3, 47);
+            this.groupBox76.Name = "groupBox76";
+            this.groupBox76.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox76.Size = new System.Drawing.Size(58, 58);
+            this.groupBox76.TabIndex = 75;
+            this.groupBox76.TabStop = false;
+            this.groupBox76.Text = "CP";
+            // 
+            // groupBox77
+            // 
+            this.groupBox77.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox77.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox77.Location = new System.Drawing.Point(0, 55);
+            this.groupBox77.Name = "groupBox77";
+            this.groupBox77.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox77.Size = new System.Drawing.Size(58, 58);
+            this.groupBox77.TabIndex = 74;
+            this.groupBox77.TabStop = false;
+            this.groupBox77.Text = "SP";
+            // 
+            // groupBox78
+            // 
+            this.groupBox78.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox78.Controls.Add(this.groupBox79);
+            this.groupBox78.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox78.Location = new System.Drawing.Point(0, 47);
+            this.groupBox78.Name = "groupBox78";
+            this.groupBox78.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox78.Size = new System.Drawing.Size(58, 58);
+            this.groupBox78.TabIndex = 74;
+            this.groupBox78.TabStop = false;
+            this.groupBox78.Text = "SP";
+            // 
+            // groupBox79
+            // 
+            this.groupBox79.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox79.Controls.Add(this.groupBox80);
+            this.groupBox79.Controls.Add(this.groupBox134);
+            this.groupBox79.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox79.Location = new System.Drawing.Point(0, 0);
+            this.groupBox79.Name = "groupBox79";
+            this.groupBox79.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox79.Size = new System.Drawing.Size(58, 58);
+            this.groupBox79.TabIndex = 75;
+            this.groupBox79.TabStop = false;
+            this.groupBox79.Text = "CP";
+            // 
+            // groupBox80
+            // 
+            this.groupBox80.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox80.Controls.Add(this.groupBox81);
+            this.groupBox80.Controls.Add(this.groupBox129);
+            this.groupBox80.Controls.Add(this.groupBox131);
+            this.groupBox80.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox80.Location = new System.Drawing.Point(0, 1);
+            this.groupBox80.Name = "groupBox80";
+            this.groupBox80.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox80.Size = new System.Drawing.Size(58, 58);
+            this.groupBox80.TabIndex = 77;
+            this.groupBox80.TabStop = false;
+            this.groupBox80.Text = "CP";
+            // 
+            // groupBox81
+            // 
+            this.groupBox81.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox81.Controls.Add(this.groupBox82);
+            this.groupBox81.Controls.Add(this.groupBox118);
+            this.groupBox81.Controls.Add(this.groupBox120);
+            this.groupBox81.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox81.Location = new System.Drawing.Point(3, 1);
+            this.groupBox81.Name = "groupBox81";
+            this.groupBox81.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox81.Size = new System.Drawing.Size(58, 44);
+            this.groupBox81.TabIndex = 78;
+            this.groupBox81.TabStop = false;
+            this.groupBox81.Text = "SP";
+            // 
+            // groupBox82
+            // 
+            this.groupBox82.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox82.Controls.Add(this.groupBox83);
+            this.groupBox82.Controls.Add(this.groupBox85);
+            this.groupBox82.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox82.Location = new System.Drawing.Point(0, 48);
+            this.groupBox82.Name = "groupBox82";
+            this.groupBox82.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox82.Size = new System.Drawing.Size(58, 44);
+            this.groupBox82.TabIndex = 77;
+            this.groupBox82.TabStop = false;
+            this.groupBox82.Text = "SP";
+            // 
+            // groupBox83
+            // 
+            this.groupBox83.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox83.Controls.Add(this.groupBox84);
+            this.groupBox83.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox83.Location = new System.Drawing.Point(3, 48);
+            this.groupBox83.Name = "groupBox83";
+            this.groupBox83.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox83.Size = new System.Drawing.Size(58, 58);
+            this.groupBox83.TabIndex = 75;
+            this.groupBox83.TabStop = false;
+            this.groupBox83.Text = "CP";
+            // 
+            // groupBox84
+            // 
+            this.groupBox84.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox84.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox84.Location = new System.Drawing.Point(0, 55);
+            this.groupBox84.Name = "groupBox84";
+            this.groupBox84.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox84.Size = new System.Drawing.Size(58, 58);
+            this.groupBox84.TabIndex = 74;
+            this.groupBox84.TabStop = false;
+            this.groupBox84.Text = "SP";
+            // 
+            // groupBox85
+            // 
+            this.groupBox85.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox85.Controls.Add(this.groupBox86);
+            this.groupBox85.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox85.Location = new System.Drawing.Point(0, 48);
+            this.groupBox85.Name = "groupBox85";
+            this.groupBox85.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox85.Size = new System.Drawing.Size(58, 58);
+            this.groupBox85.TabIndex = 74;
+            this.groupBox85.TabStop = false;
+            this.groupBox85.Text = "SP";
+            // 
+            // groupBox86
+            // 
+            this.groupBox86.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox86.Controls.Add(this.groupBox87);
+            this.groupBox86.Controls.Add(this.groupBox117);
+            this.groupBox86.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox86.Location = new System.Drawing.Point(0, 0);
+            this.groupBox86.Name = "groupBox86";
+            this.groupBox86.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox86.Size = new System.Drawing.Size(58, 58);
+            this.groupBox86.TabIndex = 75;
+            this.groupBox86.TabStop = false;
+            this.groupBox86.Text = "CP";
+            // 
+            // groupBox87
+            // 
+            this.groupBox87.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox87.Controls.Add(this.groupBox88);
+            this.groupBox87.Controls.Add(this.groupBox90);
+            this.groupBox87.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox87.Location = new System.Drawing.Point(0, 1);
+            this.groupBox87.Name = "groupBox87";
+            this.groupBox87.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox87.Size = new System.Drawing.Size(58, 58);
+            this.groupBox87.TabIndex = 77;
+            this.groupBox87.TabStop = false;
+            this.groupBox87.Text = "CP";
+            // 
+            // groupBox88
+            // 
+            this.groupBox88.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox88.Controls.Add(this.groupBox89);
+            this.groupBox88.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox88.Location = new System.Drawing.Point(3, 55);
+            this.groupBox88.Name = "groupBox88";
+            this.groupBox88.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox88.Size = new System.Drawing.Size(58, 58);
+            this.groupBox88.TabIndex = 75;
+            this.groupBox88.TabStop = false;
+            this.groupBox88.Text = "CP";
+            // 
+            // groupBox89
+            // 
+            this.groupBox89.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox89.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox89.Location = new System.Drawing.Point(0, 55);
+            this.groupBox89.Name = "groupBox89";
+            this.groupBox89.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox89.Size = new System.Drawing.Size(58, 58);
+            this.groupBox89.TabIndex = 74;
+            this.groupBox89.TabStop = false;
+            this.groupBox89.Text = "SP";
+            // 
+            // groupBox90
+            // 
+            this.groupBox90.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox90.Controls.Add(this.groupBox91);
+            this.groupBox90.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox90.Location = new System.Drawing.Point(0, 55);
+            this.groupBox90.Name = "groupBox90";
+            this.groupBox90.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox90.Size = new System.Drawing.Size(58, 58);
+            this.groupBox90.TabIndex = 74;
+            this.groupBox90.TabStop = false;
+            this.groupBox90.Text = "SP";
+            // 
+            // groupBox91
+            // 
+            this.groupBox91.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox91.Controls.Add(this.groupBox92);
+            this.groupBox91.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox91.Location = new System.Drawing.Point(0, 0);
+            this.groupBox91.Name = "groupBox91";
+            this.groupBox91.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox91.Size = new System.Drawing.Size(58, 58);
+            this.groupBox91.TabIndex = 75;
+            this.groupBox91.TabStop = false;
+            this.groupBox91.Text = "CP";
+            // 
+            // groupBox92
+            // 
+            this.groupBox92.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox92.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox92.Location = new System.Drawing.Point(0, 55);
+            this.groupBox92.Name = "groupBox92";
+            this.groupBox92.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox92.Size = new System.Drawing.Size(58, 58);
+            this.groupBox92.TabIndex = 74;
+            this.groupBox92.TabStop = false;
+            this.groupBox92.Text = "SP";
+            // 
+            // groupBox117
+            // 
+            this.groupBox117.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox117.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox117.Location = new System.Drawing.Point(0, 55);
+            this.groupBox117.Name = "groupBox117";
+            this.groupBox117.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox117.Size = new System.Drawing.Size(58, 58);
+            this.groupBox117.TabIndex = 74;
+            this.groupBox117.TabStop = false;
+            this.groupBox117.Text = "SP";
+            // 
+            // groupBox118
+            // 
+            this.groupBox118.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox118.Controls.Add(this.groupBox119);
+            this.groupBox118.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox118.Location = new System.Drawing.Point(3, 48);
+            this.groupBox118.Name = "groupBox118";
+            this.groupBox118.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox118.Size = new System.Drawing.Size(58, 58);
+            this.groupBox118.TabIndex = 75;
+            this.groupBox118.TabStop = false;
+            this.groupBox118.Text = "CP";
+            // 
+            // groupBox119
+            // 
+            this.groupBox119.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox119.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox119.Location = new System.Drawing.Point(0, 55);
+            this.groupBox119.Name = "groupBox119";
+            this.groupBox119.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox119.Size = new System.Drawing.Size(58, 58);
+            this.groupBox119.TabIndex = 74;
+            this.groupBox119.TabStop = false;
+            this.groupBox119.Text = "SP";
+            // 
+            // groupBox120
+            // 
+            this.groupBox120.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox120.Controls.Add(this.groupBox121);
+            this.groupBox120.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox120.Location = new System.Drawing.Point(0, 48);
+            this.groupBox120.Name = "groupBox120";
+            this.groupBox120.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox120.Size = new System.Drawing.Size(58, 58);
+            this.groupBox120.TabIndex = 74;
+            this.groupBox120.TabStop = false;
+            this.groupBox120.Text = "SP";
+            // 
+            // groupBox121
+            // 
+            this.groupBox121.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox121.Controls.Add(this.groupBox122);
+            this.groupBox121.Controls.Add(this.groupBox128);
+            this.groupBox121.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox121.Location = new System.Drawing.Point(0, 0);
+            this.groupBox121.Name = "groupBox121";
+            this.groupBox121.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox121.Size = new System.Drawing.Size(58, 58);
+            this.groupBox121.TabIndex = 75;
+            this.groupBox121.TabStop = false;
+            this.groupBox121.Text = "CP";
+            // 
+            // groupBox122
+            // 
+            this.groupBox122.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox122.Controls.Add(this.groupBox123);
+            this.groupBox122.Controls.Add(this.groupBox125);
+            this.groupBox122.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox122.Location = new System.Drawing.Point(0, 1);
+            this.groupBox122.Name = "groupBox122";
+            this.groupBox122.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox122.Size = new System.Drawing.Size(58, 58);
+            this.groupBox122.TabIndex = 77;
+            this.groupBox122.TabStop = false;
+            this.groupBox122.Text = "CP";
+            // 
+            // groupBox123
+            // 
+            this.groupBox123.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox123.Controls.Add(this.groupBox124);
+            this.groupBox123.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox123.Location = new System.Drawing.Point(3, 55);
+            this.groupBox123.Name = "groupBox123";
+            this.groupBox123.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox123.Size = new System.Drawing.Size(58, 58);
+            this.groupBox123.TabIndex = 75;
+            this.groupBox123.TabStop = false;
+            this.groupBox123.Text = "CP";
+            // 
+            // groupBox124
+            // 
+            this.groupBox124.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox124.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox124.Location = new System.Drawing.Point(0, 55);
+            this.groupBox124.Name = "groupBox124";
+            this.groupBox124.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox124.Size = new System.Drawing.Size(58, 58);
+            this.groupBox124.TabIndex = 74;
+            this.groupBox124.TabStop = false;
+            this.groupBox124.Text = "SP";
+            // 
+            // groupBox125
+            // 
+            this.groupBox125.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox125.Controls.Add(this.groupBox126);
+            this.groupBox125.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox125.Location = new System.Drawing.Point(0, 55);
+            this.groupBox125.Name = "groupBox125";
+            this.groupBox125.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox125.Size = new System.Drawing.Size(58, 58);
+            this.groupBox125.TabIndex = 74;
+            this.groupBox125.TabStop = false;
+            this.groupBox125.Text = "SP";
+            // 
+            // groupBox126
+            // 
+            this.groupBox126.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox126.Controls.Add(this.groupBox127);
+            this.groupBox126.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox126.Location = new System.Drawing.Point(0, 0);
+            this.groupBox126.Name = "groupBox126";
+            this.groupBox126.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox126.Size = new System.Drawing.Size(58, 58);
+            this.groupBox126.TabIndex = 75;
+            this.groupBox126.TabStop = false;
+            this.groupBox126.Text = "CP";
+            // 
+            // groupBox127
+            // 
+            this.groupBox127.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox127.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox127.Location = new System.Drawing.Point(0, 55);
+            this.groupBox127.Name = "groupBox127";
+            this.groupBox127.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox127.Size = new System.Drawing.Size(58, 58);
+            this.groupBox127.TabIndex = 74;
+            this.groupBox127.TabStop = false;
+            this.groupBox127.Text = "SP";
+            // 
+            // groupBox128
+            // 
+            this.groupBox128.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox128.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox128.Location = new System.Drawing.Point(0, 55);
+            this.groupBox128.Name = "groupBox128";
+            this.groupBox128.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox128.Size = new System.Drawing.Size(58, 58);
+            this.groupBox128.TabIndex = 74;
+            this.groupBox128.TabStop = false;
+            this.groupBox128.Text = "SP";
+            // 
+            // groupBox129
+            // 
+            this.groupBox129.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox129.Controls.Add(this.groupBox130);
+            this.groupBox129.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox129.Location = new System.Drawing.Point(3, 55);
+            this.groupBox129.Name = "groupBox129";
+            this.groupBox129.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox129.Size = new System.Drawing.Size(58, 58);
+            this.groupBox129.TabIndex = 75;
+            this.groupBox129.TabStop = false;
+            this.groupBox129.Text = "CP";
+            // 
+            // groupBox130
+            // 
+            this.groupBox130.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox130.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox130.Location = new System.Drawing.Point(0, 55);
+            this.groupBox130.Name = "groupBox130";
+            this.groupBox130.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox130.Size = new System.Drawing.Size(58, 58);
+            this.groupBox130.TabIndex = 74;
+            this.groupBox130.TabStop = false;
+            this.groupBox130.Text = "SP";
+            // 
+            // groupBox131
+            // 
+            this.groupBox131.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox131.Controls.Add(this.groupBox132);
+            this.groupBox131.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox131.Location = new System.Drawing.Point(0, 55);
+            this.groupBox131.Name = "groupBox131";
+            this.groupBox131.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox131.Size = new System.Drawing.Size(58, 58);
+            this.groupBox131.TabIndex = 74;
+            this.groupBox131.TabStop = false;
+            this.groupBox131.Text = "SP";
+            // 
+            // groupBox132
+            // 
+            this.groupBox132.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox132.Controls.Add(this.groupBox133);
+            this.groupBox132.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox132.Location = new System.Drawing.Point(0, 0);
+            this.groupBox132.Name = "groupBox132";
+            this.groupBox132.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox132.Size = new System.Drawing.Size(58, 58);
+            this.groupBox132.TabIndex = 75;
+            this.groupBox132.TabStop = false;
+            this.groupBox132.Text = "CP";
+            // 
+            // groupBox133
+            // 
+            this.groupBox133.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox133.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox133.Location = new System.Drawing.Point(0, 55);
+            this.groupBox133.Name = "groupBox133";
+            this.groupBox133.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox133.Size = new System.Drawing.Size(58, 58);
+            this.groupBox133.TabIndex = 74;
+            this.groupBox133.TabStop = false;
+            this.groupBox133.Text = "SP";
+            // 
+            // groupBox134
+            // 
+            this.groupBox134.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox134.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox134.Location = new System.Drawing.Point(0, 55);
+            this.groupBox134.Name = "groupBox134";
+            this.groupBox134.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox134.Size = new System.Drawing.Size(58, 58);
+            this.groupBox134.TabIndex = 74;
+            this.groupBox134.TabStop = false;
+            this.groupBox134.Text = "SP";
+            // 
+            // groupBox45
+            // 
+            this.groupBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox45.Controls.Add(this.groupBox57);
+            this.groupBox45.Controls.Add(this.groupBox46);
+            this.groupBox45.Controls.Add(this.groupBox48);
+            this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox45.Location = new System.Drawing.Point(180, 57);
+            this.groupBox45.Name = "groupBox45";
+            this.groupBox45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox45.Size = new System.Drawing.Size(58, 47);
+            this.groupBox45.TabIndex = 77;
+            this.groupBox45.TabStop = false;
+            this.groupBox45.Text = "SP";
+            // 
+            // groupBox57
+            // 
+            this.groupBox57.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox57.Controls.Add(this.groupBox58);
+            this.groupBox57.Controls.Add(this.groupBox60);
+            this.groupBox57.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox57.Location = new System.Drawing.Point(0, 49);
+            this.groupBox57.Name = "groupBox57";
+            this.groupBox57.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox57.Size = new System.Drawing.Size(58, 44);
+            this.groupBox57.TabIndex = 77;
+            this.groupBox57.TabStop = false;
+            this.groupBox57.Text = "SP";
+            // 
+            // groupBox58
+            // 
+            this.groupBox58.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox58.Controls.Add(this.groupBox59);
+            this.groupBox58.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox58.Location = new System.Drawing.Point(3, 48);
+            this.groupBox58.Name = "groupBox58";
+            this.groupBox58.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox58.Size = new System.Drawing.Size(58, 58);
+            this.groupBox58.TabIndex = 75;
+            this.groupBox58.TabStop = false;
+            this.groupBox58.Text = "CP";
+            // 
+            // groupBox59
+            // 
+            this.groupBox59.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox59.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox59.Location = new System.Drawing.Point(0, 55);
+            this.groupBox59.Name = "groupBox59";
+            this.groupBox59.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox59.Size = new System.Drawing.Size(58, 58);
+            this.groupBox59.TabIndex = 74;
+            this.groupBox59.TabStop = false;
+            this.groupBox59.Text = "SP";
+            // 
+            // groupBox60
+            // 
+            this.groupBox60.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox60.Controls.Add(this.groupBox61);
+            this.groupBox60.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox60.Location = new System.Drawing.Point(0, 48);
+            this.groupBox60.Name = "groupBox60";
+            this.groupBox60.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox60.Size = new System.Drawing.Size(58, 58);
+            this.groupBox60.TabIndex = 74;
+            this.groupBox60.TabStop = false;
+            this.groupBox60.Text = "SP";
+            // 
+            // groupBox61
+            // 
+            this.groupBox61.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox61.Controls.Add(this.groupBox62);
+            this.groupBox61.Controls.Add(this.groupBox68);
+            this.groupBox61.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox61.Location = new System.Drawing.Point(0, 0);
+            this.groupBox61.Name = "groupBox61";
+            this.groupBox61.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox61.Size = new System.Drawing.Size(58, 58);
+            this.groupBox61.TabIndex = 75;
+            this.groupBox61.TabStop = false;
+            this.groupBox61.Text = "CP";
+            // 
+            // groupBox62
+            // 
+            this.groupBox62.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox62.Controls.Add(this.groupBox63);
+            this.groupBox62.Controls.Add(this.groupBox65);
+            this.groupBox62.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox62.Location = new System.Drawing.Point(0, 1);
+            this.groupBox62.Name = "groupBox62";
+            this.groupBox62.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox62.Size = new System.Drawing.Size(58, 58);
+            this.groupBox62.TabIndex = 77;
+            this.groupBox62.TabStop = false;
+            this.groupBox62.Text = "CP";
+            // 
+            // groupBox63
+            // 
+            this.groupBox63.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox63.Controls.Add(this.groupBox64);
+            this.groupBox63.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox63.Location = new System.Drawing.Point(3, 55);
+            this.groupBox63.Name = "groupBox63";
+            this.groupBox63.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox63.Size = new System.Drawing.Size(58, 58);
+            this.groupBox63.TabIndex = 75;
+            this.groupBox63.TabStop = false;
+            this.groupBox63.Text = "CP";
+            // 
+            // groupBox64
+            // 
+            this.groupBox64.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox64.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox64.Location = new System.Drawing.Point(0, 55);
+            this.groupBox64.Name = "groupBox64";
+            this.groupBox64.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox64.Size = new System.Drawing.Size(58, 58);
+            this.groupBox64.TabIndex = 74;
+            this.groupBox64.TabStop = false;
+            this.groupBox64.Text = "SP";
+            // 
+            // groupBox65
+            // 
+            this.groupBox65.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox65.Controls.Add(this.groupBox66);
+            this.groupBox65.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox65.Location = new System.Drawing.Point(0, 55);
+            this.groupBox65.Name = "groupBox65";
+            this.groupBox65.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox65.Size = new System.Drawing.Size(58, 58);
+            this.groupBox65.TabIndex = 74;
+            this.groupBox65.TabStop = false;
+            this.groupBox65.Text = "SP";
+            // 
+            // groupBox66
+            // 
+            this.groupBox66.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox66.Controls.Add(this.groupBox67);
+            this.groupBox66.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox66.Location = new System.Drawing.Point(0, 0);
+            this.groupBox66.Name = "groupBox66";
+            this.groupBox66.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox66.Size = new System.Drawing.Size(58, 58);
+            this.groupBox66.TabIndex = 75;
+            this.groupBox66.TabStop = false;
+            this.groupBox66.Text = "CP";
+            // 
+            // groupBox67
+            // 
+            this.groupBox67.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox67.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox67.Location = new System.Drawing.Point(0, 55);
+            this.groupBox67.Name = "groupBox67";
+            this.groupBox67.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox67.Size = new System.Drawing.Size(58, 58);
+            this.groupBox67.TabIndex = 74;
+            this.groupBox67.TabStop = false;
+            this.groupBox67.Text = "SP";
+            // 
+            // groupBox68
+            // 
+            this.groupBox68.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox68.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox68.Location = new System.Drawing.Point(0, 55);
+            this.groupBox68.Name = "groupBox68";
+            this.groupBox68.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox68.Size = new System.Drawing.Size(58, 58);
+            this.groupBox68.TabIndex = 74;
+            this.groupBox68.TabStop = false;
+            this.groupBox68.Text = "SP";
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox46.Controls.Add(this.groupBox47);
+            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox46.Location = new System.Drawing.Point(3, 49);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox46.Size = new System.Drawing.Size(58, 58);
+            this.groupBox46.TabIndex = 75;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "CP";
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox47.Location = new System.Drawing.Point(0, 55);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox47.Size = new System.Drawing.Size(58, 58);
+            this.groupBox47.TabIndex = 74;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "SP";
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox48.Controls.Add(this.groupBox49);
+            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox48.Location = new System.Drawing.Point(0, 49);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox48.Size = new System.Drawing.Size(58, 58);
+            this.groupBox48.TabIndex = 74;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "SP";
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox49.Controls.Add(this.groupBox51);
+            this.groupBox49.Controls.Add(this.groupBox50);
+            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox49.Location = new System.Drawing.Point(0, 0);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox49.Size = new System.Drawing.Size(58, 58);
+            this.groupBox49.TabIndex = 75;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "CP";
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox51.Controls.Add(this.groupBox93);
+            this.groupBox51.Controls.Add(this.groupBox52);
+            this.groupBox51.Controls.Add(this.groupBox54);
+            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox51.Location = new System.Drawing.Point(0, 1);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox51.Size = new System.Drawing.Size(58, 58);
+            this.groupBox51.TabIndex = 77;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "CP";
+            // 
+            // groupBox93
+            // 
+            this.groupBox93.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox93.Controls.Add(this.groupBox94);
+            this.groupBox93.Controls.Add(this.groupBox106);
+            this.groupBox93.Controls.Add(this.groupBox108);
+            this.groupBox93.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox93.Location = new System.Drawing.Point(3, 1);
+            this.groupBox93.Name = "groupBox93";
+            this.groupBox93.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox93.Size = new System.Drawing.Size(58, 44);
+            this.groupBox93.TabIndex = 78;
+            this.groupBox93.TabStop = false;
+            this.groupBox93.Text = "SP";
+            // 
+            // groupBox94
+            // 
+            this.groupBox94.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox94.Controls.Add(this.groupBox95);
+            this.groupBox94.Controls.Add(this.groupBox97);
+            this.groupBox94.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox94.Location = new System.Drawing.Point(0, 48);
+            this.groupBox94.Name = "groupBox94";
+            this.groupBox94.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox94.Size = new System.Drawing.Size(58, 44);
+            this.groupBox94.TabIndex = 77;
+            this.groupBox94.TabStop = false;
+            this.groupBox94.Text = "SP";
+            // 
+            // groupBox95
+            // 
+            this.groupBox95.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox95.Controls.Add(this.groupBox96);
+            this.groupBox95.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox95.Location = new System.Drawing.Point(3, 48);
+            this.groupBox95.Name = "groupBox95";
+            this.groupBox95.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox95.Size = new System.Drawing.Size(58, 58);
+            this.groupBox95.TabIndex = 75;
+            this.groupBox95.TabStop = false;
+            this.groupBox95.Text = "CP";
+            // 
+            // groupBox96
+            // 
+            this.groupBox96.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox96.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox96.Location = new System.Drawing.Point(0, 55);
+            this.groupBox96.Name = "groupBox96";
+            this.groupBox96.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox96.Size = new System.Drawing.Size(58, 58);
+            this.groupBox96.TabIndex = 74;
+            this.groupBox96.TabStop = false;
+            this.groupBox96.Text = "SP";
+            // 
+            // groupBox97
+            // 
+            this.groupBox97.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox97.Controls.Add(this.groupBox98);
+            this.groupBox97.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox97.Location = new System.Drawing.Point(0, 48);
+            this.groupBox97.Name = "groupBox97";
+            this.groupBox97.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox97.Size = new System.Drawing.Size(58, 58);
+            this.groupBox97.TabIndex = 74;
+            this.groupBox97.TabStop = false;
+            this.groupBox97.Text = "SP";
+            // 
+            // groupBox98
+            // 
+            this.groupBox98.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox98.Controls.Add(this.groupBox99);
+            this.groupBox98.Controls.Add(this.groupBox105);
+            this.groupBox98.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox98.Location = new System.Drawing.Point(0, 0);
+            this.groupBox98.Name = "groupBox98";
+            this.groupBox98.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox98.Size = new System.Drawing.Size(58, 58);
+            this.groupBox98.TabIndex = 75;
+            this.groupBox98.TabStop = false;
+            this.groupBox98.Text = "CP";
+            // 
+            // groupBox99
+            // 
+            this.groupBox99.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox99.Controls.Add(this.groupBox100);
+            this.groupBox99.Controls.Add(this.groupBox102);
+            this.groupBox99.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox99.Location = new System.Drawing.Point(0, 1);
+            this.groupBox99.Name = "groupBox99";
+            this.groupBox99.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox99.Size = new System.Drawing.Size(58, 58);
+            this.groupBox99.TabIndex = 77;
+            this.groupBox99.TabStop = false;
+            this.groupBox99.Text = "CP";
+            // 
+            // groupBox100
+            // 
+            this.groupBox100.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox100.Controls.Add(this.groupBox101);
+            this.groupBox100.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox100.Location = new System.Drawing.Point(3, 55);
+            this.groupBox100.Name = "groupBox100";
+            this.groupBox100.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox100.Size = new System.Drawing.Size(58, 58);
+            this.groupBox100.TabIndex = 75;
+            this.groupBox100.TabStop = false;
+            this.groupBox100.Text = "CP";
+            // 
+            // groupBox101
+            // 
+            this.groupBox101.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox101.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox101.Location = new System.Drawing.Point(0, 55);
+            this.groupBox101.Name = "groupBox101";
+            this.groupBox101.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox101.Size = new System.Drawing.Size(58, 58);
+            this.groupBox101.TabIndex = 74;
+            this.groupBox101.TabStop = false;
+            this.groupBox101.Text = "SP";
+            // 
+            // groupBox102
+            // 
+            this.groupBox102.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox102.Controls.Add(this.groupBox103);
+            this.groupBox102.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox102.Location = new System.Drawing.Point(0, 55);
+            this.groupBox102.Name = "groupBox102";
+            this.groupBox102.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox102.Size = new System.Drawing.Size(58, 58);
+            this.groupBox102.TabIndex = 74;
+            this.groupBox102.TabStop = false;
+            this.groupBox102.Text = "SP";
+            // 
+            // groupBox103
+            // 
+            this.groupBox103.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox103.Controls.Add(this.groupBox104);
+            this.groupBox103.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox103.Location = new System.Drawing.Point(0, 0);
+            this.groupBox103.Name = "groupBox103";
+            this.groupBox103.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox103.Size = new System.Drawing.Size(58, 58);
+            this.groupBox103.TabIndex = 75;
+            this.groupBox103.TabStop = false;
+            this.groupBox103.Text = "CP";
+            // 
+            // groupBox104
+            // 
+            this.groupBox104.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox104.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox104.Location = new System.Drawing.Point(0, 55);
+            this.groupBox104.Name = "groupBox104";
+            this.groupBox104.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox104.Size = new System.Drawing.Size(58, 58);
+            this.groupBox104.TabIndex = 74;
+            this.groupBox104.TabStop = false;
+            this.groupBox104.Text = "SP";
+            // 
+            // groupBox105
+            // 
+            this.groupBox105.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox105.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox105.Location = new System.Drawing.Point(0, 55);
+            this.groupBox105.Name = "groupBox105";
+            this.groupBox105.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox105.Size = new System.Drawing.Size(58, 58);
+            this.groupBox105.TabIndex = 74;
+            this.groupBox105.TabStop = false;
+            this.groupBox105.Text = "SP";
+            // 
+            // groupBox106
+            // 
+            this.groupBox106.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox106.Controls.Add(this.groupBox107);
+            this.groupBox106.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox106.Location = new System.Drawing.Point(3, 48);
+            this.groupBox106.Name = "groupBox106";
+            this.groupBox106.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox106.Size = new System.Drawing.Size(58, 58);
+            this.groupBox106.TabIndex = 75;
+            this.groupBox106.TabStop = false;
+            this.groupBox106.Text = "CP";
+            // 
+            // groupBox107
+            // 
+            this.groupBox107.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox107.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox107.Location = new System.Drawing.Point(0, 55);
+            this.groupBox107.Name = "groupBox107";
+            this.groupBox107.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox107.Size = new System.Drawing.Size(58, 58);
+            this.groupBox107.TabIndex = 74;
+            this.groupBox107.TabStop = false;
+            this.groupBox107.Text = "SP";
+            // 
+            // groupBox108
+            // 
+            this.groupBox108.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox108.Controls.Add(this.groupBox109);
+            this.groupBox108.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox108.Location = new System.Drawing.Point(0, 48);
+            this.groupBox108.Name = "groupBox108";
+            this.groupBox108.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox108.Size = new System.Drawing.Size(58, 58);
+            this.groupBox108.TabIndex = 74;
+            this.groupBox108.TabStop = false;
+            this.groupBox108.Text = "SP";
+            // 
+            // groupBox109
+            // 
+            this.groupBox109.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox109.Controls.Add(this.groupBox110);
+            this.groupBox109.Controls.Add(this.groupBox116);
+            this.groupBox109.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox109.Location = new System.Drawing.Point(0, 0);
+            this.groupBox109.Name = "groupBox109";
+            this.groupBox109.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox109.Size = new System.Drawing.Size(58, 58);
+            this.groupBox109.TabIndex = 75;
+            this.groupBox109.TabStop = false;
+            this.groupBox109.Text = "CP";
+            // 
+            // groupBox110
+            // 
+            this.groupBox110.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox110.Controls.Add(this.groupBox111);
+            this.groupBox110.Controls.Add(this.groupBox113);
+            this.groupBox110.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox110.Location = new System.Drawing.Point(0, 1);
+            this.groupBox110.Name = "groupBox110";
+            this.groupBox110.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox110.Size = new System.Drawing.Size(58, 58);
+            this.groupBox110.TabIndex = 77;
+            this.groupBox110.TabStop = false;
+            this.groupBox110.Text = "CP";
+            // 
+            // groupBox111
+            // 
+            this.groupBox111.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox111.Controls.Add(this.groupBox112);
+            this.groupBox111.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox111.Location = new System.Drawing.Point(3, 55);
+            this.groupBox111.Name = "groupBox111";
+            this.groupBox111.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox111.Size = new System.Drawing.Size(58, 58);
+            this.groupBox111.TabIndex = 75;
+            this.groupBox111.TabStop = false;
+            this.groupBox111.Text = "CP";
+            // 
+            // groupBox112
+            // 
+            this.groupBox112.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox112.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox112.Location = new System.Drawing.Point(0, 55);
+            this.groupBox112.Name = "groupBox112";
+            this.groupBox112.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox112.Size = new System.Drawing.Size(58, 58);
+            this.groupBox112.TabIndex = 74;
+            this.groupBox112.TabStop = false;
+            this.groupBox112.Text = "SP";
+            // 
+            // groupBox113
+            // 
+            this.groupBox113.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox113.Controls.Add(this.groupBox114);
+            this.groupBox113.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox113.Location = new System.Drawing.Point(0, 55);
+            this.groupBox113.Name = "groupBox113";
+            this.groupBox113.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox113.Size = new System.Drawing.Size(58, 58);
+            this.groupBox113.TabIndex = 74;
+            this.groupBox113.TabStop = false;
+            this.groupBox113.Text = "SP";
+            // 
+            // groupBox114
+            // 
+            this.groupBox114.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox114.Controls.Add(this.groupBox115);
+            this.groupBox114.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox114.Location = new System.Drawing.Point(0, 0);
+            this.groupBox114.Name = "groupBox114";
+            this.groupBox114.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox114.Size = new System.Drawing.Size(58, 58);
+            this.groupBox114.TabIndex = 75;
+            this.groupBox114.TabStop = false;
+            this.groupBox114.Text = "CP";
+            // 
+            // groupBox115
+            // 
+            this.groupBox115.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox115.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox115.Location = new System.Drawing.Point(0, 55);
+            this.groupBox115.Name = "groupBox115";
+            this.groupBox115.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox115.Size = new System.Drawing.Size(58, 58);
+            this.groupBox115.TabIndex = 74;
+            this.groupBox115.TabStop = false;
+            this.groupBox115.Text = "SP";
+            // 
+            // groupBox116
+            // 
+            this.groupBox116.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox116.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox116.Location = new System.Drawing.Point(0, 55);
+            this.groupBox116.Name = "groupBox116";
+            this.groupBox116.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox116.Size = new System.Drawing.Size(58, 58);
+            this.groupBox116.TabIndex = 74;
+            this.groupBox116.TabStop = false;
+            this.groupBox116.Text = "SP";
+            // 
+            // groupBox52
+            // 
+            this.groupBox52.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox52.Controls.Add(this.groupBox53);
+            this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox52.Location = new System.Drawing.Point(3, 55);
+            this.groupBox52.Name = "groupBox52";
+            this.groupBox52.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox52.Size = new System.Drawing.Size(58, 58);
+            this.groupBox52.TabIndex = 75;
+            this.groupBox52.TabStop = false;
+            this.groupBox52.Text = "CP";
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox53.Location = new System.Drawing.Point(0, 55);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox53.Size = new System.Drawing.Size(58, 58);
+            this.groupBox53.TabIndex = 74;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "SP";
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox54.Controls.Add(this.groupBox55);
+            this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox54.Location = new System.Drawing.Point(0, 55);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox54.Size = new System.Drawing.Size(58, 58);
+            this.groupBox54.TabIndex = 74;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "SP";
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox55.Controls.Add(this.groupBox56);
+            this.groupBox55.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox55.Location = new System.Drawing.Point(0, 0);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox55.Size = new System.Drawing.Size(58, 58);
+            this.groupBox55.TabIndex = 75;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "CP";
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox56.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox56.Location = new System.Drawing.Point(0, 55);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox56.Size = new System.Drawing.Size(58, 58);
+            this.groupBox56.TabIndex = 74;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "SP";
+            // 
+            // groupBox50
+            // 
+            this.groupBox50.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox50.Location = new System.Drawing.Point(0, 55);
+            this.groupBox50.Name = "groupBox50";
+            this.groupBox50.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.groupBox50.Size = new System.Drawing.Size(58, 58);
+            this.groupBox50.TabIndex = 74;
+            this.groupBox50.TabStop = false;
+            this.groupBox50.Text = "SP";
+            // 
+            // ProficencyBonusLabel
+            // 
+            this.ProficencyBonusLabel.AutoSize = true;
+            this.ProficencyBonusLabel.Location = new System.Drawing.Point(206, 392);
+            this.ProficencyBonusLabel.Name = "ProficencyBonusLabel";
+            this.ProficencyBonusLabel.Size = new System.Drawing.Size(90, 13);
+            this.ProficencyBonusLabel.TabIndex = 66;
+            this.ProficencyBonusLabel.Text = "Proficency Bonus";
+            // 
+            // PassivePerceptionLabel
+            // 
+            this.PassivePerceptionLabel.AutoSize = true;
+            this.PassivePerceptionLabel.Location = new System.Drawing.Point(206, 462);
+            this.PassivePerceptionLabel.Name = "PassivePerceptionLabel";
+            this.PassivePerceptionLabel.Size = new System.Drawing.Size(98, 13);
+            this.PassivePerceptionLabel.TabIndex = 67;
+            this.PassivePerceptionLabel.Text = "Passive Perception";
+            // 
+            // InspirationLabel
+            // 
+            this.InspirationLabel.AutoSize = true;
+            this.InspirationLabel.Location = new System.Drawing.Point(206, 323);
+            this.InspirationLabel.Name = "InspirationLabel";
+            this.InspirationLabel.Size = new System.Drawing.Size(55, 13);
+            this.InspirationLabel.TabIndex = 68;
+            this.InspirationLabel.Text = "Inspiration";
+            // 
+            // SaveCharacterButton
+            // 
+            this.SaveCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.SaveCharacterButton.Location = new System.Drawing.Point(8, 132);
+            this.SaveCharacterButton.Name = "SaveCharacterButton";
+            this.SaveCharacterButton.Size = new System.Drawing.Size(78, 43);
+            this.SaveCharacterButton.TabIndex = 69;
+            this.SaveCharacterButton.Text = "Save Sheet";
+            this.SaveCharacterButton.UseVisualStyleBackColor = true;
+            this.SaveCharacterButton.Click += new System.EventHandler(this.SaveCharacterButton_Click);
+            // 
+            // EditSheetCheck
+            // 
+            this.EditSheetCheck.AutoSize = true;
+            this.EditSheetCheck.Location = new System.Drawing.Point(11, 189);
+            this.EditSheetCheck.Name = "EditSheetCheck";
+            this.EditSheetCheck.Size = new System.Drawing.Size(75, 17);
+            this.EditSheetCheck.TabIndex = 70;
+            this.EditSheetCheck.Text = "Edit Sheet";
+            this.EditSheetCheck.UseVisualStyleBackColor = true;
+            this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
+            // 
+            // addToInventoryFormBindingSource
+            // 
+            this.addToInventoryFormBindingSource.DataSource = typeof(CharacterSheet.AddToInventoryForm);
             // 
             // Sheet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.EditSheetCheck);
             this.Controls.Add(this.SaveCharacterButton);
             this.Controls.Add(this.groupBox31);
             this.Controls.Add(this.InspirationLabel);
@@ -5502,170 +5512,55 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
             this.groupBox19.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
+            this.groupBox8.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
             this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
             this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             this.groupBox27.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.groupBox28.ResumeLayout(false);
+            this.groupBox28.PerformLayout();
             this.groupBox29.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox30.ResumeLayout(false);
             this.groupBox31.ResumeLayout(false);
             this.groupBox32.ResumeLayout(false);
+            this.groupBox32.PerformLayout();
             this.groupBox33.ResumeLayout(false);
             this.groupBox34.ResumeLayout(false);
             this.groupBox35.ResumeLayout(false);
             this.groupBox37.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            this.groupBox45.ResumeLayout(false);
-            this.groupBox57.ResumeLayout(false);
-            this.groupBox58.ResumeLayout(false);
-            this.groupBox60.ResumeLayout(false);
-            this.groupBox61.ResumeLayout(false);
-            this.groupBox62.ResumeLayout(false);
-            this.groupBox63.ResumeLayout(false);
-            this.groupBox65.ResumeLayout(false);
-            this.groupBox66.ResumeLayout(false);
-            this.groupBox46.ResumeLayout(false);
-            this.groupBox48.ResumeLayout(false);
-            this.groupBox49.ResumeLayout(false);
-            this.groupBox51.ResumeLayout(false);
-            this.groupBox93.ResumeLayout(false);
-            this.groupBox94.ResumeLayout(false);
-            this.groupBox95.ResumeLayout(false);
-            this.groupBox97.ResumeLayout(false);
-            this.groupBox98.ResumeLayout(false);
-            this.groupBox99.ResumeLayout(false);
-            this.groupBox100.ResumeLayout(false);
-            this.groupBox102.ResumeLayout(false);
-            this.groupBox103.ResumeLayout(false);
-            this.groupBox106.ResumeLayout(false);
-            this.groupBox108.ResumeLayout(false);
-            this.groupBox109.ResumeLayout(false);
-            this.groupBox110.ResumeLayout(false);
-            this.groupBox111.ResumeLayout(false);
-            this.groupBox113.ResumeLayout(false);
-            this.groupBox114.ResumeLayout(false);
-            this.groupBox52.ResumeLayout(false);
-            this.groupBox54.ResumeLayout(false);
-            this.groupBox55.ResumeLayout(false);
-            this.groupBox39.ResumeLayout(false);
-            this.groupBox40.ResumeLayout(false);
-            this.groupBox41.ResumeLayout(false);
-            this.groupBox43.ResumeLayout(false);
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox69.ResumeLayout(false);
-            this.groupBox70.ResumeLayout(false);
-            this.groupBox72.ResumeLayout(false);
-            this.groupBox73.ResumeLayout(false);
-            this.groupBox76.ResumeLayout(false);
-            this.groupBox78.ResumeLayout(false);
-            this.groupBox79.ResumeLayout(false);
-            this.groupBox80.ResumeLayout(false);
-            this.groupBox81.ResumeLayout(false);
-            this.groupBox82.ResumeLayout(false);
-            this.groupBox83.ResumeLayout(false);
-            this.groupBox85.ResumeLayout(false);
-            this.groupBox86.ResumeLayout(false);
-            this.groupBox87.ResumeLayout(false);
-            this.groupBox88.ResumeLayout(false);
-            this.groupBox90.ResumeLayout(false);
-            this.groupBox91.ResumeLayout(false);
-            this.groupBox118.ResumeLayout(false);
-            this.groupBox120.ResumeLayout(false);
-            this.groupBox121.ResumeLayout(false);
-            this.groupBox122.ResumeLayout(false);
-            this.groupBox123.ResumeLayout(false);
-            this.groupBox125.ResumeLayout(false);
-            this.groupBox126.ResumeLayout(false);
-            this.groupBox129.ResumeLayout(false);
-            this.groupBox131.ResumeLayout(false);
-            this.groupBox132.ResumeLayout(false);
-            this.groupBox135.ResumeLayout(false);
-            this.groupBox136.ResumeLayout(false);
-            this.groupBox137.ResumeLayout(false);
-            this.groupBox139.ResumeLayout(false);
-            this.groupBox140.ResumeLayout(false);
-            this.groupBox141.ResumeLayout(false);
-            this.groupBox142.ResumeLayout(false);
-            this.groupBox144.ResumeLayout(false);
-            this.groupBox145.ResumeLayout(false);
-            this.groupBox148.ResumeLayout(false);
-            this.groupBox150.ResumeLayout(false);
-            this.groupBox151.ResumeLayout(false);
-            this.groupBox152.ResumeLayout(false);
-            this.groupBox153.ResumeLayout(false);
-            this.groupBox154.ResumeLayout(false);
-            this.groupBox155.ResumeLayout(false);
-            this.groupBox157.ResumeLayout(false);
-            this.groupBox158.ResumeLayout(false);
-            this.groupBox159.ResumeLayout(false);
-            this.groupBox160.ResumeLayout(false);
-            this.groupBox162.ResumeLayout(false);
-            this.groupBox163.ResumeLayout(false);
-            this.groupBox166.ResumeLayout(false);
-            this.groupBox168.ResumeLayout(false);
-            this.groupBox169.ResumeLayout(false);
-            this.groupBox170.ResumeLayout(false);
-            this.groupBox171.ResumeLayout(false);
-            this.groupBox173.ResumeLayout(false);
-            this.groupBox174.ResumeLayout(false);
-            this.groupBox177.ResumeLayout(false);
-            this.groupBox179.ResumeLayout(false);
-            this.groupBox180.ResumeLayout(false);
-            this.groupBox231.ResumeLayout(false);
-            this.groupBox232.ResumeLayout(false);
-            this.groupBox233.ResumeLayout(false);
-            this.groupBox235.ResumeLayout(false);
-            this.groupBox236.ResumeLayout(false);
-            this.groupBox237.ResumeLayout(false);
-            this.groupBox238.ResumeLayout(false);
-            this.groupBox240.ResumeLayout(false);
-            this.groupBox241.ResumeLayout(false);
-            this.groupBox244.ResumeLayout(false);
-            this.groupBox246.ResumeLayout(false);
-            this.groupBox247.ResumeLayout(false);
-            this.groupBox248.ResumeLayout(false);
-            this.groupBox249.ResumeLayout(false);
-            this.groupBox250.ResumeLayout(false);
-            this.groupBox251.ResumeLayout(false);
-            this.groupBox253.ResumeLayout(false);
-            this.groupBox254.ResumeLayout(false);
-            this.groupBox255.ResumeLayout(false);
-            this.groupBox256.ResumeLayout(false);
-            this.groupBox258.ResumeLayout(false);
-            this.groupBox259.ResumeLayout(false);
-            this.groupBox262.ResumeLayout(false);
-            this.groupBox264.ResumeLayout(false);
-            this.groupBox265.ResumeLayout(false);
-            this.groupBox266.ResumeLayout(false);
-            this.groupBox267.ResumeLayout(false);
-            this.groupBox269.ResumeLayout(false);
-            this.groupBox270.ResumeLayout(false);
-            this.groupBox273.ResumeLayout(false);
-            this.groupBox275.ResumeLayout(false);
-            this.groupBox276.ResumeLayout(false);
             this.groupBox279.ResumeLayout(false);
             this.groupBox280.ResumeLayout(false);
             this.groupBox281.ResumeLayout(false);
@@ -5698,6 +5593,135 @@
             this.groupBox321.ResumeLayout(false);
             this.groupBox323.ResumeLayout(false);
             this.groupBox324.ResumeLayout(false);
+            this.groupBox231.ResumeLayout(false);
+            this.groupBox232.ResumeLayout(false);
+            this.groupBox233.ResumeLayout(false);
+            this.groupBox235.ResumeLayout(false);
+            this.groupBox236.ResumeLayout(false);
+            this.groupBox237.ResumeLayout(false);
+            this.groupBox238.ResumeLayout(false);
+            this.groupBox240.ResumeLayout(false);
+            this.groupBox241.ResumeLayout(false);
+            this.groupBox244.ResumeLayout(false);
+            this.groupBox246.ResumeLayout(false);
+            this.groupBox247.ResumeLayout(false);
+            this.groupBox248.ResumeLayout(false);
+            this.groupBox249.ResumeLayout(false);
+            this.groupBox250.ResumeLayout(false);
+            this.groupBox251.ResumeLayout(false);
+            this.groupBox253.ResumeLayout(false);
+            this.groupBox254.ResumeLayout(false);
+            this.groupBox255.ResumeLayout(false);
+            this.groupBox256.ResumeLayout(false);
+            this.groupBox258.ResumeLayout(false);
+            this.groupBox259.ResumeLayout(false);
+            this.groupBox262.ResumeLayout(false);
+            this.groupBox264.ResumeLayout(false);
+            this.groupBox265.ResumeLayout(false);
+            this.groupBox266.ResumeLayout(false);
+            this.groupBox267.ResumeLayout(false);
+            this.groupBox269.ResumeLayout(false);
+            this.groupBox270.ResumeLayout(false);
+            this.groupBox273.ResumeLayout(false);
+            this.groupBox275.ResumeLayout(false);
+            this.groupBox276.ResumeLayout(false);
+            this.groupBox135.ResumeLayout(false);
+            this.groupBox136.ResumeLayout(false);
+            this.groupBox137.ResumeLayout(false);
+            this.groupBox139.ResumeLayout(false);
+            this.groupBox140.ResumeLayout(false);
+            this.groupBox141.ResumeLayout(false);
+            this.groupBox142.ResumeLayout(false);
+            this.groupBox144.ResumeLayout(false);
+            this.groupBox145.ResumeLayout(false);
+            this.groupBox148.ResumeLayout(false);
+            this.groupBox150.ResumeLayout(false);
+            this.groupBox151.ResumeLayout(false);
+            this.groupBox152.ResumeLayout(false);
+            this.groupBox153.ResumeLayout(false);
+            this.groupBox154.ResumeLayout(false);
+            this.groupBox155.ResumeLayout(false);
+            this.groupBox157.ResumeLayout(false);
+            this.groupBox158.ResumeLayout(false);
+            this.groupBox159.ResumeLayout(false);
+            this.groupBox160.ResumeLayout(false);
+            this.groupBox162.ResumeLayout(false);
+            this.groupBox163.ResumeLayout(false);
+            this.groupBox166.ResumeLayout(false);
+            this.groupBox168.ResumeLayout(false);
+            this.groupBox169.ResumeLayout(false);
+            this.groupBox170.ResumeLayout(false);
+            this.groupBox171.ResumeLayout(false);
+            this.groupBox173.ResumeLayout(false);
+            this.groupBox174.ResumeLayout(false);
+            this.groupBox177.ResumeLayout(false);
+            this.groupBox179.ResumeLayout(false);
+            this.groupBox180.ResumeLayout(false);
+            this.groupBox39.ResumeLayout(false);
+            this.groupBox40.ResumeLayout(false);
+            this.groupBox41.ResumeLayout(false);
+            this.groupBox43.ResumeLayout(false);
+            this.groupBox44.ResumeLayout(false);
+            this.groupBox69.ResumeLayout(false);
+            this.groupBox70.ResumeLayout(false);
+            this.groupBox72.ResumeLayout(false);
+            this.groupBox73.ResumeLayout(false);
+            this.groupBox76.ResumeLayout(false);
+            this.groupBox78.ResumeLayout(false);
+            this.groupBox79.ResumeLayout(false);
+            this.groupBox80.ResumeLayout(false);
+            this.groupBox81.ResumeLayout(false);
+            this.groupBox82.ResumeLayout(false);
+            this.groupBox83.ResumeLayout(false);
+            this.groupBox85.ResumeLayout(false);
+            this.groupBox86.ResumeLayout(false);
+            this.groupBox87.ResumeLayout(false);
+            this.groupBox88.ResumeLayout(false);
+            this.groupBox90.ResumeLayout(false);
+            this.groupBox91.ResumeLayout(false);
+            this.groupBox118.ResumeLayout(false);
+            this.groupBox120.ResumeLayout(false);
+            this.groupBox121.ResumeLayout(false);
+            this.groupBox122.ResumeLayout(false);
+            this.groupBox123.ResumeLayout(false);
+            this.groupBox125.ResumeLayout(false);
+            this.groupBox126.ResumeLayout(false);
+            this.groupBox129.ResumeLayout(false);
+            this.groupBox131.ResumeLayout(false);
+            this.groupBox132.ResumeLayout(false);
+            this.groupBox45.ResumeLayout(false);
+            this.groupBox57.ResumeLayout(false);
+            this.groupBox58.ResumeLayout(false);
+            this.groupBox60.ResumeLayout(false);
+            this.groupBox61.ResumeLayout(false);
+            this.groupBox62.ResumeLayout(false);
+            this.groupBox63.ResumeLayout(false);
+            this.groupBox65.ResumeLayout(false);
+            this.groupBox66.ResumeLayout(false);
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox51.ResumeLayout(false);
+            this.groupBox93.ResumeLayout(false);
+            this.groupBox94.ResumeLayout(false);
+            this.groupBox95.ResumeLayout(false);
+            this.groupBox97.ResumeLayout(false);
+            this.groupBox98.ResumeLayout(false);
+            this.groupBox99.ResumeLayout(false);
+            this.groupBox100.ResumeLayout(false);
+            this.groupBox102.ResumeLayout(false);
+            this.groupBox103.ResumeLayout(false);
+            this.groupBox106.ResumeLayout(false);
+            this.groupBox108.ResumeLayout(false);
+            this.groupBox109.ResumeLayout(false);
+            this.groupBox110.ResumeLayout(false);
+            this.groupBox111.ResumeLayout(false);
+            this.groupBox113.ResumeLayout(false);
+            this.groupBox114.ResumeLayout(false);
+            this.groupBox52.ResumeLayout(false);
+            this.groupBox54.ResumeLayout(false);
+            this.groupBox55.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5716,42 +5740,31 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label CharismaAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label CharismaModifierLabel;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label StrengthModifierLabel;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.Label WisdomAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox13;
         private System.Windows.Forms.Label WisdomModifierLabel;
         private System.Windows.Forms.GroupBox groupBox6;
-        private System.Windows.Forms.Label DexterityAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.Label DexterityModifierLabel;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.Label IntelligenceAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.Label IntelligenceModifierLabel;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label ConstitutionAttributeDisplay;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label ConstitutionModifierLabel;
         private System.Windows.Forms.GroupBox groupBox14;
         private System.Windows.Forms.Label CharacterNameLabel;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.Label RaceLabel;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Label ClassLabel;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.Label BackgroundLabel;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.Label AlignmentLabel;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.Label ExperienceLabel;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Label LevelLabel;
         private System.Windows.Forms.GroupBox groupBox19;
         private System.Windows.Forms.RichTextBox BondsDisplay;
         private System.Windows.Forms.RichTextBox TraitsDisplay;
@@ -5779,10 +5792,8 @@
         private System.Windows.Forms.GroupBox groupBox35;
         private System.Windows.Forms.GroupBox groupBox36;
         private System.Windows.Forms.GroupBox groupBox37;
-        private System.Windows.Forms.Label MaxHealthDisplay;
         private System.Windows.Forms.Label ArmorClassDisplay;
         private System.Windows.Forms.Label InitiativeDisplay;
-        private System.Windows.Forms.Label SpeedDisplay;
         private System.Windows.Forms.Label ProficencyBonusLabel;
         private System.Windows.Forms.Label PassivePerceptionLabel;
         private System.Windows.Forms.Label InspirationLabel;
@@ -5813,7 +5824,6 @@
         private System.Windows.Forms.Label ConstitutionSaveLabel;
         private System.Windows.Forms.Label DexteritySaveLabel;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label StrengthAttributeDisplay;
         private System.Windows.Forms.CheckBox JackOfAllTradesCheck;
         private System.Windows.Forms.Button SaveCharacterButton;
         private System.Windows.Forms.Button EditInventoryButton;
@@ -6096,13 +6106,23 @@
         private System.Windows.Forms.GroupBox groupBox55;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.GroupBox groupBox50;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ShowListArmorButton;
+        private System.Windows.Forms.Button ShowListItemsButton;
+        private System.Windows.Forms.Button ShowListWeaponsButton;
+        private System.Windows.Forms.CheckBox EditSheetCheck;
+        private System.Windows.Forms.TextBox RaceDisplayTextBox;
+        private System.Windows.Forms.TextBox ClassDisplayTextBox;
+        private System.Windows.Forms.TextBox BackgroundDisplayTextBox;
+        private System.Windows.Forms.TextBox AlignmentDisplayTextBox;
+        private System.Windows.Forms.TextBox ExperienceDisplayTextBox;
+        private System.Windows.Forms.TextBox LevelDisplayTextBox;
+        private System.Windows.Forms.TextBox CharismaAttributeDisplay;
+        private System.Windows.Forms.TextBox WisdomAttributeDisplay;
+        private System.Windows.Forms.TextBox DexterityAttributeDisplay;
+        private System.Windows.Forms.TextBox StrengthAttributeDisplay;
+        private System.Windows.Forms.TextBox IntelligenceAttributeDisplay;
+        private System.Windows.Forms.TextBox ConstitutionAttributeDisplay;
+        private System.Windows.Forms.TextBox MaxHealthDisplay;
+        private System.Windows.Forms.TextBox SpeedDisplay;
     }
 }

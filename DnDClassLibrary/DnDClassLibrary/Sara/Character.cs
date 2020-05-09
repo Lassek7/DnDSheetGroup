@@ -11,6 +11,8 @@ namespace DnDClassLibrary
         string PlayerName;
         string Race;
         string Background;
+        string Experience;
+        string Backstory;
         int Level;
         string CharacterClass;
         string Ideals;
@@ -54,6 +56,16 @@ namespace DnDClassLibrary
         {
             get { return Background; }
             set { Background = value; }
+        }
+        public string experience
+        {
+            get { return Experience; }
+            set { Experience = value; }
+        }
+        public string backstory
+        {
+            get { return Backstory; }
+            set { Backstory = value; }
         }
         public int level
         {
