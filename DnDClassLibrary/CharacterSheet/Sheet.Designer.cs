@@ -422,6 +422,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -1832,9 +1835,9 @@
             this.listBox.BackColor = System.Drawing.SystemColors.Control;
             this.listBox.FormattingEnabled = true;
             this.listBox.ItemHeight = 15;
-            this.listBox.Location = new System.Drawing.Point(8, 23);
+            this.listBox.Location = new System.Drawing.Point(8, 53);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(166, 199);
+            this.listBox.Size = new System.Drawing.Size(166, 169);
             this.listBox.TabIndex = 1;
             // 
             // groupBox25
@@ -2080,6 +2083,9 @@
             // 
             // groupBox37
             // 
+            this.groupBox37.Controls.Add(this.button4);
+            this.groupBox37.Controls.Add(this.button3);
+            this.groupBox37.Controls.Add(this.button1);
             this.groupBox37.Controls.Add(this.groupBox279);
             this.groupBox37.Controls.Add(this.groupBox231);
             this.groupBox37.Controls.Add(this.groupBox135);
@@ -5410,6 +5416,36 @@
             this.label9.Text = "0";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button1.Location = new System.Drawing.Point(6, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(55, 27);
+            this.button1.TabIndex = 70;
+            this.button1.Text = "Save Sheet";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button3.Location = new System.Drawing.Point(63, 20);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(55, 27);
+            this.button3.TabIndex = 82;
+            this.button3.Text = "Save Sheet";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button4.Location = new System.Drawing.Point(120, 20);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(55, 27);
+            this.button4.TabIndex = 83;
+            this.button4.Text = "Save Sheet";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
             // Sheet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -6065,5 +6101,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button1;
     }
 }
