@@ -16,27 +16,27 @@ namespace DnDClassLibrary
             int ATKBonus;
 
         public EquippedItems(bool ShieldEquipped)
-            {
+        {
             this.shieldEquipped = ShieldEquipped;
-            }
+        }
 
 
-            public int ACCalc()
-            { 
+        public int ShieldBonus(int CurrentAC)
+        {
             if (shieldEquipped == true)
             {
-                AC = 2;
+                int NewAC = CurrentAC + 2;
+                return NewAC;
             }
             else
             {
-                AC = 0;
+                return CurrentAC += 0;
             }
+        }
 
-            return AC; 
-            }
-
-           public  int AtkBonusCalc()
-            { return ATKBonus; }
+        //public int AtkBonusCalc()
+        //    { return ATKBonus; }
+        
         public void test2()
         {
             Console.WriteLine(shieldEquipped);

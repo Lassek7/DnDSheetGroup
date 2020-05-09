@@ -228,6 +228,7 @@ namespace CharacterSheet
                 Item NewItem = new Item();
                 NewItem.ItemName = myItem.ItemName;
                 NewItem.AmountHeld = myItem.AmountHeld;
+                NewItem.Description = myItem.Description;
                 NewItem.ItemID = 1;
                 myInventoryList.Add(NewItem);
 
@@ -252,8 +253,6 @@ namespace CharacterSheet
             }
             ClearTextBoxes(this.Controls);
             RunInvList();
-
-
         }
         private void RemoveFromListButton_Click(object sender, EventArgs e)
         {
@@ -266,6 +265,14 @@ namespace CharacterSheet
             else
             {
                 MessageBox.Show("Select an item from the list to remove");
+            }
+        }
+        private void AddToInvListBox_DoubleClick(object sender, EventArgs e)
+        {
+            if (AddToInvListBox.SelectedItem != null)
+            {
+                MessageBox.Show(Convert.ToString(myInventoryList[AddToInvListBox.SelectedIndex].Description)); // needs work
+                AddToInvListBox.SelectedItem = null;
             }
         }
         #endregion
@@ -350,7 +357,7 @@ namespace CharacterSheet
                 if (myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld > 1)
                 {
                     myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld -= 1;
-
+                    
                 }
                 else
                 {
@@ -362,9 +369,10 @@ namespace CharacterSheet
             {
                 MessageBox.Show("Select an item from the list to decrease");
             }
-               
             RunInvList();
         }
+
+
 
         #endregion
 

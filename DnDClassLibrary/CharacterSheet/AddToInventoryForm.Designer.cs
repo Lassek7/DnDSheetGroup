@@ -615,6 +615,7 @@
             this.AddToInvListBox.Name = "AddToInvListBox";
             this.AddToInvListBox.Size = new System.Drawing.Size(200, 329);
             this.AddToInvListBox.TabIndex = 3;
+            this.AddToInvListBox.DoubleClick += new System.EventHandler(this.AddToInvListBox_DoubleClick);
             // 
             // RemoveFromListButton
             // 
