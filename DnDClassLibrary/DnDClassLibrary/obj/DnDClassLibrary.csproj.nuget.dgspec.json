@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {}
+    "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {
+    "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
         "projectName": "DnDClassLibrary",
-        "projectPath": "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+        "projectPath": "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
         "packagesPath": "C:\\Users\\dkbad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dkbad\\AppData\\Roaming\\NuGet\\NuGet.Config",

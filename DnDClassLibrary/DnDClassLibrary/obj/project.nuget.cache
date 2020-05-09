@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/FMmDbX5PdADq2ecE+m/KYhkjphFpbB8gN0YGSgKARpzuYGrfN6Qe5yat2TRZ+YvulahlXsj+nw50AVwqsJy6w==",
+  "dgSpecHash": "BWtknSAVzDm1NKjwFcsNVEYJpe2Bi2jbzjmDlRHKzURcz5Ve7hBFPhKZU/4R/z57fRJpVCQvypWI1KhQt4ERJw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\dkbad\\source\\repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
+  "projectFilePath": "C:\\Users\\dkbad\\Source\\Repos\\LAK258\\DnDSheetGroup\\DnDClassLibrary\\DnDClassLibrary\\DnDClassLibrary.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\dkbad\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\dkbad\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
