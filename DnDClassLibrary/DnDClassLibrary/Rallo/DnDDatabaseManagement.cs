@@ -337,7 +337,11 @@ namespace DnDClassLibrary
                         }
 
                         break;
+                    default:
+                        break;
+                        
                 }
+                
 
             }
         }
@@ -401,6 +405,8 @@ namespace DnDClassLibrary
                             weapon.DamageType = Convert.ToString(row["Damage Type"]);
                             weapon.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
                             InventoryList.Add(weapon);
+                            break;
+                        default:
                             break;
                     }
                 }

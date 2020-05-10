@@ -13,16 +13,20 @@ namespace CharacterSheet
 {
     public partial class AddToInventoryForm : Form
     {
-        String PreviewDetails = "{0,-10}{1,-20}{2,-20}{3,-20}";
+        String PreviewDetails = "{0, -7}{1,-7}{2,-7}{3, -7}";
         Item myItem = new Item();
         Armor myArmor = new Armor();
         Weapon myWeapon = new Weapon();
+        EquippedItems myEquippedItems = new EquippedItems();
+        CharacterAttributes myAttributes = new CharacterAttributes();
         List<Item> myInventoryList = new List<Item>();
         
 
-        public AddToInventoryForm(List<Item> MyList)
+        public AddToInventoryForm(List<Item> MyList, CharacterAttributes Attri, EquippedItems EQ)
         {
             myInventoryList = MyList;
+            myAttributes = Attri;
+            myEquippedItems = EQ;
             InitializeComponent();
             RunInvList();
         }
@@ -96,10 +100,6 @@ namespace CharacterSheet
             myArmor.ACFromArmor = Convert.ToInt32(NewValue(OutOfReach, ArmorACBox.Text));
         }
 
-        private void ArmorEquippedCheck_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
         #endregion
         #region ADDWEAPON
         private void WeaponNameBox_TextChanged(object sender, EventArgs e)
@@ -148,11 +148,6 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponTypeBox.Text);
             myWeapon.ItemType = NewValue(OutOfReach, WeaponTypeBox.Text);
-        }
-
-        private void WeaponEquippedCheck_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void WeaponStrengthStatRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -249,6 +244,12 @@ namespace CharacterSheet
                 NewArmor.ItemEquipped = myArmor.ItemEquipped;
 
                 myInventoryList.Add(NewArmor);
+                if (ArmorEquippedCheck.Checked == true)
+                {
+                    ArmorEquippedCheck.Checked = false;
+                    myEquippedItems.ACFromArmor = myArmor.ACFromArmor; 
+                    myEquippedItems.ArmorSlotChest = myArmor.ItemName;
+                }
 
             }
             if (string.IsNullOrEmpty(myWeapon.ItemName) == false && myWeapon.AmountHeld > 0)
@@ -265,7 +266,15 @@ namespace CharacterSheet
                 NewWeapon.Description = myWeapon.Description;
                 NewWeapon.ItemEquipped = myWeapon.ItemEquipped;
                 NewWeapon.AttributeAssociation = myWeapon.AttributeAssociation;
+                
+                
                 myInventoryList.Add(NewWeapon);
+                if (WeaponEquippedCheck.Checked == true)
+                {
+                    WeaponEquippedCheck.Checked = false;
+                    EquipSlotCheck SlotChoice = new EquipSlotCheck(NewWeapon, myEquippedItems, "Where to Equip?", "Slot 1", "Slot 2", "Slot 3");
+                    SlotChoice.ShowDialog();
+                }
 
             }
             ClearTextBoxes(this.Controls);
@@ -284,6 +293,7 @@ namespace CharacterSheet
             {
                 MessageBox.Show("Select an item from the list to remove");
             }
+            RunInvList();
         }
 
         private void AddToInvListBox_DoubleClick(object sender, EventArgs e)
@@ -350,7 +360,6 @@ namespace CharacterSheet
             {
                 return null;
             }
-            
         }
         public void ClearTextBoxes(Control.ControlCollection EditInventory)
         {
@@ -389,7 +398,37 @@ namespace CharacterSheet
                         break;
                 }
             }
+            CurrentWeightLabel.Text = Convert.ToString(ItemWeightCalc());
+            MaxWeightLabel.Text = Convert.ToString(myAttributes.Attributes[0] * 5);
+            EncumberStatusLabel.Text = EncumberCheck(Convert.ToInt32(CurrentWeightLabel.Text), myAttributes.Attributes[0]);
+        }
+        string EncumberCheck(int CurrentWeightTotal, int Strength) // tjekker om man har for meget vægt
+        {
+            string Encumbered;
+            if (CurrentWeightTotal >= Strength * 5)
+            {
+                Encumbered = "Heavily Encumbered";
+            }
+            else if (CurrentWeightTotal >= Strength * 2)
+            {
+                Encumbered = "Slightly encumbered";
+            }
+            else
+            {
+                Encumbered = "Not encumbered";
+            }
 
+            return Encumbered;
+        }
+        int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
+        {
+            int CurrentWeightTotal = 0;
+            for (int i = 0; i < myInventoryList.Count; i++)
+            {
+                Item Item = myInventoryList[i];
+                CurrentWeightTotal += Item.WeightPerItem * Item.AmountHeld;
+            }
+            return CurrentWeightTotal;
         }
         #endregion
     }

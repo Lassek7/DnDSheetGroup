@@ -1,23 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace DnDClassLibrary
 {
-    class EquippedItems : Inventory
+    public class EquippedItems : Inventory
     {
 
-            int WeaponSlotOne;
-            int WeaponSlotTwo;
-            int WeaponSlotThree;
-            int ArmorSlotChest;
-           public bool shieldEquipped;
-            int AC;
-            int ATKBonus;
+        public string WeaponOneName;
+        public int WeaponOneATKBonus;
+        public string WeaponOneDamage;
+        public string WeaponOneDamageType;
+        public string WeaponOneAttributeAssociation;
 
-        public EquippedItems(bool ShieldEquipped)
+        public string WeaponTwoName;
+        public int WeaponTwoATKBonus;
+        public string WeaponTwoDamage;
+        public string WeaponTwoDamageType;
+        public string WeaponTwoAttributeAssociation;
+
+
+        public string WeaponThreeName;
+        public int WeaponThreeATKBonus;
+        public string WeaponThreeDamage;
+        public string WeaponThreeDamageType;
+        public string WeaponThreeAttributeAssociation;
+
+
+        public string ArmorSlotChest;
+        bool shieldEquipped;
+        public int ACFromArmor;
+        int AC;
+
+        //public EquippedItems(bool ShieldEquipped)
+        //{
+        //    this.shieldEquipped = ShieldEquipped;
+        //}
+        public EquippedItems()
         {
-            this.shieldEquipped = ShieldEquipped;
+
         }
 
 
@@ -34,14 +56,21 @@ namespace DnDClassLibrary
             }
         }
 
-        //public int AtkBonusCalc()
-        //    { return ATKBonus; }
-        
-        public void test2()
+        public int AtkBonusCalc()
         {
-            Console.WriteLine(shieldEquipped);
-            Console.WriteLine(AC);
+
+            int ATKBonus = 0;
+
+            return ATKBonus;
         }
+
+        public int ACBonusCalc()
+        {
+            int ACBonus = 0;
+
+            return ACBonus;
+        }
+
 
     }
 }

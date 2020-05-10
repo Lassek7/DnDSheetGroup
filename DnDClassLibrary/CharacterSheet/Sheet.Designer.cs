@@ -169,13 +169,13 @@
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.PassivePerceptionDisplay = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.UpdateInvButton = new System.Windows.Forms.Button();
             this.EditInventoryButton = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.ShowListWeaponsButton = new System.Windows.Forms.Button();
             this.ShowListArmorButton = new System.Windows.Forms.Button();
             this.ShowListItemsButton = new System.Windows.Forms.Button();
             this.groupBox279 = new System.Windows.Forms.GroupBox();
+            this.PlatinumCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox280 = new System.Windows.Forms.GroupBox();
             this.groupBox281 = new System.Windows.Forms.GroupBox();
             this.groupBox282 = new System.Windows.Forms.GroupBox();
@@ -224,6 +224,7 @@
             this.groupBox325 = new System.Windows.Forms.GroupBox();
             this.groupBox326 = new System.Windows.Forms.GroupBox();
             this.groupBox231 = new System.Windows.Forms.GroupBox();
+            this.GoldCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox232 = new System.Windows.Forms.GroupBox();
             this.groupBox233 = new System.Windows.Forms.GroupBox();
             this.groupBox234 = new System.Windows.Forms.GroupBox();
@@ -272,6 +273,7 @@
             this.groupBox277 = new System.Windows.Forms.GroupBox();
             this.groupBox278 = new System.Windows.Forms.GroupBox();
             this.groupBox135 = new System.Windows.Forms.GroupBox();
+            this.ElectrumCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox136 = new System.Windows.Forms.GroupBox();
             this.groupBox137 = new System.Windows.Forms.GroupBox();
             this.groupBox138 = new System.Windows.Forms.GroupBox();
@@ -320,6 +322,7 @@
             this.groupBox181 = new System.Windows.Forms.GroupBox();
             this.groupBox182 = new System.Windows.Forms.GroupBox();
             this.groupBox39 = new System.Windows.Forms.GroupBox();
+            this.CopperCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox40 = new System.Windows.Forms.GroupBox();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
@@ -368,6 +371,7 @@
             this.groupBox133 = new System.Windows.Forms.GroupBox();
             this.groupBox134 = new System.Windows.Forms.GroupBox();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.SilverCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
@@ -420,6 +424,20 @@
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
+            this.EquippedArmorDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoNameDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotOneNameDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeNameDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotOneATKBonusDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeATKBonusDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoATKBonusDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotOneDamageDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeDamageDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoDamageDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotOneDamageTypeDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeDamageTypeDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoDamageTypeDisplay = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.addToInventoryFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -443,6 +461,7 @@
             this.groupBox20.SuspendLayout();
             this.groupBox21.SuspendLayout();
             this.groupBox18.SuspendLayout();
+            this.groupBox22.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox27.SuspendLayout();
@@ -456,6 +475,7 @@
             this.groupBox33.SuspendLayout();
             this.groupBox34.SuspendLayout();
             this.groupBox35.SuspendLayout();
+            this.groupBox36.SuspendLayout();
             this.groupBox37.SuspendLayout();
             this.groupBox279.SuspendLayout();
             this.groupBox280.SuspendLayout();
@@ -1850,6 +1870,18 @@
             // 
             // groupBox22
             // 
+            this.groupBox22.Controls.Add(this.WeaponSlotTwoDamageTypeDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotThreeDamageTypeDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneDamageTypeDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotTwoDamageDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotThreeDamageDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneDamageDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotTwoATKBonusDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotThreeATKBonusDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneATKBonusDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotThreeNameDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneNameDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotTwoNameDisplay);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox22.Location = new System.Drawing.Point(778, 300);
             this.groupBox22.Name = "groupBox22";
@@ -1894,7 +1926,7 @@
             this.listBox.FormattingEnabled = true;
             this.listBox.Location = new System.Drawing.Point(8, 40);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(166, 173);
+            this.listBox.Size = new System.Drawing.Size(166, 225);
             this.listBox.TabIndex = 1;
             // 
             // groupBox25
@@ -2202,6 +2234,8 @@
             // 
             // groupBox36
             // 
+            this.groupBox36.Controls.Add(this.checkBox7);
+            this.groupBox36.Controls.Add(this.EquippedArmorDisplay);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox36.Location = new System.Drawing.Point(120, 521);
             this.groupBox36.Name = "groupBox36";
@@ -2210,25 +2244,14 @@
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Equipment";
             // 
-            // UpdateInvButton
-            // 
-            this.UpdateInvButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.UpdateInvButton.Location = new System.Drawing.Point(89, 227);
-            this.UpdateInvButton.Name = "UpdateInvButton";
-            this.UpdateInvButton.Size = new System.Drawing.Size(85, 36);
-            this.UpdateInvButton.TabIndex = 71;
-            this.UpdateInvButton.Text = "Update";
-            this.UpdateInvButton.UseVisualStyleBackColor = true;
-            this.UpdateInvButton.Click += new System.EventHandler(this.UpdateInvButton_Click);
-            // 
             // EditInventoryButton
             // 
             this.EditInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.EditInventoryButton.Location = new System.Drawing.Point(8, 227);
+            this.EditInventoryButton.Location = new System.Drawing.Point(180, 229);
             this.EditInventoryButton.Name = "EditInventoryButton";
-            this.EditInventoryButton.Size = new System.Drawing.Size(80, 36);
+            this.EditInventoryButton.Size = new System.Drawing.Size(59, 36);
             this.EditInventoryButton.TabIndex = 70;
-            this.EditInventoryButton.Text = "Edit";
+            this.EditInventoryButton.Text = "Edit Inv";
             this.EditInventoryButton.UseVisualStyleBackColor = true;
             this.EditInventoryButton.Click += new System.EventHandler(this.EditInventoryButton_Click);
             // 
@@ -2243,7 +2266,6 @@
             this.groupBox37.Controls.Add(this.groupBox39);
             this.groupBox37.Controls.Add(this.groupBox45);
             this.groupBox37.Controls.Add(this.listBox);
-            this.groupBox37.Controls.Add(this.UpdateInvButton);
             this.groupBox37.Controls.Add(this.EditInventoryButton);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox37.Location = new System.Drawing.Point(120, 736);
@@ -2290,17 +2312,31 @@
             // groupBox279
             // 
             this.groupBox279.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox279.Controls.Add(this.PlatinumCoinsDisplay);
             this.groupBox279.Controls.Add(this.groupBox280);
             this.groupBox279.Controls.Add(this.groupBox292);
             this.groupBox279.Controls.Add(this.groupBox294);
             this.groupBox279.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox279.Location = new System.Drawing.Point(180, 182);
+            this.groupBox279.Location = new System.Drawing.Point(180, 183);
             this.groupBox279.Name = "groupBox279";
             this.groupBox279.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox279.Size = new System.Drawing.Size(58, 41);
             this.groupBox279.TabIndex = 81;
             this.groupBox279.TabStop = false;
             this.groupBox279.Text = "PP";
+            // 
+            // PlatinumCoinsDisplay
+            // 
+            this.PlatinumCoinsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.PlatinumCoinsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PlatinumCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.PlatinumCoinsDisplay.Location = new System.Drawing.Point(9, 13);
+            this.PlatinumCoinsDisplay.Name = "PlatinumCoinsDisplay";
+            this.PlatinumCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.PlatinumCoinsDisplay.TabIndex = 79;
+            this.PlatinumCoinsDisplay.Text = "0";
+            this.PlatinumCoinsDisplay.TextChanged += new System.EventHandler(this.PlatinumCoinsDisplay_TextChanged);
+            this.PlatinumCoinsDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PlatinumCoinsDisplay_KeyPress);
             // 
             // groupBox280
             // 
@@ -2913,17 +2949,31 @@
             // groupBox231
             // 
             this.groupBox231.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox231.Controls.Add(this.GoldCoinsDisplay);
             this.groupBox231.Controls.Add(this.groupBox232);
             this.groupBox231.Controls.Add(this.groupBox244);
             this.groupBox231.Controls.Add(this.groupBox246);
             this.groupBox231.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox231.Location = new System.Drawing.Point(180, 140);
+            this.groupBox231.Location = new System.Drawing.Point(180, 141);
             this.groupBox231.Name = "groupBox231";
             this.groupBox231.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox231.Size = new System.Drawing.Size(58, 43);
             this.groupBox231.TabIndex = 80;
             this.groupBox231.TabStop = false;
             this.groupBox231.Text = "GP";
+            // 
+            // GoldCoinsDisplay
+            // 
+            this.GoldCoinsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.GoldCoinsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.GoldCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.GoldCoinsDisplay.Location = new System.Drawing.Point(9, 14);
+            this.GoldCoinsDisplay.Name = "GoldCoinsDisplay";
+            this.GoldCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.GoldCoinsDisplay.TabIndex = 79;
+            this.GoldCoinsDisplay.Text = "0";
+            this.GoldCoinsDisplay.TextChanged += new System.EventHandler(this.GoldCoinsDisplay_TextChanged);
+            this.GoldCoinsDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GoldCoinsDisplay_KeyPress);
             // 
             // groupBox232
             // 
@@ -3536,6 +3586,7 @@
             // groupBox135
             // 
             this.groupBox135.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox135.Controls.Add(this.ElectrumCoinsDisplay);
             this.groupBox135.Controls.Add(this.groupBox136);
             this.groupBox135.Controls.Add(this.groupBox148);
             this.groupBox135.Controls.Add(this.groupBox150);
@@ -3547,6 +3598,19 @@
             this.groupBox135.TabIndex = 79;
             this.groupBox135.TabStop = false;
             this.groupBox135.Text = "EP";
+            // 
+            // ElectrumCoinsDisplay
+            // 
+            this.ElectrumCoinsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.ElectrumCoinsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ElectrumCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.ElectrumCoinsDisplay.Location = new System.Drawing.Point(9, 15);
+            this.ElectrumCoinsDisplay.Name = "ElectrumCoinsDisplay";
+            this.ElectrumCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.ElectrumCoinsDisplay.TabIndex = 79;
+            this.ElectrumCoinsDisplay.Text = "0";
+            this.ElectrumCoinsDisplay.TextChanged += new System.EventHandler(this.ElectrumCoinsDisplay_TextChanged);
+            this.ElectrumCoinsDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ElectrumCoinsDisplay_KeyPress);
             // 
             // groupBox136
             // 
@@ -4159,17 +4223,31 @@
             // groupBox39
             // 
             this.groupBox39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox39.Controls.Add(this.CopperCoinsDisplay);
             this.groupBox39.Controls.Add(this.groupBox40);
             this.groupBox39.Controls.Add(this.groupBox76);
             this.groupBox39.Controls.Add(this.groupBox78);
             this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox39.Location = new System.Drawing.Point(180, 17);
+            this.groupBox39.Location = new System.Drawing.Point(180, 12);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox39.Size = new System.Drawing.Size(58, 43);
             this.groupBox39.TabIndex = 78;
             this.groupBox39.TabStop = false;
             this.groupBox39.Text = "CP";
+            // 
+            // CopperCoinsDisplay
+            // 
+            this.CopperCoinsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.CopperCoinsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CopperCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.CopperCoinsDisplay.Location = new System.Drawing.Point(9, 14);
+            this.CopperCoinsDisplay.Name = "CopperCoinsDisplay";
+            this.CopperCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.CopperCoinsDisplay.TabIndex = 79;
+            this.CopperCoinsDisplay.Text = "0";
+            this.CopperCoinsDisplay.TextChanged += new System.EventHandler(this.CopperCoinsDisplay_TextChanged);
+            this.CopperCoinsDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CopperCoinsDisplay_KeyPress);
             // 
             // groupBox40
             // 
@@ -4782,17 +4860,31 @@
             // groupBox45
             // 
             this.groupBox45.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox45.Controls.Add(this.SilverCoinsDisplay);
             this.groupBox45.Controls.Add(this.groupBox57);
             this.groupBox45.Controls.Add(this.groupBox46);
             this.groupBox45.Controls.Add(this.groupBox48);
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox45.Location = new System.Drawing.Point(180, 57);
+            this.groupBox45.Location = new System.Drawing.Point(180, 52);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox45.Size = new System.Drawing.Size(58, 47);
             this.groupBox45.TabIndex = 77;
             this.groupBox45.TabStop = false;
             this.groupBox45.Text = "SP";
+            // 
+            // SilverCoinsDisplay
+            // 
+            this.SilverCoinsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.SilverCoinsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.SilverCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.SilverCoinsDisplay.Location = new System.Drawing.Point(9, 16);
+            this.SilverCoinsDisplay.Name = "SilverCoinsDisplay";
+            this.SilverCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.SilverCoinsDisplay.TabIndex = 79;
+            this.SilverCoinsDisplay.Text = "0";
+            this.SilverCoinsDisplay.TextChanged += new System.EventHandler(this.SilverCoinsDisplay_TextChanged);
+            this.SilverCoinsDisplay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SilverCoinsDisplay_KeyPress);
             // 
             // groupBox57
             // 
@@ -5451,6 +5543,133 @@
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
+            // EquippedArmorDisplay
+            // 
+            this.EquippedArmorDisplay.AutoSize = true;
+            this.EquippedArmorDisplay.Location = new System.Drawing.Point(19, 41);
+            this.EquippedArmorDisplay.Name = "EquippedArmorDisplay";
+            this.EquippedArmorDisplay.Size = new System.Drawing.Size(82, 13);
+            this.EquippedArmorDisplay.TabIndex = 0;
+            this.EquippedArmorDisplay.Text = "Equipped Armor";
+            // 
+            // WeaponSlotTwoNameDisplay
+            // 
+            this.WeaponSlotTwoNameDisplay.AutoSize = true;
+            this.WeaponSlotTwoNameDisplay.Location = new System.Drawing.Point(40, 81);
+            this.WeaponSlotTwoNameDisplay.Name = "WeaponSlotTwoNameDisplay";
+            this.WeaponSlotTwoNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotTwoNameDisplay.TabIndex = 0;
+            this.WeaponSlotTwoNameDisplay.Text = "Weapon 2 Name";
+            // 
+            // WeaponSlotOneNameDisplay
+            // 
+            this.WeaponSlotOneNameDisplay.AutoSize = true;
+            this.WeaponSlotOneNameDisplay.Location = new System.Drawing.Point(40, 43);
+            this.WeaponSlotOneNameDisplay.Name = "WeaponSlotOneNameDisplay";
+            this.WeaponSlotOneNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotOneNameDisplay.TabIndex = 1;
+            this.WeaponSlotOneNameDisplay.Text = "Weapon 1 Name";
+            // 
+            // WeaponSlotThreeNameDisplay
+            // 
+            this.WeaponSlotThreeNameDisplay.AutoSize = true;
+            this.WeaponSlotThreeNameDisplay.Location = new System.Drawing.Point(40, 123);
+            this.WeaponSlotThreeNameDisplay.Name = "WeaponSlotThreeNameDisplay";
+            this.WeaponSlotThreeNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotThreeNameDisplay.TabIndex = 2;
+            this.WeaponSlotThreeNameDisplay.Text = "Weapon 3 Name";
+            // 
+            // WeaponSlotOneATKBonusDisplay
+            // 
+            this.WeaponSlotOneATKBonusDisplay.AutoSize = true;
+            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(196, 43);
+            this.WeaponSlotOneATKBonusDisplay.Name = "WeaponSlotOneATKBonusDisplay";
+            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotOneATKBonusDisplay.TabIndex = 3;
+            this.WeaponSlotOneATKBonusDisplay.Text = "ATK Bonus 1";
+            // 
+            // WeaponSlotThreeATKBonusDisplay
+            // 
+            this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
+            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(196, 123);
+            this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
+            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotThreeATKBonusDisplay.TabIndex = 4;
+            this.WeaponSlotThreeATKBonusDisplay.Text = "ATK Bonus 3";
+            // 
+            // WeaponSlotTwoATKBonusDisplay
+            // 
+            this.WeaponSlotTwoATKBonusDisplay.AutoSize = true;
+            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(196, 81);
+            this.WeaponSlotTwoATKBonusDisplay.Name = "WeaponSlotTwoATKBonusDisplay";
+            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotTwoATKBonusDisplay.TabIndex = 5;
+            this.WeaponSlotTwoATKBonusDisplay.Text = "ATK Bonus 2";
+            // 
+            // WeaponSlotOneDamageDisplay
+            // 
+            this.WeaponSlotOneDamageDisplay.AutoSize = true;
+            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(357, 43);
+            this.WeaponSlotOneDamageDisplay.Name = "WeaponSlotOneDamageDisplay";
+            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotOneDamageDisplay.TabIndex = 6;
+            this.WeaponSlotOneDamageDisplay.Text = "Damage 1";
+            // 
+            // WeaponSlotThreeDamageDisplay
+            // 
+            this.WeaponSlotThreeDamageDisplay.AutoSize = true;
+            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(357, 123);
+            this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
+            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotThreeDamageDisplay.TabIndex = 7;
+            this.WeaponSlotThreeDamageDisplay.Text = "Damage 3";
+            // 
+            // WeaponSlotTwoDamageDisplay
+            // 
+            this.WeaponSlotTwoDamageDisplay.AutoSize = true;
+            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(357, 84);
+            this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
+            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotTwoDamageDisplay.TabIndex = 8;
+            this.WeaponSlotTwoDamageDisplay.Text = "Damage 2";
+            // 
+            // WeaponSlotOneDamageTypeDisplay
+            // 
+            this.WeaponSlotOneDamageTypeDisplay.AutoSize = true;
+            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(495, 42);
+            this.WeaponSlotOneDamageTypeDisplay.Name = "WeaponSlotOneDamageTypeDisplay";
+            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotOneDamageTypeDisplay.TabIndex = 9;
+            this.WeaponSlotOneDamageTypeDisplay.Text = "Damage Type 1";
+            // 
+            // WeaponSlotThreeDamageTypeDisplay
+            // 
+            this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
+            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(495, 123);
+            this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
+            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotThreeDamageTypeDisplay.TabIndex = 10;
+            this.WeaponSlotThreeDamageTypeDisplay.Text = "Damage Type 3";
+            // 
+            // WeaponSlotTwoDamageTypeDisplay
+            // 
+            this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
+            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(495, 81);
+            this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
+            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotTwoDamageTypeDisplay.TabIndex = 11;
+            this.WeaponSlotTwoDamageTypeDisplay.Text = "Damage Type 2";
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Location = new System.Drawing.Point(126, 42);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(103, 17);
+            this.checkBox7.TabIndex = 1;
+            this.checkBox7.Text = "Shield Equipped";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
             // addToInventoryFormBindingSource
             // 
             this.addToInventoryFormBindingSource.DataSource = typeof(CharacterSheet.AddToInventoryForm);
@@ -5544,6 +5763,8 @@
             this.groupBox21.PerformLayout();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
+            this.groupBox22.ResumeLayout(false);
+            this.groupBox22.PerformLayout();
             this.groupBox24.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
@@ -5560,8 +5781,11 @@
             this.groupBox33.ResumeLayout(false);
             this.groupBox34.ResumeLayout(false);
             this.groupBox35.ResumeLayout(false);
+            this.groupBox36.ResumeLayout(false);
+            this.groupBox36.PerformLayout();
             this.groupBox37.ResumeLayout(false);
             this.groupBox279.ResumeLayout(false);
+            this.groupBox279.PerformLayout();
             this.groupBox280.ResumeLayout(false);
             this.groupBox281.ResumeLayout(false);
             this.groupBox283.ResumeLayout(false);
@@ -5594,6 +5818,7 @@
             this.groupBox323.ResumeLayout(false);
             this.groupBox324.ResumeLayout(false);
             this.groupBox231.ResumeLayout(false);
+            this.groupBox231.PerformLayout();
             this.groupBox232.ResumeLayout(false);
             this.groupBox233.ResumeLayout(false);
             this.groupBox235.ResumeLayout(false);
@@ -5626,6 +5851,7 @@
             this.groupBox275.ResumeLayout(false);
             this.groupBox276.ResumeLayout(false);
             this.groupBox135.ResumeLayout(false);
+            this.groupBox135.PerformLayout();
             this.groupBox136.ResumeLayout(false);
             this.groupBox137.ResumeLayout(false);
             this.groupBox139.ResumeLayout(false);
@@ -5658,6 +5884,7 @@
             this.groupBox179.ResumeLayout(false);
             this.groupBox180.ResumeLayout(false);
             this.groupBox39.ResumeLayout(false);
+            this.groupBox39.PerformLayout();
             this.groupBox40.ResumeLayout(false);
             this.groupBox41.ResumeLayout(false);
             this.groupBox43.ResumeLayout(false);
@@ -5690,6 +5917,7 @@
             this.groupBox131.ResumeLayout(false);
             this.groupBox132.ResumeLayout(false);
             this.groupBox45.ResumeLayout(false);
+            this.groupBox45.PerformLayout();
             this.groupBox57.ResumeLayout(false);
             this.groupBox58.ResumeLayout(false);
             this.groupBox60.ResumeLayout(false);
@@ -5827,7 +6055,6 @@
         private System.Windows.Forms.CheckBox JackOfAllTradesCheck;
         private System.Windows.Forms.Button SaveCharacterButton;
         private System.Windows.Forms.Button EditInventoryButton;
-        private System.Windows.Forms.Button UpdateInvButton;
         private System.Windows.Forms.CheckBox StrengthSaveProficiencyToggle;
         private System.Windows.Forms.CheckBox CharismaSaveProficiencyToggle;
         private System.Windows.Forms.CheckBox WisdomSaveProficiencyToggle;
@@ -6124,5 +6351,24 @@
         private System.Windows.Forms.TextBox ConstitutionAttributeDisplay;
         private System.Windows.Forms.TextBox MaxHealthDisplay;
         private System.Windows.Forms.TextBox SpeedDisplay;
+        private System.Windows.Forms.TextBox PlatinumCoinsDisplay;
+        private System.Windows.Forms.TextBox GoldCoinsDisplay;
+        private System.Windows.Forms.TextBox ElectrumCoinsDisplay;
+        private System.Windows.Forms.TextBox CopperCoinsDisplay;
+        private System.Windows.Forms.TextBox SilverCoinsDisplay;
+        private System.Windows.Forms.Label EquippedArmorDisplay;
+        private System.Windows.Forms.Label WeaponSlotTwoDamageTypeDisplay;
+        private System.Windows.Forms.Label WeaponSlotThreeDamageTypeDisplay;
+        private System.Windows.Forms.Label WeaponSlotOneDamageTypeDisplay;
+        private System.Windows.Forms.Label WeaponSlotTwoDamageDisplay;
+        private System.Windows.Forms.Label WeaponSlotThreeDamageDisplay;
+        private System.Windows.Forms.Label WeaponSlotOneDamageDisplay;
+        private System.Windows.Forms.Label WeaponSlotTwoATKBonusDisplay;
+        private System.Windows.Forms.Label WeaponSlotThreeATKBonusDisplay;
+        private System.Windows.Forms.Label WeaponSlotOneATKBonusDisplay;
+        private System.Windows.Forms.Label WeaponSlotThreeNameDisplay;
+        private System.Windows.Forms.Label WeaponSlotOneNameDisplay;
+        private System.Windows.Forms.Label WeaponSlotTwoNameDisplay;
+        private System.Windows.Forms.CheckBox checkBox7;
     }
 }

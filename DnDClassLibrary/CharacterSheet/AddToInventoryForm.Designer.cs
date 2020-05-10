@@ -87,11 +87,13 @@
             this.label21 = new System.Windows.Forms.Label();
             this.CurrentWeightLabel = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.MaxWeightLabel = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
+            this.EncumberStatus = new System.Windows.Forms.Label();
+            this.EncumberStatusLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -244,7 +246,6 @@
             this.ArmorEquippedCheck.TabIndex = 11;
             this.ArmorEquippedCheck.Text = "Equip Item?";
             this.ArmorEquippedCheck.UseVisualStyleBackColor = true;
-            this.ArmorEquippedCheck.CheckedChanged += new System.EventHandler(this.ArmorEquippedCheck_CheckedChanged);
             // 
             // label10
             // 
@@ -385,7 +386,6 @@
             this.WeaponEquippedCheck.TabIndex = 18;
             this.WeaponEquippedCheck.Text = "Equip Item?";
             this.WeaponEquippedCheck.UseVisualStyleBackColor = true;
-            this.WeaponEquippedCheck.CheckedChanged += new System.EventHandler(this.WeaponEquippedCheck_CheckedChanged);
             // 
             // label20
             // 
@@ -671,9 +671,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(585, 408);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(71, 13);
+            this.label21.Size = new System.Drawing.Size(81, 13);
             this.label21.TabIndex = 8;
-            this.label21.Text = "Total Weight:";
+            this.label21.Text = "Current Weight:";
             // 
             // CurrentWeightLabel
             // 
@@ -693,14 +693,14 @@
             this.label22.TabIndex = 10;
             this.label22.Text = "Max Weight:";
             // 
-            // label23
+            // MaxWeightLabel
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(662, 423);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(13, 13);
-            this.label23.TabIndex = 11;
-            this.label23.Text = "0";
+            this.MaxWeightLabel.AutoSize = true;
+            this.MaxWeightLabel.Location = new System.Drawing.Point(662, 423);
+            this.MaxWeightLabel.Name = "MaxWeightLabel";
+            this.MaxWeightLabel.Size = new System.Drawing.Size(13, 13);
+            this.MaxWeightLabel.TabIndex = 11;
+            this.MaxWeightLabel.Text = "0";
             // 
             // label24
             // 
@@ -738,16 +738,36 @@
             this.label27.TabIndex = 34;
             this.label27.Text = "Dmg/AC";
             // 
+            // EncumberStatus
+            // 
+            this.EncumberStatus.AutoSize = true;
+            this.EncumberStatus.Location = new System.Drawing.Point(586, 437);
+            this.EncumberStatus.Name = "EncumberStatus";
+            this.EncumberStatus.Size = new System.Drawing.Size(40, 13);
+            this.EncumberStatus.TabIndex = 35;
+            this.EncumberStatus.Text = "Status:";
+            // 
+            // EncumberStatusLabel
+            // 
+            this.EncumberStatusLabel.AutoSize = true;
+            this.EncumberStatusLabel.Location = new System.Drawing.Point(623, 438);
+            this.EncumberStatusLabel.Name = "EncumberStatusLabel";
+            this.EncumberStatusLabel.Size = new System.Drawing.Size(87, 13);
+            this.EncumberStatusLabel.TabIndex = 36;
+            this.EncumberStatusLabel.Text = "Not Encumbered";
+            // 
             // AddToInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.EncumberStatusLabel);
+            this.Controls.Add(this.EncumberStatus);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.label23);
+            this.Controls.Add(this.MaxWeightLabel);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.CurrentWeightLabel);
             this.Controls.Add(this.label21);
@@ -834,10 +854,12 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label CurrentWeightLabel;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label MaxWeightLabel;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label EncumberStatus;
+        private System.Windows.Forms.Label EncumberStatusLabel;
     }
 }

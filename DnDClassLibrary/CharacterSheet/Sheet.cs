@@ -17,6 +17,8 @@ namespace CharacterSheet
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
+        EquippedItems myEquippedItems = new EquippedItems();
+        Item myItem = new Item();
         List<Item> myInventoryList = new List<Item>();
         String ItemDetails = "{0,-10}{1,-20}";
         String WeaponDetails = "{0,-10}{1,-20}";
@@ -44,6 +46,8 @@ namespace CharacterSheet
             LoadCharacterInfo();
             LoadAttributes();
             LoadSkills();
+            LoadEquippedItems();
+            LoadInventory();
         }
         #endregion
 
@@ -58,7 +62,7 @@ namespace CharacterSheet
 
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList);
+            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList, myAttributes, myEquippedItems);
             addToInventory.Show();
         }
 
@@ -101,11 +105,6 @@ namespace CharacterSheet
                     listBox.Items.Add(weapon.ItemID + " " + weapon.ItemName);
                 }
             }
-        }
-
-        private void UpdateInvButton_Click(object sender, EventArgs e) // ændres
-        {
-            RunInvList();
         }
         #endregion
 
@@ -189,6 +188,7 @@ namespace CharacterSheet
                 LoadAttributes();
                 LoadCharacterInfo();
                 LoadSkills();
+                LoadEquippedItems();
             }
         }
         #endregion
@@ -423,6 +423,70 @@ namespace CharacterSheet
                 MaxHealthDisplay.Text = "";
             }
         }
+        private void CopperCoinsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(CopperCoinsDisplay.Text);
+            if (OutOfReach == false)
+            {
+                myItem.Copper = Convert.ToInt32(CopperCoinsDisplay.Text);
+            }
+            else
+            {
+                myItem.Copper = myItem.Copper;
+            }
+        }
+
+        private void SilverCoinsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(SilverCoinsDisplay.Text);
+            if (OutOfReach == false)
+            {
+                myItem.Silver = Convert.ToInt32(SilverCoinsDisplay.Text);
+            }
+            else
+            {
+                myItem.Silver = myItem.Silver;
+            }
+        }
+
+        private void ElectrumCoinsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(ElectrumCoinsDisplay.Text);
+            if (OutOfReach == false)
+            {
+                myItem.Electrum = Convert.ToInt32(ElectrumCoinsDisplay.Text);
+            }
+            else
+            {
+                myItem.Electrum = myItem.Electrum;
+            }
+        }
+
+        private void GoldCoinsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(GoldCoinsDisplay.Text);
+            if (OutOfReach == false)
+            {
+                myItem.Gold = Convert.ToInt32(GoldCoinsDisplay.Text);
+            }
+            else
+            {
+                myItem.Gold = myItem.Gold;
+            }
+        }
+
+        private void PlatinumCoinsDisplay_TextChanged(object sender, EventArgs e)
+        {
+            bool OutOfReach = string.IsNullOrEmpty(PlatinumCoinsDisplay.Text);
+            if (OutOfReach == false)
+            {
+                myItem.Platinum = Convert.ToInt32(PlatinumCoinsDisplay.Text);
+            }
+            else
+            {
+                myItem.Gold = myItem.Platinum;
+            }
+        }
         #endregion
 
         #region SKILLPROFICIENCYTOGGLE
@@ -603,6 +667,31 @@ namespace CharacterSheet
         {
             OnlyTakeNumbers(e);
         }
+
+        private void CopperCoinsDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void SilverCoinsDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void ElectrumCoinsDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void GoldCoinsDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void PlatinumCoinsDisplay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
         #endregion
 
         #region METHODS
@@ -639,7 +728,7 @@ namespace CharacterSheet
             }
         }
 
-        public void RunInvList()
+        public void RunInvList()// fjernes
         {
             listBox.Items.Clear();
             foreach (var Item in myInventoryList)
@@ -662,7 +751,7 @@ namespace CharacterSheet
                 }
             }
 
-        } // fjernes
+        } 
 
         void LoadAttributes()
         {
@@ -762,6 +851,7 @@ namespace CharacterSheet
             PassivePerceptionDisplay.Text = Convert.ToString(myAttributes.Modifiers[4] + 10);
             InitiativeDisplay.Text = Convert.ToString(myAttributes.Modifiers[1]);
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
+
         }
 
         void OnlyTakeNumbers(KeyPressEventArgs e)
@@ -824,6 +914,35 @@ namespace CharacterSheet
             BackgroundDisplayTextBox.Enabled = false;
         }
 
+        void LoadEquippedItems()
+        {
+            EquippedArmorDisplay.Text = myEquippedItems.ArmorSlotChest;
+            ArmorClassDisplay.Text = Convert.ToString(myEquippedItems.ACBonusCalc());
+
+            WeaponSlotOneNameDisplay.Text = myEquippedItems.WeaponOneName;
+            WeaponSlotOneATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
+            WeaponSlotOneDamageDisplay.Text = myEquippedItems.WeaponOneDamage;
+            WeaponSlotOneDamageTypeDisplay.Text = myEquippedItems.WeaponOneDamageType;
+
+            WeaponSlotTwoNameDisplay.Text = myEquippedItems.WeaponTwoName;
+            WeaponSlotTwoATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
+            WeaponSlotTwoDamageDisplay.Text = myEquippedItems.WeaponTwoDamage;
+            WeaponSlotTwoDamageTypeDisplay.Text = myEquippedItems.WeaponTwoDamageType;
+
+            WeaponSlotThreeNameDisplay.Text = myEquippedItems.WeaponOneName;
+            WeaponSlotThreeATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
+            WeaponSlotThreeDamageDisplay.Text = myEquippedItems.WeaponOneDamage;
+            WeaponSlotThreeDamageTypeDisplay.Text = myEquippedItems.WeaponOneDamageType;
+
+        }
+        void LoadInventory()
+        {
+            CopperCoinsDisplay.Text = Convert.ToString(myItem.Copper);
+            SilverCoinsDisplay.Text = Convert.ToString(myItem.Silver);
+            ElectrumCoinsDisplay.Text = Convert.ToString(myItem.Electrum);
+            GoldCoinsDisplay.Text = Convert.ToString(myItem.Gold);
+            PlatinumCoinsDisplay.Text = Convert.ToString(myItem.Platinum);
+        }
         #endregion
     }
 }

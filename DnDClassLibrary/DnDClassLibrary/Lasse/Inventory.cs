@@ -6,18 +6,18 @@ namespace DnDClassLibrary
 {
     public class Inventory
     {
-        int TempStrength = 5; // temporary
-        int TotalWeight;
-        string Encumbered = "You are not Encumbered";
-        public string DataTypeInv;
+        //int TempStrength = 5; // temporary
+        //int TotalWeight;
+        //string Encumbered = "You are not Encumbered";
+        //public string DataTypeInv;
 
-        List<Item> InventoryList = new List<Item>();
-        UtillityMethods Utillity = new UtillityMethods();
+        //List<Item> InventoryList = new List<Item>();
+        //UtillityMethods Utillity = new UtillityMethods();
 
-        public List<Item> inventoryList
-        {
-            get { return InventoryList; }
-        }
+        //public List<Item> inventoryList
+        //{
+        //    get { return InventoryList; }
+        //}
 
 
         //public void RunInventory()
@@ -209,54 +209,53 @@ namespace DnDClassLibrary
 
     }
 }
-//    string EncumberCheck() // tjekker om man har for meget vægt
-//    {
+//string EncumberCheck() // tjekker om man har for meget vægt
+//{
 
-//        if (TotalWeight >= TempStrength * 5)
-//        {
-//            Encumbered = "you are heavily Encumbered";
-//        }
-//        else if (TotalWeight >= TempStrength * 2)
-//        {
-//            Encumbered = "you are slightly encumbered";
-//        }
-//        else
-//        {
-//            Encumbered = "you are not encumbered";
-//        }
+//    if (TotalWeight >= TempStrength * 5)
+//    {
+//        Encumbered = "you are heavily Encumbered";
+//    }
+//    else if (TotalWeight >= TempStrength * 2)
+//    {
+//        Encumbered = "you are slightly encumbered";
+//    }
+//    else
+//    {
+//        Encumbered = "you are not encumbered";
+//    }
 
-//        return Encumbered;
-//    }
-//    void checkWeight() // temporary checker // slettes senere
-//    {
-//        Console.WriteLine(TotalWeight);
-//        Console.WriteLine(Encumbered);
-//    }
-//    int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
-//    {
-//        TotalWeight = 0;
-//        for (int i = 0; i < InventoryList.Count; i++)
-//        {
-//            Item Item = InventoryList[i];
-//            TotalWeight += Item.WeightPerItem * Item.AmountHeld;
-//        }
-//        return TotalWeight;
-//    }
-//    public bool Test() // tester Equuipped items
-//    {
-//        EquippedItems hello = new EquippedItems(false);
-//        hello.shieldEquipped = true;
-//        hello.ACCalc();
-//        hello.test2();
-//        hello.shieldEquipped = false;
-//        hello.ACCalc();
-//        hello.test2();
-//        hello.shieldEquipped = true;
-//        hello.ACCalc();
-//        hello.test2();
-//        Console.ReadKey();
-//        return hello.shieldEquipped;
-
-//    }
+//    return Encumbered;
 //}
+//void checkWeight() // temporary checker // slettes senere
+//{
+//    Console.WriteLine(TotalWeight);
+//    Console.WriteLine(Encumbered);
 //}
+//int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
+//{
+//    TotalWeight = 0;
+//    for (int i = 0; i < InventoryList.Count; i++)
+//    {
+//        Item Item = InventoryList[i];
+//        TotalWeight += Item.WeightPerItem * Item.AmountHeld;
+//    }
+//    return TotalWeight;
+//}
+//public bool Test() // tester Equuipped items
+//{
+//    EquippedItems hello = new EquippedItems(false);
+//    hello.shieldEquipped = true;
+//    hello.ACCalc();
+//    hello.test2();
+//    hello.shieldEquipped = false;
+//    hello.ACCalc();
+//    hello.test2();
+//    hello.shieldEquipped = true;
+//    hello.ACCalc();
+//    hello.test2();
+//    Console.ReadKey();
+//    return hello.shieldEquipped;
+
+//}
+
