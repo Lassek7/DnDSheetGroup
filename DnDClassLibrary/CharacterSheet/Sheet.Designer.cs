@@ -136,28 +136,13 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.RemoveSlotThree = new System.Windows.Forms.Button();
-            this.RemoveSlotTwo = new System.Windows.Forms.Button();
             this.RemoveSlotOne = new System.Windows.Forms.Button();
-            this.WeaponSlotTwoProficiency = new System.Windows.Forms.CheckBox();
-            this.WeaponSlotThreeProficiency = new System.Windows.Forms.CheckBox();
             this.WeaponSlotOneProficiency = new System.Windows.Forms.CheckBox();
-            this.WeaponSlotTwoDamageTypeDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotThreeDamageTypeDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotOneDamageTypeDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotTwoDamageDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotThreeDamageDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotOneDamageDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotTwoATKBonusDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotThreeATKBonusDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotOneATKBonusDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotThreeNameDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotOneNameDisplay = new System.Windows.Forms.Label();
-            this.WeaponSlotTwoNameDisplay = new System.Windows.Forms.Label();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox = new System.Windows.Forms.ListBox();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
@@ -444,7 +429,6 @@
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -458,8 +442,34 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.groupBox183 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.WeaponSlotOneNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoDamageTypeDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoATKBonusDisplay = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoDamageDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotTwoProficiency = new System.Windows.Forms.CheckBox();
+            this.RemoveSlotTwo = new System.Windows.Forms.Button();
+            this.WeaponSlotThreeNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeDamageTypeDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeATKBonusDisplay = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeDamageDisplay = new System.Windows.Forms.Label();
+            this.WeaponSlotThreeProficiency = new System.Windows.Forms.CheckBox();
+            this.RemoveSlotThree = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.listView3 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -483,7 +493,6 @@
             this.groupBox21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox22.SuspendLayout();
-            this.groupBox23.SuspendLayout();
             this.groupBox24.SuspendLayout();
             this.groupBox25.SuspendLayout();
             this.groupBox26.SuspendLayout();
@@ -661,7 +670,9 @@
             this.groupBox54.SuspendLayout();
             this.groupBox55.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).BeginInit();
-            this.groupBox183.SuspendLayout();
+            this.WeaponSlotOneNameDisplay.SuspendLayout();
+            this.WeaponSlotTwoNameDisplay.SuspendLayout();
+            this.WeaponSlotThreeNameDisplay.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -1893,210 +1904,71 @@
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.RemoveSlotThree);
-            this.groupBox22.Controls.Add(this.RemoveSlotTwo);
-            this.groupBox22.Controls.Add(this.RemoveSlotOne);
-            this.groupBox22.Controls.Add(this.WeaponSlotTwoProficiency);
-            this.groupBox22.Controls.Add(this.WeaponSlotThreeProficiency);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneProficiency);
-            this.groupBox22.Controls.Add(this.WeaponSlotTwoDamageTypeDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotThreeDamageTypeDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneDamageTypeDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotTwoDamageDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotThreeDamageDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneDamageDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotTwoATKBonusDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotThreeATKBonusDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneATKBonusDisplay);
             this.groupBox22.Controls.Add(this.WeaponSlotThreeNameDisplay);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneNameDisplay);
             this.groupBox22.Controls.Add(this.WeaponSlotTwoNameDisplay);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneNameDisplay);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox22.Location = new System.Drawing.Point(872, 300);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(535, 155);
+            this.groupBox22.Size = new System.Drawing.Size(535, 208);
             this.groupBox22.TabIndex = 50;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Attacks";
             // 
-            // RemoveSlotThree
-            // 
-            this.RemoveSlotThree.Location = new System.Drawing.Point(477, 98);
-            this.RemoveSlotThree.Name = "RemoveSlotThree";
-            this.RemoveSlotThree.Size = new System.Drawing.Size(52, 26);
-            this.RemoveSlotThree.TabIndex = 17;
-            this.RemoveSlotThree.Text = "Del";
-            this.RemoveSlotThree.UseVisualStyleBackColor = true;
-            this.RemoveSlotThree.Click += new System.EventHandler(this.RemoveSlotThree_Click);
-            // 
-            // RemoveSlotTwo
-            // 
-            this.RemoveSlotTwo.Location = new System.Drawing.Point(477, 64);
-            this.RemoveSlotTwo.Name = "RemoveSlotTwo";
-            this.RemoveSlotTwo.Size = new System.Drawing.Size(52, 27);
-            this.RemoveSlotTwo.TabIndex = 16;
-            this.RemoveSlotTwo.Text = "Del";
-            this.RemoveSlotTwo.UseVisualStyleBackColor = true;
-            this.RemoveSlotTwo.Click += new System.EventHandler(this.RemoveSlotTwo_Click);
-            // 
             // RemoveSlotOne
             // 
-            this.RemoveSlotOne.Location = new System.Drawing.Point(477, 31);
+            this.RemoveSlotOne.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RemoveSlotOne.Location = new System.Drawing.Point(468, 17);
             this.RemoveSlotOne.Name = "RemoveSlotOne";
-            this.RemoveSlotOne.Size = new System.Drawing.Size(52, 27);
+            this.RemoveSlotOne.Size = new System.Drawing.Size(59, 27);
             this.RemoveSlotOne.TabIndex = 15;
-            this.RemoveSlotOne.Text = "Del";
+            this.RemoveSlotOne.Text = "Delete";
             this.RemoveSlotOne.UseVisualStyleBackColor = true;
             this.RemoveSlotOne.Click += new System.EventHandler(this.RemoveSlotOne_Click);
-            // 
-            // WeaponSlotTwoProficiency
-            // 
-            this.WeaponSlotTwoProficiency.AutoSize = true;
-            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(6, 65);
-            this.WeaponSlotTwoProficiency.Name = "WeaponSlotTwoProficiency";
-            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(63, 20);
-            this.WeaponSlotTwoProficiency.TabIndex = 14;
-            this.WeaponSlotTwoProficiency.Text = "prof 2";
-            this.WeaponSlotTwoProficiency.UseVisualStyleBackColor = true;
-            this.WeaponSlotTwoProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotTwoProficiency_CheckedChanged);
-            // 
-            // WeaponSlotThreeProficiency
-            // 
-            this.WeaponSlotThreeProficiency.AutoSize = true;
-            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(6, 98);
-            this.WeaponSlotThreeProficiency.Name = "WeaponSlotThreeProficiency";
-            this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(63, 20);
-            this.WeaponSlotThreeProficiency.TabIndex = 13;
-            this.WeaponSlotThreeProficiency.Text = "prof 3";
-            this.WeaponSlotThreeProficiency.UseVisualStyleBackColor = true;
-            this.WeaponSlotThreeProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotThreeProficiency_CheckedChanged);
             // 
             // WeaponSlotOneProficiency
             // 
             this.WeaponSlotOneProficiency.AutoSize = true;
-            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(6, 33);
+            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(431, 26);
             this.WeaponSlotOneProficiency.Name = "WeaponSlotOneProficiency";
-            this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(53, 20);
+            this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(18, 17);
             this.WeaponSlotOneProficiency.TabIndex = 12;
-            this.WeaponSlotOneProficiency.Text = "prof";
             this.WeaponSlotOneProficiency.UseVisualStyleBackColor = true;
             this.WeaponSlotOneProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotOneProficiency_CheckedChanged);
-            // 
-            // WeaponSlotTwoDamageTypeDisplay
-            // 
-            this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(365, 69);
-            this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
-            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
-            this.WeaponSlotTwoDamageTypeDisplay.TabIndex = 11;
-            this.WeaponSlotTwoDamageTypeDisplay.Text = "Damage Type 2";
-            // 
-            // WeaponSlotThreeDamageTypeDisplay
-            // 
-            this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(365, 104);
-            this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
-            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
-            this.WeaponSlotThreeDamageTypeDisplay.TabIndex = 10;
-            this.WeaponSlotThreeDamageTypeDisplay.Text = "Damage Type 3";
             // 
             // WeaponSlotOneDamageTypeDisplay
             // 
             this.WeaponSlotOneDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(365, 35);
+            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(295, 26);
             this.WeaponSlotOneDamageTypeDisplay.Name = "WeaponSlotOneDamageTypeDisplay";
-            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
+            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(15, 16);
             this.WeaponSlotOneDamageTypeDisplay.TabIndex = 9;
-            this.WeaponSlotOneDamageTypeDisplay.Text = "Damage Type 1";
-            // 
-            // WeaponSlotTwoDamageDisplay
-            // 
-            this.WeaponSlotTwoDamageDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(288, 67);
-            this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
-            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(71, 16);
-            this.WeaponSlotTwoDamageDisplay.TabIndex = 8;
-            this.WeaponSlotTwoDamageDisplay.Text = "Damage 2";
-            // 
-            // WeaponSlotThreeDamageDisplay
-            // 
-            this.WeaponSlotThreeDamageDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(288, 104);
-            this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
-            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(71, 16);
-            this.WeaponSlotThreeDamageDisplay.TabIndex = 7;
-            this.WeaponSlotThreeDamageDisplay.Text = "Damage 3";
+            this.WeaponSlotOneDamageTypeDisplay.Text = "0";
             // 
             // WeaponSlotOneDamageDisplay
             // 
             this.WeaponSlotOneDamageDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(288, 35);
+            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(172, 26);
             this.WeaponSlotOneDamageDisplay.Name = "WeaponSlotOneDamageDisplay";
-            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(71, 16);
+            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(15, 16);
             this.WeaponSlotOneDamageDisplay.TabIndex = 6;
-            this.WeaponSlotOneDamageDisplay.Text = "Damage 1";
-            // 
-            // WeaponSlotTwoATKBonusDisplay
-            // 
-            this.WeaponSlotTwoATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(197, 67);
-            this.WeaponSlotTwoATKBonusDisplay.Name = "WeaponSlotTwoATKBonusDisplay";
-            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
-            this.WeaponSlotTwoATKBonusDisplay.TabIndex = 5;
-            this.WeaponSlotTwoATKBonusDisplay.Text = "ATK Bonus 2";
-            // 
-            // WeaponSlotThreeATKBonusDisplay
-            // 
-            this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(197, 104);
-            this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
-            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
-            this.WeaponSlotThreeATKBonusDisplay.TabIndex = 4;
-            this.WeaponSlotThreeATKBonusDisplay.Text = "ATK Bonus 3";
+            this.WeaponSlotOneDamageDisplay.Text = "0";
             // 
             // WeaponSlotOneATKBonusDisplay
             // 
             this.WeaponSlotOneATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(198, 35);
+            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(83, 26);
             this.WeaponSlotOneATKBonusDisplay.Name = "WeaponSlotOneATKBonusDisplay";
-            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
+            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(15, 16);
             this.WeaponSlotOneATKBonusDisplay.TabIndex = 3;
-            this.WeaponSlotOneATKBonusDisplay.Text = "ATK Bonus 1";
-            // 
-            // WeaponSlotThreeNameDisplay
-            // 
-            this.WeaponSlotThreeNameDisplay.AutoSize = true;
-            this.WeaponSlotThreeNameDisplay.Location = new System.Drawing.Point(75, 102);
-            this.WeaponSlotThreeNameDisplay.Name = "WeaponSlotThreeNameDisplay";
-            this.WeaponSlotThreeNameDisplay.Size = new System.Drawing.Size(110, 16);
-            this.WeaponSlotThreeNameDisplay.TabIndex = 2;
-            this.WeaponSlotThreeNameDisplay.Text = "Weapon 3 Name";
-            // 
-            // WeaponSlotOneNameDisplay
-            // 
-            this.WeaponSlotOneNameDisplay.AutoSize = true;
-            this.WeaponSlotOneNameDisplay.Location = new System.Drawing.Point(75, 35);
-            this.WeaponSlotOneNameDisplay.Name = "WeaponSlotOneNameDisplay";
-            this.WeaponSlotOneNameDisplay.Size = new System.Drawing.Size(110, 16);
-            this.WeaponSlotOneNameDisplay.TabIndex = 1;
-            this.WeaponSlotOneNameDisplay.Text = "Weapon 1 Name";
-            // 
-            // WeaponSlotTwoNameDisplay
-            // 
-            this.WeaponSlotTwoNameDisplay.AutoSize = true;
-            this.WeaponSlotTwoNameDisplay.Location = new System.Drawing.Point(75, 67);
-            this.WeaponSlotTwoNameDisplay.Name = "WeaponSlotTwoNameDisplay";
-            this.WeaponSlotTwoNameDisplay.Size = new System.Drawing.Size(110, 16);
-            this.WeaponSlotTwoNameDisplay.TabIndex = 0;
-            this.WeaponSlotTwoNameDisplay.Text = "Weapon 2 Name";
+            this.WeaponSlotOneATKBonusDisplay.Text = "0";
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.groupBox183);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox23.Location = new System.Drawing.Point(872, 477);
+            this.groupBox23.Location = new System.Drawing.Point(872, 521);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(535, 476);
+            this.groupBox23.Size = new System.Drawing.Size(535, 432);
             this.groupBox23.TabIndex = 51;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Spells";
@@ -2105,7 +1977,7 @@
             // 
             this.groupBox24.Controls.Add(this.button4);
             this.groupBox24.Controls.Add(this.button6);
-            this.groupBox24.Controls.Add(this.listBox1);
+            this.groupBox24.Controls.Add(this.listView2);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox24.Location = new System.Drawing.Point(488, 619);
             this.groupBox24.Name = "groupBox24";
@@ -2114,31 +1986,11 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Class Features";
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(6, 16);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(343, 139);
-            this.listBox1.TabIndex = 72;
-            // 
-            // listBox
-            // 
-            this.listBox.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox.FormattingEnabled = true;
-            this.listBox.ItemHeight = 15;
-            this.listBox.Location = new System.Drawing.Point(8, 41);
-            this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(257, 199);
-            this.listBox.TabIndex = 1;
-            // 
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.button7);
             this.groupBox25.Controls.Add(this.button8);
-            this.groupBox25.Controls.Add(this.listBox2);
+            this.groupBox25.Controls.Add(this.listView3);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox25.Location = new System.Drawing.Point(488, 807);
             this.groupBox25.Name = "groupBox25";
@@ -2502,8 +2354,8 @@
             this.groupBox37.Controls.Add(this.groupBox135);
             this.groupBox37.Controls.Add(this.groupBox39);
             this.groupBox37.Controls.Add(this.groupBox45);
-            this.groupBox37.Controls.Add(this.listBox);
             this.groupBox37.Controls.Add(this.EditInventoryButton);
+            this.groupBox37.Controls.Add(this.listView1);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox37.Location = new System.Drawing.Point(118, 681);
             this.groupBox37.Name = "groupBox37";
@@ -5780,16 +5632,6 @@
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(7, 18);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(343, 109);
-            this.listBox2.TabIndex = 73;
-            // 
             // richTextBox1
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
@@ -5910,29 +5752,295 @@
             this.button8.Text = "Remove";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // groupBox183
+            // WeaponSlotOneNameDisplay
             // 
-            this.groupBox183.Controls.Add(this.textBox1);
-            this.groupBox183.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox183.Location = new System.Drawing.Point(146, 73);
-            this.groupBox183.Name = "groupBox183";
-            this.groupBox183.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox183.Size = new System.Drawing.Size(225, 75);
-            this.groupBox183.TabIndex = 71;
-            this.groupBox183.TabStop = false;
-            this.groupBox183.Text = "Experience Points";
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label12);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label9);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label11);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.WeaponSlotOneDamageTypeDisplay);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.WeaponSlotOneATKBonusDisplay);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label10);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.WeaponSlotOneDamageDisplay);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.WeaponSlotOneProficiency);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.RemoveSlotOne);
+            this.WeaponSlotOneNameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.WeaponSlotOneNameDisplay.Location = new System.Drawing.Point(3, 21);
+            this.WeaponSlotOneNameDisplay.Name = "WeaponSlotOneNameDisplay";
+            this.WeaponSlotOneNameDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.WeaponSlotOneNameDisplay.Size = new System.Drawing.Size(530, 47);
+            this.WeaponSlotOneNameDisplay.TabIndex = 71;
+            this.WeaponSlotOneNameDisplay.TabStop = false;
+            this.WeaponSlotOneNameDisplay.Text = "Weapon name 1";
             // 
-            // textBox1
+            // label9
             // 
-            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(97, 16);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "\"Experience Points\"";
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(3, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 16);
+            this.label9.TabIndex = 16;
+            this.label9.Text = "ATK Bonus:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(106, 26);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 16);
+            this.label10.TabIndex = 17;
+            this.label10.Text = "Damage:";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(193, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 16);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Damage Type:";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(351, 26);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(74, 16);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Proficency:";
+            // 
+            // WeaponSlotTwoNameDisplay
+            // 
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label13);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label14);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label20);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoDamageTypeDisplay);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoATKBonusDisplay);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label23);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoDamageDisplay);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoProficiency);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.RemoveSlotTwo);
+            this.WeaponSlotTwoNameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.WeaponSlotTwoNameDisplay.Location = new System.Drawing.Point(3, 86);
+            this.WeaponSlotTwoNameDisplay.Name = "WeaponSlotTwoNameDisplay";
+            this.WeaponSlotTwoNameDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.WeaponSlotTwoNameDisplay.Size = new System.Drawing.Size(530, 47);
+            this.WeaponSlotTwoNameDisplay.TabIndex = 72;
+            this.WeaponSlotTwoNameDisplay.TabStop = false;
+            this.WeaponSlotTwoNameDisplay.Text = "Weapon name 2";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(351, 26);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(74, 16);
+            this.label13.TabIndex = 72;
+            this.label13.Text = "Proficency:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(3, 26);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(78, 16);
+            this.label14.TabIndex = 16;
+            this.label14.Text = "ATK Bonus:";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(193, 26);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(99, 16);
+            this.label20.TabIndex = 17;
+            this.label20.Text = "Damage Type:";
+            // 
+            // WeaponSlotTwoDamageTypeDisplay
+            // 
+            this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
+            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(295, 26);
+            this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
+            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotTwoDamageTypeDisplay.TabIndex = 9;
+            this.WeaponSlotTwoDamageTypeDisplay.Text = "0";
+            // 
+            // WeaponSlotTwoATKBonusDisplay
+            // 
+            this.WeaponSlotTwoATKBonusDisplay.AutoSize = true;
+            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(83, 26);
+            this.WeaponSlotTwoATKBonusDisplay.Name = "WeaponSlotTwoATKBonusDisplay";
+            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotTwoATKBonusDisplay.TabIndex = 3;
+            this.WeaponSlotTwoATKBonusDisplay.Text = "0";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(106, 26);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(64, 16);
+            this.label23.TabIndex = 17;
+            this.label23.Text = "Damage:";
+            // 
+            // WeaponSlotTwoDamageDisplay
+            // 
+            this.WeaponSlotTwoDamageDisplay.AutoSize = true;
+            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(172, 26);
+            this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
+            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotTwoDamageDisplay.TabIndex = 6;
+            this.WeaponSlotTwoDamageDisplay.Text = "0";
+            // 
+            // WeaponSlotTwoProficiency
+            // 
+            this.WeaponSlotTwoProficiency.AutoSize = true;
+            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(431, 26);
+            this.WeaponSlotTwoProficiency.Name = "WeaponSlotTwoProficiency";
+            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(18, 17);
+            this.WeaponSlotTwoProficiency.TabIndex = 12;
+            this.WeaponSlotTwoProficiency.UseVisualStyleBackColor = true;
+            // 
+            // RemoveSlotTwo
+            // 
+            this.RemoveSlotTwo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RemoveSlotTwo.Location = new System.Drawing.Point(468, 17);
+            this.RemoveSlotTwo.Name = "RemoveSlotTwo";
+            this.RemoveSlotTwo.Size = new System.Drawing.Size(59, 27);
+            this.RemoveSlotTwo.TabIndex = 15;
+            this.RemoveSlotTwo.Text = "Delete";
+            this.RemoveSlotTwo.UseVisualStyleBackColor = true;
+            // 
+            // WeaponSlotThreeNameDisplay
+            // 
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label21);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label22);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label24);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeDamageTypeDisplay);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeATKBonusDisplay);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label27);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeDamageDisplay);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeProficiency);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.RemoveSlotThree);
+            this.WeaponSlotThreeNameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.WeaponSlotThreeNameDisplay.Location = new System.Drawing.Point(3, 149);
+            this.WeaponSlotThreeNameDisplay.Name = "WeaponSlotThreeNameDisplay";
+            this.WeaponSlotThreeNameDisplay.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.WeaponSlotThreeNameDisplay.Size = new System.Drawing.Size(530, 47);
+            this.WeaponSlotThreeNameDisplay.TabIndex = 73;
+            this.WeaponSlotThreeNameDisplay.TabStop = false;
+            this.WeaponSlotThreeNameDisplay.Text = "Weapon name 3";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(351, 26);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(74, 16);
+            this.label21.TabIndex = 72;
+            this.label21.Text = "Proficency:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(3, 26);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(78, 16);
+            this.label22.TabIndex = 16;
+            this.label22.Text = "ATK Bonus:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(193, 26);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(99, 16);
+            this.label24.TabIndex = 17;
+            this.label24.Text = "Damage Type:";
+            // 
+            // WeaponSlotThreeDamageTypeDisplay
+            // 
+            this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
+            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(295, 26);
+            this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
+            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotThreeDamageTypeDisplay.TabIndex = 9;
+            this.WeaponSlotThreeDamageTypeDisplay.Text = "0";
+            // 
+            // WeaponSlotThreeATKBonusDisplay
+            // 
+            this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
+            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(83, 26);
+            this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
+            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotThreeATKBonusDisplay.TabIndex = 3;
+            this.WeaponSlotThreeATKBonusDisplay.Text = "0";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(106, 26);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(64, 16);
+            this.label27.TabIndex = 17;
+            this.label27.Text = "Damage:";
+            // 
+            // WeaponSlotThreeDamageDisplay
+            // 
+            this.WeaponSlotThreeDamageDisplay.AutoSize = true;
+            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(172, 26);
+            this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
+            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(15, 16);
+            this.WeaponSlotThreeDamageDisplay.TabIndex = 6;
+            this.WeaponSlotThreeDamageDisplay.Text = "0";
+            // 
+            // WeaponSlotThreeProficiency
+            // 
+            this.WeaponSlotThreeProficiency.AutoSize = true;
+            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(431, 26);
+            this.WeaponSlotThreeProficiency.Name = "WeaponSlotThreeProficiency";
+            this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(18, 17);
+            this.WeaponSlotThreeProficiency.TabIndex = 12;
+            this.WeaponSlotThreeProficiency.UseVisualStyleBackColor = true;
+            // 
+            // RemoveSlotThree
+            // 
+            this.RemoveSlotThree.Dock = System.Windows.Forms.DockStyle.Right;
+            this.RemoveSlotThree.Location = new System.Drawing.Point(468, 17);
+            this.RemoveSlotThree.Name = "RemoveSlotThree";
+            this.RemoveSlotThree.Size = new System.Drawing.Size(59, 27);
+            this.RemoveSlotThree.TabIndex = 15;
+            this.RemoveSlotThree.Text = "Delete";
+            this.RemoveSlotThree.UseVisualStyleBackColor = true;
+            // 
+            // listView1
+            // 
+            this.listView1.BackColor = System.Drawing.SystemColors.Control;
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(8, 41);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(257, 200);
+            this.listView1.TabIndex = 0;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            this.listView2.BackColor = System.Drawing.SystemColors.Control;
+            this.listView2.HideSelection = false;
+            this.listView2.Location = new System.Drawing.Point(6, 16);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(343, 135);
+            this.listView2.TabIndex = 71;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView3
+            // 
+            this.listView3.BackColor = System.Drawing.SystemColors.Control;
+            this.listView3.HideSelection = false;
+            this.listView3.Location = new System.Drawing.Point(7, 17);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(343, 105);
+            this.listView3.TabIndex = 72;
+            this.listView3.UseCompatibleStateImageBehavior = false;
             // 
             // Sheet
             // 
@@ -6026,8 +6134,6 @@
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.groupBox22.ResumeLayout(false);
-            this.groupBox22.PerformLayout();
-            this.groupBox23.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
             this.groupBox25.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
@@ -6214,8 +6320,12 @@
             this.groupBox54.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).EndInit();
-            this.groupBox183.ResumeLayout(false);
-            this.groupBox183.PerformLayout();
+            this.WeaponSlotOneNameDisplay.ResumeLayout(false);
+            this.WeaponSlotOneNameDisplay.PerformLayout();
+            this.WeaponSlotTwoNameDisplay.ResumeLayout(false);
+            this.WeaponSlotTwoNameDisplay.PerformLayout();
+            this.WeaponSlotThreeNameDisplay.ResumeLayout(false);
+            this.WeaponSlotThreeNameDisplay.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6332,7 +6442,6 @@
         private System.Windows.Forms.CheckBox SleightOfHandProficiencyToggle;
         private System.Windows.Forms.CheckBox AcrobaticsProficiencyToggle;
         private System.Windows.Forms.CheckBox AthleticsProficiencyToggle;
-        private System.Windows.Forms.ListBox listBox;
         private System.Windows.Forms.BindingSource addToInventoryFormBindingSource;
         private System.Windows.Forms.CheckBox ArcanaProficiencyToggle;
         private System.Windows.Forms.CheckBox ReligionProficiencyToggle;
@@ -6350,7 +6459,6 @@
         private System.Windows.Forms.CheckBox DeceptionProficiencyToggle;
         private System.Windows.Forms.CheckBox IntimidationProficiencyToggle;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox5;
         private System.Windows.Forms.CheckBox checkBox6;
@@ -6623,26 +6731,12 @@
         private System.Windows.Forms.TextBox CopperCoinsDisplay;
         private System.Windows.Forms.TextBox SilverCoinsDisplay;
         private System.Windows.Forms.Label EquippedArmorDisplay;
-        private System.Windows.Forms.Label WeaponSlotTwoDamageTypeDisplay;
-        private System.Windows.Forms.Label WeaponSlotThreeDamageTypeDisplay;
         private System.Windows.Forms.Label WeaponSlotOneDamageTypeDisplay;
-        private System.Windows.Forms.Label WeaponSlotTwoDamageDisplay;
-        private System.Windows.Forms.Label WeaponSlotThreeDamageDisplay;
         private System.Windows.Forms.Label WeaponSlotOneDamageDisplay;
-        private System.Windows.Forms.Label WeaponSlotTwoATKBonusDisplay;
-        private System.Windows.Forms.Label WeaponSlotThreeATKBonusDisplay;
         private System.Windows.Forms.Label WeaponSlotOneATKBonusDisplay;
-        private System.Windows.Forms.Label WeaponSlotThreeNameDisplay;
-        private System.Windows.Forms.Label WeaponSlotOneNameDisplay;
-        private System.Windows.Forms.Label WeaponSlotTwoNameDisplay;
         private System.Windows.Forms.CheckBox ShieldEquippedCheck;
-        private System.Windows.Forms.Button RemoveSlotThree;
-        private System.Windows.Forms.Button RemoveSlotTwo;
         private System.Windows.Forms.Button RemoveSlotOne;
-        private System.Windows.Forms.CheckBox WeaponSlotTwoProficiency;
-        private System.Windows.Forms.CheckBox WeaponSlotThreeProficiency;
         private System.Windows.Forms.CheckBox WeaponSlotOneProficiency;
-        private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -6655,7 +6749,33 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.GroupBox groupBox183;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox WeaponSlotOneNameDisplay;
+        private System.Windows.Forms.GroupBox WeaponSlotThreeNameDisplay;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label WeaponSlotThreeDamageTypeDisplay;
+        private System.Windows.Forms.Label WeaponSlotThreeATKBonusDisplay;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label WeaponSlotThreeDamageDisplay;
+        private System.Windows.Forms.CheckBox WeaponSlotThreeProficiency;
+        private System.Windows.Forms.Button RemoveSlotThree;
+        private System.Windows.Forms.GroupBox WeaponSlotTwoNameDisplay;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label WeaponSlotTwoDamageTypeDisplay;
+        private System.Windows.Forms.Label WeaponSlotTwoATKBonusDisplay;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label WeaponSlotTwoDamageDisplay;
+        private System.Windows.Forms.CheckBox WeaponSlotTwoProficiency;
+        private System.Windows.Forms.Button RemoveSlotTwo;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView listView1;
     }
 }
