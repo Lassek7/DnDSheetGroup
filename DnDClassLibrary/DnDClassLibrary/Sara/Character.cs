@@ -23,6 +23,7 @@ namespace DnDClassLibrary
         int SuccessfullDeathSaves;
         int FailedDeathSaves;
         bool Inspiration;
+        int CurrentHealth;
         int Health;
         int TempHealth;
         int Speed;
@@ -116,6 +117,11 @@ namespace DnDClassLibrary
         {
             get { return Inspiration; }
             set { Inspiration = value; }
+        }
+        public int currentHealth
+        {
+            get { return CurrentHealth; }
+            set { CurrentHealth = value; }
         }
         public int health
         {

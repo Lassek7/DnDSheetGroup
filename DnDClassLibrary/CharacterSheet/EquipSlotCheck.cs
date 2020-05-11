@@ -21,7 +21,7 @@ namespace CharacterSheet
             label1.Text = message;
             WeaponSlotOne.Text = Slot1;
             WeaponSlotTwo.Text = Slot2;
-            WeaponSlotThree.Text = Slot1;
+            WeaponSlotThree.Text = Slot3;
             myEquippedItems = EquipmentChoice;
             myWeapon = Weapon;
         }

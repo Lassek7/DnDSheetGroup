@@ -94,6 +94,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.EncumberStatus = new System.Windows.Forms.Label();
             this.EncumberStatusLabel = new System.Windows.Forms.Label();
+            this.AddToInvListView = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -621,6 +622,7 @@
             // 
             this.AddToInvListBox.FormattingEnabled = true;
             this.AddToInvListBox.Location = new System.Drawing.Point(588, 43);
+            this.AddToInvListBox.MultiColumn = true;
             this.AddToInvListBox.Name = "AddToInvListBox";
             this.AddToInvListBox.Size = new System.Drawing.Size(200, 316);
             this.AddToInvListBox.TabIndex = 3;
@@ -756,11 +758,22 @@
             this.EncumberStatusLabel.TabIndex = 36;
             this.EncumberStatusLabel.Text = "Not Encumbered";
             // 
+            // AddToInvListView
+            // 
+            this.AddToInvListView.HideSelection = false;
+            this.AddToInvListView.Location = new System.Drawing.Point(803, 43);
+            this.AddToInvListView.Name = "AddToInvListView";
+            this.AddToInvListView.Size = new System.Drawing.Size(218, 313);
+            this.AddToInvListView.TabIndex = 37;
+            this.AddToInvListView.UseCompatibleStateImageBehavior = false;
+            this.AddToInvListView.View = System.Windows.Forms.View.Details;
+            // 
             // AddToInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 458);
+            this.ClientSize = new System.Drawing.Size(1201, 458);
+            this.Controls.Add(this.AddToInvListView);
             this.Controls.Add(this.EncumberStatusLabel);
             this.Controls.Add(this.EncumberStatus);
             this.Controls.Add(this.label27);
@@ -861,5 +874,6 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label EncumberStatus;
         private System.Windows.Forms.Label EncumberStatusLabel;
+        private System.Windows.Forms.ListView AddToInvListView;
     }
 }

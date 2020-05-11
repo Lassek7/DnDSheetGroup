@@ -112,6 +112,9 @@ namespace CharacterSheet
             myEquippedItems.WeaponOneAttributeAssociation = "";
             myEquippedItems.WeaponOneDamageType = "";
             myEquippedItems.WeaponOneDamage = "";
+
+            WeaponSlotOneProficiency.Checked = false;
+            LoadEquippedItems();
         }
 
         private void RemoveSlotTwo_Click(object sender, EventArgs e)
@@ -120,6 +123,9 @@ namespace CharacterSheet
             myEquippedItems.WeaponTwoAttributeAssociation = "";
             myEquippedItems.WeaponTwoDamageType = "";
             myEquippedItems.WeaponTwoDamage = "";
+
+            WeaponSlotTwoProficiency.Checked = false;
+            LoadEquippedItems();
         }
 
         private void RemoveSlotThree_Click(object sender, EventArgs e)
@@ -128,6 +134,9 @@ namespace CharacterSheet
             myEquippedItems.WeaponThreeAttributeAssociation = "";
             myEquippedItems.WeaponThreeDamageType = "";
             myEquippedItems.WeaponThreeDamage = "";
+
+            WeaponSlotThreeProficiency.Checked = false;
+            LoadEquippedItems();
         }
         #endregion
 
@@ -176,29 +185,7 @@ namespace CharacterSheet
         #endregion
 
         #region CHECKCHANGED
-        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
-        {
-            Skill mySkill = new Skill(myAttributes, myCharacter);
-            
-            AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
-            AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
-            SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
-            StealthLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
-            ArcanaLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
-            HistoryLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
-            InvestigationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
-            NatureLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
-            ReligionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
-            AnimalHandlingLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
-            InsightLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
-            MedicineLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
-            PerceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
-            SurvivalLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
-            DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
-            IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
-            PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
-            PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
-        }
+ 
         private void EditSheetCheck_CheckedChanged(object sender, EventArgs e)
         {
             if (EditSheetCheck.Checked == true)
@@ -215,6 +202,52 @@ namespace CharacterSheet
             }
         }
         #endregion
+        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+
+            AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
+            AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
+            SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
+            StealthLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
+            ArcanaLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
+            HistoryLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
+            NatureLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
+            InvestigationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
+            ReligionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
+            AnimalHandlingLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
+            InsightLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
+            MedicineLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
+            PerceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
+            SurvivalLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
+            DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
+            IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
+            PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
+            PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
+        }
+
+        private void ShieldEquippedCheck_CheckedChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.shieldEquipped = ShieldEquippedCheck.Checked;
+            LoadEquippedItems();
+        }
+
+        private void WeaponSlotOneProficiency_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadEquippedItems();
+        }
+
+        private void WeaponSlotTwoProficiency_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadEquippedItems();
+        }
+
+        private void WeaponSlotThreeProficiency_CheckedChanged(object sender, EventArgs e)
+        {
+            LoadEquippedItems();
+        }
+
+
 
         #region TEXTCHANGED
         private void TraitsDisplay_TextChanged(object sender, EventArgs e)
@@ -517,42 +550,85 @@ namespace CharacterSheet
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[3] = AthleticsProficiencyToggle.Checked;
-            AthleticsLabel.Text = CheckProficiencyToggle(mySkill.Athletics, AthleticsProficiencyToggle.Checked);
+            if (AthleticsProficiencyToggle.Checked == true)
+            {
+                AthleticsLabel.Text = CheckProficiencyToggle(mySkill.Athletics, AthleticsProficiencyToggle.Checked);
+            }
+            else
+            {
+                AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
+            }
+
         }
 
         private void AcrobaticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[0] = AcrobaticsProficiencyToggle.Checked;
-            AcrobaticsLabel.Text = CheckProficiencyToggle(mySkill.Acrobatics, AthleticsProficiencyToggle.Checked);
+            if (AcrobaticsProficiencyToggle.Checked == true)
+            {
+                AcrobaticsLabel.Text = CheckProficiencyToggle(mySkill.Acrobatics, AcrobaticsProficiencyToggle.Checked);
+            }
+            else
+            {
+                AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
+            }
         }
 
         private void SleightOfHandProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[15] = SleightOfHandProficiencyToggle.Checked;
-            SleightOfHandLabel.Text = CheckProficiencyToggle(mySkill.SleightOfHand, AthleticsProficiencyToggle.Checked);
+            if (SleightOfHandProficiencyToggle.Checked == true)
+            {
+                SleightOfHandLabel.Text = CheckProficiencyToggle(mySkill.SleightOfHand, SleightOfHandProficiencyToggle.Checked);
+            }
+            else
+            {
+                SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
+            }
         }
 
         private void StealthProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
-            StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, AthleticsProficiencyToggle.Checked);
+            if (StealthProficiencyToggle.Checked == true)
+            {
+                StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, StealthProficiencyToggle.Checked);
+            }
+            else
+            {
+                StealthLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
+            }
         }
 
         private void ArcanaProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[2] = ArcanaProficiencyToggle.Checked;
-            ArcanaLabel.Text = CheckProficiencyToggle(mySkill.Arcana, ArcanaProficiencyToggle.Checked);
+            if (ArcanaProficiencyToggle.Checked == true)
+            {
+                ArcanaLabel.Text = CheckProficiencyToggle(mySkill.Arcana, ArcanaProficiencyToggle.Checked);
+            }
+            else
+            {
+                ArcanaLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
+            }
         }
 
         private void HistoryProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[5] = HistoryProficiencyToggle.Checked;
-            HistoryLabel.Text = CheckProficiencyToggle(mySkill.History, HistoryProficiencyToggle.Checked);
+            if (HistoryProficiencyToggle.Checked == true)
+            {
+                HistoryLabel.Text = CheckProficiencyToggle(mySkill.History, HistoryProficiencyToggle.Checked);
+            }
+            else
+            {
+                HistoryLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
+            }
         }
 
         private void NatureProficiencyToggle_CheckedChanged(object sender, EventArgs e)
@@ -560,83 +636,168 @@ namespace CharacterSheet
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[10] = NatureProficiencyToggle.Checked;
             NatureLabel.Text = CheckProficiencyToggle(mySkill.Nature, NatureProficiencyToggle.Checked);
+            if (NatureProficiencyToggle.Checked == true)
+            {
+                NatureLabel.Text = CheckProficiencyToggle(mySkill.Nature, NatureProficiencyToggle.Checked);
+            }
+            else
+            {
+                NatureLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
+            }
         }
 
         private void InvestigationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[8] = InvestigationProficiencyToggle.Checked;
-            InvestigationLabel.Text = CheckProficiencyToggle(mySkill.Investigation, InvestigationProficiencyToggle.Checked);
+            if (InvestigationProficiencyToggle.Checked == true)
+            {
+                InvestigationLabel.Text = CheckProficiencyToggle(mySkill.Investigation, InvestigationProficiencyToggle.Checked);
+            }
+            else
+            {
+                InvestigationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
+            }
         }
 
         private void ReligionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[14] = ReligionProficiencyToggle.Checked;
-            ReligionLabel.Text = CheckProficiencyToggle(mySkill.Religion, ReligionProficiencyToggle.Checked);
+            if (ReligionProficiencyToggle.Checked == true)
+            {
+                ReligionLabel.Text = CheckProficiencyToggle(mySkill.Religion, ReligionProficiencyToggle.Checked);
+            }
+            else
+            {
+                ReligionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
+            }
         }
 
         private void AnimalHandlingProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[1] = AnimalHandlingProficiencyToggle.Checked;
-            AnimalHandlingLabel.Text = CheckProficiencyToggle(mySkill.AnimalHandling, AnimalHandlingProficiencyToggle.Checked);
+            if (AnimalHandlingProficiencyToggle.Checked == true)
+            {
+                AnimalHandlingLabel.Text = CheckProficiencyToggle(mySkill.AnimalHandling, AnimalHandlingProficiencyToggle.Checked);
+            }
+            else
+            {
+                AnimalHandlingLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
+            }
         }
 
         private void InsightProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[6] = InsightProficiencyToggle.Checked;
-            InsightLabel.Text = CheckProficiencyToggle(mySkill.Insight, InsightProficiencyToggle.Checked);
+            if (InsightProficiencyToggle.Checked == true)
+            {
+                InsightLabel.Text = CheckProficiencyToggle(mySkill.Insight, InsightProficiencyToggle.Checked);
+            }
+            else
+            {
+                InsightLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
+            }
         }
 
         private void MedicineProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[9] = MedicineProficiencyToggle.Checked;
-            MedicineLabel.Text = CheckProficiencyToggle(mySkill.Medicine, MedicineProficiencyToggle.Checked);
+            if (MedicineProficiencyToggle.Checked == true)
+            {
+                MedicineLabel.Text = CheckProficiencyToggle(mySkill.Medicine, MedicineProficiencyToggle.Checked);
+            }
+            else
+            {
+                MedicineLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
+            }
         }
 
         private void PerceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[11] = PerceptionProficiencyToggle.Checked;
-            PerceptionLabel.Text = CheckProficiencyToggle(mySkill.Perception, PerceptionProficiencyToggle.Checked);
+            if (PerceptionProficiencyToggle.Checked == true)
+            {
+                PerceptionLabel.Text = CheckProficiencyToggle(mySkill.Perception, PerceptionProficiencyToggle.Checked);
+            }
+            else
+            {
+                PerceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
+            }
         }
 
         private void SurvivalProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[17] = SurvivalProficiencyToggle.Checked;
-            SurvivalLabel.Text = CheckProficiencyToggle(mySkill.Survival, SurvivalProficiencyToggle.Checked);
+            if (SurvivalProficiencyToggle.Checked == true)
+            {
+                SurvivalLabel.Text = CheckProficiencyToggle(mySkill.Survival, SurvivalProficiencyToggle.Checked);
+            }
+            else
+            {
+                SurvivalLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
+            }
         }
 
         private void DeceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[4] = DeceptionProficiencyToggle.Checked;
-            DeceptionLabel.Text = CheckProficiencyToggle(mySkill.Deception, DeceptionProficiencyToggle.Checked);
+            if (DeceptionProficiencyToggle.Checked == true)
+            {
+                DeceptionLabel.Text = CheckProficiencyToggle(mySkill.Deception, DeceptionProficiencyToggle.Checked);
+            }
+            else
+            {
+                DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
+            }
         }
 
         private void IntimidationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[7] = IntimidationProficiencyToggle.Checked;
-            IntimidationLabel.Text = CheckProficiencyToggle(mySkill.Intimidation, IntimidationProficiencyToggle.Checked);
+            if (IntimidationProficiencyToggle.Checked == true)
+            {
+                IntimidationLabel.Text = CheckProficiencyToggle(mySkill.Intimidation, IntimidationProficiencyToggle.Checked);
+            }
+            else
+            {
+                IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
+            }
         }
 
         private void PerformanceProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[12] = PerformanceProficiencyToggle.Checked;
-            PerformanceLabel.Text = CheckProficiencyToggle(mySkill.Performance, PerformanceProficiencyToggle.Checked);
+            if (PerformanceProficiencyToggle.Checked == true)
+            {
+                PerformanceLabel.Text = CheckProficiencyToggle(mySkill.Performance, PerformanceProficiencyToggle.Checked);
+            }
+            else
+            {
+                PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
+            }
         }
 
         private void PersuasionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[13] = PersuasionProficiencyToggle.Checked;
-            PersuasionLabel.Text = CheckProficiencyToggle(mySkill.Persuasion, PersuasionProficiencyToggle.Checked);
+            if (PersuasionProficiencyToggle.Checked == true)
+            {
+                PersuasionLabel.Text = CheckProficiencyToggle(mySkill.Persuasion, PersuasionProficiencyToggle.Checked);
+            }
+            else
+            {
+                PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
+            }
         }
         #endregion
 
@@ -832,7 +993,6 @@ namespace CharacterSheet
             PerformanceLabel.Text = Convert.ToString(mySkill.Performance);
             PersuasionLabel.Text = Convert.ToString(mySkill.Persuasion);
 
-            JackOfAllTradesCheck.CheckStateChanged += JackOfAllTradesCheck_CheckedChanged;
             AthleticsProficiencyToggle.CheckStateChanged += AthleticsProficiencyToggle_CheckedChanged;
             AcrobaticsProficiencyToggle.CheckStateChanged += AcrobaticsProficiencyToggle_CheckedChanged;
             SleightOfHandProficiencyToggle.CheckStateChanged += SleightOfHandProficiencyToggle_CheckedChanged;
@@ -939,25 +1099,26 @@ namespace CharacterSheet
 
         void LoadEquippedItems()
         {
-            EquippedArmorDisplay.Text = myEquippedItems.ArmorSlotChest;
-            ArmorClassDisplay.Text = Convert.ToString(myEquippedItems.ACBonusCalc(myEquippedItems.ACFromArmor, myEquippedItems.shieldEquipped));
-
             WeaponSlotOneNameDisplay.Text = myEquippedItems.WeaponOneName;
-            WeaponSlotOneATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
+            WeaponSlotOneATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc(myEquippedItems.WeaponOneAttributeAssociation, WeaponSlotOneProficiency.Checked, myCharacter.proficiencyBonus, myAttributes.Modifiers[0], myAttributes.Modifiers[1], myAttributes.Modifiers[2], myAttributes.Modifiers[3], myAttributes.Modifiers[4], myAttributes.Modifiers[5]));
             WeaponSlotOneDamageDisplay.Text = myEquippedItems.WeaponOneDamage;
             WeaponSlotOneDamageTypeDisplay.Text = myEquippedItems.WeaponOneDamageType;
 
             WeaponSlotTwoNameDisplay.Text = myEquippedItems.WeaponTwoName;
-            WeaponSlotTwoATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
+            WeaponSlotTwoATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc(myEquippedItems.WeaponTwoAttributeAssociation, WeaponSlotTwoProficiency.Checked, myCharacter.proficiencyBonus, myAttributes.Modifiers[0], myAttributes.Modifiers[1], myAttributes.Modifiers[2], myAttributes.Modifiers[3], myAttributes.Modifiers[4], myAttributes.Modifiers[5]));
             WeaponSlotTwoDamageDisplay.Text = myEquippedItems.WeaponTwoDamage;
             WeaponSlotTwoDamageTypeDisplay.Text = myEquippedItems.WeaponTwoDamageType;
 
-            WeaponSlotThreeNameDisplay.Text = myEquippedItems.WeaponOneName;
-            WeaponSlotThreeATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
-            WeaponSlotThreeDamageDisplay.Text = myEquippedItems.WeaponOneDamage;
-            WeaponSlotThreeDamageTypeDisplay.Text = myEquippedItems.WeaponOneDamageType;
+            WeaponSlotThreeNameDisplay.Text = myEquippedItems.WeaponThreeName;
+            WeaponSlotThreeATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc(myEquippedItems.WeaponThreeAttributeAssociation, WeaponSlotThreeProficiency.Checked, myCharacter.proficiencyBonus, myAttributes.Modifiers[0], myAttributes.Modifiers[1], myAttributes.Modifiers[2], myAttributes.Modifiers[3], myAttributes.Modifiers[4], myAttributes.Modifiers[5]));
+            WeaponSlotThreeDamageDisplay.Text = myEquippedItems.WeaponThreeDamage;
+            WeaponSlotThreeDamageTypeDisplay.Text = myEquippedItems.WeaponThreeDamageType;
+
+            EquippedArmorDisplay.Text = myEquippedItems.ArmorSlotChest;
+            ArmorClassDisplay.Text = Convert.ToString(myEquippedItems.ACBonusCalc(myEquippedItems.ACFromArmor, myEquippedItems.shieldEquipped, myAttributes.Modifiers[1]));
 
         }
+
         void LoadInventory()
         {
             CopperCoinsDisplay.Text = Convert.ToString(myItem.Copper);
@@ -966,8 +1127,25 @@ namespace CharacterSheet
             GoldCoinsDisplay.Text = Convert.ToString(myItem.Gold);
             PlatinumCoinsDisplay.Text = Convert.ToString(myItem.Platinum);
         }
+
+
+
         #endregion
 
-     
+        private void CurrentHitPointsDisplay_ValueChanged(object sender, EventArgs e)
+        {
+            CurrentHitPointsDisplay.Maximum = Convert.ToInt32(MaxHealthDisplay.Text);
+
+            if (CurrentHitPointsDisplay.Value > Convert.ToInt32(MaxHealthDisplay.Text))
+            {
+                CurrentHitPointsDisplay.Value = 12;
+
+            }
+            else if (CurrentHitPointsDisplay.Value < 0) 
+            {
+                CurrentHitPointsDisplay.Value = 0;
+            }
+            myCharacter.currentHealth = Convert.ToInt32(CurrentHitPointsDisplay.Value);
+        }
     }
 }
