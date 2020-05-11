@@ -95,6 +95,10 @@
             this.EncumberStatus = new System.Windows.Forms.Label();
             this.EncumberStatusLabel = new System.Windows.Forms.Label();
             this.AddToInvListView = new System.Windows.Forms.ListView();
+            this.ListName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ListAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ListWeight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ListAcDmg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -626,7 +630,6 @@
             this.AddToInvListBox.Name = "AddToInvListBox";
             this.AddToInvListBox.Size = new System.Drawing.Size(200, 316);
             this.AddToInvListBox.TabIndex = 3;
-            this.AddToInvListBox.DoubleClick += new System.EventHandler(this.AddToInvListBox_DoubleClick);
             // 
             // RemoveFromListButton
             // 
@@ -760,13 +763,35 @@
             // 
             // AddToInvListView
             // 
+            this.AddToInvListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ListName,
+            this.ListAmount,
+            this.ListWeight,
+            this.ListAcDmg});
             this.AddToInvListView.HideSelection = false;
             this.AddToInvListView.Location = new System.Drawing.Point(803, 43);
+            this.AddToInvListView.MultiSelect = false;
             this.AddToInvListView.Name = "AddToInvListView";
-            this.AddToInvListView.Size = new System.Drawing.Size(218, 313);
+            this.AddToInvListView.Size = new System.Drawing.Size(246, 313);
             this.AddToInvListView.TabIndex = 37;
             this.AddToInvListView.UseCompatibleStateImageBehavior = false;
             this.AddToInvListView.View = System.Windows.Forms.View.Details;
+            // 
+            // ListName
+            // 
+            this.ListName.Text = "Item";
+            // 
+            // ListAmount
+            // 
+            this.ListAmount.Text = "Amount";
+            // 
+            // ListWeight
+            // 
+            this.ListWeight.Text = "Lbs";
+            // 
+            // ListAcDmg
+            // 
+            this.ListAcDmg.Text = "AC/Dmg";
             // 
             // AddToInventoryForm
             // 
@@ -875,5 +900,9 @@
         private System.Windows.Forms.Label EncumberStatus;
         private System.Windows.Forms.Label EncumberStatusLabel;
         private System.Windows.Forms.ListView AddToInvListView;
+        private System.Windows.Forms.ColumnHeader ListName;
+        private System.Windows.Forms.ColumnHeader ListAmount;
+        private System.Windows.Forms.ColumnHeader ListWeight;
+        private System.Windows.Forms.ColumnHeader ListAcDmg;
     }
 }
