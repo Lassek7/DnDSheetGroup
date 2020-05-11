@@ -444,7 +444,22 @@
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.addToInventoryFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button4 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.groupBox183 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -468,7 +483,9 @@
             this.groupBox21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox22.SuspendLayout();
+            this.groupBox23.SuspendLayout();
             this.groupBox24.SuspendLayout();
+            this.groupBox25.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox27.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CurrentHitPointsDisplay)).BeginInit();
@@ -644,6 +661,7 @@
             this.groupBox54.SuspendLayout();
             this.groupBox55.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).BeginInit();
+            this.groupBox183.SuspendLayout();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -651,7 +669,7 @@
             this.MenuButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.MenuButton1.Location = new System.Drawing.Point(8, 12);
             this.MenuButton1.Name = "MenuButton1";
-            this.MenuButton1.Size = new System.Drawing.Size(79, 34);
+            this.MenuButton1.Size = new System.Drawing.Size(92, 34);
             this.MenuButton1.TabIndex = 0;
             this.MenuButton1.Text = "Menu";
             this.MenuButton1.UseVisualStyleBackColor = true;
@@ -661,7 +679,7 @@
             this.ClassesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.ClassesButton.Location = new System.Drawing.Point(8, 52);
             this.ClassesButton.Name = "ClassesButton";
-            this.ClassesButton.Size = new System.Drawing.Size(79, 34);
+            this.ClassesButton.Size = new System.Drawing.Size(92, 34);
             this.ClassesButton.TabIndex = 1;
             this.ClassesButton.Text = "Classes";
             this.ClassesButton.UseVisualStyleBackColor = true;
@@ -671,14 +689,14 @@
             this.SpellsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.SpellsButton.Location = new System.Drawing.Point(8, 92);
             this.SpellsButton.Name = "SpellsButton";
-            this.SpellsButton.Size = new System.Drawing.Size(79, 34);
+            this.SpellsButton.Size = new System.Drawing.Size(92, 34);
             this.SpellsButton.TabIndex = 2;
             this.SpellsButton.Text = "Spells";
             this.SpellsButton.UseVisualStyleBackColor = true;
             // 
             // PictureBox
             // 
-            this.PictureBox.Location = new System.Drawing.Point(103, 12);
+            this.PictureBox.Location = new System.Drawing.Point(114, 12);
             this.PictureBox.Name = "PictureBox";
             this.PictureBox.Size = new System.Drawing.Size(265, 195);
             this.PictureBox.TabIndex = 3;
@@ -687,7 +705,7 @@
             // label1
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(93, 278);
+            this.label1.Location = new System.Drawing.Point(106, 280);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1810, 2);
             this.label1.TabIndex = 4;
@@ -695,14 +713,13 @@
             // label2
             // 
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Location = new System.Drawing.Point(93, 12);
+            this.label2.Location = new System.Drawing.Point(106, 12);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(2, 1030);
             this.label2.TabIndex = 5;
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox1.Controls.Add(this.PersuasionProficiencyToggle);
             this.groupBox1.Controls.Add(this.PerceptionProficiencyToggle);
             this.groupBox1.Controls.Add(this.PerformanceProficiencyToggle);
@@ -757,9 +774,9 @@
             // PersuasionProficiencyToggle
             // 
             this.PersuasionProficiencyToggle.AutoSize = true;
-            this.PersuasionProficiencyToggle.Location = new System.Drawing.Point(845, 224);
+            this.PersuasionProficiencyToggle.Location = new System.Drawing.Point(845, 219);
             this.PersuasionProficiencyToggle.Name = "PersuasionProficiencyToggle";
-            this.PersuasionProficiencyToggle.Size = new System.Drawing.Size(78, 17);
+            this.PersuasionProficiencyToggle.Size = new System.Drawing.Size(101, 21);
             this.PersuasionProficiencyToggle.TabIndex = 124;
             this.PersuasionProficiencyToggle.Text = "Persuasion";
             this.PersuasionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -768,9 +785,9 @@
             // PerceptionProficiencyToggle
             // 
             this.PerceptionProficiencyToggle.AutoSize = true;
-            this.PerceptionProficiencyToggle.Location = new System.Drawing.Point(697, 220);
+            this.PerceptionProficiencyToggle.Location = new System.Drawing.Point(697, 215);
             this.PerceptionProficiencyToggle.Name = "PerceptionProficiencyToggle";
-            this.PerceptionProficiencyToggle.Size = new System.Drawing.Size(77, 17);
+            this.PerceptionProficiencyToggle.Size = new System.Drawing.Size(98, 21);
             this.PerceptionProficiencyToggle.TabIndex = 119;
             this.PerceptionProficiencyToggle.Text = "Perception";
             this.PerceptionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -779,9 +796,9 @@
             // PerformanceProficiencyToggle
             // 
             this.PerformanceProficiencyToggle.AutoSize = true;
-            this.PerformanceProficiencyToggle.Location = new System.Drawing.Point(845, 205);
+            this.PerformanceProficiencyToggle.Location = new System.Drawing.Point(845, 200);
             this.PerformanceProficiencyToggle.Name = "PerformanceProficiencyToggle";
-            this.PerformanceProficiencyToggle.Size = new System.Drawing.Size(86, 17);
+            this.PerformanceProficiencyToggle.Size = new System.Drawing.Size(111, 21);
             this.PerformanceProficiencyToggle.TabIndex = 123;
             this.PerformanceProficiencyToggle.Text = "Performance";
             this.PerformanceProficiencyToggle.UseVisualStyleBackColor = true;
@@ -790,9 +807,9 @@
             // DeceptionProficiencyToggle
             // 
             this.DeceptionProficiencyToggle.AutoSize = true;
-            this.DeceptionProficiencyToggle.Location = new System.Drawing.Point(845, 167);
+            this.DeceptionProficiencyToggle.Location = new System.Drawing.Point(845, 159);
             this.DeceptionProficiencyToggle.Name = "DeceptionProficiencyToggle";
-            this.DeceptionProficiencyToggle.Size = new System.Drawing.Size(75, 17);
+            this.DeceptionProficiencyToggle.Size = new System.Drawing.Size(94, 21);
             this.DeceptionProficiencyToggle.TabIndex = 121;
             this.DeceptionProficiencyToggle.Text = "Deception";
             this.DeceptionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -801,9 +818,9 @@
             // ReligionProficiencyToggle
             // 
             this.ReligionProficiencyToggle.AutoSize = true;
-            this.ReligionProficiencyToggle.Location = new System.Drawing.Point(534, 238);
+            this.ReligionProficiencyToggle.Location = new System.Drawing.Point(534, 235);
             this.ReligionProficiencyToggle.Name = "ReligionProficiencyToggle";
-            this.ReligionProficiencyToggle.Size = new System.Drawing.Size(64, 17);
+            this.ReligionProficiencyToggle.Size = new System.Drawing.Size(81, 21);
             this.ReligionProficiencyToggle.TabIndex = 109;
             this.ReligionProficiencyToggle.Text = "Religion";
             this.ReligionProficiencyToggle.UseVisualStyleBackColor = true;
@@ -812,9 +829,9 @@
             // IntimidationProficiencyToggle
             // 
             this.IntimidationProficiencyToggle.AutoSize = true;
-            this.IntimidationProficiencyToggle.Location = new System.Drawing.Point(845, 186);
+            this.IntimidationProficiencyToggle.Location = new System.Drawing.Point(845, 180);
             this.IntimidationProficiencyToggle.Name = "IntimidationProficiencyToggle";
-            this.IntimidationProficiencyToggle.Size = new System.Drawing.Size(79, 17);
+            this.IntimidationProficiencyToggle.Size = new System.Drawing.Size(101, 21);
             this.IntimidationProficiencyToggle.TabIndex = 122;
             this.IntimidationProficiencyToggle.Text = "Intimidation";
             this.IntimidationProficiencyToggle.UseVisualStyleBackColor = true;
@@ -823,9 +840,9 @@
             // MedicineProficiencyToggle
             // 
             this.MedicineProficiencyToggle.AutoSize = true;
-            this.MedicineProficiencyToggle.Location = new System.Drawing.Point(697, 201);
+            this.MedicineProficiencyToggle.Location = new System.Drawing.Point(697, 195);
             this.MedicineProficiencyToggle.Name = "MedicineProficiencyToggle";
-            this.MedicineProficiencyToggle.Size = new System.Drawing.Size(69, 17);
+            this.MedicineProficiencyToggle.Size = new System.Drawing.Size(86, 21);
             this.MedicineProficiencyToggle.TabIndex = 118;
             this.MedicineProficiencyToggle.Text = "Medicine";
             this.MedicineProficiencyToggle.UseVisualStyleBackColor = true;
@@ -834,9 +851,9 @@
             // NatureProficiencyToggle
             // 
             this.NatureProficiencyToggle.AutoSize = true;
-            this.NatureProficiencyToggle.Location = new System.Drawing.Point(534, 220);
+            this.NatureProficiencyToggle.Location = new System.Drawing.Point(534, 215);
             this.NatureProficiencyToggle.Name = "NatureProficiencyToggle";
-            this.NatureProficiencyToggle.Size = new System.Drawing.Size(58, 17);
+            this.NatureProficiencyToggle.Size = new System.Drawing.Size(73, 21);
             this.NatureProficiencyToggle.TabIndex = 108;
             this.NatureProficiencyToggle.Text = "Nature";
             this.NatureProficiencyToggle.UseVisualStyleBackColor = true;
@@ -845,9 +862,9 @@
             // InsightProficiencyToggle
             // 
             this.InsightProficiencyToggle.AutoSize = true;
-            this.InsightProficiencyToggle.Location = new System.Drawing.Point(697, 182);
+            this.InsightProficiencyToggle.Location = new System.Drawing.Point(697, 175);
             this.InsightProficiencyToggle.Name = "InsightProficiencyToggle";
-            this.InsightProficiencyToggle.Size = new System.Drawing.Size(57, 17);
+            this.InsightProficiencyToggle.Size = new System.Drawing.Size(71, 21);
             this.InsightProficiencyToggle.TabIndex = 117;
             this.InsightProficiencyToggle.Text = "Insight";
             this.InsightProficiencyToggle.UseVisualStyleBackColor = true;
@@ -856,9 +873,9 @@
             // AnimalHandlingProficiencyToggle
             // 
             this.AnimalHandlingProficiencyToggle.AutoSize = true;
-            this.AnimalHandlingProficiencyToggle.Location = new System.Drawing.Point(697, 163);
+            this.AnimalHandlingProficiencyToggle.Location = new System.Drawing.Point(697, 155);
             this.AnimalHandlingProficiencyToggle.Name = "AnimalHandlingProficiencyToggle";
-            this.AnimalHandlingProficiencyToggle.Size = new System.Drawing.Size(57, 17);
+            this.AnimalHandlingProficiencyToggle.Size = new System.Drawing.Size(72, 21);
             this.AnimalHandlingProficiencyToggle.TabIndex = 116;
             this.AnimalHandlingProficiencyToggle.Text = "Animal";
             this.AnimalHandlingProficiencyToggle.UseVisualStyleBackColor = true;
@@ -867,9 +884,9 @@
             // InvestigationProficiencyToggle
             // 
             this.InvestigationProficiencyToggle.AutoSize = true;
-            this.InvestigationProficiencyToggle.Location = new System.Drawing.Point(534, 201);
+            this.InvestigationProficiencyToggle.Location = new System.Drawing.Point(534, 195);
             this.InvestigationProficiencyToggle.Name = "InvestigationProficiencyToggle";
-            this.InvestigationProficiencyToggle.Size = new System.Drawing.Size(86, 17);
+            this.InvestigationProficiencyToggle.Size = new System.Drawing.Size(109, 21);
             this.InvestigationProficiencyToggle.TabIndex = 107;
             this.InvestigationProficiencyToggle.Text = "Investigation";
             this.InvestigationProficiencyToggle.UseVisualStyleBackColor = true;
@@ -878,9 +895,9 @@
             // HistoryProficiencyToggle
             // 
             this.HistoryProficiencyToggle.AutoSize = true;
-            this.HistoryProficiencyToggle.Location = new System.Drawing.Point(534, 182);
+            this.HistoryProficiencyToggle.Location = new System.Drawing.Point(534, 175);
             this.HistoryProficiencyToggle.Name = "HistoryProficiencyToggle";
-            this.HistoryProficiencyToggle.Size = new System.Drawing.Size(58, 17);
+            this.HistoryProficiencyToggle.Size = new System.Drawing.Size(74, 21);
             this.HistoryProficiencyToggle.TabIndex = 106;
             this.HistoryProficiencyToggle.Text = "History";
             this.HistoryProficiencyToggle.UseVisualStyleBackColor = true;
@@ -889,9 +906,9 @@
             // ArcanaProficiencyToggle
             // 
             this.ArcanaProficiencyToggle.AutoSize = true;
-            this.ArcanaProficiencyToggle.Location = new System.Drawing.Point(534, 163);
+            this.ArcanaProficiencyToggle.Location = new System.Drawing.Point(534, 155);
             this.ArcanaProficiencyToggle.Name = "ArcanaProficiencyToggle";
-            this.ArcanaProficiencyToggle.Size = new System.Drawing.Size(60, 17);
+            this.ArcanaProficiencyToggle.Size = new System.Drawing.Size(75, 21);
             this.ArcanaProficiencyToggle.TabIndex = 105;
             this.ArcanaProficiencyToggle.Text = "Arcana";
             this.ArcanaProficiencyToggle.UseVisualStyleBackColor = true;
@@ -901,9 +918,9 @@
             // 
             this.StealthLabel.AutoSize = true;
             this.StealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.StealthLabel.Location = new System.Drawing.Point(334, 206);
+            this.StealthLabel.Location = new System.Drawing.Point(334, 207);
             this.StealthLabel.Name = "StealthLabel";
-            this.StealthLabel.Size = new System.Drawing.Size(13, 13);
+            this.StealthLabel.Size = new System.Drawing.Size(14, 15);
             this.StealthLabel.TabIndex = 104;
             this.StealthLabel.Text = "0";
             // 
@@ -919,9 +936,9 @@
             // StealthProficiencyToggle
             // 
             this.StealthProficiencyToggle.AutoSize = true;
-            this.StealthProficiencyToggle.Location = new System.Drawing.Point(227, 203);
+            this.StealthProficiencyToggle.Location = new System.Drawing.Point(227, 207);
             this.StealthProficiencyToggle.Name = "StealthProficiencyToggle";
-            this.StealthProficiencyToggle.Size = new System.Drawing.Size(59, 17);
+            this.StealthProficiencyToggle.Size = new System.Drawing.Size(74, 21);
             this.StealthProficiencyToggle.TabIndex = 103;
             this.StealthProficiencyToggle.Text = "Stealth";
             this.StealthProficiencyToggle.UseVisualStyleBackColor = true;
@@ -930,9 +947,9 @@
             // SurvivalProficiencyToggle
             // 
             this.SurvivalProficiencyToggle.AutoSize = true;
-            this.SurvivalProficiencyToggle.Location = new System.Drawing.Point(697, 239);
+            this.SurvivalProficiencyToggle.Location = new System.Drawing.Point(697, 236);
             this.SurvivalProficiencyToggle.Name = "SurvivalProficiencyToggle";
-            this.SurvivalProficiencyToggle.Size = new System.Drawing.Size(64, 17);
+            this.SurvivalProficiencyToggle.Size = new System.Drawing.Size(80, 21);
             this.SurvivalProficiencyToggle.TabIndex = 120;
             this.SurvivalProficiencyToggle.Text = "Survival";
             this.SurvivalProficiencyToggle.UseVisualStyleBackColor = true;
@@ -941,9 +958,9 @@
             // SleightOfHandProficiencyToggle
             // 
             this.SleightOfHandProficiencyToggle.AutoSize = true;
-            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(227, 185);
+            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(227, 187);
             this.SleightOfHandProficiencyToggle.Name = "SleightOfHandProficiencyToggle";
-            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(85, 17);
+            this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(108, 21);
             this.SleightOfHandProficiencyToggle.TabIndex = 102;
             this.SleightOfHandProficiencyToggle.Text = "Sle. of Hand";
             this.SleightOfHandProficiencyToggle.UseVisualStyleBackColor = true;
@@ -954,7 +971,7 @@
             this.AcrobaticsProficiencyToggle.AutoSize = true;
             this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(227, 167);
             this.AcrobaticsProficiencyToggle.Name = "AcrobaticsProficiencyToggle";
-            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(76, 17);
+            this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(96, 21);
             this.AcrobaticsProficiencyToggle.TabIndex = 101;
             this.AcrobaticsProficiencyToggle.Text = "Acrobatics";
             this.AcrobaticsProficiencyToggle.UseVisualStyleBackColor = true;
@@ -965,7 +982,7 @@
             this.AthleticsProficiencyToggle.AutoSize = true;
             this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(72, 167);
             this.AthleticsProficiencyToggle.Name = "AthleticsProficiencyToggle";
-            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(66, 17);
+            this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(83, 21);
             this.AthleticsProficiencyToggle.TabIndex = 99;
             this.AthleticsProficiencyToggle.Text = "Athletics";
             this.AthleticsProficiencyToggle.UseVisualStyleBackColor = true;
@@ -976,7 +993,7 @@
             this.JackOfAllTradesCheck.AutoSize = true;
             this.JackOfAllTradesCheck.Location = new System.Drawing.Point(9, 233);
             this.JackOfAllTradesCheck.Name = "JackOfAllTradesCheck";
-            this.JackOfAllTradesCheck.Size = new System.Drawing.Size(111, 17);
+            this.JackOfAllTradesCheck.Size = new System.Drawing.Size(143, 21);
             this.JackOfAllTradesCheck.TabIndex = 98;
             this.JackOfAllTradesCheck.Text = "Jack of All Trades";
             this.JackOfAllTradesCheck.UseVisualStyleBackColor = true;
@@ -988,7 +1005,7 @@
             this.groupBox6.Controls.Add(this.DexterityAttributeDisplay);
             this.groupBox6.Controls.Add(this.groupBox7);
             this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox6.Location = new System.Drawing.Point(215, 26);
+            this.groupBox6.Location = new System.Drawing.Point(215, 18);
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.Size = new System.Drawing.Size(135, 94);
             this.groupBox6.TabIndex = 12;
@@ -1003,7 +1020,7 @@
             this.DexterityAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.DexterityAttributeDisplay.Location = new System.Drawing.Point(17, 24);
             this.DexterityAttributeDisplay.Name = "DexterityAttributeDisplay";
-            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.DexterityAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.DexterityAttributeDisplay.TabIndex = 16;
             this.DexterityAttributeDisplay.Text = "0";
             this.DexterityAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1024,7 +1041,7 @@
             // 
             this.DexterityModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.DexterityModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DexterityModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.DexterityModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.DexterityModifierLabel.Name = "DexterityModifierLabel";
             this.DexterityModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.DexterityModifierLabel.TabIndex = 10;
@@ -1035,9 +1052,9 @@
             // 
             this.PersuasionLabel.AutoSize = true;
             this.PersuasionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.PersuasionLabel.Location = new System.Drawing.Point(956, 228);
+            this.PersuasionLabel.Location = new System.Drawing.Point(956, 220);
             this.PersuasionLabel.Name = "PersuasionLabel";
-            this.PersuasionLabel.Size = new System.Drawing.Size(13, 13);
+            this.PersuasionLabel.Size = new System.Drawing.Size(14, 15);
             this.PersuasionLabel.TabIndex = 80;
             this.PersuasionLabel.Text = "0";
             // 
@@ -1045,9 +1062,9 @@
             // 
             this.PerformanceLabel.AutoSize = true;
             this.PerformanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.PerformanceLabel.Location = new System.Drawing.Point(956, 209);
+            this.PerformanceLabel.Location = new System.Drawing.Point(956, 200);
             this.PerformanceLabel.Name = "PerformanceLabel";
-            this.PerformanceLabel.Size = new System.Drawing.Size(13, 13);
+            this.PerformanceLabel.Size = new System.Drawing.Size(14, 15);
             this.PerformanceLabel.TabIndex = 78;
             this.PerformanceLabel.Text = "0";
             // 
@@ -1055,9 +1072,9 @@
             // 
             this.IntimidationLabel.AutoSize = true;
             this.IntimidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.IntimidationLabel.Location = new System.Drawing.Point(956, 190);
+            this.IntimidationLabel.Location = new System.Drawing.Point(956, 180);
             this.IntimidationLabel.Name = "IntimidationLabel";
-            this.IntimidationLabel.Size = new System.Drawing.Size(13, 13);
+            this.IntimidationLabel.Size = new System.Drawing.Size(14, 15);
             this.IntimidationLabel.TabIndex = 76;
             this.IntimidationLabel.Text = "0";
             // 
@@ -1065,9 +1082,9 @@
             // 
             this.SurvivalLabel.AutoSize = true;
             this.SurvivalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.SurvivalLabel.Location = new System.Drawing.Point(798, 243);
+            this.SurvivalLabel.Location = new System.Drawing.Point(798, 236);
             this.SurvivalLabel.Name = "SurvivalLabel";
-            this.SurvivalLabel.Size = new System.Drawing.Size(13, 13);
+            this.SurvivalLabel.Size = new System.Drawing.Size(14, 15);
             this.SurvivalLabel.TabIndex = 74;
             this.SurvivalLabel.Text = "0";
             // 
@@ -1075,9 +1092,9 @@
             // 
             this.PerceptionLabel.AutoSize = true;
             this.PerceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.PerceptionLabel.Location = new System.Drawing.Point(798, 224);
+            this.PerceptionLabel.Location = new System.Drawing.Point(798, 217);
             this.PerceptionLabel.Name = "PerceptionLabel";
-            this.PerceptionLabel.Size = new System.Drawing.Size(13, 13);
+            this.PerceptionLabel.Size = new System.Drawing.Size(14, 15);
             this.PerceptionLabel.TabIndex = 72;
             this.PerceptionLabel.Text = "0";
             // 
@@ -1085,9 +1102,9 @@
             // 
             this.MedicineLabel.AutoSize = true;
             this.MedicineLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.MedicineLabel.Location = new System.Drawing.Point(798, 205);
+            this.MedicineLabel.Location = new System.Drawing.Point(798, 197);
             this.MedicineLabel.Name = "MedicineLabel";
-            this.MedicineLabel.Size = new System.Drawing.Size(13, 13);
+            this.MedicineLabel.Size = new System.Drawing.Size(14, 15);
             this.MedicineLabel.TabIndex = 70;
             this.MedicineLabel.Text = "0";
             // 
@@ -1095,9 +1112,9 @@
             // 
             this.ReligionLabel.AutoSize = true;
             this.ReligionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.ReligionLabel.Location = new System.Drawing.Point(645, 242);
+            this.ReligionLabel.Location = new System.Drawing.Point(645, 236);
             this.ReligionLabel.Name = "ReligionLabel";
-            this.ReligionLabel.Size = new System.Drawing.Size(13, 13);
+            this.ReligionLabel.Size = new System.Drawing.Size(14, 15);
             this.ReligionLabel.TabIndex = 68;
             this.ReligionLabel.Text = "0";
             // 
@@ -1105,9 +1122,9 @@
             // 
             this.NatureLabel.AutoSize = true;
             this.NatureLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.NatureLabel.Location = new System.Drawing.Point(645, 224);
+            this.NatureLabel.Location = new System.Drawing.Point(645, 217);
             this.NatureLabel.Name = "NatureLabel";
-            this.NatureLabel.Size = new System.Drawing.Size(13, 13);
+            this.NatureLabel.Size = new System.Drawing.Size(14, 15);
             this.NatureLabel.TabIndex = 66;
             this.NatureLabel.Text = "0";
             // 
@@ -1115,9 +1132,9 @@
             // 
             this.InvestigationLabel.AutoSize = true;
             this.InvestigationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.InvestigationLabel.Location = new System.Drawing.Point(645, 205);
+            this.InvestigationLabel.Location = new System.Drawing.Point(645, 197);
             this.InvestigationLabel.Name = "InvestigationLabel";
-            this.InvestigationLabel.Size = new System.Drawing.Size(13, 13);
+            this.InvestigationLabel.Size = new System.Drawing.Size(14, 15);
             this.InvestigationLabel.TabIndex = 64;
             this.InvestigationLabel.Text = "0";
             // 
@@ -1125,9 +1142,9 @@
             // 
             this.HistoryLabel.AutoSize = true;
             this.HistoryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.HistoryLabel.Location = new System.Drawing.Point(645, 186);
+            this.HistoryLabel.Location = new System.Drawing.Point(645, 177);
             this.HistoryLabel.Name = "HistoryLabel";
-            this.HistoryLabel.Size = new System.Drawing.Size(13, 13);
+            this.HistoryLabel.Size = new System.Drawing.Size(14, 15);
             this.HistoryLabel.TabIndex = 62;
             this.HistoryLabel.Text = "0";
             // 
@@ -1135,9 +1152,9 @@
             // 
             this.SleightOfHandLabel.AutoSize = true;
             this.SleightOfHandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.SleightOfHandLabel.Location = new System.Drawing.Point(334, 189);
+            this.SleightOfHandLabel.Location = new System.Drawing.Point(334, 188);
             this.SleightOfHandLabel.Name = "SleightOfHandLabel";
-            this.SleightOfHandLabel.Size = new System.Drawing.Size(13, 13);
+            this.SleightOfHandLabel.Size = new System.Drawing.Size(14, 15);
             this.SleightOfHandLabel.TabIndex = 60;
             this.SleightOfHandLabel.Text = "0";
             // 
@@ -1145,9 +1162,9 @@
             // 
             this.DeceptionLabel.AutoSize = true;
             this.DeceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.DeceptionLabel.Location = new System.Drawing.Point(956, 171);
+            this.DeceptionLabel.Location = new System.Drawing.Point(956, 160);
             this.DeceptionLabel.Name = "DeceptionLabel";
-            this.DeceptionLabel.Size = new System.Drawing.Size(13, 13);
+            this.DeceptionLabel.Size = new System.Drawing.Size(14, 15);
             this.DeceptionLabel.TabIndex = 58;
             this.DeceptionLabel.Text = "0";
             // 
@@ -1155,9 +1172,9 @@
             // 
             this.AnimalHandlingLabel.AutoSize = true;
             this.AnimalHandlingLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.AnimalHandlingLabel.Location = new System.Drawing.Point(798, 167);
+            this.AnimalHandlingLabel.Location = new System.Drawing.Point(798, 158);
             this.AnimalHandlingLabel.Name = "AnimalHandlingLabel";
-            this.AnimalHandlingLabel.Size = new System.Drawing.Size(13, 13);
+            this.AnimalHandlingLabel.Size = new System.Drawing.Size(14, 15);
             this.AnimalHandlingLabel.TabIndex = 56;
             this.AnimalHandlingLabel.Text = "0";
             // 
@@ -1165,9 +1182,9 @@
             // 
             this.ArcanaLabel.AutoSize = true;
             this.ArcanaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.ArcanaLabel.Location = new System.Drawing.Point(645, 167);
+            this.ArcanaLabel.Location = new System.Drawing.Point(645, 158);
             this.ArcanaLabel.Name = "ArcanaLabel";
-            this.ArcanaLabel.Size = new System.Drawing.Size(13, 13);
+            this.ArcanaLabel.Size = new System.Drawing.Size(14, 15);
             this.ArcanaLabel.TabIndex = 54;
             this.ArcanaLabel.Text = "0";
             // 
@@ -1175,9 +1192,9 @@
             // 
             this.InsightLabel.AutoSize = true;
             this.InsightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.InsightLabel.Location = new System.Drawing.Point(798, 186);
+            this.InsightLabel.Location = new System.Drawing.Point(798, 178);
             this.InsightLabel.Name = "InsightLabel";
-            this.InsightLabel.Size = new System.Drawing.Size(13, 13);
+            this.InsightLabel.Size = new System.Drawing.Size(14, 15);
             this.InsightLabel.TabIndex = 52;
             this.InsightLabel.Text = "0";
             // 
@@ -1185,9 +1202,9 @@
             // 
             this.AcrobaticsLabel.AutoSize = true;
             this.AcrobaticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.AcrobaticsLabel.Location = new System.Drawing.Point(334, 172);
+            this.AcrobaticsLabel.Location = new System.Drawing.Point(334, 169);
             this.AcrobaticsLabel.Name = "AcrobaticsLabel";
-            this.AcrobaticsLabel.Size = new System.Drawing.Size(13, 13);
+            this.AcrobaticsLabel.Size = new System.Drawing.Size(14, 15);
             this.AcrobaticsLabel.TabIndex = 50;
             this.AcrobaticsLabel.Text = "0";
             // 
@@ -1195,9 +1212,9 @@
             // 
             this.AthleticsLabel.AutoSize = true;
             this.AthleticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.AthleticsLabel.Location = new System.Drawing.Point(175, 174);
+            this.AthleticsLabel.Location = new System.Drawing.Point(175, 170);
             this.AthleticsLabel.Name = "AthleticsLabel";
-            this.AthleticsLabel.Size = new System.Drawing.Size(13, 13);
+            this.AthleticsLabel.Size = new System.Drawing.Size(14, 15);
             this.AthleticsLabel.TabIndex = 48;
             this.AthleticsLabel.Text = "0";
             // 
@@ -1216,7 +1233,7 @@
             this.groupBox19.Controls.Add(this.IntelligenceSaveLabel);
             this.groupBox19.Controls.Add(this.ConstitutionSaveLabel);
             this.groupBox19.Controls.Add(this.DexteritySaveLabel);
-            this.groupBox19.Location = new System.Drawing.Point(57, 121);
+            this.groupBox19.Location = new System.Drawing.Point(57, 113);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(914, 40);
             this.groupBox19.TabIndex = 38;
@@ -1227,7 +1244,7 @@
             this.CharismaSaveProficiencyToggle.AutoSize = true;
             this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(788, 14);
             this.CharismaSaveProficiencyToggle.Name = "CharismaSaveProficiencyToggle";
-            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
+            this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
             this.CharismaSaveProficiencyToggle.TabIndex = 60;
             this.CharismaSaveProficiencyToggle.Text = "Cha. Save";
             this.CharismaSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1238,7 +1255,7 @@
             this.WisdomSaveProficiencyToggle.AutoSize = true;
             this.WisdomSaveProficiencyToggle.Location = new System.Drawing.Point(640, 14);
             this.WisdomSaveProficiencyToggle.Name = "WisdomSaveProficiencyToggle";
-            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(75, 17);
+            this.WisdomSaveProficiencyToggle.Size = new System.Drawing.Size(93, 21);
             this.WisdomSaveProficiencyToggle.TabIndex = 59;
             this.WisdomSaveProficiencyToggle.Text = "Wis. Save";
             this.WisdomSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1249,7 +1266,7 @@
             this.IntelligenceSaveProficiencyToggle.AutoSize = true;
             this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(477, 14);
             this.IntelligenceSaveProficiencyToggle.Name = "IntelligenceSaveProficiencyToggle";
-            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(69, 17);
+            this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(85, 21);
             this.IntelligenceSaveProficiencyToggle.TabIndex = 58;
             this.IntelligenceSaveProficiencyToggle.Text = "Int. Save";
             this.IntelligenceSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1260,7 +1277,7 @@
             this.ConstitutionSaveProficiencyToggle.AutoSize = true;
             this.ConstitutionSaveProficiencyToggle.Location = new System.Drawing.Point(322, 14);
             this.ConstitutionSaveProficiencyToggle.Name = "ConstitutionSaveProficiencyToggle";
-            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
+            this.ConstitutionSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
             this.ConstitutionSaveProficiencyToggle.TabIndex = 57;
             this.ConstitutionSaveProficiencyToggle.Text = "Con. Save";
             this.ConstitutionSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1271,7 +1288,7 @@
             this.DexteritySaveProficiencyToggle.AutoSize = true;
             this.DexteritySaveProficiencyToggle.Location = new System.Drawing.Point(170, 14);
             this.DexteritySaveProficiencyToggle.Name = "DexteritySaveProficiencyToggle";
-            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(76, 17);
+            this.DexteritySaveProficiencyToggle.Size = new System.Drawing.Size(94, 21);
             this.DexteritySaveProficiencyToggle.TabIndex = 56;
             this.DexteritySaveProficiencyToggle.Text = "Dex. Save";
             this.DexteritySaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1282,7 +1299,7 @@
             this.StrengthSaveProficiencyToggle.AutoSize = true;
             this.StrengthSaveProficiencyToggle.Location = new System.Drawing.Point(15, 13);
             this.StrengthSaveProficiencyToggle.Name = "StrengthSaveProficiencyToggle";
-            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(70, 17);
+            this.StrengthSaveProficiencyToggle.Size = new System.Drawing.Size(88, 21);
             this.StrengthSaveProficiencyToggle.TabIndex = 55;
             this.StrengthSaveProficiencyToggle.Text = "Str. Save";
             this.StrengthSaveProficiencyToggle.UseVisualStyleBackColor = true;
@@ -1294,7 +1311,7 @@
             this.StrengthSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.StrengthSaveLabel.Location = new System.Drawing.Point(118, 17);
             this.StrengthSaveLabel.Name = "StrengthSaveLabel";
-            this.StrengthSaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.StrengthSaveLabel.Size = new System.Drawing.Size(14, 15);
             this.StrengthSaveLabel.TabIndex = 48;
             this.StrengthSaveLabel.Text = "0";
             // 
@@ -1304,7 +1321,7 @@
             this.CharismaSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.CharismaSaveLabel.Location = new System.Drawing.Point(899, 17);
             this.CharismaSaveLabel.Name = "CharismaSaveLabel";
-            this.CharismaSaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.CharismaSaveLabel.Size = new System.Drawing.Size(14, 15);
             this.CharismaSaveLabel.TabIndex = 46;
             this.CharismaSaveLabel.Text = "0";
             // 
@@ -1314,7 +1331,7 @@
             this.WisdomSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.WisdomSaveLabel.Location = new System.Drawing.Point(741, 19);
             this.WisdomSaveLabel.Name = "WisdomSaveLabel";
-            this.WisdomSaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.WisdomSaveLabel.Size = new System.Drawing.Size(14, 15);
             this.WisdomSaveLabel.TabIndex = 44;
             this.WisdomSaveLabel.Text = "0";
             // 
@@ -1324,7 +1341,7 @@
             this.IntelligenceSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.IntelligenceSaveLabel.Location = new System.Drawing.Point(588, 19);
             this.IntelligenceSaveLabel.Name = "IntelligenceSaveLabel";
-            this.IntelligenceSaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.IntelligenceSaveLabel.Size = new System.Drawing.Size(14, 15);
             this.IntelligenceSaveLabel.TabIndex = 42;
             this.IntelligenceSaveLabel.Text = "0";
             // 
@@ -1334,7 +1351,7 @@
             this.ConstitutionSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.ConstitutionSaveLabel.Location = new System.Drawing.Point(434, 19);
             this.ConstitutionSaveLabel.Name = "ConstitutionSaveLabel";
-            this.ConstitutionSaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.ConstitutionSaveLabel.Size = new System.Drawing.Size(14, 15);
             this.ConstitutionSaveLabel.TabIndex = 40;
             this.ConstitutionSaveLabel.Text = "0";
             // 
@@ -1344,7 +1361,7 @@
             this.DexteritySaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
             this.DexteritySaveLabel.Location = new System.Drawing.Point(277, 19);
             this.DexteritySaveLabel.Name = "DexteritySaveLabel";
-            this.DexteritySaveLabel.Size = new System.Drawing.Size(13, 13);
+            this.DexteritySaveLabel.Size = new System.Drawing.Size(14, 15);
             this.DexteritySaveLabel.TabIndex = 38;
             this.DexteritySaveLabel.Text = "0";
             // 
@@ -1354,9 +1371,9 @@
             this.groupBox2.Controls.Add(this.CharismaAttributeDisplay);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox2.Location = new System.Drawing.Point(836, 26);
+            this.groupBox2.Location = new System.Drawing.Point(836, 18);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(135, 91);
+            this.groupBox2.Size = new System.Drawing.Size(135, 94);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Charisma";
@@ -1369,7 +1386,7 @@
             this.CharismaAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.CharismaAttributeDisplay.Location = new System.Drawing.Point(18, 25);
             this.CharismaAttributeDisplay.Name = "CharismaAttributeDisplay";
-            this.CharismaAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.CharismaAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.CharismaAttributeDisplay.TabIndex = 12;
             this.CharismaAttributeDisplay.Text = "0";
             this.CharismaAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1380,7 +1397,7 @@
             // 
             this.groupBox3.Controls.Add(this.CharismaModifierLabel);
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.groupBox3.Location = new System.Drawing.Point(3, 52);
+            this.groupBox3.Location = new System.Drawing.Point(3, 55);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(129, 36);
             this.groupBox3.TabIndex = 11;
@@ -1390,9 +1407,9 @@
             // 
             this.CharismaModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CharismaModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CharismaModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.CharismaModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.CharismaModifierLabel.Name = "CharismaModifierLabel";
-            this.CharismaModifierLabel.Size = new System.Drawing.Size(123, 19);
+            this.CharismaModifierLabel.Size = new System.Drawing.Size(123, 16);
             this.CharismaModifierLabel.TabIndex = 10;
             this.CharismaModifierLabel.Text = "0";
             this.CharismaModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1404,7 +1421,7 @@
             this.groupBox4.Controls.Add(this.StrengthAttributeDisplay);
             this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox4.Location = new System.Drawing.Point(57, 26);
+            this.groupBox4.Location = new System.Drawing.Point(57, 18);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(135, 94);
             this.groupBox4.TabIndex = 11;
@@ -1419,7 +1436,7 @@
             this.StrengthAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.StrengthAttributeDisplay.Location = new System.Drawing.Point(17, 23);
             this.StrengthAttributeDisplay.Name = "StrengthAttributeDisplay";
-            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.StrengthAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.StrengthAttributeDisplay.TabIndex = 15;
             this.StrengthAttributeDisplay.Text = "0";
             this.StrengthAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1440,7 +1457,7 @@
             // 
             this.StrengthModifierLabel.Dock = System.Windows.Forms.DockStyle.Top;
             this.StrengthModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StrengthModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.StrengthModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.StrengthModifierLabel.Name = "StrengthModifierLabel";
             this.StrengthModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.StrengthModifierLabel.TabIndex = 10;
@@ -1453,7 +1470,7 @@
             this.groupBox12.Controls.Add(this.WisdomAttributeDisplay);
             this.groupBox12.Controls.Add(this.groupBox13);
             this.groupBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox12.Location = new System.Drawing.Point(685, 26);
+            this.groupBox12.Location = new System.Drawing.Point(685, 18);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(135, 94);
             this.groupBox12.TabIndex = 11;
@@ -1468,7 +1485,7 @@
             this.WisdomAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.WisdomAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.WisdomAttributeDisplay.Name = "WisdomAttributeDisplay";
-            this.WisdomAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.WisdomAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.WisdomAttributeDisplay.TabIndex = 13;
             this.WisdomAttributeDisplay.Text = "0";
             this.WisdomAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1489,9 +1506,9 @@
             // 
             this.WisdomModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.WisdomModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WisdomModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.WisdomModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.WisdomModifierLabel.Name = "WisdomModifierLabel";
-            this.WisdomModifierLabel.Size = new System.Drawing.Size(123, 22);
+            this.WisdomModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.WisdomModifierLabel.TabIndex = 10;
             this.WisdomModifierLabel.Text = "0";
             this.WisdomModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1502,7 +1519,7 @@
             this.groupBox10.Controls.Add(this.IntelligenceAttributeDisplay);
             this.groupBox10.Controls.Add(this.groupBox11);
             this.groupBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox10.Location = new System.Drawing.Point(524, 26);
+            this.groupBox10.Location = new System.Drawing.Point(524, 18);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(135, 94);
             this.groupBox10.TabIndex = 12;
@@ -1517,7 +1534,7 @@
             this.IntelligenceAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.IntelligenceAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.IntelligenceAttributeDisplay.Name = "IntelligenceAttributeDisplay";
-            this.IntelligenceAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.IntelligenceAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.IntelligenceAttributeDisplay.TabIndex = 14;
             this.IntelligenceAttributeDisplay.Text = "0";
             this.IntelligenceAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1538,9 +1555,9 @@
             // 
             this.IntelligenceModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.IntelligenceModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IntelligenceModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.IntelligenceModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.IntelligenceModifierLabel.Name = "IntelligenceModifierLabel";
-            this.IntelligenceModifierLabel.Size = new System.Drawing.Size(123, 22);
+            this.IntelligenceModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.IntelligenceModifierLabel.TabIndex = 10;
             this.IntelligenceModifierLabel.Text = "0";
             this.IntelligenceModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1551,7 +1568,7 @@
             this.groupBox8.Controls.Add(this.ConstitutionAttributeDisplay);
             this.groupBox8.Controls.Add(this.groupBox9);
             this.groupBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox8.Location = new System.Drawing.Point(364, 26);
+            this.groupBox8.Location = new System.Drawing.Point(364, 17);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Size = new System.Drawing.Size(135, 94);
             this.groupBox8.TabIndex = 11;
@@ -1566,7 +1583,7 @@
             this.ConstitutionAttributeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.ConstitutionAttributeDisplay.Location = new System.Drawing.Point(17, 25);
             this.ConstitutionAttributeDisplay.Name = "ConstitutionAttributeDisplay";
-            this.ConstitutionAttributeDisplay.Size = new System.Drawing.Size(100, 16);
+            this.ConstitutionAttributeDisplay.Size = new System.Drawing.Size(100, 20);
             this.ConstitutionAttributeDisplay.TabIndex = 15;
             this.ConstitutionAttributeDisplay.Text = "0";
             this.ConstitutionAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -1587,9 +1604,9 @@
             // 
             this.ConstitutionModifierLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ConstitutionModifierLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConstitutionModifierLabel.Location = new System.Drawing.Point(3, 14);
+            this.ConstitutionModifierLabel.Location = new System.Drawing.Point(3, 17);
             this.ConstitutionModifierLabel.Name = "ConstitutionModifierLabel";
-            this.ConstitutionModifierLabel.Size = new System.Drawing.Size(123, 22);
+            this.ConstitutionModifierLabel.Size = new System.Drawing.Size(123, 19);
             this.ConstitutionModifierLabel.TabIndex = 10;
             this.ConstitutionModifierLabel.Text = "0";
             this.ConstitutionModifierLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1598,7 +1615,7 @@
             // 
             this.groupBox14.Controls.Add(this.CharacterNameLabel);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(103, 213);
+            this.groupBox14.Location = new System.Drawing.Point(114, 213);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox14.Size = new System.Drawing.Size(265, 56);
@@ -1610,9 +1627,9 @@
             // 
             this.CharacterNameLabel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CharacterNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.CharacterNameLabel.Location = new System.Drawing.Point(3, 14);
+            this.CharacterNameLabel.Location = new System.Drawing.Point(3, 17);
             this.CharacterNameLabel.Name = "CharacterNameLabel";
-            this.CharacterNameLabel.Size = new System.Drawing.Size(259, 39);
+            this.CharacterNameLabel.Size = new System.Drawing.Size(259, 36);
             this.CharacterNameLabel.TabIndex = 0;
             this.CharacterNameLabel.Text = "\"CharacterName\"";
             this.CharacterNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1621,7 +1638,7 @@
             // 
             this.groupBox15.Controls.Add(this.RaceDisplayTextBox);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox15.Location = new System.Drawing.Point(1435, 16);
+            this.groupBox15.Location = new System.Drawing.Point(1430, 12);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox15.Size = new System.Drawing.Size(225, 75);
@@ -1637,7 +1654,7 @@
             this.RaceDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RaceDisplayTextBox.Location = new System.Drawing.Point(6, 36);
             this.RaceDisplayTextBox.Name = "RaceDisplayTextBox";
-            this.RaceDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.RaceDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.RaceDisplayTextBox.TabIndex = 3;
             this.RaceDisplayTextBox.Text = "\"Race\"";
             this.RaceDisplayTextBox.TextChanged += new System.EventHandler(this.RaceDisplayTextBox_TextChanged);
@@ -1646,10 +1663,10 @@
             // 
             this.groupBox16.Controls.Add(this.ClassDisplayTextBox);
             this.groupBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox16.Location = new System.Drawing.Point(1692, 16);
+            this.groupBox16.Location = new System.Drawing.Point(1664, 12);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox16.Size = new System.Drawing.Size(200, 75);
+            this.groupBox16.Size = new System.Drawing.Size(225, 75);
             this.groupBox16.TabIndex = 14;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Class";
@@ -1662,7 +1679,7 @@
             this.ClassDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ClassDisplayTextBox.Location = new System.Drawing.Point(6, 36);
             this.ClassDisplayTextBox.Name = "ClassDisplayTextBox";
-            this.ClassDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.ClassDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.ClassDisplayTextBox.TabIndex = 0;
             this.ClassDisplayTextBox.Text = "\"Class\"";
             this.ClassDisplayTextBox.TextChanged += new System.EventHandler(this.ClassDisplayTextBox_TextChanged);
@@ -1671,10 +1688,10 @@
             // 
             this.groupBox17.Controls.Add(this.BackgroundDisplayTextBox);
             this.groupBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox17.Location = new System.Drawing.Point(1435, 103);
+            this.groupBox17.Location = new System.Drawing.Point(1431, 104);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox17.Size = new System.Drawing.Size(225, 72);
+            this.groupBox17.Size = new System.Drawing.Size(225, 75);
             this.groupBox17.TabIndex = 14;
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Background";
@@ -1687,7 +1704,7 @@
             this.BackgroundDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackgroundDisplayTextBox.Location = new System.Drawing.Point(6, 35);
             this.BackgroundDisplayTextBox.Name = "BackgroundDisplayTextBox";
-            this.BackgroundDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.BackgroundDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.BackgroundDisplayTextBox.TabIndex = 2;
             this.BackgroundDisplayTextBox.Text = "\"Background\"";
             this.BackgroundDisplayTextBox.TextChanged += new System.EventHandler(this.BackgroundDisplayTextBox_TextChanged);
@@ -1696,10 +1713,10 @@
             // 
             this.groupBox20.Controls.Add(this.AlignmentDisplayTextBox);
             this.groupBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox20.Location = new System.Drawing.Point(1692, 103);
+            this.groupBox20.Location = new System.Drawing.Point(1664, 104);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox20.Size = new System.Drawing.Size(197, 72);
+            this.groupBox20.Size = new System.Drawing.Size(225, 75);
             this.groupBox20.TabIndex = 16;
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Alignment";
@@ -1712,7 +1729,7 @@
             this.AlignmentDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AlignmentDisplayTextBox.Location = new System.Drawing.Point(6, 35);
             this.AlignmentDisplayTextBox.Name = "AlignmentDisplayTextBox";
-            this.AlignmentDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.AlignmentDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.AlignmentDisplayTextBox.TabIndex = 1;
             this.AlignmentDisplayTextBox.Text = "\"Alignment\"";
             this.AlignmentDisplayTextBox.TextChanged += new System.EventHandler(this.AlignmentDisplayTextBox_TextChanged);
@@ -1721,7 +1738,7 @@
             // 
             this.groupBox21.Controls.Add(this.ExperienceDisplayTextBox);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox21.Location = new System.Drawing.Point(1432, 194);
+            this.groupBox21.Location = new System.Drawing.Point(1431, 194);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox21.Size = new System.Drawing.Size(225, 75);
@@ -1737,7 +1754,7 @@
             this.ExperienceDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExperienceDisplayTextBox.Location = new System.Drawing.Point(9, 37);
             this.ExperienceDisplayTextBox.Name = "ExperienceDisplayTextBox";
-            this.ExperienceDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.ExperienceDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.ExperienceDisplayTextBox.TabIndex = 3;
             this.ExperienceDisplayTextBox.Text = "\"Experience Points\"";
             this.ExperienceDisplayTextBox.TextChanged += new System.EventHandler(this.ExperienceDisplayTextBox_TextChanged);
@@ -1747,10 +1764,10 @@
             // 
             this.groupBox18.Controls.Add(this.LevelDisplayTextBox);
             this.groupBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox18.Location = new System.Drawing.Point(1689, 194);
+            this.groupBox18.Location = new System.Drawing.Point(1664, 194);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.groupBox18.Size = new System.Drawing.Size(200, 75);
+            this.groupBox18.Size = new System.Drawing.Size(225, 75);
             this.groupBox18.TabIndex = 16;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Level";
@@ -1763,7 +1780,7 @@
             this.LevelDisplayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LevelDisplayTextBox.Location = new System.Drawing.Point(9, 37);
             this.LevelDisplayTextBox.Name = "LevelDisplayTextBox";
-            this.LevelDisplayTextBox.Size = new System.Drawing.Size(97, 13);
+            this.LevelDisplayTextBox.Size = new System.Drawing.Size(97, 16);
             this.LevelDisplayTextBox.TabIndex = 2;
             this.LevelDisplayTextBox.Text = "\"Level\"";
             this.LevelDisplayTextBox.TextChanged += new System.EventHandler(this.LevelDisplayTextBox_TextChanged);
@@ -1773,9 +1790,9 @@
             // 
             this.BondsDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.BondsDisplay.Enabled = false;
-            this.BondsDisplay.Location = new System.Drawing.Point(1692, 308);
+            this.BondsDisplay.Location = new System.Drawing.Point(1664, 305);
             this.BondsDisplay.Name = "BondsDisplay";
-            this.BondsDisplay.Size = new System.Drawing.Size(200, 142);
+            this.BondsDisplay.Size = new System.Drawing.Size(225, 150);
             this.BondsDisplay.TabIndex = 40;
             this.BondsDisplay.Text = "";
             this.BondsDisplay.TextChanged += new System.EventHandler(this.BondsDisplay_TextChanged);
@@ -1784,9 +1801,9 @@
             // 
             this.TraitsDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.TraitsDisplay.Enabled = false;
-            this.TraitsDisplay.Location = new System.Drawing.Point(1435, 308);
+            this.TraitsDisplay.Location = new System.Drawing.Point(1431, 305);
             this.TraitsDisplay.Name = "TraitsDisplay";
-            this.TraitsDisplay.Size = new System.Drawing.Size(225, 142);
+            this.TraitsDisplay.Size = new System.Drawing.Size(225, 150);
             this.TraitsDisplay.TabIndex = 41;
             this.TraitsDisplay.Text = "";
             this.TraitsDisplay.TextChanged += new System.EventHandler(this.TraitsDisplay_TextChanged);
@@ -1795,9 +1812,9 @@
             // 
             this.IdealsDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.IdealsDisplay.Enabled = false;
-            this.IdealsDisplay.Location = new System.Drawing.Point(1435, 498);
+            this.IdealsDisplay.Location = new System.Drawing.Point(1430, 486);
             this.IdealsDisplay.Name = "IdealsDisplay";
-            this.IdealsDisplay.Size = new System.Drawing.Size(225, 139);
+            this.IdealsDisplay.Size = new System.Drawing.Size(225, 150);
             this.IdealsDisplay.TabIndex = 42;
             this.IdealsDisplay.Text = "";
             this.IdealsDisplay.TextChanged += new System.EventHandler(this.IdealsDisplay_TextChanged);
@@ -1806,9 +1823,9 @@
             // 
             this.FlawsDisplay.BackColor = System.Drawing.SystemColors.Control;
             this.FlawsDisplay.Enabled = false;
-            this.FlawsDisplay.Location = new System.Drawing.Point(1692, 498);
+            this.FlawsDisplay.Location = new System.Drawing.Point(1664, 486);
             this.FlawsDisplay.Name = "FlawsDisplay";
-            this.FlawsDisplay.Size = new System.Drawing.Size(200, 139);
+            this.FlawsDisplay.Size = new System.Drawing.Size(225, 151);
             this.FlawsDisplay.TabIndex = 43;
             this.FlawsDisplay.Text = "";
             this.FlawsDisplay.TextChanged += new System.EventHandler(this.FlawsDisplay_TextChanged);
@@ -1817,9 +1834,9 @@
             // 
             this.BackstoryBox.BackColor = System.Drawing.SystemColors.Control;
             this.BackstoryBox.Enabled = false;
-            this.BackstoryBox.Location = new System.Drawing.Point(1435, 673);
+            this.BackstoryBox.Location = new System.Drawing.Point(1432, 659);
             this.BackstoryBox.Name = "BackstoryBox";
-            this.BackstoryBox.Size = new System.Drawing.Size(457, 334);
+            this.BackstoryBox.Size = new System.Drawing.Size(457, 293);
             this.BackstoryBox.TabIndex = 44;
             this.BackstoryBox.Text = "";
             this.BackstoryBox.TextChanged += new System.EventHandler(this.BackstoryBox_TextChanged);
@@ -1828,9 +1845,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label15.Location = new System.Drawing.Point(1531, 292);
+            this.label15.Location = new System.Drawing.Point(1523, 288);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 13);
+            this.label15.Size = new System.Drawing.Size(42, 16);
             this.label15.TabIndex = 45;
             this.label15.Text = "Traits";
             // 
@@ -1838,9 +1855,9 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label16.Location = new System.Drawing.Point(1777, 292);
+            this.label16.Location = new System.Drawing.Point(1761, 288);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(37, 13);
+            this.label16.Size = new System.Drawing.Size(47, 16);
             this.label16.TabIndex = 46;
             this.label16.Text = "Bonds";
             // 
@@ -1848,9 +1865,9 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label17.Location = new System.Drawing.Point(1529, 482);
+            this.label17.Location = new System.Drawing.Point(1523, 468);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 13);
+            this.label17.Size = new System.Drawing.Size(45, 16);
             this.label17.TabIndex = 47;
             this.label17.Text = "Ideals";
             // 
@@ -1858,9 +1875,9 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label18.Location = new System.Drawing.Point(1780, 482);
+            this.label18.Location = new System.Drawing.Point(1763, 470);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(34, 13);
+            this.label18.Size = new System.Drawing.Size(43, 16);
             this.label18.TabIndex = 48;
             this.label18.Text = "Flaws";
             // 
@@ -1868,9 +1885,9 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label19.Location = new System.Drawing.Point(1653, 657);
+            this.label19.Location = new System.Drawing.Point(1630, 643);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(52, 13);
+            this.label19.Size = new System.Drawing.Size(68, 16);
             this.label19.TabIndex = 49;
             this.label19.Text = "Backstory";
             // 
@@ -1895,18 +1912,18 @@
             this.groupBox22.Controls.Add(this.WeaponSlotOneNameDisplay);
             this.groupBox22.Controls.Add(this.WeaponSlotTwoNameDisplay);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox22.Location = new System.Drawing.Point(778, 300);
+            this.groupBox22.Location = new System.Drawing.Point(872, 300);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(629, 338);
+            this.groupBox22.Size = new System.Drawing.Size(535, 155);
             this.groupBox22.TabIndex = 50;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Attacks";
             // 
             // RemoveSlotThree
             // 
-            this.RemoveSlotThree.Location = new System.Drawing.Point(594, 116);
+            this.RemoveSlotThree.Location = new System.Drawing.Point(477, 98);
             this.RemoveSlotThree.Name = "RemoveSlotThree";
-            this.RemoveSlotThree.Size = new System.Drawing.Size(33, 26);
+            this.RemoveSlotThree.Size = new System.Drawing.Size(52, 26);
             this.RemoveSlotThree.TabIndex = 17;
             this.RemoveSlotThree.Text = "Del";
             this.RemoveSlotThree.UseVisualStyleBackColor = true;
@@ -1914,9 +1931,9 @@
             // 
             // RemoveSlotTwo
             // 
-            this.RemoveSlotTwo.Location = new System.Drawing.Point(594, 74);
+            this.RemoveSlotTwo.Location = new System.Drawing.Point(477, 64);
             this.RemoveSlotTwo.Name = "RemoveSlotTwo";
-            this.RemoveSlotTwo.Size = new System.Drawing.Size(35, 27);
+            this.RemoveSlotTwo.Size = new System.Drawing.Size(52, 27);
             this.RemoveSlotTwo.TabIndex = 16;
             this.RemoveSlotTwo.Text = "Del";
             this.RemoveSlotTwo.UseVisualStyleBackColor = true;
@@ -1924,9 +1941,9 @@
             // 
             // RemoveSlotOne
             // 
-            this.RemoveSlotOne.Location = new System.Drawing.Point(594, 38);
+            this.RemoveSlotOne.Location = new System.Drawing.Point(477, 31);
             this.RemoveSlotOne.Name = "RemoveSlotOne";
-            this.RemoveSlotOne.Size = new System.Drawing.Size(35, 23);
+            this.RemoveSlotOne.Size = new System.Drawing.Size(52, 27);
             this.RemoveSlotOne.TabIndex = 15;
             this.RemoveSlotOne.Text = "Del";
             this.RemoveSlotOne.UseVisualStyleBackColor = true;
@@ -1935,9 +1952,9 @@
             // WeaponSlotTwoProficiency
             // 
             this.WeaponSlotTwoProficiency.AutoSize = true;
-            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(0, 77);
+            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(6, 65);
             this.WeaponSlotTwoProficiency.Name = "WeaponSlotTwoProficiency";
-            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(53, 17);
+            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(63, 20);
             this.WeaponSlotTwoProficiency.TabIndex = 14;
             this.WeaponSlotTwoProficiency.Text = "prof 2";
             this.WeaponSlotTwoProficiency.UseVisualStyleBackColor = true;
@@ -1946,9 +1963,9 @@
             // WeaponSlotThreeProficiency
             // 
             this.WeaponSlotThreeProficiency.AutoSize = true;
-            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(0, 119);
+            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(6, 98);
             this.WeaponSlotThreeProficiency.Name = "WeaponSlotThreeProficiency";
-            this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(53, 17);
+            this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(63, 20);
             this.WeaponSlotThreeProficiency.TabIndex = 13;
             this.WeaponSlotThreeProficiency.Text = "prof 3";
             this.WeaponSlotThreeProficiency.UseVisualStyleBackColor = true;
@@ -1957,9 +1974,9 @@
             // WeaponSlotOneProficiency
             // 
             this.WeaponSlotOneProficiency.AutoSize = true;
-            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(0, 41);
+            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(6, 33);
             this.WeaponSlotOneProficiency.Name = "WeaponSlotOneProficiency";
-            this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(44, 17);
+            this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(53, 20);
             this.WeaponSlotOneProficiency.TabIndex = 12;
             this.WeaponSlotOneProficiency.Text = "prof";
             this.WeaponSlotOneProficiency.UseVisualStyleBackColor = true;
@@ -1968,128 +1985,131 @@
             // WeaponSlotTwoDamageTypeDisplay
             // 
             this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(495, 81);
+            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(365, 69);
             this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
-            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
             this.WeaponSlotTwoDamageTypeDisplay.TabIndex = 11;
             this.WeaponSlotTwoDamageTypeDisplay.Text = "Damage Type 2";
             // 
             // WeaponSlotThreeDamageTypeDisplay
             // 
             this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(495, 123);
+            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(365, 104);
             this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
-            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
             this.WeaponSlotThreeDamageTypeDisplay.TabIndex = 10;
             this.WeaponSlotThreeDamageTypeDisplay.Text = "Damage Type 3";
             // 
             // WeaponSlotOneDamageTypeDisplay
             // 
             this.WeaponSlotOneDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(495, 42);
+            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(365, 35);
             this.WeaponSlotOneDamageTypeDisplay.Name = "WeaponSlotOneDamageTypeDisplay";
-            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(81, 13);
+            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(106, 16);
             this.WeaponSlotOneDamageTypeDisplay.TabIndex = 9;
             this.WeaponSlotOneDamageTypeDisplay.Text = "Damage Type 1";
             // 
             // WeaponSlotTwoDamageDisplay
             // 
             this.WeaponSlotTwoDamageDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(357, 84);
+            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(288, 67);
             this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
-            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(71, 16);
             this.WeaponSlotTwoDamageDisplay.TabIndex = 8;
             this.WeaponSlotTwoDamageDisplay.Text = "Damage 2";
             // 
             // WeaponSlotThreeDamageDisplay
             // 
             this.WeaponSlotThreeDamageDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(357, 123);
+            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(288, 104);
             this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
-            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(71, 16);
             this.WeaponSlotThreeDamageDisplay.TabIndex = 7;
             this.WeaponSlotThreeDamageDisplay.Text = "Damage 3";
             // 
             // WeaponSlotOneDamageDisplay
             // 
             this.WeaponSlotOneDamageDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(357, 43);
+            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(288, 35);
             this.WeaponSlotOneDamageDisplay.Name = "WeaponSlotOneDamageDisplay";
-            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(56, 13);
+            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(71, 16);
             this.WeaponSlotOneDamageDisplay.TabIndex = 6;
             this.WeaponSlotOneDamageDisplay.Text = "Damage 1";
             // 
             // WeaponSlotTwoATKBonusDisplay
             // 
             this.WeaponSlotTwoATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(196, 81);
+            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(197, 67);
             this.WeaponSlotTwoATKBonusDisplay.Name = "WeaponSlotTwoATKBonusDisplay";
-            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
             this.WeaponSlotTwoATKBonusDisplay.TabIndex = 5;
             this.WeaponSlotTwoATKBonusDisplay.Text = "ATK Bonus 2";
             // 
             // WeaponSlotThreeATKBonusDisplay
             // 
             this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(196, 123);
+            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(197, 104);
             this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
-            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
             this.WeaponSlotThreeATKBonusDisplay.TabIndex = 4;
             this.WeaponSlotThreeATKBonusDisplay.Text = "ATK Bonus 3";
             // 
             // WeaponSlotOneATKBonusDisplay
             // 
             this.WeaponSlotOneATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(196, 43);
+            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(198, 35);
             this.WeaponSlotOneATKBonusDisplay.Name = "WeaponSlotOneATKBonusDisplay";
-            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(68, 13);
+            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(85, 16);
             this.WeaponSlotOneATKBonusDisplay.TabIndex = 3;
             this.WeaponSlotOneATKBonusDisplay.Text = "ATK Bonus 1";
             // 
             // WeaponSlotThreeNameDisplay
             // 
             this.WeaponSlotThreeNameDisplay.AutoSize = true;
-            this.WeaponSlotThreeNameDisplay.Location = new System.Drawing.Point(40, 123);
+            this.WeaponSlotThreeNameDisplay.Location = new System.Drawing.Point(75, 102);
             this.WeaponSlotThreeNameDisplay.Name = "WeaponSlotThreeNameDisplay";
-            this.WeaponSlotThreeNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotThreeNameDisplay.Size = new System.Drawing.Size(110, 16);
             this.WeaponSlotThreeNameDisplay.TabIndex = 2;
             this.WeaponSlotThreeNameDisplay.Text = "Weapon 3 Name";
             // 
             // WeaponSlotOneNameDisplay
             // 
             this.WeaponSlotOneNameDisplay.AutoSize = true;
-            this.WeaponSlotOneNameDisplay.Location = new System.Drawing.Point(43, 43);
+            this.WeaponSlotOneNameDisplay.Location = new System.Drawing.Point(75, 35);
             this.WeaponSlotOneNameDisplay.Name = "WeaponSlotOneNameDisplay";
-            this.WeaponSlotOneNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotOneNameDisplay.Size = new System.Drawing.Size(110, 16);
             this.WeaponSlotOneNameDisplay.TabIndex = 1;
             this.WeaponSlotOneNameDisplay.Text = "Weapon 1 Name";
             // 
             // WeaponSlotTwoNameDisplay
             // 
             this.WeaponSlotTwoNameDisplay.AutoSize = true;
-            this.WeaponSlotTwoNameDisplay.Location = new System.Drawing.Point(43, 81);
+            this.WeaponSlotTwoNameDisplay.Location = new System.Drawing.Point(75, 67);
             this.WeaponSlotTwoNameDisplay.Name = "WeaponSlotTwoNameDisplay";
-            this.WeaponSlotTwoNameDisplay.Size = new System.Drawing.Size(85, 13);
+            this.WeaponSlotTwoNameDisplay.Size = new System.Drawing.Size(110, 16);
             this.WeaponSlotTwoNameDisplay.TabIndex = 0;
             this.WeaponSlotTwoNameDisplay.Text = "Weapon 2 Name";
             // 
             // groupBox23
             // 
+            this.groupBox23.Controls.Add(this.groupBox183);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox23.Location = new System.Drawing.Point(778, 673);
+            this.groupBox23.Location = new System.Drawing.Point(872, 477);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(629, 334);
+            this.groupBox23.Size = new System.Drawing.Size(535, 476);
             this.groupBox23.TabIndex = 51;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Spells";
             // 
             // groupBox24
             // 
+            this.groupBox24.Controls.Add(this.button4);
+            this.groupBox24.Controls.Add(this.button6);
             this.groupBox24.Controls.Add(this.listBox1);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox24.Location = new System.Drawing.Point(390, 673);
+            this.groupBox24.Location = new System.Drawing.Point(488, 619);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(359, 186);
+            this.groupBox24.Size = new System.Drawing.Size(359, 180);
             this.groupBox24.TabIndex = 52;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Class Features";
@@ -2098,26 +2118,31 @@
             // 
             this.listBox1.BackColor = System.Drawing.SystemColors.Control;
             this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
             this.listBox1.Location = new System.Drawing.Point(6, 16);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(343, 147);
+            this.listBox1.Size = new System.Drawing.Size(343, 139);
             this.listBox1.TabIndex = 72;
             // 
             // listBox
             // 
             this.listBox.BackColor = System.Drawing.SystemColors.Control;
             this.listBox.FormattingEnabled = true;
-            this.listBox.Location = new System.Drawing.Point(8, 40);
+            this.listBox.ItemHeight = 15;
+            this.listBox.Location = new System.Drawing.Point(8, 41);
             this.listBox.Name = "listBox";
-            this.listBox.Size = new System.Drawing.Size(166, 225);
+            this.listBox.Size = new System.Drawing.Size(257, 199);
             this.listBox.TabIndex = 1;
             // 
             // groupBox25
             // 
+            this.groupBox25.Controls.Add(this.button7);
+            this.groupBox25.Controls.Add(this.button8);
+            this.groupBox25.Controls.Add(this.listBox2);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox25.Location = new System.Drawing.Point(390, 865);
+            this.groupBox25.Location = new System.Drawing.Point(488, 807);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(359, 142);
+            this.groupBox25.Size = new System.Drawing.Size(359, 146);
             this.groupBox25.TabIndex = 53;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Other Features and Traits";
@@ -2133,9 +2158,9 @@
             this.groupBox26.Controls.Add(this.checkBox2);
             this.groupBox26.Controls.Add(this.checkBox1);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox26.Location = new System.Drawing.Point(389, 522);
+            this.groupBox26.Location = new System.Drawing.Point(487, 521);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(360, 115);
+            this.groupBox26.Size = new System.Drawing.Size(360, 91);
             this.groupBox26.TabIndex = 54;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Death Saving Throws";
@@ -2143,27 +2168,27 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(239, 72);
+            this.checkBox4.Location = new System.Drawing.Point(255, 60);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.Size = new System.Drawing.Size(18, 17);
             this.checkBox4.TabIndex = 107;
             this.checkBox4.UseVisualStyleBackColor = true;
             // 
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(197, 72);
+            this.checkBox5.Location = new System.Drawing.Point(213, 60);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(15, 14);
+            this.checkBox5.Size = new System.Drawing.Size(18, 17);
             this.checkBox5.TabIndex = 106;
             this.checkBox5.UseVisualStyleBackColor = true;
             // 
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(151, 73);
+            this.checkBox6.Location = new System.Drawing.Point(169, 60);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(15, 14);
+            this.checkBox6.Size = new System.Drawing.Size(18, 17);
             this.checkBox6.TabIndex = 105;
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
@@ -2171,9 +2196,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label4.Location = new System.Drawing.Point(70, 72);
+            this.label4.Location = new System.Drawing.Point(88, 60);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(30, 16);
             this.label4.TabIndex = 104;
             this.label4.Text = "Fail";
             // 
@@ -2181,36 +2206,36 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label3.Location = new System.Drawing.Point(69, 41);
+            this.label3.Location = new System.Drawing.Point(87, 29);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(62, 16);
             this.label3.TabIndex = 103;
             this.label3.Text = "Succeed";
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(239, 40);
+            this.checkBox3.Location = new System.Drawing.Point(255, 28);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.Size = new System.Drawing.Size(18, 17);
             this.checkBox3.TabIndex = 102;
             this.checkBox3.UseVisualStyleBackColor = true;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(197, 40);
+            this.checkBox2.Location = new System.Drawing.Point(213, 29);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.Size = new System.Drawing.Size(18, 17);
             this.checkBox2.TabIndex = 101;
             this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(151, 41);
+            this.checkBox1.Location = new System.Drawing.Point(169, 29);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.Size = new System.Drawing.Size(18, 17);
             this.checkBox1.TabIndex = 100;
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -2218,7 +2243,7 @@
             // 
             this.groupBox27.Controls.Add(this.CurrentHitPointsDisplay);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox27.Location = new System.Drawing.Point(390, 406);
+            this.groupBox27.Location = new System.Drawing.Point(488, 402);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Size = new System.Drawing.Size(168, 110);
             this.groupBox27.TabIndex = 55;
@@ -2232,7 +2257,7 @@
             this.CurrentHitPointsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
             this.CurrentHitPointsDisplay.Location = new System.Drawing.Point(6, 31);
             this.CurrentHitPointsDisplay.Name = "CurrentHitPointsDisplay";
-            this.CurrentHitPointsDisplay.Size = new System.Drawing.Size(156, 50);
+            this.CurrentHitPointsDisplay.Size = new System.Drawing.Size(156, 62);
             this.CurrentHitPointsDisplay.TabIndex = 0;
             this.CurrentHitPointsDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CurrentHitPointsDisplay.ValueChanged += new System.EventHandler(this.CurrentHitPointsDisplay_ValueChanged);
@@ -2241,7 +2266,7 @@
             // 
             this.groupBox28.Controls.Add(this.MaxHealthDisplay);
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox28.Location = new System.Drawing.Point(584, 406);
+            this.groupBox28.Location = new System.Drawing.Point(681, 401);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Size = new System.Drawing.Size(165, 54);
             this.groupBox28.TabIndex = 56;
@@ -2256,7 +2281,7 @@
             this.MaxHealthDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
             this.MaxHealthDisplay.Location = new System.Drawing.Point(29, 17);
             this.MaxHealthDisplay.Name = "MaxHealthDisplay";
-            this.MaxHealthDisplay.Size = new System.Drawing.Size(100, 26);
+            this.MaxHealthDisplay.Size = new System.Drawing.Size(100, 32);
             this.MaxHealthDisplay.TabIndex = 0;
             this.MaxHealthDisplay.Text = "0";
             this.MaxHealthDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2267,7 +2292,7 @@
             // 
             this.groupBox29.Controls.Add(this.numericUpDown2);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox29.Location = new System.Drawing.Point(584, 460);
+            this.groupBox29.Location = new System.Drawing.Point(681, 456);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Size = new System.Drawing.Size(165, 56);
             this.groupBox29.TabIndex = 57;
@@ -2280,9 +2305,9 @@
             this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F);
-            this.numericUpDown2.Location = new System.Drawing.Point(3, 14);
+            this.numericUpDown2.Location = new System.Drawing.Point(3, 17);
             this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(159, 29);
+            this.numericUpDown2.Size = new System.Drawing.Size(159, 35);
             this.numericUpDown2.TabIndex = 1;
             this.numericUpDown2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -2290,9 +2315,9 @@
             // 
             this.groupBox30.Controls.Add(this.ArmorClassDisplay);
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox30.Location = new System.Drawing.Point(390, 300);
+            this.groupBox30.Location = new System.Drawing.Point(487, 300);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(105, 97);
+            this.groupBox30.Size = new System.Drawing.Size(105, 91);
             this.groupBox30.TabIndex = 58;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Armor Class";
@@ -2301,9 +2326,9 @@
             // 
             this.ArmorClassDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ArmorClassDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.ArmorClassDisplay.Location = new System.Drawing.Point(3, 14);
+            this.ArmorClassDisplay.Location = new System.Drawing.Point(3, 17);
             this.ArmorClassDisplay.Name = "ArmorClassDisplay";
-            this.ArmorClassDisplay.Size = new System.Drawing.Size(99, 80);
+            this.ArmorClassDisplay.Size = new System.Drawing.Size(99, 71);
             this.ArmorClassDisplay.TabIndex = 0;
             this.ArmorClassDisplay.Text = "0";
             this.ArmorClassDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2312,9 +2337,9 @@
             // 
             this.groupBox31.Controls.Add(this.InitiativeDisplay);
             this.groupBox31.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox31.Location = new System.Drawing.Point(516, 300);
+            this.groupBox31.Location = new System.Drawing.Point(613, 300);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(105, 97);
+            this.groupBox31.Size = new System.Drawing.Size(105, 91);
             this.groupBox31.TabIndex = 59;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Initiative";
@@ -2323,9 +2348,9 @@
             // 
             this.InitiativeDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InitiativeDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.InitiativeDisplay.Location = new System.Drawing.Point(3, 14);
+            this.InitiativeDisplay.Location = new System.Drawing.Point(3, 17);
             this.InitiativeDisplay.Name = "InitiativeDisplay";
-            this.InitiativeDisplay.Size = new System.Drawing.Size(99, 80);
+            this.InitiativeDisplay.Size = new System.Drawing.Size(99, 71);
             this.InitiativeDisplay.TabIndex = 0;
             this.InitiativeDisplay.Text = "0";
             this.InitiativeDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2334,9 +2359,9 @@
             // 
             this.groupBox32.Controls.Add(this.SpeedDisplay);
             this.groupBox32.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox32.Location = new System.Drawing.Point(641, 300);
+            this.groupBox32.Location = new System.Drawing.Point(738, 300);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Size = new System.Drawing.Size(108, 97);
+            this.groupBox32.Size = new System.Drawing.Size(108, 91);
             this.groupBox32.TabIndex = 59;
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "Speed";
@@ -2349,7 +2374,7 @@
             this.SpeedDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.SpeedDisplay.Location = new System.Drawing.Point(4, 42);
             this.SpeedDisplay.Name = "SpeedDisplay";
-            this.SpeedDisplay.Size = new System.Drawing.Size(100, 23);
+            this.SpeedDisplay.Size = new System.Drawing.Size(100, 28);
             this.SpeedDisplay.TabIndex = 0;
             this.SpeedDisplay.Text = "30";
             this.SpeedDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -2359,9 +2384,9 @@
             // groupBox33
             // 
             this.groupBox33.Controls.Add(this.InspirationDisplay);
-            this.groupBox33.Location = new System.Drawing.Point(120, 300);
+            this.groupBox33.Location = new System.Drawing.Point(118, 300);
             this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Size = new System.Drawing.Size(63, 56);
+            this.groupBox33.Size = new System.Drawing.Size(82, 56);
             this.groupBox33.TabIndex = 60;
             this.groupBox33.TabStop = false;
             // 
@@ -2369,9 +2394,9 @@
             // 
             this.InspirationDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.InspirationDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.InspirationDisplay.Location = new System.Drawing.Point(3, 16);
+            this.InspirationDisplay.Location = new System.Drawing.Point(3, 18);
             this.InspirationDisplay.Name = "InspirationDisplay";
-            this.InspirationDisplay.Size = new System.Drawing.Size(57, 37);
+            this.InspirationDisplay.Size = new System.Drawing.Size(76, 35);
             this.InspirationDisplay.TabIndex = 0;
             this.InspirationDisplay.Text = "0";
             this.InspirationDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2379,9 +2404,9 @@
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.ProficiencyBonusDisplay);
-            this.groupBox34.Location = new System.Drawing.Point(120, 368);
+            this.groupBox34.Location = new System.Drawing.Point(118, 356);
             this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Size = new System.Drawing.Size(64, 56);
+            this.groupBox34.Size = new System.Drawing.Size(82, 56);
             this.groupBox34.TabIndex = 61;
             this.groupBox34.TabStop = false;
             // 
@@ -2389,9 +2414,9 @@
             // 
             this.ProficiencyBonusDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProficiencyBonusDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.ProficiencyBonusDisplay.Location = new System.Drawing.Point(3, 16);
+            this.ProficiencyBonusDisplay.Location = new System.Drawing.Point(3, 18);
             this.ProficiencyBonusDisplay.Name = "ProficiencyBonusDisplay";
-            this.ProficiencyBonusDisplay.Size = new System.Drawing.Size(58, 37);
+            this.ProficiencyBonusDisplay.Size = new System.Drawing.Size(76, 35);
             this.ProficiencyBonusDisplay.TabIndex = 0;
             this.ProficiencyBonusDisplay.Text = "0";
             this.ProficiencyBonusDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -2399,9 +2424,9 @@
             // groupBox35
             // 
             this.groupBox35.Controls.Add(this.PassivePerceptionDisplay);
-            this.groupBox35.Location = new System.Drawing.Point(120, 435);
+            this.groupBox35.Location = new System.Drawing.Point(118, 411);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Size = new System.Drawing.Size(65, 57);
+            this.groupBox35.Size = new System.Drawing.Size(82, 57);
             this.groupBox35.TabIndex = 62;
             this.groupBox35.TabStop = false;
             // 
@@ -2409,21 +2434,27 @@
             // 
             this.PassivePerceptionDisplay.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PassivePerceptionDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.PassivePerceptionDisplay.Location = new System.Drawing.Point(3, 16);
+            this.PassivePerceptionDisplay.Location = new System.Drawing.Point(3, 18);
             this.PassivePerceptionDisplay.Name = "PassivePerceptionDisplay";
-            this.PassivePerceptionDisplay.Size = new System.Drawing.Size(59, 38);
+            this.PassivePerceptionDisplay.Size = new System.Drawing.Size(76, 36);
             this.PassivePerceptionDisplay.TabIndex = 0;
             this.PassivePerceptionDisplay.Text = "0";
             this.PassivePerceptionDisplay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox36
             // 
+            this.groupBox36.Controls.Add(this.label8);
+            this.groupBox36.Controls.Add(this.label7);
+            this.groupBox36.Controls.Add(this.label6);
+            this.groupBox36.Controls.Add(this.label5);
+            this.groupBox36.Controls.Add(this.richTextBox2);
+            this.groupBox36.Controls.Add(this.richTextBox1);
             this.groupBox36.Controls.Add(this.ShieldEquippedCheck);
             this.groupBox36.Controls.Add(this.EquippedArmorDisplay);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox36.Location = new System.Drawing.Point(120, 521);
+            this.groupBox36.Location = new System.Drawing.Point(118, 486);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Size = new System.Drawing.Size(248, 201);
+            this.groupBox36.Size = new System.Drawing.Size(346, 189);
             this.groupBox36.TabIndex = 63;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Equipment";
@@ -2431,9 +2462,9 @@
             // ShieldEquippedCheck
             // 
             this.ShieldEquippedCheck.AutoSize = true;
-            this.ShieldEquippedCheck.Location = new System.Drawing.Point(126, 42);
+            this.ShieldEquippedCheck.Location = new System.Drawing.Point(208, 24);
             this.ShieldEquippedCheck.Name = "ShieldEquippedCheck";
-            this.ShieldEquippedCheck.Size = new System.Drawing.Size(103, 17);
+            this.ShieldEquippedCheck.Size = new System.Drawing.Size(130, 20);
             this.ShieldEquippedCheck.TabIndex = 1;
             this.ShieldEquippedCheck.Text = "Shield Equipped";
             this.ShieldEquippedCheck.UseVisualStyleBackColor = true;
@@ -2442,26 +2473,28 @@
             // EquippedArmorDisplay
             // 
             this.EquippedArmorDisplay.AutoSize = true;
-            this.EquippedArmorDisplay.Location = new System.Drawing.Point(19, 41);
+            this.EquippedArmorDisplay.Location = new System.Drawing.Point(14, 26);
             this.EquippedArmorDisplay.Name = "EquippedArmorDisplay";
-            this.EquippedArmorDisplay.Size = new System.Drawing.Size(82, 13);
+            this.EquippedArmorDisplay.Size = new System.Drawing.Size(106, 16);
             this.EquippedArmorDisplay.TabIndex = 0;
             this.EquippedArmorDisplay.Text = "Equipped Armor";
             // 
             // EditInventoryButton
             // 
             this.EditInventoryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.EditInventoryButton.Location = new System.Drawing.Point(180, 229);
+            this.EditInventoryButton.Location = new System.Drawing.Point(279, 238);
             this.EditInventoryButton.Name = "EditInventoryButton";
-            this.EditInventoryButton.Size = new System.Drawing.Size(59, 36);
+            this.EditInventoryButton.Size = new System.Drawing.Size(61, 27);
             this.EditInventoryButton.TabIndex = 70;
-            this.EditInventoryButton.Text = "Edit Inv";
+            this.EditInventoryButton.Text = "Edit";
             this.EditInventoryButton.UseVisualStyleBackColor = true;
             this.EditInventoryButton.Click += new System.EventHandler(this.EditInventoryButton_Click);
             // 
             // groupBox37
             // 
+            this.groupBox37.Controls.Add(this.button1);
             this.groupBox37.Controls.Add(this.ShowListWeaponsButton);
+            this.groupBox37.Controls.Add(this.button3);
             this.groupBox37.Controls.Add(this.ShowListArmorButton);
             this.groupBox37.Controls.Add(this.ShowListItemsButton);
             this.groupBox37.Controls.Add(this.groupBox279);
@@ -2472,9 +2505,9 @@
             this.groupBox37.Controls.Add(this.listBox);
             this.groupBox37.Controls.Add(this.EditInventoryButton);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox37.Location = new System.Drawing.Point(120, 736);
+            this.groupBox37.Location = new System.Drawing.Point(118, 681);
             this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Size = new System.Drawing.Size(247, 271);
+            this.groupBox37.Size = new System.Drawing.Size(346, 271);
             this.groupBox37.TabIndex = 64;
             this.groupBox37.TabStop = false;
             this.groupBox37.Text = "Inventory";
@@ -2483,9 +2516,9 @@
             // 
             this.ShowListWeaponsButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ShowListWeaponsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListWeaponsButton.Location = new System.Drawing.Point(118, 16);
+            this.ShowListWeaponsButton.Location = new System.Drawing.Point(179, 16);
             this.ShowListWeaponsButton.Name = "ShowListWeaponsButton";
-            this.ShowListWeaponsButton.Size = new System.Drawing.Size(57, 27);
+            this.ShowListWeaponsButton.Size = new System.Drawing.Size(88, 27);
             this.ShowListWeaponsButton.TabIndex = 83;
             this.ShowListWeaponsButton.Text = "Weapon";
             this.ShowListWeaponsButton.UseVisualStyleBackColor = false;
@@ -2494,9 +2527,9 @@
             // ShowListArmorButton
             // 
             this.ShowListArmorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListArmorButton.Location = new System.Drawing.Point(62, 16);
+            this.ShowListArmorButton.Location = new System.Drawing.Point(92, 16);
             this.ShowListArmorButton.Name = "ShowListArmorButton";
-            this.ShowListArmorButton.Size = new System.Drawing.Size(59, 27);
+            this.ShowListArmorButton.Size = new System.Drawing.Size(90, 27);
             this.ShowListArmorButton.TabIndex = 82;
             this.ShowListArmorButton.Text = "Armor";
             this.ShowListArmorButton.UseVisualStyleBackColor = true;
@@ -2505,9 +2538,9 @@
             // ShowListItemsButton
             // 
             this.ShowListItemsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListItemsButton.Location = new System.Drawing.Point(8, 16);
+            this.ShowListItemsButton.Location = new System.Drawing.Point(6, 16);
             this.ShowListItemsButton.Name = "ShowListItemsButton";
-            this.ShowListItemsButton.Size = new System.Drawing.Size(57, 27);
+            this.ShowListItemsButton.Size = new System.Drawing.Size(88, 27);
             this.ShowListItemsButton.TabIndex = 70;
             this.ShowListItemsButton.Text = "Items";
             this.ShowListItemsButton.UseVisualStyleBackColor = true;
@@ -2521,7 +2554,7 @@
             this.groupBox279.Controls.Add(this.groupBox292);
             this.groupBox279.Controls.Add(this.groupBox294);
             this.groupBox279.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox279.Location = new System.Drawing.Point(180, 183);
+            this.groupBox279.Location = new System.Drawing.Point(280, 187);
             this.groupBox279.Name = "groupBox279";
             this.groupBox279.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox279.Size = new System.Drawing.Size(58, 41);
@@ -2536,7 +2569,7 @@
             this.PlatinumCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.PlatinumCoinsDisplay.Location = new System.Drawing.Point(9, 13);
             this.PlatinumCoinsDisplay.Name = "PlatinumCoinsDisplay";
-            this.PlatinumCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.PlatinumCoinsDisplay.Size = new System.Drawing.Size(40, 24);
             this.PlatinumCoinsDisplay.TabIndex = 79;
             this.PlatinumCoinsDisplay.Text = "0";
             this.PlatinumCoinsDisplay.TextChanged += new System.EventHandler(this.PlatinumCoinsDisplay_TextChanged);
@@ -3158,7 +3191,7 @@
             this.groupBox231.Controls.Add(this.groupBox244);
             this.groupBox231.Controls.Add(this.groupBox246);
             this.groupBox231.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox231.Location = new System.Drawing.Point(180, 141);
+            this.groupBox231.Location = new System.Drawing.Point(280, 145);
             this.groupBox231.Name = "groupBox231";
             this.groupBox231.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox231.Size = new System.Drawing.Size(58, 43);
@@ -3173,7 +3206,7 @@
             this.GoldCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.GoldCoinsDisplay.Location = new System.Drawing.Point(9, 14);
             this.GoldCoinsDisplay.Name = "GoldCoinsDisplay";
-            this.GoldCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.GoldCoinsDisplay.Size = new System.Drawing.Size(40, 24);
             this.GoldCoinsDisplay.TabIndex = 79;
             this.GoldCoinsDisplay.Text = "0";
             this.GoldCoinsDisplay.TextChanged += new System.EventHandler(this.GoldCoinsDisplay_TextChanged);
@@ -3795,7 +3828,7 @@
             this.groupBox135.Controls.Add(this.groupBox148);
             this.groupBox135.Controls.Add(this.groupBox150);
             this.groupBox135.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox135.Location = new System.Drawing.Point(180, 98);
+            this.groupBox135.Location = new System.Drawing.Point(280, 102);
             this.groupBox135.Name = "groupBox135";
             this.groupBox135.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox135.Size = new System.Drawing.Size(58, 44);
@@ -3810,7 +3843,7 @@
             this.ElectrumCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.ElectrumCoinsDisplay.Location = new System.Drawing.Point(9, 15);
             this.ElectrumCoinsDisplay.Name = "ElectrumCoinsDisplay";
-            this.ElectrumCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.ElectrumCoinsDisplay.Size = new System.Drawing.Size(40, 24);
             this.ElectrumCoinsDisplay.TabIndex = 79;
             this.ElectrumCoinsDisplay.Text = "0";
             this.ElectrumCoinsDisplay.TextChanged += new System.EventHandler(this.ElectrumCoinsDisplay_TextChanged);
@@ -4432,7 +4465,7 @@
             this.groupBox39.Controls.Add(this.groupBox76);
             this.groupBox39.Controls.Add(this.groupBox78);
             this.groupBox39.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox39.Location = new System.Drawing.Point(180, 12);
+            this.groupBox39.Location = new System.Drawing.Point(280, 16);
             this.groupBox39.Name = "groupBox39";
             this.groupBox39.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox39.Size = new System.Drawing.Size(58, 43);
@@ -4447,7 +4480,7 @@
             this.CopperCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.CopperCoinsDisplay.Location = new System.Drawing.Point(9, 14);
             this.CopperCoinsDisplay.Name = "CopperCoinsDisplay";
-            this.CopperCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.CopperCoinsDisplay.Size = new System.Drawing.Size(40, 24);
             this.CopperCoinsDisplay.TabIndex = 79;
             this.CopperCoinsDisplay.Text = "0";
             this.CopperCoinsDisplay.TextChanged += new System.EventHandler(this.CopperCoinsDisplay_TextChanged);
@@ -5069,7 +5102,7 @@
             this.groupBox45.Controls.Add(this.groupBox46);
             this.groupBox45.Controls.Add(this.groupBox48);
             this.groupBox45.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.groupBox45.Location = new System.Drawing.Point(180, 52);
+            this.groupBox45.Location = new System.Drawing.Point(280, 56);
             this.groupBox45.Name = "groupBox45";
             this.groupBox45.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.groupBox45.Size = new System.Drawing.Size(58, 47);
@@ -5084,7 +5117,7 @@
             this.SilverCoinsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.SilverCoinsDisplay.Location = new System.Drawing.Point(9, 16);
             this.SilverCoinsDisplay.Name = "SilverCoinsDisplay";
-            this.SilverCoinsDisplay.Size = new System.Drawing.Size(40, 19);
+            this.SilverCoinsDisplay.Size = new System.Drawing.Size(40, 24);
             this.SilverCoinsDisplay.TabIndex = 79;
             this.SilverCoinsDisplay.Text = "0";
             this.SilverCoinsDisplay.TextChanged += new System.EventHandler(this.SilverCoinsDisplay_TextChanged);
@@ -5701,27 +5734,27 @@
             // ProficencyBonusLabel
             // 
             this.ProficencyBonusLabel.AutoSize = true;
-            this.ProficencyBonusLabel.Location = new System.Drawing.Point(206, 392);
+            this.ProficencyBonusLabel.Location = new System.Drawing.Point(236, 384);
             this.ProficencyBonusLabel.Name = "ProficencyBonusLabel";
-            this.ProficencyBonusLabel.Size = new System.Drawing.Size(90, 13);
+            this.ProficencyBonusLabel.Size = new System.Drawing.Size(118, 17);
             this.ProficencyBonusLabel.TabIndex = 66;
             this.ProficencyBonusLabel.Text = "Proficency Bonus";
             // 
             // PassivePerceptionLabel
             // 
             this.PassivePerceptionLabel.AutoSize = true;
-            this.PassivePerceptionLabel.Location = new System.Drawing.Point(206, 462);
+            this.PassivePerceptionLabel.Location = new System.Drawing.Point(236, 439);
             this.PassivePerceptionLabel.Name = "PassivePerceptionLabel";
-            this.PassivePerceptionLabel.Size = new System.Drawing.Size(98, 13);
+            this.PassivePerceptionLabel.Size = new System.Drawing.Size(129, 17);
             this.PassivePerceptionLabel.TabIndex = 67;
             this.PassivePerceptionLabel.Text = "Passive Perception";
             // 
             // InspirationLabel
             // 
             this.InspirationLabel.AutoSize = true;
-            this.InspirationLabel.Location = new System.Drawing.Point(206, 323);
+            this.InspirationLabel.Location = new System.Drawing.Point(236, 327);
             this.InspirationLabel.Name = "InspirationLabel";
-            this.InspirationLabel.Size = new System.Drawing.Size(55, 13);
+            this.InspirationLabel.Size = new System.Drawing.Size(73, 17);
             this.InspirationLabel.TabIndex = 68;
             this.InspirationLabel.Text = "Inspiration";
             // 
@@ -5730,7 +5763,7 @@
             this.SaveCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.SaveCharacterButton.Location = new System.Drawing.Point(8, 132);
             this.SaveCharacterButton.Name = "SaveCharacterButton";
-            this.SaveCharacterButton.Size = new System.Drawing.Size(78, 43);
+            this.SaveCharacterButton.Size = new System.Drawing.Size(92, 43);
             this.SaveCharacterButton.TabIndex = 69;
             this.SaveCharacterButton.Text = "Save Sheet";
             this.SaveCharacterButton.UseVisualStyleBackColor = true;
@@ -5739,24 +5772,176 @@
             // EditSheetCheck
             // 
             this.EditSheetCheck.AutoSize = true;
-            this.EditSheetCheck.Location = new System.Drawing.Point(11, 189);
+            this.EditSheetCheck.Location = new System.Drawing.Point(9, 186);
             this.EditSheetCheck.Name = "EditSheetCheck";
-            this.EditSheetCheck.Size = new System.Drawing.Size(75, 17);
+            this.EditSheetCheck.Size = new System.Drawing.Size(95, 21);
             this.EditSheetCheck.TabIndex = 70;
             this.EditSheetCheck.Text = "Edit Sheet";
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
+            // listBox2
+            // 
+            this.listBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 15;
+            this.listBox2.Location = new System.Drawing.Point(7, 18);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(343, 109);
+            this.listBox2.TabIndex = 73;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.Enabled = false;
+            this.richTextBox1.Location = new System.Drawing.Point(4, 95);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(167, 90);
+            this.richTextBox1.TabIndex = 71;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox2.Enabled = false;
+            this.richTextBox2.Location = new System.Drawing.Point(177, 95);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(166, 90);
+            this.richTextBox2.TabIndex = 72;
+            this.richTextBox2.Text = "";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(14, 52);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 16);
+            this.label5.TabIndex = 73;
+            this.label5.Text = "Main weapon";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(205, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 16);
+            this.label6.TabIndex = 74;
+            this.label6.Text = "Secondary Weapon";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(54, 79);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 16);
+            this.label7.TabIndex = 75;
+            this.label7.Text = "Attunement";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(229, 79);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 76;
+            this.label8.Text = "Magic items";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button1.Location = new System.Drawing.Point(6, 239);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(135, 27);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button3.Location = new System.Drawing.Point(138, 239);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(129, 27);
+            this.button3.TabIndex = 85;
+            this.button3.Text = "Remove";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
             // addToInventoryFormBindingSource
             // 
             this.addToInventoryFormBindingSource.DataSource = typeof(CharacterSheet.AddToInventoryForm);
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button4.Location = new System.Drawing.Point(5, 148);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(173, 27);
+            this.button4.TabIndex = 86;
+            this.button4.Text = "Add";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button6.Location = new System.Drawing.Point(168, 148);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(182, 27);
+            this.button6.TabIndex = 87;
+            this.button6.Text = "Remove";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button7.Location = new System.Drawing.Point(6, 118);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(172, 27);
+            this.button7.TabIndex = 88;
+            this.button7.Text = "Add";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.button8.Location = new System.Drawing.Point(173, 118);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(178, 27);
+            this.button8.TabIndex = 89;
+            this.button8.Text = "Remove";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox183
+            // 
+            this.groupBox183.Controls.Add(this.textBox1);
+            this.groupBox183.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.groupBox183.Location = new System.Drawing.Point(146, 73);
+            this.groupBox183.Name = "groupBox183";
+            this.groupBox183.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.groupBox183.Size = new System.Drawing.Size(225, 75);
+            this.groupBox183.TabIndex = 71;
+            this.groupBox183.TabStop = false;
+            this.groupBox183.Text = "Experience Points";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(9, 37);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(97, 16);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "\"Experience Points\"";
+            // 
             // Sheet
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.ClientSize = new System.Drawing.Size(1902, 953);
             this.Controls.Add(this.EditSheetCheck);
+            this.Controls.Add(this.groupBox25);
             this.Controls.Add(this.SaveCharacterButton);
             this.Controls.Add(this.groupBox31);
             this.Controls.Add(this.InspirationLabel);
@@ -5773,7 +5958,6 @@
             this.Controls.Add(this.groupBox28);
             this.Controls.Add(this.groupBox27);
             this.Controls.Add(this.groupBox26);
-            this.Controls.Add(this.groupBox25);
             this.Controls.Add(this.groupBox24);
             this.Controls.Add(this.groupBox23);
             this.Controls.Add(this.groupBox22);
@@ -5803,6 +5987,7 @@
             this.Controls.Add(this.MenuButton1);
             this.Name = "Sheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sheet_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -5842,7 +6027,9 @@
             this.groupBox18.PerformLayout();
             this.groupBox22.ResumeLayout(false);
             this.groupBox22.PerformLayout();
+            this.groupBox23.ResumeLayout(false);
             this.groupBox24.ResumeLayout(false);
+            this.groupBox25.ResumeLayout(false);
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             this.groupBox27.ResumeLayout(false);
@@ -6027,6 +6214,8 @@
             this.groupBox54.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.addToInventoryFormBindingSource)).EndInit();
+            this.groupBox183.ResumeLayout(false);
+            this.groupBox183.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6453,5 +6642,20 @@
         private System.Windows.Forms.CheckBox WeaponSlotTwoProficiency;
         private System.Windows.Forms.CheckBox WeaponSlotThreeProficiency;
         private System.Windows.Forms.CheckBox WeaponSlotOneProficiency;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox183;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
