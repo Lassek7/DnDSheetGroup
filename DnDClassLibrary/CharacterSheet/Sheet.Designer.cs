@@ -136,6 +136,12 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.RemoveSlotThree = new System.Windows.Forms.Button();
+            this.RemoveSlotTwo = new System.Windows.Forms.Button();
+            this.RemoveSlotOne = new System.Windows.Forms.Button();
+            this.WeaponSlotTwoProficiency = new System.Windows.Forms.CheckBox();
+            this.WeaponSlotThreeProficiency = new System.Windows.Forms.CheckBox();
+            this.WeaponSlotOneProficiency = new System.Windows.Forms.CheckBox();
             this.WeaponSlotTwoDamageTypeDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotThreeDamageTypeDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotOneDamageTypeDisplay = new System.Windows.Forms.Label();
@@ -163,7 +169,7 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.CurrentHitPointsDisplay = new System.Windows.Forms.NumericUpDown();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
             this.MaxHealthDisplay = new System.Windows.Forms.TextBox();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
@@ -181,7 +187,7 @@
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.PassivePerceptionDisplay = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.ShieldEquippedCheck = new System.Windows.Forms.CheckBox();
             this.EquippedArmorDisplay = new System.Windows.Forms.Label();
             this.EditInventoryButton = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
@@ -439,12 +445,6 @@
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
             this.addToInventoryFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.WeaponSlotOneProf = new System.Windows.Forms.CheckBox();
-            this.WeaponSlotThreeProficency = new System.Windows.Forms.CheckBox();
-            this.WeaponSlotTwoProficiency = new System.Windows.Forms.CheckBox();
-            this.RemoveSlotOne = new System.Windows.Forms.Button();
-            this.RemoveSlotTwo = new System.Windows.Forms.Button();
-            this.RemoveSlotThree = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -471,7 +471,7 @@
             this.groupBox24.SuspendLayout();
             this.groupBox26.SuspendLayout();
             this.groupBox27.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentHitPointsDisplay)).BeginInit();
             this.groupBox28.SuspendLayout();
             this.groupBox29.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -1880,8 +1880,8 @@
             this.groupBox22.Controls.Add(this.RemoveSlotTwo);
             this.groupBox22.Controls.Add(this.RemoveSlotOne);
             this.groupBox22.Controls.Add(this.WeaponSlotTwoProficiency);
-            this.groupBox22.Controls.Add(this.WeaponSlotThreeProficency);
-            this.groupBox22.Controls.Add(this.WeaponSlotOneProf);
+            this.groupBox22.Controls.Add(this.WeaponSlotThreeProficiency);
+            this.groupBox22.Controls.Add(this.WeaponSlotOneProficiency);
             this.groupBox22.Controls.Add(this.WeaponSlotTwoDamageTypeDisplay);
             this.groupBox22.Controls.Add(this.WeaponSlotThreeDamageTypeDisplay);
             this.groupBox22.Controls.Add(this.WeaponSlotOneDamageTypeDisplay);
@@ -1901,6 +1901,69 @@
             this.groupBox22.TabIndex = 50;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Attacks";
+            // 
+            // RemoveSlotThree
+            // 
+            this.RemoveSlotThree.Location = new System.Drawing.Point(594, 116);
+            this.RemoveSlotThree.Name = "RemoveSlotThree";
+            this.RemoveSlotThree.Size = new System.Drawing.Size(33, 26);
+            this.RemoveSlotThree.TabIndex = 17;
+            this.RemoveSlotThree.Text = "Del";
+            this.RemoveSlotThree.UseVisualStyleBackColor = true;
+            this.RemoveSlotThree.Click += new System.EventHandler(this.RemoveSlotThree_Click);
+            // 
+            // RemoveSlotTwo
+            // 
+            this.RemoveSlotTwo.Location = new System.Drawing.Point(594, 74);
+            this.RemoveSlotTwo.Name = "RemoveSlotTwo";
+            this.RemoveSlotTwo.Size = new System.Drawing.Size(35, 27);
+            this.RemoveSlotTwo.TabIndex = 16;
+            this.RemoveSlotTwo.Text = "Del";
+            this.RemoveSlotTwo.UseVisualStyleBackColor = true;
+            this.RemoveSlotTwo.Click += new System.EventHandler(this.RemoveSlotTwo_Click);
+            // 
+            // RemoveSlotOne
+            // 
+            this.RemoveSlotOne.Location = new System.Drawing.Point(594, 38);
+            this.RemoveSlotOne.Name = "RemoveSlotOne";
+            this.RemoveSlotOne.Size = new System.Drawing.Size(35, 23);
+            this.RemoveSlotOne.TabIndex = 15;
+            this.RemoveSlotOne.Text = "Del";
+            this.RemoveSlotOne.UseVisualStyleBackColor = true;
+            this.RemoveSlotOne.Click += new System.EventHandler(this.RemoveSlotOne_Click);
+            // 
+            // WeaponSlotTwoProficiency
+            // 
+            this.WeaponSlotTwoProficiency.AutoSize = true;
+            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(0, 77);
+            this.WeaponSlotTwoProficiency.Name = "WeaponSlotTwoProficiency";
+            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(53, 17);
+            this.WeaponSlotTwoProficiency.TabIndex = 14;
+            this.WeaponSlotTwoProficiency.Text = "prof 2";
+            this.WeaponSlotTwoProficiency.UseVisualStyleBackColor = true;
+            this.WeaponSlotTwoProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotTwoProficiency_CheckedChanged);
+            // 
+            // WeaponSlotThreeProficiency
+            // 
+            this.WeaponSlotThreeProficiency.AutoSize = true;
+            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(0, 119);
+            this.WeaponSlotThreeProficiency.Name = "WeaponSlotThreeProficiency";
+            this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(53, 17);
+            this.WeaponSlotThreeProficiency.TabIndex = 13;
+            this.WeaponSlotThreeProficiency.Text = "prof 3";
+            this.WeaponSlotThreeProficiency.UseVisualStyleBackColor = true;
+            this.WeaponSlotThreeProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotThreeProficiency_CheckedChanged);
+            // 
+            // WeaponSlotOneProficiency
+            // 
+            this.WeaponSlotOneProficiency.AutoSize = true;
+            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(0, 41);
+            this.WeaponSlotOneProficiency.Name = "WeaponSlotOneProficiency";
+            this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(44, 17);
+            this.WeaponSlotOneProficiency.TabIndex = 12;
+            this.WeaponSlotOneProficiency.Text = "prof";
+            this.WeaponSlotOneProficiency.UseVisualStyleBackColor = true;
+            this.WeaponSlotOneProficiency.CheckedChanged += new System.EventHandler(this.WeaponSlotOneProficiency_CheckedChanged);
             // 
             // WeaponSlotTwoDamageTypeDisplay
             // 
@@ -2153,7 +2216,7 @@
             // 
             // groupBox27
             // 
-            this.groupBox27.Controls.Add(this.numericUpDown1);
+            this.groupBox27.Controls.Add(this.CurrentHitPointsDisplay);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox27.Location = new System.Drawing.Point(390, 406);
             this.groupBox27.Name = "groupBox27";
@@ -2162,16 +2225,17 @@
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Current Hit Points";
             // 
-            // numericUpDown1
+            // CurrentHitPointsDisplay
             // 
-            this.numericUpDown1.BackColor = System.Drawing.SystemColors.Control;
-            this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
-            this.numericUpDown1.Location = new System.Drawing.Point(6, 31);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(156, 50);
-            this.numericUpDown1.TabIndex = 0;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CurrentHitPointsDisplay.BackColor = System.Drawing.SystemColors.Control;
+            this.CurrentHitPointsDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CurrentHitPointsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
+            this.CurrentHitPointsDisplay.Location = new System.Drawing.Point(6, 31);
+            this.CurrentHitPointsDisplay.Name = "CurrentHitPointsDisplay";
+            this.CurrentHitPointsDisplay.Size = new System.Drawing.Size(156, 50);
+            this.CurrentHitPointsDisplay.TabIndex = 0;
+            this.CurrentHitPointsDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CurrentHitPointsDisplay.ValueChanged += new System.EventHandler(this.CurrentHitPointsDisplay_ValueChanged);
             // 
             // groupBox28
             // 
@@ -2354,7 +2418,7 @@
             // 
             // groupBox36
             // 
-            this.groupBox36.Controls.Add(this.checkBox7);
+            this.groupBox36.Controls.Add(this.ShieldEquippedCheck);
             this.groupBox36.Controls.Add(this.EquippedArmorDisplay);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox36.Location = new System.Drawing.Point(120, 521);
@@ -2364,15 +2428,16 @@
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Equipment";
             // 
-            // checkBox7
+            // ShieldEquippedCheck
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(126, 42);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(103, 17);
-            this.checkBox7.TabIndex = 1;
-            this.checkBox7.Text = "Shield Equipped";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.ShieldEquippedCheck.AutoSize = true;
+            this.ShieldEquippedCheck.Location = new System.Drawing.Point(126, 42);
+            this.ShieldEquippedCheck.Name = "ShieldEquippedCheck";
+            this.ShieldEquippedCheck.Size = new System.Drawing.Size(103, 17);
+            this.ShieldEquippedCheck.TabIndex = 1;
+            this.ShieldEquippedCheck.Text = "Shield Equipped";
+            this.ShieldEquippedCheck.UseVisualStyleBackColor = true;
+            this.ShieldEquippedCheck.CheckedChanged += new System.EventHandler(this.ShieldEquippedCheck_CheckedChanged);
             // 
             // EquippedArmorDisplay
             // 
@@ -5686,66 +5751,6 @@
             // 
             this.addToInventoryFormBindingSource.DataSource = typeof(CharacterSheet.AddToInventoryForm);
             // 
-            // WeaponSlotOneProf
-            // 
-            this.WeaponSlotOneProf.AutoSize = true;
-            this.WeaponSlotOneProf.Location = new System.Drawing.Point(0, 41);
-            this.WeaponSlotOneProf.Name = "WeaponSlotOneProf";
-            this.WeaponSlotOneProf.Size = new System.Drawing.Size(44, 17);
-            this.WeaponSlotOneProf.TabIndex = 12;
-            this.WeaponSlotOneProf.Text = "prof";
-            this.WeaponSlotOneProf.UseVisualStyleBackColor = true;
-            // 
-            // WeaponSlotThreeProficency
-            // 
-            this.WeaponSlotThreeProficency.AutoSize = true;
-            this.WeaponSlotThreeProficency.Location = new System.Drawing.Point(0, 119);
-            this.WeaponSlotThreeProficency.Name = "WeaponSlotThreeProficency";
-            this.WeaponSlotThreeProficency.Size = new System.Drawing.Size(53, 17);
-            this.WeaponSlotThreeProficency.TabIndex = 13;
-            this.WeaponSlotThreeProficency.Text = "prof 3";
-            this.WeaponSlotThreeProficency.UseVisualStyleBackColor = true;
-            // 
-            // WeaponSlotTwoProficiency
-            // 
-            this.WeaponSlotTwoProficiency.AutoSize = true;
-            this.WeaponSlotTwoProficiency.Location = new System.Drawing.Point(0, 77);
-            this.WeaponSlotTwoProficiency.Name = "WeaponSlotTwoProficiency";
-            this.WeaponSlotTwoProficiency.Size = new System.Drawing.Size(53, 17);
-            this.WeaponSlotTwoProficiency.TabIndex = 14;
-            this.WeaponSlotTwoProficiency.Text = "prof 2";
-            this.WeaponSlotTwoProficiency.UseVisualStyleBackColor = true;
-            // 
-            // RemoveSlotOne
-            // 
-            this.RemoveSlotOne.Location = new System.Drawing.Point(594, 38);
-            this.RemoveSlotOne.Name = "RemoveSlotOne";
-            this.RemoveSlotOne.Size = new System.Drawing.Size(35, 23);
-            this.RemoveSlotOne.TabIndex = 15;
-            this.RemoveSlotOne.Text = "Del";
-            this.RemoveSlotOne.UseVisualStyleBackColor = true;
-            this.RemoveSlotOne.Click += new System.EventHandler(this.RemoveSlotOne_Click);
-            // 
-            // RemoveSlotTwo
-            // 
-            this.RemoveSlotTwo.Location = new System.Drawing.Point(594, 74);
-            this.RemoveSlotTwo.Name = "RemoveSlotTwo";
-            this.RemoveSlotTwo.Size = new System.Drawing.Size(35, 27);
-            this.RemoveSlotTwo.TabIndex = 16;
-            this.RemoveSlotTwo.Text = "Del";
-            this.RemoveSlotTwo.UseVisualStyleBackColor = true;
-            this.RemoveSlotTwo.Click += new System.EventHandler(this.RemoveSlotTwo_Click);
-            // 
-            // RemoveSlotThree
-            // 
-            this.RemoveSlotThree.Location = new System.Drawing.Point(594, 116);
-            this.RemoveSlotThree.Name = "RemoveSlotThree";
-            this.RemoveSlotThree.Size = new System.Drawing.Size(33, 26);
-            this.RemoveSlotThree.TabIndex = 17;
-            this.RemoveSlotThree.Text = "Del";
-            this.RemoveSlotThree.UseVisualStyleBackColor = true;
-            this.RemoveSlotThree.Click += new System.EventHandler(this.RemoveSlotThree_Click);
-            // 
             // Sheet
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -5841,7 +5846,7 @@
             this.groupBox26.ResumeLayout(false);
             this.groupBox26.PerformLayout();
             this.groupBox27.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CurrentHitPointsDisplay)).EndInit();
             this.groupBox28.ResumeLayout(false);
             this.groupBox28.PerformLayout();
             this.groupBox29.ResumeLayout(false);
@@ -6123,7 +6128,7 @@
         private System.Windows.Forms.Label IntelligenceSaveLabel;
         private System.Windows.Forms.Label ConstitutionSaveLabel;
         private System.Windows.Forms.Label DexteritySaveLabel;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown CurrentHitPointsDisplay;
         private System.Windows.Forms.CheckBox JackOfAllTradesCheck;
         private System.Windows.Forms.Button SaveCharacterButton;
         private System.Windows.Forms.Button EditInventoryButton;
@@ -6441,12 +6446,12 @@
         private System.Windows.Forms.Label WeaponSlotThreeNameDisplay;
         private System.Windows.Forms.Label WeaponSlotOneNameDisplay;
         private System.Windows.Forms.Label WeaponSlotTwoNameDisplay;
-        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox ShieldEquippedCheck;
         private System.Windows.Forms.Button RemoveSlotThree;
         private System.Windows.Forms.Button RemoveSlotTwo;
         private System.Windows.Forms.Button RemoveSlotOne;
         private System.Windows.Forms.CheckBox WeaponSlotTwoProficiency;
-        private System.Windows.Forms.CheckBox WeaponSlotThreeProficency;
-        private System.Windows.Forms.CheckBox WeaponSlotOneProf;
+        private System.Windows.Forms.CheckBox WeaponSlotThreeProficiency;
+        private System.Windows.Forms.CheckBox WeaponSlotOneProficiency;
     }
 }

@@ -379,22 +379,26 @@ namespace CharacterSheet
         public void RunInvList() // mangler en sorting function og tabs
         {
             AddToInvListBox.Items.Clear();
+           // AddToInvListView.Columns.Add("File type", 20, HorizontalAlignment.Left);
             foreach (var Item in myInventoryList)
             {
                 int ID = Item.ItemID;
                 switch (ID)
                 {
                     case 1:
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, Item.ItemName, Item.AmountHeld, Item.WeightPerItem, ""));
+                        AddToInvListView.Columns.Add("File type", 20, HorizontalAlignment.Left);
+                        AddToInvListView.Items[0].SubItems.Add(Convert.ToString(Item.AmountHeld));
+                        AddToInvListView.Items[0
+                            ].SubItems.Add(Convert.ToString(Item.WeightPerItem));
                         break;
                     case 2:
                         Armor armor = (Armor)Item; 
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, armor.ItemName, armor.AmountHeld, armor.WeightPerItem, armor.ACFromArmor));
+                       AddToInvListView.Items.Add(String.Format(PreviewDetails, armor.ItemName, armor.AmountHeld, armor.WeightPerItem, armor.ACFromArmor));
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, weapon.ItemName, weapon.AmountHeld, weapon.WeightPerItem, weapon.Damage));
+                       AddToInvListView.Items.Add(String.Format(PreviewDetails, weapon.ItemName, weapon.AmountHeld, weapon.WeightPerItem, weapon.Damage));
                         break;
                 }
             }
@@ -431,5 +435,7 @@ namespace CharacterSheet
             return CurrentWeightTotal;
         }
         #endregion
+
+
     }
 }
