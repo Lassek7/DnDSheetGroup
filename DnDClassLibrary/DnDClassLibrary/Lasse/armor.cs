@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class Armor : Item
+    public class Armor : Item
     {
 
         private bool itemEquipped;

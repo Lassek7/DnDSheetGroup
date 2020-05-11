@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class Weapon : Item
+    public class Weapon : Item
     {
         private string attributeAssociation;
         private int attackModifier;

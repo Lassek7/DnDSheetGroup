@@ -69,26 +69,17 @@ namespace CharacterSheet
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
-          bool OutOfReach = string.IsNullOrEmpty(LevelBox.Text);
-          int Range = 1;
-          if (OutOfReach != true)
-          {
-                Range = Int32.Parse(LevelBox.Text);
-          }
-          else
-          {
-          }
-          if (Range >= 1 && Range <= 20)
-          {
-              
-              myCharacter.level = Convert.ToInt32(Range);
-              LvlDone = true;
-          }
-          else
-          {
-              LvlDone = false;
-              MessageBox.Show("level must be between 1 and 20");
-          }
+            bool OutOfReach = string.IsNullOrEmpty(LevelBox.Text);
+            if (OutOfReach == false && Convert.ToInt32(LevelBox.Text) <= 20 && Convert.ToInt32(LevelBox.Text) >= 1)
+            {
+                LvlDone = true;
+                myCharacter.level = Convert.ToInt32(LevelBox.Text);
+            }
+            else
+            {
+                LevelBox.Text = Convert.ToString("1");
+                MessageBox.Show("Level must be within range 1 and 20");
+            }
         }
 
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
@@ -107,15 +98,14 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(MaxHealthBox.Text);
             int Health = 0;
-            if (OutOfReach != true)
+            if (OutOfReach == false)
             {
                 Health = Int32.Parse(MaxHealthBox.Text);
-                    if (Health >= 1)
-                    {
-                        HealthDone = true;
-                        myCharacter.maxHealth = Convert.ToInt32(Health);
-                    
-                    }
+                if (Health >= 1)
+                {
+                    HealthDone = true;
+                    myCharacter.maxHealth = Convert.ToInt32(Health);
+                }
             }
             else
             {
@@ -127,8 +117,7 @@ namespace CharacterSheet
         {
             IdealsDone = existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
             myCharacter.ideals = NewValue(IdealsDone, IdealsRichBox.Text);
-            //IdealsDone = true;
-            //myCharacter.ideals = IdealsRichBox.Text;
+
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
@@ -151,138 +140,163 @@ namespace CharacterSheet
         private void StrengthInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(StrengthInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(StrengthInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+            if (Range >= 0 && Range <= 20)
             {
 
                 myAttributes.Attributes[0] = Convert.ToInt32(Range);
                 StrDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 StrDone = false;
-                MessageBox.Show("Strength must be between 1 and 20");
+            }
+            else
+            {
+                StrengthInputBox.Text = Convert.ToString(myAttributes.Attributes[0]);
+                MessageBox.Show("Strength must be within range 0 and 20");
             }
         }
 
         private void DexterityInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DexterityInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(DexterityInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+            if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[1] = Convert.ToInt32(Range);
                 DexDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 DexDone = false;
-                MessageBox.Show("Dexterity must be between 1 and 20");
+            }
+            else
+            {
+                DexterityInputBox.Text = Convert.ToString(myAttributes.Attributes[1]);
+                MessageBox.Show("Dexterity must be within range 0 and 20");
             }
         }
 
         private void ConstitutionInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(ConstitutionInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(ConstitutionInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+            if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[2] = Convert.ToInt32(Range);
                 ConDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 ConDone = false;
-                MessageBox.Show("Constitution must be between 1 and 20");
+            }
+            else
+            {
+                ConstitutionInputBox.Text = Convert.ToString(myAttributes.Attributes[2]);
+                MessageBox.Show("Constitution must be within range 0 and 20");
             }
         }
 
         private void IntelligenceInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(IntelligenceInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(IntelligenceInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+            if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[3] = Convert.ToInt32(Range);
                 IntDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 IntDone = false;
-                MessageBox.Show("Intelligence must be between 1 and 20");
+            }
+            else
+            {
+                IntelligenceInputBox.Text = Convert.ToString(myAttributes.Attributes[3]);
+                MessageBox.Show("Intelligence must be within range 0 and 20");
             }
         }
         private void WisdomInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WisdomInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(WisdomInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+            if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[4] = Convert.ToInt32(Range);
                 WisDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 WisDone = false;
-                MessageBox.Show("Wisdom must be between 1 and 20");
+            }
+            else
+            {
+                WisdomInputBox.Text = Convert.ToString(myAttributes.Attributes[4]);
+                MessageBox.Show("Wisdom must be within range 0 and 20");
             }
         }
 
         private void CharismaInputBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(CharismaInputBox.Text);
-            int Range = 1;
-            if (OutOfReach != true)
+            int Range = 0;
+            if (OutOfReach == false)
             {
                 Range = Int32.Parse(CharismaInputBox.Text);
             }
             else
             {
             }
-            if (Range >= 1 && Range <= 20)
+
+            if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[5] = Convert.ToInt32(Range);
                 ChaDone = true;
             }
-            else
+            else if (OutOfReach == true)
             {
                 ChaDone = false;
-                MessageBox.Show("Charisma must be between 1 and 20");
+            }
+            else
+            {
+                CharismaInputBox.Text = Convert.ToString(myAttributes.Attributes[1]);
+                MessageBox.Show("Charisma must be within range 0 and 20");
             }
         }
         private void CreateDoneButton_Click(object sender, EventArgs e)
@@ -304,66 +318,42 @@ namespace CharacterSheet
 
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void LevelBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
        
         private void StrengthInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void DexterityInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void ConstitutionInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void IntelligenceInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void WisdomInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
 
         private void CharismaInputBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+            OnlyTakeNumbers(e);
         }
         bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
         {
@@ -378,6 +368,7 @@ namespace CharacterSheet
             }
             return ExistStatus;
         }
+
         string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
         {
             if (exists == true)
@@ -385,6 +376,13 @@ namespace CharacterSheet
                 return UserInput;
             }
             return null;
+        }
+        void OnlyTakeNumbers(KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 
