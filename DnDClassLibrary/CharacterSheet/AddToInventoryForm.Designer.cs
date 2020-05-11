@@ -79,19 +79,13 @@
             this.WeaponWeightBox = new System.Windows.Forms.TextBox();
             this.WeaponTypeBox = new System.Windows.Forms.TextBox();
             this.AddItemButton = new System.Windows.Forms.Button();
-            this.AddToInvListBox = new System.Windows.Forms.ListBox();
             this.RemoveFromListButton = new System.Windows.Forms.Button();
             this.DecreaseByOneButton = new System.Windows.Forms.Button();
             this.IncreaseByOneButton = new System.Windows.Forms.Button();
-            this.PreviewBoxInformationLabel = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.CurrentWeightLabel = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.MaxWeightLabel = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.EncumberStatus = new System.Windows.Forms.Label();
             this.EncumberStatusLabel = new System.Windows.Forms.Label();
             this.AddToInvListView = new System.Windows.Forms.ListView();
@@ -616,26 +610,17 @@
             // 
             this.AddItemButton.Location = new System.Drawing.Point(588, 365);
             this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(86, 40);
+            this.AddItemButton.Size = new System.Drawing.Size(99, 40);
             this.AddItemButton.TabIndex = 27;
             this.AddItemButton.Text = "Add Items to List";
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
             // 
-            // AddToInvListBox
-            // 
-            this.AddToInvListBox.FormattingEnabled = true;
-            this.AddToInvListBox.Location = new System.Drawing.Point(588, 43);
-            this.AddToInvListBox.MultiColumn = true;
-            this.AddToInvListBox.Name = "AddToInvListBox";
-            this.AddToInvListBox.Size = new System.Drawing.Size(200, 316);
-            this.AddToInvListBox.TabIndex = 3;
-            // 
             // RemoveFromListButton
             // 
-            this.RemoveFromListButton.Location = new System.Drawing.Point(693, 365);
+            this.RemoveFromListButton.Location = new System.Drawing.Point(714, 365);
             this.RemoveFromListButton.Name = "RemoveFromListButton";
-            this.RemoveFromListButton.Size = new System.Drawing.Size(86, 40);
+            this.RemoveFromListButton.Size = new System.Drawing.Size(103, 40);
             this.RemoveFromListButton.TabIndex = 28;
             this.RemoveFromListButton.Text = "Remove selected Item";
             this.RemoveFromListButton.UseVisualStyleBackColor = true;
@@ -643,9 +628,9 @@
             // 
             // DecreaseByOneButton
             // 
-            this.DecreaseByOneButton.Location = new System.Drawing.Point(693, 411);
+            this.DecreaseByOneButton.Location = new System.Drawing.Point(714, 408);
             this.DecreaseByOneButton.Name = "DecreaseByOneButton";
-            this.DecreaseByOneButton.Size = new System.Drawing.Size(39, 28);
+            this.DecreaseByOneButton.Size = new System.Drawing.Size(38, 28);
             this.DecreaseByOneButton.TabIndex = 29;
             this.DecreaseByOneButton.Text = "-1";
             this.DecreaseByOneButton.UseVisualStyleBackColor = true;
@@ -653,28 +638,18 @@
             // 
             // IncreaseByOneButton
             // 
-            this.IncreaseByOneButton.Location = new System.Drawing.Point(738, 411);
+            this.IncreaseByOneButton.Location = new System.Drawing.Point(777, 409);
             this.IncreaseByOneButton.Name = "IncreaseByOneButton";
-            this.IncreaseByOneButton.Size = new System.Drawing.Size(41, 28);
+            this.IncreaseByOneButton.Size = new System.Drawing.Size(40, 28);
             this.IncreaseByOneButton.TabIndex = 30;
             this.IncreaseByOneButton.Text = "+1";
             this.IncreaseByOneButton.UseVisualStyleBackColor = true;
             this.IncreaseByOneButton.Click += new System.EventHandler(this.IncreaseByOneButton_Click);
             // 
-            // PreviewBoxInformationLabel
-            // 
-            this.PreviewBoxInformationLabel.AutoSize = true;
-            this.PreviewBoxInformationLabel.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PreviewBoxInformationLabel.Location = new System.Drawing.Point(768, 12);
-            this.PreviewBoxInformationLabel.Name = "PreviewBoxInformationLabel";
-            this.PreviewBoxInformationLabel.Size = new System.Drawing.Size(11, 15);
-            this.PreviewBoxInformationLabel.TabIndex = 7;
-            this.PreviewBoxInformationLabel.Text = "i";
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(585, 408);
+            this.label21.Location = new System.Drawing.Point(586, 408);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 13);
             this.label21.TabIndex = 8;
@@ -683,7 +658,7 @@
             // CurrentWeightLabel
             // 
             this.CurrentWeightLabel.AutoSize = true;
-            this.CurrentWeightLabel.Location = new System.Drawing.Point(662, 408);
+            this.CurrentWeightLabel.Location = new System.Drawing.Point(663, 408);
             this.CurrentWeightLabel.Name = "CurrentWeightLabel";
             this.CurrentWeightLabel.Size = new System.Drawing.Size(13, 13);
             this.CurrentWeightLabel.TabIndex = 9;
@@ -701,52 +676,16 @@
             // MaxWeightLabel
             // 
             this.MaxWeightLabel.AutoSize = true;
-            this.MaxWeightLabel.Location = new System.Drawing.Point(662, 423);
+            this.MaxWeightLabel.Location = new System.Drawing.Point(663, 423);
             this.MaxWeightLabel.Name = "MaxWeightLabel";
             this.MaxWeightLabel.Size = new System.Drawing.Size(13, 13);
             this.MaxWeightLabel.TabIndex = 11;
             this.MaxWeightLabel.Text = "0";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(586, 27);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(35, 13);
-            this.label24.TabIndex = 31;
-            this.label24.Text = "Name";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(640, 27);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(43, 13);
-            this.label25.TabIndex = 32;
-            this.label25.Text = "Amount";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(703, 27);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(24, 13);
-            this.label26.TabIndex = 33;
-            this.label26.Text = "Lbs";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(740, 27);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(48, 13);
-            this.label27.TabIndex = 34;
-            this.label27.Text = "Dmg/AC";
-            // 
             // EncumberStatus
             // 
             this.EncumberStatus.AutoSize = true;
-            this.EncumberStatus.Location = new System.Drawing.Point(586, 437);
+            this.EncumberStatus.Location = new System.Drawing.Point(584, 436);
             this.EncumberStatus.Name = "EncumberStatus";
             this.EncumberStatus.Size = new System.Drawing.Size(40, 13);
             this.EncumberStatus.TabIndex = 35;
@@ -755,7 +694,7 @@
             // EncumberStatusLabel
             // 
             this.EncumberStatusLabel.AutoSize = true;
-            this.EncumberStatusLabel.Location = new System.Drawing.Point(623, 438);
+            this.EncumberStatusLabel.Location = new System.Drawing.Point(630, 436);
             this.EncumberStatusLabel.Name = "EncumberStatusLabel";
             this.EncumberStatusLabel.Size = new System.Drawing.Size(87, 13);
             this.EncumberStatusLabel.TabIndex = 36;
@@ -769,10 +708,10 @@
             this.ListWeight,
             this.ListAcDmg});
             this.AddToInvListView.HideSelection = false;
-            this.AddToInvListView.Location = new System.Drawing.Point(803, 43);
+            this.AddToInvListView.Location = new System.Drawing.Point(588, 20);
             this.AddToInvListView.MultiSelect = false;
             this.AddToInvListView.Name = "AddToInvListView";
-            this.AddToInvListView.Size = new System.Drawing.Size(246, 313);
+            this.AddToInvListView.Size = new System.Drawing.Size(229, 345);
             this.AddToInvListView.TabIndex = 37;
             this.AddToInvListView.UseCompatibleStateImageBehavior = false;
             this.AddToInvListView.View = System.Windows.Forms.View.Details;
@@ -780,6 +719,7 @@
             // ListName
             // 
             this.ListName.Text = "Item";
+            this.ListName.Width = 63;
             // 
             // ListAmount
             // 
@@ -788,6 +728,7 @@
             // ListWeight
             // 
             this.ListWeight.Text = "Lbs";
+            this.ListWeight.Width = 42;
             // 
             // ListAcDmg
             // 
@@ -797,28 +738,23 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1201, 458);
+            this.ClientSize = new System.Drawing.Size(837, 458);
             this.Controls.Add(this.AddToInvListView);
             this.Controls.Add(this.EncumberStatusLabel);
             this.Controls.Add(this.EncumberStatus);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.MaxWeightLabel);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.CurrentWeightLabel);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.PreviewBoxInformationLabel);
             this.Controls.Add(this.IncreaseByOneButton);
             this.Controls.Add(this.DecreaseByOneButton);
             this.Controls.Add(this.RemoveFromListButton);
-            this.Controls.Add(this.AddToInvListBox);
             this.Controls.Add(this.AddItemButton);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "AddToInventoryForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddToInventoryForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -884,19 +820,13 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button AddItemButton;
-        private System.Windows.Forms.ListBox AddToInvListBox;
         private System.Windows.Forms.Button RemoveFromListButton;
         private System.Windows.Forms.Button DecreaseByOneButton;
         private System.Windows.Forms.Button IncreaseByOneButton;
-        private System.Windows.Forms.Label PreviewBoxInformationLabel;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label CurrentWeightLabel;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label MaxWeightLabel;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label EncumberStatus;
         private System.Windows.Forms.Label EncumberStatusLabel;
         private System.Windows.Forms.ListView AddToInvListView;

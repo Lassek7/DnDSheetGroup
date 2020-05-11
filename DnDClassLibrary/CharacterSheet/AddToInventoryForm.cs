@@ -185,10 +185,12 @@ namespace CharacterSheet
             OnlyTakeNumbers(e);
           
         }
+
         private void ArmorAmountBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
         }
+
         private void ItemweightBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
@@ -288,49 +290,47 @@ namespace CharacterSheet
                     myInventoryList.RemoveAt(i);
                     AddToInvListView.Items[i].Remove();
                 }
-
                 else
                 {
                     MessageBox.Show("Select an item from the list to remove");
                 }
+
             }
-        RunInvList();
+            RunInvList();
         }
+
         private void IncreaseByOneButton_Click(object sender, EventArgs e)
         {
-            
-            
-            //myInventoryList[AddToInvListView.SelectedItems].Amountheld += 1;
-            // if (AddToInvListBox.SelectedIndex >= 0)
-            //{
-
-            //    myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld += 1;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Select an item from the list to increase");
-            //}
+            for (int i = 0; i < AddToInvListView.Items.Count; i++)
+            {
+                if (AddToInvListView.Items[i].Selected)
+                {
+                    myInventoryList[i].AmountHeld += 1;
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to increase");
+                }
+            }
             RunInvList();
         }
 
         private void DecreaseByOneButton_Click(object sender, EventArgs e)
         {
-            if (AddToInvListBox.SelectedIndex >= 0)
+            for (int i = 0; i < AddToInvListView.Items.Count; i++)
             {
-                if (myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld > 1)
+                if (AddToInvListView.Items[i].Selected)
                 {
-                    myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld -= 1;
-
+                    myInventoryList[i].AmountHeld -= 1;
+                    if (myInventoryList[i].AmountHeld == 0)
+                    {
+                        myInventoryList.RemoveAt(i);
+                    }
                 }
                 else
                 {
-                    myInventoryList.RemoveAt(AddToInvListBox.SelectedIndex);
-                    AddToInvListBox.Items.RemoveAt(AddToInvListBox.SelectedIndex);
+                    MessageBox.Show("Select an item from the list to decrease");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to decrease");
             }
             RunInvList();
         }
@@ -345,6 +345,7 @@ namespace CharacterSheet
                 e.Handled = true;
             }
         }
+
         string NewValue(bool OutOfReach, string UserInput) // giver en linje en ny værdi, hvis værdien ikke er null
         {
             if (OutOfReach == false)
@@ -356,6 +357,7 @@ namespace CharacterSheet
                 return null;
             }
         }
+
         public void ClearTextBoxes(Control.ControlCollection EditInventory)
         {
             foreach (Control TextBox in EditInventory)
@@ -411,6 +413,7 @@ namespace CharacterSheet
             MaxWeightLabel.Text = Convert.ToString(myAttributes.Attributes[0] * 5);
             EncumberStatusLabel.Text = EncumberCheck(Convert.ToInt32(CurrentWeightLabel.Text), myAttributes.Attributes[0]);
         }
+
         string EncumberCheck(int CurrentWeightTotal, int Strength) // tjekker om man har for meget vægt
         {
             string Encumbered;
@@ -429,6 +432,7 @@ namespace CharacterSheet
 
             return Encumbered;
         }
+
         int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
         {
             int CurrentWeightTotal = 0;
