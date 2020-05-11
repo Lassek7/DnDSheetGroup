@@ -29,7 +29,7 @@ namespace DnDClassLibrary
 
 
         public string ArmorSlotChest;
-        bool shieldEquipped;
+        public bool shieldEquipped;
         public int ACFromArmor;
         int AC;
 
@@ -43,7 +43,7 @@ namespace DnDClassLibrary
         }
 
 
-        public int ShieldBonus(int CurrentAC)
+        public int ShieldBonus(int CurrentAC, bool ShieldEquipped)
         {
             if (shieldEquipped == true)
             {
@@ -64,7 +64,7 @@ namespace DnDClassLibrary
             return ATKBonus;
         }
 
-        public int ACBonusCalc()
+        public int ACBonusCalc(int Armor, bool Shield)
         {
             int ACBonus = 0;
 

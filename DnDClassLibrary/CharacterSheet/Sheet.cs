@@ -106,6 +106,29 @@ namespace CharacterSheet
                 }
             }
         }
+        private void RemoveSlotOne_Click(object sender, EventArgs e)
+        {
+            myEquippedItems.WeaponOneName = "";
+            myEquippedItems.WeaponOneAttributeAssociation = "";
+            myEquippedItems.WeaponOneDamageType = "";
+            myEquippedItems.WeaponOneDamage = "";
+        }
+
+        private void RemoveSlotTwo_Click(object sender, EventArgs e)
+        {
+            myEquippedItems.WeaponTwoName = "";
+            myEquippedItems.WeaponTwoAttributeAssociation = "";
+            myEquippedItems.WeaponTwoDamageType = "";
+            myEquippedItems.WeaponTwoDamage = "";
+        }
+
+        private void RemoveSlotThree_Click(object sender, EventArgs e)
+        {
+            myEquippedItems.WeaponThreeName = "";
+            myEquippedItems.WeaponThreeAttributeAssociation = "";
+            myEquippedItems.WeaponThreeDamageType = "";
+            myEquippedItems.WeaponThreeDamage = "";
+        }
         #endregion
 
         #region SAVINGTHROWPROFICIENCYTOGGLES
@@ -917,7 +940,7 @@ namespace CharacterSheet
         void LoadEquippedItems()
         {
             EquippedArmorDisplay.Text = myEquippedItems.ArmorSlotChest;
-            ArmorClassDisplay.Text = Convert.ToString(myEquippedItems.ACBonusCalc());
+            ArmorClassDisplay.Text = Convert.ToString(myEquippedItems.ACBonusCalc(myEquippedItems.ACFromArmor, myEquippedItems.shieldEquipped));
 
             WeaponSlotOneNameDisplay.Text = myEquippedItems.WeaponOneName;
             WeaponSlotOneATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc());
@@ -944,5 +967,7 @@ namespace CharacterSheet
             PlatinumCoinsDisplay.Text = Convert.ToString(myItem.Platinum);
         }
         #endregion
+
+     
     }
 }
