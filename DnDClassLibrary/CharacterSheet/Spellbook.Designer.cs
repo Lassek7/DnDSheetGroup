@@ -28,79 +28,85 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LevelLabel = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.RangeLabel = new System.Windows.Forms.TextBox();
+            this.SaveLabel = new System.Windows.Forms.TextBox();
+            this.DMGlabel = new System.Windows.Forms.TextBox();
+            this.DmgTypeLabel = new System.Windows.Forms.TextBox();
+            this.DescriptionLabel = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.SpellBooklistView = new System.Windows.Forms.ListView();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.MenuButton = new System.Windows.Forms.Button();
+            this.ClassesButton = new System.Windows.Forms.Button();
+            this.SpellsButton = new System.Windows.Forms.Button();
+            this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // LevelLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(44, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 0;
+            this.LevelLabel.Location = new System.Drawing.Point(185, 85);
+            this.LevelLabel.Name = "LevelLabel";
+            this.LevelLabel.Size = new System.Drawing.Size(85, 22);
+            this.LevelLabel.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 52);
+            this.label1.Location = new System.Drawing.Point(205, 65);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Level";
             // 
-            // textBox2
+            // RangeLabel
             // 
-            this.textBox2.Location = new System.Drawing.Point(150, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 2;
+            this.RangeLabel.Location = new System.Drawing.Point(276, 86);
+            this.RangeLabel.Name = "RangeLabel";
+            this.RangeLabel.Size = new System.Drawing.Size(85, 22);
+            this.RangeLabel.TabIndex = 2;
             // 
-            // textBox3
+            // SaveLabel
             // 
-            this.textBox3.Location = new System.Drawing.Point(256, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 3;
+            this.SaveLabel.Location = new System.Drawing.Point(367, 86);
+            this.SaveLabel.Name = "SaveLabel";
+            this.SaveLabel.Size = new System.Drawing.Size(85, 22);
+            this.SaveLabel.TabIndex = 3;
             // 
-            // textBox4
+            // DMGlabel
             // 
-            this.textBox4.Location = new System.Drawing.Point(361, 72);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 4;
+            this.DMGlabel.Location = new System.Drawing.Point(458, 86);
+            this.DMGlabel.Name = "DMGlabel";
+            this.DMGlabel.Size = new System.Drawing.Size(85, 22);
+            this.DMGlabel.TabIndex = 4;
             // 
-            // textBox5
+            // DmgTypeLabel
             // 
-            this.textBox5.Location = new System.Drawing.Point(467, 72);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 22);
-            this.textBox5.TabIndex = 5;
+            this.DmgTypeLabel.Location = new System.Drawing.Point(549, 86);
+            this.DmgTypeLabel.Name = "DmgTypeLabel";
+            this.DmgTypeLabel.Size = new System.Drawing.Size(85, 22);
+            this.DmgTypeLabel.TabIndex = 5;
             // 
-            // textBox7
+            // DescriptionLabel
             // 
-            this.textBox7.Location = new System.Drawing.Point(574, 72);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(206, 22);
-            this.textBox7.TabIndex = 7;
+            this.DescriptionLabel.Location = new System.Drawing.Point(640, 86);
+            this.DescriptionLabel.Multiline = true;
+            this.DescriptionLabel.Name = "DescriptionLabel";
+            this.DescriptionLabel.Size = new System.Drawing.Size(280, 70);
+            this.DescriptionLabel.TabIndex = 7;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(175, 52);
+            this.label2.Location = new System.Drawing.Point(293, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 17);
             this.label2.TabIndex = 8;
@@ -109,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(287, 52);
+            this.label3.Location = new System.Drawing.Point(389, 65);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(40, 17);
             this.label3.TabIndex = 9;
@@ -118,7 +124,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(392, 52);
+            this.label4.Location = new System.Drawing.Point(481, 65);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 17);
             this.label4.TabIndex = 10;
@@ -127,7 +133,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(484, 52);
+            this.label5.Location = new System.Drawing.Point(557, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 11;
@@ -136,69 +142,127 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(639, 52);
+            this.label6.Location = new System.Drawing.Point(742, 65);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 12;
             this.label6.Text = "Description";
             // 
-            // listView1
+            // SpellBooklistView
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(44, 100);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(736, 513);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.SpellBooklistView.HideSelection = false;
+            this.SpellBooklistView.Location = new System.Drawing.Point(185, 162);
+            this.SpellBooklistView.Name = "SpellBooklistView";
+            this.SpellBooklistView.Size = new System.Drawing.Size(736, 513);
+            this.SpellBooklistView.TabIndex = 14;
+            this.SpellBooklistView.UseCompatibleStateImageBehavior = false;
             // 
-            // button1
+            // RemoveButton
             // 
-            this.button1.Location = new System.Drawing.Point(880, 583);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(88, 30);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Remove";
-            this.button1.UseVisualStyleBackColor = true;
+            this.RemoveButton.Location = new System.Drawing.Point(1021, 645);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(88, 30);
+            this.RemoveButton.TabIndex = 15;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // AddButton
             // 
-            this.button2.Location = new System.Drawing.Point(786, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "Add";
-            this.button2.UseVisualStyleBackColor = true;
+            this.AddButton.Location = new System.Drawing.Point(927, 134);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(88, 23);
+            this.AddButton.TabIndex = 16;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // EditButton
             // 
-            this.button3.Location = new System.Drawing.Point(786, 583);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 30);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Edit";
-            this.button3.UseVisualStyleBackColor = true;
+            this.EditButton.Location = new System.Drawing.Point(927, 645);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(88, 30);
+            this.EditButton.TabIndex = 17;
+            this.EditButton.Text = "Edit";
+            this.EditButton.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label7.Location = new System.Drawing.Point(113, 9);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(2, 800);
+            this.label7.TabIndex = 18;
+            // 
+            // MenuButton
+            // 
+            this.MenuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.MenuButton.Location = new System.Drawing.Point(10, 9);
+            this.MenuButton.Margin = new System.Windows.Forms.Padding(2);
+            this.MenuButton.Name = "MenuButton";
+            this.MenuButton.Size = new System.Drawing.Size(92, 34);
+            this.MenuButton.TabIndex = 19;
+            this.MenuButton.Text = "Menu";
+            this.MenuButton.UseVisualStyleBackColor = true;
+            // 
+            // ClassesButton
+            // 
+            this.ClassesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ClassesButton.Location = new System.Drawing.Point(10, 47);
+            this.ClassesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ClassesButton.Name = "ClassesButton";
+            this.ClassesButton.Size = new System.Drawing.Size(92, 34);
+            this.ClassesButton.TabIndex = 20;
+            this.ClassesButton.Text = "Classes";
+            this.ClassesButton.UseVisualStyleBackColor = true;
+            // 
+            // SpellsButton
+            // 
+            this.SpellsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.SpellsButton.Location = new System.Drawing.Point(10, 85);
+            this.SpellsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SpellsButton.Name = "SpellsButton";
+            this.SpellsButton.Size = new System.Drawing.Size(92, 34);
+            this.SpellsButton.TabIndex = 21;
+            this.SpellsButton.Text = "Spells";
+            this.SpellsButton.UseVisualStyleBackColor = true;
+            // 
+            // SaveCharacterButton
+            // 
+            this.SaveCharacterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.SaveCharacterButton.Location = new System.Drawing.Point(10, 123);
+            this.SaveCharacterButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SaveCharacterButton.Name = "SaveCharacterButton";
+            this.SaveCharacterButton.Size = new System.Drawing.Size(92, 42);
+            this.SaveCharacterButton.TabIndex = 70;
+            this.SaveCharacterButton.Text = "Save Sheet";
+            this.SaveCharacterButton.UseVisualStyleBackColor = true;
             // 
             // Spellbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 678);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1235, 726);
+            this.Controls.Add(this.SaveCharacterButton);
+            this.Controls.Add(this.SpellsButton);
+            this.Controls.Add(this.ClassesButton);
+            this.Controls.Add(this.MenuButton);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.EditButton);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.RemoveButton);
+            this.Controls.Add(this.SpellBooklistView);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.DescriptionLabel);
+            this.Controls.Add(this.DmgTypeLabel);
+            this.Controls.Add(this.DMGlabel);
+            this.Controls.Add(this.SaveLabel);
+            this.Controls.Add(this.RangeLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.LevelLabel);
             this.Name = "Spellbook";
             this.Text = "Spellbook";
             this.ResumeLayout(false);
@@ -208,21 +272,26 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LevelLabel;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox RangeLabel;
+        private System.Windows.Forms.TextBox SaveLabel;
+        private System.Windows.Forms.TextBox DMGlabel;
+        private System.Windows.Forms.TextBox DmgTypeLabel;
+        private System.Windows.Forms.TextBox DescriptionLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListView SpellBooklistView;
+        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.Button EditButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button MenuButton;
+        private System.Windows.Forms.Button ClassesButton;
+        private System.Windows.Forms.Button SpellsButton;
+        private System.Windows.Forms.Button SaveCharacterButton;
     }
 }
