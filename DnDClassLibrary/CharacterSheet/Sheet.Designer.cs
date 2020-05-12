@@ -1733,7 +1733,7 @@
             // 
             this.groupBox14.Controls.Add(this.CharacterNameLabel);
             this.groupBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(114, 212);
+            this.groupBox14.Location = new System.Drawing.Point(114, 214);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
