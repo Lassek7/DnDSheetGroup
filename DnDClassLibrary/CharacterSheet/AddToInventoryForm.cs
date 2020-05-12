@@ -290,7 +290,6 @@ namespace CharacterSheet
                 }
                 else
                 {
-                    MessageBox.Show("Select an item from the list to remove");
                 }
 
             }

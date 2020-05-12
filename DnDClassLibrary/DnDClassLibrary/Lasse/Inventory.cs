@@ -79,7 +79,7 @@ namespace DnDClassLibrary
         //}
 
         //void RemoveItem() // laves Private Senere // Fjerner et item fra listen, skal senere laves til at kun fjerne og reducere objekters Amoundheld
-        //{ 
+        //{
         //    Item NewItem = new Item(Utillity.ReadTextInput("Please Enter item to be modified")); // kører en method der spørger brugeren om et input og lagrer det derefter i fieldet
 
         //    for (int i = 0; i < InventoryList.Count; i++)
@@ -90,8 +90,8 @@ namespace DnDClassLibrary
         //            ModifyItem(OldItem);
         //            break;
         //        }
-        //        else if(i == InventoryList.Count-1)// slettes senere, bruges til test
-        //        { 
+        //        else if (i == InventoryList.Count - 1)// slettes senere, bruges til test
+        //        {
         //            Console.WriteLine("The item Does not exist");
         //            break;
         //        }

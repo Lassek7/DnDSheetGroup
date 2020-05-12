@@ -2504,6 +2504,7 @@
             // FeatureName
             // 
             this.FeatureName.Text = "Name";
+            this.FeatureName.Width = 62;
             // 
             // FeatureDescription
             // 
@@ -2567,6 +2568,7 @@
             // OtherFeaturesName
             // 
             this.OtherFeaturesName.Text = "Name";
+            this.OtherFeaturesName.Width = 64;
             // 
             // OtherFeaturesDescription
             // 
