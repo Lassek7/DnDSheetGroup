@@ -6870,6 +6870,7 @@
             this.EquipItemButton.TabIndex = 84;
             this.EquipItemButton.Text = "Equip";
             this.EquipItemButton.UseVisualStyleBackColor = true;
+            this.EquipItemButton.Click += new System.EventHandler(this.EquipItemButton_Click);
             // 
             // Sheet
             // 

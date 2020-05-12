@@ -1359,6 +1359,9 @@ namespace CharacterSheet
             //RunInvList();
         }
 
+        private void EquipItemButton_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }
