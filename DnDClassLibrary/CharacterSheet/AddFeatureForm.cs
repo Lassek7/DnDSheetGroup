@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -34,16 +35,23 @@ namespace CharacterSheet
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (myListID == 1)
+            if (features.FeatName != null)
             {
-                myFeatureList.Add(features);
+                if (myListID == 1)
+                {
+                    myFeatureList.Add(features);
+                }
+                else
+                {
+                    myOtherFeatureList.Add(features);
+                }
+                this.Hide();
+                DialogResult = DialogResult.OK;
             }
             else
             {
-                myOtherFeatureList.Add(features);
+                MessageBox.Show("Input a name for the feature");
             }
-            this.Hide();
-            DialogResult = DialogResult.OK;
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -53,14 +61,28 @@ namespace CharacterSheet
 
         private void FeatureNameTextBox_TextChanged(object sender, EventArgs e)
         {
-            features.FeatName = FeatureNameTextBox.Text;
-
+            bool OutOfReach = string.IsNullOrEmpty(FeatureNameTextBox.Text);
+            if (OutOfReach == false)
+            {
+                features.FeatName = FeatureNameTextBox.Text;
+            }
+            else
+            {
+                features.FeatName = null;
+            }
         }
 
         private void FeatureDescriptionTextBox_TextChanged(object sender, EventArgs e)
         {
-            features.FeatDescription = FeatureDescriptionTextBox.Text;
-
-        }
+            bool OutOfReach = string.IsNullOrEmpty(FeatureDescriptionTextBox.Text);
+            if (OutOfReach == false)
+            {
+                features.FeatDescription = FeatureDescriptionTextBox.Text;
+            }
+            else
+            {
+                features.FeatDescription = null;
+            }
+}
     }
 }

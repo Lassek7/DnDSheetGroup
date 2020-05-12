@@ -93,6 +93,7 @@
             this.ListAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ListWeight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ListAcDmg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CloseButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -610,7 +611,7 @@
             // 
             this.AddItemButton.Location = new System.Drawing.Point(588, 365);
             this.AddItemButton.Name = "AddItemButton";
-            this.AddItemButton.Size = new System.Drawing.Size(99, 40);
+            this.AddItemButton.Size = new System.Drawing.Size(79, 40);
             this.AddItemButton.TabIndex = 27;
             this.AddItemButton.Text = "Add Items to List";
             this.AddItemButton.UseVisualStyleBackColor = true;
@@ -618,9 +619,9 @@
             // 
             // RemoveFromListButton
             // 
-            this.RemoveFromListButton.Location = new System.Drawing.Point(714, 365);
+            this.RemoveFromListButton.Location = new System.Drawing.Point(673, 365);
             this.RemoveFromListButton.Name = "RemoveFromListButton";
-            this.RemoveFromListButton.Size = new System.Drawing.Size(103, 40);
+            this.RemoveFromListButton.Size = new System.Drawing.Size(79, 40);
             this.RemoveFromListButton.TabIndex = 28;
             this.RemoveFromListButton.Text = "Remove selected Item";
             this.RemoveFromListButton.UseVisualStyleBackColor = true;
@@ -628,9 +629,9 @@
             // 
             // DecreaseByOneButton
             // 
-            this.DecreaseByOneButton.Location = new System.Drawing.Point(714, 408);
+            this.DecreaseByOneButton.Location = new System.Drawing.Point(758, 365);
             this.DecreaseByOneButton.Name = "DecreaseByOneButton";
-            this.DecreaseByOneButton.Size = new System.Drawing.Size(38, 28);
+            this.DecreaseByOneButton.Size = new System.Drawing.Size(28, 28);
             this.DecreaseByOneButton.TabIndex = 29;
             this.DecreaseByOneButton.Text = "-1";
             this.DecreaseByOneButton.UseVisualStyleBackColor = true;
@@ -638,9 +639,9 @@
             // 
             // IncreaseByOneButton
             // 
-            this.IncreaseByOneButton.Location = new System.Drawing.Point(777, 409);
+            this.IncreaseByOneButton.Location = new System.Drawing.Point(789, 365);
             this.IncreaseByOneButton.Name = "IncreaseByOneButton";
-            this.IncreaseByOneButton.Size = new System.Drawing.Size(40, 28);
+            this.IncreaseByOneButton.Size = new System.Drawing.Size(28, 28);
             this.IncreaseByOneButton.TabIndex = 30;
             this.IncreaseByOneButton.Text = "+1";
             this.IncreaseByOneButton.UseVisualStyleBackColor = true;
@@ -734,11 +735,22 @@
             // 
             this.ListAcDmg.Text = "AC/Dmg";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(758, 415);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(59, 33);
+            this.CloseButton.TabIndex = 38;
+            this.CloseButton.Text = "Close";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // AddToInventoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 458);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddToInvListView);
             this.Controls.Add(this.EncumberStatusLabel);
             this.Controls.Add(this.EncumberStatus);
@@ -834,5 +846,6 @@
         private System.Windows.Forms.ColumnHeader ListAmount;
         private System.Windows.Forms.ColumnHeader ListWeight;
         private System.Windows.Forms.ColumnHeader ListAcDmg;
+        private System.Windows.Forms.Button CloseButton;
     }
 }
