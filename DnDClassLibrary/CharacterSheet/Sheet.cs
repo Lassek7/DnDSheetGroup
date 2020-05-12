@@ -78,7 +78,11 @@ namespace CharacterSheet
 
         private void ShowListItemsButton_Click(object sender, EventArgs e)
         {
+            InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
+            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -97,8 +101,15 @@ namespace CharacterSheet
       
         private void ShowListArmorButton_Click(object sender, EventArgs e)
         {
+           InventoryListView.Columns.Clear();
            InventoryListView.Items.Clear();
-           int i = 0;
+           InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("AC", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Type", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Description", 20, HorizontalAlignment.Left);
+            int i = 0;
            foreach (var Item in myInventoryList)
             {
                 
@@ -109,6 +120,8 @@ namespace CharacterSheet
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ItemType));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.Description));
                     i++;
                 }
                 else
@@ -119,8 +132,16 @@ namespace CharacterSheet
 
         private void ShowListWeaponsButton_Click(object sender, EventArgs e)
         {
-           InventoryListView.Items.Clear();
-           int i = 0;
+            InventoryListView.Columns.Clear();
+            InventoryListView.Items.Clear();
+            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Damage", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("DamageType", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("ItemType", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Range", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Description", 20, HorizontalAlignment.Left); int i = 0;
            foreach (var Item in myInventoryList)
            {
                 if (Item.ItemID == 3)
@@ -130,6 +151,10 @@ namespace CharacterSheet
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.DamageType));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.ItemType));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Range));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Description));
                     i++;
                  }
                 else
@@ -169,6 +194,88 @@ namespace CharacterSheet
 
             WeaponSlotThreeProficiency.Checked = false;
             LoadEquippedItems();
+        }
+        private void AddClassFeatureButton_Click(object sender, EventArgs e)
+        {
+            int ListID = 1;
+            int i = 0;
+            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+
+            ClassFeatureListView.Items.Clear();
+            if (ClassFeatures.ShowDialog() == DialogResult.OK)
+            {
+                ClassFeatureListView.Items.Clear();
+                foreach (var Item in myFeatureList)
+                {
+                    ClassFeatureListView.Items.Add(Item.FeatName, i);
+                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void AddOtherFeaturesButton_Click(object sender, EventArgs e)
+        {
+            int ListID = 2;
+            int i = 0;
+            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+
+            OtherFeaturesListView.Items.Clear();
+            if (OtherFeatures.ShowDialog() == DialogResult.OK)
+            {
+                OtherFeaturesListView.Items.Clear();
+                foreach (var Item in myOtherFeatureList)
+                {
+                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
+                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void RemoveFeatureButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ClassFeatureListView.Items.Count; i++)
+            {
+                if (ClassFeatureListView.Items[i].Selected)
+                {
+                    myFeatureList.RemoveAt(i);
+                    ClassFeatureListView.Items[i].Remove();
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to remove");
+                }
+
+            }
+        }
+
+        private void RemoveOtherFeaturesButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < OtherFeaturesListView.Items.Count; i++)
+            {
+                if (OtherFeaturesListView.Items[i].Selected)
+                {
+                    myOtherFeatureList.RemoveAt(i);
+                    OtherFeaturesListView.Items[i].Remove();
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to remove");
+                }
+
+            }
+        }
+
+        private void AlItemsButton_Click(object sender, EventArgs e)
+        {
+            RunInvList();
         }
         #endregion
 
@@ -1157,7 +1264,12 @@ namespace CharacterSheet
 
         void RunInvList()
         {
+            InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
+            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Ac/Dmg", 20, HorizontalAlignment.Left);
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -1247,82 +1359,6 @@ namespace CharacterSheet
             //RunInvList();
         }
 
-        private void AddClassFeatureButton_Click(object sender, EventArgs e)
-        {
-            int ListID = 1;
-            int i = 0;
-            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
 
-            ClassFeatureListView.Items.Clear();
-            if (ClassFeatures.ShowDialog() == DialogResult.OK)
-            {
-                ClassFeatureListView.Items.Clear();
-                foreach (var Item in myFeatureList)
-                {
-                    ClassFeatureListView.Items.Add(Item.FeatName, i);
-                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
-                    i++;
-                }
-            }
-            else
-            {
-            }
-        }
-
-        private void AddOtherFeaturesButton_Click(object sender, EventArgs e)
-        {
-            int ListID = 2;
-            int i = 0;
-            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
-
-            OtherFeaturesListView.Items.Clear();
-            if (OtherFeatures.ShowDialog() == DialogResult.OK)
-            {
-                OtherFeaturesListView.Items.Clear();
-                foreach (var Item in myOtherFeatureList)
-                {
-                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
-                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
-                    i++;
-                }
-            }
-            else
-            {
-            }
-        }
-
-        private void RemoveFeatureButton_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < ClassFeatureListView.Items.Count; i++)
-            {
-                if (ClassFeatureListView.Items[i].Selected)
-                {
-                    myFeatureList.RemoveAt(i);
-                    ClassFeatureListView.Items[i].Remove();
-                }
-                else
-                {
-                    MessageBox.Show("Select an item from the list to remove");
-                }
-
-            }
-        }
-
-        private void RemoveOtherFeaturesButton_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < OtherFeaturesListView.Items.Count; i++)
-            {
-                if (OtherFeaturesListView.Items[i].Selected)
-                {
-                    myOtherFeatureList.RemoveAt(i);
-                    OtherFeaturesListView.Items[i].Remove();
-                }
-                else
-                {
-                    MessageBox.Show("Select an item from the list to remove");
-                }
-
-            }
-        }
     }
 }

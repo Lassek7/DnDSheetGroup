@@ -224,10 +224,7 @@
             this.groupBox37 = new System.Windows.Forms.GroupBox();
             this.AddOneButton = new System.Windows.Forms.Button();
             this.MinusOneButton = new System.Windows.Forms.Button();
-            this.ShowListWeaponsButton = new System.Windows.Forms.Button();
             this.RemoveFromInvButton = new System.Windows.Forms.Button();
-            this.ShowListArmorButton = new System.Windows.Forms.Button();
-            this.ShowListItemsButton = new System.Windows.Forms.Button();
             this.groupBox279 = new System.Windows.Forms.GroupBox();
             this.PlatinumCoinsDisplay = new System.Windows.Forms.TextBox();
             this.groupBox280 = new System.Windows.Forms.GroupBox();
@@ -474,15 +471,16 @@
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
             this.InventoryListView = new System.Windows.Forms.ListView();
-            this.ListName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ListAmount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ListWeight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ListAcDmg = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ShowListWeaponsButton = new System.Windows.Forms.Button();
+            this.ShowListArmorButton = new System.Windows.Forms.Button();
+            this.ShowListItemsButton = new System.Windows.Forms.Button();
             this.ProficencyBonusLabel = new System.Windows.Forms.Label();
             this.PassivePerceptionLabel = new System.Windows.Forms.Label();
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
+            this.AlItemsButton = new System.Windows.Forms.Button();
+            this.EquipItemButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -2422,7 +2420,7 @@
             this.SpellDamage,
             this.SpellDamageType});
             this.SpellsListView.HideSelection = false;
-            this.SpellsListView.Location = new System.Drawing.Point(5, 14);
+            this.SpellsListView.Location = new System.Drawing.Point(9, 13);
             this.SpellsListView.Name = "SpellsListView";
             this.SpellsListView.Size = new System.Drawing.Size(419, 325);
             this.SpellsListView.TabIndex = 0;
@@ -3026,10 +3024,7 @@
             // 
             this.groupBox37.Controls.Add(this.AddOneButton);
             this.groupBox37.Controls.Add(this.MinusOneButton);
-            this.groupBox37.Controls.Add(this.ShowListWeaponsButton);
             this.groupBox37.Controls.Add(this.RemoveFromInvButton);
-            this.groupBox37.Controls.Add(this.ShowListArmorButton);
-            this.groupBox37.Controls.Add(this.ShowListItemsButton);
             this.groupBox37.Controls.Add(this.groupBox279);
             this.groupBox37.Controls.Add(this.groupBox231);
             this.groupBox37.Controls.Add(this.groupBox135);
@@ -3071,19 +3066,6 @@
             this.MinusOneButton.UseVisualStyleBackColor = true;
             this.MinusOneButton.Click += new System.EventHandler(this.MinusOneButton_Click);
             // 
-            // ShowListWeaponsButton
-            // 
-            this.ShowListWeaponsButton.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ShowListWeaponsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListWeaponsButton.Location = new System.Drawing.Point(143, 13);
-            this.ShowListWeaponsButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ShowListWeaponsButton.Name = "ShowListWeaponsButton";
-            this.ShowListWeaponsButton.Size = new System.Drawing.Size(70, 22);
-            this.ShowListWeaponsButton.TabIndex = 83;
-            this.ShowListWeaponsButton.Text = "Weapon";
-            this.ShowListWeaponsButton.UseVisualStyleBackColor = false;
-            this.ShowListWeaponsButton.Click += new System.EventHandler(this.ShowListWeaponsButton_Click);
-            // 
             // RemoveFromInvButton
             // 
             this.RemoveFromInvButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
@@ -3095,30 +3077,6 @@
             this.RemoveFromInvButton.Text = "Remove";
             this.RemoveFromInvButton.UseVisualStyleBackColor = true;
             this.RemoveFromInvButton.Click += new System.EventHandler(this.RemoveFromInvButton_Click_1);
-            // 
-            // ShowListArmorButton
-            // 
-            this.ShowListArmorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListArmorButton.Location = new System.Drawing.Point(74, 13);
-            this.ShowListArmorButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ShowListArmorButton.Name = "ShowListArmorButton";
-            this.ShowListArmorButton.Size = new System.Drawing.Size(72, 22);
-            this.ShowListArmorButton.TabIndex = 82;
-            this.ShowListArmorButton.Text = "Armor";
-            this.ShowListArmorButton.UseVisualStyleBackColor = true;
-            this.ShowListArmorButton.Click += new System.EventHandler(this.ShowListArmorButton_Click);
-            // 
-            // ShowListItemsButton
-            // 
-            this.ShowListItemsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListItemsButton.Location = new System.Drawing.Point(5, 13);
-            this.ShowListItemsButton.Margin = new System.Windows.Forms.Padding(2);
-            this.ShowListItemsButton.Name = "ShowListItemsButton";
-            this.ShowListItemsButton.Size = new System.Drawing.Size(70, 22);
-            this.ShowListItemsButton.TabIndex = 70;
-            this.ShowListItemsButton.Text = "Items";
-            this.ShowListItemsButton.UseVisualStyleBackColor = true;
-            this.ShowListItemsButton.Click += new System.EventHandler(this.ShowListItemsButton_Click);
             // 
             // groupBox279
             // 
@@ -6793,11 +6751,6 @@
             // InventoryListView
             // 
             this.InventoryListView.BackColor = System.Drawing.SystemColors.Control;
-            this.InventoryListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ListName,
-            this.ListAmount,
-            this.ListWeight,
-            this.ListAcDmg});
             this.InventoryListView.HideSelection = false;
             this.InventoryListView.Location = new System.Drawing.Point(6, 33);
             this.InventoryListView.Margin = new System.Windows.Forms.Padding(2);
@@ -6808,24 +6761,42 @@
             this.InventoryListView.UseCompatibleStateImageBehavior = false;
             this.InventoryListView.View = System.Windows.Forms.View.Details;
             // 
-            // ListName
+            // ShowListWeaponsButton
             // 
-            this.ListName.Text = "Name";
-            this.ListName.Width = 61;
+            this.ShowListWeaponsButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ShowListWeaponsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListWeaponsButton.Location = new System.Drawing.Point(16, 689);
+            this.ShowListWeaponsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowListWeaponsButton.Name = "ShowListWeaponsButton";
+            this.ShowListWeaponsButton.Size = new System.Drawing.Size(64, 37);
+            this.ShowListWeaponsButton.TabIndex = 83;
+            this.ShowListWeaponsButton.Text = "Weapon";
+            this.ShowListWeaponsButton.UseVisualStyleBackColor = false;
+            this.ShowListWeaponsButton.Click += new System.EventHandler(this.ShowListWeaponsButton_Click);
             // 
-            // ListAmount
+            // ShowListArmorButton
             // 
-            this.ListAmount.Text = "Amount";
-            this.ListAmount.Width = 50;
+            this.ShowListArmorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListArmorButton.Location = new System.Drawing.Point(16, 637);
+            this.ShowListArmorButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowListArmorButton.Name = "ShowListArmorButton";
+            this.ShowListArmorButton.Size = new System.Drawing.Size(64, 43);
+            this.ShowListArmorButton.TabIndex = 82;
+            this.ShowListArmorButton.Text = "Armor";
+            this.ShowListArmorButton.UseVisualStyleBackColor = true;
+            this.ShowListArmorButton.Click += new System.EventHandler(this.ShowListArmorButton_Click);
             // 
-            // ListWeight
+            // ShowListItemsButton
             // 
-            this.ListWeight.Text = "Lbs";
-            this.ListWeight.Width = 34;
-            // 
-            // ListAcDmg
-            // 
-            this.ListAcDmg.Text = "AC/Dmg";
+            this.ShowListItemsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.ShowListItemsButton.Location = new System.Drawing.Point(16, 595);
+            this.ShowListItemsButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowListItemsButton.Name = "ShowListItemsButton";
+            this.ShowListItemsButton.Size = new System.Drawing.Size(64, 36);
+            this.ShowListItemsButton.TabIndex = 70;
+            this.ShowListItemsButton.Text = "Items";
+            this.ShowListItemsButton.UseVisualStyleBackColor = true;
+            this.ShowListItemsButton.Click += new System.EventHandler(this.ShowListItemsButton_Click);
             // 
             // ProficencyBonusLabel
             // 
@@ -6881,16 +6852,40 @@
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
+            // AlItemsButton
+            // 
+            this.AlItemsButton.Location = new System.Drawing.Point(16, 558);
+            this.AlItemsButton.Name = "AlItemsButton";
+            this.AlItemsButton.Size = new System.Drawing.Size(64, 32);
+            this.AlItemsButton.TabIndex = 71;
+            this.AlItemsButton.Text = "All Items";
+            this.AlItemsButton.UseVisualStyleBackColor = true;
+            this.AlItemsButton.Click += new System.EventHandler(this.AlItemsButton_Click);
+            // 
+            // EquipItemButton
+            // 
+            this.EquipItemButton.Location = new System.Drawing.Point(17, 520);
+            this.EquipItemButton.Name = "EquipItemButton";
+            this.EquipItemButton.Size = new System.Drawing.Size(62, 25);
+            this.EquipItemButton.TabIndex = 84;
+            this.EquipItemButton.Text = "Equip";
+            this.EquipItemButton.UseVisualStyleBackColor = true;
+            // 
             // Sheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1522, 762);
+            this.Controls.Add(this.EquipItemButton);
+            this.Controls.Add(this.AlItemsButton);
             this.Controls.Add(this.EditSheetCheck);
+            this.Controls.Add(this.ShowListWeaponsButton);
             this.Controls.Add(this.groupBox25);
             this.Controls.Add(this.SaveCharacterButton);
+            this.Controls.Add(this.ShowListArmorButton);
             this.Controls.Add(this.groupBox31);
+            this.Controls.Add(this.ShowListItemsButton);
             this.Controls.Add(this.InspirationLabel);
             this.Controls.Add(this.PassivePerceptionLabel);
             this.Controls.Add(this.ProficencyBonusLabel);
@@ -7615,10 +7610,6 @@
         private System.Windows.Forms.ListView ClassFeatureListView;
         private System.Windows.Forms.ListView OtherFeaturesListView;
         private System.Windows.Forms.ListView InventoryListView;
-        private System.Windows.Forms.ColumnHeader ListName;
-        private System.Windows.Forms.ColumnHeader ListAmount;
-        private System.Windows.Forms.ColumnHeader ListWeight;
-        private System.Windows.Forms.ColumnHeader ListAcDmg;
         private System.Windows.Forms.Button AddOneButton;
         private System.Windows.Forms.ListView SpellsListView;
         private System.Windows.Forms.ColumnHeader FeatureName;
@@ -7630,5 +7621,7 @@
         private System.Windows.Forms.ColumnHeader SpellDamageType;
         private System.Windows.Forms.ColumnHeader OtherFeaturesName;
         private System.Windows.Forms.ColumnHeader OtherFeaturesDescription;
+        private System.Windows.Forms.Button AlItemsButton;
+        private System.Windows.Forms.Button EquipItemButton;
     }
 }
