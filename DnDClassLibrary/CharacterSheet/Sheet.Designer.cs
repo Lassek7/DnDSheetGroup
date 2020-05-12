@@ -1318,7 +1318,7 @@
             // CharismaSaveProficiencyToggle
             // 
             this.CharismaSaveProficiencyToggle.AutoSize = true;
-            this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(788, 14);
+            this.CharismaSaveProficiencyToggle.Location = new System.Drawing.Point(787, 14);
             this.CharismaSaveProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.CharismaSaveProficiencyToggle.Name = "CharismaSaveProficiencyToggle";
             this.CharismaSaveProficiencyToggle.Size = new System.Drawing.Size(95, 21);
@@ -1342,7 +1342,7 @@
             // IntelligenceSaveProficiencyToggle
             // 
             this.IntelligenceSaveProficiencyToggle.AutoSize = true;
-            this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(478, 14);
+            this.IntelligenceSaveProficiencyToggle.Location = new System.Drawing.Point(476, 14);
             this.IntelligenceSaveProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.IntelligenceSaveProficiencyToggle.Name = "IntelligenceSaveProficiencyToggle";
             this.IntelligenceSaveProficiencyToggle.Size = new System.Drawing.Size(85, 21);
@@ -1391,7 +1391,7 @@
             // 
             this.StrengthSaveLabel.AutoSize = true;
             this.StrengthSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.StrengthSaveLabel.Location = new System.Drawing.Point(118, 18);
+            this.StrengthSaveLabel.Location = new System.Drawing.Point(117, 18);
             this.StrengthSaveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StrengthSaveLabel.Name = "StrengthSaveLabel";
             this.StrengthSaveLabel.Size = new System.Drawing.Size(14, 15);
@@ -1402,7 +1402,7 @@
             // 
             this.CharismaSaveLabel.AutoSize = true;
             this.CharismaSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.CharismaSaveLabel.Location = new System.Drawing.Point(899, 18);
+            this.CharismaSaveLabel.Location = new System.Drawing.Point(897, 18);
             this.CharismaSaveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CharismaSaveLabel.Name = "CharismaSaveLabel";
             this.CharismaSaveLabel.Size = new System.Drawing.Size(14, 15);
@@ -1413,7 +1413,7 @@
             // 
             this.WisdomSaveLabel.AutoSize = true;
             this.WisdomSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.WisdomSaveLabel.Location = new System.Drawing.Point(741, 19);
+            this.WisdomSaveLabel.Location = new System.Drawing.Point(740, 19);
             this.WisdomSaveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WisdomSaveLabel.Name = "WisdomSaveLabel";
             this.WisdomSaveLabel.Size = new System.Drawing.Size(14, 15);
@@ -1424,7 +1424,7 @@
             // 
             this.IntelligenceSaveLabel.AutoSize = true;
             this.IntelligenceSaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.IntelligenceSaveLabel.Location = new System.Drawing.Point(588, 19);
+            this.IntelligenceSaveLabel.Location = new System.Drawing.Point(587, 19);
             this.IntelligenceSaveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IntelligenceSaveLabel.Name = "IntelligenceSaveLabel";
             this.IntelligenceSaveLabel.Size = new System.Drawing.Size(14, 15);
@@ -1446,7 +1446,7 @@
             // 
             this.DexteritySaveLabel.AutoSize = true;
             this.DexteritySaveLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.DexteritySaveLabel.Location = new System.Drawing.Point(278, 19);
+            this.DexteritySaveLabel.Location = new System.Drawing.Point(276, 19);
             this.DexteritySaveLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DexteritySaveLabel.Name = "DexteritySaveLabel";
             this.DexteritySaveLabel.Size = new System.Drawing.Size(14, 15);
