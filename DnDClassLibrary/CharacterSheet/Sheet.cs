@@ -68,41 +68,61 @@ namespace CharacterSheet
 
         private void ShowListItemsButton_Click(object sender, EventArgs e)
         {
-            listBox.Items.Clear();
+            InventoryListView.Items.Clear();
+            int i = 0;
             foreach (var Item in myInventoryList)
             {
-                int ID = Item.ItemID;
-                if (ID == 1)
+                if (Item.ItemID == 1)
                 {
-                    listBox.Items.Add(Item.ItemID + " " + Item.ItemName);
+                    InventoryListView.Items.Add(Item.ItemName, i);
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
+                    i++;
+                }
+                else
+                {
                 }
             }
         }
-
         private void ShowListArmorButton_Click(object sender, EventArgs e)
         {
-            listBox.Items.Clear();
-            foreach (var Item in myInventoryList)
+           InventoryListView.Items.Clear();
+           int i = 0;
+           foreach (var Item in myInventoryList)
             {
-                int ID = Item.ItemID;
-                if (ID == 2)
+                
+                if (Item.ItemID == 2)
                 {
-                    Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                    listBox.Items.Add(armor.ItemID + " " + armor.ItemName);
+                    Armor armor = (Armor)Item;
+                    InventoryListView.Items.Add(armor.ItemName, i);
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
+                    i++;
+                }
+                else
+                {
                 }
             }
         }
 
         private void ShowListWeaponsButton_Click(object sender, EventArgs e)
         {
-            listBox.Items.Clear();
-            foreach (var Item in myInventoryList)
-            {
-                int ID = Item.ItemID;
-                if (ID == 3)
+           InventoryListView.Items.Clear();
+           int i = 0;
+           foreach (var Item in myInventoryList)
+           {
+                if (Item.ItemID == 3)
                 {
                     Weapon weapon = (Weapon)Item;
-                    listBox.Items.Add(weapon.ItemID + " " + weapon.ItemName);
+                    InventoryListView.Items.Add(weapon.ItemName, i);
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                    i++;
+                 }
+                else
+                {
                 }
             }
         }
@@ -912,31 +932,6 @@ namespace CharacterSheet
             }
         }
 
-        public void RunInvList()// fjernes
-        {
-            listBox.Items.Clear();
-            foreach (var Item in myInventoryList)
-            {
-                int ID = Item.ItemID;
-                switch (ID)
-                {
-                    case 1:
-                        listBox.Items.Add(Item.ItemID + " " + Item.ItemName);
-                        break;
-                    case 2:
-                        Armor armor = (Armor)Item; // typecast objectet item over til armor classen
-                        listBox.Items.Add(Item);
-                        break;
-
-                    case 3:
-                        Weapon weapon = (Weapon)Item;
-                        listBox.Items.Add(Item);
-                        break;
-                }
-            }
-
-        } 
-
         void LoadAttributes()
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
@@ -1146,6 +1141,98 @@ namespace CharacterSheet
                 CurrentHitPointsDisplay.Value = 0;
             }
             myCharacter.currentHealth = Convert.ToInt32(CurrentHitPointsDisplay.Value);
+        }
+
+        void RunInvList()
+        {
+            InventoryListView.Items.Clear();
+            int i = 0;
+            foreach (var Item in myInventoryList)
+            {
+                int ID = Item.ItemID;
+
+
+                switch (Item.ItemID)
+                {
+                    case 1:
+                        InventoryListView.Items.Add(Item.ItemName, i);
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
+                        i++;
+                        break;
+                    case 2:
+                        Armor armor = (Armor)Item;
+                        InventoryListView.Items.Add(armor.ItemName, i);
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
+                        i++;
+                        break;
+
+                    case 3:
+                        Weapon weapon = (Weapon)Item;
+                        InventoryListView.Items.Add(weapon.ItemName, i);
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                        i++;
+                        break;
+                }
+            }
+        }
+
+        private void RemoveFromInvButton_Click_1(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < InventoryListView.Items.Count; i++)
+            //{
+            //    if (InventoryListView.Items[i].Selected)
+            //    {
+            //        myInventoryList.RemoveAt(i);
+            //        InventoryListView.Items[i].Remove();
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Select an item from the list to remove");
+            //    }
+
+            //}
+            //RunInvList();
+        }
+
+        private void MinusOneButton_Click(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < InventoryListView.Items.Count; i++)
+            //{
+            //    if (InventoryListView.Items[i].Selected)
+            //    {
+            //        myInventoryList[i].AmountHeld -= 1;
+            //        if (myInventoryList[i].AmountHeld == 0)
+            //        {
+            //            myInventoryList.RemoveAt(i);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Select an item from the list to decrease");
+            //    }
+            //}
+            //RunInvList();
+        }
+
+        private void AddOneButton_Click(object sender, EventArgs e)
+        {
+            //for (int i = 0; i < InventoryListView.Items.Count; i++)
+            //{
+            //    if (InventoryListView.Items[i].Selected)
+            //    {
+            //        myInventoryList[i].AmountHeld += 1;
+            //    }
+            //    else
+            //    {
+            //        MessageBox.Show("Select an item from the list to increase");
+            //    }
+            //}
+            //RunInvList();
         }
     }
 }
