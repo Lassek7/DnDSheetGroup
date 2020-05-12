@@ -23,9 +23,8 @@ namespace CharacterSheet
         List<Item> myInventoryList = new List<Item>();
         List<Feat> myFeatureList = new List<Feat>();
         List<Feat> myOtherFeatureList = new List<Feat>();
-        String ItemDetails = "{0,-10}{1,-20}";
-        String WeaponDetails = "{0,-10}{1,-20}";
-        String ArmorDetails = "{0,-10}{1,-20}";
+        public string[] CharacterInfo = new string[19];
+        List<CharacterAttributes> characterAttributesInfo = new List<CharacterAttributes>();
 
         #region CONSTRUCTORS
         public Sheet(Character charac, CharacterAttributes Attri)
@@ -35,9 +34,12 @@ namespace CharacterSheet
             InitializeComponent();
         }
 
-        public Sheet(List<Item> InventoryList)
+        public Sheet(List<Item> InventoryList, string[] myCharacterInfo)
         {
             myInventoryList = InventoryList;
+            CharacterInfo = myCharacterInfo;
+
+            LoadCharacterInfoFromList();
             InitializeComponent();
 
         }
@@ -1363,6 +1365,28 @@ namespace CharacterSheet
         private void EquipItemButton_Click(object sender, EventArgs e)
         {
 
+        }
+        void LoadCharacterInfoFromList() // initializer Database til character info listen i sheet
+        {
+            myCharacter.characterName = Convert.ToString(CharacterInfo[0]);
+            myCharacter.playerName = Convert.ToString(CharacterInfo[1]);
+            myCharacter.race = Convert.ToString(CharacterInfo[2]);
+            myCharacter.characterClass = Convert.ToString(CharacterInfo[3]);
+            myCharacter.alignment = Convert.ToString(CharacterInfo[4]);
+            myCharacter.background = Convert.ToString(CharacterInfo[5]);
+            myCharacter.maxHealth = Convert.ToInt32(CharacterInfo[6]);
+            myCharacter.level = Convert.ToInt32(CharacterInfo[7]);
+            myCharacter.traits = Convert.ToString(CharacterInfo[8]);
+            myCharacter.bonds = Convert.ToString(CharacterInfo[9]);
+            myCharacter.ideals = Convert.ToString(CharacterInfo[10]);
+            myCharacter.flaws = Convert.ToString(CharacterInfo[11]);
+            myCharacter.backstory = Convert.ToString(CharacterInfo[12]);
+            myAttributes.Attributes[0] = Convert.ToInt32(CharacterInfo[13]);
+            myAttributes.Attributes[1] = Convert.ToInt32(CharacterInfo[14]);
+            myAttributes.Attributes[2] = Convert.ToInt32(CharacterInfo[15]);
+            myAttributes.Attributes[3] = Convert.ToInt32(CharacterInfo[16]);
+            myAttributes.Attributes[4] = Convert.ToInt32(CharacterInfo[17]);
+            myAttributes.Attributes[5] = Convert.ToInt32(CharacterInfo[18]);
         }
     }
 }
