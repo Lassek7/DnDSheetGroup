@@ -59,7 +59,7 @@ namespace CharacterSheet
         #region CLICKEVENTS
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList);
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem);
             myDataBase.SaveCharacterToFile();
             myDataBase.SaveDataToFile();
            
@@ -1309,19 +1309,21 @@ namespace CharacterSheet
 
         private void RemoveFromInvButton_Click_1(object sender, EventArgs e)
         {
-            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            for(int i = 0; i < myInventoryList.Count; i++)
             {
-                if (InventoryListView.Items[i].Selected)
-                {
-                    myInventoryList.RemoveAt(i);
-                    InventoryListView.Items[i].Remove();
-                    break;
-                }
-                else
-                {
-                }
+              
+                    if (InventoryListView.Items[i].Selected)
+                    {
+                        myInventoryList.RemoveAt(i);
+                        InventoryListView.Items[i].Remove();
+                    }
+                    else
+                    {
+                    }
 
+                
             }
+           
             //RunInvList();
         }
 
