@@ -82,9 +82,9 @@ namespace CharacterSheet
         {
             InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
-            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -105,12 +105,12 @@ namespace CharacterSheet
         {
            InventoryListView.Columns.Clear();
            InventoryListView.Items.Clear();
-           InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
-           InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
-           InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
-           InventoryListView.Columns.Add("AC", 20, HorizontalAlignment.Left);
-           InventoryListView.Columns.Add("Type", 20, HorizontalAlignment.Left);
-           InventoryListView.Columns.Add("Description", 20, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("AC", 30, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Type", 40, HorizontalAlignment.Left);
+           InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
             int i = 0;
            foreach (var Item in myInventoryList)
             {
@@ -136,14 +136,14 @@ namespace CharacterSheet
         {
             InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
-            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Damage", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("DamageType", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("ItemType", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Range", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Description", 20, HorizontalAlignment.Left); int i = 0;
+            InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Damage", 55, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("DamageType", 80, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("ItemType", 55, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Range", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left); int i = 0;
            foreach (var Item in myInventoryList)
            {
                 if (Item.ItemID == 3)
@@ -1268,10 +1268,10 @@ namespace CharacterSheet
         {
             InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
-            InventoryListView.Columns.Add("Name", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Amount", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Lbs", 20, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Ac/Dmg", 20, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Ac/Dmg", 50, HorizontalAlignment.Left);
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -1309,59 +1309,65 @@ namespace CharacterSheet
 
         private void RemoveFromInvButton_Click_1(object sender, EventArgs e)
         {
-            for(int i = 0; i < myInventoryList.Count; i++)
+            for(int i = 0; i < InventoryListView.Items.Count; i++)
             {
-              
-                    if (InventoryListView.Items[i].Selected)
+               if (InventoryListView.Items[i].Selected)
                     {
-                        myInventoryList.RemoveAt(i);
-                        InventoryListView.Items[i].Remove();
-                    }
-                    else
-                    {
-                    }
-
-                
+                    for (int j = 0; j < myInventoryList.Count; j++)
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                        {
+                            myInventoryList.RemoveAt(j);
+                            InventoryListView.Items[i].Remove();
+                        }
+               }
+               else
+               {
+               }
             }
-           
-            //RunInvList();
         }
 
 
         private void MinusOneButton_Click(object sender, EventArgs e)
         {
-            //for (int i = 0; i < InventoryListView.Items.Count; i++)
-            //{
-            //    if (InventoryListView.Items[i].Selected)
-            //    {
-            //        myInventoryList[i].AmountHeld -= 1;
-            //        if (myInventoryList[i].AmountHeld == 0)
-            //        {
-            //            myInventoryList.RemoveAt(i);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Select an item from the list to decrease");
-            //    }
-            //}
-            //RunInvList();
+            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            {
+                if (InventoryListView.Items[i].Selected)
+                {
+                    for (int j = 0; j < myInventoryList.Count; j++)
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                        {
+                            myInventoryList[j].AmountHeld -= 1;
+                            InventoryListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[j].AmountHeld);
+
+                            if (myInventoryList[j].AmountHeld <=0)
+                            {
+                                myInventoryList.RemoveAt(j);
+                            }
+                        }
+                }
+                else
+                {
+                }
+            }
         }
 
         private void AddOneButton_Click(object sender, EventArgs e)
         {
-            //for (int i = 0; i < InventoryListView.Items.Count; i++)
-            //{
-            //    if (InventoryListView.Items[i].Selected)
-            //    {
-            //        myInventoryList[i].AmountHeld += 1;
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("Select an item from the list to increase");
-            //    }
-            //}
-            //RunInvList();
+            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            {
+                if (InventoryListView.Items[i].Selected)
+                {
+                    for (int j = 0; j < myInventoryList.Count; j++)
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                        {
+                            myInventoryList[j].AmountHeld += 1;
+                            InventoryListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[j].AmountHeld);
+                        }
+                }
+                else
+                {
+                }
+            }
         }
 
         private void EquipItemButton_Click(object sender, EventArgs e)

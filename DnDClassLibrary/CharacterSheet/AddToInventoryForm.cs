@@ -303,13 +303,13 @@ namespace CharacterSheet
                 if (AddToInvListView.Items[i].Selected)
                 {
                     myInventoryList[i].AmountHeld += 1;
+                    AddToInvListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[i].AmountHeld);
+
                 }
                 else
                 {
-                    MessageBox.Show("Select an item from the list to increase");
                 }
             }
-            RunInvList();
         }
 
         private void DecreaseByOneButton_Click(object sender, EventArgs e)
@@ -319,17 +319,16 @@ namespace CharacterSheet
                 if (AddToInvListView.Items[i].Selected)
                 {
                     myInventoryList[i].AmountHeld -= 1;
-                    if (myInventoryList[i].AmountHeld == 0)
+                    AddToInvListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[i].AmountHeld);
+                    if (myInventoryList[i].AmountHeld >= 0)
                     {
                         myInventoryList.RemoveAt(i);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Select an item from the list to decrease");
                 }
             }
-            RunInvList();
         }
 
         #endregion
