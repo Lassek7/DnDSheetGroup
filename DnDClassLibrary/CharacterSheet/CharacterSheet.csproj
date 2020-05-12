@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFeatureForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddFeatureForm.Designer.cs">
+      <DependentUpon>AddFeatureForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddToInventoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="Sheet.Designer.cs">
       <DependentUpon>Sheet.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddFeatureForm.resx">
+      <DependentUpon>AddFeatureForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddToInventoryForm.resx">
       <DependentUpon>AddToInventoryForm.cs</DependentUpon>
     </EmbeddedResource>

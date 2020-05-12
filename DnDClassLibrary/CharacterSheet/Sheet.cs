@@ -20,6 +20,8 @@ namespace CharacterSheet
         EquippedItems myEquippedItems = new EquippedItems();
         Item myItem = new Item();
         List<Item> myInventoryList = new List<Item>();
+        List<Feat> myFeatureList = new List<Feat>();
+        List<Feat> myOtherFeatureList = new List<Feat>();
         String ItemDetails = "{0,-10}{1,-20}";
         String WeaponDetails = "{0,-10}{1,-20}";
         String ArmorDetails = "{0,-10}{1,-20}";
@@ -84,6 +86,7 @@ namespace CharacterSheet
                 }
             }
         }
+      
         private void ShowListArmorButton_Click(object sender, EventArgs e)
         {
            InventoryListView.Items.Clear();
@@ -126,6 +129,7 @@ namespace CharacterSheet
                 }
             }
         }
+      
         private void RemoveSlotOne_Click(object sender, EventArgs e)
         {
             myEquippedItems.WeaponOneName = "";
@@ -1233,6 +1237,50 @@ namespace CharacterSheet
             //    }
             //}
             //RunInvList();
+        }
+
+        private void AddClassFeatureButton_Click(object sender, EventArgs e)
+        {
+            int ListID = 1;
+            int i = 0;
+            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+
+            ClassFeatureListView.Items.Clear();
+            if (ClassFeatures.ShowDialog() == DialogResult.OK)
+            {
+                ClassFeatureListView.Items.Clear();
+                foreach (var Item in myFeatureList)
+                {
+                    ClassFeatureListView.Items.Add(Item.FeatName, i);
+                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void AddOtherFeaturesButton_Click(object sender, EventArgs e)
+        {
+            int ListID = 2;
+            int i = 0;
+            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+
+            OtherFeaturesListView.Items.Clear();
+            if (OtherFeatures.ShowDialog() == DialogResult.OK)
+            {
+                OtherFeaturesListView.Items.Clear();
+                foreach (var Item in myOtherFeatureList)
+                {
+                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
+                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
+            }
+            else
+            {
+            }
         }
     }
 }

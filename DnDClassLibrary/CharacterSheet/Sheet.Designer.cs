@@ -166,14 +166,24 @@
             this.WeaponSlotOneProficiency = new System.Windows.Forms.CheckBox();
             this.RemoveSlotOne = new System.Windows.Forms.Button();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
+            this.SpellsListView = new System.Windows.Forms.ListView();
+            this.SpellName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellRange = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellSaveAtkBonus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDamage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDamageType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.AddClassFeatureButton = new System.Windows.Forms.Button();
+            this.RemoveFeatureButton = new System.Windows.Forms.Button();
             this.ClassFeatureListView = new System.Windows.Forms.ListView();
+            this.FeatureName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FeatureDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.AddOtherFeaturesButton = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.OtherFeaturesListView = new System.Windows.Forms.ListView();
+            this.OtherFeaturesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.OtherFeaturesDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox26 = new System.Windows.Forms.GroupBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
@@ -473,9 +483,6 @@
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
-            this.SpellsListView = new System.Windows.Forms.ListView();
-            this.FeatureName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FeatureDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -2405,10 +2412,47 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Spells";
             // 
+            // SpellsListView
+            // 
+            this.SpellsListView.BackColor = System.Drawing.SystemColors.Control;
+            this.SpellsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SpellName,
+            this.SpellRange,
+            this.SpellSaveAtkBonus,
+            this.SpellDamage,
+            this.SpellDamageType});
+            this.SpellsListView.HideSelection = false;
+            this.SpellsListView.Location = new System.Drawing.Point(5, 14);
+            this.SpellsListView.Name = "SpellsListView";
+            this.SpellsListView.Size = new System.Drawing.Size(419, 325);
+            this.SpellsListView.TabIndex = 0;
+            this.SpellsListView.UseCompatibleStateImageBehavior = false;
+            this.SpellsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // SpellName
+            // 
+            this.SpellName.Text = "Name";
+            // 
+            // SpellRange
+            // 
+            this.SpellRange.Text = "Range";
+            // 
+            // SpellSaveAtkBonus
+            // 
+            this.SpellSaveAtkBonus.Text = "Save / ATK Bonus";
+            // 
+            // SpellDamage
+            // 
+            this.SpellDamage.Text = "Dmg";
+            // 
+            // SpellDamageType
+            // 
+            this.SpellDamageType.Text = "Dmg Type";
+            // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.button4);
-            this.groupBox24.Controls.Add(this.button6);
+            this.groupBox24.Controls.Add(this.AddClassFeatureButton);
+            this.groupBox24.Controls.Add(this.RemoveFeatureButton);
             this.groupBox24.Controls.Add(this.ClassFeatureListView);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox24.Location = new System.Drawing.Point(390, 495);
@@ -2420,27 +2464,28 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Class Features";
             // 
-            // button4
+            // AddClassFeatureButton
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button4.Location = new System.Drawing.Point(4, 118);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 22);
-            this.button4.TabIndex = 86;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
+            this.AddClassFeatureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.AddClassFeatureButton.Location = new System.Drawing.Point(4, 118);
+            this.AddClassFeatureButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddClassFeatureButton.Name = "AddClassFeatureButton";
+            this.AddClassFeatureButton.Size = new System.Drawing.Size(138, 22);
+            this.AddClassFeatureButton.TabIndex = 86;
+            this.AddClassFeatureButton.Text = "Add";
+            this.AddClassFeatureButton.UseVisualStyleBackColor = true;
+            this.AddClassFeatureButton.Click += new System.EventHandler(this.AddClassFeatureButton_Click);
             // 
-            // button6
+            // RemoveFeatureButton
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button6.Location = new System.Drawing.Point(134, 118);
-            this.button6.Margin = new System.Windows.Forms.Padding(2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(146, 22);
-            this.button6.TabIndex = 87;
-            this.button6.Text = "Remove";
-            this.button6.UseVisualStyleBackColor = true;
+            this.RemoveFeatureButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.RemoveFeatureButton.Location = new System.Drawing.Point(134, 118);
+            this.RemoveFeatureButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveFeatureButton.Name = "RemoveFeatureButton";
+            this.RemoveFeatureButton.Size = new System.Drawing.Size(146, 22);
+            this.RemoveFeatureButton.TabIndex = 87;
+            this.RemoveFeatureButton.Text = "Remove";
+            this.RemoveFeatureButton.UseVisualStyleBackColor = true;
             // 
             // ClassFeatureListView
             // 
@@ -2455,10 +2500,20 @@
             this.ClassFeatureListView.Size = new System.Drawing.Size(275, 109);
             this.ClassFeatureListView.TabIndex = 71;
             this.ClassFeatureListView.UseCompatibleStateImageBehavior = false;
+            this.ClassFeatureListView.View = System.Windows.Forms.View.Details;
+            // 
+            // FeatureName
+            // 
+            this.FeatureName.Text = "Name";
+            // 
+            // FeatureDescription
+            // 
+            this.FeatureDescription.Text = "Description";
+            this.FeatureDescription.Width = 210;
             // 
             // groupBox25
             // 
-            this.groupBox25.Controls.Add(this.button7);
+            this.groupBox25.Controls.Add(this.AddOtherFeaturesButton);
             this.groupBox25.Controls.Add(this.button8);
             this.groupBox25.Controls.Add(this.OtherFeaturesListView);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
@@ -2471,16 +2526,17 @@
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Other Features and Traits";
             // 
-            // button7
+            // AddOtherFeaturesButton
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button7.Location = new System.Drawing.Point(5, 94);
-            this.button7.Margin = new System.Windows.Forms.Padding(2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 22);
-            this.button7.TabIndex = 88;
-            this.button7.Text = "Add";
-            this.button7.UseVisualStyleBackColor = true;
+            this.AddOtherFeaturesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.AddOtherFeaturesButton.Location = new System.Drawing.Point(5, 94);
+            this.AddOtherFeaturesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.AddOtherFeaturesButton.Name = "AddOtherFeaturesButton";
+            this.AddOtherFeaturesButton.Size = new System.Drawing.Size(138, 22);
+            this.AddOtherFeaturesButton.TabIndex = 88;
+            this.AddOtherFeaturesButton.Text = "Add";
+            this.AddOtherFeaturesButton.UseVisualStyleBackColor = true;
+            this.AddOtherFeaturesButton.Click += new System.EventHandler(this.AddOtherFeaturesButton_Click);
             // 
             // button8
             // 
@@ -2496,6 +2552,9 @@
             // OtherFeaturesListView
             // 
             this.OtherFeaturesListView.BackColor = System.Drawing.SystemColors.Control;
+            this.OtherFeaturesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.OtherFeaturesName,
+            this.OtherFeaturesDescription});
             this.OtherFeaturesListView.HideSelection = false;
             this.OtherFeaturesListView.Location = new System.Drawing.Point(6, 14);
             this.OtherFeaturesListView.Margin = new System.Windows.Forms.Padding(2);
@@ -2503,6 +2562,16 @@
             this.OtherFeaturesListView.Size = new System.Drawing.Size(275, 85);
             this.OtherFeaturesListView.TabIndex = 72;
             this.OtherFeaturesListView.UseCompatibleStateImageBehavior = false;
+            this.OtherFeaturesListView.View = System.Windows.Forms.View.Details;
+            // 
+            // OtherFeaturesName
+            // 
+            this.OtherFeaturesName.Text = "Name";
+            // 
+            // OtherFeaturesDescription
+            // 
+            this.OtherFeaturesDescription.Text = "Description";
+            this.OtherFeaturesDescription.Width = 210;
             // 
             // groupBox26
             // 
@@ -6810,24 +6879,6 @@
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
-            // SpellsListView
-            // 
-            this.SpellsListView.BackColor = System.Drawing.SystemColors.Control;
-            this.SpellsListView.HideSelection = false;
-            this.SpellsListView.Location = new System.Drawing.Point(5, 14);
-            this.SpellsListView.Name = "SpellsListView";
-            this.SpellsListView.Size = new System.Drawing.Size(419, 325);
-            this.SpellsListView.TabIndex = 0;
-            this.SpellsListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // FeatureName
-            // 
-            this.FeatureName.Text = "Name";
-            // 
-            // FeatureDescription
-            // 
-            this.FeatureDescription.Text = "Description";
-            // 
             // Sheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -7531,9 +7582,9 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button MinusOneButton;
         private System.Windows.Forms.Button RemoveFromInvButton;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button AddClassFeatureButton;
+        private System.Windows.Forms.Button RemoveFeatureButton;
+        private System.Windows.Forms.Button AddOtherFeaturesButton;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox WeaponSlotOneNameDisplay;
         private System.Windows.Forms.GroupBox WeaponSlotThreeNameDisplay;
@@ -7571,5 +7622,12 @@
         private System.Windows.Forms.ListView SpellsListView;
         private System.Windows.Forms.ColumnHeader FeatureName;
         private System.Windows.Forms.ColumnHeader FeatureDescription;
+        private System.Windows.Forms.ColumnHeader SpellName;
+        private System.Windows.Forms.ColumnHeader SpellRange;
+        private System.Windows.Forms.ColumnHeader SpellSaveAtkBonus;
+        private System.Windows.Forms.ColumnHeader SpellDamage;
+        private System.Windows.Forms.ColumnHeader SpellDamageType;
+        private System.Windows.Forms.ColumnHeader OtherFeaturesName;
+        private System.Windows.Forms.ColumnHeader OtherFeaturesDescription;
     }
 }
