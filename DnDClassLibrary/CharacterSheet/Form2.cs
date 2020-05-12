@@ -17,7 +17,9 @@ namespace CharacterSheet
         {
             InitializeComponent();
         }
+
         
+
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -27,14 +29,14 @@ namespace CharacterSheet
 
         private void button2_Click(object sender, EventArgs e)
         {
-            List<Item> InventoryList = new List<Item>();
-            this.Hide();
+            string testfile1 = @"C:\Users\rallo\Backup Character\BobInventory.json";
+            string testfile2 = @"C:\Users\rallo\Backup Character\Bob.json";
             DnDDatabaseManagement ShitV2 = new DnDDatabaseManagement();
-            string test = @"C:\Users\rallo\Backup Character\test4.json";
+            string[] test2 = ShitV2.LoadCharacterInfo(testfile2);
+            ShitV2.InventoryList = ShitV2.DatabaseList(testfile1);
+            this.Hide();
 
-            InventoryList = ShitV2.DatabaseList(test);
-            
-            Sheet LoadCharacter = new Sheet(InventoryList);
+            Sheet LoadCharacter = new Sheet(ShitV2.InventoryList,test2);
             
             LoadCharacter.Show();
             

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Dynamic;
 using System.IO;
 using System.Runtime.ExceptionServices;
 using System.Text;
@@ -13,66 +14,43 @@ namespace DnDClassLibrary
 {
     public class DnDDatabaseManagement
     {
+        #region FIELDS & CONSTRUCTOR 
         private string PlayerName { get; set; }
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
+        Item myItem = new Item();
+        public List<Character> myCharacterInfo = new List<Character>();
+        public List<CharacterAttributes> myListAttributes = new List<CharacterAttributes>();
+        
         public List<Item> InventoryList = new List<Item>();
+        
 
-        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList)
+        public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList, Item ItemContent)
         {
             myAttributes = atri;
             myCharacter = Charac;
             InventoryList = MyList;
+            myItem = ItemContent;
 
         }
+        
+
         public DnDDatabaseManagement()
         {
-
+            //Constructor for load json file
         }
+       
+        #endregion
+        /* To doooooooooooooooo 
+         1. tilfører sådan at ens Charator navn er navnet på json filen samt i en mappe for sig selv 
+         1.1 lavet sådan at de enkelt værdiere i json filen bliver lagret i de forskellige værdier i koden(Evt i DndClassen) (DOne)
+         2. Tilfører verison kontrol som tjekker efter backup filer
+         3. tilfører attribute i json filen 
+         4. laver en validering som overwritter den gamle fil
+         5. tilføre en autosave knap evt 
 
+         */
 
-
-        public void CharatorCreation()
-        {
-            bool RunApp = false;
-            do
-            {
-                string answer;
-                Console.WriteLine("Welcome To Dnd Charator Manager");
-                Console.WriteLine("Type your Player name:");
-                PlayerName = myCharacter.playerName;
-                Console.WriteLine("Your charator name is:" + PlayerName);
-                Console.WriteLine("Confirm charator name by typing Yes or No");
-                answer = Console.ReadLine();
-                if (answer.ToUpper() == "YES")
-                {
-                    Console.WriteLine("Do you want to add start equipment? Type Yes or No");
-                    answer = Console.ReadLine();
-                    if (answer.ToUpper() == "YES")
-                    {
-
-                        Console.WriteLine("Added Items to Backup File");
-                        RunApp = true;
-                    }
-                    else if (answer.ToUpper() == "NO")
-                    {
-                        Console.WriteLine("Starting Campaign");
-                        RunApp = true;
-                    }
-                }
-
-            } while (RunApp != true);
-
-            /* To doooooooooooooooo 
-             1. tilfører sådan at ens Charator navn er navnet på json filen samt i en mappe for sig selv 
-             1.1 lavet sådan at de enkelt værdiere i json filen bliver lagret i de forskellige værdier i koden(Evt i DndClassen) (DOne)
-             2. Tilfører verison kontrol som tjekker efter backup filer
-             3. tilfører attribute i json filen 
-             4. laver en validering som overwritter den gamle fil
-             5. tilføre en autosave knap evt 
-        
-             */
-        }
         #region INVENTORYLIST
         public string UserFilePath()
         {
@@ -106,6 +84,7 @@ namespace DnDClassLibrary
             string createfile = System.IO.Path.Combine(pathString, fileName);
             return createfile;
         }
+
         public void SaveCharacterToFile()
         {
             DataSet dataset = new DataSet("dataSet");
@@ -125,12 +104,18 @@ namespace DnDClassLibrary
             DataColumn Bonds = new DataColumn("Bonds");
             DataColumn Ideals = new DataColumn("Ideals");
             DataColumn Flaws = new DataColumn("Flaws");
+            DataColumn BS = new DataColumn("Backstory");
             DataColumn STR = new DataColumn("Strength");
             DataColumn DEX = new DataColumn("Dexterity");
             DataColumn CON = new DataColumn("Consititution");
             DataColumn INT = new DataColumn("Intelligence");
             DataColumn WIS = new DataColumn("Wisdom");
             DataColumn CHA = new DataColumn("Charisma");
+            DataColumn CP = new DataColumn("Copper Pieces");
+            DataColumn SP = new DataColumn("Silver Pieces");
+            DataColumn EP = new DataColumn("Electrum Pieces");
+            DataColumn GP = new DataColumn("Gold Pieces");
+            DataColumn PP = new DataColumn("Platinum");
             table.Columns.Add(CN);
             table.Columns.Add(PN);
             table.Columns.Add(Race);
@@ -143,12 +128,18 @@ namespace DnDClassLibrary
             table.Columns.Add(Bonds);
             table.Columns.Add(Ideals);
             table.Columns.Add(Flaws);
+            table.Columns.Add(BS);
             table.Columns.Add(STR);
             table.Columns.Add(DEX);
             table.Columns.Add(CON);
             table.Columns.Add(INT);
             table.Columns.Add(WIS);
             table.Columns.Add(CHA);
+            table.Columns.Add(CP);
+            table.Columns.Add(SP);
+            table.Columns.Add(EP);
+            table.Columns.Add(GP);
+            table.Columns.Add(PP);
             dataset.Tables.Add(table);
             using (FileStream fileStream = new FileStream(CreateFolderAtt(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
             {
@@ -157,7 +148,7 @@ namespace DnDClassLibrary
 
                     // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
                     DataRow newRow = table.NewRow();
-
+                    
                     newRow[CN] = myCharacter.characterName;
                     newRow[PN] = myCharacter.playerName;
                     newRow[Race] = myCharacter.race;
@@ -170,12 +161,18 @@ namespace DnDClassLibrary
                     newRow[Bonds] = myCharacter.bonds;
                     newRow[Ideals] = myCharacter.ideals;
                     newRow[Flaws] = myCharacter.flaws;
+                    newRow[BS] = myCharacter.backstory;
                     newRow[STR] = myAttributes.Attributes[0];
                     newRow[DEX] = myAttributes.Attributes[1];
                     newRow[CON] = myAttributes.Attributes[2];
                     newRow[INT] = myAttributes.Attributes[3];
                     newRow[WIS] = myAttributes.Attributes[4];
                     newRow[CHA] = myAttributes.Attributes[5];
+                    newRow[CP] = myItem.Copper;
+                    newRow[SP] = myItem.Silver;
+                    newRow[EP] = myItem.Electrum;
+                    newRow[GP] = myItem.Gold;
+                    newRow[PP] = myItem.Platinum;
                     table.Rows.Add(newRow);
 
                     dataset.AcceptChanges();
@@ -186,6 +183,32 @@ namespace DnDClassLibrary
                 }
             }
         }
+        public string[] LoadCharacterInfo(string JsonCharData)
+        {
+            string[] CharacterInfoArray = new string[19];
+            DataSet dataset = new DataSet("dataSet");
+            dataset.Namespace = "NetFrameWork";
+            DataTable table = new DataTable();
+            DataColumn idColumn = new DataColumn("id", typeof(int));
+            idColumn.AutoIncrement = true;
+            string JsonFileToString = File.ReadAllText(JsonCharData);
+            dataset = JsonConvert.DeserializeObject<DataSet>(JsonFileToString);
+            table = dataset.Tables["table1"];
+            
+            foreach (DataRow row in table.Rows)
+            {
+
+                for(int i =0; i < CharacterInfoArray.Length; i++) {
+                CharacterInfoArray[i] = Convert.ToString(row.ItemArray[i]);
+                
+                }
+
+            }
+            
+
+            return CharacterInfoArray;
+        }
+        
         public void SaveDataToFile()
         {
 
@@ -345,7 +368,7 @@ namespace DnDClassLibrary
 
             }
         }
-        public List<Item> DatabaseList(string JsonData) // 
+        public List<Item> DatabaseList(string JsonItemData) // 
         {
             int ItemID;
             DataSet dataset = new DataSet("dataSet");
@@ -353,7 +376,7 @@ namespace DnDClassLibrary
             DataTable table = new DataTable();
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
-            string test2 = File.ReadAllText(JsonData);
+            string test2 = File.ReadAllText(JsonItemData);
             dataset = JsonConvert.DeserializeObject<DataSet>(test2);
 
             for (int i = 1; i <= dataset.Tables.Count; i++)
