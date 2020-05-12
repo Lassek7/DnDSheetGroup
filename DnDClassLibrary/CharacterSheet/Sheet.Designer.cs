@@ -180,7 +180,7 @@
             this.FeatureDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.AddOtherFeaturesButton = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.RemoveOtherFeaturesButton = new System.Windows.Forms.Button();
             this.OtherFeaturesListView = new System.Windows.Forms.ListView();
             this.OtherFeaturesName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.OtherFeaturesDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -745,7 +745,7 @@
             this.label2.Location = new System.Drawing.Point(85, 10);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(2, 824);
+            this.label2.Size = new System.Drawing.Size(2, 755);
             this.label2.TabIndex = 5;
             // 
             // groupBox1
@@ -2486,6 +2486,7 @@
             this.RemoveFeatureButton.TabIndex = 87;
             this.RemoveFeatureButton.Text = "Remove";
             this.RemoveFeatureButton.UseVisualStyleBackColor = true;
+            this.RemoveFeatureButton.Click += new System.EventHandler(this.RemoveFeatureButton_Click);
             // 
             // ClassFeatureListView
             // 
@@ -2514,7 +2515,7 @@
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.AddOtherFeaturesButton);
-            this.groupBox25.Controls.Add(this.button8);
+            this.groupBox25.Controls.Add(this.RemoveOtherFeaturesButton);
             this.groupBox25.Controls.Add(this.OtherFeaturesListView);
             this.groupBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox25.Location = new System.Drawing.Point(390, 646);
@@ -2538,16 +2539,17 @@
             this.AddOtherFeaturesButton.UseVisualStyleBackColor = true;
             this.AddOtherFeaturesButton.Click += new System.EventHandler(this.AddOtherFeaturesButton_Click);
             // 
-            // button8
+            // RemoveOtherFeaturesButton
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.button8.Location = new System.Drawing.Point(138, 94);
-            this.button8.Margin = new System.Windows.Forms.Padding(2);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(142, 22);
-            this.button8.TabIndex = 89;
-            this.button8.Text = "Remove";
-            this.button8.UseVisualStyleBackColor = true;
+            this.RemoveOtherFeaturesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
+            this.RemoveOtherFeaturesButton.Location = new System.Drawing.Point(138, 94);
+            this.RemoveOtherFeaturesButton.Margin = new System.Windows.Forms.Padding(2);
+            this.RemoveOtherFeaturesButton.Name = "RemoveOtherFeaturesButton";
+            this.RemoveOtherFeaturesButton.Size = new System.Drawing.Size(142, 22);
+            this.RemoveOtherFeaturesButton.TabIndex = 89;
+            this.RemoveOtherFeaturesButton.Text = "Remove";
+            this.RemoveOtherFeaturesButton.UseVisualStyleBackColor = true;
+            this.RemoveOtherFeaturesButton.Click += new System.EventHandler(this.RemoveOtherFeaturesButton_Click);
             // 
             // OtherFeaturesListView
             // 
@@ -6933,7 +6935,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Sheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Sheet_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -7585,7 +7586,7 @@
         private System.Windows.Forms.Button AddClassFeatureButton;
         private System.Windows.Forms.Button RemoveFeatureButton;
         private System.Windows.Forms.Button AddOtherFeaturesButton;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button RemoveOtherFeaturesButton;
         private System.Windows.Forms.GroupBox WeaponSlotOneNameDisplay;
         private System.Windows.Forms.GroupBox WeaponSlotThreeNameDisplay;
         private System.Windows.Forms.Label label21;

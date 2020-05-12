@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,7 +66,14 @@ namespace CharacterSheet
         private void EditInventoryButton_Click(object sender, EventArgs e)
         {
             AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList, myAttributes, myEquippedItems);
-            addToInventory.Show();
+            if (addToInventory.ShowDialog() == DialogResult.OK)
+            {
+                RunInvList();
+            }
+            else
+            {
+                MessageBox.Show("Character List has not been updated, please manually update the list");
+            }
         }
 
         private void ShowListItemsButton_Click(object sender, EventArgs e)
@@ -1280,6 +1288,40 @@ namespace CharacterSheet
             }
             else
             {
+            }
+        }
+
+        private void RemoveFeatureButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ClassFeatureListView.Items.Count; i++)
+            {
+                if (ClassFeatureListView.Items[i].Selected)
+                {
+                    myFeatureList.RemoveAt(i);
+                    ClassFeatureListView.Items[i].Remove();
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to remove");
+                }
+
+            }
+        }
+
+        private void RemoveOtherFeaturesButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < OtherFeaturesListView.Items.Count; i++)
+            {
+                if (OtherFeaturesListView.Items[i].Selected)
+                {
+                    myOtherFeatureList.RemoveAt(i);
+                    OtherFeaturesListView.Items[i].Remove();
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to remove");
+                }
+
             }
         }
     }

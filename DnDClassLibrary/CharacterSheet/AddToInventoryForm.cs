@@ -229,7 +229,6 @@ namespace CharacterSheet
                 NewItem.ItemType = myItem.ItemType;
                 NewItem.Description = myItem.Description;
                 myInventoryList.Add(NewItem);
-
             }
             if (string.IsNullOrEmpty(myArmor.ItemName) == false && myArmor.AmountHeld > 0)
             {
@@ -243,14 +242,13 @@ namespace CharacterSheet
                 NewArmor.Description = myArmor.Description;
                 NewArmor.ItemEquipped = myArmor.ItemEquipped;
 
-                myInventoryList.Add(NewArmor);
-            if (ArmorEquippedCheck.Checked == true)
-            {
-                ArmorEquippedCheck.Checked = false;
-                myEquippedItems.ACFromArmor = myArmor.ACFromArmor; 
-                myEquippedItems.ArmorSlotChest = myArmor.ItemName;
-            }
-
+                    myInventoryList.Add(NewArmor);
+                if (ArmorEquippedCheck.Checked == true)
+                {
+                    ArmorEquippedCheck.Checked = false;
+                    myEquippedItems.ACFromArmor = myArmor.ACFromArmor; 
+                    myEquippedItems.ArmorSlotChest = myArmor.ItemName;
+                }
             }
             if (string.IsNullOrEmpty(myWeapon.ItemName) == false && myWeapon.AmountHeld > 0)
             {
@@ -275,10 +273,10 @@ namespace CharacterSheet
                     EquipSlotCheck SlotChoice = new EquipSlotCheck(NewWeapon, myEquippedItems, "Where to Equip?", "Slot 1", "Slot 2", "Slot 3");
                     SlotChoice.ShowDialog();
                 }
-
             }
             ClearTextBoxes(this.Controls);
             RunInvList();
+
         }
 
         private void RemoveFromListButton_Click(object sender, EventArgs e)
@@ -445,5 +443,10 @@ namespace CharacterSheet
         }
 
         #endregion
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
 }
