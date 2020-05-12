@@ -87,6 +87,12 @@
     <Compile Include="Sheet.Designer.cs">
       <DependentUpon>Sheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Spellbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Spellbook.Designer.cs">
+      <DependentUpon>Spellbook.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddFeatureForm.resx">
       <DependentUpon>AddFeatureForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +119,9 @@
     </Compile>
     <EmbeddedResource Include="Sheet.resx">
       <DependentUpon>Sheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Spellbook.resx">
+      <DependentUpon>Spellbook.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AddToInventoryForm.datasource" />
