@@ -29,48 +29,74 @@ namespace DnDClassLibrary
 
 
         public string ArmorSlotChest;
-        bool shieldEquipped;
+        public bool shieldEquipped;
         public int ACFromArmor;
-        int AC;
 
-        //public EquippedItems(bool ShieldEquipped)
-        //{
-        //    this.shieldEquipped = ShieldEquipped;
-        //}
         public EquippedItems()
         {
 
         }
 
-
-        public int ShieldBonus(int CurrentAC)
+        public int AtkBonusCalc(string modifier, bool Proficency, int ProficiencyBonus, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma)
         {
-            if (shieldEquipped == true)
+            int ATKBonus;
+            switch (modifier)
             {
-                int NewAC = CurrentAC + 2;
-                return NewAC;
+                case "Strength":
+                    ATKBonus = Strength;
+                    break;
+                case "Dexterity":
+                    ATKBonus = Dexterity;
+                    break;
+                case "Constitution":
+                    ATKBonus = Constitution;
+                    break;
+                case "Intelligence":
+                    ATKBonus = Intelligence;
+                    break;
+                case "Wisdom":
+                    ATKBonus = Wisdom;
+                    break;
+                case "Charisma":
+                    ATKBonus = Charisma;
+                    break;
+                default:
+                    ATKBonus = 0;
+                    break;
+            }
+            int BonusValue;
+            if (Proficency == true)
+            {
+                BonusValue = ProficiencyBonus;
             }
             else
             {
-                return CurrentAC += 0;
+                BonusValue = 0;
             }
+            return ATKBonus + BonusValue;
         }
 
-        public int AtkBonusCalc()
+        public int ACBonusCalc(int ArmorValue, bool Shield, int DexScore)
         {
-
-            int ATKBonus = 0;
-
-            return ATKBonus;
+            int Armor;
+            if(ArmorValue == 0)
+            {
+                Armor = 10;
+            }
+            else
+            {
+                Armor = ArmorValue;
+            }
+            int ShieldBonus;
+            if (Shield == true)
+            {
+                ShieldBonus = 2;
+            }
+            else
+            {
+                ShieldBonus = 0;
+            }
+            return Armor + ShieldBonus + DexScore;
         }
-
-        public int ACBonusCalc()
-        {
-            int ACBonus = 0;
-
-            return ACBonus;
-        }
-
-
     }
 }

@@ -13,7 +13,6 @@ namespace CharacterSheet
 {
     public partial class AddToInventoryForm : Form
     {
-        String PreviewDetails = "{0, -7}{1,-7}{2,-7}{3, -7}";
         Item myItem = new Item();
         Armor myArmor = new Armor();
         Weapon myWeapon = new Weapon();
@@ -186,10 +185,12 @@ namespace CharacterSheet
             OnlyTakeNumbers(e);
           
         }
+
         private void ArmorAmountBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
         }
+
         private void ItemweightBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
@@ -218,7 +219,6 @@ namespace CharacterSheet
         #region CLICKEVENTS
         private void AddItemButton_Click(object sender, EventArgs e)
         {
-            AddToInvListBox.Items.Clear();
             if (string.IsNullOrEmpty(myItem.ItemName) == false && myItem.AmountHeld > 0)  // laves til metoder
             {
                 Item NewItem = new Item();
@@ -229,7 +229,6 @@ namespace CharacterSheet
                 NewItem.ItemType = myItem.ItemType;
                 NewItem.Description = myItem.Description;
                 myInventoryList.Add(NewItem);
-
             }
             if (string.IsNullOrEmpty(myArmor.ItemName) == false && myArmor.AmountHeld > 0)
             {
@@ -243,14 +242,13 @@ namespace CharacterSheet
                 NewArmor.Description = myArmor.Description;
                 NewArmor.ItemEquipped = myArmor.ItemEquipped;
 
-                myInventoryList.Add(NewArmor);
+                    myInventoryList.Add(NewArmor);
                 if (ArmorEquippedCheck.Checked == true)
                 {
                     ArmorEquippedCheck.Checked = false;
                     myEquippedItems.ACFromArmor = myArmor.ACFromArmor; 
                     myEquippedItems.ArmorSlotChest = myArmor.ItemName;
                 }
-
             }
             if (string.IsNullOrEmpty(myWeapon.ItemName) == false && myWeapon.AmountHeld > 0)
             {
@@ -275,67 +273,61 @@ namespace CharacterSheet
                     EquipSlotCheck SlotChoice = new EquipSlotCheck(NewWeapon, myEquippedItems, "Where to Equip?", "Slot 1", "Slot 2", "Slot 3");
                     SlotChoice.ShowDialog();
                 }
-
             }
             ClearTextBoxes(this.Controls);
             RunInvList();
+
         }
 
         private void RemoveFromListButton_Click(object sender, EventArgs e)
         {
-            if (AddToInvListBox.SelectedIndex >= 0 && AddToInvListBox.SelectedIndex <= AddToInvListBox.Items.Count) // skal have sin egen knap
+            for (int i = 0; i < AddToInvListView.Items.Count; i++)
             {
-                myInventoryList.RemoveAt(AddToInvListBox.SelectedIndex);
-                AddToInvListBox.Items.RemoveAt(AddToInvListBox.SelectedIndex);
+                if (AddToInvListView.Items[i].Selected)
+                {
+                    myInventoryList.RemoveAt(i);
+                    AddToInvListView.Items[i].Remove();
+                }
+                else
+                {
+                }
 
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to remove");
             }
             RunInvList();
         }
 
-        private void AddToInvListBox_DoubleClick(object sender, EventArgs e)
-        {
-            if (AddToInvListBox.SelectedItem != null)
-            {
-                MessageBox.Show(Convert.ToString(myInventoryList[AddToInvListBox.SelectedIndex].Description)); // needs work
-                AddToInvListBox.SelectedItem = null;
-            }
-        }
-
         private void IncreaseByOneButton_Click(object sender, EventArgs e)
         {
-            if (AddToInvListBox.SelectedIndex >= 0)
+            for (int i = 0; i < AddToInvListView.Items.Count; i++)
             {
-                myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld += 1;
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to increase");
+                if (AddToInvListView.Items[i].Selected)
+                {
+                    myInventoryList[i].AmountHeld += 1;
+                }
+                else
+                {
+                    MessageBox.Show("Select an item from the list to increase");
+                }
             }
             RunInvList();
         }
 
         private void DecreaseByOneButton_Click(object sender, EventArgs e)
         {
-            if (AddToInvListBox.SelectedIndex >= 0)
+            for (int i = 0; i < AddToInvListView.Items.Count; i++)
             {
-                if (myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld > 1)
+                if (AddToInvListView.Items[i].Selected)
                 {
-                    myInventoryList[AddToInvListBox.SelectedIndex].AmountHeld -= 1;
-
+                    myInventoryList[i].AmountHeld -= 1;
+                    if (myInventoryList[i].AmountHeld == 0)
+                    {
+                        myInventoryList.RemoveAt(i);
+                    }
                 }
                 else
                 {
-                    myInventoryList.RemoveAt(AddToInvListBox.SelectedIndex);
-                    AddToInvListBox.Items.RemoveAt(AddToInvListBox.SelectedIndex);
+                    MessageBox.Show("Select an item from the list to decrease");
                 }
-            }
-            else
-            {
-                MessageBox.Show("Select an item from the list to decrease");
             }
             RunInvList();
         }
@@ -350,6 +342,7 @@ namespace CharacterSheet
                 e.Handled = true;
             }
         }
+
         string NewValue(bool OutOfReach, string UserInput) // giver en linje en ny værdi, hvis værdien ikke er null
         {
             if (OutOfReach == false)
@@ -361,6 +354,7 @@ namespace CharacterSheet
                 return null;
             }
         }
+
         public void ClearTextBoxes(Control.ControlCollection EditInventory)
         {
             foreach (Control TextBox in EditInventory)
@@ -378,23 +372,37 @@ namespace CharacterSheet
 
         public void RunInvList() // mangler en sorting function og tabs
         {
-            AddToInvListBox.Items.Clear();
+            AddToInvListView.Items.Clear();
+            int i = 0;
             foreach (var Item in myInventoryList)
             {
                 int ID = Item.ItemID;
-                switch (ID)
+
+             
+                switch (Item.ItemID)
                 {
                     case 1:
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, Item.ItemName, Item.AmountHeld, Item.WeightPerItem, ""));
+                        AddToInvListView.Items.Add(Item.ItemName, i);
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
+                            i++;
                         break;
                     case 2:
-                        Armor armor = (Armor)Item; 
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, armor.ItemName, armor.AmountHeld, armor.WeightPerItem, armor.ACFromArmor));
+                        Armor armor = (Armor)Item;
+                        AddToInvListView.Items.Add(armor.ItemName, i);
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
+                        i++;
                         break;
 
                     case 3:
                         Weapon weapon = (Weapon)Item;
-                        AddToInvListBox.Items.Add(String.Format(PreviewDetails, weapon.ItemName, weapon.AmountHeld, weapon.WeightPerItem, weapon.Damage));
+                        AddToInvListView.Items.Add(weapon.ItemName, i);
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
+                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                        i++;
                         break;
                 }
             }
@@ -402,6 +410,7 @@ namespace CharacterSheet
             MaxWeightLabel.Text = Convert.ToString(myAttributes.Attributes[0] * 5);
             EncumberStatusLabel.Text = EncumberCheck(Convert.ToInt32(CurrentWeightLabel.Text), myAttributes.Attributes[0]);
         }
+
         string EncumberCheck(int CurrentWeightTotal, int Strength) // tjekker om man har for meget vægt
         {
             string Encumbered;
@@ -420,6 +429,7 @@ namespace CharacterSheet
 
             return Encumbered;
         }
+
         int ItemWeightCalc() // udregner hvor meget ens items vejer samlet
         {
             int CurrentWeightTotal = 0;
@@ -430,6 +440,12 @@ namespace CharacterSheet
             }
             return CurrentWeightTotal;
         }
+
         #endregion
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
     }
 }
