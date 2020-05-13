@@ -1484,5 +1484,14 @@ namespace CharacterSheet
         {
 
         }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog pic = new OpenFileDialog();
+            if (pic.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.ImageLocation = pic.FileName;
+            }
+        }
     }
 }
