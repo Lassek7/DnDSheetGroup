@@ -21,8 +21,9 @@ namespace DnDClassLibrary
         Item myItem = new Item();
         public List<Character> myCharacterInfo = new List<Character>();
         public List<CharacterAttributes> myListAttributes = new List<CharacterAttributes>();
-        
+        public string filePath;
         public List<Item> InventoryList = new List<Item>();
+        public List<Item> BasicStarterItemList = new List<Item>();
         
 
         public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList, Item ItemContent)
@@ -42,53 +43,29 @@ namespace DnDClassLibrary
        
         #endregion
         /* To doooooooooooooooo 
-         1. tilfører sådan at ens Charator navn er navnet på json filen samt i en mappe for sig selv 
-         1.1 lavet sådan at de enkelt værdiere i json filen bliver lagret i de forskellige værdier i koden(Evt i DndClassen) (DOne)
-         2. Tilfører verison kontrol som tjekker efter backup filer
-         3. tilfører attribute i json filen 
-         4. laver en validering som overwritter den gamle fil
-         5. tilføre en autosave knap evt 
+         
+        
+         
+         1. Prefixed weapons/
+         2. laver en validering som overwritter den gamle fil
+         
 
          */
 
         #region INVENTORYLIST
-        public string UserFilePath()
+        public string CreateJsonPathPreSetItem()
         {
-            string path = Directory.GetParent(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData)).FullName; // sætter path værdien til at være ens Windows brugere mappe i file explorer ex. (C:\Users\rallo\Backup Character)
-            // I if statment tjekker den version af Windows OS om det er vista, windows 7 eller windows 10
-            // Hvis Windows OS version er større eller ligmed 6 henter den rigtig placering af mappen og laver den til en string
-            if (Environment.OSVersion.Version.Major >= 6)
-            {
-                path = Directory.GetParent(path).ToString();
-            }
-            return path;
-        }
-        // kombinere mappens placering og navnet på backup filen til en string ex.(C:\Users\rallo\Backup Character\PlayerName.json)
-        public string CreateFolderAtt()
-        {
-            string foldername = UserFilePath();
-            string pathString = System.IO.Path.Combine(foldername, "Backup Character");
-            string fileName = myCharacter.characterName + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
+            string folderPath = filePath;
+            string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
+            string fileName = "StarterItem" + ".json";
 
-            System.IO.Directory.CreateDirectory(pathString); // laver mappen Backup Character 
-            string createfile = System.IO.Path.Combine(pathString, fileName);
-            return createfile;
+            string starterItemFile = System.IO.Path.Combine(pathString, fileName);
+            return starterItemFile;
         }
-        public string CreateFolderItem()
+        public void SaveCharacterToFile(string afilePath)
         {
-            string foldername = UserFilePath();
-            string pathString = System.IO.Path.Combine(foldername, "Backup Character");
-            string fileName = myCharacter.characterName + "Inventory" + ".json"; // henter Navnet på spilleren og sætter navnet på backup filen til at være (PlayerName.json)
-
-            System.IO.Directory.CreateDirectory(pathString); // laver mappen Backup Character 
-            string createfile = System.IO.Path.Combine(pathString, fileName);
-            return createfile;
-        }
-
-        public void SaveCharacterToFile()
-        {
-            DataSet dataset = new DataSet("dataSet");
-            dataset.Namespace = "NetFrameWork";
+            string myfilePath = afilePath;
+            DataSet dataset = new DataSet();
             DataTable table = new DataTable();
             DataColumn idColumn = new DataColumn("id", typeof(int));
             idColumn.AutoIncrement = true;
@@ -121,7 +98,7 @@ namespace DnDClassLibrary
             table.Columns.Add(Race);
             table.Columns.Add(Class);
             table.Columns.Add(AM);
-            table.Columns.Add(BG);
+            table.Columns.Add(BG); 
             table.Columns.Add(MH);
             table.Columns.Add(Level);
             table.Columns.Add(PT);
@@ -141,7 +118,7 @@ namespace DnDClassLibrary
             table.Columns.Add(GP);
             table.Columns.Add(PP);
             dataset.Tables.Add(table);
-            using (FileStream fileStream = new FileStream(CreateFolderAtt(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+            using (FileStream fileStream = new FileStream(afilePath, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
             {
                 using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                 {
@@ -180,6 +157,9 @@ namespace DnDClassLibrary
                     
                     serializer.Serialize(sw, dataset);
                     table = new DataTable();
+                    int CharacterLength = myCharacter.characterName.Length;
+                    filePath = afilePath.Replace(myCharacter.characterName + ".json", "").Replace(" ", " ");
+                    
                 }
             }
         }
@@ -189,8 +169,6 @@ namespace DnDClassLibrary
             DataSet dataset = new DataSet("dataSet");
             dataset.Namespace = "NetFrameWork";
             DataTable table = new DataTable();
-            DataColumn idColumn = new DataColumn("id", typeof(int));
-            idColumn.AutoIncrement = true;
             string JsonFileToString = File.ReadAllText(JsonCharData);
             dataset = JsonConvert.DeserializeObject<DataSet>(JsonFileToString);
             table = dataset.Tables["table1"];
@@ -199,17 +177,13 @@ namespace DnDClassLibrary
             {
 
                 for(int i =0; i < CharacterInfoArray.Length; i++) {
-                CharacterInfoArray[i] = Convert.ToString(row.ItemArray[i]);
-                
+                CharacterInfoArray[i] = Convert.ToString(row.ItemArray[i]);          
                 }
-
             }
-            
-
             return CharacterInfoArray;
         }
         
-        public void SaveDataToFile()
+        public void SaveDataToFile(string filePathInventory)
         {
 
             DataSet dataset = new DataSet("dataSet");
@@ -238,7 +212,7 @@ namespace DnDClassLibrary
                         table.Columns.Add(D);
                         dataset.Tables.Add(table);
 
-                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(filePathInventory, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
@@ -280,11 +254,10 @@ namespace DnDClassLibrary
                         table.Columns.Add(AD);
                         table.Columns.Add(AIE);
                         dataset.Tables.Add(table);
-                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(filePathInventory, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
-
                                 DataRow newRow = table.NewRow();
                                 Armor armor = (Armor)Item;
 
@@ -332,7 +305,7 @@ namespace DnDClassLibrary
                         table.Columns.Add(WIE);
                         dataset.Tables.Add(table);
 
-                        using (FileStream fileStream = new FileStream(CreateFolderItem(), FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
+                        using (FileStream fileStream = new FileStream(filePathInventory, FileMode.OpenOrCreate)) // åbner filen så man kan tilfører elementer
                         {
                             using (StreamWriter sw = new StreamWriter(fileStream, Encoding.UTF8))
                             {
@@ -358,14 +331,10 @@ namespace DnDClassLibrary
                                 table = new DataTable();
                             }
                         }
-
                         break;
                     default:
-                        break;
-                        
+                        break;          
                 }
-                
-
             }
         }
         public List<Item> DatabaseList(string JsonItemData) // 
@@ -374,11 +343,10 @@ namespace DnDClassLibrary
             DataSet dataset = new DataSet("dataSet");
             dataset.Namespace = "NetFrameWork";
             DataTable table = new DataTable();
-            DataColumn idColumn = new DataColumn("id", typeof(int));
-            idColumn.AutoIncrement = true;
             string test2 = File.ReadAllText(JsonItemData);
             dataset = JsonConvert.DeserializeObject<DataSet>(test2);
-
+            DataColumn idColumn = new DataColumn("id", typeof(int));
+            idColumn.AutoIncrement = true;
             for (int i = 1; i <= dataset.Tables.Count; i++)
             {
                 table = dataset.Tables["table" + i];
@@ -435,27 +403,73 @@ namespace DnDClassLibrary
                 }
             }
             return InventoryList;
-            // Setup for deserialize aka load filen til programmet igen
-            //Inventory inv = new Inventory();
-            //Item aItem = new Item();
-            //string test = File.ReadAllText(CreateFolder());
-            //dataset = JsonConvert.DeserializeObject<DataSet>(test);
-            //table = dataset.Tables["table1"];
-            //foreach (DataRow row in table.Rows)
-            //{
-            //    aItem.ItemName = Convert.ToString(row["Item Name"]);
-            //    aItem.ItemType = Convert.ToString(row["Item type"]);
-            //    aItem.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-            //    aItem.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-            //    aItem.Description = Convert.ToString(row["Description"]);
-            //    inv.inventoryList.Add(aItem);
-            //    aItem = new Item();
+        }
+        public List<Item> BasicStarterItem()
+        {
+            int ItemID;
+            DataSet dataset = new DataSet("dataSet");
+            dataset.Namespace = "NetFrameWork";
+            DataTable table = new DataTable();
+            string basicStarterItem = File.ReadAllText(CreateJsonPathPreSetItem());
+            dataset = JsonConvert.DeserializeObject<DataSet>(basicStarterItem);
+            DataColumn idColumn = new DataColumn("id", typeof(int));
+            idColumn.AutoIncrement = true;
+            for (int i = 1; i <= dataset.Tables.Count; i++)
+            {
+                table = dataset.Tables["table" + i];
+                foreach (DataRow row in table.Rows)
+                {
 
-            //}
+                    ItemID = Convert.ToInt32(row["Item ID"]);
+                    switch (ItemID)
+                    {
 
+                        case 1:
+                            Item test = new Item();
+                            test.ItemID = Convert.ToInt32(row["Item ID"]);
+                            test.ItemName = Convert.ToString(row["Item Name"]);
+                            test.ItemType = Convert.ToString(row["Item Type"]);
+                            test.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            test.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            test.Description = Convert.ToString(row["Description"]);
+                            BasicStarterItemList.Add(test);
+                            test = new Item();
+                            break;
+                        case 2:
+                            Armor armor = new Armor();
 
+                            armor.ItemID = Convert.ToInt32(row["Item ID"]);
+                            armor.ItemName = Convert.ToString(row["Item Name"]);
+                            armor.ItemType = Convert.ToString(row["Item Type"]);
+                            armor.ACFromArmor = Convert.ToInt32(row["AC From Armor"]);
+                            armor.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            armor.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            armor.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+                            BasicStarterItemList.Add(armor);
 
+                            break;
+                        case 3:
+                            Weapon weapon = new Weapon();
 
+                            weapon.ItemID = Convert.ToInt32(row["Item ID"]);
+                            weapon.ItemName = Convert.ToString(row["Item Name"]);
+                            weapon.ItemType = Convert.ToString(row["Item Type"]);
+                            weapon.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+                            weapon.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+                            weapon.Description = Convert.ToString(row["Description"]);
+                            weapon.AttributeAssociation = Convert.ToString(row["Attribute Association"]);
+                            weapon.Range = Convert.ToString(row["Range"]);
+                            weapon.Damage = Convert.ToString(row["Damage"]);
+                            weapon.DamageType = Convert.ToString(row["Damage Type"]);
+                            weapon.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+                            BasicStarterItemList.Add(weapon);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            return BasicStarterItemList;
         }
     }
 }

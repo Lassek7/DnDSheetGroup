@@ -24,21 +24,62 @@ namespace CharacterSheet
         {
             this.Hide();
             CreateCharacterForm RunCreateCharacter = new CreateCharacterForm();
+            DnDDatabaseManagement ShitV2 = new DnDDatabaseManagement();
+            ShitV2.BasicStarterItem();
             RunCreateCharacter.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string testfile1 = @"C:\Users\rallo\Backup Character\BobInventory.json";
-            string testfile2 = @"C:\Users\rallo\Backup Character\Bob.json";
             DnDDatabaseManagement ShitV2 = new DnDDatabaseManagement();
-            string[] test2 = ShitV2.LoadCharacterInfo(testfile2);
-            ShitV2.InventoryList = ShitV2.DatabaseList(testfile1);
+            var filePathCharacterInfo = string.Empty;
+            var filePathCharacterInventoryInfo = string.Empty;
+            MessageBox.Show("Choose your character file");
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+                openFileDialog.FileName = openFileDialog.Title;
+
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                filePathCharacterInfo = openFileDialog.FileName;
+            }
+            }
+            string[] test2 = ShitV2.LoadCharacterInfo(filePathCharacterInfo);
+            MessageBox.Show("Choose your Inventory file");
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "json files (*.json)|*.json";
+                
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePathCharacterInventoryInfo = openFileDialog.FileName;
+                }
+            }
+            
+            ShitV2.InventoryList = ShitV2.DatabaseList(filePathCharacterInventoryInfo);
+
+
             this.Hide();
 
             Sheet LoadCharacter = new Sheet(ShitV2.InventoryList,test2);
             
             LoadCharacter.Show();
+            
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            
             
         }
     }
