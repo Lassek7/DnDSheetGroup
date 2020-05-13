@@ -103,6 +103,7 @@
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.AddButton);
             this.Name = "AddFeatureForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddFeatureForm";
             this.ResumeLayout(false);
             this.PerformLayout();

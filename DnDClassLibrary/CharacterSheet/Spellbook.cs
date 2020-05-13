@@ -28,15 +28,37 @@ namespace CharacterSheet
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
-            myPreparedSpells.Clear();
             AddToPreparedSpells(CantripsListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(FirstLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(SecondLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(ThirdLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(FourthLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(FifthLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(SixthLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(SeventhLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(EightLevelListView, myAvailableSpells, myPreparedSpells);
+            AddToPreparedSpells(NinthLevelListView, myAvailableSpells, myPreparedSpells);
             DialogResult = DialogResult.OK;
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(mySpells.SpellName) == false)  // laves til metoder
+            bool Exists = false;
+            foreach (var spell in myAvailableSpells)
             {
+                if (string.IsNullOrEmpty(mySpells.SpellName) == false && spell.SpellName.Equals(mySpells.SpellName))
+                {
+                    Exists = true;
+                }
+                else
+                {
+                    Exists = false;
+                }
+            }
+
+            if (Exists == false) 
+            {
+
                 Spell NewSpell = new Spell();
                 NewSpell.SpellName = mySpells.SpellName;
                 NewSpell.SpellLevel = mySpells.SpellLevel; // cantrip = 0
@@ -52,9 +74,14 @@ namespace CharacterSheet
                 NewSpell.SpellDescription = mySpells.SpellDescription;
 
                 myAvailableSpells.Add(NewSpell);
+                ClearTextBoxes(this.Controls);
             }
-            ClearTextBoxes(this.Controls);
+            else
+            {
+                MessageBox.Show("Item Already exsits");
+            }
             RunAvailableSpellsList();
+
         }
 
         private void CantripsRemoveButton_Click(object sender, EventArgs e)
@@ -120,13 +147,21 @@ namespace CharacterSheet
         private void LevelTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(LevelTextBox.Text);
-            mySpells.SpellLevel = Convert.ToInt32(NewValue(OutOfReach, LevelTextBox.Text));
+            if(OutOfReach == false && Convert.ToInt32(LevelTextBox.Text) >= 0 && Convert.ToInt32(LevelTextBox.Text) <= 9)
+            {
+                mySpells.SpellLevel = Convert.ToInt32(NewValue(OutOfReach, LevelTextBox.Text));
+            }
+            else if(OutOfReach == false)
+            {
+                MessageBox.Show("level Must be within range 0 to 9");
+                LevelTextBox.Text = "1";
+            }
         }
 
         private void RangeTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(RangeTextBox.Text);
-            mySpells.Range = Convert.ToInt32(NewValue(OutOfReach, RangeTextBox.Text));
+            mySpells.Range = NewValue(OutOfReach, RangeTextBox.Text)+"ft.";
         }
 
         private void CastTimeTextBox_TextChanged(object sender, EventArgs e)
@@ -156,7 +191,7 @@ namespace CharacterSheet
         private void DamageTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DamageTextBox.Text);
-            mySpells.SpellDamage = NewValue(OutOfReach, DamageTextBox.Text) + DamageTextBox.Text;
+            mySpells.SpellDamage = NewValue(OutOfReach, DamageTextBox.Text) + DamageComboBox.Text;
         }
        
         private void DurationTextBox_TextChanged(object sender, EventArgs e)
@@ -186,7 +221,7 @@ namespace CharacterSheet
 
         private void DamageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            mySpells.SpellDamage = DamageTextBox.Text + DamageTextBox.Text; 
+            mySpells.SpellDamage = DamageTextBox.Text + DamageComboBox.Text;
         }
 
         #endregion

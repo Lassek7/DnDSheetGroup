@@ -419,7 +419,7 @@ namespace CharacterSheet
                         AddToInvListView.Items.Add(weapon.ItemName, i);
                         AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
                         AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
-                        AddToInvListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                        AddToInvListView.Items[i].SubItems.Add(weapon.Damage);
                         i++;
                         break;
                 }

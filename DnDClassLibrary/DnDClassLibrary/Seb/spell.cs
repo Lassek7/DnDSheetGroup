@@ -8,7 +8,7 @@ namespace DnDClassLibrary
     {
         string spellName;
         int spellLevel; // cantrip = 0
-        int range;
+        string range;
         string castTime;
         string components;
         string spellSchool;
@@ -57,7 +57,7 @@ namespace DnDClassLibrary
             set { castTime = value; }
         }
 
-        public int Range
+        public string Range
         {
             get { return range; }
             set { range = value; }

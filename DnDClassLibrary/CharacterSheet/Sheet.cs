@@ -1512,15 +1512,10 @@ namespace CharacterSheet
                 SpellsListView.Items.Add(Spell.SpellName, i);
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
-                SpellsListView.Items[i].SubItems.Add(Spell.CastTime);
-                SpellsListView.Items[i].SubItems.Add(Spell.Components);
-                SpellsListView.Items[i].SubItems.Add(Spell.SpellSchool);
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
-                SpellsListView.Items[i].SubItems.Add(Spell.Duration);
                 SpellsListView.Items[i].SubItems.Add(Spell.SpellDamageType);
-                SpellsListView.Items[i].SubItems.Add(Spell.SpellDescription);
                 i++;
             }
         }
@@ -1532,6 +1527,11 @@ namespace CharacterSheet
             {
                 pictureBox.ImageLocation = pic.FileName;
             }
+        }
+
+        private void SpellsListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

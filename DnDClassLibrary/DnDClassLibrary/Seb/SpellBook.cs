@@ -35,7 +35,7 @@ namespace DnDClassLibrary
                     NewSpell.Components = Utility.ReadTextInput("Enter Required Components");
                     NewSpell.Duration = Utility.ReadTextInput("Enter Spell duration");
                     NewSpell.CastTime = Utility.ReadTextInput("Enter Cast time");
-                    NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
+                 //   NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
                     NewSpell.SpellSchool = Utility.ReadTextInput("Enter Spell School");
                     NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
                    // NewSpell.SpellDamageType = Utility.ReadNumericInput("Enter required tytp");
