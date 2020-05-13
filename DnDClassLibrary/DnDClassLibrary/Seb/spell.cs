@@ -6,17 +6,18 @@ namespace DnDClassLibrary
 {
     public class Spell
     {
-        private string spellName;
-        private string components;
-        private string duration;
-        private string castTime;
-        private int range;
-        private int spellLevel; // cantrip = 0
-        private string spellSchool;
-        private string spellDescription;
-        private int resources;
-        private int spellDC;
-        private int spellBonus;
+        string spellName;
+        int spellLevel; // cantrip = 0
+        int range;
+        string castTime;
+        string components;
+        string spellSchool;
+        int spellDC;
+        int spellBonus;
+        int spellDamage;
+        string duration;
+        string spellDamageType;
+        string spellDescription;
 
         public Spell()
         {
@@ -25,32 +26,6 @@ namespace DnDClassLibrary
         public Spell(string spellName)
         {
             this.spellName = spellName;
-        }
-
-        public Spell(string spellName,
-            string components,
-            string duration,
-            string castTime,
-            int range,
-            int spellLevel,
-            string spellSchool,
-            string spellDescription,
-            int resources,
-            int spellDC,
-            int spellBonus)
-        {
-            this.spellName = spellName;
-            this.components = components;
-            this.duration = duration;
-            this.castTime = castTime;
-            this.range = range;
-            this.spellLevel = spellLevel;
-            this.spellSchool = spellSchool;
-            this.spellDescription = spellDescription;
-            this.resources = resources;
-            this.spellDC = spellDC;
-            this.spellBonus = spellBonus;
-
         }
 
         // Get - Set
@@ -65,7 +40,11 @@ namespace DnDClassLibrary
             get { return components; }
             set { components = value; }
         }
-
+        public int SpellDamage
+        {
+            get { return spellDamage; }
+            set { spellDamage = value; }
+        }
         public string Duration
         {
             get { return duration; }
@@ -102,10 +81,10 @@ namespace DnDClassLibrary
             set { spellDescription = value; }
         }
 
-        public int Resources
+        public string SpellDamageType
         {
-            get { return resources; }
-            set { resources = value; }
+            get { return spellDamageType; }
+            set { spellDamageType = value; }
         }
 
         public int SpellDC
