@@ -23,6 +23,7 @@ namespace CharacterSheet
         List<Item> myInventoryList = new List<Item>();
         List<Feat> myFeatureList = new List<Feat>();
         List<Feat> myOtherFeatureList = new List<Feat>();
+        List<Spell> mySpells = new List<Spell>();
         public string[] CharacterInfo = new string[19];
         List<CharacterAttributes> characterAttributesInfo = new List<CharacterAttributes>();
 
@@ -71,6 +72,7 @@ namespace CharacterSheet
             if (addToInventory.ShowDialog() == DialogResult.OK)
             {
                 RunInvList();
+                LoadEquippedItems();
             }
             else
             {
@@ -143,7 +145,9 @@ namespace CharacterSheet
             InventoryListView.Columns.Add("DamageType", 80, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("ItemType", 55, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Range", 50, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left); int i = 0;
+            InventoryListView.Columns.Add("Property", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left); 
+            int i = 0;
            foreach (var Item in myInventoryList)
            {
                 if (Item.ItemID == 3)
@@ -156,6 +160,7 @@ namespace CharacterSheet
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.DamageType));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.ItemType));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Range));
+                    InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AttributeAssociation));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Description));
                     i++;
                  }
@@ -1372,9 +1377,40 @@ namespace CharacterSheet
 
         private void EquipItemButton_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            {
+                if (InventoryListView.Items[i].Selected)
+                {
+                    for (int j = 0; j < myInventoryList.Count; j++)
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                        {
+                            switch (myInventoryList[j].ItemID)
+                            {
+                                //case 2:
+                                //    myEquippedItems.ACFromArmor = Convert.ToInt32(InventoryListView.Items[i].SubItems[3].Text);
+                                //    myEquippedItems.ArmorSlotChest = InventoryListView.Items[i].SubItems[0].Text;
+                                //    break;
+                                case 3:
+                                    myEquippedItems.WeaponOneName = InventoryListView.Items[i].SubItems[0].Text;
+                                    myEquippedItems.WeaponOneAttributeAssociation = InventoryListView.Items[i].SubItems[7].Text;
+                                    myEquippedItems.WeaponOneDamageType = InventoryListView.Items[i].SubItems[4].Text;
+                                    myEquippedItems.WeaponOneDamage = InventoryListView.Items[i].SubItems[3].Text;
+                                    break;
+                                default:
+                                    MessageBox.Show("Selected item cannot be equipped");
+                                    break;
+                            }
 
+                        }
+                }
+                else
+                {
+                }
+            }
+            LoadEquippedItems();
         }
-        void LoadCharacterInfoFromList() // initializer Database til character info listen i sheet
+
+        void LoadCharacterInfoFromList() 
         {
             myCharacter.characterName = Convert.ToString(CharacterInfo[0]);
             myCharacter.playerName = Convert.ToString(CharacterInfo[1]);
@@ -1395,6 +1431,69 @@ namespace CharacterSheet
             myAttributes.Attributes[3] = Convert.ToInt32(CharacterInfo[16]);
             myAttributes.Attributes[4] = Convert.ToInt32(CharacterInfo[17]);
             myAttributes.Attributes[5] = Convert.ToInt32(CharacterInfo[18]);
+        }
+
+        private void AttunementSlotOneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotOneName = AttunementSlotOneTextBox.Text;
+        }
+
+        private void AttunementSlotTwoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotTwoName = AttunementSlotTwoTextBox.Text;
+
+        }
+
+        private void AttunementSlotThreeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotThreeName = AttunementSlotThreeTextBox.Text;
+
+        }
+
+        private void MagicItemOneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemOneName = MagicItemOneTextBox.Text;
+        }
+
+        private void MagicItemTwoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemTwoName = MagicItemTwoTextBox.Text;
+
+        }
+
+        private void MagicItemThreeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemThreeName = MagicItemThreeTextBox.Text;
+
+        }
+
+        private void SpellsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Spellbook RunSpellBook = new Spellbook(myCharacter, mySpells);
+            if (RunSpellBook.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+                RunPreparedSpells();
+            }
+            else
+            {
+                MessageBox.Show("Character List has not been updated, please manually update the list");
+            }
+
+        }
+        void RunPreparedSpells()
+        {
+
+        }
+
+        private void pictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog pic = new OpenFileDialog();
+            if (pic.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.ImageLocation = pic.FileName;
+            }
         }
     }
 }

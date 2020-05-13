@@ -19,7 +19,6 @@ namespace CharacterSheet
         EquippedItems myEquippedItems = new EquippedItems();
         CharacterAttributes myAttributes = new CharacterAttributes();
         List<Item> myInventoryList = new List<Item>();
-        
 
         public AddToInventoryForm(List<Item> MyList, CharacterAttributes Attri, EquippedItems EQ)
         {
@@ -134,13 +133,13 @@ namespace CharacterSheet
         private void WeaponDamageBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponDamageBox.Text);
-            myWeapon.Damage = NewValue(OutOfReach, WeaponDamageBox.Text);
+            myWeapon.Damage = NewValue(OutOfReach, WeaponDamageBox.Text) + DamageComboBox.Text;
         }
 
         private void WeaponRangeBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponRangeBox.Text);
-            myWeapon.Range = NewValue(OutOfReach, WeaponRangeBox.Text);
+            myWeapon.Range = NewValue(OutOfReach, WeaponRangeBox.Text)+"ft.";
         }
 
         private void WeaponTypeBox_TextChanged(object sender, EventArgs e)
@@ -178,6 +177,11 @@ namespace CharacterSheet
         {
             myWeapon.AttributeAssociation = "Charisma";
         }
+        private void DamageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            myWeapon.Damage = WeaponDamageBox.Text + DamageComboBox.Text;
+        }
+
         #endregion
         #region KEYPRESS
         private void ItemAmountBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -215,8 +219,23 @@ namespace CharacterSheet
         {
             OnlyTakeNumbers(e);
         }
+        private void WeaponDamageBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void WeaponRangeBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
         #endregion
         #region CLICKEVENTS
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
         private void AddItemButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(myItem.ItemName) == false && myItem.AmountHeld > 0)  // laves til metoder
@@ -442,9 +461,7 @@ namespace CharacterSheet
 
         #endregion
 
-        private void CloseButton_Click(object sender, EventArgs e)
-        {
-            DialogResult = DialogResult.OK;
-        }
+
+
     }
 }

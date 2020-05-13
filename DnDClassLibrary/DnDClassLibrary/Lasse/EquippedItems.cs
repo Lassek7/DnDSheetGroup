@@ -20,17 +20,23 @@ namespace DnDClassLibrary
         public string WeaponTwoDamageType;
         public string WeaponTwoAttributeAssociation;
 
-
         public string WeaponThreeName;
         public int WeaponThreeATKBonus;
         public string WeaponThreeDamage;
         public string WeaponThreeDamageType;
         public string WeaponThreeAttributeAssociation;
 
-
         public string ArmorSlotChest;
         public bool shieldEquipped;
         public int ACFromArmor;
+
+        public string AttunementSlotOneName;
+        public string AttunementSlotTwoName;        
+        public string AttunementSlotThreeName;
+
+        public string MagicItemOneName;
+        public string MagicItemTwoName;
+        public string MagicItemThreeName;
 
         public EquippedItems()
         {
