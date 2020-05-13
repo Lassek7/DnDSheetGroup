@@ -728,6 +728,7 @@
             this.ListAmount,
             this.ListWeight,
             this.ListAcDmg});
+            this.AddToInvListView.FullRowSelect = true;
             this.AddToInvListView.HideSelection = false;
             this.AddToInvListView.Location = new System.Drawing.Point(588, 20);
             this.AddToInvListView.MultiSelect = false;

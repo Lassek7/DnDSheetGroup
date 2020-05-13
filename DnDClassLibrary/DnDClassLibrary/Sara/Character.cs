@@ -30,6 +30,8 @@ namespace DnDClassLibrary
         int Initiative;
         int ProficiencyBonus;
         int MaxHealth;
+        string CharacterResources;
+        int CharacterResourcesNumber;
     
 
         public Character()
@@ -41,6 +43,20 @@ namespace DnDClassLibrary
             get { return CharacterName; }
 
             set { CharacterName = value; }
+
+        }
+        public string characterResources
+        {
+            get { return CharacterResources; }
+
+            set { CharacterResources = value; }
+
+        }
+        public int characterResourcesNumber
+        {
+            get { return CharacterResourcesNumber; }
+
+            set { CharacterResourcesNumber = value; }
 
         }
         public string playerName

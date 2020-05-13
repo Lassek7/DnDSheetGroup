@@ -33,6 +33,7 @@ namespace CharacterSheet
         bool IntDone = false;
         bool WisDone = false;
         bool ChaDone = false;
+        bool ResourceDone = false;
 
         public CreateCharacterForm()
         {
@@ -304,7 +305,7 @@ namespace CharacterSheet
 
             if (HealthDone && LvlDone && CharacterNameDone && PlayerNameDone && RaceDone && ClassDone &&
                AlignmentDone && BackgroundDone && IdealsDone && BondsDone && FlawsDone && 
-               PersonalTraitsDone && StrDone && DexDone && ConDone && IntDone && WisDone && ChaDone == true)
+               PersonalTraitsDone && StrDone && DexDone && ConDone && IntDone && WisDone && ChaDone && ResourceDone == true)
             {
                 this.Hide();
                 Sheet RunCharacterSheet = new Sheet(myCharacter, myAttributes); // laver et nyt sheet baseret på Character Classen
@@ -383,6 +384,13 @@ namespace CharacterSheet
             {
                 e.Handled = true;
             }
+        }
+
+        private void ResourceBox_TextChanged(object sender, EventArgs e)
+        {
+            ResourceDone = existcheck(myCharacter.characterResources, ResourceBox.Text, ResourceDone);
+            myCharacter.characterResources = NewValue(ResourceDone, ResourceBox.Text);
+
         }
     }
 

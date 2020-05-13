@@ -67,6 +67,12 @@
     <Compile Include="EquipSlotCheck.Designer.cs">
       <DependentUpon>EquipSlotCheck.cs</DependentUpon>
     </Compile>
+    <Compile Include="EquipWeaponFromSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EquipWeaponFromSheet.Designer.cs">
+      <DependentUpon>EquipWeaponFromSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EquipSlotCheck.resx">
       <DependentUpon>EquipSlotCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EquipWeaponFromSheet.resx">
+      <DependentUpon>EquipWeaponFromSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

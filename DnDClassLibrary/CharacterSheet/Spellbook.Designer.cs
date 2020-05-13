@@ -243,7 +243,7 @@
             // 
             // DamageTextBox
             // 
-            this.DamageTextBox.Location = new System.Drawing.Point(264, 66);
+            this.DamageTextBox.Location = new System.Drawing.Point(265, 66);
             this.DamageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DamageTextBox.Name = "DamageTextBox";
             this.DamageTextBox.Size = new System.Drawing.Size(26, 20);
@@ -317,6 +317,7 @@
             this.SpellDuration,
             this.SpellDamageType,
             this.SpellDescription});
+            this.CantripsListView.FullRowSelect = true;
             this.CantripsListView.HideSelection = false;
             this.CantripsListView.Location = new System.Drawing.Point(130, 126);
             this.CantripsListView.Margin = new System.Windows.Forms.Padding(2);
@@ -617,6 +618,7 @@
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
+            this.FirstLevelListView.FullRowSelect = true;
             this.FirstLevelListView.HideSelection = false;
             this.FirstLevelListView.Location = new System.Drawing.Point(130, 333);
             this.FirstLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -694,6 +696,7 @@
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24});
+            this.ThirdLevelListView.FullRowSelect = true;
             this.ThirdLevelListView.HideSelection = false;
             this.ThirdLevelListView.Location = new System.Drawing.Point(590, 126);
             this.ThirdLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -771,6 +774,7 @@
             this.columnHeader34,
             this.columnHeader35,
             this.columnHeader36});
+            this.FourthLevelListView.FullRowSelect = true;
             this.FourthLevelListView.HideSelection = false;
             this.FourthLevelListView.Location = new System.Drawing.Point(590, 333);
             this.FourthLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -848,6 +852,7 @@
             this.columnHeader46,
             this.columnHeader47,
             this.columnHeader48});
+            this.SecondLevelListView.FullRowSelect = true;
             this.SecondLevelListView.HideSelection = false;
             this.SecondLevelListView.Location = new System.Drawing.Point(130, 551);
             this.SecondLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -925,6 +930,7 @@
             this.columnHeader58,
             this.columnHeader59,
             this.columnHeader60});
+            this.FifthLevelListView.FullRowSelect = true;
             this.FifthLevelListView.HideSelection = false;
             this.FifthLevelListView.Location = new System.Drawing.Point(590, 551);
             this.FifthLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -1002,6 +1008,7 @@
             this.columnHeader70,
             this.columnHeader71,
             this.columnHeader72});
+            this.SixthLevelListView.FullRowSelect = true;
             this.SixthLevelListView.HideSelection = false;
             this.SixthLevelListView.Location = new System.Drawing.Point(1074, 38);
             this.SixthLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -1079,6 +1086,7 @@
             this.columnHeader82,
             this.columnHeader83,
             this.columnHeader84});
+            this.SeventhLevelListView.FullRowSelect = true;
             this.SeventhLevelListView.HideSelection = false;
             this.SeventhLevelListView.Location = new System.Drawing.Point(1074, 214);
             this.SeventhLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -1156,6 +1164,7 @@
             this.columnHeader94,
             this.columnHeader95,
             this.columnHeader96});
+            this.EightLevelListView.FullRowSelect = true;
             this.EightLevelListView.HideSelection = false;
             this.EightLevelListView.Location = new System.Drawing.Point(1074, 397);
             this.EightLevelListView.Margin = new System.Windows.Forms.Padding(2);
@@ -1233,6 +1242,7 @@
             this.columnHeader106,
             this.columnHeader107,
             this.columnHeader108});
+            this.NinthLevelListView.FullRowSelect = true;
             this.NinthLevelListView.HideSelection = false;
             this.NinthLevelListView.Location = new System.Drawing.Point(1074, 576);
             this.NinthLevelListView.Margin = new System.Windows.Forms.Padding(2);

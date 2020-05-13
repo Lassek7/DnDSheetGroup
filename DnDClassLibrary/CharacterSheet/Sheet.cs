@@ -27,6 +27,7 @@ namespace CharacterSheet
         List<Spell> myPreparedSpells = new List<Spell>();
         List<Spell> myAvilableSpells = new List<Spell>();
         public string[] CharacterInfo = new string[19];
+        bool WeaponEquipSwitch;
         List<CharacterAttributes> characterAttributesInfo = new List<CharacterAttributes>();
 
         #region CONSTRUCTORS
@@ -108,6 +109,8 @@ namespace CharacterSheet
             InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
+
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -116,6 +119,8 @@ namespace CharacterSheet
                     InventoryListView.Items.Add(Item.ItemName, i);
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
+                    InventoryListView.Items[i].SubItems.Add(Item.Description);
+
                     i++;
                 }
                 else
@@ -188,7 +193,8 @@ namespace CharacterSheet
                 else
                 {
                 }
-            }
+           }
+            WeaponEquipSwitch = true;
         }
       
         private void RemoveSlotOne_Click(object sender, EventArgs e)
@@ -242,6 +248,12 @@ namespace CharacterSheet
             }
             else
             {
+                foreach (var Item in myFeatureList)
+                {
+                    ClassFeatureListView.Items.Add(Item.FeatName, i);
+                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
             }
         }
 
@@ -264,6 +276,12 @@ namespace CharacterSheet
             }
             else
             {
+                foreach (var Item in myOtherFeatureList)
+                {
+                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
+                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    i++;
+                }
             }
         }
 
@@ -278,7 +296,6 @@ namespace CharacterSheet
                 }
                 else
                 {
-                    MessageBox.Show("Select an item from the list to remove");
                 }
 
             }
@@ -295,7 +312,6 @@ namespace CharacterSheet
                 }
                 else
                 {
-                    MessageBox.Show("Select an item from the list to remove");
                 }
 
             }
@@ -1176,6 +1192,7 @@ namespace CharacterSheet
             PassivePerceptionDisplay.Text = Convert.ToString(myAttributes.Modifiers[4] + 10);
             InitiativeDisplay.Text = Convert.ToString(myAttributes.Modifiers[1]);
             myCharacter.proficiencyBonus = Convert.ToInt32(ProficiencyBonusDisplay.Text);
+            ClassResourceLabel.Text = myCharacter.characterResources;
 
         }
 
@@ -1292,12 +1309,15 @@ namespace CharacterSheet
 
         void RunInvList()
         {
+            WeaponEquipSwitch = false;
             InventoryListView.Columns.Clear();
             InventoryListView.Items.Clear();
             InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
-            InventoryListView.Columns.Add("Ac/Dmg", 50, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("AC/AttributeAssociation", 80, HorizontalAlignment.Left);
+            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
+
             int i = 0;
             foreach (var Item in myInventoryList)
             {
@@ -1310,6 +1330,9 @@ namespace CharacterSheet
                         InventoryListView.Items.Add(Item.ItemName, i);
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
+                        InventoryListView.Items[i].SubItems.Add("");
+                        InventoryListView.Items[i].SubItems.Add(Item.Description);
+
                         i++;
                         break;
                     case 2:
@@ -1318,6 +1341,7 @@ namespace CharacterSheet
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.Description));
                         i++;
                         break;
 
@@ -1326,7 +1350,8 @@ namespace CharacterSheet
                         InventoryListView.Items.Add(weapon.ItemName, i);
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
-                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AttributeAssociation));
+                        InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Description));
                         i++;
                         break;
                 }
@@ -1398,6 +1423,7 @@ namespace CharacterSheet
 
         private void EquipItemButton_Click(object sender, EventArgs e)
         {
+            int Attributes;
             for (int i = 0; i < InventoryListView.Items.Count; i++)
             {
                 if (InventoryListView.Items[i].Selected)
@@ -1407,15 +1433,32 @@ namespace CharacterSheet
                         {
                             switch (myInventoryList[j].ItemID)
                             {
-                                //case 2:
-                                //    myEquippedItems.ACFromArmor = Convert.ToInt32(InventoryListView.Items[i].SubItems[3].Text);
-                                //    myEquippedItems.ArmorSlotChest = InventoryListView.Items[i].SubItems[0].Text;
-                                //    break;
+                                case 2:
+                                    myEquippedItems.ACFromArmor = Convert.ToInt32(InventoryListView.Items[i].SubItems[3].Text);
+                                    myEquippedItems.ArmorSlotChest = InventoryListView.Items[i].SubItems[0].Text;
+                                    break;
                                 case 3:
-                                    myEquippedItems.WeaponOneName = InventoryListView.Items[i].SubItems[0].Text;
-                                    myEquippedItems.WeaponOneAttributeAssociation = InventoryListView.Items[i].SubItems[7].Text;
-                                    myEquippedItems.WeaponOneDamageType = InventoryListView.Items[i].SubItems[4].Text;
-                                    myEquippedItems.WeaponOneDamage = InventoryListView.Items[i].SubItems[3].Text;
+                                    int WeaponID = i;
+    
+                                    if (WeaponEquipSwitch == true)
+                                    {
+                                        Attributes = 7;
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where to Equip?", "Slot one", "slot 2", "slot 3");
+                                        if (WeaponEquip.ShowDialog() == DialogResult.OK)
+                                        {
+                                            LoadEquippedItems();
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Attributes = 3;
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where to Equip?", "Slot one", "slot 2", "slot 3");
+                                        if (WeaponEquip.ShowDialog() == DialogResult.OK)
+                                        {
+                                            LoadEquippedItems();
+                                        }
+                                    }
+
                                     break;
                                 default:
                                     MessageBox.Show("Selected item cannot be equipped");
@@ -1532,6 +1575,14 @@ namespace CharacterSheet
         private void SpellsListView_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void ClassResourcesNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (ClassResourcesNumericUpDown.Value < 0)
+            {
+                ClassResourcesNumericUpDown.Value = 0;
+            }
         }
     }
 }

@@ -168,10 +168,12 @@
             this.groupBox23 = new System.Windows.Forms.GroupBox();
             this.SpellsListView = new System.Windows.Forms.ListView();
             this.SpellName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellLevel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpellRange = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpellSave = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpellBonus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SpellDamage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDamageType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.AddClassFeatureButton = new System.Windows.Forms.Button();
             this.RemoveFeatureButton = new System.Windows.Forms.Button();
@@ -489,8 +491,8 @@
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
-            this.SpellDamageType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellLevel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ClassResourceLabel = new System.Windows.Forms.GroupBox();
+            this.ClassResourcesNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -694,6 +696,8 @@
             this.groupBox54.SuspendLayout();
             this.groupBox55.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.ClassResourceLabel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ClassResourcesNumericUpDown)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -2426,10 +2430,12 @@
             this.SpellBonus,
             this.SpellDamage,
             this.SpellDamageType});
+            this.SpellsListView.FullRowSelect = true;
             this.SpellsListView.HideSelection = false;
             this.SpellsListView.Location = new System.Drawing.Point(6, 16);
             this.SpellsListView.Name = "SpellsListView";
             this.SpellsListView.Size = new System.Drawing.Size(419, 219);
+            this.SpellsListView.Sorting = System.Windows.Forms.SortOrder.Descending;
             this.SpellsListView.TabIndex = 0;
             this.SpellsListView.UseCompatibleStateImageBehavior = false;
             this.SpellsListView.View = System.Windows.Forms.View.Details;
@@ -2439,6 +2445,10 @@
             // 
             this.SpellName.Text = "Name";
             this.SpellName.Width = 48;
+            // 
+            // SpellLevel
+            // 
+            this.SpellLevel.Text = "Level";
             // 
             // SpellRange
             // 
@@ -2459,6 +2469,11 @@
             // 
             this.SpellDamage.Text = "Damage";
             this.SpellDamage.Width = 53;
+            // 
+            // SpellDamageType
+            // 
+            this.SpellDamageType.Text = "DamageType";
+            this.SpellDamageType.Width = 81;
             // 
             // groupBox24
             // 
@@ -2505,6 +2520,7 @@
             this.ClassFeatureListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.FeatureName,
             this.FeatureDescription});
+            this.ClassFeatureListView.FullRowSelect = true;
             this.ClassFeatureListView.HideSelection = false;
             this.ClassFeatureListView.Location = new System.Drawing.Point(6, 14);
             this.ClassFeatureListView.Margin = new System.Windows.Forms.Padding(2);
@@ -2569,6 +2585,7 @@
             this.OtherFeaturesListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.OtherFeaturesName,
             this.OtherFeaturesDescription});
+            this.OtherFeaturesListView.FullRowSelect = true;
             this.OtherFeaturesListView.HideSelection = false;
             this.OtherFeaturesListView.Location = new System.Drawing.Point(6, 13);
             this.OtherFeaturesListView.Margin = new System.Windows.Forms.Padding(2);
@@ -2603,7 +2620,7 @@
             this.groupBox26.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox26.Size = new System.Drawing.Size(288, 62);
+            this.groupBox26.Size = new System.Drawing.Size(179, 64);
             this.groupBox26.TabIndex = 54;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Death Saving Throws";
@@ -2611,7 +2628,7 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(204, 42);
+            this.checkBox4.Location = new System.Drawing.Point(147, 43);
             this.checkBox4.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
@@ -2621,7 +2638,7 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(170, 42);
+            this.checkBox5.Location = new System.Drawing.Point(113, 43);
             this.checkBox5.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(15, 14);
@@ -2631,7 +2648,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(135, 42);
+            this.checkBox6.Location = new System.Drawing.Point(78, 43);
             this.checkBox6.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(15, 14);
@@ -2642,28 +2659,28 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label4.Location = new System.Drawing.Point(70, 42);
+            this.label4.Location = new System.Drawing.Point(13, 43);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 13);
+            this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 104;
-            this.label4.Text = "Fail";
+            this.label4.Text = "Failures";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.label3.Location = new System.Drawing.Point(70, 18);
+            this.label3.Location = new System.Drawing.Point(13, 19);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.Size = new System.Drawing.Size(52, 13);
             this.label3.TabIndex = 103;
-            this.label3.Text = "Succeed";
+            this.label3.Text = "Succeses";
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(204, 17);
+            this.checkBox3.Location = new System.Drawing.Point(147, 18);
             this.checkBox3.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
@@ -2673,7 +2690,7 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(170, 18);
+            this.checkBox2.Location = new System.Drawing.Point(113, 19);
             this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
@@ -2683,7 +2700,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(135, 18);
+            this.checkBox1.Location = new System.Drawing.Point(78, 19);
             this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
@@ -3129,7 +3146,7 @@
             // 
             // EquipItemButton
             // 
-            this.EquipItemButton.Location = new System.Drawing.Point(464, 151);
+            this.EquipItemButton.Location = new System.Drawing.Point(462, 152);
             this.EquipItemButton.Name = "EquipItemButton";
             this.EquipItemButton.Size = new System.Drawing.Size(60, 22);
             this.EquipItemButton.TabIndex = 84;
@@ -3140,10 +3157,10 @@
             // AddOneButton
             // 
             this.AddOneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.AddOneButton.Location = new System.Drawing.Point(217, 151);
+            this.AddOneButton.Location = new System.Drawing.Point(348, 152);
             this.AddOneButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddOneButton.Name = "AddOneButton";
-            this.AddOneButton.Size = new System.Drawing.Size(104, 22);
+            this.AddOneButton.Size = new System.Drawing.Size(47, 22);
             this.AddOneButton.TabIndex = 86;
             this.AddOneButton.Text = "+1";
             this.AddOneButton.UseVisualStyleBackColor = true;
@@ -3151,21 +3168,21 @@
             // 
             // AlItemsButton
             // 
-            this.AlItemsButton.Location = new System.Drawing.Point(4, 14);
+            this.AlItemsButton.Location = new System.Drawing.Point(6, 15);
             this.AlItemsButton.Name = "AlItemsButton";
-            this.AlItemsButton.Size = new System.Drawing.Size(54, 22);
+            this.AlItemsButton.Size = new System.Drawing.Size(53, 22);
             this.AlItemsButton.TabIndex = 71;
-            this.AlItemsButton.Text = "All Items";
+            this.AlItemsButton.Text = "All";
             this.AlItemsButton.UseVisualStyleBackColor = true;
             this.AlItemsButton.Click += new System.EventHandler(this.AlItemsButton_Click);
             // 
             // MinusOneButton
             // 
             this.MinusOneButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.MinusOneButton.Location = new System.Drawing.Point(109, 151);
+            this.MinusOneButton.Location = new System.Drawing.Point(297, 152);
             this.MinusOneButton.Margin = new System.Windows.Forms.Padding(2);
             this.MinusOneButton.Name = "MinusOneButton";
-            this.MinusOneButton.Size = new System.Drawing.Size(104, 22);
+            this.MinusOneButton.Size = new System.Drawing.Size(48, 22);
             this.MinusOneButton.TabIndex = 84;
             this.MinusOneButton.Text = "-1";
             this.MinusOneButton.UseVisualStyleBackColor = true;
@@ -3174,7 +3191,7 @@
             // RemoveFromInvButton
             // 
             this.RemoveFromInvButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.RemoveFromInvButton.Location = new System.Drawing.Point(389, 151);
+            this.RemoveFromInvButton.Location = new System.Drawing.Point(399, 152);
             this.RemoveFromInvButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveFromInvButton.Name = "RemoveFromInvButton";
             this.RemoveFromInvButton.Size = new System.Drawing.Size(60, 22);
@@ -3920,7 +3937,7 @@
             // ShowListItemsButton
             // 
             this.ShowListItemsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListItemsButton.Location = new System.Drawing.Point(4, 102);
+            this.ShowListItemsButton.Location = new System.Drawing.Point(5, 42);
             this.ShowListItemsButton.Margin = new System.Windows.Forms.Padding(2);
             this.ShowListItemsButton.Name = "ShowListItemsButton";
             this.ShowListItemsButton.Size = new System.Drawing.Size(54, 22);
@@ -3933,7 +3950,7 @@
             // 
             this.ShowListWeaponsButton.BackColor = System.Drawing.SystemColors.ControlLight;
             this.ShowListWeaponsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListWeaponsButton.Location = new System.Drawing.Point(4, 42);
+            this.ShowListWeaponsButton.Location = new System.Drawing.Point(5, 68);
             this.ShowListWeaponsButton.Margin = new System.Windows.Forms.Padding(2);
             this.ShowListWeaponsButton.Name = "ShowListWeaponsButton";
             this.ShowListWeaponsButton.Size = new System.Drawing.Size(54, 22);
@@ -3945,7 +3962,7 @@
             // ShowListArmorButton
             // 
             this.ShowListArmorButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
-            this.ShowListArmorButton.Location = new System.Drawing.Point(4, 72);
+            this.ShowListArmorButton.Location = new System.Drawing.Point(5, 98);
             this.ShowListArmorButton.Margin = new System.Windows.Forms.Padding(2);
             this.ShowListArmorButton.Name = "ShowListArmorButton";
             this.ShowListArmorButton.Size = new System.Drawing.Size(54, 22);
@@ -6893,6 +6910,7 @@
             // InventoryListView
             // 
             this.InventoryListView.BackColor = System.Drawing.SystemColors.Control;
+            this.InventoryListView.FullRowSelect = true;
             this.InventoryListView.HideSelection = false;
             this.InventoryListView.Location = new System.Drawing.Point(63, 13);
             this.InventoryListView.Margin = new System.Windows.Forms.Padding(2);
@@ -6968,14 +6986,28 @@
             this.pictureBox.TabStop = false;
             this.pictureBox.DoubleClick += new System.EventHandler(this.pictureBox_DoubleClick);
             // 
-            // SpellDamageType
+            // ClassResourceLabel
             // 
-            this.SpellDamageType.Text = "DamageType";
-            this.SpellDamageType.Width = 81;
+            this.ClassResourceLabel.Controls.Add(this.ClassResourcesNumericUpDown);
+            this.ClassResourceLabel.Location = new System.Drawing.Point(590, 403);
+            this.ClassResourceLabel.Name = "ClassResourceLabel";
+            this.ClassResourceLabel.Size = new System.Drawing.Size(87, 64);
+            this.ClassResourceLabel.TabIndex = 72;
+            this.ClassResourceLabel.TabStop = false;
+            this.ClassResourceLabel.Text = "ClassResources";
             // 
-            // SpellLevel
+            // ClassResourcesNumericUpDown
             // 
-            this.SpellLevel.Text = "Level";
+            this.ClassResourcesNumericUpDown.BackColor = System.Drawing.SystemColors.Control;
+            this.ClassResourcesNumericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClassResourcesNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 30.8F);
+            this.ClassResourcesNumericUpDown.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ClassResourcesNumericUpDown.Location = new System.Drawing.Point(2, 12);
+            this.ClassResourcesNumericUpDown.Name = "ClassResourcesNumericUpDown";
+            this.ClassResourcesNumericUpDown.Size = new System.Drawing.Size(82, 50);
+            this.ClassResourcesNumericUpDown.TabIndex = 73;
+            this.ClassResourcesNumericUpDown.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ClassResourcesNumericUpDown.ValueChanged += new System.EventHandler(this.ClassResourcesNumericUpDown_ValueChanged);
             // 
             // Sheet
             // 
@@ -6983,6 +7015,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1522, 762);
+            this.Controls.Add(this.ClassResourceLabel);
             this.Controls.Add(this.pictureBox);
             this.Controls.Add(this.EditSheetCheck);
             this.Controls.Add(this.groupBox25);
@@ -7261,6 +7294,8 @@
             this.groupBox54.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.ClassResourceLabel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ClassResourcesNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7734,5 +7769,7 @@
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.ColumnHeader SpellDamageType;
         private System.Windows.Forms.ColumnHeader SpellLevel;
+        private System.Windows.Forms.GroupBox ClassResourceLabel;
+        private System.Windows.Forms.NumericUpDown ClassResourcesNumericUpDown;
     }
 }

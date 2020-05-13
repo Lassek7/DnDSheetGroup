@@ -391,7 +391,10 @@ namespace CharacterSheet
             }
             RunAvailableSpellsList();
         }
-
+        void Checkstatus()
+        {
+            
+        }
 
 
         #endregion

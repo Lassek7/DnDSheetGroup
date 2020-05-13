@@ -66,6 +66,8 @@
             this.IntelligenceLabel = new System.Windows.Forms.Label();
             this.CharismaLabel = new System.Windows.Forms.Label();
             this.WisdomLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResourceBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CharacterNameLabel
@@ -108,7 +110,7 @@
             // RaceLabel
             // 
             this.RaceLabel.AutoSize = true;
-            this.RaceLabel.Location = new System.Drawing.Point(12, 95);
+            this.RaceLabel.Location = new System.Drawing.Point(12, 90);
             this.RaceLabel.Name = "RaceLabel";
             this.RaceLabel.Size = new System.Drawing.Size(33, 13);
             this.RaceLabel.TabIndex = 5;
@@ -141,7 +143,7 @@
             // 
             // RaceBox
             // 
-            this.RaceBox.Location = new System.Drawing.Point(104, 95);
+            this.RaceBox.Location = new System.Drawing.Point(104, 90);
             this.RaceBox.Name = "RaceBox";
             this.RaceBox.Size = new System.Drawing.Size(100, 20);
             this.RaceBox.TabIndex = 3;
@@ -149,7 +151,7 @@
             // 
             // ClassBox
             // 
-            this.ClassBox.Location = new System.Drawing.Point(104, 135);
+            this.ClassBox.Location = new System.Drawing.Point(104, 122);
             this.ClassBox.Name = "ClassBox";
             this.ClassBox.Size = new System.Drawing.Size(100, 20);
             this.ClassBox.TabIndex = 4;
@@ -166,7 +168,7 @@
             // ClassLabel
             // 
             this.ClassLabel.AutoSize = true;
-            this.ClassLabel.Location = new System.Drawing.Point(13, 135);
+            this.ClassLabel.Location = new System.Drawing.Point(13, 122);
             this.ClassLabel.Name = "ClassLabel";
             this.ClassLabel.Size = new System.Drawing.Size(32, 13);
             this.ClassLabel.TabIndex = 19;
@@ -415,11 +417,30 @@
             this.WisdomLabel.TabIndex = 45;
             this.WisdomLabel.Text = "Wisdom";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 153);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(81, 13);
+            this.label1.TabIndex = 46;
+            this.label1.Text = "Class Resource";
+            // 
+            // ResourceBox
+            // 
+            this.ResourceBox.Location = new System.Drawing.Point(104, 150);
+            this.ResourceBox.Name = "ResourceBox";
+            this.ResourceBox.Size = new System.Drawing.Size(100, 20);
+            this.ResourceBox.TabIndex = 47;
+            this.ResourceBox.TextChanged += new System.EventHandler(this.ResourceBox_TextChanged);
+            // 
             // CreateCharacterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(649, 388);
+            this.Controls.Add(this.ResourceBox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.WisdomLabel);
             this.Controls.Add(this.CharismaLabel);
             this.Controls.Add(this.IntelligenceLabel);
@@ -507,6 +528,8 @@
         private System.Windows.Forms.Label IntelligenceLabel;
         private System.Windows.Forms.Label CharismaLabel;
         private System.Windows.Forms.Label WisdomLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ResourceBox;
     }
 }
 
