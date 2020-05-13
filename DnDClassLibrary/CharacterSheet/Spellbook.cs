@@ -17,15 +17,19 @@ namespace CharacterSheet
         List<Spell> myAvailableSpells = new List<Spell>();
         Spell mySpells = new Spell();
 
-        public Spellbook(Character Charac, List<Spell> SpellList)
+        public Spellbook(Character Charac, List<Spell> PreparedSpellList, List<Spell> AvailableSpellsList)
         {
             InitializeComponent();
-            myPreparedSpells = SpellList;
+            myPreparedSpells = PreparedSpellList;
+            myAvailableSpells = AvailableSpellsList;
+            RunAvailableSpellsList();
         }
         #region CLICKEVENTS
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
+            myPreparedSpells.Clear();
+            AddToPreparedSpells(CantripsListView, myAvailableSpells, myPreparedSpells);
             DialogResult = DialogResult.OK;
         }
 
@@ -52,6 +56,7 @@ namespace CharacterSheet
             ClearTextBoxes(this.Controls);
             RunAvailableSpellsList();
         }
+
         private void CantripsRemoveButton_Click(object sender, EventArgs e)
         {
             RemoveFromList(CantripsListView);
@@ -79,7 +84,7 @@ namespace CharacterSheet
 
         private void FifthRemoveButton_Click(object sender, EventArgs e)
         {
-
+            RemoveFromList(FifthLevelListView);
         }
 
         private void SixthRemoveButton_Click(object sender, EventArgs e)
@@ -103,6 +108,7 @@ namespace CharacterSheet
         }
 
         #endregion
+
         #region TEXTCHANGED
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -171,6 +177,7 @@ namespace CharacterSheet
             mySpells.SpellDescription = NewValue(OutOfReach, DescriptionTextBox.Text);
         }
         #endregion
+                
         #region COMBOBOXES
         private void SpellBonusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -183,6 +190,7 @@ namespace CharacterSheet
         }
 
         #endregion
+        
         #region KEYPRESSEVENTS
         private void LevelTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -276,33 +284,59 @@ namespace CharacterSheet
         }
         void AvailableSpellsList(int SpellLvl, ListView ListToFill)
         {
+            ListToFill.Items.Clear();
+            int i = 0;
+            foreach (var Spell in myAvailableSpells)
             {
-                ListToFill.Items.Clear();
-                int i = 0;
-                foreach (var Spell in myAvailableSpells)
+                if (Spell.SpellLevel == SpellLvl)
                 {
-                    if (Spell.SpellLevel == SpellLvl)
-                    {
-                        ListToFill.Items.Add(Spell.SpellName,i);
-                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
-                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
-                        ListToFill.Items[i].SubItems.Add(Spell.CastTime);
-                        ListToFill.Items[i].SubItems.Add(Spell.Components);
-                        ListToFill.Items[i].SubItems.Add(Spell.SpellSchool);
-                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
-                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
-                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
-                        ListToFill.Items[i].SubItems.Add(Spell.Duration);
-                        ListToFill.Items[i].SubItems.Add(Spell.SpellDamageType);
-                        ListToFill.Items[i].SubItems.Add(Spell.SpellDescription);
-                        i++;
-                    }
-                    else
-                    {
-                    }
+                    ListToFill.Items.Add(Spell.SpellName,i);
+                    ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
+                    ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
+                    ListToFill.Items[i].SubItems.Add(Spell.CastTime);
+                    ListToFill.Items[i].SubItems.Add(Spell.Components);
+                    ListToFill.Items[i].SubItems.Add(Spell.SpellSchool);
+                    ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
+                    ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
+                    ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
+                    ListToFill.Items[i].SubItems.Add(Spell.Duration);
+                    ListToFill.Items[i].SubItems.Add(Spell.SpellDamageType);
+                    ListToFill.Items[i].SubItems.Add(Spell.SpellDescription);
+                    i++;
+                }
+                else
+                {
                 }
             }
         }
+        void AddToPreparedSpells(ListView ListViewTotakeFrom, List<Spell> AvailableSpells, List<Spell> PreparedList)
+        {
+            for (int i = 0; i < ListViewTotakeFrom.Items.Count; i++)
+            {
+                if (ListViewTotakeFrom.Items[i].Checked == true)
+                {
+                    for (int j = 0; j < AvailableSpells.Count; j++)
+                    {
+                        if (AvailableSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text))
+                        {
+                            PreparedList.Add(AvailableSpells[j]);
+                        }
+                    }
+                }
+                else
+                {
+                    for (int j = 0; j < AvailableSpells.Count; j++)
+                    {
+                        if (AvailableSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text))
+                        {
+                            PreparedList.Remove(AvailableSpells[j]);
+                        }
+                    }
+                }
+
+            }
+        }
+
         void RemoveFromList(ListView ListToRemoveFrom)
         {
             for (int i = 0; i < ListToRemoveFrom.Items.Count; i++)
@@ -324,8 +358,8 @@ namespace CharacterSheet
         }
 
 
+
         #endregion
 
-  
     }
 }

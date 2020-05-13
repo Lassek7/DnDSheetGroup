@@ -23,7 +23,8 @@ namespace CharacterSheet
         List<Item> myInventoryList = new List<Item>();
         List<Feat> myFeatureList = new List<Feat>();
         List<Feat> myOtherFeatureList = new List<Feat>();
-        List<Spell> mySpells = new List<Spell>();
+        List<Spell> myPreparedSpells = new List<Spell>();
+        List<Spell> myAvilableSpells = new List<Spell>();
         public string[] CharacterInfo = new string[19];
         List<CharacterAttributes> characterAttributesInfo = new List<CharacterAttributes>();
 
@@ -61,9 +62,28 @@ namespace CharacterSheet
         private void SaveCharacterButton_Click(object sender, EventArgs e)
         {
             DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem);
-            myDataBase.SaveCharacterToFile();
-            myDataBase.SaveDataToFile();
-           
+            var filePathCharacterInfo = string.Empty;
+            var filePathInventory = string.Empty;
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.Title = "Save Sheet";
+            saveFileDialog1.Filter = "Json files (.json)|.json";
+            saveFileDialog1.FilterIndex = 2;
+            saveFileDialog1.RestoreDirectory = true;
+            saveFileDialog1.FileName = myCharacter.characterName;
+
+            MessageBox.Show("Choose character file location");
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                filePathCharacterInfo = saveFileDialog1.FileName;
+                myDataBase.SaveCharacterToFile(filePathCharacterInfo);
+                if (File.Exists(filePathCharacterInfo))
+                {
+                    filePathInventory = myDataBase.filePath + myCharacter.characterName + "_Inventory" + ".json";
+
+                    myDataBase.SaveDataToFile(filePathInventory);
+                }
+            }
+
         }
 
         private void EditInventoryButton_Click(object sender, EventArgs e)
@@ -1470,7 +1490,7 @@ namespace CharacterSheet
         private void SpellsButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Spellbook RunSpellBook = new Spellbook(myCharacter, mySpells);
+            Spellbook RunSpellBook = new Spellbook(myCharacter, myPreparedSpells, myAvilableSpells);
             if (RunSpellBook.ShowDialog() == DialogResult.OK)
             {
                 this.Show();
@@ -1484,7 +1504,24 @@ namespace CharacterSheet
         }
         void RunPreparedSpells()
         {
-
+            SpellsListView.Items.Clear();
+            int i = 0;
+            foreach (var Spell in myPreparedSpells)
+            {
+                SpellsListView.Items.Add(Spell.SpellName, i);
+                SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
+                SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
+                SpellsListView.Items[i].SubItems.Add(Spell.CastTime);
+                SpellsListView.Items[i].SubItems.Add(Spell.Components);
+                SpellsListView.Items[i].SubItems.Add(Spell.SpellSchool);
+                SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
+                SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
+                SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
+                SpellsListView.Items[i].SubItems.Add(Spell.Duration);
+                SpellsListView.Items[i].SubItems.Add(Spell.SpellDamageType);
+                SpellsListView.Items[i].SubItems.Add(Spell.SpellDescription);
+                i++;
+            }
         }
 
         private void pictureBox_DoubleClick(object sender, EventArgs e)
