@@ -36,5 +36,4 @@ C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\De
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.AssemblyInfo.cs
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.dll
 C:\Users\sebse\Source\Repos\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.pdb
-C:\Users\lasse\OneDrive\Dokumenter\P4\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
 C:\Users\dkbad\Source\Repos\LAK258\DnDSheetGroup\DnDClassLibrary\DnDClassLibrary\obj\Debug\netstandard2.0\DnDClassLibrary.csproj.CoreCompileInputs.cache
