@@ -19,7 +19,6 @@ namespace CharacterSheet
         EquippedItems myEquippedItems = new EquippedItems();
         CharacterAttributes myAttributes = new CharacterAttributes();
         List<Item> myInventoryList = new List<Item>();
-        string DamageDie;
 
         public AddToInventoryForm(List<Item> MyList, CharacterAttributes Attri, EquippedItems EQ)
         {
@@ -450,6 +449,16 @@ namespace CharacterSheet
         private void DamageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
            myWeapon.Damage = WeaponDamageBox.Text + DamageComboBox.Text;
+        }
+
+        private void WeaponDamageBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
+        }
+
+        private void WeaponRangeBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            OnlyTakeNumbers(e);
         }
     }
 }

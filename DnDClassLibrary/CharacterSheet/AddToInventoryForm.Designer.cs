@@ -582,6 +582,7 @@
             this.WeaponDamageBox.Size = new System.Drawing.Size(28, 20);
             this.WeaponDamageBox.TabIndex = 17;
             this.WeaponDamageBox.TextChanged += new System.EventHandler(this.WeaponDamageBox_TextChanged);
+            this.WeaponDamageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponDamageBox_KeyPress);
             // 
             // WeaponRangeBox
             // 
@@ -590,6 +591,7 @@
             this.WeaponRangeBox.Size = new System.Drawing.Size(71, 20);
             this.WeaponRangeBox.TabIndex = 19;
             this.WeaponRangeBox.TextChanged += new System.EventHandler(this.WeaponRangeBox_TextChanged);
+            this.WeaponRangeBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponRangeBox_KeyPress);
             // 
             // WeaponNameBox
             // 

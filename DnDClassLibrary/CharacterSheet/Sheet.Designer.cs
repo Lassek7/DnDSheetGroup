@@ -2426,6 +2426,7 @@
             this.SpellsListView.Location = new System.Drawing.Point(6, 16);
             this.SpellsListView.Name = "SpellsListView";
             this.SpellsListView.Size = new System.Drawing.Size(419, 219);
+            this.SpellsListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.SpellsListView.TabIndex = 0;
             this.SpellsListView.UseCompatibleStateImageBehavior = false;
             this.SpellsListView.View = System.Windows.Forms.View.Details;
@@ -2500,6 +2501,7 @@
             this.ClassFeatureListView.Margin = new System.Windows.Forms.Padding(2);
             this.ClassFeatureListView.Name = "ClassFeatureListView";
             this.ClassFeatureListView.Size = new System.Drawing.Size(268, 142);
+            this.ClassFeatureListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.ClassFeatureListView.TabIndex = 71;
             this.ClassFeatureListView.UseCompatibleStateImageBehavior = false;
             this.ClassFeatureListView.View = System.Windows.Forms.View.Details;
@@ -2564,6 +2566,7 @@
             this.OtherFeaturesListView.Margin = new System.Windows.Forms.Padding(2);
             this.OtherFeaturesListView.Name = "OtherFeaturesListView";
             this.OtherFeaturesListView.Size = new System.Drawing.Size(275, 78);
+            this.OtherFeaturesListView.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.OtherFeaturesListView.TabIndex = 72;
             this.OtherFeaturesListView.UseCompatibleStateImageBehavior = false;
             this.OtherFeaturesListView.View = System.Windows.Forms.View.Details;

@@ -38,7 +38,7 @@ namespace DnDClassLibrary
                     NewSpell.Range = Utility.ReadNumericInput("Enter Spell Range");
                     NewSpell.SpellSchool = Utility.ReadTextInput("Enter Spell School");
                     NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
-                    NewSpell.Resources = Utility.ReadNumericInput("Enter required resources");
+                   // NewSpell.SpellDamageType = Utility.ReadNumericInput("Enter required tytp");
                     NewSpell.SpellDC = Utility.ReadNumericInput("Enter Spell DC");
                     NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
 
