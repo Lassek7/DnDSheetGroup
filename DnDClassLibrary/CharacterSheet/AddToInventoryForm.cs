@@ -19,7 +19,7 @@ namespace CharacterSheet
         EquippedItems myEquippedItems = new EquippedItems();
         CharacterAttributes myAttributes = new CharacterAttributes();
         List<Item> myInventoryList = new List<Item>();
-        
+        string DamageDie;
 
         public AddToInventoryForm(List<Item> MyList, CharacterAttributes Attri, EquippedItems EQ)
         {
@@ -134,13 +134,13 @@ namespace CharacterSheet
         private void WeaponDamageBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponDamageBox.Text);
-            myWeapon.Damage = NewValue(OutOfReach, WeaponDamageBox.Text);
+            myWeapon.Damage = NewValue(OutOfReach, WeaponDamageBox.Text) + DamageComboBox.Text;
         }
 
         private void WeaponRangeBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(WeaponRangeBox.Text);
-            myWeapon.Range = NewValue(OutOfReach, WeaponRangeBox.Text);
+            myWeapon.Range = NewValue(OutOfReach, WeaponRangeBox.Text)+"ft.";
         }
 
         private void WeaponTypeBox_TextChanged(object sender, EventArgs e)
@@ -445,6 +445,11 @@ namespace CharacterSheet
         private void CloseButton_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void DamageComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           myWeapon.Damage = WeaponDamageBox.Text + DamageComboBox.Text;
         }
     }
 }

@@ -14,8 +14,9 @@ namespace CharacterSheet
     public partial class EquipSlotCheck : Form
     {
         EquippedItems myEquippedItems = new EquippedItems();
+        List<Item> myInventory = new List<Item>();
         Weapon myWeapon = new Weapon();
-        public EquipSlotCheck(Weapon Weapon ,EquippedItems EquipmentChoice, string message, String Slot1, string Slot2, string Slot3)
+        public EquipSlotCheck(Weapon Weapon ,EquippedItems EquipmentChoice, string message, string Slot1, string Slot2, string Slot3)
         {
             InitializeComponent();
             label1.Text = message;
@@ -25,6 +26,7 @@ namespace CharacterSheet
             myEquippedItems = EquipmentChoice;
             myWeapon = Weapon;
         }
+
 
         private void WeaponSlotOne_Click(object sender, EventArgs e)
         {

@@ -31,7 +31,6 @@
             this.MenuButton1 = new System.Windows.Forms.Button();
             this.ClassesButton = new System.Windows.Forms.Button();
             this.SpellsButton = new System.Windows.Forms.Button();
-            this.PictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -136,6 +135,9 @@
             this.label19 = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
             this.WeaponSlotThreeNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.WeaponSlotThreeDamageTypeDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotThreeATKBonusDisplay = new System.Windows.Forms.Label();
@@ -143,6 +145,9 @@
             this.WeaponSlotThreeProficiency = new System.Windows.Forms.CheckBox();
             this.RemoveSlotThree = new System.Windows.Forms.Button();
             this.WeaponSlotTwoNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.WeaponSlotTwoDamageTypeDisplay = new System.Windows.Forms.Label();
             this.WeaponSlotTwoATKBonusDisplay = new System.Windows.Forms.Label();
@@ -150,6 +155,9 @@
             this.WeaponSlotTwoProficiency = new System.Windows.Forms.CheckBox();
             this.RemoveSlotTwo = new System.Windows.Forms.Button();
             this.WeaponSlotOneNameDisplay = new System.Windows.Forms.GroupBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.WeaponSlotOneDamageTypeDisplay = new System.Windows.Forms.Label();
@@ -198,16 +206,14 @@
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.SpeedDisplay = new System.Windows.Forms.TextBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
+            this.InspirationToggle = new System.Windows.Forms.CheckBox();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
             this.ProficiencyBonusDisplay = new System.Windows.Forms.Label();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
             this.PassivePerceptionDisplay = new System.Windows.Forms.Label();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.EquippedArmorLabel = new System.Windows.Forms.Label();
             this.ShieldEquippedCheck = new System.Windows.Forms.CheckBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.EquippedArmorDisplay = new System.Windows.Forms.Label();
             this.EditInventoryButton = new System.Windows.Forms.Button();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
@@ -470,9 +476,19 @@
             this.InspirationLabel = new System.Windows.Forms.Label();
             this.SaveCharacterButton = new System.Windows.Forms.Button();
             this.EditSheetCheck = new System.Windows.Forms.CheckBox();
-            this.InspirationToggle = new System.Windows.Forms.CheckBox();
-            this.EquippedArmorLabel = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).BeginInit();
+            this.AttunementSlotOneTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox183 = new System.Windows.Forms.GroupBox();
+            this.groupBox184 = new System.Windows.Forms.GroupBox();
+            this.AttunementSlotTwoTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox185 = new System.Windows.Forms.GroupBox();
+            this.AttunementSlotThreeTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox186 = new System.Windows.Forms.GroupBox();
+            this.MagicItemThreeTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox187 = new System.Windows.Forms.GroupBox();
+            this.MagicItemTwoTextBox = new System.Windows.Forms.TextBox();
+            this.groupBox188 = new System.Windows.Forms.GroupBox();
+            this.MagicItemOneTextBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -675,6 +691,7 @@
             this.groupBox52.SuspendLayout();
             this.groupBox54.SuspendLayout();
             this.groupBox55.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuButton1
@@ -709,15 +726,7 @@
             this.SpellsButton.TabIndex = 2;
             this.SpellsButton.Text = "Spells";
             this.SpellsButton.UseVisualStyleBackColor = true;
-            // 
-            // PictureBox
-            // 
-            this.PictureBox.Location = new System.Drawing.Point(91, 10);
-            this.PictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PictureBox.Name = "PictureBox";
-            this.PictureBox.Size = new System.Drawing.Size(212, 156);
-            this.PictureBox.TabIndex = 3;
-            this.PictureBox.TabStop = false;
+            this.SpellsButton.Click += new System.EventHandler(this.SpellsButton_Click);
             // 
             // label1
             // 
@@ -795,7 +804,7 @@
             // PersuasionProficiencyToggle
             // 
             this.PersuasionProficiencyToggle.AutoSize = true;
-            this.PersuasionProficiencyToggle.Location = new System.Drawing.Point(676, 175);
+            this.PersuasionProficiencyToggle.Location = new System.Drawing.Point(676, 173);
             this.PersuasionProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.PersuasionProficiencyToggle.Name = "PersuasionProficiencyToggle";
             this.PersuasionProficiencyToggle.Size = new System.Drawing.Size(78, 17);
@@ -819,7 +828,7 @@
             // PerformanceProficiencyToggle
             // 
             this.PerformanceProficiencyToggle.AutoSize = true;
-            this.PerformanceProficiencyToggle.Location = new System.Drawing.Point(676, 160);
+            this.PerformanceProficiencyToggle.Location = new System.Drawing.Point(676, 158);
             this.PerformanceProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.PerformanceProficiencyToggle.Name = "PerformanceProficiencyToggle";
             this.PerformanceProficiencyToggle.Size = new System.Drawing.Size(86, 17);
@@ -831,7 +840,7 @@
             // DeceptionProficiencyToggle
             // 
             this.DeceptionProficiencyToggle.AutoSize = true;
-            this.DeceptionProficiencyToggle.Location = new System.Drawing.Point(676, 127);
+            this.DeceptionProficiencyToggle.Location = new System.Drawing.Point(676, 125);
             this.DeceptionProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.DeceptionProficiencyToggle.Name = "DeceptionProficiencyToggle";
             this.DeceptionProficiencyToggle.Size = new System.Drawing.Size(75, 17);
@@ -855,7 +864,7 @@
             // IntimidationProficiencyToggle
             // 
             this.IntimidationProficiencyToggle.AutoSize = true;
-            this.IntimidationProficiencyToggle.Location = new System.Drawing.Point(676, 144);
+            this.IntimidationProficiencyToggle.Location = new System.Drawing.Point(676, 142);
             this.IntimidationProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.IntimidationProficiencyToggle.Name = "IntimidationProficiencyToggle";
             this.IntimidationProficiencyToggle.Size = new System.Drawing.Size(79, 17);
@@ -952,7 +961,7 @@
             // 
             this.StealthLabel.AutoSize = true;
             this.StealthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.StealthLabel.Location = new System.Drawing.Point(267, 166);
+            this.StealthLabel.Location = new System.Drawing.Point(267, 156);
             this.StealthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.StealthLabel.Name = "StealthLabel";
             this.StealthLabel.Size = new System.Drawing.Size(13, 13);
@@ -973,7 +982,7 @@
             // StealthProficiencyToggle
             // 
             this.StealthProficiencyToggle.AutoSize = true;
-            this.StealthProficiencyToggle.Location = new System.Drawing.Point(182, 166);
+            this.StealthProficiencyToggle.Location = new System.Drawing.Point(182, 156);
             this.StealthProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.StealthProficiencyToggle.Name = "StealthProficiencyToggle";
             this.StealthProficiencyToggle.Size = new System.Drawing.Size(59, 17);
@@ -997,7 +1006,7 @@
             // SleightOfHandProficiencyToggle
             // 
             this.SleightOfHandProficiencyToggle.AutoSize = true;
-            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(182, 150);
+            this.SleightOfHandProficiencyToggle.Location = new System.Drawing.Point(182, 140);
             this.SleightOfHandProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.SleightOfHandProficiencyToggle.Name = "SleightOfHandProficiencyToggle";
             this.SleightOfHandProficiencyToggle.Size = new System.Drawing.Size(85, 17);
@@ -1009,7 +1018,7 @@
             // AcrobaticsProficiencyToggle
             // 
             this.AcrobaticsProficiencyToggle.AutoSize = true;
-            this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(182, 134);
+            this.AcrobaticsProficiencyToggle.Location = new System.Drawing.Point(182, 124);
             this.AcrobaticsProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.AcrobaticsProficiencyToggle.Name = "AcrobaticsProficiencyToggle";
             this.AcrobaticsProficiencyToggle.Size = new System.Drawing.Size(76, 17);
@@ -1021,7 +1030,7 @@
             // AthleticsProficiencyToggle
             // 
             this.AthleticsProficiencyToggle.AutoSize = true;
-            this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(58, 134);
+            this.AthleticsProficiencyToggle.Location = new System.Drawing.Point(58, 124);
             this.AthleticsProficiencyToggle.Margin = new System.Windows.Forms.Padding(2);
             this.AthleticsProficiencyToggle.Name = "AthleticsProficiencyToggle";
             this.AthleticsProficiencyToggle.Size = new System.Drawing.Size(66, 17);
@@ -1101,7 +1110,7 @@
             // 
             this.PersuasionLabel.AutoSize = true;
             this.PersuasionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.PersuasionLabel.Location = new System.Drawing.Point(765, 176);
+            this.PersuasionLabel.Location = new System.Drawing.Point(765, 174);
             this.PersuasionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PersuasionLabel.Name = "PersuasionLabel";
             this.PersuasionLabel.Size = new System.Drawing.Size(13, 13);
@@ -1112,7 +1121,7 @@
             // 
             this.PerformanceLabel.AutoSize = true;
             this.PerformanceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.PerformanceLabel.Location = new System.Drawing.Point(765, 160);
+            this.PerformanceLabel.Location = new System.Drawing.Point(765, 158);
             this.PerformanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PerformanceLabel.Name = "PerformanceLabel";
             this.PerformanceLabel.Size = new System.Drawing.Size(13, 13);
@@ -1123,7 +1132,7 @@
             // 
             this.IntimidationLabel.AutoSize = true;
             this.IntimidationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.IntimidationLabel.Location = new System.Drawing.Point(765, 144);
+            this.IntimidationLabel.Location = new System.Drawing.Point(765, 142);
             this.IntimidationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.IntimidationLabel.Name = "IntimidationLabel";
             this.IntimidationLabel.Size = new System.Drawing.Size(13, 13);
@@ -1211,7 +1220,7 @@
             // 
             this.SleightOfHandLabel.AutoSize = true;
             this.SleightOfHandLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.SleightOfHandLabel.Location = new System.Drawing.Point(267, 150);
+            this.SleightOfHandLabel.Location = new System.Drawing.Point(267, 140);
             this.SleightOfHandLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SleightOfHandLabel.Name = "SleightOfHandLabel";
             this.SleightOfHandLabel.Size = new System.Drawing.Size(13, 13);
@@ -1222,7 +1231,7 @@
             // 
             this.DeceptionLabel.AutoSize = true;
             this.DeceptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.DeceptionLabel.Location = new System.Drawing.Point(765, 128);
+            this.DeceptionLabel.Location = new System.Drawing.Point(765, 126);
             this.DeceptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DeceptionLabel.Name = "DeceptionLabel";
             this.DeceptionLabel.Size = new System.Drawing.Size(13, 13);
@@ -1266,7 +1275,7 @@
             // 
             this.AcrobaticsLabel.AutoSize = true;
             this.AcrobaticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.AcrobaticsLabel.Location = new System.Drawing.Point(267, 135);
+            this.AcrobaticsLabel.Location = new System.Drawing.Point(267, 125);
             this.AcrobaticsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AcrobaticsLabel.Name = "AcrobaticsLabel";
             this.AcrobaticsLabel.Size = new System.Drawing.Size(13, 13);
@@ -1277,7 +1286,7 @@
             // 
             this.AthleticsLabel.AutoSize = true;
             this.AthleticsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F);
-            this.AthleticsLabel.Location = new System.Drawing.Point(140, 136);
+            this.AthleticsLabel.Location = new System.Drawing.Point(140, 126);
             this.AthleticsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AthleticsLabel.Name = "AthleticsLabel";
             this.AthleticsLabel.Size = new System.Drawing.Size(13, 13);
@@ -2049,6 +2058,9 @@
             // 
             // WeaponSlotThreeNameDisplay
             // 
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label30);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label27);
+            this.WeaponSlotThreeNameDisplay.Controls.Add(this.label26);
             this.WeaponSlotThreeNameDisplay.Controls.Add(this.label21);
             this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeDamageTypeDisplay);
             this.WeaponSlotThreeNameDisplay.Controls.Add(this.WeaponSlotThreeATKBonusDisplay);
@@ -2066,6 +2078,33 @@
             this.WeaponSlotThreeNameDisplay.TabStop = false;
             this.WeaponSlotThreeNameDisplay.Text = "Weapon name 3";
             // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(3, 21);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(62, 13);
+            this.label30.TabIndex = 77;
+            this.label30.Text = "ATK Bonus:";
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(82, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(50, 13);
+            this.label27.TabIndex = 76;
+            this.label27.Text = "Damage:";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(158, 22);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(75, 13);
+            this.label26.TabIndex = 76;
+            this.label26.Text = "Damage Type:";
+            // 
             // label21
             // 
             this.label21.AutoSize = true;
@@ -2079,32 +2118,32 @@
             // WeaponSlotThreeDamageTypeDisplay
             // 
             this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(158, 22);
+            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(233, 23);
             this.WeaponSlotThreeDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
-            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(75, 13);
+            this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotThreeDamageTypeDisplay.TabIndex = 9;
-            this.WeaponSlotThreeDamageTypeDisplay.Text = "Damage Type:";
+            this.WeaponSlotThreeDamageTypeDisplay.Text = "0";
             // 
             // WeaponSlotThreeATKBonusDisplay
             // 
             this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(4, 22);
+            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(67, 22);
             this.WeaponSlotThreeATKBonusDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
-            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(62, 13);
+            this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotThreeATKBonusDisplay.TabIndex = 3;
-            this.WeaponSlotThreeATKBonusDisplay.Text = "ATK Bonus:";
+            this.WeaponSlotThreeATKBonusDisplay.Text = "0";
             // 
             // WeaponSlotThreeDamageDisplay
             // 
             this.WeaponSlotThreeDamageDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(85, 22);
+            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(137, 23);
             this.WeaponSlotThreeDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
-            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(50, 13);
+            this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotThreeDamageDisplay.TabIndex = 6;
-            this.WeaponSlotThreeDamageDisplay.Text = "Damage:";
+            this.WeaponSlotThreeDamageDisplay.Text = "0";
             // 
             // WeaponSlotThreeProficiency
             // 
@@ -2130,6 +2169,9 @@
             // 
             // WeaponSlotTwoNameDisplay
             // 
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label29);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label25);
+            this.WeaponSlotTwoNameDisplay.Controls.Add(this.label24);
             this.WeaponSlotTwoNameDisplay.Controls.Add(this.label13);
             this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoDamageTypeDisplay);
             this.WeaponSlotTwoNameDisplay.Controls.Add(this.WeaponSlotTwoATKBonusDisplay);
@@ -2147,6 +2189,33 @@
             this.WeaponSlotTwoNameDisplay.TabStop = false;
             this.WeaponSlotTwoNameDisplay.Text = "Weapon name 2";
             // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(5, 21);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(62, 13);
+            this.label29.TabIndex = 76;
+            this.label29.Text = "ATK Bonus:";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(158, 21);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(75, 13);
+            this.label25.TabIndex = 75;
+            this.label25.Text = "Damage Type:";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(82, 21);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.TabIndex = 75;
+            this.label24.Text = "Damage:";
+            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -2160,32 +2229,32 @@
             // WeaponSlotTwoDamageTypeDisplay
             // 
             this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(158, 22);
+            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(233, 22);
             this.WeaponSlotTwoDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
-            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(75, 13);
+            this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotTwoDamageTypeDisplay.TabIndex = 9;
-            this.WeaponSlotTwoDamageTypeDisplay.Text = "Damage Type:";
+            this.WeaponSlotTwoDamageTypeDisplay.Text = "0";
             // 
             // WeaponSlotTwoATKBonusDisplay
             // 
             this.WeaponSlotTwoATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(4, 21);
+            this.WeaponSlotTwoATKBonusDisplay.Location = new System.Drawing.Point(67, 22);
             this.WeaponSlotTwoATKBonusDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotTwoATKBonusDisplay.Name = "WeaponSlotTwoATKBonusDisplay";
-            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(62, 13);
+            this.WeaponSlotTwoATKBonusDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotTwoATKBonusDisplay.TabIndex = 3;
-            this.WeaponSlotTwoATKBonusDisplay.Text = "ATK Bonus:";
+            this.WeaponSlotTwoATKBonusDisplay.Text = "0";
             // 
             // WeaponSlotTwoDamageDisplay
             // 
             this.WeaponSlotTwoDamageDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(85, 22);
+            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(137, 22);
             this.WeaponSlotTwoDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
-            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(50, 13);
+            this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotTwoDamageDisplay.TabIndex = 6;
-            this.WeaponSlotTwoDamageDisplay.Text = "Damage:";
+            this.WeaponSlotTwoDamageDisplay.Text = "0";
             // 
             // WeaponSlotTwoProficiency
             // 
@@ -2211,6 +2280,9 @@
             // 
             // WeaponSlotOneNameDisplay
             // 
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label28);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label23);
+            this.WeaponSlotOneNameDisplay.Controls.Add(this.label6);
             this.WeaponSlotOneNameDisplay.Controls.Add(this.label12);
             this.WeaponSlotOneNameDisplay.Controls.Add(this.label11);
             this.WeaponSlotOneNameDisplay.Controls.Add(this.WeaponSlotOneDamageTypeDisplay);
@@ -2228,6 +2300,33 @@
             this.WeaponSlotOneNameDisplay.TabIndex = 71;
             this.WeaponSlotOneNameDisplay.TabStop = false;
             this.WeaponSlotOneNameDisplay.Text = "Weapon name 1";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(5, 21);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(62, 13);
+            this.label28.TabIndex = 75;
+            this.label28.Text = "ATK Bonus:";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(85, 22);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(50, 13);
+            this.label23.TabIndex = 74;
+            this.label23.Text = "Damage:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(160, 21);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(75, 13);
+            this.label6.TabIndex = 73;
+            this.label6.Text = "Damage Type:";
             // 
             // label12
             // 
@@ -2251,32 +2350,32 @@
             // WeaponSlotOneDamageTypeDisplay
             // 
             this.WeaponSlotOneDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(158, 21);
+            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(233, 23);
             this.WeaponSlotOneDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneDamageTypeDisplay.Name = "WeaponSlotOneDamageTypeDisplay";
-            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(75, 13);
+            this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotOneDamageTypeDisplay.TabIndex = 9;
-            this.WeaponSlotOneDamageTypeDisplay.Text = "Damage Type:";
+            this.WeaponSlotOneDamageTypeDisplay.Text = "0";
             // 
             // WeaponSlotOneATKBonusDisplay
             // 
             this.WeaponSlotOneATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(4, 21);
+            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(67, 22);
             this.WeaponSlotOneATKBonusDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneATKBonusDisplay.Name = "WeaponSlotOneATKBonusDisplay";
-            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(62, 13);
+            this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotOneATKBonusDisplay.TabIndex = 3;
-            this.WeaponSlotOneATKBonusDisplay.Text = "ATK Bonus:";
+            this.WeaponSlotOneATKBonusDisplay.Text = "0";
             // 
             // WeaponSlotOneDamageDisplay
             // 
             this.WeaponSlotOneDamageDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(83, 21);
+            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(132, 22);
             this.WeaponSlotOneDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneDamageDisplay.Name = "WeaponSlotOneDamageDisplay";
-            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(50, 13);
+            this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(13, 13);
             this.WeaponSlotOneDamageDisplay.TabIndex = 6;
-            this.WeaponSlotOneDamageDisplay.Text = "Damage:";
+            this.WeaponSlotOneDamageDisplay.Text = "0";
             // 
             // WeaponSlotOneProficiency
             // 
@@ -2472,7 +2571,7 @@
             // OtherFeaturesName
             // 
             this.OtherFeaturesName.Text = "Name";
-            this.OtherFeaturesName.Width = 64;
+            this.OtherFeaturesName.Width = 68;
             // 
             // OtherFeaturesDescription
             // 
@@ -2752,6 +2851,15 @@
             this.groupBox33.TabIndex = 60;
             this.groupBox33.TabStop = false;
             // 
+            // InspirationToggle
+            // 
+            this.InspirationToggle.AutoSize = true;
+            this.InspirationToggle.Location = new System.Drawing.Point(25, 18);
+            this.InspirationToggle.Name = "InspirationToggle";
+            this.InspirationToggle.Size = new System.Drawing.Size(15, 14);
+            this.InspirationToggle.TabIndex = 0;
+            this.InspirationToggle.UseVisualStyleBackColor = true;
+            // 
             // groupBox34
             // 
             this.groupBox34.Controls.Add(this.ProficiencyBonusDisplay);
@@ -2800,12 +2908,20 @@
             // 
             // groupBox36
             // 
+            this.groupBox36.Controls.Add(this.groupBox186);
+            this.groupBox36.Controls.Add(this.MagicItemThreeTextBox);
+            this.groupBox36.Controls.Add(this.groupBox187);
+            this.groupBox36.Controls.Add(this.MagicItemTwoTextBox);
+            this.groupBox36.Controls.Add(this.groupBox188);
+            this.groupBox36.Controls.Add(this.MagicItemOneTextBox);
+            this.groupBox36.Controls.Add(this.groupBox185);
+            this.groupBox36.Controls.Add(this.AttunementSlotThreeTextBox);
+            this.groupBox36.Controls.Add(this.groupBox184);
+            this.groupBox36.Controls.Add(this.AttunementSlotTwoTextBox);
+            this.groupBox36.Controls.Add(this.groupBox183);
+            this.groupBox36.Controls.Add(this.AttunementSlotOneTextBox);
             this.groupBox36.Controls.Add(this.EquippedArmorLabel);
-            this.groupBox36.Controls.Add(this.label8);
-            this.groupBox36.Controls.Add(this.label7);
-            this.groupBox36.Controls.Add(this.richTextBox2);
             this.groupBox36.Controls.Add(this.ShieldEquippedCheck);
-            this.groupBox36.Controls.Add(this.richTextBox1);
             this.groupBox36.Controls.Add(this.EquippedArmorDisplay);
             this.groupBox36.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.25F);
             this.groupBox36.Location = new System.Drawing.Point(698, 402);
@@ -2817,41 +2933,19 @@
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Equipment";
             // 
-            // label8
+            // EquippedArmorLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(297, 36);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(62, 13);
-            this.label8.TabIndex = 76;
-            this.label8.Text = "Magic items";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(86, 36);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 75;
-            this.label7.Text = "Attunement";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox2.Enabled = false;
-            this.richTextBox2.Location = new System.Drawing.Point(216, 50);
-            this.richTextBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(209, 62);
-            this.richTextBox2.TabIndex = 72;
-            this.richTextBox2.Text = "";
+            this.EquippedArmorLabel.AutoSize = true;
+            this.EquippedArmorLabel.Location = new System.Drawing.Point(6, 19);
+            this.EquippedArmorLabel.Name = "EquippedArmorLabel";
+            this.EquippedArmorLabel.Size = new System.Drawing.Size(84, 13);
+            this.EquippedArmorLabel.TabIndex = 77;
+            this.EquippedArmorLabel.Text = "Equipped armor:";
             // 
             // ShieldEquippedCheck
             // 
             this.ShieldEquippedCheck.AutoSize = true;
-            this.ShieldEquippedCheck.Location = new System.Drawing.Point(254, 11);
+            this.ShieldEquippedCheck.Location = new System.Drawing.Point(304, 18);
             this.ShieldEquippedCheck.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldEquippedCheck.Name = "ShieldEquippedCheck";
             this.ShieldEquippedCheck.Size = new System.Drawing.Size(103, 17);
@@ -2860,21 +2954,10 @@
             this.ShieldEquippedCheck.UseVisualStyleBackColor = true;
             this.ShieldEquippedCheck.CheckedChanged += new System.EventHandler(this.ShieldEquippedCheck_CheckedChanged);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.Location = new System.Drawing.Point(5, 50);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(209, 61);
-            this.richTextBox1.TabIndex = 71;
-            this.richTextBox1.Text = "";
-            // 
             // EquippedArmorDisplay
             // 
             this.EquippedArmorDisplay.AutoSize = true;
-            this.EquippedArmorDisplay.Location = new System.Drawing.Point(92, 17);
+            this.EquippedArmorDisplay.Location = new System.Drawing.Point(92, 20);
             this.EquippedArmorDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EquippedArmorDisplay.Name = "EquippedArmorDisplay";
             this.EquippedArmorDisplay.Size = new System.Drawing.Size(13, 13);
@@ -6750,23 +6833,127 @@
             this.EditSheetCheck.UseVisualStyleBackColor = true;
             this.EditSheetCheck.CheckedChanged += new System.EventHandler(this.EditSheetCheck_CheckedChanged);
             // 
-            // InspirationToggle
+            // AttunementSlotOneTextBox
             // 
-            this.InspirationToggle.AutoSize = true;
-            this.InspirationToggle.Location = new System.Drawing.Point(25, 18);
-            this.InspirationToggle.Name = "InspirationToggle";
-            this.InspirationToggle.Size = new System.Drawing.Size(15, 14);
-            this.InspirationToggle.TabIndex = 0;
-            this.InspirationToggle.UseVisualStyleBackColor = true;
+            this.AttunementSlotOneTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AttunementSlotOneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AttunementSlotOneTextBox.Location = new System.Drawing.Point(12, 47);
+            this.AttunementSlotOneTextBox.Name = "AttunementSlotOneTextBox";
+            this.AttunementSlotOneTextBox.Size = new System.Drawing.Size(106, 11);
+            this.AttunementSlotOneTextBox.TabIndex = 78;
+            this.AttunementSlotOneTextBox.Text = "Attunement Slot 1";
+            this.AttunementSlotOneTextBox.TextChanged += new System.EventHandler(this.AttunementSlotOneTextBox_TextChanged);
             // 
-            // EquippedArmorLabel
+            // groupBox183
             // 
-            this.EquippedArmorLabel.AutoSize = true;
-            this.EquippedArmorLabel.Location = new System.Drawing.Point(6, 16);
-            this.EquippedArmorLabel.Name = "EquippedArmorLabel";
-            this.EquippedArmorLabel.Size = new System.Drawing.Size(84, 13);
-            this.EquippedArmorLabel.TabIndex = 77;
-            this.EquippedArmorLabel.Text = "Equipped armor:";
+            this.groupBox183.Location = new System.Drawing.Point(11, 60);
+            this.groupBox183.Name = "groupBox183";
+            this.groupBox183.Size = new System.Drawing.Size(168, 2);
+            this.groupBox183.TabIndex = 84;
+            this.groupBox183.TabStop = false;
+            // 
+            // groupBox184
+            // 
+            this.groupBox184.Location = new System.Drawing.Point(12, 83);
+            this.groupBox184.Name = "groupBox184";
+            this.groupBox184.Size = new System.Drawing.Size(168, 2);
+            this.groupBox184.TabIndex = 86;
+            this.groupBox184.TabStop = false;
+            // 
+            // AttunementSlotTwoTextBox
+            // 
+            this.AttunementSlotTwoTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AttunementSlotTwoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AttunementSlotTwoTextBox.Location = new System.Drawing.Point(12, 70);
+            this.AttunementSlotTwoTextBox.Name = "AttunementSlotTwoTextBox";
+            this.AttunementSlotTwoTextBox.Size = new System.Drawing.Size(106, 11);
+            this.AttunementSlotTwoTextBox.TabIndex = 85;
+            this.AttunementSlotTwoTextBox.Text = "Attunement Slot 2";
+            this.AttunementSlotTwoTextBox.TextChanged += new System.EventHandler(this.AttunementSlotTwoTextBox_TextChanged);
+            // 
+            // groupBox185
+            // 
+            this.groupBox185.Location = new System.Drawing.Point(11, 106);
+            this.groupBox185.Name = "groupBox185";
+            this.groupBox185.Size = new System.Drawing.Size(168, 2);
+            this.groupBox185.TabIndex = 88;
+            this.groupBox185.TabStop = false;
+            // 
+            // AttunementSlotThreeTextBox
+            // 
+            this.AttunementSlotThreeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.AttunementSlotThreeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.AttunementSlotThreeTextBox.Location = new System.Drawing.Point(12, 93);
+            this.AttunementSlotThreeTextBox.Name = "AttunementSlotThreeTextBox";
+            this.AttunementSlotThreeTextBox.Size = new System.Drawing.Size(106, 11);
+            this.AttunementSlotThreeTextBox.TabIndex = 87;
+            this.AttunementSlotThreeTextBox.Text = "Attunement Slot 3";
+            this.AttunementSlotThreeTextBox.TextChanged += new System.EventHandler(this.AttunementSlotThreeTextBox_TextChanged);
+            // 
+            // groupBox186
+            // 
+            this.groupBox186.Location = new System.Drawing.Point(238, 106);
+            this.groupBox186.Name = "groupBox186";
+            this.groupBox186.Size = new System.Drawing.Size(168, 2);
+            this.groupBox186.TabIndex = 94;
+            this.groupBox186.TabStop = false;
+            // 
+            // MagicItemThreeTextBox
+            // 
+            this.MagicItemThreeTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MagicItemThreeTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MagicItemThreeTextBox.Location = new System.Drawing.Point(239, 92);
+            this.MagicItemThreeTextBox.Name = "MagicItemThreeTextBox";
+            this.MagicItemThreeTextBox.Size = new System.Drawing.Size(106, 11);
+            this.MagicItemThreeTextBox.TabIndex = 93;
+            this.MagicItemThreeTextBox.Text = "Magic Item";
+            this.MagicItemThreeTextBox.TextChanged += new System.EventHandler(this.MagicItemThreeTextBox_TextChanged);
+            // 
+            // groupBox187
+            // 
+            this.groupBox187.Location = new System.Drawing.Point(239, 83);
+            this.groupBox187.Name = "groupBox187";
+            this.groupBox187.Size = new System.Drawing.Size(168, 2);
+            this.groupBox187.TabIndex = 92;
+            this.groupBox187.TabStop = false;
+            // 
+            // MagicItemTwoTextBox
+            // 
+            this.MagicItemTwoTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MagicItemTwoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MagicItemTwoTextBox.Location = new System.Drawing.Point(239, 70);
+            this.MagicItemTwoTextBox.Name = "MagicItemTwoTextBox";
+            this.MagicItemTwoTextBox.Size = new System.Drawing.Size(106, 11);
+            this.MagicItemTwoTextBox.TabIndex = 91;
+            this.MagicItemTwoTextBox.Text = "Magic Item";
+            this.MagicItemTwoTextBox.TextChanged += new System.EventHandler(this.MagicItemTwoTextBox_TextChanged);
+            // 
+            // groupBox188
+            // 
+            this.groupBox188.Location = new System.Drawing.Point(238, 60);
+            this.groupBox188.Name = "groupBox188";
+            this.groupBox188.Size = new System.Drawing.Size(168, 2);
+            this.groupBox188.TabIndex = 90;
+            this.groupBox188.TabStop = false;
+            // 
+            // MagicItemOneTextBox
+            // 
+            this.MagicItemOneTextBox.BackColor = System.Drawing.SystemColors.Control;
+            this.MagicItemOneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MagicItemOneTextBox.Location = new System.Drawing.Point(239, 47);
+            this.MagicItemOneTextBox.Name = "MagicItemOneTextBox";
+            this.MagicItemOneTextBox.Size = new System.Drawing.Size(106, 11);
+            this.MagicItemOneTextBox.TabIndex = 89;
+            this.MagicItemOneTextBox.Text = "Magic Item";
+            this.MagicItemOneTextBox.TextChanged += new System.EventHandler(this.MagicItemOneTextBox_TextChanged);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(91, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(212, 151);
+            this.pictureBox1.TabIndex = 71;
+            this.pictureBox1.TabStop = false;
             // 
             // Sheet
             // 
@@ -6774,6 +6961,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1522, 762);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.EditSheetCheck);
             this.Controls.Add(this.groupBox25);
             this.Controls.Add(this.SaveCharacterButton);
@@ -6815,7 +7003,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.PictureBox);
             this.Controls.Add(this.SpellsButton);
             this.Controls.Add(this.ClassesButton);
             this.Controls.Add(this.MenuButton1);
@@ -6823,7 +7010,6 @@
             this.Name = "Sheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Sheet_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -7053,6 +7239,7 @@
             this.groupBox52.ResumeLayout(false);
             this.groupBox54.ResumeLayout(false);
             this.groupBox55.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -7066,7 +7253,6 @@
         private System.Windows.Forms.Button MenuButton1;
         private System.Windows.Forms.Button ClassesButton;
         private System.Windows.Forms.Button SpellsButton;
-        private System.Windows.Forms.PictureBox PictureBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -7462,10 +7648,6 @@
         private System.Windows.Forms.CheckBox ShieldEquippedCheck;
         private System.Windows.Forms.Button RemoveSlotOne;
         private System.Windows.Forms.CheckBox WeaponSlotOneProficiency;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RichTextBox richTextBox2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Button MinusOneButton;
         private System.Windows.Forms.Button RemoveFromInvButton;
         private System.Windows.Forms.Button AddClassFeatureButton;
@@ -7507,5 +7689,27 @@
         private System.Windows.Forms.Button EquipItemButton;
         private System.Windows.Forms.CheckBox InspirationToggle;
         private System.Windows.Forms.Label EquippedArmorLabel;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.GroupBox groupBox186;
+        private System.Windows.Forms.TextBox MagicItemThreeTextBox;
+        private System.Windows.Forms.GroupBox groupBox187;
+        private System.Windows.Forms.TextBox MagicItemTwoTextBox;
+        private System.Windows.Forms.GroupBox groupBox188;
+        private System.Windows.Forms.TextBox MagicItemOneTextBox;
+        private System.Windows.Forms.GroupBox groupBox185;
+        private System.Windows.Forms.TextBox AttunementSlotThreeTextBox;
+        private System.Windows.Forms.GroupBox groupBox184;
+        private System.Windows.Forms.TextBox AttunementSlotTwoTextBox;
+        private System.Windows.Forms.GroupBox groupBox183;
+        private System.Windows.Forms.TextBox AttunementSlotOneTextBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

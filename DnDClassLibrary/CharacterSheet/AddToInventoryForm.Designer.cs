@@ -54,6 +54,7 @@
             this.ArmorNameBox = new System.Windows.Forms.TextBox();
             this.ArmorAmountBox = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.DamageComboBox = new System.Windows.Forms.ComboBox();
             this.WeaponEquippedCheck = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
@@ -346,6 +347,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.DamageComboBox);
             this.groupBox3.Controls.Add(this.WeaponEquippedCheck);
             this.groupBox3.Controls.Add(this.label20);
             this.groupBox3.Controls.Add(this.label19);
@@ -377,10 +379,26 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Add Weapon";
             // 
+            // DamageComboBox
+            // 
+            this.DamageComboBox.FormattingEnabled = true;
+            this.DamageComboBox.Items.AddRange(new object[] {
+            "d4",
+            "d6",
+            "d8",
+            "d10",
+            "d12",
+            "d20"});
+            this.DamageComboBox.Location = new System.Drawing.Point(165, 82);
+            this.DamageComboBox.Name = "DamageComboBox";
+            this.DamageComboBox.Size = new System.Drawing.Size(42, 21);
+            this.DamageComboBox.TabIndex = 30;
+            this.DamageComboBox.SelectedIndexChanged += new System.EventHandler(this.DamageComboBox_SelectedIndexChanged);
+            // 
             // WeaponEquippedCheck
             // 
             this.WeaponEquippedCheck.AutoSize = true;
-            this.WeaponEquippedCheck.Location = new System.Drawing.Point(228, 84);
+            this.WeaponEquippedCheck.Location = new System.Drawing.Point(330, 103);
             this.WeaponEquippedCheck.Name = "WeaponEquippedCheck";
             this.WeaponEquippedCheck.Size = new System.Drawing.Size(82, 17);
             this.WeaponEquippedCheck.TabIndex = 18;
@@ -559,9 +577,9 @@
             // 
             // WeaponDamageBox
             // 
-            this.WeaponDamageBox.Location = new System.Drawing.Point(131, 82);
+            this.WeaponDamageBox.Location = new System.Drawing.Point(134, 82);
             this.WeaponDamageBox.Name = "WeaponDamageBox";
-            this.WeaponDamageBox.Size = new System.Drawing.Size(71, 20);
+            this.WeaponDamageBox.Size = new System.Drawing.Size(28, 20);
             this.WeaponDamageBox.TabIndex = 17;
             this.WeaponDamageBox.TextChanged += new System.EventHandler(this.WeaponDamageBox_TextChanged);
             // 
@@ -750,6 +768,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 458);
+            this.ControlBox = false;
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.AddToInvListView);
             this.Controls.Add(this.EncumberStatusLabel);
@@ -765,6 +784,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddToInventoryForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddToInventoryForm";
@@ -847,5 +868,6 @@
         private System.Windows.Forms.ColumnHeader ListWeight;
         private System.Windows.Forms.ColumnHeader ListAcDmg;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.ComboBox DamageComboBox;
     }
 }
