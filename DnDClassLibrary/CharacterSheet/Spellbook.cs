@@ -22,6 +22,7 @@ namespace CharacterSheet
             InitializeComponent();
             myPreparedSpells = SpellList;
         }
+        #region CLICKEVENTS
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
@@ -30,13 +31,78 @@ namespace CharacterSheet
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(mySpells.SpellName) == false)  // laves til metoder
+            {
+                Spell NewSpell = new Spell();
+                NewSpell.SpellName = mySpells.SpellName;
+                NewSpell.SpellLevel = mySpells.SpellLevel; // cantrip = 0
+                NewSpell.Range = mySpells.Range;
+                NewSpell.CastTime = mySpells.CastTime;
+                NewSpell.Components = mySpells.Components;
+                NewSpell.SpellSchool = mySpells.SpellSchool;
+                NewSpell.SpellDC = mySpells.SpellDC;
+                NewSpell.SpellBonus = mySpells.SpellBonus;
+                NewSpell.SpellDamage = mySpells.SpellDamage;
+                NewSpell.Duration = mySpells.Duration;
+                NewSpell.SpellDamageType = mySpells.SpellDamageType;
+                NewSpell.SpellDescription = mySpells.SpellDescription;
 
+                myAvailableSpells.Add(NewSpell);
+            }
+            ClearTextBoxes(this.Controls);
+            RunAvailableSpellsList();
+        }
+        private void CantripsRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(CantripsListView);
         }
 
-        private void RemoveButton_Click(object sender, EventArgs e)
+        private void FirstRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(FirstLevelListView);
+        }
+
+        private void SecondRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(SecondLevelListView);
+        }
+
+        private void ThirdRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(ThirdLevelListView);
+        }
+
+        private void FourthRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(FourthLevelListView);
+        }
+
+        private void FifthRemoveButton_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void SixthRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(SixthLevelListView);
+        }
+
+        private void SeventhRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(SeventhLevelListView);
+        }
+
+        private void EightRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(EightLevelListView);
+        }
+
+        private void NinthRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveFromList(NinthLevelListView);
+        }
+
+        #endregion
         #region TEXTCHANGED
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -84,7 +150,7 @@ namespace CharacterSheet
         private void DamageTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DamageTextBox.Text);
-            mySpells.SpellDamage = Convert.ToInt32(NewValue(OutOfReach, DamageTextBox.Text));
+            mySpells.SpellDamage = NewValue(OutOfReach, DamageTextBox.Text) + DamageTextBox.Text;
         }
        
         private void DurationTextBox_TextChanged(object sender, EventArgs e)
@@ -108,12 +174,12 @@ namespace CharacterSheet
         #region COMBOBOXES
         private void SpellBonusComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            SpellBonusComboBox.Text = SpellBonusComboBox.SelectedText;
         }
 
         private void DamageComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            mySpells.SpellDamage = DamageTextBox.Text + DamageTextBox.Text; 
         }
 
         #endregion
@@ -155,9 +221,111 @@ namespace CharacterSheet
                 e.Handled = true;
             }
         }
+        void ClearTextBoxes(Control.ControlCollection Spellbook)
+        {
+            foreach (Control TextBox in Spellbook)
+            {
+                if (TextBox is TextBoxBase)
+                {
+                    TextBox.Text = String.Empty;
+                }
+                else
+                {
+                    ClearTextBoxes(TextBox.Controls);
+                }
+            }
+        }
+        void RunAvailableSpellsList()
+        {
+            foreach (var Spell in myAvailableSpells)
+            switch (Spell.SpellLevel)
+            {
+                case 0:
+                    AvailableSpellsList(0, CantripsListView);
+                    break;
+                case 1:
+                    AvailableSpellsList(1, FirstLevelListView);
+                    break;
+                case 2:
+                    AvailableSpellsList(2, SecondLevelListView);
+                    break;
+                case 3:
+                    AvailableSpellsList(3, ThirdLevelListView);
+                    break;
+                case 4:
+                    AvailableSpellsList(4, FourthLevelListView);
+                    break;
+                case 5:
+                    AvailableSpellsList(5, FifthLevelListView);
+                    break;
+                case 6:
+                    AvailableSpellsList(6, SixthLevelListView);
+                    break;
+                case 7:
+                    AvailableSpellsList(7,SeventhLevelListView);
+                    break;
+                case 8:
+                    AvailableSpellsList(8, EightLevelListView);
+                    break;
+                case 9:
+                    AvailableSpellsList(9, NinthLevelListView);
+                    break;
+                default:
+                    break;
+            }
+        }
+        void AvailableSpellsList(int SpellLvl, ListView ListToFill)
+        {
+            {
+                ListToFill.Items.Clear();
+                int i = 0;
+                foreach (var Spell in myAvailableSpells)
+                {
+                    if (Spell.SpellLevel == SpellLvl)
+                    {
+                        ListToFill.Items.Add(Spell.SpellName,i);
+                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
+                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
+                        ListToFill.Items[i].SubItems.Add(Spell.CastTime);
+                        ListToFill.Items[i].SubItems.Add(Spell.Components);
+                        ListToFill.Items[i].SubItems.Add(Spell.SpellSchool);
+                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
+                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
+                        ListToFill.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
+                        ListToFill.Items[i].SubItems.Add(Spell.Duration);
+                        ListToFill.Items[i].SubItems.Add(Spell.SpellDamageType);
+                        ListToFill.Items[i].SubItems.Add(Spell.SpellDescription);
+                        i++;
+                    }
+                    else
+                    {
+                    }
+                }
+            }
+        }
+        void RemoveFromList(ListView ListToRemoveFrom)
+        {
+            for (int i = 0; i < ListToRemoveFrom.Items.Count; i++)
+            {
+                if (ListToRemoveFrom.Items[i].Selected)
+                {
+                    for (int j = 0; j < myAvailableSpells.Count; j++)
+                        if (myAvailableSpells[j].SpellName.Equals(ListToRemoveFrom.Items[i].Text))
+                        {
+                            myAvailableSpells.RemoveAt(j);
+                            ListToRemoveFrom.Items[i].Remove();
+                        }
+                }
+                else
+                {
+                }
+            }
+            RunAvailableSpellsList();
+        }
+
 
         #endregion
 
-
+  
     }
 }

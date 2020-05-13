@@ -38,8 +38,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.SpellBooklistView = new System.Windows.Forms.ListView();
-            this.RemoveButton = new System.Windows.Forms.Button();
+            this.CantripsListView = new System.Windows.Forms.ListView();
+            this.SpellName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellLevel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellRange = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellCastTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellComponents = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellSchool = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellBonus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDamage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDamageType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.SpellDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CantripsRemoveButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.MenuButton = new System.Windows.Forms.Button();
@@ -61,19 +73,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.NameTextBox = new System.Windows.Forms.TextBox();
             this.SpellBonusComboBox = new System.Windows.Forms.ComboBox();
-            this.SpellName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellLevel = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellRange = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellCastTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellComponents = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellSchool = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellDC = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellBonus = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellDamage = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellDuration = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellDamageType = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SpellDescription = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView10 = new System.Windows.Forms.ListView();
+            this.FirstLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -86,7 +86,7 @@
             this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView3 = new System.Windows.Forms.ListView();
+            this.ThirdLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader13 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader15 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -99,7 +99,7 @@
             this.columnHeader22 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader23 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader24 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView4 = new System.Windows.Forms.ListView();
+            this.FourthLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader25 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader26 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader27 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -112,7 +112,7 @@
             this.columnHeader34 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader35 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader36 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.SecondLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader37 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader38 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader39 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -125,7 +125,7 @@
             this.columnHeader46 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader47 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader48 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView6 = new System.Windows.Forms.ListView();
+            this.FifthLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader49 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader50 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader51 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -138,7 +138,7 @@
             this.columnHeader58 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader59 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader60 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.SixthLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader61 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader62 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader63 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -151,7 +151,7 @@
             this.columnHeader70 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader71 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader72 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView7 = new System.Windows.Forms.ListView();
+            this.SeventhLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader73 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader74 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader75 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -164,7 +164,7 @@
             this.columnHeader82 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader83 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader84 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView5 = new System.Windows.Forms.ListView();
+            this.EightLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader85 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader86 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader87 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -177,7 +177,7 @@
             this.columnHeader94 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader95 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader96 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.listView8 = new System.Windows.Forms.ListView();
+            this.NinthLevelListView = new System.Windows.Forms.ListView();
             this.columnHeader97 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader98 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader99 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -190,12 +190,21 @@
             this.columnHeader106 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader107 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader108 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.FirstRemoveButton = new System.Windows.Forms.Button();
+            this.SecondRemoveButton = new System.Windows.Forms.Button();
+            this.ThirdRemoveButton = new System.Windows.Forms.Button();
+            this.SixthRemoveButton = new System.Windows.Forms.Button();
+            this.FifthRemoveButton = new System.Windows.Forms.Button();
+            this.FourthRemoveButton = new System.Windows.Forms.Button();
+            this.NinthRemoveButton = new System.Windows.Forms.Button();
+            this.EightRemoveButton = new System.Windows.Forms.Button();
+            this.SeventhRemoveButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LevelTextBox
             // 
             this.LevelTextBox.Location = new System.Drawing.Point(201, 29);
-            this.LevelTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LevelTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LevelTextBox.Name = "LevelTextBox";
             this.LevelTextBox.Size = new System.Drawing.Size(32, 20);
             this.LevelTextBox.TabIndex = 0;
@@ -215,7 +224,7 @@
             // RangeTextBox
             // 
             this.RangeTextBox.Location = new System.Drawing.Point(237, 29);
-            this.RangeTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RangeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.RangeTextBox.Name = "RangeTextBox";
             this.RangeTextBox.Size = new System.Drawing.Size(36, 20);
             this.RangeTextBox.TabIndex = 2;
@@ -225,7 +234,7 @@
             // DCTextBox
             // 
             this.DCTextBox.Location = new System.Drawing.Point(130, 66);
-            this.DCTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DCTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DCTextBox.Name = "DCTextBox";
             this.DCTextBox.Size = new System.Drawing.Size(45, 20);
             this.DCTextBox.TabIndex = 3;
@@ -235,7 +244,7 @@
             // DamageTextBox
             // 
             this.DamageTextBox.Location = new System.Drawing.Point(264, 66);
-            this.DamageTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DamageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DamageTextBox.Name = "DamageTextBox";
             this.DamageTextBox.Size = new System.Drawing.Size(26, 20);
             this.DamageTextBox.TabIndex = 4;
@@ -245,7 +254,7 @@
             // DescriptionTextBox
             // 
             this.DescriptionTextBox.Location = new System.Drawing.Point(490, 29);
-            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DescriptionTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(201, 75);
@@ -292,10 +301,10 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "Description";
             // 
-            // SpellBooklistView
+            // CantripsListView
             // 
-            this.SpellBooklistView.CheckBoxes = true;
-            this.SpellBooklistView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.CantripsListView.CheckBoxes = true;
+            this.CantripsListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.SpellName,
             this.SpellLevel,
             this.SpellRange,
@@ -308,30 +317,82 @@
             this.SpellDuration,
             this.SpellDamageType,
             this.SpellDescription});
-            this.SpellBooklistView.HideSelection = false;
-            this.SpellBooklistView.Location = new System.Drawing.Point(130, 126);
-            this.SpellBooklistView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.SpellBooklistView.Name = "SpellBooklistView";
-            this.SpellBooklistView.Size = new System.Drawing.Size(352, 181);
-            this.SpellBooklistView.TabIndex = 14;
-            this.SpellBooklistView.UseCompatibleStateImageBehavior = false;
-            this.SpellBooklistView.View = System.Windows.Forms.View.Details;
+            this.CantripsListView.HideSelection = false;
+            this.CantripsListView.Location = new System.Drawing.Point(130, 126);
+            this.CantripsListView.Margin = new System.Windows.Forms.Padding(2);
+            this.CantripsListView.Name = "CantripsListView";
+            this.CantripsListView.Size = new System.Drawing.Size(352, 181);
+            this.CantripsListView.TabIndex = 14;
+            this.CantripsListView.UseCompatibleStateImageBehavior = false;
+            this.CantripsListView.View = System.Windows.Forms.View.Details;
             // 
-            // RemoveButton
+            // SpellName
             // 
-            this.RemoveButton.Location = new System.Drawing.Point(698, 68);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(66, 35);
-            this.RemoveButton.TabIndex = 15;
-            this.RemoveButton.Text = "Remove";
-            this.RemoveButton.UseVisualStyleBackColor = true;
-            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
+            this.SpellName.Text = "Spell";
+            // 
+            // SpellLevel
+            // 
+            this.SpellLevel.Text = "Level";
+            this.SpellLevel.Width = 39;
+            // 
+            // SpellRange
+            // 
+            this.SpellRange.Text = "Range";
+            this.SpellRange.Width = 49;
+            // 
+            // SpellCastTime
+            // 
+            this.SpellCastTime.Text = "Casting Time";
+            this.SpellCastTime.Width = 79;
+            // 
+            // SpellComponents
+            // 
+            this.SpellComponents.Text = "Components";
+            this.SpellComponents.Width = 76;
+            // 
+            // SpellSchool
+            // 
+            this.SpellSchool.Text = "School";
+            // 
+            // SpellDC
+            // 
+            this.SpellDC.Text = "DC";
+            // 
+            // SpellBonus
+            // 
+            this.SpellBonus.Text = "Spell Bonus";
+            // 
+            // SpellDamage
+            // 
+            this.SpellDamage.Text = "Damage";
+            // 
+            // SpellDuration
+            // 
+            this.SpellDuration.Text = "Duration";
+            // 
+            // SpellDamageType
+            // 
+            this.SpellDamageType.Text = "DamageType";
+            // 
+            // SpellDescription
+            // 
+            this.SpellDescription.Text = "Description";
+            // 
+            // CantripsRemoveButton
+            // 
+            this.CantripsRemoveButton.Location = new System.Drawing.Point(486, 285);
+            this.CantripsRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.CantripsRemoveButton.Name = "CantripsRemoveButton";
+            this.CantripsRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.CantripsRemoveButton.TabIndex = 15;
+            this.CantripsRemoveButton.Text = "Remove";
+            this.CantripsRemoveButton.UseVisualStyleBackColor = true;
+            this.CantripsRemoveButton.Click += new System.EventHandler(this.CantripsRemoveButton_Click);
             // 
             // AddButton
             // 
             this.AddButton.Location = new System.Drawing.Point(698, 29);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(66, 35);
             this.AddButton.TabIndex = 16;
@@ -540,62 +601,10 @@
             this.SpellBonusComboBox.TabIndex = 97;
             this.SpellBonusComboBox.SelectedIndexChanged += new System.EventHandler(this.SpellBonusComboBox_SelectedIndexChanged);
             // 
-            // SpellName
+            // FirstLevelListView
             // 
-            this.SpellName.Text = "Spell";
-            // 
-            // SpellLevel
-            // 
-            this.SpellLevel.Text = "Level";
-            this.SpellLevel.Width = 39;
-            // 
-            // SpellRange
-            // 
-            this.SpellRange.Text = "Range";
-            this.SpellRange.Width = 49;
-            // 
-            // SpellCastTime
-            // 
-            this.SpellCastTime.Text = "Casting Time";
-            this.SpellCastTime.Width = 79;
-            // 
-            // SpellComponents
-            // 
-            this.SpellComponents.Text = "Components";
-            this.SpellComponents.Width = 76;
-            // 
-            // SpellSchool
-            // 
-            this.SpellSchool.Text = "School";
-            // 
-            // SpellDC
-            // 
-            this.SpellDC.Text = "DC";
-            // 
-            // SpellBonus
-            // 
-            this.SpellBonus.Text = "Spell Bonus";
-            // 
-            // SpellDamage
-            // 
-            this.SpellDamage.Text = "Damage";
-            // 
-            // SpellDuration
-            // 
-            this.SpellDuration.Text = "Duration";
-            // 
-            // SpellDamageType
-            // 
-            this.SpellDamageType.Text = "DamageType";
-            // 
-            // SpellDescription
-            // 
-            this.SpellDescription.Text = "Description";
-            // 
-            // listView10
-            // 
-            this.listView10.CheckBoxes = true;
-            this.listView10.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FirstLevelListView.CheckBoxes = true;
+            this.FirstLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
@@ -608,14 +617,14 @@
             this.columnHeader10,
             this.columnHeader11,
             this.columnHeader12});
-            this.listView10.HideSelection = false;
-            this.listView10.Location = new System.Drawing.Point(130, 333);
-            this.listView10.Margin = new System.Windows.Forms.Padding(2);
-            this.listView10.Name = "listView10";
-            this.listView10.Size = new System.Drawing.Size(352, 181);
-            this.listView10.TabIndex = 98;
-            this.listView10.UseCompatibleStateImageBehavior = false;
-            this.listView10.View = System.Windows.Forms.View.Details;
+            this.FirstLevelListView.HideSelection = false;
+            this.FirstLevelListView.Location = new System.Drawing.Point(130, 333);
+            this.FirstLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstLevelListView.Name = "FirstLevelListView";
+            this.FirstLevelListView.Size = new System.Drawing.Size(352, 181);
+            this.FirstLevelListView.TabIndex = 98;
+            this.FirstLevelListView.UseCompatibleStateImageBehavior = false;
+            this.FirstLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader1
             // 
@@ -669,10 +678,10 @@
             // 
             this.columnHeader12.Text = "Description";
             // 
-            // listView3
+            // ThirdLevelListView
             // 
-            this.listView3.CheckBoxes = true;
-            this.listView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ThirdLevelListView.CheckBoxes = true;
+            this.ThirdLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader13,
             this.columnHeader14,
             this.columnHeader15,
@@ -685,14 +694,14 @@
             this.columnHeader22,
             this.columnHeader23,
             this.columnHeader24});
-            this.listView3.HideSelection = false;
-            this.listView3.Location = new System.Drawing.Point(590, 126);
-            this.listView3.Margin = new System.Windows.Forms.Padding(2);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(352, 181);
-            this.listView3.TabIndex = 99;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            this.listView3.View = System.Windows.Forms.View.Details;
+            this.ThirdLevelListView.HideSelection = false;
+            this.ThirdLevelListView.Location = new System.Drawing.Point(590, 126);
+            this.ThirdLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.ThirdLevelListView.Name = "ThirdLevelListView";
+            this.ThirdLevelListView.Size = new System.Drawing.Size(352, 181);
+            this.ThirdLevelListView.TabIndex = 99;
+            this.ThirdLevelListView.UseCompatibleStateImageBehavior = false;
+            this.ThirdLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader13
             // 
@@ -746,10 +755,10 @@
             // 
             this.columnHeader24.Text = "Description";
             // 
-            // listView4
+            // FourthLevelListView
             // 
-            this.listView4.CheckBoxes = true;
-            this.listView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FourthLevelListView.CheckBoxes = true;
+            this.FourthLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader25,
             this.columnHeader26,
             this.columnHeader27,
@@ -762,14 +771,14 @@
             this.columnHeader34,
             this.columnHeader35,
             this.columnHeader36});
-            this.listView4.HideSelection = false;
-            this.listView4.Location = new System.Drawing.Point(590, 333);
-            this.listView4.Margin = new System.Windows.Forms.Padding(2);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(352, 181);
-            this.listView4.TabIndex = 100;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            this.listView4.View = System.Windows.Forms.View.Details;
+            this.FourthLevelListView.HideSelection = false;
+            this.FourthLevelListView.Location = new System.Drawing.Point(590, 333);
+            this.FourthLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.FourthLevelListView.Name = "FourthLevelListView";
+            this.FourthLevelListView.Size = new System.Drawing.Size(352, 181);
+            this.FourthLevelListView.TabIndex = 100;
+            this.FourthLevelListView.UseCompatibleStateImageBehavior = false;
+            this.FourthLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader25
             // 
@@ -823,10 +832,10 @@
             // 
             this.columnHeader36.Text = "Description";
             // 
-            // listView2
+            // SecondLevelListView
             // 
-            this.listView2.CheckBoxes = true;
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SecondLevelListView.CheckBoxes = true;
+            this.SecondLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader37,
             this.columnHeader38,
             this.columnHeader39,
@@ -839,14 +848,14 @@
             this.columnHeader46,
             this.columnHeader47,
             this.columnHeader48});
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(130, 551);
-            this.listView2.Margin = new System.Windows.Forms.Padding(2);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(352, 181);
-            this.listView2.TabIndex = 101;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.SecondLevelListView.HideSelection = false;
+            this.SecondLevelListView.Location = new System.Drawing.Point(130, 551);
+            this.SecondLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.SecondLevelListView.Name = "SecondLevelListView";
+            this.SecondLevelListView.Size = new System.Drawing.Size(352, 181);
+            this.SecondLevelListView.TabIndex = 101;
+            this.SecondLevelListView.UseCompatibleStateImageBehavior = false;
+            this.SecondLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader37
             // 
@@ -900,10 +909,10 @@
             // 
             this.columnHeader48.Text = "Description";
             // 
-            // listView6
+            // FifthLevelListView
             // 
-            this.listView6.CheckBoxes = true;
-            this.listView6.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.FifthLevelListView.CheckBoxes = true;
+            this.FifthLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader49,
             this.columnHeader50,
             this.columnHeader51,
@@ -916,14 +925,14 @@
             this.columnHeader58,
             this.columnHeader59,
             this.columnHeader60});
-            this.listView6.HideSelection = false;
-            this.listView6.Location = new System.Drawing.Point(590, 551);
-            this.listView6.Margin = new System.Windows.Forms.Padding(2);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(352, 181);
-            this.listView6.TabIndex = 102;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            this.listView6.View = System.Windows.Forms.View.Details;
+            this.FifthLevelListView.HideSelection = false;
+            this.FifthLevelListView.Location = new System.Drawing.Point(590, 551);
+            this.FifthLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.FifthLevelListView.Name = "FifthLevelListView";
+            this.FifthLevelListView.Size = new System.Drawing.Size(352, 181);
+            this.FifthLevelListView.TabIndex = 102;
+            this.FifthLevelListView.UseCompatibleStateImageBehavior = false;
+            this.FifthLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader49
             // 
@@ -977,10 +986,10 @@
             // 
             this.columnHeader60.Text = "Description";
             // 
-            // listView1
+            // SixthLevelListView
             // 
-            this.listView1.CheckBoxes = true;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SixthLevelListView.CheckBoxes = true;
+            this.SixthLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader61,
             this.columnHeader62,
             this.columnHeader63,
@@ -993,14 +1002,14 @@
             this.columnHeader70,
             this.columnHeader71,
             this.columnHeader72});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(1074, 38);
-            this.listView1.Margin = new System.Windows.Forms.Padding(2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(352, 157);
-            this.listView1.TabIndex = 103;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.SixthLevelListView.HideSelection = false;
+            this.SixthLevelListView.Location = new System.Drawing.Point(1074, 38);
+            this.SixthLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.SixthLevelListView.Name = "SixthLevelListView";
+            this.SixthLevelListView.Size = new System.Drawing.Size(352, 157);
+            this.SixthLevelListView.TabIndex = 103;
+            this.SixthLevelListView.UseCompatibleStateImageBehavior = false;
+            this.SixthLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader61
             // 
@@ -1054,10 +1063,10 @@
             // 
             this.columnHeader72.Text = "Description";
             // 
-            // listView7
+            // SeventhLevelListView
             // 
-            this.listView7.CheckBoxes = true;
-            this.listView7.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.SeventhLevelListView.CheckBoxes = true;
+            this.SeventhLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader73,
             this.columnHeader74,
             this.columnHeader75,
@@ -1070,14 +1079,14 @@
             this.columnHeader82,
             this.columnHeader83,
             this.columnHeader84});
-            this.listView7.HideSelection = false;
-            this.listView7.Location = new System.Drawing.Point(1074, 214);
-            this.listView7.Margin = new System.Windows.Forms.Padding(2);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(352, 159);
-            this.listView7.TabIndex = 104;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            this.listView7.View = System.Windows.Forms.View.Details;
+            this.SeventhLevelListView.HideSelection = false;
+            this.SeventhLevelListView.Location = new System.Drawing.Point(1074, 214);
+            this.SeventhLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.SeventhLevelListView.Name = "SeventhLevelListView";
+            this.SeventhLevelListView.Size = new System.Drawing.Size(352, 159);
+            this.SeventhLevelListView.TabIndex = 104;
+            this.SeventhLevelListView.UseCompatibleStateImageBehavior = false;
+            this.SeventhLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader73
             // 
@@ -1131,10 +1140,10 @@
             // 
             this.columnHeader84.Text = "Description";
             // 
-            // listView5
+            // EightLevelListView
             // 
-            this.listView5.CheckBoxes = true;
-            this.listView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.EightLevelListView.CheckBoxes = true;
+            this.EightLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader85,
             this.columnHeader86,
             this.columnHeader87,
@@ -1147,14 +1156,14 @@
             this.columnHeader94,
             this.columnHeader95,
             this.columnHeader96});
-            this.listView5.HideSelection = false;
-            this.listView5.Location = new System.Drawing.Point(1074, 397);
-            this.listView5.Margin = new System.Windows.Forms.Padding(2);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(352, 150);
-            this.listView5.TabIndex = 105;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            this.listView5.View = System.Windows.Forms.View.Details;
+            this.EightLevelListView.HideSelection = false;
+            this.EightLevelListView.Location = new System.Drawing.Point(1074, 397);
+            this.EightLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.EightLevelListView.Name = "EightLevelListView";
+            this.EightLevelListView.Size = new System.Drawing.Size(352, 150);
+            this.EightLevelListView.TabIndex = 105;
+            this.EightLevelListView.UseCompatibleStateImageBehavior = false;
+            this.EightLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader85
             // 
@@ -1208,10 +1217,10 @@
             // 
             this.columnHeader96.Text = "Description";
             // 
-            // listView8
+            // NinthLevelListView
             // 
-            this.listView8.CheckBoxes = true;
-            this.listView8.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.NinthLevelListView.CheckBoxes = true;
+            this.NinthLevelListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader97,
             this.columnHeader98,
             this.columnHeader99,
@@ -1224,14 +1233,14 @@
             this.columnHeader106,
             this.columnHeader107,
             this.columnHeader108});
-            this.listView8.HideSelection = false;
-            this.listView8.Location = new System.Drawing.Point(1074, 576);
-            this.listView8.Margin = new System.Windows.Forms.Padding(2);
-            this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(352, 156);
-            this.listView8.TabIndex = 106;
-            this.listView8.UseCompatibleStateImageBehavior = false;
-            this.listView8.View = System.Windows.Forms.View.Details;
+            this.NinthLevelListView.HideSelection = false;
+            this.NinthLevelListView.Location = new System.Drawing.Point(1074, 576);
+            this.NinthLevelListView.Margin = new System.Windows.Forms.Padding(2);
+            this.NinthLevelListView.Name = "NinthLevelListView";
+            this.NinthLevelListView.Size = new System.Drawing.Size(352, 156);
+            this.NinthLevelListView.TabIndex = 106;
+            this.NinthLevelListView.UseCompatibleStateImageBehavior = false;
+            this.NinthLevelListView.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader97
             // 
@@ -1285,20 +1294,128 @@
             // 
             this.columnHeader108.Text = "Description";
             // 
+            // FirstRemoveButton
+            // 
+            this.FirstRemoveButton.Location = new System.Drawing.Point(486, 492);
+            this.FirstRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FirstRemoveButton.Name = "FirstRemoveButton";
+            this.FirstRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.FirstRemoveButton.TabIndex = 107;
+            this.FirstRemoveButton.Text = "Remove";
+            this.FirstRemoveButton.UseVisualStyleBackColor = true;
+            this.FirstRemoveButton.Click += new System.EventHandler(this.FirstRemoveButton_Click);
+            // 
+            // SecondRemoveButton
+            // 
+            this.SecondRemoveButton.Location = new System.Drawing.Point(486, 710);
+            this.SecondRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SecondRemoveButton.Name = "SecondRemoveButton";
+            this.SecondRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.SecondRemoveButton.TabIndex = 108;
+            this.SecondRemoveButton.Text = "Remove";
+            this.SecondRemoveButton.UseVisualStyleBackColor = true;
+            this.SecondRemoveButton.Click += new System.EventHandler(this.SecondRemoveButton_Click);
+            // 
+            // ThirdRemoveButton
+            // 
+            this.ThirdRemoveButton.Location = new System.Drawing.Point(946, 285);
+            this.ThirdRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ThirdRemoveButton.Name = "ThirdRemoveButton";
+            this.ThirdRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.ThirdRemoveButton.TabIndex = 109;
+            this.ThirdRemoveButton.Text = "Remove";
+            this.ThirdRemoveButton.UseVisualStyleBackColor = true;
+            this.ThirdRemoveButton.Click += new System.EventHandler(this.ThirdRemoveButton_Click);
+            // 
+            // SixthRemoveButton
+            // 
+            this.SixthRemoveButton.Location = new System.Drawing.Point(1430, 173);
+            this.SixthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SixthRemoveButton.Name = "SixthRemoveButton";
+            this.SixthRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.SixthRemoveButton.TabIndex = 110;
+            this.SixthRemoveButton.Text = "Remove";
+            this.SixthRemoveButton.UseVisualStyleBackColor = true;
+            this.SixthRemoveButton.Click += new System.EventHandler(this.SixthRemoveButton_Click);
+            // 
+            // FifthRemoveButton
+            // 
+            this.FifthRemoveButton.Location = new System.Drawing.Point(946, 710);
+            this.FifthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FifthRemoveButton.Name = "FifthRemoveButton";
+            this.FifthRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.FifthRemoveButton.TabIndex = 111;
+            this.FifthRemoveButton.Text = "Remove";
+            this.FifthRemoveButton.UseVisualStyleBackColor = true;
+            this.FifthRemoveButton.Click += new System.EventHandler(this.FifthRemoveButton_Click);
+            // 
+            // FourthRemoveButton
+            // 
+            this.FourthRemoveButton.Location = new System.Drawing.Point(946, 492);
+            this.FourthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.FourthRemoveButton.Name = "FourthRemoveButton";
+            this.FourthRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.FourthRemoveButton.TabIndex = 112;
+            this.FourthRemoveButton.Text = "Remove";
+            this.FourthRemoveButton.UseVisualStyleBackColor = true;
+            this.FourthRemoveButton.Click += new System.EventHandler(this.FourthRemoveButton_Click);
+            // 
+            // NinthRemoveButton
+            // 
+            this.NinthRemoveButton.Location = new System.Drawing.Point(1430, 710);
+            this.NinthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.NinthRemoveButton.Name = "NinthRemoveButton";
+            this.NinthRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.NinthRemoveButton.TabIndex = 113;
+            this.NinthRemoveButton.Text = "Remove";
+            this.NinthRemoveButton.UseVisualStyleBackColor = true;
+            this.NinthRemoveButton.Click += new System.EventHandler(this.NinthRemoveButton_Click);
+            // 
+            // EightRemoveButton
+            // 
+            this.EightRemoveButton.Location = new System.Drawing.Point(1430, 525);
+            this.EightRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.EightRemoveButton.Name = "EightRemoveButton";
+            this.EightRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.EightRemoveButton.TabIndex = 114;
+            this.EightRemoveButton.Text = "Remove";
+            this.EightRemoveButton.UseVisualStyleBackColor = true;
+            this.EightRemoveButton.Click += new System.EventHandler(this.EightRemoveButton_Click);
+            // 
+            // SeventhRemoveButton
+            // 
+            this.SeventhRemoveButton.Location = new System.Drawing.Point(1430, 351);
+            this.SeventhRemoveButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SeventhRemoveButton.Name = "SeventhRemoveButton";
+            this.SeventhRemoveButton.Size = new System.Drawing.Size(60, 22);
+            this.SeventhRemoveButton.TabIndex = 115;
+            this.SeventhRemoveButton.Text = "Remove";
+            this.SeventhRemoveButton.UseVisualStyleBackColor = true;
+            this.SeventhRemoveButton.Click += new System.EventHandler(this.SeventhRemoveButton_Click);
+            // 
             // Spellbook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1522, 762);
-            this.Controls.Add(this.listView8);
-            this.Controls.Add(this.listView5);
-            this.Controls.Add(this.listView7);
-            this.Controls.Add(this.listView1);
-            this.Controls.Add(this.listView6);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.listView4);
-            this.Controls.Add(this.listView3);
-            this.Controls.Add(this.listView10);
+            this.Controls.Add(this.SeventhRemoveButton);
+            this.Controls.Add(this.EightRemoveButton);
+            this.Controls.Add(this.NinthRemoveButton);
+            this.Controls.Add(this.FourthRemoveButton);
+            this.Controls.Add(this.FifthRemoveButton);
+            this.Controls.Add(this.SixthRemoveButton);
+            this.Controls.Add(this.ThirdRemoveButton);
+            this.Controls.Add(this.SecondRemoveButton);
+            this.Controls.Add(this.FirstRemoveButton);
+            this.Controls.Add(this.NinthLevelListView);
+            this.Controls.Add(this.EightLevelListView);
+            this.Controls.Add(this.SeventhLevelListView);
+            this.Controls.Add(this.SixthLevelListView);
+            this.Controls.Add(this.FifthLevelListView);
+            this.Controls.Add(this.SecondLevelListView);
+            this.Controls.Add(this.FourthLevelListView);
+            this.Controls.Add(this.ThirdLevelListView);
+            this.Controls.Add(this.FirstLevelListView);
             this.Controls.Add(this.SpellBonusComboBox);
             this.Controls.Add(this.NameTextBox);
             this.Controls.Add(this.label13);
@@ -1318,8 +1435,8 @@
             this.Controls.Add(this.MenuButton);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.RemoveButton);
-            this.Controls.Add(this.SpellBooklistView);
+            this.Controls.Add(this.CantripsRemoveButton);
+            this.Controls.Add(this.CantripsListView);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -1332,7 +1449,7 @@
             this.Controls.Add(this.RangeTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.LevelTextBox);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Spellbook";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Spellbook";
@@ -1353,8 +1470,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ListView SpellBooklistView;
-        private System.Windows.Forms.Button RemoveButton;
+        private System.Windows.Forms.ListView CantripsListView;
+        private System.Windows.Forms.Button CantripsRemoveButton;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button MenuButton;
@@ -1388,7 +1505,7 @@
         private System.Windows.Forms.ColumnHeader SpellDuration;
         private System.Windows.Forms.ColumnHeader SpellDamageType;
         private System.Windows.Forms.ColumnHeader SpellDescription;
-        private System.Windows.Forms.ListView listView10;
+        private System.Windows.Forms.ListView FirstLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
@@ -1401,7 +1518,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ListView listView3;
+        private System.Windows.Forms.ListView ThirdLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
@@ -1414,7 +1531,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader22;
         private System.Windows.Forms.ColumnHeader columnHeader23;
         private System.Windows.Forms.ColumnHeader columnHeader24;
-        private System.Windows.Forms.ListView listView4;
+        private System.Windows.Forms.ListView FourthLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader25;
         private System.Windows.Forms.ColumnHeader columnHeader26;
         private System.Windows.Forms.ColumnHeader columnHeader27;
@@ -1427,7 +1544,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader34;
         private System.Windows.Forms.ColumnHeader columnHeader35;
         private System.Windows.Forms.ColumnHeader columnHeader36;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView SecondLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader37;
         private System.Windows.Forms.ColumnHeader columnHeader38;
         private System.Windows.Forms.ColumnHeader columnHeader39;
@@ -1440,7 +1557,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader46;
         private System.Windows.Forms.ColumnHeader columnHeader47;
         private System.Windows.Forms.ColumnHeader columnHeader48;
-        private System.Windows.Forms.ListView listView6;
+        private System.Windows.Forms.ListView FifthLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader49;
         private System.Windows.Forms.ColumnHeader columnHeader50;
         private System.Windows.Forms.ColumnHeader columnHeader51;
@@ -1453,7 +1570,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader58;
         private System.Windows.Forms.ColumnHeader columnHeader59;
         private System.Windows.Forms.ColumnHeader columnHeader60;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView SixthLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader61;
         private System.Windows.Forms.ColumnHeader columnHeader62;
         private System.Windows.Forms.ColumnHeader columnHeader63;
@@ -1466,7 +1583,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader70;
         private System.Windows.Forms.ColumnHeader columnHeader71;
         private System.Windows.Forms.ColumnHeader columnHeader72;
-        private System.Windows.Forms.ListView listView7;
+        private System.Windows.Forms.ListView SeventhLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader73;
         private System.Windows.Forms.ColumnHeader columnHeader74;
         private System.Windows.Forms.ColumnHeader columnHeader75;
@@ -1479,7 +1596,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader82;
         private System.Windows.Forms.ColumnHeader columnHeader83;
         private System.Windows.Forms.ColumnHeader columnHeader84;
-        private System.Windows.Forms.ListView listView5;
+        private System.Windows.Forms.ListView EightLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader85;
         private System.Windows.Forms.ColumnHeader columnHeader86;
         private System.Windows.Forms.ColumnHeader columnHeader87;
@@ -1492,7 +1609,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader94;
         private System.Windows.Forms.ColumnHeader columnHeader95;
         private System.Windows.Forms.ColumnHeader columnHeader96;
-        private System.Windows.Forms.ListView listView8;
+        private System.Windows.Forms.ListView NinthLevelListView;
         private System.Windows.Forms.ColumnHeader columnHeader97;
         private System.Windows.Forms.ColumnHeader columnHeader98;
         private System.Windows.Forms.ColumnHeader columnHeader99;
@@ -1505,5 +1622,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader106;
         private System.Windows.Forms.ColumnHeader columnHeader107;
         private System.Windows.Forms.ColumnHeader columnHeader108;
+        private System.Windows.Forms.Button FirstRemoveButton;
+        private System.Windows.Forms.Button SecondRemoveButton;
+        private System.Windows.Forms.Button ThirdRemoveButton;
+        private System.Windows.Forms.Button SixthRemoveButton;
+        private System.Windows.Forms.Button FifthRemoveButton;
+        private System.Windows.Forms.Button FourthRemoveButton;
+        private System.Windows.Forms.Button NinthRemoveButton;
+        private System.Windows.Forms.Button EightRemoveButton;
+        private System.Windows.Forms.Button SeventhRemoveButton;
     }
 }

@@ -40,7 +40,7 @@ namespace DnDClassLibrary
                     NewSpell.SpellDescription = Utility.ReadTextInput("Enter Spell Description");
                    // NewSpell.SpellDamageType = Utility.ReadNumericInput("Enter required tytp");
                     NewSpell.SpellDC = Utility.ReadNumericInput("Enter Spell DC");
-                    NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
+              //      NewSpell.SpellBonus = Utility.ReadNumericInput("Enter Spell bonus");
 
                     AvailableSpellList.Add(NewSpell);
                 }

@@ -13,8 +13,8 @@ namespace DnDClassLibrary
         string components;
         string spellSchool;
         int spellDC;
-        int spellBonus;
-        int spellDamage;
+        string spellBonus;
+        string spellDamage;
         string duration;
         string spellDamageType;
         string spellDescription;
@@ -40,7 +40,7 @@ namespace DnDClassLibrary
             get { return components; }
             set { components = value; }
         }
-        public int SpellDamage
+        public string SpellDamage
         {
             get { return spellDamage; }
             set { spellDamage = value; }
@@ -93,7 +93,7 @@ namespace DnDClassLibrary
             set { spellDC = value; }
         }
 
-        public int SpellBonus
+        public string SpellBonus
         {
             get { return spellBonus; }
             set { spellBonus = value; }

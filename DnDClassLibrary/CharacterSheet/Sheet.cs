@@ -1469,9 +1469,11 @@ namespace CharacterSheet
 
         private void SpellsButton_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Spellbook RunSpellBook = new Spellbook(myCharacter, mySpells);
             if (RunSpellBook.ShowDialog() == DialogResult.OK)
             {
+                this.Show();
                 RunPreparedSpells();
             }
             else
