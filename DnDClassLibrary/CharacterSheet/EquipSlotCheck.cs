@@ -19,6 +19,7 @@ namespace CharacterSheet
         public EquipSlotCheck(Weapon Weapon ,EquippedItems EquipmentChoice, string message, string Slot1, string Slot2, string Slot3)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             label1.Text = message;
             WeaponSlotOne.Text = Slot1;
             WeaponSlotTwo.Text = Slot2;

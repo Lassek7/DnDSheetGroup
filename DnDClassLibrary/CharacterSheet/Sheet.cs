@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DnDClassLibrary;
 using System.IO;
-
+using System.Security.Cryptography.X509Certificates;
 
 namespace CharacterSheet
 {
@@ -52,6 +52,9 @@ namespace CharacterSheet
         #region SHEETLOAD
         private void Sheet_Load_1(object sender, EventArgs e)
         {
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ColorLoad();
+            RunInvList();
             LoadCharacterInfo();
             LoadAttributes();
             LoadSkills();
@@ -374,10 +377,12 @@ namespace CharacterSheet
             if (EditSheetCheck.Checked == true)
             {
                 EditSheetTrueWrite();
+                EditSheetTrueColor();
             }
             else
             {
                 EditSheetFalseRead();
+                EditSheetFalseColor();
                 LoadAttributes();
                 LoadCharacterInfo();
                 LoadSkills();
@@ -1204,6 +1209,57 @@ namespace CharacterSheet
             }
         }
 
+        void EditSheetTrueColor()
+        {
+            RaceDisplayTextBox.BackColor = Color.White;
+            ClassDisplayTextBox.BackColor = Color.White;
+            BackgroundDisplayTextBox.BackColor = Color.White;
+            AlignmentDisplayTextBox.BackColor = Color.White;
+            ExperienceDisplayTextBox.BackColor = Color.White;
+            LevelDisplayTextBox.BackColor = Color.White;
+
+            StrengthAttributeDisplay.BackColor = Color.White;
+            DexterityAttributeDisplay.BackColor = Color.White;
+            ConstitutionAttributeDisplay.BackColor = Color.White;
+            IntelligenceAttributeDisplay.BackColor = Color.White;
+            WisdomAttributeDisplay.BackColor = Color.White;
+            CharismaAttributeDisplay.BackColor = Color.White;
+
+            MaxHealthDisplay.BackColor = Color.White;
+            SpeedDisplay.BackColor = Color.White;
+
+            IdealsDisplay.BackColor = Color.White;
+            BondsDisplay.BackColor = Color.White;
+            TraitsDisplay.BackColor = Color.White;
+            FlawsDisplay.BackColor = Color.White;
+            BackstoryBox.BackColor = Color.White;
+        }
+
+        void EditSheetFalseColor()
+        {
+            RaceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ClassDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            BackgroundDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            AlignmentDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ExperienceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            LevelDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+
+            StrengthAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            DexterityAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            ConstitutionAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            IntelligenceAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            WisdomAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            CharismaAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+
+            MaxHealthDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            SpeedDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+
+            TraitsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BondsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            IdealsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            FlawsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BackstoryBox.BackColor = ColorTranslator.FromHtml("#777A88");
+        }
         void EditSheetTrueWrite()
         {
             RaceDisplayTextBox.Enabled = true;
@@ -1227,7 +1283,7 @@ namespace CharacterSheet
             BondsDisplay.Enabled = true;
             TraitsDisplay.Enabled = true;
             FlawsDisplay.Enabled = true;
-            BackgroundDisplayTextBox.Enabled = true;
+            BackstoryBox.Enabled = true;
         }
 
         void EditSheetFalseRead()
@@ -1253,8 +1309,9 @@ namespace CharacterSheet
             BondsDisplay.Enabled = false;
             TraitsDisplay.Enabled = false;
             FlawsDisplay.Enabled = false;
-            BackgroundDisplayTextBox.Enabled = false;
+            BackstoryBox.Enabled = false;
         }
+
 
         void LoadEquippedItems()
         {
@@ -1263,7 +1320,7 @@ namespace CharacterSheet
             WeaponSlotOneDamageDisplay.Text = myEquippedItems.WeaponOneDamage;
             WeaponSlotOneDamageTypeDisplay.Text = myEquippedItems.WeaponOneDamageType;
 
-            WeaponSlotTwoNameDisplay.Text = myEquippedItems.WeaponTwoName;
+            weapon2Label.Text = myEquippedItems.WeaponTwoName;
             WeaponSlotTwoATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc(myEquippedItems.WeaponTwoAttributeAssociation, WeaponSlotTwoProficiency.Checked, myCharacter.proficiencyBonus, myAttributes.Modifiers[0], myAttributes.Modifiers[1], myAttributes.Modifiers[2], myAttributes.Modifiers[3], myAttributes.Modifiers[4], myAttributes.Modifiers[5]));
             WeaponSlotTwoDamageDisplay.Text = myEquippedItems.WeaponTwoDamage;
             WeaponSlotTwoDamageTypeDisplay.Text = myEquippedItems.WeaponTwoDamageType;
@@ -1393,6 +1450,7 @@ namespace CharacterSheet
                             if (myInventoryList[j].AmountHeld <=0)
                             {
                                 myInventoryList.RemoveAt(j);
+                                RunInvList();
                             }
                         }
                 }
@@ -1584,5 +1642,62 @@ namespace CharacterSheet
                 ClassResourcesNumericUpDown.Value = 0;
             }
         }
+        void ColorLoad()
+        {
+            EquipmentPanel.BackColor = ColorTranslator.FromHtml("#777A88");
+            SpellsListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            ClassFeatureListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            OtherFeaturesListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            AttributesPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+
+            IdealsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BondsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            FlawsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            IdealsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BackstoryBox.BackColor = ColorTranslator.FromHtml("#777A88");
+
+            StrengthAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            DexterityAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            ConstitutionAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            IntelligenceAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            WisdomAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            CharismaAttributeDisplay.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            RaceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ClassDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            BackgroundDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            AlignmentDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ExperienceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            LevelDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            
+            SpeedDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            MaxHealthDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            CurrentHitPointsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            numericUpDown2.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ClassResourcesNumericUpDown.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+
+            InventoryListView.BackColor = ColorTranslator.FromHtml("#777A88");
+            CopperCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            SilverCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            ElectrumCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            GoldCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            PlatinumCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            TraitsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BondsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            IdealsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            FlawsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
+            BackstoryBox.BackColor = ColorTranslator.FromHtml("#777A88");
+
+            MagicItemOneTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            MagicItemThreeTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            MagicItemTwoTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            AttunementSlotOneTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            AttunementSlotTwoTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            AttunementSlotThreeTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+
+            FirstWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            SecondWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            ThirdWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+        }
+
     }
 }

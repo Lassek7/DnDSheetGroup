@@ -34,7 +34,6 @@ namespace CharacterSheet
         bool WisDone = false;
         bool ChaDone = false;
         bool ResourceDone = false;
-
         public CreateCharacterForm()
         {
             InitializeComponent();
@@ -42,8 +41,8 @@ namespace CharacterSheet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-        } 
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+        }
 
         private void CharacterNameBox_TextChanged(object sender, EventArgs e)
         {

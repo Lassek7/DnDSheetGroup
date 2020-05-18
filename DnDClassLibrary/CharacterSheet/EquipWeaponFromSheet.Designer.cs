@@ -83,6 +83,7 @@
             this.Controls.Add(this.SlotTwoButton);
             this.Controls.Add(this.SlotOneButton);
             this.Name = "EquipWeaponFromSheet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EquipWeaponFromSheet";
             this.ResumeLayout(false);
             this.PerformLayout();

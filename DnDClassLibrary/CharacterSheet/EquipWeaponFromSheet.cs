@@ -29,12 +29,14 @@ namespace CharacterSheet
             myListView = ListToTakeFrom;
             WeaponID = ID;
             AttributeLocation = AttributesPlacement;
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+
         }
 
         private void SlotOneButton_Click(object sender, EventArgs e)
         {
             myEquippedItems.WeaponOneName = myListView.Items[WeaponID].SubItems[0].Text;
-            myEquippedItems.WeaponOneAttributeAssociation = myListView.Items[WeaponID].SubItems[AttributeLocation].Text; // listview sub utems
+            myEquippedItems.WeaponOneAttributeAssociation = myListView.Items[WeaponID].SubItems[AttributeLocation].Text;
             myEquippedItems.WeaponOneDamageType = myListView.Items[WeaponID].SubItems[4].Text;
             myEquippedItems.WeaponOneDamage = myListView.Items[WeaponID].SubItems[3].Text;
             this.Hide();

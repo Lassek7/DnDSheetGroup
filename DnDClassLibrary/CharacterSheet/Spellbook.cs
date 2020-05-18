@@ -20,8 +20,10 @@ namespace CharacterSheet
         public Spellbook(Character Charac, List<Spell> PreparedSpellList, List<Spell> AvailableSpellsList)
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             myPreparedSpells = PreparedSpellList;
             myAvailableSpells = AvailableSpellsList;
+            RunColors();
             RunAvailableSpellsList();
         }
         #region CLICKEVENTS
@@ -391,9 +393,18 @@ namespace CharacterSheet
             }
             RunAvailableSpellsList();
         }
-        void Checkstatus()
+        void RunColors()
         {
-            
+            CantripsListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            FirstLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            SecondLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            ThirdLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            FourthLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            FifthLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            SixthLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            SeventhLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            EightLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
+            NinthLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
         }
 
 

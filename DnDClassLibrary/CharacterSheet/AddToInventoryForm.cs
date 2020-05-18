@@ -26,6 +26,7 @@ namespace CharacterSheet
             myAttributes = Attri;
             myEquippedItems = EQ;
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             RunInvList();
         }
         #region ADD ITEM

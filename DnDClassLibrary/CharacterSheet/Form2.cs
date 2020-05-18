@@ -16,16 +16,17 @@ namespace CharacterSheet
         public Form2()
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
         }
 
-        
+
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             CreateCharacterForm RunCreateCharacter = new CreateCharacterForm();
             DnDDatabaseManagement ShitV2 = new DnDDatabaseManagement();
-            ShitV2.BasicStarterItem();
+         //   ShitV2.BasicStarterItem();
             RunCreateCharacter.Show();
         }
 
@@ -73,14 +74,7 @@ namespace CharacterSheet
 
             Sheet LoadCharacter = new Sheet(ShitV2.InventoryList,test2);
             
-            LoadCharacter.Show();
-            
-        }
-
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
-        {
-            
-            
+            LoadCharacter.Show();  
         }
     }
 }

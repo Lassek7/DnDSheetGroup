@@ -56,12 +56,13 @@ namespace DnDClassLibrary
         public string CreateJsonPathPreSetItem()
         {
             string folderPath = filePath;
-            string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
-            string fileName = "StarterItem" + ".json";
+             string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
+             string fileName = "StarterItem" + ".json";
 
             string starterItemFile = System.IO.Path.Combine(pathString, fileName);
             return starterItemFile;
         }
+
         public void SaveCharacterToFile(string afilePath)
         {
             string myfilePath = afilePath;
@@ -163,6 +164,7 @@ namespace DnDClassLibrary
                 }
             }
         }
+
         public string[] LoadCharacterInfo(string JsonCharData)
         {
             string[] CharacterInfoArray = new string[19];
@@ -337,6 +339,7 @@ namespace DnDClassLibrary
                 }
             }
         }
+
         public List<Item> DatabaseList(string JsonItemData) // 
         {
             int ItemID;
@@ -404,6 +407,7 @@ namespace DnDClassLibrary
             }
             return InventoryList;
         }
+        
         public List<Item> BasicStarterItem()
         {
             int ItemID;

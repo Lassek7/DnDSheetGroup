@@ -21,8 +21,9 @@ namespace CharacterSheet
         public AddFeatureForm()
         {
             InitializeComponent();
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
         }
-       
+
         public AddFeatureForm(List<Feat> Features, List<Feat> OtherFeatures, String Slot1, string Slot2, int ID)
         {
             InitializeComponent();

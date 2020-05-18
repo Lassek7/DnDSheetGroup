@@ -706,7 +706,7 @@
             // EncumberStatus
             // 
             this.EncumberStatus.AutoSize = true;
-            this.EncumberStatus.Location = new System.Drawing.Point(584, 436);
+            this.EncumberStatus.Location = new System.Drawing.Point(586, 436);
             this.EncumberStatus.Name = "EncumberStatus";
             this.EncumberStatus.Size = new System.Drawing.Size(40, 13);
             this.EncumberStatus.TabIndex = 35;
