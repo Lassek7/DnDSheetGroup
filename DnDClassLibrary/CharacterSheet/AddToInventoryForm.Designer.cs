@@ -133,7 +133,7 @@
             this.ItemDescriptionRichBox.Location = new System.Drawing.Point(330, 32);
             this.ItemDescriptionRichBox.Name = "ItemDescriptionRichBox";
             this.ItemDescriptionRichBox.Size = new System.Drawing.Size(82, 43);
-            this.ItemDescriptionRichBox.TabIndex = 3;
+            this.ItemDescriptionRichBox.TabIndex = 4;
             this.ItemDescriptionRichBox.Text = "";
             this.ItemDescriptionRichBox.TextChanged += new System.EventHandler(this.ItemDescriptionRichBox_TextChanged);
             // 
@@ -178,7 +178,7 @@
             this.ItemAmountBox.Location = new System.Drawing.Point(131, 32);
             this.ItemAmountBox.Name = "ItemAmountBox";
             this.ItemAmountBox.Size = new System.Drawing.Size(71, 20);
-            this.ItemAmountBox.TabIndex = 1;
+            this.ItemAmountBox.TabIndex = 2;
             this.ItemAmountBox.TextChanged += new System.EventHandler(this.ItemAmountBox_TextChanged);
             this.ItemAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemAmountBox_KeyPress);
             // 
@@ -187,7 +187,7 @@
             this.ItemTypeBox.Location = new System.Drawing.Point(27, 78);
             this.ItemTypeBox.Name = "ItemTypeBox";
             this.ItemTypeBox.Size = new System.Drawing.Size(71, 20);
-            this.ItemTypeBox.TabIndex = 4;
+            this.ItemTypeBox.TabIndex = 5;
             this.ItemTypeBox.TextChanged += new System.EventHandler(this.ItemTypeBox_TextChanged);
             // 
             // ItemweightBox
@@ -195,7 +195,7 @@
             this.ItemweightBox.Location = new System.Drawing.Point(233, 32);
             this.ItemweightBox.Name = "ItemweightBox";
             this.ItemweightBox.Size = new System.Drawing.Size(71, 20);
-            this.ItemweightBox.TabIndex = 2;
+            this.ItemweightBox.TabIndex = 3;
             this.ItemweightBox.TextChanged += new System.EventHandler(this.ItemweightBox_TextChanged);
             this.ItemweightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ItemweightBox_KeyPress);
             // 
@@ -204,7 +204,7 @@
             this.ItemNameBox.Location = new System.Drawing.Point(27, 32);
             this.ItemNameBox.Name = "ItemNameBox";
             this.ItemNameBox.Size = new System.Drawing.Size(71, 20);
-            this.ItemNameBox.TabIndex = 0;
+            this.ItemNameBox.TabIndex = 1;
             this.ItemNameBox.TextChanged += new System.EventHandler(this.ItemNameBox_TextChanged);
             // 
             // groupBox2
@@ -244,7 +244,7 @@
             this.ArmorEquippedCheck.Location = new System.Drawing.Point(234, 80);
             this.ArmorEquippedCheck.Name = "ArmorEquippedCheck";
             this.ArmorEquippedCheck.Size = new System.Drawing.Size(82, 17);
-            this.ArmorEquippedCheck.TabIndex = 11;
+            this.ArmorEquippedCheck.TabIndex = 12;
             this.ArmorEquippedCheck.Text = "Equip Item?";
             this.ArmorEquippedCheck.UseVisualStyleBackColor = true;
             // 
@@ -280,7 +280,7 @@
             this.ArmorDescriptionBox.Location = new System.Drawing.Point(330, 30);
             this.ArmorDescriptionBox.Name = "ArmorDescriptionBox";
             this.ArmorDescriptionBox.Size = new System.Drawing.Size(82, 40);
-            this.ArmorDescriptionBox.TabIndex = 8;
+            this.ArmorDescriptionBox.TabIndex = 9;
             this.ArmorDescriptionBox.Text = "";
             this.ArmorDescriptionBox.TextChanged += new System.EventHandler(this.ArmorDescriptionBox_TextChanged);
             // 
@@ -307,7 +307,7 @@
             this.ArmorACBox.Location = new System.Drawing.Point(131, 77);
             this.ArmorACBox.Name = "ArmorACBox";
             this.ArmorACBox.Size = new System.Drawing.Size(71, 20);
-            this.ArmorACBox.TabIndex = 10;
+            this.ArmorACBox.TabIndex = 11;
             this.ArmorACBox.TextChanged += new System.EventHandler(this.ArmorACBox_TextChanged);
             this.ArmorACBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorACBox_KeyPress);
             // 
@@ -316,7 +316,7 @@
             this.ArmorTypeBox.Location = new System.Drawing.Point(27, 77);
             this.ArmorTypeBox.Name = "ArmorTypeBox";
             this.ArmorTypeBox.Size = new System.Drawing.Size(71, 20);
-            this.ArmorTypeBox.TabIndex = 9;
+            this.ArmorTypeBox.TabIndex = 10;
             this.ArmorTypeBox.TextChanged += new System.EventHandler(this.ArmorTypeBox_TextChanged);
             // 
             // ArmorWeightBox
@@ -324,7 +324,7 @@
             this.ArmorWeightBox.Location = new System.Drawing.Point(234, 30);
             this.ArmorWeightBox.Name = "ArmorWeightBox";
             this.ArmorWeightBox.Size = new System.Drawing.Size(71, 20);
-            this.ArmorWeightBox.TabIndex = 7;
+            this.ArmorWeightBox.TabIndex = 8;
             this.ArmorWeightBox.TextChanged += new System.EventHandler(this.ArmorWeightBox_TextChanged);
             this.ArmorWeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorWeightBox_KeyPress);
             // 
@@ -333,7 +333,7 @@
             this.ArmorNameBox.Location = new System.Drawing.Point(27, 30);
             this.ArmorNameBox.Name = "ArmorNameBox";
             this.ArmorNameBox.Size = new System.Drawing.Size(71, 20);
-            this.ArmorNameBox.TabIndex = 5;
+            this.ArmorNameBox.TabIndex = 6;
             this.ArmorNameBox.TextChanged += new System.EventHandler(this.ArmorNameBox_TextChanged);
             // 
             // ArmorAmountBox
@@ -341,7 +341,7 @@
             this.ArmorAmountBox.Location = new System.Drawing.Point(129, 30);
             this.ArmorAmountBox.Name = "ArmorAmountBox";
             this.ArmorAmountBox.Size = new System.Drawing.Size(71, 20);
-            this.ArmorAmountBox.TabIndex = 6;
+            this.ArmorAmountBox.TabIndex = 7;
             this.ArmorAmountBox.TextChanged += new System.EventHandler(this.ArmorAmountBox_TextChanged);
             this.ArmorAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArmorAmountBox_KeyPress);
             // 
@@ -382,6 +382,7 @@
             // DamageComboBox
             // 
             this.DamageComboBox.FormattingEnabled = true;
+            this.DamageComboBox.ItemHeight = 13;
             this.DamageComboBox.Items.AddRange(new object[] {
             "d4",
             "d6",
@@ -401,7 +402,7 @@
             this.WeaponEquippedCheck.Location = new System.Drawing.Point(330, 103);
             this.WeaponEquippedCheck.Name = "WeaponEquippedCheck";
             this.WeaponEquippedCheck.Size = new System.Drawing.Size(82, 17);
-            this.WeaponEquippedCheck.TabIndex = 18;
+            this.WeaponEquippedCheck.TabIndex = 22;
             this.WeaponEquippedCheck.Text = "Equip Item?";
             this.WeaponEquippedCheck.UseVisualStyleBackColor = true;
             // 
@@ -447,7 +448,7 @@
             this.WeaponCharismaStatRadioButton.Location = new System.Drawing.Point(440, 153);
             this.WeaponCharismaStatRadioButton.Name = "WeaponCharismaStatRadioButton";
             this.WeaponCharismaStatRadioButton.Size = new System.Drawing.Size(68, 17);
-            this.WeaponCharismaStatRadioButton.TabIndex = 26;
+            this.WeaponCharismaStatRadioButton.TabIndex = 28;
             this.WeaponCharismaStatRadioButton.TabStop = true;
             this.WeaponCharismaStatRadioButton.Text = "Charisma";
             this.WeaponCharismaStatRadioButton.UseVisualStyleBackColor = true;
@@ -459,7 +460,7 @@
             this.WeaponWisdomStatRadioButton.Location = new System.Drawing.Point(440, 130);
             this.WeaponWisdomStatRadioButton.Name = "WeaponWisdomStatRadioButton";
             this.WeaponWisdomStatRadioButton.Size = new System.Drawing.Size(63, 17);
-            this.WeaponWisdomStatRadioButton.TabIndex = 25;
+            this.WeaponWisdomStatRadioButton.TabIndex = 27;
             this.WeaponWisdomStatRadioButton.TabStop = true;
             this.WeaponWisdomStatRadioButton.Text = "Wisdom";
             this.WeaponWisdomStatRadioButton.UseVisualStyleBackColor = true;
@@ -471,7 +472,7 @@
             this.WeaponIntelligenceStatRadioButton.Location = new System.Drawing.Point(440, 107);
             this.WeaponIntelligenceStatRadioButton.Name = "WeaponIntelligenceStatRadioButton";
             this.WeaponIntelligenceStatRadioButton.Size = new System.Drawing.Size(79, 17);
-            this.WeaponIntelligenceStatRadioButton.TabIndex = 24;
+            this.WeaponIntelligenceStatRadioButton.TabIndex = 26;
             this.WeaponIntelligenceStatRadioButton.TabStop = true;
             this.WeaponIntelligenceStatRadioButton.Text = "Intelligence";
             this.WeaponIntelligenceStatRadioButton.UseVisualStyleBackColor = true;
@@ -483,7 +484,7 @@
             this.WeaponConstitutionStatRadioButton.Location = new System.Drawing.Point(440, 84);
             this.WeaponConstitutionStatRadioButton.Name = "WeaponConstitutionStatRadioButton";
             this.WeaponConstitutionStatRadioButton.Size = new System.Drawing.Size(80, 17);
-            this.WeaponConstitutionStatRadioButton.TabIndex = 23;
+            this.WeaponConstitutionStatRadioButton.TabIndex = 25;
             this.WeaponConstitutionStatRadioButton.TabStop = true;
             this.WeaponConstitutionStatRadioButton.Text = "Constitution";
             this.WeaponConstitutionStatRadioButton.UseVisualStyleBackColor = true;
@@ -495,7 +496,7 @@
             this.WeaponDexterityStatRadioButton.Location = new System.Drawing.Point(440, 61);
             this.WeaponDexterityStatRadioButton.Name = "WeaponDexterityStatRadioButton";
             this.WeaponDexterityStatRadioButton.Size = new System.Drawing.Size(66, 17);
-            this.WeaponDexterityStatRadioButton.TabIndex = 22;
+            this.WeaponDexterityStatRadioButton.TabIndex = 24;
             this.WeaponDexterityStatRadioButton.TabStop = true;
             this.WeaponDexterityStatRadioButton.Text = "Dexterity";
             this.WeaponDexterityStatRadioButton.UseVisualStyleBackColor = true;
@@ -507,7 +508,7 @@
             this.WeaponStrengthStatRadioButton.Location = new System.Drawing.Point(440, 38);
             this.WeaponStrengthStatRadioButton.Name = "WeaponStrengthStatRadioButton";
             this.WeaponStrengthStatRadioButton.Size = new System.Drawing.Size(65, 17);
-            this.WeaponStrengthStatRadioButton.TabIndex = 21;
+            this.WeaponStrengthStatRadioButton.TabIndex = 23;
             this.WeaponStrengthStatRadioButton.TabStop = true;
             this.WeaponStrengthStatRadioButton.Text = "Strength";
             this.WeaponStrengthStatRadioButton.UseVisualStyleBackColor = true;
@@ -536,7 +537,7 @@
             this.WeaponDescriptionBox.Location = new System.Drawing.Point(330, 39);
             this.WeaponDescriptionBox.Name = "WeaponDescriptionBox";
             this.WeaponDescriptionBox.Size = new System.Drawing.Size(82, 40);
-            this.WeaponDescriptionBox.TabIndex = 15;
+            this.WeaponDescriptionBox.TabIndex = 16;
             this.WeaponDescriptionBox.Text = "";
             this.WeaponDescriptionBox.TextChanged += new System.EventHandler(this.WeaponDescriptionBox_TextChanged);
             // 
@@ -572,7 +573,7 @@
             this.WeaponDamageTypeBox.Location = new System.Drawing.Point(27, 82);
             this.WeaponDamageTypeBox.Name = "WeaponDamageTypeBox";
             this.WeaponDamageTypeBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponDamageTypeBox.TabIndex = 16;
+            this.WeaponDamageTypeBox.TabIndex = 17;
             this.WeaponDamageTypeBox.TextChanged += new System.EventHandler(this.WeaponDamageTypeBox_TextChanged);
             // 
             // WeaponDamageBox
@@ -580,7 +581,7 @@
             this.WeaponDamageBox.Location = new System.Drawing.Point(134, 82);
             this.WeaponDamageBox.Name = "WeaponDamageBox";
             this.WeaponDamageBox.Size = new System.Drawing.Size(28, 20);
-            this.WeaponDamageBox.TabIndex = 17;
+            this.WeaponDamageBox.TabIndex = 18;
             this.WeaponDamageBox.TextChanged += new System.EventHandler(this.WeaponDamageBox_TextChanged);
             this.WeaponDamageBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponDamageBox_KeyPress);
             // 
@@ -589,7 +590,7 @@
             this.WeaponRangeBox.Location = new System.Drawing.Point(27, 127);
             this.WeaponRangeBox.Name = "WeaponRangeBox";
             this.WeaponRangeBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponRangeBox.TabIndex = 19;
+            this.WeaponRangeBox.TabIndex = 20;
             this.WeaponRangeBox.TextChanged += new System.EventHandler(this.WeaponRangeBox_TextChanged);
             this.WeaponRangeBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponRangeBox_KeyPress);
             // 
@@ -598,7 +599,7 @@
             this.WeaponNameBox.Location = new System.Drawing.Point(27, 39);
             this.WeaponNameBox.Name = "WeaponNameBox";
             this.WeaponNameBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponNameBox.TabIndex = 12;
+            this.WeaponNameBox.TabIndex = 13;
             this.WeaponNameBox.TextChanged += new System.EventHandler(this.WeaponNameBox_TextChanged);
             // 
             // WeaponAmountBox
@@ -606,7 +607,7 @@
             this.WeaponAmountBox.Location = new System.Drawing.Point(131, 38);
             this.WeaponAmountBox.Name = "WeaponAmountBox";
             this.WeaponAmountBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponAmountBox.TabIndex = 13;
+            this.WeaponAmountBox.TabIndex = 14;
             this.WeaponAmountBox.TextChanged += new System.EventHandler(this.WeaponAmountBox_TextChanged);
             this.WeaponAmountBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponAmountBox_KeyPress);
             // 
@@ -615,7 +616,7 @@
             this.WeaponWeightBox.Location = new System.Drawing.Point(233, 38);
             this.WeaponWeightBox.Name = "WeaponWeightBox";
             this.WeaponWeightBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponWeightBox.TabIndex = 14;
+            this.WeaponWeightBox.TabIndex = 15;
             this.WeaponWeightBox.TextChanged += new System.EventHandler(this.WeaponWeightBox_TextChanged);
             this.WeaponWeightBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeaponWeightBox_KeyPress);
             // 
@@ -624,7 +625,7 @@
             this.WeaponTypeBox.Location = new System.Drawing.Point(130, 127);
             this.WeaponTypeBox.Name = "WeaponTypeBox";
             this.WeaponTypeBox.Size = new System.Drawing.Size(71, 20);
-            this.WeaponTypeBox.TabIndex = 20;
+            this.WeaponTypeBox.TabIndex = 21;
             this.WeaponTypeBox.TextChanged += new System.EventHandler(this.WeaponTypeBox_TextChanged);
             // 
             // AddItemButton
@@ -632,7 +633,7 @@
             this.AddItemButton.Location = new System.Drawing.Point(588, 365);
             this.AddItemButton.Name = "AddItemButton";
             this.AddItemButton.Size = new System.Drawing.Size(79, 40);
-            this.AddItemButton.TabIndex = 27;
+            this.AddItemButton.TabIndex = 29;
             this.AddItemButton.Text = "Add Items to List";
             this.AddItemButton.UseVisualStyleBackColor = true;
             this.AddItemButton.Click += new System.EventHandler(this.AddItemButton_Click);
@@ -642,7 +643,7 @@
             this.RemoveFromListButton.Location = new System.Drawing.Point(673, 365);
             this.RemoveFromListButton.Name = "RemoveFromListButton";
             this.RemoveFromListButton.Size = new System.Drawing.Size(79, 40);
-            this.RemoveFromListButton.TabIndex = 28;
+            this.RemoveFromListButton.TabIndex = 30;
             this.RemoveFromListButton.Text = "Remove selected Item";
             this.RemoveFromListButton.UseVisualStyleBackColor = true;
             this.RemoveFromListButton.Click += new System.EventHandler(this.RemoveFromListButton_Click);
@@ -652,7 +653,7 @@
             this.DecreaseByOneButton.Location = new System.Drawing.Point(758, 365);
             this.DecreaseByOneButton.Name = "DecreaseByOneButton";
             this.DecreaseByOneButton.Size = new System.Drawing.Size(28, 28);
-            this.DecreaseByOneButton.TabIndex = 29;
+            this.DecreaseByOneButton.TabIndex = 31;
             this.DecreaseByOneButton.Text = "-1";
             this.DecreaseByOneButton.UseVisualStyleBackColor = true;
             this.DecreaseByOneButton.Click += new System.EventHandler(this.DecreaseByOneButton_Click);
@@ -662,7 +663,7 @@
             this.IncreaseByOneButton.Location = new System.Drawing.Point(789, 365);
             this.IncreaseByOneButton.Name = "IncreaseByOneButton";
             this.IncreaseByOneButton.Size = new System.Drawing.Size(28, 28);
-            this.IncreaseByOneButton.TabIndex = 30;
+            this.IncreaseByOneButton.TabIndex = 32;
             this.IncreaseByOneButton.Text = "+1";
             this.IncreaseByOneButton.UseVisualStyleBackColor = true;
             this.IncreaseByOneButton.Click += new System.EventHandler(this.IncreaseByOneButton_Click);
@@ -673,7 +674,7 @@
             this.label21.Location = new System.Drawing.Point(586, 408);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(81, 13);
-            this.label21.TabIndex = 8;
+            this.label21.TabIndex = 41;
             this.label21.Text = "Current Weight:";
             // 
             // CurrentWeightLabel
@@ -682,7 +683,7 @@
             this.CurrentWeightLabel.Location = new System.Drawing.Point(663, 408);
             this.CurrentWeightLabel.Name = "CurrentWeightLabel";
             this.CurrentWeightLabel.Size = new System.Drawing.Size(13, 13);
-            this.CurrentWeightLabel.TabIndex = 9;
+            this.CurrentWeightLabel.TabIndex = 42;
             this.CurrentWeightLabel.Text = "0";
             // 
             // label22
@@ -691,7 +692,7 @@
             this.label22.Location = new System.Drawing.Point(586, 423);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(67, 13);
-            this.label22.TabIndex = 10;
+            this.label22.TabIndex = 43;
             this.label22.Text = "Max Weight:";
             // 
             // MaxWeightLabel
@@ -700,7 +701,7 @@
             this.MaxWeightLabel.Location = new System.Drawing.Point(663, 423);
             this.MaxWeightLabel.Name = "MaxWeightLabel";
             this.MaxWeightLabel.Size = new System.Drawing.Size(13, 13);
-            this.MaxWeightLabel.TabIndex = 11;
+            this.MaxWeightLabel.TabIndex = 44;
             this.MaxWeightLabel.Text = "0";
             // 
             // EncumberStatus
@@ -709,7 +710,7 @@
             this.EncumberStatus.Location = new System.Drawing.Point(586, 436);
             this.EncumberStatus.Name = "EncumberStatus";
             this.EncumberStatus.Size = new System.Drawing.Size(40, 13);
-            this.EncumberStatus.TabIndex = 35;
+            this.EncumberStatus.TabIndex = 45;
             this.EncumberStatus.Text = "Status:";
             // 
             // EncumberStatusLabel
@@ -718,7 +719,7 @@
             this.EncumberStatusLabel.Location = new System.Drawing.Point(630, 436);
             this.EncumberStatusLabel.Name = "EncumberStatusLabel";
             this.EncumberStatusLabel.Size = new System.Drawing.Size(87, 13);
-            this.EncumberStatusLabel.TabIndex = 36;
+            this.EncumberStatusLabel.TabIndex = 46;
             this.EncumberStatusLabel.Text = "Not Encumbered";
             // 
             // AddToInvListView
@@ -734,7 +735,7 @@
             this.AddToInvListView.MultiSelect = false;
             this.AddToInvListView.Name = "AddToInvListView";
             this.AddToInvListView.Size = new System.Drawing.Size(229, 345);
-            this.AddToInvListView.TabIndex = 37;
+            this.AddToInvListView.TabIndex = 40;
             this.AddToInvListView.UseCompatibleStateImageBehavior = false;
             this.AddToInvListView.View = System.Windows.Forms.View.Details;
             // 
@@ -761,7 +762,7 @@
             this.CloseButton.Location = new System.Drawing.Point(758, 415);
             this.CloseButton.Name = "CloseButton";
             this.CloseButton.Size = new System.Drawing.Size(59, 33);
-            this.CloseButton.TabIndex = 38;
+            this.CloseButton.TabIndex = 33;
             this.CloseButton.Text = "Close";
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);

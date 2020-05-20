@@ -41,6 +41,7 @@ namespace CharacterSheet
             AddToPreparedSpells(EightLevelListView, myAvailableSpells, myPreparedSpells);
             AddToPreparedSpells(NinthLevelListView, myAvailableSpells, myPreparedSpells);
             DialogResult = DialogResult.OK;
+
         }
 
         private void AddButton_Click(object sender, EventArgs e)

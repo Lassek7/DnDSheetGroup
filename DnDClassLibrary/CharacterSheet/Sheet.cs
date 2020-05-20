@@ -236,7 +236,7 @@ namespace CharacterSheet
         {
             int ListID = 1;
             int i = 0;
-            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Add", "Cancel", ListID);
 
             ClassFeatureListView.Items.Clear();
             if (ClassFeatures.ShowDialog() == DialogResult.OK)
@@ -264,7 +264,7 @@ namespace CharacterSheet
         {
             int ListID = 2;
             int i = 0;
-            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Yes", "Cancel", ListID);
+            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Add", "Cancel", ListID);
 
             OtherFeaturesListView.Items.Clear();
             if (OtherFeatures.ShowDialog() == DialogResult.OK)
@@ -389,7 +389,6 @@ namespace CharacterSheet
                 LoadEquippedItems();
             }
         }
-        #endregion
         private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
@@ -434,6 +433,8 @@ namespace CharacterSheet
         {
             LoadEquippedItems();
         }
+        #endregion
+
 
 
 
@@ -1501,7 +1502,7 @@ namespace CharacterSheet
                                     if (WeaponEquipSwitch == true)
                                     {
                                         Attributes = 7;
-                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where to Equip?", "Slot one", "slot 2", "slot 3");
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "WEapon slot 1", "Weapon slot 2", "Weapon slot 3");
                                         if (WeaponEquip.ShowDialog() == DialogResult.OK)
                                         {
                                             LoadEquippedItems();
@@ -1510,7 +1511,7 @@ namespace CharacterSheet
                                     else
                                     {
                                         Attributes = 3;
-                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where to Equip?", "Slot one", "slot 2", "slot 3");
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "WEapon slot 1", "Weapon slot 2", "Weapon slot 3");
                                         if (WeaponEquip.ShowDialog() == DialogResult.OK)
                                         {
                                             LoadEquippedItems();
@@ -1644,7 +1645,7 @@ namespace CharacterSheet
         }
         void ColorLoad()
         {
-            EquipmentPanel.BackColor = ColorTranslator.FromHtml("#777A88");
+            EquipmentPanel.BackColor = ColorTranslator.FromHtml("#778899");
             SpellsListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             ClassFeatureListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             OtherFeaturesListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
@@ -1675,7 +1676,7 @@ namespace CharacterSheet
             numericUpDown2.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             ClassResourcesNumericUpDown.BackColor = ColorTranslator.FromHtml("#D2D6D7");
 
-            InventoryListView.BackColor = ColorTranslator.FromHtml("#777A88");
+            InventoryListView.BackColor = ColorTranslator.FromHtml("#778899");
             CopperCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             SilverCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             ElectrumCoinsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
@@ -1687,17 +1688,16 @@ namespace CharacterSheet
             FlawsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
             BackstoryBox.BackColor = ColorTranslator.FromHtml("#777A88");
 
-            MagicItemOneTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
-            MagicItemThreeTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
-            MagicItemTwoTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
-            AttunementSlotOneTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
-            AttunementSlotTwoTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
-            AttunementSlotThreeTextBox.BackColor = ColorTranslator.FromHtml("#777A88");
+            MagicItemOneTextBox.BackColor = ColorTranslator.FromHtml("#778899");
+            MagicItemThreeTextBox.BackColor = ColorTranslator.FromHtml("#778899");
+            MagicItemTwoTextBox.BackColor = ColorTranslator.FromHtml("#778899");
+            AttunementSlotOneTextBox.BackColor = ColorTranslator.FromHtml("#778899");
+            AttunementSlotTwoTextBox.BackColor = ColorTranslator.FromHtml("#778899");
+            AttunementSlotThreeTextBox.BackColor = ColorTranslator.FromHtml("#778899");
 
             FirstWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             SecondWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             ThirdWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
         }
-
     }
 }

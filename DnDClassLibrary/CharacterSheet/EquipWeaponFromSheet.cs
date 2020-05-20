@@ -13,7 +13,6 @@ namespace CharacterSheet
 {
     public partial class EquipWeaponFromSheet : Form
     {
-        List<Item> myInventoryList = new List<Item>();
         EquippedItems myEquippedItems = new EquippedItems();
         int WeaponID;
         int AttributeLocation;

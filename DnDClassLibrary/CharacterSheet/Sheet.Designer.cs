@@ -73,6 +73,7 @@
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.ClassResourcesNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.AttributesPanel = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -145,7 +146,6 @@
             this.AthleticsLabel = new System.Windows.Forms.Label();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.label38 = new System.Windows.Forms.Label();
             this.IntelligenceAttributeDisplay = new System.Windows.Forms.TextBox();
             this.AttackPanel = new System.Windows.Forms.Panel();
             this.WeaponSlotThreeNameDisplay = new System.Windows.Forms.Label();
@@ -719,7 +719,7 @@
             this.MenuButton1.Name = "MenuButton1";
             this.MenuButton1.Size = new System.Drawing.Size(74, 27);
             this.MenuButton1.TabIndex = 0;
-            this.MenuButton1.Text = "Menu";
+            this.MenuButton1.Text = "Character\r\n";
             this.MenuButton1.UseVisualStyleBackColor = true;
             // 
             // ClassesButton
@@ -1326,6 +1326,16 @@
             this.AttributesPanel.Size = new System.Drawing.Size(804, 200);
             this.AttributesPanel.TabIndex = 73;
             // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.Location = new System.Drawing.Point(419, 0);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(61, 13);
+            this.label38.TabIndex = 191;
+            this.label38.Text = "Intelligence";
+            // 
             // label37
             // 
             this.label37.AutoSize = true;
@@ -1391,6 +1401,7 @@
             this.CharismaAttributeDisplay.TabIndex = 12;
             this.CharismaAttributeDisplay.Text = "0";
             this.CharismaAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CharismaAttributeDisplay.TextChanged += new System.EventHandler(this.CharismaAttributeDisplay_TextChanged);
             // 
             // WisdomModifierLabel
             // 
@@ -1427,6 +1438,7 @@
             this.WisdomAttributeDisplay.TabIndex = 13;
             this.WisdomAttributeDisplay.Text = "0";
             this.WisdomAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.WisdomAttributeDisplay.TextChanged += new System.EventHandler(this.WisdomAttributeDisplay_TextChanged);
             // 
             // IntelligenceModifierLabel
             // 
@@ -1476,6 +1488,7 @@
             this.ConstitutionAttributeDisplay.TabIndex = 15;
             this.ConstitutionAttributeDisplay.Text = "0";
             this.ConstitutionAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ConstitutionAttributeDisplay.TextChanged += new System.EventHandler(this.ConstitutionAttributeDisplay_TextChanged);
             // 
             // label34
             // 
@@ -1522,6 +1535,7 @@
             this.DexterityAttributeDisplay.TabIndex = 16;
             this.DexterityAttributeDisplay.Text = "0";
             this.DexterityAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.DexterityAttributeDisplay.TextChanged += new System.EventHandler(this.DexterityAttributeDisplay_TextChanged);
             // 
             // StrengthModifierLabel
             // 
@@ -1568,6 +1582,7 @@
             this.StrengthAttributeDisplay.TabIndex = 15;
             this.StrengthAttributeDisplay.Text = "0";
             this.StrengthAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.StrengthAttributeDisplay.TextChanged += new System.EventHandler(this.StrengthAttributeDisplay_TextChanged);
             // 
             // CharismaSaveProficiencyToggle
             // 
@@ -2135,16 +2150,6 @@
             this.panel14.Size = new System.Drawing.Size(108, 47);
             this.panel14.TabIndex = 185;
             // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.BackColor = System.Drawing.Color.Transparent;
-            this.label38.Location = new System.Drawing.Point(419, 0);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(61, 13);
-            this.label38.TabIndex = 191;
-            this.label38.Text = "Intelligence";
-            // 
             // IntelligenceAttributeDisplay
             // 
             this.IntelligenceAttributeDisplay.BackColor = System.Drawing.SystemColors.Control;
@@ -2158,6 +2163,7 @@
             this.IntelligenceAttributeDisplay.TabIndex = 14;
             this.IntelligenceAttributeDisplay.Text = "0";
             this.IntelligenceAttributeDisplay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.IntelligenceAttributeDisplay.TextChanged += new System.EventHandler(this.IntelligenceAttributeDisplay_TextChanged);
             // 
             // AttackPanel
             // 
@@ -2219,7 +2225,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(3, 11);
+            this.label30.Location = new System.Drawing.Point(2, 11);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(64, 13);
             this.label30.TabIndex = 86;
@@ -2237,7 +2243,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(158, 12);
+            this.label26.Location = new System.Drawing.Point(160, 12);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(77, 13);
             this.label26.TabIndex = 85;
@@ -2246,7 +2252,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(281, 12);
+            this.label21.Location = new System.Drawing.Point(279, 12);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(60, 13);
@@ -2256,7 +2262,7 @@
             // WeaponSlotThreeDamageTypeDisplay
             // 
             this.WeaponSlotThreeDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(235, 13);
+            this.WeaponSlotThreeDamageTypeDisplay.Location = new System.Drawing.Point(239, 13);
             this.WeaponSlotThreeDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeDamageTypeDisplay.Name = "WeaponSlotThreeDamageTypeDisplay";
             this.WeaponSlotThreeDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2266,7 +2272,7 @@
             // WeaponSlotThreeATKBonusDisplay
             // 
             this.WeaponSlotThreeATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(67, 12);
+            this.WeaponSlotThreeATKBonusDisplay.Location = new System.Drawing.Point(64, 12);
             this.WeaponSlotThreeATKBonusDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeATKBonusDisplay.Name = "WeaponSlotThreeATKBonusDisplay";
             this.WeaponSlotThreeATKBonusDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2276,7 +2282,7 @@
             // WeaponSlotThreeDamageDisplay
             // 
             this.WeaponSlotThreeDamageDisplay.AutoSize = true;
-            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(137, 13);
+            this.WeaponSlotThreeDamageDisplay.Location = new System.Drawing.Point(129, 13);
             this.WeaponSlotThreeDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotThreeDamageDisplay.Name = "WeaponSlotThreeDamageDisplay";
             this.WeaponSlotThreeDamageDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2286,7 +2292,7 @@
             // WeaponSlotThreeProficiency
             // 
             this.WeaponSlotThreeProficiency.AutoSize = true;
-            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(345, 12);
+            this.WeaponSlotThreeProficiency.Location = new System.Drawing.Point(342, 12);
             this.WeaponSlotThreeProficiency.Margin = new System.Windows.Forms.Padding(2);
             this.WeaponSlotThreeProficiency.Name = "WeaponSlotThreeProficiency";
             this.WeaponSlotThreeProficiency.Size = new System.Drawing.Size(15, 14);
@@ -2297,12 +2303,12 @@
             // RemoveSlotThree
             // 
             this.RemoveSlotThree.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveSlotThree.Location = new System.Drawing.Point(369, 5);
+            this.RemoveSlotThree.Location = new System.Drawing.Point(361, 5);
             this.RemoveSlotThree.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveSlotThree.Name = "RemoveSlotThree";
-            this.RemoveSlotThree.Size = new System.Drawing.Size(47, 23);
+            this.RemoveSlotThree.Size = new System.Drawing.Size(55, 23);
             this.RemoveSlotThree.TabIndex = 82;
-            this.RemoveSlotThree.Text = "Delete";
+            this.RemoveSlotThree.Text = "Unequip";
             this.RemoveSlotThree.UseVisualStyleBackColor = true;
             this.RemoveSlotThree.Click += new System.EventHandler(this.RemoveSlotThree_Click);
             // 
@@ -2337,7 +2343,7 @@
             // 
             this.label25.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(154, 10);
+            this.label25.Location = new System.Drawing.Point(159, 10);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(77, 13);
             this.label25.TabIndex = 83;
@@ -2347,7 +2353,7 @@
             // 
             this.label24.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(78, 10);
+            this.label24.Location = new System.Drawing.Point(81, 10);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(50, 13);
             this.label24.TabIndex = 84;
@@ -2368,7 +2374,7 @@
             // 
             this.WeaponSlotTwoDamageTypeDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WeaponSlotTwoDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(231, 11);
+            this.WeaponSlotTwoDamageTypeDisplay.Location = new System.Drawing.Point(237, 11);
             this.WeaponSlotTwoDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotTwoDamageTypeDisplay.Name = "WeaponSlotTwoDamageTypeDisplay";
             this.WeaponSlotTwoDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2390,7 +2396,7 @@
             // 
             this.WeaponSlotTwoDamageDisplay.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.WeaponSlotTwoDamageDisplay.AutoSize = true;
-            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(133, 11);
+            this.WeaponSlotTwoDamageDisplay.Location = new System.Drawing.Point(128, 11);
             this.WeaponSlotTwoDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotTwoDamageDisplay.Name = "WeaponSlotTwoDamageDisplay";
             this.WeaponSlotTwoDamageDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2412,12 +2418,12 @@
             // RemoveSlotTwo
             // 
             this.RemoveSlotTwo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveSlotTwo.Location = new System.Drawing.Point(370, 5);
+            this.RemoveSlotTwo.Location = new System.Drawing.Point(360, 5);
             this.RemoveSlotTwo.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveSlotTwo.Name = "RemoveSlotTwo";
-            this.RemoveSlotTwo.Size = new System.Drawing.Size(47, 23);
+            this.RemoveSlotTwo.Size = new System.Drawing.Size(57, 23);
             this.RemoveSlotTwo.TabIndex = 81;
-            this.RemoveSlotTwo.Text = "Delete";
+            this.RemoveSlotTwo.Text = "Unequip";
             this.RemoveSlotTwo.UseVisualStyleBackColor = true;
             this.RemoveSlotTwo.Click += new System.EventHandler(this.RemoveSlotTwo_Click);
             // 
@@ -2442,7 +2448,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(3, 12);
+            this.label28.Location = new System.Drawing.Point(2, 12);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(64, 13);
             this.label28.TabIndex = 85;
@@ -2451,7 +2457,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(78, 13);
+            this.label23.Location = new System.Drawing.Point(80, 13);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(50, 13);
             this.label23.TabIndex = 84;
@@ -2460,7 +2466,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(156, 12);
+            this.label6.Location = new System.Drawing.Point(159, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 13);
             this.label6.TabIndex = 83;
@@ -2469,7 +2475,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(279, 12);
+            this.label12.Location = new System.Drawing.Point(278, 12);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(60, 13);
@@ -2488,7 +2494,7 @@
             // WeaponSlotOneDamageTypeDisplay
             // 
             this.WeaponSlotOneDamageTypeDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(233, 13);
+            this.WeaponSlotOneDamageTypeDisplay.Location = new System.Drawing.Point(237, 13);
             this.WeaponSlotOneDamageTypeDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneDamageTypeDisplay.Name = "WeaponSlotOneDamageTypeDisplay";
             this.WeaponSlotOneDamageTypeDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2498,7 +2504,7 @@
             // WeaponSlotOneATKBonusDisplay
             // 
             this.WeaponSlotOneATKBonusDisplay.AutoSize = true;
-            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(65, 13);
+            this.WeaponSlotOneATKBonusDisplay.Location = new System.Drawing.Point(63, 13);
             this.WeaponSlotOneATKBonusDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneATKBonusDisplay.Name = "WeaponSlotOneATKBonusDisplay";
             this.WeaponSlotOneATKBonusDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2508,7 +2514,7 @@
             // WeaponSlotOneDamageDisplay
             // 
             this.WeaponSlotOneDamageDisplay.AutoSize = true;
-            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(135, 12);
+            this.WeaponSlotOneDamageDisplay.Location = new System.Drawing.Point(127, 14);
             this.WeaponSlotOneDamageDisplay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.WeaponSlotOneDamageDisplay.Name = "WeaponSlotOneDamageDisplay";
             this.WeaponSlotOneDamageDisplay.Size = new System.Drawing.Size(13, 13);
@@ -2518,7 +2524,7 @@
             // WeaponSlotOneProficiency
             // 
             this.WeaponSlotOneProficiency.AutoSize = true;
-            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(343, 12);
+            this.WeaponSlotOneProficiency.Location = new System.Drawing.Point(341, 12);
             this.WeaponSlotOneProficiency.Margin = new System.Windows.Forms.Padding(2);
             this.WeaponSlotOneProficiency.Name = "WeaponSlotOneProficiency";
             this.WeaponSlotOneProficiency.Size = new System.Drawing.Size(15, 14);
@@ -2529,12 +2535,12 @@
             // RemoveSlotOne
             // 
             this.RemoveSlotOne.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.RemoveSlotOne.Location = new System.Drawing.Point(371, 5);
+            this.RemoveSlotOne.Location = new System.Drawing.Point(360, 5);
             this.RemoveSlotOne.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveSlotOne.Name = "RemoveSlotOne";
-            this.RemoveSlotOne.Size = new System.Drawing.Size(47, 23);
+            this.RemoveSlotOne.Size = new System.Drawing.Size(58, 23);
             this.RemoveSlotOne.TabIndex = 80;
-            this.RemoveSlotOne.Text = "Delete";
+            this.RemoveSlotOne.Text = "Unequip";
             this.RemoveSlotOne.UseVisualStyleBackColor = true;
             this.RemoveSlotOne.Click += new System.EventHandler(this.RemoveSlotOne_Click);
             // 
@@ -6582,7 +6588,7 @@
             this.EditInventoryButton.Name = "EditInventoryButton";
             this.EditInventoryButton.Size = new System.Drawing.Size(54, 22);
             this.EditInventoryButton.TabIndex = 89;
-            this.EditInventoryButton.Text = "Edit";
+            this.EditInventoryButton.Text = "Add";
             this.EditInventoryButton.UseVisualStyleBackColor = true;
             this.EditInventoryButton.Click += new System.EventHandler(this.EditInventoryButton_Click);
             // 
@@ -6764,7 +6770,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 47);
+            this.label14.Location = new System.Drawing.Point(494, 244);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(46, 13);
             this.label14.TabIndex = 121;
@@ -6773,7 +6779,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(23, 48);
+            this.label20.Location = new System.Drawing.Point(593, 243);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 122;
@@ -6782,7 +6788,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(402, 317);
+            this.label22.Location = new System.Drawing.Point(391, 318);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(59, 13);
             this.label22.TabIndex = 136;
@@ -6800,7 +6806,7 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(600, 375);
+            this.label32.Location = new System.Drawing.Point(599, 378);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(52, 13);
             this.label32.TabIndex = 138;
@@ -6931,7 +6937,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(11, 46);
+            this.label10.Location = new System.Drawing.Point(391, 243);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(62, 13);
             this.label10.TabIndex = 120;
@@ -6941,30 +6947,27 @@
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.ArmorClassDisplay);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Location = new System.Drawing.Point(389, 244);
+            this.panel3.Location = new System.Drawing.Point(389, 257);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(88, 68);
+            this.panel3.Size = new System.Drawing.Size(88, 55);
             this.panel3.TabIndex = 156;
             // 
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.InitiativeDisplay);
-            this.panel4.Location = new System.Drawing.Point(491, 244);
+            this.panel4.Location = new System.Drawing.Point(491, 257);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(88, 68);
+            this.panel4.Size = new System.Drawing.Size(88, 55);
             this.panel4.TabIndex = 157;
             // 
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.label20);
             this.panel5.Controls.Add(this.SpeedDisplay);
-            this.panel5.Location = new System.Drawing.Point(589, 244);
+            this.panel5.Location = new System.Drawing.Point(589, 257);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(88, 68);
+            this.panel5.Size = new System.Drawing.Size(88, 55);
             this.panel5.TabIndex = 158;
             // 
             // panel6
@@ -7038,7 +7041,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1522, 762);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.panel10);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);

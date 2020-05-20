@@ -290,7 +290,7 @@ namespace CharacterSheet
                 if (WeaponEquippedCheck.Checked == true)
                 {
                     WeaponEquippedCheck.Checked = false;
-                    EquipSlotCheck SlotChoice = new EquipSlotCheck(NewWeapon, myEquippedItems, "Where to Equip?", "Slot 1", "Slot 2", "Slot 3");
+                    EquipSlotCheck SlotChoice = new EquipSlotCheck(NewWeapon, myEquippedItems, "Where would you like to equip the weapon?", "WEapon slot 1", "Weapon slot 2", "Weapon slot 3");
                     SlotChoice.ShowDialog();
                 }
             }

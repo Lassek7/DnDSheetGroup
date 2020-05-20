@@ -199,6 +199,16 @@
             this.NinthRemoveButton = new System.Windows.Forms.Button();
             this.EightRemoveButton = new System.Windows.Forms.Button();
             this.SeventhRemoveButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LevelTextBox
@@ -207,7 +217,7 @@
             this.LevelTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LevelTextBox.Name = "LevelTextBox";
             this.LevelTextBox.Size = new System.Drawing.Size(32, 20);
-            this.LevelTextBox.TabIndex = 0;
+            this.LevelTextBox.TabIndex = 2;
             this.LevelTextBox.TextChanged += new System.EventHandler(this.LevelTextBox_TextChanged);
             this.LevelTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.LevelTextBox_KeyPress);
             // 
@@ -227,7 +237,7 @@
             this.RangeTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.RangeTextBox.Name = "RangeTextBox";
             this.RangeTextBox.Size = new System.Drawing.Size(36, 20);
-            this.RangeTextBox.TabIndex = 2;
+            this.RangeTextBox.TabIndex = 3;
             this.RangeTextBox.TextChanged += new System.EventHandler(this.RangeTextBox_TextChanged);
             this.RangeTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RangeTextBox_KeyPress);
             // 
@@ -237,7 +247,7 @@
             this.DCTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DCTextBox.Name = "DCTextBox";
             this.DCTextBox.Size = new System.Drawing.Size(45, 20);
-            this.DCTextBox.TabIndex = 3;
+            this.DCTextBox.TabIndex = 7;
             this.DCTextBox.TextChanged += new System.EventHandler(this.DCTextBox_TextChanged);
             this.DCTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DCTextBox_KeyPress);
             // 
@@ -247,7 +257,7 @@
             this.DamageTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.DamageTextBox.Name = "DamageTextBox";
             this.DamageTextBox.Size = new System.Drawing.Size(26, 20);
-            this.DamageTextBox.TabIndex = 4;
+            this.DamageTextBox.TabIndex = 9;
             this.DamageTextBox.TextChanged += new System.EventHandler(this.DamageTextBox_TextChanged);
             this.DamageTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DamageTextBox_KeyPress);
             // 
@@ -258,7 +268,7 @@
             this.DescriptionTextBox.Multiline = true;
             this.DescriptionTextBox.Name = "DescriptionTextBox";
             this.DescriptionTextBox.Size = new System.Drawing.Size(201, 75);
-            this.DescriptionTextBox.TabIndex = 7;
+            this.DescriptionTextBox.TabIndex = 12;
             this.DescriptionTextBox.TextChanged += new System.EventHandler(this.DescriptionTextBox_TextChanged);
             // 
             // label2
@@ -396,7 +406,7 @@
             this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(66, 35);
-            this.AddButton.TabIndex = 16;
+            this.AddButton.TabIndex = 13;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -417,8 +427,8 @@
             this.MenuButton.Margin = new System.Windows.Forms.Padding(2);
             this.MenuButton.Name = "MenuButton";
             this.MenuButton.Size = new System.Drawing.Size(69, 28);
-            this.MenuButton.TabIndex = 19;
-            this.MenuButton.Text = "Menu";
+            this.MenuButton.TabIndex = 34;
+            this.MenuButton.Text = "Character";
             this.MenuButton.UseVisualStyleBackColor = true;
             this.MenuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
@@ -429,7 +439,7 @@
             this.ClassesButton.Margin = new System.Windows.Forms.Padding(2);
             this.ClassesButton.Name = "ClassesButton";
             this.ClassesButton.Size = new System.Drawing.Size(69, 28);
-            this.ClassesButton.TabIndex = 20;
+            this.ClassesButton.TabIndex = 35;
             this.ClassesButton.Text = "Classes";
             this.ClassesButton.UseVisualStyleBackColor = true;
             // 
@@ -440,7 +450,7 @@
             this.SpellsButton.Margin = new System.Windows.Forms.Padding(2);
             this.SpellsButton.Name = "SpellsButton";
             this.SpellsButton.Size = new System.Drawing.Size(69, 28);
-            this.SpellsButton.TabIndex = 21;
+            this.SpellsButton.TabIndex = 36;
             this.SpellsButton.Text = "Spells";
             this.SpellsButton.UseVisualStyleBackColor = true;
             // 
@@ -451,7 +461,7 @@
             this.SaveCharacterButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveCharacterButton.Name = "SaveCharacterButton";
             this.SaveCharacterButton.Size = new System.Drawing.Size(69, 34);
-            this.SaveCharacterButton.TabIndex = 70;
+            this.SaveCharacterButton.TabIndex = 37;
             this.SaveCharacterButton.Text = "Save Sheet";
             this.SaveCharacterButton.UseVisualStyleBackColor = true;
             // 
@@ -476,7 +486,7 @@
             this.CastTimeTextBox.Location = new System.Drawing.Point(278, 29);
             this.CastTimeTextBox.Name = "CastTimeTextBox";
             this.CastTimeTextBox.Size = new System.Drawing.Size(59, 20);
-            this.CastTimeTextBox.TabIndex = 72;
+            this.CastTimeTextBox.TabIndex = 4;
             this.CastTimeTextBox.TextChanged += new System.EventHandler(this.CastTimeTextBox_TextChanged);
             // 
             // label8
@@ -493,7 +503,7 @@
             this.ComponentTextBox.Location = new System.Drawing.Point(343, 29);
             this.ComponentTextBox.Name = "ComponentTextBox";
             this.ComponentTextBox.Size = new System.Drawing.Size(65, 20);
-            this.ComponentTextBox.TabIndex = 74;
+            this.ComponentTextBox.TabIndex = 5;
             this.ComponentTextBox.TextChanged += new System.EventHandler(this.ComponentTextBox_TextChanged);
             // 
             // label9
@@ -510,7 +520,7 @@
             this.DurationTextBox.Location = new System.Drawing.Point(343, 66);
             this.DurationTextBox.Name = "DurationTextBox";
             this.DurationTextBox.Size = new System.Drawing.Size(65, 20);
-            this.DurationTextBox.TabIndex = 76;
+            this.DurationTextBox.TabIndex = 10;
             this.DurationTextBox.TextChanged += new System.EventHandler(this.DurationTextBox_TextChanged);
             // 
             // label10
@@ -527,7 +537,7 @@
             this.SchoolTextBox.Location = new System.Drawing.Point(418, 29);
             this.SchoolTextBox.Name = "SchoolTextBox";
             this.SchoolTextBox.Size = new System.Drawing.Size(67, 20);
-            this.SchoolTextBox.TabIndex = 78;
+            this.SchoolTextBox.TabIndex = 6;
             this.SchoolTextBox.TextChanged += new System.EventHandler(this.SchoolTextBox_TextChanged);
             // 
             // label11
@@ -555,7 +565,7 @@
             this.DamageTypeTextBox.Multiline = true;
             this.DamageTypeTextBox.Name = "DamageTypeTextBox";
             this.DamageTypeTextBox.Size = new System.Drawing.Size(67, 33);
-            this.DamageTypeTextBox.TabIndex = 5;
+            this.DamageTypeTextBox.TabIndex = 11;
             this.DamageTypeTextBox.TextChanged += new System.EventHandler(this.DamageTypeTextBox_TextChanged);
             // 
             // label5
@@ -583,12 +593,13 @@
             this.NameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.NameTextBox.Name = "NameTextBox";
             this.NameTextBox.Size = new System.Drawing.Size(65, 20);
-            this.NameTextBox.TabIndex = 96;
+            this.NameTextBox.TabIndex = 1;
             this.NameTextBox.TextChanged += new System.EventHandler(this.NameTextBox_TextChanged);
             // 
             // SpellBonusComboBox
             // 
             this.SpellBonusComboBox.FormattingEnabled = true;
+            this.SpellBonusComboBox.ItemHeight = 13;
             this.SpellBonusComboBox.Items.AddRange(new object[] {
             "Strength",
             "Dexterity",
@@ -624,7 +635,7 @@
             this.FirstLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.FirstLevelListView.Name = "FirstLevelListView";
             this.FirstLevelListView.Size = new System.Drawing.Size(352, 181);
-            this.FirstLevelListView.TabIndex = 98;
+            this.FirstLevelListView.TabIndex = 16;
             this.FirstLevelListView.UseCompatibleStateImageBehavior = false;
             this.FirstLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -702,7 +713,7 @@
             this.ThirdLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.ThirdLevelListView.Name = "ThirdLevelListView";
             this.ThirdLevelListView.Size = new System.Drawing.Size(352, 181);
-            this.ThirdLevelListView.TabIndex = 99;
+            this.ThirdLevelListView.TabIndex = 20;
             this.ThirdLevelListView.UseCompatibleStateImageBehavior = false;
             this.ThirdLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -780,7 +791,7 @@
             this.FourthLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.FourthLevelListView.Name = "FourthLevelListView";
             this.FourthLevelListView.Size = new System.Drawing.Size(352, 181);
-            this.FourthLevelListView.TabIndex = 100;
+            this.FourthLevelListView.TabIndex = 22;
             this.FourthLevelListView.UseCompatibleStateImageBehavior = false;
             this.FourthLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -858,7 +869,7 @@
             this.SecondLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.SecondLevelListView.Name = "SecondLevelListView";
             this.SecondLevelListView.Size = new System.Drawing.Size(352, 181);
-            this.SecondLevelListView.TabIndex = 101;
+            this.SecondLevelListView.TabIndex = 18;
             this.SecondLevelListView.UseCompatibleStateImageBehavior = false;
             this.SecondLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -936,7 +947,7 @@
             this.FifthLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.FifthLevelListView.Name = "FifthLevelListView";
             this.FifthLevelListView.Size = new System.Drawing.Size(352, 181);
-            this.FifthLevelListView.TabIndex = 102;
+            this.FifthLevelListView.TabIndex = 24;
             this.FifthLevelListView.UseCompatibleStateImageBehavior = false;
             this.FifthLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -1014,7 +1025,7 @@
             this.SixthLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.SixthLevelListView.Name = "SixthLevelListView";
             this.SixthLevelListView.Size = new System.Drawing.Size(352, 157);
-            this.SixthLevelListView.TabIndex = 103;
+            this.SixthLevelListView.TabIndex = 26;
             this.SixthLevelListView.UseCompatibleStateImageBehavior = false;
             this.SixthLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -1092,7 +1103,7 @@
             this.SeventhLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.SeventhLevelListView.Name = "SeventhLevelListView";
             this.SeventhLevelListView.Size = new System.Drawing.Size(352, 159);
-            this.SeventhLevelListView.TabIndex = 104;
+            this.SeventhLevelListView.TabIndex = 28;
             this.SeventhLevelListView.UseCompatibleStateImageBehavior = false;
             this.SeventhLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -1170,7 +1181,7 @@
             this.EightLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.EightLevelListView.Name = "EightLevelListView";
             this.EightLevelListView.Size = new System.Drawing.Size(352, 150);
-            this.EightLevelListView.TabIndex = 105;
+            this.EightLevelListView.TabIndex = 30;
             this.EightLevelListView.UseCompatibleStateImageBehavior = false;
             this.EightLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -1248,7 +1259,7 @@
             this.NinthLevelListView.Margin = new System.Windows.Forms.Padding(2);
             this.NinthLevelListView.Name = "NinthLevelListView";
             this.NinthLevelListView.Size = new System.Drawing.Size(352, 156);
-            this.NinthLevelListView.TabIndex = 106;
+            this.NinthLevelListView.TabIndex = 32;
             this.NinthLevelListView.UseCompatibleStateImageBehavior = false;
             this.NinthLevelListView.View = System.Windows.Forms.View.Details;
             // 
@@ -1310,7 +1321,7 @@
             this.FirstRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.FirstRemoveButton.Name = "FirstRemoveButton";
             this.FirstRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.FirstRemoveButton.TabIndex = 107;
+            this.FirstRemoveButton.TabIndex = 17;
             this.FirstRemoveButton.Text = "Remove";
             this.FirstRemoveButton.UseVisualStyleBackColor = true;
             this.FirstRemoveButton.Click += new System.EventHandler(this.FirstRemoveButton_Click);
@@ -1321,7 +1332,7 @@
             this.SecondRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SecondRemoveButton.Name = "SecondRemoveButton";
             this.SecondRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.SecondRemoveButton.TabIndex = 108;
+            this.SecondRemoveButton.TabIndex = 19;
             this.SecondRemoveButton.Text = "Remove";
             this.SecondRemoveButton.UseVisualStyleBackColor = true;
             this.SecondRemoveButton.Click += new System.EventHandler(this.SecondRemoveButton_Click);
@@ -1332,7 +1343,7 @@
             this.ThirdRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.ThirdRemoveButton.Name = "ThirdRemoveButton";
             this.ThirdRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.ThirdRemoveButton.TabIndex = 109;
+            this.ThirdRemoveButton.TabIndex = 21;
             this.ThirdRemoveButton.Text = "Remove";
             this.ThirdRemoveButton.UseVisualStyleBackColor = true;
             this.ThirdRemoveButton.Click += new System.EventHandler(this.ThirdRemoveButton_Click);
@@ -1343,7 +1354,7 @@
             this.SixthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SixthRemoveButton.Name = "SixthRemoveButton";
             this.SixthRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.SixthRemoveButton.TabIndex = 110;
+            this.SixthRemoveButton.TabIndex = 27;
             this.SixthRemoveButton.Text = "Remove";
             this.SixthRemoveButton.UseVisualStyleBackColor = true;
             this.SixthRemoveButton.Click += new System.EventHandler(this.SixthRemoveButton_Click);
@@ -1354,7 +1365,7 @@
             this.FifthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.FifthRemoveButton.Name = "FifthRemoveButton";
             this.FifthRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.FifthRemoveButton.TabIndex = 111;
+            this.FifthRemoveButton.TabIndex = 25;
             this.FifthRemoveButton.Text = "Remove";
             this.FifthRemoveButton.UseVisualStyleBackColor = true;
             this.FifthRemoveButton.Click += new System.EventHandler(this.FifthRemoveButton_Click);
@@ -1365,7 +1376,7 @@
             this.FourthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.FourthRemoveButton.Name = "FourthRemoveButton";
             this.FourthRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.FourthRemoveButton.TabIndex = 112;
+            this.FourthRemoveButton.TabIndex = 23;
             this.FourthRemoveButton.Text = "Remove";
             this.FourthRemoveButton.UseVisualStyleBackColor = true;
             this.FourthRemoveButton.Click += new System.EventHandler(this.FourthRemoveButton_Click);
@@ -1376,7 +1387,7 @@
             this.NinthRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.NinthRemoveButton.Name = "NinthRemoveButton";
             this.NinthRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.NinthRemoveButton.TabIndex = 113;
+            this.NinthRemoveButton.TabIndex = 33;
             this.NinthRemoveButton.Text = "Remove";
             this.NinthRemoveButton.UseVisualStyleBackColor = true;
             this.NinthRemoveButton.Click += new System.EventHandler(this.NinthRemoveButton_Click);
@@ -1387,7 +1398,7 @@
             this.EightRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.EightRemoveButton.Name = "EightRemoveButton";
             this.EightRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.EightRemoveButton.TabIndex = 114;
+            this.EightRemoveButton.TabIndex = 31;
             this.EightRemoveButton.Text = "Remove";
             this.EightRemoveButton.UseVisualStyleBackColor = true;
             this.EightRemoveButton.Click += new System.EventHandler(this.EightRemoveButton_Click);
@@ -1398,10 +1409,100 @@
             this.SeventhRemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.SeventhRemoveButton.Name = "SeventhRemoveButton";
             this.SeventhRemoveButton.Size = new System.Drawing.Size(60, 22);
-            this.SeventhRemoveButton.TabIndex = 115;
+            this.SeventhRemoveButton.TabIndex = 29;
             this.SeventhRemoveButton.Text = "Remove";
             this.SeventhRemoveButton.UseVisualStyleBackColor = true;
             this.SeventhRemoveButton.Click += new System.EventHandler(this.SeventhRemoveButton_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(132, 113);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(45, 13);
+            this.label14.TabIndex = 116;
+            this.label14.Text = "Cantrips";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(132, 319);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(81, 13);
+            this.label15.TabIndex = 117;
+            this.label15.Text = "1st Level Spells";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(132, 538);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(85, 13);
+            this.label16.TabIndex = 118;
+            this.label16.Text = "2nd Level Spells";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1077, 25);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(82, 13);
+            this.label17.TabIndex = 119;
+            this.label17.Text = "6th Level Spells";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(592, 319);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(82, 13);
+            this.label18.TabIndex = 120;
+            this.label18.Text = "4th Level Spells";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(592, 538);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(82, 13);
+            this.label19.TabIndex = 121;
+            this.label19.Text = "5th Level Spells";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(1076, 201);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(82, 13);
+            this.label20.TabIndex = 122;
+            this.label20.Text = "7th Level Spells";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(592, 111);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(82, 13);
+            this.label21.TabIndex = 123;
+            this.label21.Text = "3rd Level Spells";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(1076, 384);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(82, 13);
+            this.label22.TabIndex = 124;
+            this.label22.Text = "8th Level Spells";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(1078, 561);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(82, 13);
+            this.label23.TabIndex = 125;
+            this.label23.Text = "9th Level Spells";
             // 
             // Spellbook
             // 
@@ -1409,6 +1510,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1522, 762);
             this.ControlBox = false;
+            this.Controls.Add(this.label23);
+            this.Controls.Add(this.label22);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.SeventhRemoveButton);
             this.Controls.Add(this.EightRemoveButton);
             this.Controls.Add(this.NinthRemoveButton);
@@ -1644,5 +1755,15 @@
         private System.Windows.Forms.Button NinthRemoveButton;
         private System.Windows.Forms.Button EightRemoveButton;
         private System.Windows.Forms.Button SeventhRemoveButton;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
     }
 }
