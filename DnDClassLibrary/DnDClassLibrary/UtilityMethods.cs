@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    class UtillityMethods // bruges til at forenkle brugen af WriteLine kombinered med Readline. 
+    public class UtillityMethods // bruges til at forenkle brugen af WriteLine kombinered med Readline. 
     {
         public string ReadTextInput(string aMessage)  // indlæser en besked, skrevet i metodens brug
         {
@@ -34,6 +34,27 @@ namespace DnDClassLibrary
 
             return returnValue;
 
+        }
+        public string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
+        {
+            if (exists == true)
+            {
+                return UserInput;
+            }
+            return null;
+        }
+        public bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
+        {
+            bool OutOfReach = string.IsNullOrEmpty(NewValue);
+            if (OutOfReach != true)
+            {
+                ExistStatus = true;
+            }
+            else
+            {
+                ExistStatus = false;
+            }
+            return ExistStatus;
         }
     }
 }

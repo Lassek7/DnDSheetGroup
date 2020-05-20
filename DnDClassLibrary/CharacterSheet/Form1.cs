@@ -14,6 +14,7 @@ namespace CharacterSheet
     public partial class CreateCharacterForm : Form
     {
         CharacterAttributes myAttributes = new CharacterAttributes();
+        UtillityMethods myUtillities = new UtillityMethods();
         Character myCharacter = new Character();
         bool CharacterNameDone = false;
         bool LvlDone = false;
@@ -44,28 +45,29 @@ namespace CharacterSheet
             this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
         }
 
+        #region TEXTCHANGED
         private void CharacterNameBox_TextChanged(object sender, EventArgs e)
         {
-            CharacterNameDone = existcheck(myCharacter.characterName, CharacterNameBox.Text, CharacterNameDone);
-            myCharacter.characterName = NewValue(CharacterNameDone, CharacterNameBox.Text);
+            CharacterNameDone = myUtillities.existcheck(myCharacter.characterName, CharacterNameBox.Text, CharacterNameDone);
+            myCharacter.characterName = myUtillities.NewValue(CharacterNameDone, CharacterNameBox.Text);
         }
        
         private void PlayerNameBox_TextChanged(object sender, EventArgs e)
         {
-            PlayerNameDone = existcheck(myCharacter.playerName, PlayerNameBox.Text, PlayerNameDone);
-            myCharacter.playerName = NewValue(PlayerNameDone, PlayerNameBox.Text);
+            PlayerNameDone = myUtillities.existcheck(myCharacter.playerName, PlayerNameBox.Text, PlayerNameDone);
+            myCharacter.playerName = myUtillities.NewValue(PlayerNameDone, PlayerNameBox.Text);
         }
 
         private void RaceBox_TextChanged(object sender, EventArgs e)
         {
-            RaceDone = existcheck(myCharacter.race, RaceBox.Text, RaceDone);
-            myCharacter.race = NewValue(RaceDone, RaceBox.Text);
+            RaceDone = myUtillities.existcheck(myCharacter.race, RaceBox.Text, RaceDone);
+            myCharacter.race = myUtillities.NewValue(RaceDone, RaceBox.Text);
         }
 
         private void ClassBox_TextChanged(object sender, EventArgs e)
         {
-            ClassDone = existcheck(myCharacter.characterClass, ClassBox.Text, ClassDone);
-            myCharacter.characterClass = NewValue(ClassDone, ClassBox.Text);
+            ClassDone = myUtillities.existcheck(myCharacter.characterClass, ClassBox.Text, ClassDone);
+            myCharacter.characterClass = myUtillities.NewValue(ClassDone, ClassBox.Text);
         }
         private void LevelBox_TextChanged(object sender, EventArgs e)
         {
@@ -84,14 +86,14 @@ namespace CharacterSheet
 
         private void AlignmentBox_TextChanged(object sender, EventArgs e)
         {
-            AlignmentDone = existcheck(myCharacter.alignment, AlignmentBox.Text, AlignmentDone);
-            myCharacter.alignment = NewValue(AlignmentDone, AlignmentBox.Text);
+            AlignmentDone = myUtillities.existcheck(myCharacter.alignment, AlignmentBox.Text, AlignmentDone);
+            myCharacter.alignment = myUtillities.NewValue(AlignmentDone, AlignmentBox.Text);
         }
 
         private void BackgroundBox_TextChanged(object sender, EventArgs e)
         {
-            BackgroundDone = existcheck(myCharacter.background, BackgroundBox.Text, BackgroundDone);
-            myCharacter.background = NewValue(BackgroundDone, BackgroundBox.Text);
+            BackgroundDone = myUtillities.existcheck(myCharacter.background, BackgroundBox.Text, BackgroundDone);
+            myCharacter.background = myUtillities.NewValue(BackgroundDone, BackgroundBox.Text);
         }
 
         private void MaxHealthBox_TextChanged(object sender, EventArgs e)
@@ -115,27 +117,27 @@ namespace CharacterSheet
 
         private void IdealsRichBox_TextChanged(object sender, EventArgs e)
         {
-            IdealsDone = existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
-            myCharacter.ideals = NewValue(IdealsDone, IdealsRichBox.Text);
+            IdealsDone = myUtillities.existcheck(myCharacter.ideals, IdealsRichBox.Text, IdealsDone);
+            myCharacter.ideals = myUtillities.NewValue(IdealsDone, IdealsRichBox.Text);
 
         }
 
         private void BondsRichBox_TextChanged(object sender, EventArgs e)
         {
-            BondsDone = existcheck(myCharacter.bonds, BondsRichBox.Text, BondsDone);
-            myCharacter.bonds = NewValue(BondsDone, BondsRichBox.Text);
+            BondsDone = myUtillities.existcheck(myCharacter.bonds, BondsRichBox.Text, BondsDone);
+            myCharacter.bonds = myUtillities.NewValue(BondsDone, BondsRichBox.Text);
         }
 
         private void FlawsRichBox_TextChanged(object sender, EventArgs e)
         {
-            FlawsDone = existcheck(myCharacter.flaws, FlawsRichBox.Text, FlawsDone);
-            myCharacter.flaws = NewValue(FlawsDone, FlawsRichBox.Text);
+            FlawsDone = myUtillities.existcheck(myCharacter.flaws, FlawsRichBox.Text, FlawsDone);
+            myCharacter.flaws = myUtillities.NewValue(FlawsDone, FlawsRichBox.Text);
         }
 
         private void PersonalTraitsRichBox_TextChanged(object sender, EventArgs e)
         {
-            PersonalTraitsDone = existcheck(myCharacter.traits, PersonalTraitsRichBox.Text, PersonalTraitsDone);
-            myCharacter.traits = NewValue(PersonalTraitsDone, PersonalTraitsRichBox.Text);
+            PersonalTraitsDone = myUtillities.existcheck(myCharacter.traits, PersonalTraitsRichBox.Text, PersonalTraitsDone);
+            myCharacter.traits = myUtillities.NewValue(PersonalTraitsDone, PersonalTraitsRichBox.Text);
         }
         private void StrengthInputBox_TextChanged(object sender, EventArgs e)
         {
@@ -299,6 +301,16 @@ namespace CharacterSheet
                 MessageBox.Show("Charisma must be within range 0 and 20");
             }
         }
+
+        private void ResourceBox_TextChanged(object sender, EventArgs e)
+        {
+            ResourceDone = myUtillities.existcheck(myCharacter.characterResources, ResourceBox.Text, ResourceDone);
+            myCharacter.characterResources = myUtillities.NewValue(ResourceDone, ResourceBox.Text);
+
+        }
+        #endregion
+
+        #region BUTTONCLICK
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
 
@@ -315,7 +327,9 @@ namespace CharacterSheet
                 MessageBox.Show("All values must be given");
             }
         }
+        #endregion
 
+        #region KEYPRESS
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
@@ -355,43 +369,20 @@ namespace CharacterSheet
         {
             OnlyTakeNumbers(e);
         }
-        bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
-        {
-            bool OutOfReach = string.IsNullOrEmpty(NewValue);
-            if (OutOfReach != true)
-            {
-                ExistStatus = true;
-            }
-            else
-            {
-                ExistStatus = false;
-            }
-            return ExistStatus;
-        }
 
-        string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
+        #endregion
+
+        #region METHODS
+        void OnlyTakeNumbers(KeyPressEventArgs e) // Sørger for at brugeren kun kan skrive tal. KeyEvents reffererer til når en knap trykkes på
         {
-            if (exists == true)
-            {
-                return UserInput;
-            }
-            return null;
-        }
-        void OnlyTakeNumbers(KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) 
             {
                 e.Handled = true;
             }
         }
 
-        private void ResourceBox_TextChanged(object sender, EventArgs e)
-        {
-            ResourceDone = existcheck(myCharacter.characterResources, ResourceBox.Text, ResourceDone);
-            myCharacter.characterResources = NewValue(ResourceDone, ResourceBox.Text);
-
-        }
+      
     }
-
+    #endregion
 
 }
