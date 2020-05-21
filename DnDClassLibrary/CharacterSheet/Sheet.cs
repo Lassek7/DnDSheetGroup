@@ -324,6 +324,32 @@ namespace CharacterSheet
         {
             RunInvList();
         }
+
+        private void SpellsButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Spellbook RunSpellBook = new Spellbook(myCharacter, myPreparedSpells, myAvilableSpells);
+            if (RunSpellBook.ShowDialog() == DialogResult.OK)
+            {
+                this.Show();
+                RunPreparedSpells();
+            }
+            else
+            {
+                MessageBox.Show("Character List has not been updated, please manually update the list");
+            }
+
+        }
+
+
+        private void pictureBox_DoubleClick(object sender, EventArgs e)
+        {
+            OpenFileDialog pic = new OpenFileDialog();
+            if (pic.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox.ImageLocation = pic.FileName;
+            }
+        }
         #endregion
 
         #region SAVINGTHROWPROFICIENCYTOGGLES
@@ -435,8 +461,32 @@ namespace CharacterSheet
         }
         #endregion
 
+        #region VALUECHANGE
 
+        private void CurrentHitPointsDisplay_ValueChanged(object sender, EventArgs e)
+        {
+            CurrentHitPointsDisplay.Maximum = Convert.ToInt32(MaxHealthDisplay.Text);
 
+            if (CurrentHitPointsDisplay.Value > Convert.ToInt32(MaxHealthDisplay.Text))
+            {
+                CurrentHitPointsDisplay.Value = 12;
+
+            }
+            else if (CurrentHitPointsDisplay.Value < 0)
+            {
+                CurrentHitPointsDisplay.Value = 0;
+            }
+            myCharacter.currentHealth = Convert.ToInt32(CurrentHitPointsDisplay.Value);
+        }
+
+        private void ClassResourcesNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            if (ClassResourcesNumericUpDown.Value < 0)
+            {
+                ClassResourcesNumericUpDown.Value = 0;
+            }
+        }
+        #endregion
 
         #region TEXTCHANGED
         private void TraitsDisplay_TextChanged(object sender, EventArgs e)
@@ -731,6 +781,40 @@ namespace CharacterSheet
             {
                 myItem.Gold = myItem.Platinum;
             }
+        }
+
+        private void AttunementSlotOneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotOneName = AttunementSlotOneTextBox.Text;
+        }
+
+        private void AttunementSlotTwoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotTwoName = AttunementSlotTwoTextBox.Text;
+
+        }
+
+        private void AttunementSlotThreeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.AttunementSlotThreeName = AttunementSlotThreeTextBox.Text;
+
+        }
+
+        private void MagicItemOneTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemOneName = MagicItemOneTextBox.Text;
+        }
+
+        private void MagicItemTwoTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemTwoName = MagicItemTwoTextBox.Text;
+
+        }
+
+        private void MagicItemThreeTextBox_TextChanged(object sender, EventArgs e)
+        {
+            myEquippedItems.MagicItemThreeName = MagicItemThreeTextBox.Text;
+
         }
         #endregion
 
@@ -1345,26 +1429,6 @@ namespace CharacterSheet
             PlatinumCoinsDisplay.Text = Convert.ToString(myItem.Platinum);
         }
 
-
-
-        #endregion
-
-        private void CurrentHitPointsDisplay_ValueChanged(object sender, EventArgs e)
-        {
-            CurrentHitPointsDisplay.Maximum = Convert.ToInt32(MaxHealthDisplay.Text);
-
-            if (CurrentHitPointsDisplay.Value > Convert.ToInt32(MaxHealthDisplay.Text))
-            {
-                CurrentHitPointsDisplay.Value = 12;
-
-            }
-            else if (CurrentHitPointsDisplay.Value < 0) 
-            {
-                CurrentHitPointsDisplay.Value = 0;
-            }
-            myCharacter.currentHealth = Convert.ToInt32(CurrentHitPointsDisplay.Value);
-        }
-
         void RunInvList()
         {
             WeaponEquipSwitch = false;
@@ -1418,20 +1482,20 @@ namespace CharacterSheet
 
         private void RemoveFromInvButton_Click_1(object sender, EventArgs e)
         {
-            for(int i = 0; i < InventoryListView.Items.Count; i++)
+            for (int i = 0; i < InventoryListView.Items.Count; i++)
             {
-               if (InventoryListView.Items[i].Selected)
-                    {
+                if (InventoryListView.Items[i].Selected)
+                {
                     for (int j = 0; j < myInventoryList.Count; j++)
                         if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
                         {
                             myInventoryList.RemoveAt(j);
                             InventoryListView.Items[i].Remove();
                         }
-               }
-               else
-               {
-               }
+                }
+                else
+                {
+                }
             }
         }
 
@@ -1448,7 +1512,7 @@ namespace CharacterSheet
                             myInventoryList[j].AmountHeld -= 1;
                             InventoryListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[j].AmountHeld);
 
-                            if (myInventoryList[j].AmountHeld <=0)
+                            if (myInventoryList[j].AmountHeld <= 0)
                             {
                                 myInventoryList.RemoveAt(j);
                                 RunInvList();
@@ -1498,7 +1562,7 @@ namespace CharacterSheet
                                     break;
                                 case 3:
                                     int WeaponID = i;
-    
+
                                     if (WeaponEquipSwitch == true)
                                     {
                                         Attributes = 7;
@@ -1533,7 +1597,7 @@ namespace CharacterSheet
             LoadEquippedItems();
         }
 
-        void LoadCharacterInfoFromList() 
+        void LoadCharacterInfoFromList()
         {
             myCharacter.characterName = Convert.ToString(CharacterInfo[0]);
             myCharacter.playerName = Convert.ToString(CharacterInfo[1]);
@@ -1556,55 +1620,6 @@ namespace CharacterSheet
             myAttributes.Attributes[5] = Convert.ToInt32(CharacterInfo[18]);
         }
 
-        private void AttunementSlotOneTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.AttunementSlotOneName = AttunementSlotOneTextBox.Text;
-        }
-
-        private void AttunementSlotTwoTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.AttunementSlotTwoName = AttunementSlotTwoTextBox.Text;
-
-        }
-
-        private void AttunementSlotThreeTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.AttunementSlotThreeName = AttunementSlotThreeTextBox.Text;
-
-        }
-
-        private void MagicItemOneTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.MagicItemOneName = MagicItemOneTextBox.Text;
-        }
-
-        private void MagicItemTwoTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.MagicItemTwoName = MagicItemTwoTextBox.Text;
-
-        }
-
-        private void MagicItemThreeTextBox_TextChanged(object sender, EventArgs e)
-        {
-            myEquippedItems.MagicItemThreeName = MagicItemThreeTextBox.Text;
-
-        }
-
-        private void SpellsButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Spellbook RunSpellBook = new Spellbook(myCharacter, myPreparedSpells, myAvilableSpells);
-            if (RunSpellBook.ShowDialog() == DialogResult.OK)
-            {
-                this.Show();
-                RunPreparedSpells();
-            }
-            else
-            {
-                MessageBox.Show("Character List has not been updated, please manually update the list");
-            }
-
-        }
         void RunPreparedSpells()
         {
             SpellsListView.Items.Clear();
@@ -1622,27 +1637,6 @@ namespace CharacterSheet
             }
         }
 
-        private void pictureBox_DoubleClick(object sender, EventArgs e)
-        {
-            OpenFileDialog pic = new OpenFileDialog();
-            if (pic.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox.ImageLocation = pic.FileName;
-            }
-        }
-
-        private void SpellsListView_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ClassResourcesNumericUpDown_ValueChanged(object sender, EventArgs e)
-        {
-            if (ClassResourcesNumericUpDown.Value < 0)
-            {
-                ClassResourcesNumericUpDown.Value = 0;
-            }
-        }
         void ColorLoad()
         {
             EquipmentPanel.BackColor = ColorTranslator.FromHtml("#778899");
@@ -1669,7 +1663,7 @@ namespace CharacterSheet
             AlignmentDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             ExperienceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             LevelDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
-            
+
             SpeedDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             MaxHealthDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             CurrentHitPointsDisplay.BackColor = ColorTranslator.FromHtml("#D2D6D7");
@@ -1699,5 +1693,8 @@ namespace CharacterSheet
             SecondWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             ThirdWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
         }
+        #endregion
+
+
     }
 }
