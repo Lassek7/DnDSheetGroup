@@ -16,7 +16,7 @@ namespace DnDClassLibrary
             return returnValue; // returnere værdien som brugeren har givet.
         }
 
-        public int ReadNumericInput(string aMessage)
+        public int ReadNumericInput(string aMessage) // gør det samme som ovenfor, men med tal
         {
             int returnValue;
 
@@ -25,7 +25,7 @@ namespace DnDClassLibrary
 
             return returnValue;
         }
-        public bool ReadBoolInput(string aMessage)
+        public bool ReadBoolInput(string aMessage) // samme som to ovenstående, men med bool
         {
             bool returnValue;
 
@@ -37,13 +37,13 @@ namespace DnDClassLibrary
         }
         public string NewValue(bool exists, string UserInput) // giver en lije en ny værdi, hvis værdien ikke er null
         {
-            if (exists == true)
+            if (exists == false)
             {
                 return UserInput;
             }
             return null;
         }
-        public bool existcheck(string OldValue, string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
+        public bool existcheck(string NewValue, bool ExistStatus) // tjekker om der er skrevet noget på en linje
         {
             bool OutOfReach = string.IsNullOrEmpty(NewValue);
             if (OutOfReach != true)

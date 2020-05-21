@@ -172,7 +172,7 @@ namespace DnDClassLibrary
 
        
         #endregion
-        public int ProficiencyCalc(int myLevel)
+        public int ProficiencyCalc(int myLevel) // Udregner proficiency ud fra lvl
         {
 
             if (myLevel < 1)
@@ -202,11 +202,17 @@ namespace DnDClassLibrary
             }
 
         }
-           
-        private void EditSheet()
+
+        public int AttributeRangeChecker(bool OutOfReach, int Range, string Input) // tjekker om attributen har en acceptabel værdi
         {
-
-
+            if (OutOfReach == false)
+            {
+                return Range = Int32.Parse(Input);
+            }
+            else
+            {
+                return Range = 0;
+            }
         }
 
     }
