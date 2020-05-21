@@ -18,7 +18,7 @@ namespace DnDClassLibrary
 
 
         
-        public string AttributeAssociation // validering tilføjes senere
+        public string AttributeAssociation 
         {
             get { return attributeAssociation; }
             set { attributeAssociation = value; }

@@ -10,7 +10,7 @@ namespace DnDClassLibrary
         private bool itemEquipped;
         private int aCFromArmor;
 
-        public bool ItemEquipped // validering tilføjes senere
+        public bool ItemEquipped
         {
             get { return itemEquipped; }
             set { itemEquipped = value; }
