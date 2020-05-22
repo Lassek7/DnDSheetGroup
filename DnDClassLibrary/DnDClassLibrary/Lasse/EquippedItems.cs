@@ -38,18 +38,14 @@ namespace DnDClassLibrary
         public string MagicItemTwoName;
         public string MagicItemThreeName;
 
-        public EquippedItems()
+        #region METHODS       
+        public int AtkBonusCalc(string modifier, bool Proficency, int ProficiencyBonus, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma) // Udregner hvad attakbonusen er for et equipped våben.
         {
-
-        }
-
-        public int AtkBonusCalc(string modifier, bool Proficency, int ProficiencyBonus, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma)
-        {
-            int ATKBonus;
-            switch (modifier)
+            int ATKBonus; 
+            switch (modifier) // modifier er baseret på hvad brugeren har valgt som property til deres våben. 
             {
                 case "Strength":
-                    ATKBonus = Strength;
+                    ATKBonus = Strength; // strength, dexterity, constitution osv. er baseret på characterens attribute modifier
                     break;
                 case "Dexterity":
                     ATKBonus = Dexterity;
@@ -67,25 +63,25 @@ namespace DnDClassLibrary
                     ATKBonus = Charisma;
                     break;
                 default:
-                    ATKBonus = 0;
+                    ATKBonus = 0; // hvis våbnet ikke har en property tilknyttet, bliver der ikke føjet en ny værdi til ATKBONUS
                     break;
             }
             int BonusValue;
             if (Proficency == true)
             {
-                BonusValue = ProficiencyBonus;
+                BonusValue = ProficiencyBonus; // bonus value bliver lavet til en proficiency modifier hvis brugeren har proficency i det.
             }
             else
             {
-                BonusValue = 0;
+                BonusValue = 0; // hvis brugeren ikke har proficiency bliver bonus valuen sat til 0
             }
-            return ATKBonus + BonusValue;
+            return ATKBonus + BonusValue; // returnere atkbonus sammen med bonusvalue
         }
 
-        public int ACBonusCalc(int ArmorValue, bool Shield, int DexScore)
+        public int ACBonusCalc(int ArmorValue, bool Shield, int DexScore) // udregner brugerens Armor Class
         {
             int Armor;
-            if(ArmorValue == 0)
+            if(ArmorValue == 0) // hvis brugerens armor value er 0, bliver ARmor sat til 10 ellers bliver armor sat til ArmorValue
             {
                 Armor = 10;
             }
@@ -94,7 +90,7 @@ namespace DnDClassLibrary
                 Armor = ArmorValue;
             }
             int ShieldBonus;
-            if (Shield == true)
+            if (Shield == true) // Hvis et skjold er equippet, bliver shieldbonus sat til 2 ellers 0
             {
                 ShieldBonus = 2;
             }
@@ -102,7 +98,8 @@ namespace DnDClassLibrary
             {
                 ShieldBonus = 0;
             }
-            return Armor + ShieldBonus + DexScore;
+            return Armor + ShieldBonus + DexScore; // returnerer ens Armor, shieldbonus og dexscore samlet for at få ens totale Armor Class
         }
+        #endregion
     }
 }

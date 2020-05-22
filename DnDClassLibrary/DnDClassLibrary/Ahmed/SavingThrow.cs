@@ -18,7 +18,8 @@ namespace DnDClassLibrary
             myAttributes = Attribu;
             myCharacter = Charac;
         }
-
+        #region GETTERS&SETTERS
+        // Hver Getter og Setter tjekker om der er sat proficiency til eller ej
         public int StrengthSave
         {
             get { return myAttributes.Modifiers[0] + (proficiency[0] ? myCharacter.proficiencyBonus : 0); }
@@ -43,5 +44,6 @@ namespace DnDClassLibrary
         {
             get { return myAttributes.Modifiers[5] + (proficiency[5] ? myCharacter.proficiencyBonus : 0); }
         }
+        #endregion
     }
 }

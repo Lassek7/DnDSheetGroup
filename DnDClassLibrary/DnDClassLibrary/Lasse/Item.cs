@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DnDClassLibrary
 {
-    public class Item // find en måde at gøre den private
+    public class Item 
     {
         int itemID;
         string itemName;
@@ -22,7 +22,7 @@ namespace DnDClassLibrary
         {
         }
 
-        public Item(string itemName) // validering tilføjes senere+
+        public Item(string itemName) 
         {
             this.itemName = itemName;
         }

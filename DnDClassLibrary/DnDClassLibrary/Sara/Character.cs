@@ -6,12 +6,12 @@ namespace DnDClassLibrary
 {
     public class Character
     {
-        #region FIELD 
+        #region FIELDS 
         string CharacterName;
         string PlayerName;
         string Race;
         string Background;
-        string Experience;
+        string Experience = "0";
         string Backstory;
         int Level;
         string CharacterClass;
@@ -170,9 +170,11 @@ namespace DnDClassLibrary
             set { MaxHealth = value; }
         }
 
-       
+
         #endregion
-        public int ProficiencyCalc(int myLevel)
+
+        #region METHODS
+        public int ProficiencyCalc(int myLevel) // Udregner proficiency ud fra lvl
         {
 
             if (myLevel < 1)
@@ -202,13 +204,19 @@ namespace DnDClassLibrary
             }
 
         }
-           
-        private void EditSheet()
+
+        public int AttributeRangeChecker(bool OutOfReach, int Range, string Input) // tjekker om attributen har en acceptabel værdi
         {
-
-
+            if (OutOfReach == false)
+            {
+                return Range = Int32.Parse(Input);
+            }
+            else
+            {
+                return Range = 0;
+            }
         }
-
+        #endregion
     }
 }
 

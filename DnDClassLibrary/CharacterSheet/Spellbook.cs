@@ -13,10 +13,17 @@ namespace CharacterSheet
 {
     public partial class Spellbook : Form
     {
+        // De forskellige lister og classes der instantieres
+        #region INSTANTIATIONS
+        SpellBook mySpellBook = new SpellBook();
         List<Spell> myPreparedSpells = new List<Spell>();
         List<Spell> myAvailableSpells = new List<Spell>();
+        UtillityMethods myUtillities = new UtillityMethods();
         Spell mySpells = new Spell();
+        #endregion
 
+        // Laver Klassen med constructorsne
+        #region CONSTRUCTORS
         public Spellbook(Character Charac, List<Spell> PreparedSpellList, List<Spell> AvailableSpellsList)
         {
             InitializeComponent();
@@ -26,12 +33,16 @@ namespace CharacterSheet
             RunColors();
             RunAvailableSpellsList();
         }
+        #endregion
+
+        //Styrer hvad der sker når forskellige kanpper og funktioner trykkes
         #region CLICKEVENTS
 
-        private void MenuButton_Click(object sender, EventArgs e)
+        private void MenuButton_Click(object sender, EventArgs e) // sender brugeren tilbage til Character Sheetet
         {
-            AddToPreparedSpells(CantripsListView, myAvailableSpells, myPreparedSpells);
-            AddToPreparedSpells(FirstLevelListView, myAvailableSpells, myPreparedSpells);
+            myPreparedSpells.Clear();
+            AddToPreparedSpells(CantripsListView, myAvailableSpells, myPreparedSpells); // tilføjer Cantrips til Preparedspellslisten
+            AddToPreparedSpells(FirstLevelListView, myAvailableSpells, myPreparedSpells); // tilføjer 1st lvl spells til Preparedspellslisten
             AddToPreparedSpells(SecondLevelListView, myAvailableSpells, myPreparedSpells);
             AddToPreparedSpells(ThirdLevelListView, myAvailableSpells, myPreparedSpells);
             AddToPreparedSpells(FourthLevelListView, myAvailableSpells, myPreparedSpells);
@@ -40,59 +51,35 @@ namespace CharacterSheet
             AddToPreparedSpells(SeventhLevelListView, myAvailableSpells, myPreparedSpells);
             AddToPreparedSpells(EightLevelListView, myAvailableSpells, myPreparedSpells);
             AddToPreparedSpells(NinthLevelListView, myAvailableSpells, myPreparedSpells);
-            DialogResult = DialogResult.OK;
+            DialogResult = DialogResult.OK; //Giver DialogResult en værdi af ok, som gør at spells listen går tilbage til og opdaterer sheetet.
 
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void AddButton_Click(object sender, EventArgs e) // Tilføjer en spell til en liste.
         {
             bool Exists = false;
-            foreach (var spell in myAvailableSpells)
+            Exists = mySpellBook.ConditionalNewValue(myAvailableSpells, Exists, mySpells.SpellName); // tjekker om en spell allerede eksitere
+            DnDClassLibrary.Spell NewSpell = mySpellBook.AddSpell(Exists, mySpells.SpellName, mySpells.SpellLevel, mySpells.Range, mySpells.CastTime, mySpells.Components, mySpells.SpellSchool, mySpells.SpellDC, 
+                                                      mySpells.SpellBonus, mySpells.SpellDamage, mySpells.Duration, mySpells.SpellDamageType, mySpells.SpellDescription); // tilføjer en nye spell i form af objektet NewSpell
+            if (NewSpell == null) // hvis null NewSpell's værdi er Null, så kommer der en prompt om at det allerede existere.
             {
-                if (string.IsNullOrEmpty(mySpells.SpellName) == false && spell.SpellName.Equals(mySpells.SpellName))
-                {
-                    Exists = true;
-                }
-                else
-                {
-                    Exists = false;
-                }
-            }
-
-            if (Exists == false) 
-            {
-
-                Spell NewSpell = new Spell();
-                NewSpell.SpellName = mySpells.SpellName;
-                NewSpell.SpellLevel = mySpells.SpellLevel; // cantrip = 0
-                NewSpell.Range = mySpells.Range;
-                NewSpell.CastTime = mySpells.CastTime;
-                NewSpell.Components = mySpells.Components;
-                NewSpell.SpellSchool = mySpells.SpellSchool;
-                NewSpell.SpellDC = mySpells.SpellDC;
-                NewSpell.SpellBonus = mySpells.SpellBonus;
-                NewSpell.SpellDamage = mySpells.SpellDamage;
-                NewSpell.Duration = mySpells.Duration;
-                NewSpell.SpellDamageType = mySpells.SpellDamageType;
-                NewSpell.SpellDescription = mySpells.SpellDescription;
-
-                myAvailableSpells.Add(NewSpell);
-                ClearTextBoxes(this.Controls);
+                MessageBox.Show("Item Already exists");
             }
             else
             {
-                MessageBox.Show("Item Already exsits");
+                myAvailableSpells.Add(NewSpell); // hvis NewSpell ikke er Null Bliver den tilføjet til Available spells.
+                ClearTextBoxes(this.Controls); // rydder alle bokse, så der kan skrive nyt i dem.
             }
             RunAvailableSpellsList();
-
         }
 
+        // fjerner spells fra den specifikke liste og fra available spells list.
         private void CantripsRemoveButton_Click(object sender, EventArgs e)
         {
             RemoveFromList(CantripsListView);
         }
 
-        private void FirstRemoveButton_Click(object sender, EventArgs e)
+        private void FirstRemoveButton_Click(object sender, EventArgs e) 
         {
             RemoveFromList(FirstLevelListView);
         }
@@ -139,22 +126,23 @@ namespace CharacterSheet
 
         #endregion
 
+        // Ændre værdier når brugeren skriver i felter
         #region TEXTCHANGED
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
-            bool OutOfReach = string.IsNullOrEmpty(NameTextBox.Text);
-            mySpells.SpellName = NewValue(OutOfReach, NameTextBox.Text);
+            bool OutOfReach = string.IsNullOrEmpty(NameTextBox.Text); // tjekker om Tekstboksen er tom
+            mySpells.SpellName = myUtillities.NewValue(OutOfReach, NameTextBox.Text); // hvis tekstboksen ikke er tom, så ændre værdien i mySpells.Spellname sig til det givne værdi
 
         }
 
         private void LevelTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(LevelTextBox.Text);
-            if(OutOfReach == false && Convert.ToInt32(LevelTextBox.Text) >= 0 && Convert.ToInt32(LevelTextBox.Text) <= 9)
+            if(OutOfReach == false && Convert.ToInt32(LevelTextBox.Text) >= 0 && Convert.ToInt32(LevelTextBox.Text) <= 9) // tjekker om spell lvl'et er fra 0 - 9
             {
-                mySpells.SpellLevel = Convert.ToInt32(NewValue(OutOfReach, LevelTextBox.Text));
+                mySpells.SpellLevel = Convert.ToInt32(myUtillities.NewValue(OutOfReach, LevelTextBox.Text));  
             }
-            else if(OutOfReach == false)
+            else if(OutOfReach == false) // Hvis lvlet ikke er fra  0 - 9  bliver den sat til 1
             {
                 MessageBox.Show("level Must be within range 0 to 9");
                 LevelTextBox.Text = "1";
@@ -164,55 +152,55 @@ namespace CharacterSheet
         private void RangeTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(RangeTextBox.Text);
-            mySpells.Range = NewValue(OutOfReach, RangeTextBox.Text)+"ft.";
+            mySpells.Range = myUtillities.NewValue(OutOfReach, RangeTextBox.Text)+"ft.";
         }
 
         private void CastTimeTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(CastTimeTextBox.Text);
-            mySpells.CastTime = NewValue(OutOfReach, CastTimeTextBox.Text);
+            mySpells.CastTime = myUtillities.NewValue(OutOfReach, CastTimeTextBox.Text);
         }
 
         private void ComponentTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(ComponentTextBox.Text);
-            mySpells.Components = NewValue(OutOfReach, ComponentTextBox.Text);
+            mySpells.Components = myUtillities.NewValue(OutOfReach, ComponentTextBox.Text);
         }
 
         private void SchoolTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(SchoolTextBox.Text);
-            mySpells.SpellSchool = NewValue(OutOfReach, SchoolTextBox.Text);
+            mySpells.SpellSchool = myUtillities.NewValue(OutOfReach, SchoolTextBox.Text);
         }
 
         private void DCTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DCTextBox.Text);
-            mySpells.SpellDC = Convert.ToInt32(NewValue(OutOfReach, DCTextBox.Text));
+            mySpells.SpellDC = Convert.ToInt32(myUtillities.NewValue(OutOfReach, DCTextBox.Text));
         }
 
         private void DamageTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DamageTextBox.Text);
-            mySpells.SpellDamage = NewValue(OutOfReach, DamageTextBox.Text) + DamageComboBox.Text;
+            mySpells.SpellDamage = myUtillities.NewValue(OutOfReach, DamageTextBox.Text) + DamageComboBox.Text;
         }
        
         private void DurationTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DurationTextBox.Text);
-            mySpells.Duration = NewValue(OutOfReach, DurationTextBox.Text);
+            mySpells.Duration = myUtillities.NewValue(OutOfReach, DurationTextBox.Text);
         }
 
         private void DamageTypeTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DamageTypeTextBox.Text);
-            mySpells.SpellDamageType = NewValue(OutOfReach, DamageTypeTextBox.Text);
+            mySpells.SpellDamageType = myUtillities.NewValue(OutOfReach, DamageTypeTextBox.Text);
         }
 
         private void DescriptionTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(DescriptionTextBox.Text);
-            mySpells.SpellDescription = NewValue(OutOfReach, DescriptionTextBox.Text);
+            mySpells.SpellDescription = myUtillities.NewValue(OutOfReach, DescriptionTextBox.Text);
         }
         #endregion
                 
@@ -229,6 +217,7 @@ namespace CharacterSheet
 
         #endregion
         
+        // styr hvilke user input der modtages af systemet
         #region KEYPRESSEVENTS
         private void LevelTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -248,30 +237,22 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Metoder lavet til at styre classen
         #region METHODS
-        string NewValue(bool OutOfReach, string UserInput) // giver en linje en ny værdi, hvis værdien ikke er null
+     
+        void OnlyTakeNumbers(KeyPressEventArgs e) // Sørger for, at der kun kan skrives tal i tekstboksen
         {
-            if (OutOfReach == false)
-            {
-                return UserInput;
-            }
-            else
-            {
-                return null;
-            }
-        }
-        void OnlyTakeNumbers(KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // Hvis værdien der indputtes er et tal(knappen man trykker), bliver e.handled sat til true og inputtet accepteret.
             {
                 e.Handled = true;
             }
         }
-        void ClearTextBoxes(Control.ControlCollection Spellbook)
+       
+        void ClearTextBoxes(Control.ControlCollection Spellbook) // rydder alle tekstbokse
         {
-            foreach (Control TextBox in Spellbook)
+            foreach (Control TextBox in Spellbook) 
             {
-                if (TextBox is TextBoxBase)
+                if (TextBox is TextBoxBase) // 
                 {
                     TextBox.Text = String.Empty;
                 }
@@ -281,7 +262,8 @@ namespace CharacterSheet
                 }
             }
         }
-        void RunAvailableSpellsList()
+      
+        void RunAvailableSpellsList() // Viser spellsne der er added i deres respektive lister.
         {
             foreach (var Spell in myAvailableSpells)
             switch (Spell.SpellLevel)
@@ -320,7 +302,8 @@ namespace CharacterSheet
                     break;
             }
         }
-        void AvailableSpellsList(int SpellLvl, ListView ListToFill)
+      
+        void AvailableSpellsList(int SpellLvl, ListView ListToFill)  // Fylder en liste med de spells der hører til i den.
         {
             ListToFill.Items.Clear();
             int i = 0;
@@ -344,18 +327,20 @@ namespace CharacterSheet
                 }
                 else
                 {
+                    MessageBox.Show("All Spells from the list have been added.");
                 }
             }
         }
-        void AddToPreparedSpells(ListView ListViewTotakeFrom, List<Spell> AvailableSpells, List<Spell> PreparedList)
+      
+        void AddToPreparedSpells(ListView ListViewTotakeFrom, List<Spell> AvailableSpells, List<Spell> PreparedList) // Tilføjer spells fra listview boksene til prepared spells
         {
-            for (int i = 0; i < ListViewTotakeFrom.Items.Count; i++)
+            for (int i = 0; i < ListViewTotakeFrom.Items.Count; i++)  // Kører et forloop igennem op til mængden af items i Listview
             {
-                if (ListViewTotakeFrom.Items[i].Checked == true)
+                if (ListViewTotakeFrom.Items[i].Checked == true) // Hvis der er sat et checkmark på udfor et item på listen kører et nyt forloop
                 {
-                    for (int j = 0; j < AvailableSpells.Count; j++)
+                    for (int j = 0; j < AvailableSpells.Count; j++) // Listen af available spells bliver kørt igennem
                     {
-                        if (AvailableSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text))
+                        if (AvailableSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text)) // Hvis listview spell navnet der er tjekket findes i Availablespells bliver den tilføjet til prepared spells
                         {
                             PreparedList.Add(AvailableSpells[j]);
                         }
@@ -363,11 +348,11 @@ namespace CharacterSheet
                 }
                 else
                 {
-                    for (int j = 0; j < AvailableSpells.Count; j++)
+                    for (int j = 0; j < myPreparedSpells.Count; j++) // Hvis der ikke er et checkmark udfor en spell, vil available spellslist blivet set igennem for spellen, hvorefter den fjernes fra listen
                     {
-                        if (AvailableSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text))
+                        if (myPreparedSpells[j].SpellName.Equals(ListViewTotakeFrom.Items[i].Text))
                         {
-                            PreparedList.Remove(AvailableSpells[j]);
+                            PreparedList.Remove(myPreparedSpells[j]);
                         }
                     }
                 }
@@ -375,7 +360,7 @@ namespace CharacterSheet
             }
         }
 
-        void RemoveFromList(ListView ListToRemoveFrom)
+        void RemoveFromList(ListView ListToRemoveFrom) // fjerner en spell fra listview og available spells listen
         {
             for (int i = 0; i < ListToRemoveFrom.Items.Count; i++)
             {
@@ -394,7 +379,8 @@ namespace CharacterSheet
             }
             RunAvailableSpellsList();
         }
-        void RunColors()
+       
+        void RunColors() // kører farverne i spellBooken
         {
             CantripsListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             FirstLevelListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
