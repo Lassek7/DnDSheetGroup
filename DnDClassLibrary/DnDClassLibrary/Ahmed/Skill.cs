@@ -20,7 +20,8 @@ namespace DnDClassLibrary
         public Skill()
         {
         }
-
+        #region GETTERS&SETTERS
+        // Hver Getter og Setter tjekker om der er sat proficiency til eller ej
         public int Acrobatics
         {
             get { return myAttributes.Modifiers[1] + (proficiency[0] ? myCharacter.proficiencyBonus : 0); }
@@ -104,5 +105,28 @@ namespace DnDClassLibrary
         {
             get { return myAttributes.Modifiers[4] + (proficiency[17] ? myCharacter.proficiencyBonus : 0); }
         }
+        #endregion
+        #region METHODS
+        public string CheckJackOfAllTradesToggle(int HalfBonus, bool ProficiencyToggle, bool JackToggle, int OldValue, string CurrentValue) // udregner værdien for JackOfAllTrades
+        {
+            int NewValue = HalfBonus / 2 + OldValue; // Giver NewValue værden af halvdelen af brugerens proficiency Bonus
+            if (ProficiencyToggle == false && JackToggle == true) // hvis JAckofAllTrades er slået til, men der ikke er proficency, returnerers værdien af NewValue
+            {
+                return Convert.ToString(NewValue);
+            }
+            else if (ProficiencyToggle == true && JackToggle == true) // Hvis proficency er true og JackOfAllTrades er true, så returnerers den CurrentValue, som er værdien med proficency bonus, da Proficency trumfer JackOfAllTrades
+            {
+                return Convert.ToString(CurrentValue);
+            }
+            else if (ProficiencyToggle == true && JackToggle == false) // returnere Currentvalue, da Proficency er true
+            {
+                return Convert.ToString(CurrentValue);
+            }
+            else // ellers hvis ingen af dem er true, så returneres den originale værdi uden proficency Bonus
+            {
+                return Convert.ToString(OldValue);
+            }
+        }
+        #endregion
     }
 }

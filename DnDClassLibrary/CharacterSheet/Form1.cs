@@ -14,6 +14,8 @@ namespace CharacterSheet
 {
     public partial class CreateCharacterForm : Form
     {
+        // Instansierer de forskellige fields, arrays, lister osv.
+        #region INSTANSIATIONS
         CharacterAttributes myAttributes = new CharacterAttributes();
         UtillityMethods myUtillities = new UtillityMethods();
         Character myCharacter = new Character();
@@ -37,6 +39,11 @@ namespace CharacterSheet
         bool WisDone = false;
         bool ChaDone = false;
         bool ResourceDone = false;
+
+        #endregion
+
+        // Loader Sheetet med dets værdier
+        #region SHEETLOAD
         public CreateCharacterForm()
         {
             InitializeComponent();
@@ -47,6 +54,9 @@ namespace CharacterSheet
             this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
         }
 
+        #endregion
+
+        // ændrer teksten i følgende områder på sheetet.
         #region TEXTCHANGED
         private void CharacterNameBox_TextChanged(object sender, EventArgs e)
         {
@@ -293,7 +303,8 @@ namespace CharacterSheet
         }
         #endregion
 
-        #region BUTTONCLICK
+        // Beskriver hvad der sker når der trykkes på en ting, enten med enkelt eller dobbeltklik
+        #region CLICKEVENTS
         private void CreateDoneButton_Click(object sender, EventArgs e)
         {
 
@@ -312,6 +323,7 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Tjekker hvilke knapper der trykkes på, når brugeren skriver i programmet.
         #region KEYPRESS
         private void MaxHealthBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -355,6 +367,7 @@ namespace CharacterSheet
 
         #endregion
 
+        // Metoder lavet til at køre forskellige funktionaliteter af programmet.
         #region METHODS
         void OnlyTakeNumbers(KeyPressEventArgs e) // Sørger for at brugeren kun kan skrive tal. KeyEvents reffererer til når en knap trykkes på
         {
@@ -366,5 +379,4 @@ namespace CharacterSheet
 
     }
     #endregion
-
 }

@@ -6,12 +6,12 @@ namespace DnDClassLibrary
 {
     public class Character
     {
-        #region FIELD 
+        #region FIELDS 
         string CharacterName;
         string PlayerName;
         string Race;
         string Background;
-        string Experience;
+        string Experience = "0";
         string Backstory;
         int Level;
         string CharacterClass;
@@ -170,8 +170,10 @@ namespace DnDClassLibrary
             set { MaxHealth = value; }
         }
 
-       
+
         #endregion
+
+        #region METHODS
         public int ProficiencyCalc(int myLevel) // Udregner proficiency ud fra lvl
         {
 
@@ -214,7 +216,7 @@ namespace DnDClassLibrary
                 return Range = 0;
             }
         }
-
+        #endregion
     }
 }
 

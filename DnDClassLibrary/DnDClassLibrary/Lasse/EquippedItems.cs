@@ -38,8 +38,8 @@ namespace DnDClassLibrary
         public string MagicItemTwoName;
         public string MagicItemThreeName;
 
-        // Udregner hvad attakbonusen er for et equipped våben.
-        public int AtkBonusCalc(string modifier, bool Proficency, int ProficiencyBonus, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma)
+        #region METHODS       
+        public int AtkBonusCalc(string modifier, bool Proficency, int ProficiencyBonus, int Strength, int Dexterity, int Constitution, int Intelligence, int Wisdom, int Charisma) // Udregner hvad attakbonusen er for et equipped våben.
         {
             int ATKBonus; 
             switch (modifier) // modifier er baseret på hvad brugeren har valgt som property til deres våben. 
@@ -100,5 +100,6 @@ namespace DnDClassLibrary
             }
             return Armor + ShieldBonus + DexScore; // returnerer ens Armor, shieldbonus og dexscore samlet for at få ens totale Armor Class
         }
+        #endregion
     }
 }

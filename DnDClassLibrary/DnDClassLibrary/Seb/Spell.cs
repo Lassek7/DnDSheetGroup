@@ -28,7 +28,7 @@ namespace DnDClassLibrary
             this.spellName = spellName;
         }
 
-        // Get - Set
+        // Getters - Setters
         public string SpellName
         {
             get { return spellName; }

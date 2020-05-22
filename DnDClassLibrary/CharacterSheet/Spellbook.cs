@@ -13,12 +13,17 @@ namespace CharacterSheet
 {
     public partial class Spellbook : Form
     {
+        // De forskellige lister og classes der instantieres
+        #region INSTANTIATIONS
         SpellBook mySpellBook = new SpellBook();
         List<Spell> myPreparedSpells = new List<Spell>();
         List<Spell> myAvailableSpells = new List<Spell>();
         UtillityMethods myUtillities = new UtillityMethods();
         Spell mySpells = new Spell();
+        #endregion
 
+        // Laver Klassen med constructorsne
+        #region CONSTRUCTORS
         public Spellbook(Character Charac, List<Spell> PreparedSpellList, List<Spell> AvailableSpellsList)
         {
             InitializeComponent();
@@ -28,6 +33,9 @@ namespace CharacterSheet
             RunColors();
             RunAvailableSpellsList();
         }
+        #endregion
+
+        //Styrer hvad der sker når forskellige kanpper og funktioner trykkes
         #region CLICKEVENTS
 
         private void MenuButton_Click(object sender, EventArgs e) // sender brugeren tilbage til Character Sheetet
@@ -118,6 +126,7 @@ namespace CharacterSheet
 
         #endregion
 
+        // Ændre værdier når brugeren skriver i felter
         #region TEXTCHANGED
         private void NameTextBox_TextChanged(object sender, EventArgs e)
         {
@@ -208,6 +217,7 @@ namespace CharacterSheet
 
         #endregion
         
+        // styr hvilke user input der modtages af systemet
         #region KEYPRESSEVENTS
         private void LevelTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -227,6 +237,7 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Metoder lavet til at styre classen
         #region METHODS
      
         void OnlyTakeNumbers(KeyPressEventArgs e) // Sørger for, at der kun kan skrives tal i tekstboksen

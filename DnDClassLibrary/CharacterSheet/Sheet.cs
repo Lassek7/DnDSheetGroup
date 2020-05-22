@@ -17,9 +17,12 @@ namespace CharacterSheet
 {
     public partial class Sheet : Form
     {
+        // Instansierer de forskellige fields, arrays, lister osv.
+        #region INSTANSIATIONS
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
         EquippedItems myEquippedItems = new EquippedItems();
+        UtillityMethods myUtillities = new UtillityMethods();
         Item myItem = new Item();
         List<Item> myInventoryList = new List<Item>();
         List<Feat> myFeatureList = new List<Feat>();
@@ -30,8 +33,11 @@ namespace CharacterSheet
         bool WeaponEquipSwitch;
         List<CharacterAttributes> characterAttributesInfo = new List<CharacterAttributes>();
 
+        #endregion
+
+        // De forskellige constructors der laver sheetet
         #region CONSTRUCTORS
-        public Sheet(Character charac, CharacterAttributes Attri)
+        public Sheet(Character charac, CharacterAttributes Attri) // konstruerer sheetet og giver character og attributes værdier fra Hvor sheetet er konstrueret fra.
         {
             myCharacter = charac;
             myAttributes = Attri;
@@ -49,10 +55,11 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Loader Sheetet med dets værdier
         #region SHEETLOAD
-        private void Sheet_Load_1(object sender, EventArgs e)
+        private void Sheet_Load_1(object sender, EventArgs e) // loader sheetets information ind, som farver og værdier til karakteren
         {
-            this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
+            this.BackColor = ColorTranslator.FromHtml("#D2D6D7"); // giver charactersheet baggrunden en farve ud fra hexadecimale tal og konverterer det til RGB
             ColorLoad();
             RunInvList();
             LoadCharacterInfo();
@@ -63,11 +70,12 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Beskriver hvad der sker når der trykkes på en ting, enten med enkelt eller dobbeltklik
         #region CLICKEVENTS
-        private void SaveCharacterButton_Click(object sender, EventArgs e)
+        private void SaveCharacterButton_Click(object sender, EventArgs e) // gemmer Spillerens karakter
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem);
-            var filePathCharacterInfo = string.Empty;
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem); // opretter et nyt object af databasen med værdier den skal bruge
+            var filePathCharacterInfo = string.Empty; 
             var filePathInventory = string.Empty;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.Title = "Save Sheet";
@@ -91,35 +99,37 @@ namespace CharacterSheet
 
         }
 
-        private void EditInventoryButton_Click(object sender, EventArgs e)
+        private void EditInventoryButton_Click(object sender, EventArgs e) // åbner add to inventory Form, som kan tilføje våben, items og armnor til ens inventory
         {
-            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList, myAttributes, myEquippedItems);
-            if (addToInventory.ShowDialog() == DialogResult.OK)
+            AddToInventoryForm addToInventory = new AddToInventoryForm(myInventoryList, myAttributes, myEquippedItems); // laver instance af formen
+            if (addToInventory.ShowDialog() == DialogResult.OK) // åbner formen i form af en dialog boks, som når værdien er DIalogResult.OK lukkes og opdatere charactersheetets inventory og equipped items.
             {
                 RunInvList();
                 LoadEquippedItems();
             }
-            else
+            else // hvis den ikke lukkes ordentligt, får brugeren en besked der siger, at de manuelt skal opdaterer listen
             {
                 MessageBox.Show("Character List has not been updated, please manually update the list");
             }
         }
 
-        private void ShowListItemsButton_Click(object sender, EventArgs e)
+        private void ShowListItemsButton_Click(object sender, EventArgs e) // filtrerer til kun at vise items i inventory listen
         {
-            InventoryListView.Columns.Clear();
-            InventoryListView.Items.Clear();
+            InventoryListView.Columns.Clear(); // rydder gamle columns
+            InventoryListView.Items.Clear(); // rydder gamle items
+
+            //laver nye columns, med navn, placering og alignment af tekst.
             InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
 
-            int i = 0;
-            foreach (var Item in myInventoryList)
+            int i = 0; // bruges til at vælge placeringen af items i listen
+            foreach (var Item in myInventoryList) // kører igennem inventorylisten og tilføjer kun objekter hvis Item ID er 1, som er Items.
             {
                 if (Item.ItemID == 1)
                 {
-                    InventoryListView.Items.Add(Item.ItemName, i);
+                    InventoryListView.Items.Add(Item.ItemName, i); // tilføjer Itemsne i listen på i'ne placering. Første item er Main Item som er navnet, resten er sub items, der tilføjes på samme placering, men i næste column
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
                     InventoryListView.Items[i].SubItems.Add(Item.Description);
@@ -132,24 +142,27 @@ namespace CharacterSheet
             }
         }
       
-        private void ShowListArmorButton_Click(object sender, EventArgs e)
+        private void ShowListArmorButton_Click(object sender, EventArgs e) // filtrerer til kun at vise Armor i inventory listen
         {
-           InventoryListView.Columns.Clear();
-           InventoryListView.Items.Clear();
+           InventoryListView.Columns.Clear(); // rydder gamle columns
+           InventoryListView.Items.Clear(); // rydder gamle items
+                                            
+           //laver nye columns, med navn, placering og alignment af tekst.
            InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
            InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
            InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
            InventoryListView.Columns.Add("AC", 30, HorizontalAlignment.Left);
            InventoryListView.Columns.Add("Type", 40, HorizontalAlignment.Left);
            InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
-            int i = 0;
-           foreach (var Item in myInventoryList)
+           
+           int i = 0; // bruges til at vælge placeringen af armor items i listen
+           foreach (var Item in myInventoryList) // kører igennem inventorylisten og tilføjer kun objekter hvis Item ID er 2, som er Armor
             {
                 
                 if (Item.ItemID == 2)
                 {
-                    Armor armor = (Armor)Item;
-                    InventoryListView.Items.Add(armor.ItemName, i);
+                    Armor armor = (Armor)Item; // typecaster Armor, som et item. Da Armor klassen er et child af Item, kan den typecastes og ses som et item, hvilket giver adgang til dets fields.
+                    InventoryListView.Items.Add(armor.ItemName, i); // tilføjer Itemsne i listen på i'ne placering. Første item er Main Item som er navnet, resten er sub items, der tilføjes på samme placering, men i næste column
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.WeightPerItem));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(armor.ACFromArmor));
@@ -163,10 +176,12 @@ namespace CharacterSheet
             }
         }
 
-        private void ShowListWeaponsButton_Click(object sender, EventArgs e)
+        private void ShowListWeaponsButton_Click(object sender, EventArgs e) // filtrerer til kun at vise Armor i inventory listen
         {
-            InventoryListView.Columns.Clear();
-            InventoryListView.Items.Clear();
+            InventoryListView.Columns.Clear(); // rydder gamle columns
+            InventoryListView.Items.Clear(); // rydder gamle items
+
+            //laver nye columns, med navn, placering og alignment af tekst.
             InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
@@ -176,13 +191,15 @@ namespace CharacterSheet
             InventoryListView.Columns.Add("Range", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Property", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left); 
-            int i = 0;
-           foreach (var Item in myInventoryList)
-           {
+
+            int i = 0; // bruges til at vælge placeringen af weapon items i listen
+
+           foreach (var Item in myInventoryList) // kører igennem inventorylisten og tilføjer kun objekter hvis Item ID er 3, som er våben
+            {
                 if (Item.ItemID == 3)
                 {
-                    Weapon weapon = (Weapon)Item;
-                    InventoryListView.Items.Add(weapon.ItemName, i);
+                    Weapon weapon = (Weapon)Item; // typecaster Weapon, som et item. Da Weapon klassen er et child af Item, kan den typecastes og ses som et item, hvilket giver adgang til dets fields.
+                    InventoryListView.Items.Add(weapon.ItemName, i); // tilføjer Itemsne i listen på i'ne placering. Første item er Main Item som er navnet, resten er sub items, der tilføjes på samme placering, men i næste column
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.AmountHeld));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.WeightPerItem));
                     InventoryListView.Items[i].SubItems.Add(Convert.ToString(weapon.Damage));
@@ -197,152 +214,111 @@ namespace CharacterSheet
                 {
                 }
            }
-            WeaponEquipSwitch = true;
+            WeaponEquipSwitch = true; // sætter en værdi for WeaponSwitch, som bruges til at aføre hvilken værdi der bruges under EquipFromInventory
         }
       
-        private void RemoveSlotOne_Click(object sender, EventArgs e)
+        private void RemoveSlotOne_Click(object sender, EventArgs e) // fjerner værdierne fra equipped våben.
         {
-            myEquippedItems.WeaponOneName = "";
+            myEquippedItems.WeaponOneName = "Weapon one";
             myEquippedItems.WeaponOneAttributeAssociation = "";
             myEquippedItems.WeaponOneDamageType = "";
-            myEquippedItems.WeaponOneDamage = "";
+            myEquippedItems.WeaponOneDamage = "0";
 
             WeaponSlotOneProficiency.Checked = false;
             LoadEquippedItems();
         }
 
-        private void RemoveSlotTwo_Click(object sender, EventArgs e)
+        private void RemoveSlotTwo_Click(object sender, EventArgs e) // fjerner værdierne fra equipped våben.
         {
-            myEquippedItems.WeaponTwoName = "";
+            myEquippedItems.WeaponTwoName = "Weapon Two";
             myEquippedItems.WeaponTwoAttributeAssociation = "";
             myEquippedItems.WeaponTwoDamageType = "";
-            myEquippedItems.WeaponTwoDamage = "";
+            myEquippedItems.WeaponTwoDamage = "0";
 
             WeaponSlotTwoProficiency.Checked = false;
             LoadEquippedItems();
         }
 
-        private void RemoveSlotThree_Click(object sender, EventArgs e)
+        private void RemoveSlotThree_Click(object sender, EventArgs e) // fjerner værdierne fra equipped våben.
         {
-            myEquippedItems.WeaponThreeName = "";
+            myEquippedItems.WeaponThreeName = "Weapon three";
             myEquippedItems.WeaponThreeAttributeAssociation = "";
             myEquippedItems.WeaponThreeDamageType = "";
-            myEquippedItems.WeaponThreeDamage = "";
+            myEquippedItems.WeaponThreeDamage = "0";
 
             WeaponSlotThreeProficiency.Checked = false;
             LoadEquippedItems();
         }
-        private void AddClassFeatureButton_Click(object sender, EventArgs e)
-        {
-            int ListID = 1;
-            int i = 0;
-            AddFeatureForm ClassFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Add", "Cancel", ListID);
 
-            ClassFeatureListView.Items.Clear();
-            if (ClassFeatures.ShowDialog() == DialogResult.OK)
-            {
-                ClassFeatureListView.Items.Clear();
-                foreach (var Item in myFeatureList)
-                {
-                    ClassFeatureListView.Items.Add(Item.FeatName, i);
-                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
-                    i++;
-                }
-            }
-            else
-            {
-                foreach (var Item in myFeatureList)
-                {
-                    ClassFeatureListView.Items.Add(Item.FeatName, i);
-                    ClassFeatureListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
-                    i++;
-                }
-            }
+        private void AddClassFeatureButton_Click(object sender, EventArgs e) // tilføjer items til ClassFeature listen
+        {
+            AddFeatureToList(1, myFeatureList, myOtherFeatureList, ClassFeatureListView, myFeatureList);
         }
 
-        private void AddOtherFeaturesButton_Click(object sender, EventArgs e)
+        private void AddOtherFeaturesButton_Click(object sender, EventArgs e) // tilføjer items til other Feature listen
         {
-            int ListID = 2;
-            int i = 0;
-            AddFeatureForm OtherFeatures = new AddFeatureForm(myFeatureList, myOtherFeatureList, "Add", "Cancel", ListID);
+            AddFeatureToList(2, myFeatureList, myOtherFeatureList, OtherFeaturesListView, myOtherFeatureList);
+        }
 
-            OtherFeaturesListView.Items.Clear();
-            if (OtherFeatures.ShowDialog() == DialogResult.OK)
+        void AddFeatureToList(int ListID, List<Feat> ClassList, List<Feat> OtherList, ListView CurrentListView, List<Feat> CurrentList) // add the chosen features to the list
+        {
+            int i = 0; 
+            AddFeatureForm Feature = new AddFeatureForm(ClassList, OtherList, "Add", "Cancel", ListID);  // laver en ny instance af form AddFeatureForm
+
+            if (Feature.ShowDialog() == DialogResult.OK) // åbner AddFeatureForm og venter på Dialog Result bliver OK
             {
-                OtherFeaturesListView.Items.Clear();
-                foreach (var Item in myOtherFeatureList)
+                CurrentListView.Items.Clear(); // rydder listen
+                foreach (var Item in CurrentList) // kigger igennem listen og tilføjer navn og beskrivelse til listen
                 {
-                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
-                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    CurrentListView.Items.Add(Item.FeatName, i); 
+                    CurrentListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
                     i++;
                 }
             }
-            else
+            else // hvis dialogResult ikke er OK, så rydder og displayer den stadig listen.
             {
-                foreach (var Item in myOtherFeatureList)
+                CurrentListView.Items.Clear(); // rydder listen
+                foreach (var Item in CurrentList)
                 {
-                    OtherFeaturesListView.Items.Add(Item.FeatName, i);
-                    OtherFeaturesListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
+                    CurrentListView.Items.Add(Item.FeatName, i);
+                    CurrentListView.Items[i].SubItems.Add(Convert.ToString(Item.FeatDescription));
                     i++;
                 }
             }
         }
 
-        private void RemoveFeatureButton_Click(object sender, EventArgs e)
+        private void RemoveFeatureButton_Click(object sender, EventArgs e) // fjerner class features
         {
-            for (int i = 0; i < ClassFeatureListView.Items.Count; i++)
-            {
-                if (ClassFeatureListView.Items[i].Selected)
-                {
-                    myFeatureList.RemoveAt(i);
-                    ClassFeatureListView.Items[i].Remove();
-                }
-                else
-                {
-                }
-
-            }
+            RemoveFeatures(ClassFeatureListView, myFeatureList);
         }
 
-        private void RemoveOtherFeaturesButton_Click(object sender, EventArgs e)
+        private void RemoveOtherFeaturesButton_Click(object sender, EventArgs e) // fjerner other features
         {
-            for (int i = 0; i < OtherFeaturesListView.Items.Count; i++)
-            {
-                if (OtherFeaturesListView.Items[i].Selected)
-                {
-                    myOtherFeatureList.RemoveAt(i);
-                    OtherFeaturesListView.Items[i].Remove();
-                }
-                else
-                {
-                }
-
-            }
+            RemoveFeatures(OtherFeaturesListView, myOtherFeatureList);
         }
-
-        private void AlItemsButton_Click(object sender, EventArgs e)
+      
+        private void AlItemsButton_Click(object sender, EventArgs e) // kører RunInvList, som viser den fulde inventory liste
         {
             RunInvList();
         }
 
-        private void SpellsButton_Click(object sender, EventArgs e)
+        private void SpellsButton_Click(object sender, EventArgs e) // åbner spellbooken
         {
-            this.Hide();
-            Spellbook RunSpellBook = new Spellbook(myCharacter, myPreparedSpells, myAvilableSpells);
-            if (RunSpellBook.ShowDialog() == DialogResult.OK)
+            this.Hide(); // skjuler charactersheetet
+            Spellbook RunSpellBook = new Spellbook(myCharacter, myPreparedSpells, myAvilableSpells); // laver en instance af spellbooken
+            if (RunSpellBook.ShowDialog() == DialogResult.OK) // Viser spellbooken og venter på dialog Result bliver OK
             {
-                this.Show();
-                RunPreparedSpells();
+                this.Show(); // skjuler spellbooken
+                RunPreparedSpells(); // viser prepared spells fra spellbooken 
             }
             else
             {
-                MessageBox.Show("Character List has not been updated, please manually update the list");
+                MessageBox.Show("Character List has not been updated, please manually update the list"); //Hvis lukket forkert, vises denne besked
             }
-
         }
 
 
-        private void pictureBox_DoubleClick(object sender, EventArgs e)
+        private void pictureBox_DoubleClick(object sender, EventArgs e) // åbner en openfile dialog boks, som lader brugeren vælge et billede til sin karakter, når den dobbeltklikkes på
         {
             OpenFileDialog pic = new OpenFileDialog();
             if (pic.ShowDialog() == DialogResult.OK)
@@ -352,12 +328,13 @@ namespace CharacterSheet
         }
         #endregion
 
+        // tjekker hver skill proficidncy igennem for om de har proficiency, jack og all trades eller ingen bonuser.
         #region SAVINGTHROWPROFICIENCYTOGGLES
         private void StrengthSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
-            mySavingthrow.proficiency[0] = StrengthSaveProficiencyToggle.Checked;
-            StrengthSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.StrengthSave, StrengthSaveProficiencyToggle.Checked);
+            SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter); // instansiater Saving throw
+            mySavingthrow.proficiency[0] = StrengthSaveProficiencyToggle.Checked; // giver Savingthrow en bool værdi af enten true eller false
+            StrengthSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.StrengthSave, StrengthSaveProficiencyToggle.Checked); // Udregner om der er Proficency eller ej
         }
 
         private void DexteritySaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
@@ -396,90 +373,98 @@ namespace CharacterSheet
         }
         #endregion
 
+        // checker igennem om der er sat flueben udfor en checkboks, og hvad der sker derefter.
         #region CHECKCHANGED
  
-        private void EditSheetCheck_CheckedChanged(object sender, EventArgs e)
+        private void EditSheetCheck_CheckedChanged(object sender, EventArgs e) // gør sheetet editbvart og hvis hvad der kan edittes.
         {
-            if (EditSheetCheck.Checked == true)
+            if (EditSheetCheck.Checked == true) 
             {
-                EditSheetTrueWrite();
-                EditSheetTrueColor();
+                EditSheetTrueWrite(); // gør at man kan skrive i udvalgte steder i sheetet
+                EditSheetTrueColor(); // ændre farven på de udvalgte steder
             }
             else
             {
-                EditSheetFalseRead();
-                EditSheetFalseColor();
+                EditSheetFalseRead(); // fjerner muligheden for at skrive i de udvalgte steder
+                EditSheetFalseColor(); // sætter farven på de udvalgte steder tilbage til originalen
+
+                // resten her opdaterer sheetet med de nye informationer.
                 LoadAttributes();
                 LoadCharacterInfo();
                 LoadSkills();
                 LoadEquippedItems();
             }
         }
-        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e)
+       
+        private void JackOfAllTradesCheck_CheckedChanged(object sender, EventArgs e) // tjekker om JAck Of All Trades er slået til
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
 
-            AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
-            AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
-            SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
-            StealthLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
-            ArcanaLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
-            HistoryLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
-            NatureLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
-            InvestigationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
-            ReligionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
-            AnimalHandlingLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
-            InsightLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
-            MedicineLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
-            PerceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
-            SurvivalLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
-            DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
-            IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
-            PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
-            PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
+            // Hvis jack of all trades er slået til, går den hver skill igennem og tjekker hvorvidt om de har proficiency. 
+            // Hvis de ikke har, så får de værdien af jack of all trades, hvis de har proficency får de den værdi i  stedet.
+
+            AthleticsLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
+            AcrobaticsLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
+            SleightOfHandLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
+            StealthLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
+            ArcanaLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
+            HistoryLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
+            NatureLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
+            InvestigationLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
+            ReligionLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
+            AnimalHandlingLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
+            InsightLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
+            MedicineLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
+            PerceptionLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
+            SurvivalLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
+            DeceptionLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
+            IntimidationLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
+            PerformanceLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
+            PersuasionLabel.Text = mySkill.CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
         }
 
-        private void ShieldEquippedCheck_CheckedChanged(object sender, EventArgs e)
+        private void ShieldEquippedCheck_CheckedChanged(object sender, EventArgs e) // tjekker om et skjold er equippet og genloader equipped items, med den nye Armor Class værdi.
         {
             myEquippedItems.shieldEquipped = ShieldEquippedCheck.Checked;
             LoadEquippedItems();
         }
 
-        private void WeaponSlotOneProficiency_CheckedChanged(object sender, EventArgs e)
+        private void WeaponSlotOneProficiency_CheckedChanged(object sender, EventArgs e) // tjekker om der er proficency i første våben equipped.
         {
             LoadEquippedItems();
         }
 
-        private void WeaponSlotTwoProficiency_CheckedChanged(object sender, EventArgs e)
+        private void WeaponSlotTwoProficiency_CheckedChanged(object sender, EventArgs e) // tjekker om der er proficency i andet våben equipped.
         {
             LoadEquippedItems();
         }
 
-        private void WeaponSlotThreeProficiency_CheckedChanged(object sender, EventArgs e)
+        private void WeaponSlotThreeProficiency_CheckedChanged(object sender, EventArgs e) // tjekker om der er proficency i tredje våben equipped.
         {
             LoadEquippedItems();
         }
         #endregion
 
+        // ændre værdien på funktioner der fungerer med en numeric up/down value, som nuværende liv og ens resources.
         #region VALUECHANGE
 
-        private void CurrentHitPointsDisplay_ValueChanged(object sender, EventArgs e)
+        private void CurrentHitPointsDisplay_ValueChanged(object sender, EventArgs e) // sætter værdien for current HP.
         {
-            CurrentHitPointsDisplay.Maximum = Convert.ToInt32(MaxHealthDisplay.Text);
+            CurrentHitPointsDisplay.Maximum = Convert.ToInt32(MaxHealthDisplay.Text); // sætter den max værdi som CurrentHP kan sættes med, vha pil op og ned.
 
-            if (CurrentHitPointsDisplay.Value > Convert.ToInt32(MaxHealthDisplay.Text))
+            if (CurrentHitPointsDisplay.Value > Convert.ToInt32(MaxHealthDisplay.Text)) // Hvis den skrevne mængde er over MAxHP, vil værdien sættes til maxhps værdi
             {
                 CurrentHitPointsDisplay.Value = 12;
 
             }
-            else if (CurrentHitPointsDisplay.Value < 0)
+            else if (CurrentHitPointsDisplay.Value < 0) // Hvis værdien går under nul, vil den sættes til 0;
             {
                 CurrentHitPointsDisplay.Value = 0;
             }
             myCharacter.currentHealth = Convert.ToInt32(CurrentHitPointsDisplay.Value);
         }
 
-        private void ClassResourcesNumericUpDown_ValueChanged(object sender, EventArgs e)
+        private void ClassResourcesNumericUpDown_ValueChanged(object sender, EventArgs e) // giver værdi til Class Resources. Hvis værdien er under nul, sættes den til nul
         {
             if (ClassResourcesNumericUpDown.Value < 0)
             {
@@ -488,7 +473,9 @@ namespace CharacterSheet
         }
         #endregion
 
-        #region TEXTCHANGED
+        // ændrer teksten i følgende områder på sheetet.
+        #region TEXTCHANGED 
+
         private void TraitsDisplay_TextChanged(object sender, EventArgs e)
         {
             myCharacter.traits = TraitsDisplay.Text;
@@ -516,16 +503,16 @@ namespace CharacterSheet
             myCharacter.backstory = BackstoryBox.Text;
         }
 
-        private void ExperienceDisplayTextBox_TextChanged(object sender, EventArgs e)
+        private void ExperienceDisplayTextBox_TextChanged(object sender, EventArgs e) 
         {
-            bool OutOfReach = string.IsNullOrEmpty(ExperienceDisplayTextBox.Text);
+            bool OutOfReach = string.IsNullOrEmpty(ExperienceDisplayTextBox.Text); // tjekker om der er en value
             if (OutOfReach == false)
             {
-                myCharacter.experience = ExperienceDisplayTextBox.Text;
+                myCharacter.experience = ExperienceDisplayTextBox.Text; // hvis værdien er okay, sættes værdien i MyCharacter til det der er skrevet i boksen
             }
             else
             {
-                ExperienceDisplayTextBox.Text = myCharacter.experience;
+                ExperienceDisplayTextBox.Text = myCharacter.experience; // ellers sættes det til dens sidste accepterede værdi og en popup kommer.
                 MessageBox.Show("Must have a value");
             }
         }
@@ -553,13 +540,13 @@ namespace CharacterSheet
         private void LevelDisplayTextBox_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(LevelDisplayTextBox.Text);
-            if (OutOfReach == false && Convert.ToInt32(LevelDisplayTextBox.Text) <= 20 && Convert.ToInt32(LevelDisplayTextBox.Text) >= 1)
+            if (OutOfReach == false && Convert.ToInt32(LevelDisplayTextBox.Text) <= 20 && Convert.ToInt32(LevelDisplayTextBox.Text) >= 1) // tjekker om lvl skrevet er indenfor 1 og 20
             {
-                myCharacter.level = Convert.ToInt32(LevelDisplayTextBox.Text);
+                myCharacter.level = Convert.ToInt32(LevelDisplayTextBox.Text); // sætter værdien hvis den er valid
             }
             else
             {
-                LevelDisplayTextBox.Text = Convert.ToString(myCharacter.level);
+                LevelDisplayTextBox.Text = Convert.ToString(myCharacter.level); // ellers sættes den til sidst accepterede værdi og en popup kommer.
                 MessageBox.Show("Level must be within range 1 and 20");
             }
         }
@@ -568,14 +555,9 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(CharismaAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(CharismaAttributeDisplay.Text);
-            }
-            else
-            {
-            }
-            if (Range >= 0 && Range <= 20)
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, CharismaAttributeDisplay.Text);
+       
+            if (Range >= 0 && Range <= 20) // tjekker om attributen er indenfor 1 - 20, hvis den er får den ny værdi eller får den, den gamle vædi.
             {
                 myAttributes.Attributes[5] = Convert.ToInt32(Range);
             }
@@ -590,13 +572,8 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(WisdomAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(WisdomAttributeDisplay.Text);
-            }
-            else
-            {
-            }
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, WisdomAttributeDisplay.Text);
+        
             if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[4] = Convert.ToInt32(Range);
@@ -612,13 +589,8 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(IntelligenceAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(IntelligenceAttributeDisplay.Text);
-            }
-            else
-            {
-            }
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, IntelligenceAttributeDisplay.Text);
+
             if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[3] = Convert.ToInt32(Range);
@@ -634,13 +606,8 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(ConstitutionAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(ConstitutionAttributeDisplay.Text);
-            }
-            else
-            {
-            }
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, ConstitutionAttributeDisplay.Text);
+
             if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[2] = Convert.ToInt32(Range);
@@ -656,13 +623,8 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(DexterityAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(DexterityAttributeDisplay.Text);
-            }
-            else
-            {
-            }
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, DexterityAttributeDisplay.Text);
+
             if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[1] = Convert.ToInt32(Range);
@@ -678,13 +640,8 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(StrengthAttributeDisplay.Text);
             int Range = 0;
-            if (OutOfReach == false)
-            {
-                Range = Int32.Parse(StrengthAttributeDisplay.Text);
-            }
-            else
-            {
-            }
+            Range = myCharacter.AttributeRangeChecker(OutOfReach, Range, StrengthAttributeDisplay.Text);
+
             if (Range >= 0 && Range <= 20)
             {
                 myAttributes.Attributes[0] = Convert.ToInt32(Range);
@@ -718,69 +675,35 @@ namespace CharacterSheet
                 MaxHealthDisplay.Text = "";
             }
         }
+
         private void CopperCoinsDisplay_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(CopperCoinsDisplay.Text);
-            if (OutOfReach == false)
-            {
-                myItem.Copper = Convert.ToInt32(CopperCoinsDisplay.Text);
-            }
-            else
-            {
-                myItem.Copper = myItem.Copper;
-            }
+            myItem.Copper = Convert.ToInt32(myUtillities.NewValue(OutOfReach, CopperCoinsDisplay.Text)); // lægger en ny værdi i coins, udfra user input
         }
 
         private void SilverCoinsDisplay_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(SilverCoinsDisplay.Text);
-            if (OutOfReach == false)
-            {
-                myItem.Silver = Convert.ToInt32(SilverCoinsDisplay.Text);
-            }
-            else
-            {
-                myItem.Silver = myItem.Silver;
-            }
+            myItem.Silver = Convert.ToInt32(myUtillities.NewValue(OutOfReach, SilverCoinsDisplay.Text));
         }
 
         private void ElectrumCoinsDisplay_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(ElectrumCoinsDisplay.Text);
-            if (OutOfReach == false)
-            {
-                myItem.Electrum = Convert.ToInt32(ElectrumCoinsDisplay.Text);
-            }
-            else
-            {
-                myItem.Electrum = myItem.Electrum;
-            }
+            myItem.Electrum = Convert.ToInt32(myUtillities.NewValue(OutOfReach, ElectrumCoinsDisplay.Text));
         }
 
         private void GoldCoinsDisplay_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(GoldCoinsDisplay.Text);
-            if (OutOfReach == false)
-            {
-                myItem.Gold = Convert.ToInt32(GoldCoinsDisplay.Text);
-            }
-            else
-            {
-                myItem.Gold = myItem.Gold;
-            }
+            myItem.Gold = Convert.ToInt32(myUtillities.NewValue(OutOfReach, GoldCoinsDisplay.Text));
         }
 
         private void PlatinumCoinsDisplay_TextChanged(object sender, EventArgs e)
         {
             bool OutOfReach = string.IsNullOrEmpty(PlatinumCoinsDisplay.Text);
-            if (OutOfReach == false)
-            {
-                myItem.Platinum = Convert.ToInt32(PlatinumCoinsDisplay.Text);
-            }
-            else
-            {
-                myItem.Gold = myItem.Platinum;
-            }
+            myItem.Platinum = Convert.ToInt32(myUtillities.NewValue(OutOfReach, PlatinumCoinsDisplay.Text));
         }
 
         private void AttunementSlotOneTextBox_TextChanged(object sender, EventArgs e)
@@ -791,13 +714,11 @@ namespace CharacterSheet
         private void AttunementSlotTwoTextBox_TextChanged(object sender, EventArgs e)
         {
             myEquippedItems.AttunementSlotTwoName = AttunementSlotTwoTextBox.Text;
-
         }
 
         private void AttunementSlotThreeTextBox_TextChanged(object sender, EventArgs e)
         {
             myEquippedItems.AttunementSlotThreeName = AttunementSlotThreeTextBox.Text;
-
         }
 
         private void MagicItemOneTextBox_TextChanged(object sender, EventArgs e)
@@ -808,273 +729,146 @@ namespace CharacterSheet
         private void MagicItemTwoTextBox_TextChanged(object sender, EventArgs e)
         {
             myEquippedItems.MagicItemTwoName = MagicItemTwoTextBox.Text;
-
         }
 
         private void MagicItemThreeTextBox_TextChanged(object sender, EventArgs e)
         {
             myEquippedItems.MagicItemThreeName = MagicItemThreeTextBox.Text;
-
         }
         #endregion
 
+        // tjekker hver skill proficidncy igennem for om de har proficiency, jack og all trades eller ingen bonuser.
         #region SKILLPROFICIENCYTOGGLE
+
         private void AthleticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
-            Skill mySkill = new Skill(myAttributes, myCharacter);
-            mySkill.proficiency[3] = AthleticsProficiencyToggle.Checked;
-            if (AthleticsProficiencyToggle.Checked == true)
-            {
-                AthleticsLabel.Text = CheckProficiencyToggle(mySkill.Athletics, AthleticsProficiencyToggle.Checked);
-            }
-            else
-            {
-                AthleticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AthleticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Athletics, AthleticsLabel.Text);
-            }
-
+            Skill mySkill = new Skill(myAttributes, myCharacter); // Starter med en instance af skillen
+            mySkill.proficiency[3] = AthleticsProficiencyToggle.Checked; // efterfulgt af et check om der skal være proficency eller ej
+            AthleticsLabel.Text = ProficencyDisplayCalc(AthleticsProficiencyToggle.Checked, AthleticsLabel.Text, mySkill.Athletics, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked); //  og slutter med en udregning deraf
         }
 
         private void AcrobaticsProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[0] = AcrobaticsProficiencyToggle.Checked;
-            if (AcrobaticsProficiencyToggle.Checked == true)
-            {
-                AcrobaticsLabel.Text = CheckProficiencyToggle(mySkill.Acrobatics, AcrobaticsProficiencyToggle.Checked);
-            }
-            else
-            {
-                AcrobaticsLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AcrobaticsProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Acrobatics, AcrobaticsLabel.Text);
-            }
+            AcrobaticsLabel.Text = ProficencyDisplayCalc(AcrobaticsProficiencyToggle.Checked, AcrobaticsLabel.Text, mySkill.Acrobatics, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void SleightOfHandProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[15] = SleightOfHandProficiencyToggle.Checked;
-            if (SleightOfHandProficiencyToggle.Checked == true)
-            {
-                SleightOfHandLabel.Text = CheckProficiencyToggle(mySkill.SleightOfHand, SleightOfHandProficiencyToggle.Checked);
-            }
-            else
-            {
-                SleightOfHandLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SleightOfHandProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.SleightOfHand, SleightOfHandLabel.Text);
-            }
+            SleightOfHandLabel.Text = ProficencyDisplayCalc(SleightOfHandProficiencyToggle.Checked, SleightOfHandLabel.Text, mySkill.SleightOfHand, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void StealthProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[16] = StealthProficiencyToggle.Checked;
-            if (StealthProficiencyToggle.Checked == true)
-            {
-                StealthLabel.Text = CheckProficiencyToggle(mySkill.Stealth, StealthProficiencyToggle.Checked);
-            }
-            else
-            {
-                StealthLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, StealthProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Stealth, StealthLabel.Text);
-            }
+            StealthLabel.Text = ProficencyDisplayCalc(StealthProficiencyToggle.Checked, StealthLabel.Text, mySkill.Stealth, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void ArcanaProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[2] = ArcanaProficiencyToggle.Checked;
-            if (ArcanaProficiencyToggle.Checked == true)
-            {
-                ArcanaLabel.Text = CheckProficiencyToggle(mySkill.Arcana, ArcanaProficiencyToggle.Checked);
-            }
-            else
-            {
-                ArcanaLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ArcanaProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Arcana, ArcanaLabel.Text);
-            }
+            ArcanaLabel.Text = ProficencyDisplayCalc(ArcanaProficiencyToggle.Checked, ArcanaLabel.Text, mySkill.Arcana, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void HistoryProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[5] = HistoryProficiencyToggle.Checked;
-            if (HistoryProficiencyToggle.Checked == true)
-            {
-                HistoryLabel.Text = CheckProficiencyToggle(mySkill.History, HistoryProficiencyToggle.Checked);
-            }
-            else
-            {
-                HistoryLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, HistoryProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.History, HistoryLabel.Text);
-            }
+            HistoryLabel.Text = ProficencyDisplayCalc(HistoryProficiencyToggle.Checked, HistoryLabel.Text, mySkill.History, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void NatureProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[10] = NatureProficiencyToggle.Checked;
-            NatureLabel.Text = CheckProficiencyToggle(mySkill.Nature, NatureProficiencyToggle.Checked);
-            if (NatureProficiencyToggle.Checked == true)
-            {
-                NatureLabel.Text = CheckProficiencyToggle(mySkill.Nature, NatureProficiencyToggle.Checked);
-            }
-            else
-            {
-                NatureLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, NatureProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Nature, NatureLabel.Text);
-            }
+            NatureLabel.Text = ProficencyDisplayCalc(NatureProficiencyToggle.Checked, NatureLabel.Text, mySkill.Nature, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void InvestigationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[8] = InvestigationProficiencyToggle.Checked;
-            if (InvestigationProficiencyToggle.Checked == true)
-            {
-                InvestigationLabel.Text = CheckProficiencyToggle(mySkill.Investigation, InvestigationProficiencyToggle.Checked);
-            }
-            else
-            {
-                InvestigationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InvestigationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Investigation, InvestigationLabel.Text);
-            }
+            InvestigationLabel.Text = ProficencyDisplayCalc(InvestigationProficiencyToggle.Checked, InvestigationLabel.Text, mySkill.Investigation, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void ReligionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[14] = ReligionProficiencyToggle.Checked;
-            if (ReligionProficiencyToggle.Checked == true)
-            {
-                ReligionLabel.Text = CheckProficiencyToggle(mySkill.Religion, ReligionProficiencyToggle.Checked);
-            }
-            else
-            {
-                ReligionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, ReligionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Religion, ReligionLabel.Text);
-            }
+            ReligionLabel.Text = ProficencyDisplayCalc(ReligionProficiencyToggle.Checked, ReligionLabel.Text, mySkill.Religion, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void AnimalHandlingProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[1] = AnimalHandlingProficiencyToggle.Checked;
-            if (AnimalHandlingProficiencyToggle.Checked == true)
-            {
-                AnimalHandlingLabel.Text = CheckProficiencyToggle(mySkill.AnimalHandling, AnimalHandlingProficiencyToggle.Checked);
-            }
-            else
-            {
-                AnimalHandlingLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, AnimalHandlingProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.AnimalHandling, AnimalHandlingLabel.Text);
-            }
+            AnimalHandlingLabel.Text = ProficencyDisplayCalc(AnimalHandlingProficiencyToggle.Checked, AnimalHandlingLabel.Text, mySkill.AnimalHandling, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void InsightProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[6] = InsightProficiencyToggle.Checked;
-            if (InsightProficiencyToggle.Checked == true)
-            {
-                InsightLabel.Text = CheckProficiencyToggle(mySkill.Insight, InsightProficiencyToggle.Checked);
-            }
-            else
-            {
-                InsightLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, InsightProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Insight, InsightLabel.Text);
-            }
+            InsightLabel.Text = ProficencyDisplayCalc(InsightProficiencyToggle.Checked, InsightLabel.Text, mySkill.Insight, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void MedicineProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[9] = MedicineProficiencyToggle.Checked;
-            if (MedicineProficiencyToggle.Checked == true)
-            {
-                MedicineLabel.Text = CheckProficiencyToggle(mySkill.Medicine, MedicineProficiencyToggle.Checked);
-            }
-            else
-            {
-                MedicineLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, MedicineProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Medicine, MedicineLabel.Text);
-            }
+            MedicineLabel.Text = ProficencyDisplayCalc(MedicineProficiencyToggle.Checked, MedicineLabel.Text, mySkill.Medicine, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void PerceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[11] = PerceptionProficiencyToggle.Checked;
-            if (PerceptionProficiencyToggle.Checked == true)
-            {
-                PerceptionLabel.Text = CheckProficiencyToggle(mySkill.Perception, PerceptionProficiencyToggle.Checked);
-            }
-            else
-            {
-                PerceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Perception, PerceptionLabel.Text);
-            }
+            PerceptionLabel.Text = ProficencyDisplayCalc(PerceptionProficiencyToggle.Checked, PerceptionLabel.Text, mySkill.Perception, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void SurvivalProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[17] = SurvivalProficiencyToggle.Checked;
-            if (SurvivalProficiencyToggle.Checked == true)
-            {
-                SurvivalLabel.Text = CheckProficiencyToggle(mySkill.Survival, SurvivalProficiencyToggle.Checked);
-            }
-            else
-            {
-                SurvivalLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, SurvivalProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Survival, SurvivalLabel.Text);
-            }
+            SurvivalLabel.Text = ProficencyDisplayCalc(SurvivalProficiencyToggle.Checked, SurvivalLabel.Text, mySkill.Survival, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void DeceptionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[4] = DeceptionProficiencyToggle.Checked;
-            if (DeceptionProficiencyToggle.Checked == true)
-            {
-                DeceptionLabel.Text = CheckProficiencyToggle(mySkill.Deception, DeceptionProficiencyToggle.Checked);
-            }
-            else
-            {
-                DeceptionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, DeceptionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Deception, DeceptionLabel.Text);
-            }
+            DeceptionLabel.Text = ProficencyDisplayCalc(DeceptionProficiencyToggle.Checked, DeceptionLabel.Text, mySkill.Deception, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void IntimidationProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[7] = IntimidationProficiencyToggle.Checked;
-            if (IntimidationProficiencyToggle.Checked == true)
-            {
-                IntimidationLabel.Text = CheckProficiencyToggle(mySkill.Intimidation, IntimidationProficiencyToggle.Checked);
-            }
-            else
-            {
-                IntimidationLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, IntimidationProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Intimidation, IntimidationLabel.Text);
-            }
+            IntimidationLabel.Text = ProficencyDisplayCalc(IntimidationProficiencyToggle.Checked, IntimidationLabel.Text, mySkill.Intimidation, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void PerformanceProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[12] = PerformanceProficiencyToggle.Checked;
-            if (PerformanceProficiencyToggle.Checked == true)
-            {
-                PerformanceLabel.Text = CheckProficiencyToggle(mySkill.Performance, PerformanceProficiencyToggle.Checked);
-            }
-            else
-            {
-                PerformanceLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PerformanceProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Performance, PerformanceLabel.Text);
-            }
+            PerformanceLabel.Text = ProficencyDisplayCalc(PerformanceProficiencyToggle.Checked, PerformanceLabel.Text, mySkill.Performance, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);
         }
 
         private void PersuasionProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             mySkill.proficiency[13] = PersuasionProficiencyToggle.Checked;
-            if (PersuasionProficiencyToggle.Checked == true)
-            {
-                PersuasionLabel.Text = CheckProficiencyToggle(mySkill.Persuasion, PersuasionProficiencyToggle.Checked);
-            }
-            else
-            {
-                PersuasionLabel.Text = CheckJackOfAllTradesToggle(myCharacter.proficiencyBonus, PersuasionProficiencyToggle.Checked, JackOfAllTradesCheck.Checked, mySkill.Persuasion, PersuasionLabel.Text);
-            }
+            PersuasionLabel.Text = ProficencyDisplayCalc(PersuasionProficiencyToggle.Checked, PersuasionLabel.Text, mySkill.Persuasion, myCharacter.proficiencyBonus, JackOfAllTradesCheck.Checked);      
         }
         #endregion
 
-        #region KEYPRESSEVENTS
+        // Tjekker hvilke knapper der trykkes på, når brugeren skriver i programmet.
+        #region KEYPRESSEVENTS 
         private void LevelDisplayTextBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             OnlyTakeNumbers(e);
@@ -1151,44 +945,55 @@ namespace CharacterSheet
         }
         #endregion
 
+        // Metoder lavet til at køre forskellige funktionaliteter af programmet.
         #region METHODS
-        string CheckJackOfAllTradesToggle(int HalfBonus, bool ProficiencyToggle, bool JackToggle, int OldValue, string CurrentValue)
+
+        void RemoveFeatures(ListView CurrentListView, List<Feat> FeatList) // Fjerner Features fra listen
         {
-            int NewValue = HalfBonus / 2 + OldValue;//Skal lige laves til en float og tilføjes en if statement for at undgå komma tal.
-            if (ProficiencyToggle == false && JackToggle == true)
+            for (int i = 0; i < CurrentListView.Items.Count; i++) // kører igennem den valgte liste
             {
-                return Convert.ToString(NewValue);
-            }
-            else if (ProficiencyToggle == true && JackToggle == true)
-            {
-                return Convert.ToString(CurrentValue);
-            }
-            else if (ProficiencyToggle == true && JackToggle == false)
-            {
-                return Convert.ToString(CurrentValue);
-            }
-            else
-            {
-                return Convert.ToString(OldValue);
+                if (CurrentListView.Items[i].Selected) // hvis itemmet er fundet fjernes den fra listview og listen
+                {
+                    FeatList.RemoveAt(i);
+                    CurrentListView.Items[i].Remove();
+                }
+                else
+                {
+                }
+
             }
         }
 
-        string CheckProficiencyToggle(int SavingthrowSave, bool ProficiencyToggle)
+        string CheckProficiencyToggle(int SkillToCheck, bool ProficiencyToggle) // Tjekker om proficency er slået til
         {
             if (ProficiencyToggle == false)
             {
-                return Convert.ToString(SavingthrowSave);
+                return Convert.ToString(SkillToCheck); // returnerer SKillToCheck uden proficency, som udregnes i Skill classen baseret på Proficienytogglen
             }
             else
             {
-                return Convert.ToString(SavingthrowSave);
+                return Convert.ToString(SkillToCheck); // returnerer SKillToCheck med proficency, som udregnes i Skill classen baseret på Proficienytogglen
             }
         }
-
-        void LoadAttributes()
+       
+        string ProficencyDisplayCalc(bool ProficencyState, string TextToDisplay, int SkillToUse, int CharacterProficency, bool JackOfAllTradesState)
+        {
+            Skill mySkill = new Skill(myAttributes, myCharacter);
+            if (ProficencyState == true) // checker om Proficency er slået til
+            {
+                return CheckProficiencyToggle(SkillToUse, ProficencyState); // Hvis proficency er slået til, returneres Værdien af skille,sammen med proficency bonus.
+            }
+            else // ellers returneres værdien med jack of all trades¨, som enten er slået til eller fra. 
+            {
+                return mySkill.CheckJackOfAllTradesToggle(CharacterProficency, ProficencyState, JackOfAllTradesState, SkillToUse, TextToDisplay);
+            }
+        }
+       
+        void LoadAttributes() // Loader character equipmentets værdier fra Savingthrows classen og lægger det over i de respektive pladser i Charactersheetet converteret til strings og tjekker om proficency er slået til eller ej.
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
-
+      
+            // lægger værdier i respektive pladser
             StrengthAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[0]);
             DexterityAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[1]);
             ConstitutionAttributeDisplay.Text = Convert.ToString(myAttributes.Attributes[2]);
@@ -1209,7 +1014,8 @@ namespace CharacterSheet
             IntelligenceSaveLabel.Text = Convert.ToString(mySavingthrow.IntelligenceSave);
             WisdomSaveLabel.Text = Convert.ToString(mySavingthrow.WisdomSave);
             CharismaSaveLabel.Text = Convert.ToString(mySavingthrow.CharismaSave);
-
+            
+            //Tjekker om Proficency er slået til
             StrengthSaveProficiencyToggle.CheckStateChanged += StrengthSaveProficiencyToggle_CheckedChanged;
             DexteritySaveProficiencyToggle.CheckStateChanged += DexteritySaveProficiencyToggle_CheckedChanged;
             ConstitutionSaveProficiencyToggle.CheckStateChanged += ConstitutionSaveProficiencyToggle_CheckedChanged;
@@ -1218,10 +1024,10 @@ namespace CharacterSheet
             CharismaSaveProficiencyToggle.CheckStateChanged += CharismaSaveProficiencyToggle_CheckedChanged;
         }
 
-        void LoadSkills()
+        void LoadSkills() // Loader character equipmentets værdier fra Skills classen og lægger det over i de respektive pladser i Charactersheetet converteret til strings og tjekker om Proficency er slået til eller ej.
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
-
+            // lægger værdier i respektive pladser
             AthleticsLabel.Text = Convert.ToString(mySkill.Athletics);
             AcrobaticsLabel.Text = Convert.ToString(mySkill.Acrobatics);
             SleightOfHandLabel.Text = Convert.ToString(mySkill.SleightOfHand);
@@ -1241,6 +1047,7 @@ namespace CharacterSheet
             PerformanceLabel.Text = Convert.ToString(mySkill.Performance);
             PersuasionLabel.Text = Convert.ToString(mySkill.Persuasion);
 
+            //Tjekker om Proficency er slået til
             AthleticsProficiencyToggle.CheckStateChanged += AthleticsProficiencyToggle_CheckedChanged;
             AcrobaticsProficiencyToggle.CheckStateChanged += AcrobaticsProficiencyToggle_CheckedChanged;
             SleightOfHandProficiencyToggle.CheckStateChanged += SleightOfHandProficiencyToggle_CheckedChanged;
@@ -1262,14 +1069,14 @@ namespace CharacterSheet
 
         }
 
-        void LoadCharacterInfo()
+        void LoadCharacterInfo() // Loader character equipmentets værdier fra EQuipemntclassen og lægger det over i de respektive pladser i Charactersheetet converteret til strings.
         {
             RaceDisplayTextBox.Text = myCharacter.race;
             LevelDisplayTextBox.Text = Convert.ToString(myCharacter.level);
             AlignmentDisplayTextBox.Text = myCharacter.alignment;
             ClassDisplayTextBox.Text = myCharacter.characterClass;
             BackgroundDisplayTextBox.Text = myCharacter.background;
-            ExperienceDisplayTextBox.Text = "0";
+            ExperienceDisplayTextBox.Text = myCharacter.experience;
 
             CharacterNameLabel.Text = myCharacter.characterName;
             BondsDisplay.Text = myCharacter.bonds;
@@ -1286,15 +1093,15 @@ namespace CharacterSheet
 
         }
 
-        void OnlyTakeNumbers(KeyPressEventArgs e)
+        void OnlyTakeNumbers(KeyPressEventArgs e) // Sørger for at brugeren kun kan skrive tal i tekstbokse
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)) // tjekker hvad brugeren har af input, hvis det er et tal, bliver e.handled sat til true og inputtet accepteres.
             {
                 e.Handled = true;
             }
         }
 
-        void EditSheetTrueColor()
+        void EditSheetTrueColor() // Hvis edit sheets værdier er sat til true, så sættes følgende variables farve til hvid, så brugeren kan se de kan ændres
         {
             RaceDisplayTextBox.BackColor = Color.White;
             ClassDisplayTextBox.BackColor = Color.White;
@@ -1320,7 +1127,7 @@ namespace CharacterSheet
             BackstoryBox.BackColor = Color.White;
         }
 
-        void EditSheetFalseColor()
+        void EditSheetFalseColor() // Hvis EditSheet værdi er sat til false, ændres farverne i følgende variabler tilbage til deres originale farver
         {
             RaceDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
             ClassDisplayTextBox.BackColor = ColorTranslator.FromHtml("#D2D6D7");
@@ -1345,7 +1152,7 @@ namespace CharacterSheet
             FlawsDisplay.BackColor = ColorTranslator.FromHtml("#777A88");
             BackstoryBox.BackColor = ColorTranslator.FromHtml("#777A88");
         }
-        void EditSheetTrueWrite()
+        void EditSheetTrueWrite() // Hvis editsheet er sat til true, kan følgende værdier i sheetet ændres.
         {
             RaceDisplayTextBox.Enabled = true;
             ClassDisplayTextBox.Enabled = true;
@@ -1371,7 +1178,7 @@ namespace CharacterSheet
             BackstoryBox.Enabled = true;
         }
 
-        void EditSheetFalseRead()
+        void EditSheetFalseRead() // Hvis Editsheet er slået fra, fjernes muligheden for at ændre i følgende værdier på sheetet.
         {
             RaceDisplayTextBox.Enabled = false;
             ClassDisplayTextBox.Enabled = false;
@@ -1397,8 +1204,7 @@ namespace CharacterSheet
             BackstoryBox.Enabled = false;
         }
 
-
-        void LoadEquippedItems()
+        void LoadEquippedItems() // lægger værdierne fra Inventory Classen hen i deres respektive placeringer i Sheetet converteret til strings. 
         {
             WeaponSlotOneNameDisplay.Text = myEquippedItems.WeaponOneName;
             WeaponSlotOneATKBonusDisplay.Text = Convert.ToString(myEquippedItems.AtkBonusCalc(myEquippedItems.WeaponOneAttributeAssociation, WeaponSlotOneProficiency.Checked, myCharacter.proficiencyBonus, myAttributes.Modifiers[0], myAttributes.Modifiers[1], myAttributes.Modifiers[2], myAttributes.Modifiers[3], myAttributes.Modifiers[4], myAttributes.Modifiers[5]));
@@ -1420,7 +1226,7 @@ namespace CharacterSheet
 
         }
 
-        void LoadInventory()
+        void LoadInventory() // lægger værdierne fra Inventory Classen hen i deres respektive placeringer i Sheetet converteret til strings. 
         {
             CopperCoinsDisplay.Text = Convert.ToString(myItem.Copper);
             SilverCoinsDisplay.Text = Convert.ToString(myItem.Silver);
@@ -1429,26 +1235,27 @@ namespace CharacterSheet
             PlatinumCoinsDisplay.Text = Convert.ToString(myItem.Platinum);
         }
 
-        void RunInvList()
+        void RunInvList() // Kører inventorylsisten med alle typer af items.
         {
-            WeaponEquipSwitch = false;
-            InventoryListView.Columns.Clear();
-            InventoryListView.Items.Clear();
+            WeaponEquipSwitch = false; // Sætter WeaoinEquipSwitch til false, så EquipfromInventory metoden tager den rigtige værdi til våbnet der skal equippes.
+            InventoryListView.Columns.Clear(); // rydder Inventorylistviews rækker
+            InventoryListView.Items.Clear(); // rydder inventory list objekter i arrayet
+            // laver columns til listviewet
             InventoryListView.Columns.Add("Name", 45, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Amount", 50, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Lbs", 30, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("AC/AttributeAssociation", 80, HorizontalAlignment.Left);
             InventoryListView.Columns.Add("Description", 80, HorizontalAlignment.Left);
 
-            int i = 0;
-            foreach (var Item in myInventoryList)
+            int i = 0; 
+            foreach (var Item in myInventoryList) // kigger igennem alle inventorylistens objekter
             {
-                int ID = Item.ItemID;
+                int ID = Item.ItemID; // bruger item id til at se om det er et 1: Item, 2: Armor eller 3: våben
 
 
-                switch (Item.ItemID)
+                switch (Item.ItemID)  // tilføjer item, armor eller våben til placering i, i listen og konverterer dem der ikke er strings til strings, bagefter øger den i med en
                 {
-                    case 1:
+                    case 1: 
                         InventoryListView.Items.Add(Item.ItemName, i);
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.AmountHeld));
                         InventoryListView.Items[i].SubItems.Add(Convert.ToString(Item.WeightPerItem));
@@ -1480,14 +1287,14 @@ namespace CharacterSheet
             }
         }
 
-        private void RemoveFromInvButton_Click_1(object sender, EventArgs e)
+        private void RemoveFromInvButton_Click_1(object sender, EventArgs e) // Fjerner et Item Fra Listen oog Listviewet
         {
-            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            for (int i = 0; i < InventoryListView.Items.Count; i++)  // kører igennem listview og hvis det item der er valgt eksisterr, så pauser for loopet of går ind i if statementen
             {
                 if (InventoryListView.Items[i].Selected)
                 {
-                    for (int j = 0; j < myInventoryList.Count; j++)
-                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                    for (int j = 0; j < myInventoryList.Count; j++) // her tjekkes inventorylisten igennen efter et objekt med samme navn
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))  // hvis den findes fjernes den fra listen og inventorylisten
                         {
                             myInventoryList.RemoveAt(j);
                             InventoryListView.Items[i].Remove();
@@ -1499,15 +1306,14 @@ namespace CharacterSheet
             }
         }
 
-
-        private void MinusOneButton_Click(object sender, EventArgs e)
+        private void MinusOneButton_Click(object sender, EventArgs e)// sænker mængden af et Objekts "AmountHeld" med en, hvis det er valgt.
         {
-            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            for (int i = 0; i < InventoryListView.Items.Count; i++) // kører igennem listview og hvis det item der er valgt eksisterr, så pauser for loopet of går ind i if statementen
             {
                 if (InventoryListView.Items[i].Selected)
                 {
-                    for (int j = 0; j < myInventoryList.Count; j++)
-                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                    for (int j = 0; j < myInventoryList.Count; j++) // her tjekkes inventorylisten igennen efter et objekt med samme navn
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text)) // Hvis det findes Sænkes mængden af "AmountHeld" med 1, hvis den ender på nul eller lavere, så Fjernes den fra listen og listviewet
                         {
                             myInventoryList[j].AmountHeld -= 1;
                             InventoryListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[j].AmountHeld);
@@ -1525,14 +1331,14 @@ namespace CharacterSheet
             }
         }
 
-        private void AddOneButton_Click(object sender, EventArgs e)
+        private void AddOneButton_Click(object sender, EventArgs e)// øger mængden af et Objekts "AmountHeld" med en, hvis det er valgt.
         {
-            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            for (int i = 0; i < InventoryListView.Items.Count; i++) // kører igennem listview og hvis det item der er valgt eksisterr, så pauser for loopet of går ind i if statementen
             {
                 if (InventoryListView.Items[i].Selected)
                 {
-                    for (int j = 0; j < myInventoryList.Count; j++)
-                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                    for (int j = 0; j < myInventoryList.Count; j++) // her tjekkes inventorylisten igennen efter et objekt med samme navn
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text)) // Hvis det eksisterer så øges "AmountHeld med 1 og "AmountHeld" i listview opdateres.
                         {
                             myInventoryList[j].AmountHeld += 1;
                             InventoryListView.Items[i].SubItems[1].Text = Convert.ToString(myInventoryList[j].AmountHeld);
@@ -1544,29 +1350,29 @@ namespace CharacterSheet
             }
         }
 
-        private void EquipItemButton_Click(object sender, EventArgs e)
+        private void EquipItemButton_Click(object sender, EventArgs e) // Equipper et item man har valgt fra CharacterSheetet
         {
-            int Attributes;
-            for (int i = 0; i < InventoryListView.Items.Count; i++)
+            int Attributes; 
+            for (int i = 0; i < InventoryListView.Items.Count; i++) // Kører i igennem Listview igennem et item ad gangen
             {
-                if (InventoryListView.Items[i].Selected)
+                if (InventoryListView.Items[i].Selected) //  Hvis det objekt man har trykket på i listen findes er det på i'ne plads i arrayet
                 {
-                    for (int j = 0; j < myInventoryList.Count; j++)
-                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text))
+                    for (int j = 0; j < myInventoryList.Count; j++) // kører nu igennem inventorylisten med j
+                        if (myInventoryList[j].ItemName.Equals(InventoryListView.Items[i].Text)) // Hvis et objekt i Inventorylisten findés med samme navn som objekter i, stopper for loopet ved objekt j.
                         {
-                            switch (myInventoryList[j].ItemID)
+                            switch (myInventoryList[j].ItemID) //  Switchen tjekker om objekt j er et 1: Item, 2: Armor: 3: våben og kører en switch case.
                             {
-                                case 2:
+                                case 2: // Hvis det er et Armor, tages værdiern fra AC og og navn og lægges i den equipped armors fields og vises på Character sheetet.
                                     myEquippedItems.ACFromArmor = Convert.ToInt32(InventoryListView.Items[i].SubItems[3].Text);
                                     myEquippedItems.ArmorSlotChest = InventoryListView.Items[i].SubItems[0].Text;
                                     break;
-                                case 3:
+                                case 3:// ved våben er der to muligheder, da invenotry listen på sheetet kan sorteres på to forskellige måder skal der to cases frem WeaponID true og false, som har forskellige Attribute placeringer
                                     int WeaponID = i;
-
+                                    // begge tager attribute værdierne, myEquipped items værdierne, weapon ID og Inventorylistviews værdier og pbner en doalog boksm som spørger hvor det skal equippes. Derefter kører loadequippedITems(); som reloader equipped items i sheetet
                                     if (WeaponEquipSwitch == true)
                                     {
                                         Attributes = 7;
-                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "WEapon slot 1", "Weapon slot 2", "Weapon slot 3");
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "Weapon slot 1", "Weapon slot 2", "Weapon slot 3");
                                         if (WeaponEquip.ShowDialog() == DialogResult.OK)
                                         {
                                             LoadEquippedItems();
@@ -1575,13 +1381,13 @@ namespace CharacterSheet
                                     else
                                     {
                                         Attributes = 3;
-                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "WEapon slot 1", "Weapon slot 2", "Weapon slot 3");
+                                        EquipWeaponFromSheet WeaponEquip = new EquipWeaponFromSheet(Attributes, myEquippedItems, WeaponID, InventoryListView, "Where would you like to equip the weapon?", "Weapon slot 1", "Weapon slot 2", "Weapon slot 3");
                                         if (WeaponEquip.ShowDialog() == DialogResult.OK)
                                         {
                                             LoadEquippedItems();
                                         }
                                     }
-
+                                    // Hvis itemet ikke er våben eller armor kommer følgende besked
                                     break;
                                 default:
                                     MessageBox.Show("Selected item cannot be equipped");
@@ -1597,7 +1403,7 @@ namespace CharacterSheet
             LoadEquippedItems();
         }
 
-        void LoadCharacterInfoFromList()
+        void LoadCharacterInfoFromList() // Loader Character informationer ind i backend fieldsne, fra array der er gemt i Json Filen
         {
             myCharacter.characterName = Convert.ToString(CharacterInfo[0]);
             myCharacter.playerName = Convert.ToString(CharacterInfo[1]);
@@ -1620,26 +1426,26 @@ namespace CharacterSheet
             myAttributes.Attributes[5] = Convert.ToInt32(CharacterInfo[18]);
         }
 
-        void RunPreparedSpells()
+        void RunPreparedSpells() // Kører spells listen på sheetet.
         {
-            SpellsListView.Items.Clear();
-            int i = 0;
-            foreach (var Spell in myPreparedSpells)
+            SpellsListView.Items.Clear(); // rydder spelllisten, så den ikke bliver skrevet flere gange.
+            int i = 0; // initiere 0
+            foreach (var Spell in myPreparedSpells) // Går igennem hver spell object i spellListen
             {
-                SpellsListView.Items.Add(Spell.SpellName, i);
+                SpellsListView.Items.Add(Spell.SpellName, i); // Tilføjer hoved elementet efter fulgt af Subelementer på plads i 9 listview arrayet.
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellLevel));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.Range));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDC));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellBonus));
                 SpellsListView.Items[i].SubItems.Add(Convert.ToString(Spell.SpellDamage));
                 SpellsListView.Items[i].SubItems.Add(Spell.SpellDamageType);
-                i++;
+                i++; // øger i med en, så den næste spell ikke bliver lagt ovenpå den gamle.
             }
         }
 
-        void ColorLoad()
+        void ColorLoad() // denne metode assigner farverne til de forskellige dele af sheetet baseret på Hexadecimale tal..
         {
-            EquipmentPanel.BackColor = ColorTranslator.FromHtml("#778899");
+            EquipmentPanel.BackColor = ColorTranslator.FromHtml("#778899"); // Converterer Hexadecimal til RGB
             SpellsListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             ClassFeatureListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
             OtherFeaturesListView.BackColor = ColorTranslator.FromHtml("#CDBCB1");
@@ -1694,7 +1500,5 @@ namespace CharacterSheet
             ThirdWeaponPanel.BackColor = ColorTranslator.FromHtml("#CDBCB1");
         }
         #endregion
-
-
     }
 }
