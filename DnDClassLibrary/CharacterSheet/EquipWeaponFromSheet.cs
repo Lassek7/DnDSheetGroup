@@ -13,10 +13,17 @@ namespace CharacterSheet
 {
     public partial class EquipWeaponFromSheet : Form
     {
+        #region FIELDS
+        /*Laver en ny instans af EquippedItems, ListView klassene samt danner et nyt object af klassene, 
+          samt laver initialisere WeaponID og AttributeLocation*/
         EquippedItems myEquippedItems = new EquippedItems();
         int WeaponID;
         int AttributeLocation;
         ListView myListView = new ListView();
+        #endregion
+        #region CONSTRUCTOR 
+        /* Konstruktor som tilskriver intans variablene og de forskellige initialiseret værdier 
+        samt Initialisering kontstructoren baggroundsfarven til EquipWeaponFromSheet form Design og initialisere forskellige værdier */
         public EquipWeaponFromSheet(int AttributesPlacement, EquippedItems Equipped, int ID, ListView ListToTakeFrom, string LabelText, string ButtonOne, string ButtonTwo, string ButtonThree)
         {
             InitializeComponent();
@@ -31,7 +38,10 @@ namespace CharacterSheet
             this.BackColor = ColorTranslator.FromHtml("#D2D6D7");
 
         }
-
+        #endregion
+        #region METHODS
+        /*Methoderne tager den angivet våben(Weapon) fra ListView i formen 
+         * og assigner det til myEquippedItems variable*/
         private void SlotOneButton_Click(object sender, EventArgs e)
         {
             myEquippedItems.WeaponOneName = myListView.Items[WeaponID].SubItems[0].Text;
@@ -57,5 +67,6 @@ namespace CharacterSheet
             myEquippedItems.WeaponThreeDamage = myListView.Items[WeaponID].SubItems[3].Text;
             this.Hide();
         }
+        #endregion
     }
 }

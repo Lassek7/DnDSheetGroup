@@ -15,7 +15,8 @@ namespace DnDClassLibrary
     public class DnDDatabaseManagement
     {
         #region FIELDS & CONSTRUCTOR 
-        private string PlayerName { get; set; }
+        /*Laver en ny instans af CharacterAttributes, Character, Item klassene samt danner et nyt object af klassene, 
+         * samt laver den en nye instans af forskellige lister i klassen Character, CharacterAttributes og Item*/
         CharacterAttributes myAttributes = new CharacterAttributes();
         Character myCharacter = new Character();
         Item myItem = new Item();
@@ -23,9 +24,9 @@ namespace DnDClassLibrary
         public List<CharacterAttributes> myListAttributes = new List<CharacterAttributes>();
         public string filePath;
         public List<Item> InventoryList = new List<Item>();
-        public List<Item> BasicStarterItemList = new List<Item>();
-        
+        // public List<Item> BasicStarterItemList = new List<Item>();
 
+        // Konstruktor som tilskriver intans variablene af CharacterAttributes, Character, list af item og Items
         public DnDDatabaseManagement(CharacterAttributes atri, Character Charac, List<Item> MyList, Item ItemContent)
         {
             myAttributes = atri;
@@ -42,27 +43,17 @@ namespace DnDClassLibrary
         }
        
         #endregion
-        /* To doooooooooooooooo 
-         
-        
-         
-         1. Prefixed weapons/
-         2. laver en validering som overwritter den gamle fil
-         
-
-         */
-
         #region INVENTORYLIST
         public string CreateJsonPathPreSetItem()
         {
             string folderPath = filePath;
-             string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
-             string fileName = "StarterItem" + ".json";
+            string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
+            string fileName = "StarterItem" + ".json";
 
             string starterItemFile = System.IO.Path.Combine(pathString, fileName);
             return starterItemFile;
         }
-
+        
         public void SaveCharacterToFile(string afilePath)
         {
             string myfilePath = afilePath;
@@ -99,7 +90,7 @@ namespace DnDClassLibrary
             table.Columns.Add(Race);
             table.Columns.Add(Class);
             table.Columns.Add(AM);
-            table.Columns.Add(BG); 
+            table.Columns.Add(BG);
             table.Columns.Add(MH);
             table.Columns.Add(Level);
             table.Columns.Add(PT);
@@ -407,85 +398,86 @@ namespace DnDClassLibrary
             }
             return InventoryList;
         }
-        
-        public List<Item> BasicStarterItem()
-        {
-            int ItemID;
-            DataSet dataset = new DataSet("dataSet");
-            dataset.Namespace = "NetFrameWork";
-            DataTable table = new DataTable();
-            string basicStarterItem = File.ReadAllText(CreateJsonPathPreSetItem());
-            dataset = JsonConvert.DeserializeObject<DataSet>(basicStarterItem);
-            DataColumn idColumn = new DataColumn("id", typeof(int));
-            idColumn.AutoIncrement = true;
-            for (int i = 1; i <= dataset.Tables.Count; i++)
-            {
-                table = dataset.Tables["table" + i];
-                foreach (DataRow row in table.Rows)
-                {
+        /*Til videre Arbejde (Future Work)*/
+//public List<Item> BasicStarterItem()
+//{
+//    int ItemID;
+//    DataSet dataset = new DataSet("dataSet");
+//    dataset.Namespace = "NetFrameWork";
+//    DataTable table = new DataTable();
+//    string basicStarterItem = File.ReadAllText(CreateJsonPathPreSetItem());
+//    dataset = JsonConvert.DeserializeObject<DataSet>(basicStarterItem);
+//    DataColumn idColumn = new DataColumn("id", typeof(int));
+//    idColumn.AutoIncrement = true;
+//    for (int i = 1; i <= dataset.Tables.Count; i++)
+//    {
+//        table = dataset.Tables["table" + i];
+//        foreach (DataRow row in table.Rows)
+//        {
 
-                    ItemID = Convert.ToInt32(row["Item ID"]);
-                    switch (ItemID)
-                    {
+//            ItemID = Convert.ToInt32(row["Item ID"]);
+//            switch (ItemID)
+//            {
 
-                        case 1:
-                            Item test = new Item();
-                            test.ItemID = Convert.ToInt32(row["Item ID"]);
-                            test.ItemName = Convert.ToString(row["Item Name"]);
-                            test.ItemType = Convert.ToString(row["Item Type"]);
-                            test.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-                            test.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-                            test.Description = Convert.ToString(row["Description"]);
-                            BasicStarterItemList.Add(test);
-                            test = new Item();
-                            break;
-                        case 2:
-                            Armor armor = new Armor();
+//                case 1:
+//                    Item test = new Item();
+//                    test.ItemID = Convert.ToInt32(row["Item ID"]);
+//                    test.ItemName = Convert.ToString(row["Item Name"]);
+//                    test.ItemType = Convert.ToString(row["Item Type"]);
+//                    test.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+//                    test.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+//                    test.Description = Convert.ToString(row["Description"]);
+//                    BasicStarterItemList.Add(test);
+//                    test = new Item();
+//                    break;
+//                case 2:
+//                    Armor armor = new Armor();
 
-                            armor.ItemID = Convert.ToInt32(row["Item ID"]);
-                            armor.ItemName = Convert.ToString(row["Item Name"]);
-                            armor.ItemType = Convert.ToString(row["Item Type"]);
-                            armor.ACFromArmor = Convert.ToInt32(row["AC From Armor"]);
-                            armor.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-                            armor.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-                            armor.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
-                            BasicStarterItemList.Add(armor);
+//                    armor.ItemID = Convert.ToInt32(row["Item ID"]);
+//                    armor.ItemName = Convert.ToString(row["Item Name"]);
+//                    armor.ItemType = Convert.ToString(row["Item Type"]);
+//                    armor.ACFromArmor = Convert.ToInt32(row["AC From Armor"]);
+//                    armor.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+//                    armor.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+//                    armor.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+//                    BasicStarterItemList.Add(armor);
 
-                            break;
-                        case 3:
-                            Weapon weapon = new Weapon();
+//                    break;
+//                case 3:
+//                    Weapon weapon = new Weapon();
 
-                            weapon.ItemID = Convert.ToInt32(row["Item ID"]);
-                            weapon.ItemName = Convert.ToString(row["Item Name"]);
-                            weapon.ItemType = Convert.ToString(row["Item Type"]);
-                            weapon.AmountHeld = Convert.ToInt32(row["Amount Held"]);
-                            weapon.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
-                            weapon.Description = Convert.ToString(row["Description"]);
-                            weapon.AttributeAssociation = Convert.ToString(row["Attribute Association"]);
-                            weapon.Range = Convert.ToString(row["Range"]);
-                            weapon.Damage = Convert.ToString(row["Damage"]);
-                            weapon.DamageType = Convert.ToString(row["Damage Type"]);
-                            weapon.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
-                            BasicStarterItemList.Add(weapon);
-                            break;
-                        default:
-                            break;
-                    }
-                }
-            }
-            return BasicStarterItemList;
-        }
-    }
+//                    weapon.ItemID = Convert.ToInt32(row["Item ID"]);
+//                    weapon.ItemName = Convert.ToString(row["Item Name"]);
+//                    weapon.ItemType = Convert.ToString(row["Item Type"]);
+//                    weapon.AmountHeld = Convert.ToInt32(row["Amount Held"]);
+//                    weapon.WeightPerItem = Convert.ToInt32(row["Weight Per Item"]);
+//                    weapon.Description = Convert.ToString(row["Description"]);
+//                    weapon.AttributeAssociation = Convert.ToString(row["Attribute Association"]);
+//                    weapon.Range = Convert.ToString(row["Range"]);
+//                    weapon.Damage = Convert.ToString(row["Damage"]);
+//                    weapon.DamageType = Convert.ToString(row["Damage Type"]);
+//                    weapon.ItemEquipped = Convert.ToBoolean(row["Item Equipped"]);
+//                    BasicStarterItemList.Add(weapon);
+//                    break;
+//                default:
+//                    break;
+//            }
+//        }
+//    }
+//    return BasicStarterItemList;
+/*Code Referance
+                https://www.newtonsoft.com/json/help/html/SerializeDataSet.htm
+                 https://www.newtonsoft.com/json/help/html/SerializeWithJsonSerializerToFile.htm
+                 https://www.newtonsoft.com/json/help/html/FromObject.htm
+                 https://www.newtonsoft.com/json/help/html/Introduction.htm
+//}
+}
 }
 
 #endregion
 
 
-/*Code Referance
-                        https://www.newtonsoft.com/json/help/html/SerializeDataSet.htm
-                         https://www.newtonsoft.com/json/help/html/SerializeWithJsonSerializerToFile.htm
-                         https://www.newtonsoft.com/json/help/html/FromObject.htm
-                         https://www.newtonsoft.com/json/help/html/Introduction.htm
+
 */
 
 

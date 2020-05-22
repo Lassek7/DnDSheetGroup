@@ -13,9 +13,15 @@ namespace CharacterSheet
 {
     public partial class EquipSlotCheck : Form
     {
+        #region FIELDS
+        /*Laver en ny instans af EquippedItems, Item, Weapon, klassene samt danner et nyt object af klassene, 
+         * samt laver den en ny instans af en list i klassen Item*/
         EquippedItems myEquippedItems = new EquippedItems();
         List<Item> myInventory = new List<Item>();
         Weapon myWeapon = new Weapon();
+        #endregion
+        #region CONSTRUCTOR
+        // Konstruktor som tilskriver intans variablene samt Initialisering baggroundsfarven til EquipSlotCheck form Design
         public EquipSlotCheck(Weapon Weapon ,EquippedItems EquipmentChoice, string message, string Slot1, string Slot2, string Slot3)
         {
             InitializeComponent();
@@ -27,8 +33,10 @@ namespace CharacterSheet
             myEquippedItems = EquipmentChoice;
             myWeapon = Weapon;
         }
-
-
+        #endregion
+        #region METHODS
+        /*Methoder som assigner de angivet værdier fra de Weapon,
+        til den angivet slot brugeren har valgt*/
         private void WeaponSlotOne_Click(object sender, EventArgs e)
         {
             myEquippedItems.WeaponOneName = myWeapon.ItemName;
@@ -55,5 +63,6 @@ namespace CharacterSheet
             myEquippedItems.WeaponThreeDamage = myWeapon.Damage;
             this.Hide();
         }
+        #endregion
     }
 }
