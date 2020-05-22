@@ -35,13 +35,13 @@ namespace DnDClassLibrary
             myItem = ItemContent;
 
         }
-        
+
 
         public DnDDatabaseManagement()
         {
             //Constructor for load json file
         }
-       
+
         #endregion
         #region INVENTORYLIST
         public string CreateJsonPathPreSetItem()
@@ -53,7 +53,7 @@ namespace DnDClassLibrary
             string starterItemFile = System.IO.Path.Combine(pathString, fileName);
             return starterItemFile;
         }
-        
+
         public void SaveCharacterToFile(string afilePath)
         {
             string myfilePath = afilePath;
@@ -117,7 +117,7 @@ namespace DnDClassLibrary
 
                     // Tilfører nu dataen fra listen til datasettet udfra antal items tilført til inventory
                     DataRow newRow = table.NewRow();
-                    
+
                     newRow[CN] = myCharacter.characterName;
                     newRow[PN] = myCharacter.playerName;
                     newRow[Race] = myCharacter.race;
@@ -146,12 +146,12 @@ namespace DnDClassLibrary
 
                     dataset.AcceptChanges();
                     JsonSerializer serializer = new JsonSerializer();
-                    
+
                     serializer.Serialize(sw, dataset);
                     table = new DataTable();
                     int CharacterLength = myCharacter.characterName.Length;
                     filePath = afilePath.Replace(myCharacter.characterName + ".json", "").Replace(" ", " ");
-                    
+
                 }
             }
         }
@@ -165,17 +165,17 @@ namespace DnDClassLibrary
             string JsonFileToString = File.ReadAllText(JsonCharData);
             dataset = JsonConvert.DeserializeObject<DataSet>(JsonFileToString);
             table = dataset.Tables["table1"];
-            
+
             foreach (DataRow row in table.Rows)
             {
 
-                for(int i =0; i < CharacterInfoArray.Length; i++) {
-                CharacterInfoArray[i] = Convert.ToString(row.ItemArray[i]);          
+                for (int i = 0; i < CharacterInfoArray.Length; i++) {
+                    CharacterInfoArray[i] = Convert.ToString(row.ItemArray[i]);
                 }
             }
             return CharacterInfoArray;
         }
-        
+
         public void SaveDataToFile(string filePathInventory)
         {
 
@@ -270,7 +270,7 @@ namespace DnDClassLibrary
                                 table = new DataTable();
                             }
                         }
-                        
+
                         break;
 
                     case 3:
@@ -326,7 +326,7 @@ namespace DnDClassLibrary
                         }
                         break;
                     default:
-                        break;          
+                        break;
                 }
             }
         }
@@ -398,7 +398,11 @@ namespace DnDClassLibrary
             }
             return InventoryList;
         }
-        /*Til videre Arbejde (Future Work)*/
+    }
+}
+
+#endregion
+/*Til videre Arbejde (Future Work)*/
 //public List<Item> BasicStarterItem()
 //{
 //    int ItemID;
@@ -471,10 +475,7 @@ namespace DnDClassLibrary
                  https://www.newtonsoft.com/json/help/html/FromObject.htm
                  https://www.newtonsoft.com/json/help/html/Introduction.htm
 //}
-}
-}
 
-#endregion
 
 
 
