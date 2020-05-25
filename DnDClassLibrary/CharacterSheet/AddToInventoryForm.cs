@@ -264,8 +264,8 @@ namespace CharacterSheet
 
             if (string.IsNullOrEmpty(myArmor.ItemName) == false && myArmor.AmountHeld > 0)
             {
-                myInventoryList.Add
-                    (myInventory.AddArmor(myItem.ItemName, myItem.AmountHeld, myItem.WeightPerItem, myItem.ItemType, myArmor.ACFromArmor, myArmor.Description, myArmor.ItemEquipped));
+                DnDClassLibrary.Armor newArmor =  myInventory.AddArmor(myArmor.ItemName, myArmor.AmountHeld, myArmor.WeightPerItem, myArmor.ItemType, myArmor.ACFromArmor, myArmor.Description, myArmor.ItemEquipped);
+                myInventoryList.Add(newArmor);
                 // tjekker om brugeren har angivet at det angivet Armor skal equippes til sheet 
                 if (ArmorEquippedCheck.Checked == true)
                 {

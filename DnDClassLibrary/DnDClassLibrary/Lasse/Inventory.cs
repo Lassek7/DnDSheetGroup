@@ -25,7 +25,7 @@ namespace DnDClassLibrary
 
             return NewItem;
         }
-        public DnDClassLibrary.Item AddArmor(string ItemName, int AmountHeld, int WeightPerItem, string ItemType, int ACFromArmor, string Description, bool ItemEquipped)
+        public DnDClassLibrary.Armor AddArmor(string ItemName, int AmountHeld, int WeightPerItem, string ItemType, int ACFromArmor, string Description, bool ItemEquipped)
         {
             Armor NewArmor = new Armor();
             NewArmor.ItemID = 2;
