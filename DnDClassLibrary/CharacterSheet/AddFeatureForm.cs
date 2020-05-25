@@ -76,7 +76,7 @@ namespace CharacterSheet
         {
             bool OutOfReach = string.IsNullOrEmpty(FeatureNameTextBox.Text);
 
-            features.FeatName = myUtillities.NewValue(OutOfReach, FeatureDescriptionTextBox.Text);
+            features.FeatName = myUtillities.NewValue(OutOfReach, FeatureNameTextBox.Text);
         }
         /*Methods som tager den inputtet text (Navnet på feature) 
         fra brugeren og assigner det til værdien FeatName i klassen feat*/

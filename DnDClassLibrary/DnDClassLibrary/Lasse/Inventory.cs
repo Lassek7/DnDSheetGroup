@@ -6,10 +6,12 @@ namespace DnDClassLibrary
 {
     public class Inventory
     {
+        //Instansierer de forskellige fields,, lister osv.
         public Item myItem = new Item();
         public Armor myArmor = new Armor();
         public Weapon myWeapon = new Weapon();
-        List<Item> myInventoryList = new List<Item>();
+        #region INVENTORY
+        //Methoder som til fører Item, Armor og weapon angivet værdier og returner et object
         public DnDClassLibrary.Item AddItem(string ItemName, int AmountHeld, int WeightPerItem, string ItemType, string Description)
         {
             Item NewItem = new Item();
@@ -53,5 +55,6 @@ namespace DnDClassLibrary
 
             return NewWeapon;
         }
+        #endregion
     }
 }

@@ -47,37 +47,7 @@ namespace CharacterSheet
             Sheet LoadCharacter = new Sheet(InventoryList(), LoadCharacterInfo());
             LoadCharacter.Show();  
         }
-        /* Methoden InventoryList:
-         * Laver en ny instans af DndDatabaseManagement klassen
-         * Samt kalder methoden på objectet OpenFileDialog fra klassen System.Windows.Forms og laver en ny instans af dialogen
-         * Derefter assigner methoden hvor henne dialog vinduet skal åbne samt hvilken file type den skal åbne som er (.Json)
-         * Efter brugeren har trykket på button2_click methoden åbner et dialog vindue,
-         * hvor brugeren vælger den angivet Json file som indholder værdierne alle de forskellige Items, Weapon og Armor 
-         * som der var gemt i filen 
-         * samt kalder  Inventorylist methoden DatabaseList fra klassen DndDatabasemangement og assigner det til listen i klassen
-         * Methoden returner en liste 
-        */
-        List<Item> InventoryList()
-        {
-            DnDDatabaseManagement DatabaseDialog = new DnDDatabaseManagement();
-            var filePathCharacterInventoryInfo = string.Empty;
-            MessageBox.Show("Choose your Inventory file");
-            using (OpenFileDialog openFileDialog = new OpenFileDialog())
-            {
-                openFileDialog.InitialDirectory = "c:\\";
-                openFileDialog.Filter = "json files (*.json)|*.json";
-
-                openFileDialog.FilterIndex = 2;
-                openFileDialog.RestoreDirectory = true;
-                if (openFileDialog.ShowDialog() == DialogResult.OK)
-                {
-                    filePathCharacterInventoryInfo = openFileDialog.FileName;
-                }
-            }
-
-            DatabaseDialog.InventoryList = DatabaseDialog.DatabaseList(filePathCharacterInventoryInfo);
-            return DatabaseDialog.InventoryList;
-        }
+        
         /* Methoden LoadCharacterInfo
          * Laver en ny instans af DndDatabaseManagement klassen
          * Samt kalder methoden på objectet OpenFileDialog fra klassen System.Windows.Forms og laver en ny instans af dialogen
@@ -111,6 +81,37 @@ namespace CharacterSheet
             }
             string[] CharacterInfoFromJsonFile = DatabaseDialog.LoadCharacterInfo(filePathCharacterInfo);
             return CharacterInfoFromJsonFile;
+        }
+        /* Methoden InventoryList:
+         * Laver en ny instans af DndDatabaseManagement klassen
+         * Samt kalder methoden på objectet OpenFileDialog fra klassen System.Windows.Forms og laver en ny instans af dialogen
+         * Derefter assigner methoden hvor henne dialog vinduet skal åbne samt hvilken file type den skal åbne som er (.Json)
+         * Efter brugeren har trykket på button2_click methoden åbner et dialog vindue,
+         * hvor brugeren vælger den angivet Json file som indholder værdierne alle de forskellige Items, Weapon og Armor 
+         * som der var gemt i filen 
+         * samt kalder  Inventorylist methoden DatabaseList fra klassen DndDatabasemangement og assigner det til listen i klassen
+         * Methoden returner en liste 
+        */
+        List<Item> InventoryList()
+        {
+            DnDDatabaseManagement DatabaseDialog = new DnDDatabaseManagement();
+            var filePathCharacterInventoryInfo = string.Empty;
+            MessageBox.Show("Choose your Inventory file");
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.Filter = "json files (*.json)|*.json";
+
+                openFileDialog.FilterIndex = 2;
+                openFileDialog.RestoreDirectory = true;
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    filePathCharacterInventoryInfo = openFileDialog.FileName;
+                }
+            }
+
+            DatabaseDialog.InventoryList = DatabaseDialog.DatabaseList(filePathCharacterInventoryInfo);
+            return DatabaseDialog.InventoryList;
         }
         #endregion
     }

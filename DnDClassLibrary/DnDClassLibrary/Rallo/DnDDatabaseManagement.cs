@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
+
 using System.Data;
-using System.Dynamic;
 using System.IO;
-using System.Runtime.ExceptionServices;
 using System.Text;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+
 
 
 namespace DnDClassLibrary
@@ -44,16 +42,9 @@ namespace DnDClassLibrary
 
         #endregion
         #region INVENTORYLIST
-        public string CreateJsonPathPreSetItem()
-        {
-            string folderPath = filePath;
-            string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
-            string fileName = "StarterItem" + ".json";
 
-            string starterItemFile = System.IO.Path.Combine(pathString, fileName);
-            return starterItemFile;
-        }
-
+        /*Methoden laver en instans af et dataset, dette bruges til at opstile struckturen i jsonfilen, så programmet ved hvilken placering de forskellige datatyper har
+         * derefter tilskriver den så værdierne fra Character i programmet til json filen via brug af FileStream fra klassen system.IO*/
         public void SaveCharacterToFile(string afilePath)
         {
             string myfilePath = afilePath;
@@ -149,13 +140,14 @@ namespace DnDClassLibrary
 
                     serializer.Serialize(sw, dataset);
                     table = new DataTable();
-                    int CharacterLength = myCharacter.characterName.Length;
-                    filePath = afilePath.Replace(myCharacter.characterName + ".json", "").Replace(" ", " ");
+
+
+                    filePath = afilePath; 
 
                 }
             }
         }
-
+        /*Methoden læser characterInfo fra jsonfilen og assigner det til et string array*/
         public string[] LoadCharacterInfo(string JsonCharData)
         {
             string[] CharacterInfoArray = new string[19];
@@ -175,7 +167,7 @@ namespace DnDClassLibrary
             }
             return CharacterInfoArray;
         }
-
+        /*Methoden opretter endnu et nyt dataset, denne gang for Characters inventory, ved at lave nye instans og opstille en switch til kontrolering af type item*/
         public void SaveDataToFile(string filePathInventory)
         {
 
@@ -330,8 +322,8 @@ namespace DnDClassLibrary
                 }
             }
         }
-
-        public List<Item> DatabaseList(string JsonItemData) // 
+        /*Methoden læser jsonfilen udfra den angivet string og derefter assigner de specifik værdier til de angivet placering i programmet */
+        public List<Item> DatabaseList(string JsonItemData) 
         {
             int ItemID;
             DataSet dataset = new DataSet("dataSet");
@@ -402,7 +394,17 @@ namespace DnDClassLibrary
 }
 
 #endregion
-/*Til videre Arbejde (Future Work)*/
+/*Til videre Arbejde (Future Work)
+ * public string CreateJsonPathPreSetItem()
+        {
+            string folderPath = filePath;
+            string pathString = System.IO.Path.Combine(folderPath, "Backup Character");
+            string fileName = "StarterItem" + ".json";
+
+            string starterItemFile = System.IO.Path.Combine(pathString, fileName);
+            return starterItemFile;
+        }
+ */
 //public List<Item> BasicStarterItem()
 //{
 //    int ItemID;

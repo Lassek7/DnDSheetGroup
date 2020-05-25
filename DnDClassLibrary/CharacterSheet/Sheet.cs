@@ -72,9 +72,9 @@ namespace CharacterSheet
 
         // Beskriver hvad der sker når der trykkes på en ting, enten med enkelt eller dobbeltklik
         #region CLICKEVENTS
-        private void SaveCharacterButton_Click(object sender, EventArgs e) // gemmer Spillerens karakter
+        private void SaveCharacterButton_Click(object sender, EventArgs e) // gemmer Spillerens karakter når brugeren trykke på saveCharacter knappen
         {
-            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem); // opretter et nyt object af databasen med værdier den skal bruge
+            DnDDatabaseManagement myDataBase = new DnDDatabaseManagement(myAttributes, myCharacter, myInventoryList, myItem); // Instansierer et nyt object af databasen med værdier den skal bruge
             var filePathCharacterInfo = string.Empty; 
             var filePathInventory = string.Empty;
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
@@ -91,7 +91,8 @@ namespace CharacterSheet
                 myDataBase.SaveCharacterToFile(filePathCharacterInfo);
                 if (File.Exists(filePathCharacterInfo))
                 {
-                    filePathInventory = myDataBase.filePath + myCharacter.characterName + "_Inventory" + ".json";
+
+                    filePathInventory = myDataBase.filePath.Replace(".json", "_Inventory.json");
 
                     myDataBase.SaveDataToFile(filePathInventory);
                 }
@@ -334,42 +335,42 @@ namespace CharacterSheet
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter); // instansiater Saving throw
             mySavingthrow.proficiency[0] = StrengthSaveProficiencyToggle.Checked; // giver Savingthrow en bool værdi af enten true eller false
-            StrengthSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.StrengthSave, StrengthSaveProficiencyToggle.Checked); // Udregner om der er Proficency eller ej
+            StrengthSaveLabel.Text = Convert.ToString(mySavingthrow.StrengthSave); // Udregner om der er Proficency eller ej
         }
 
         private void DexteritySaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[1] = DexteritySaveProficiencyToggle.Checked;
-            DexteritySaveLabel.Text = CheckProficiencyToggle(mySavingthrow.DexteritySave, DexteritySaveProficiencyToggle.Checked);
+            DexteritySaveLabel.Text = Convert.ToString(mySavingthrow.DexteritySave);
         }
 
         private void ConstitutionSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[2] = ConstitutionSaveProficiencyToggle.Checked;
-            ConstitutionSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.ConstitutionSave, ConstitutionSaveProficiencyToggle.Checked);
+            ConstitutionSaveLabel.Text = Convert.ToString(mySavingthrow.ConstitutionSave);
         }
 
         private void IntelligenceSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[3] = IntelligenceSaveProficiencyToggle.Checked;
-            IntelligenceSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.IntelligenceSave, IntelligenceSaveProficiencyToggle.Checked);
+            IntelligenceSaveLabel.Text = Convert.ToString(mySavingthrow.IntelligenceSave);
         }
 
         private void WisdomSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[4] = WisdomSaveProficiencyToggle.Checked;
-            WisdomSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.WisdomSave, WisdomSaveProficiencyToggle.Checked);
+            WisdomSaveLabel.Text = Convert.ToString(mySavingthrow.WisdomSave);
         }
 
         private void CharismaSaveProficiencyToggle_CheckedChanged(object sender, EventArgs e)
         {
             SavingThrow mySavingthrow = new SavingThrow(myAttributes, myCharacter);
             mySavingthrow.proficiency[5] = CharismaSaveProficiencyToggle.Checked;
-            CharismaSaveLabel.Text = CheckProficiencyToggle(mySavingthrow.CharismaSave, CharismaSaveProficiencyToggle.Checked);   
+            CharismaSaveLabel.Text = Convert.ToString(mySavingthrow.CharismaSave);   
         }
         #endregion
 
@@ -964,24 +965,13 @@ namespace CharacterSheet
             }
         }
 
-        string CheckProficiencyToggle(int SkillToCheck, bool ProficiencyToggle) // Tjekker om proficency er slået til
-        {
-            if (ProficiencyToggle == false)
-            {
-                return Convert.ToString(SkillToCheck); // returnerer SKillToCheck uden proficency, som udregnes i Skill classen baseret på Proficienytogglen
-            }
-            else
-            {
-                return Convert.ToString(SkillToCheck); // returnerer SKillToCheck med proficency, som udregnes i Skill classen baseret på Proficienytogglen
-            }
-        }
        
         string ProficencyDisplayCalc(bool ProficencyState, string TextToDisplay, int SkillToUse, int CharacterProficency, bool JackOfAllTradesState)
         {
             Skill mySkill = new Skill(myAttributes, myCharacter);
             if (ProficencyState == true) // checker om Proficency er slået til
             {
-                return CheckProficiencyToggle(SkillToUse, ProficencyState); // Hvis proficency er slået til, returneres Værdien af skille,sammen med proficency bonus.
+                return Convert.ToString(SkillToUse); // Hvis proficency er slået til, returneres Værdien af skille,sammen med proficency bonus.
             }
             else // ellers returneres værdien med jack of all trades¨, som enten er slået til eller fra. 
             {
