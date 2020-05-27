@@ -21,7 +21,7 @@ namespace DnDClassLibrary
         {
         }
         #region GETTERS&SETTERS
-        // Hver Getter og Setter tjekker om der er sat proficiency til eller ej
+        // Hver Getter og Setter tjekker om der er sat proficiency til eller ej. Hvis proficiency er til, vil værdien blive modifier + proficiencybonus
         public int Acrobatics
         {
             get { return myAttributes.Modifiers[1] + (proficiency[0] ? myCharacter.proficiencyBonus : 0); }
